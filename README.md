@@ -16,6 +16,5 @@ More information can be found in the [Help](https://auranticus.github.io/iWriter
 - De-bloated the tool.
 
 ## Known bugs
-- The export option is only for Chromium browsers. Mozilla Firefox does not support that option because it deprecated WebSQL in favor of IndexedDB.  
+- The **Save** and **Save As** options are only available for Chromium browsers. Mozilla Firefox does not support them because it deprecated WebSQL in favor of IndexedDB.  
 For Safari on iOS 13+, you need to disable **Disable Web SQL** in **Setting** > **Safari** > **Advanced** > **Experimental Features**.
-- Mozilla Firefox cannot run this tool because it stuck at *openDatabase is not defined* in the Console tab of the Developer Tool menu.
