@@ -77,7 +77,7 @@
             <name eid="1">Title</name>
             <desc eid="2">Your title should tell the reader what the report is about.</desc>
             <content eid="3" prompt="Type your title here">
-                <para>Web page design</para>
+                <para><strong>Web page design</strong></para>
             </content>
         </paragraph>
         <paragraph>

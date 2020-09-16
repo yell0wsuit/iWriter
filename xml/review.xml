@@ -26,15 +26,16 @@
         <step label="Focus on the introduction" para_ids="4,6,7,20">
             <commentary>
                 <para showme="21">Asking a question is one way to engage the reader.</para>
-                <para>The writer follows with a personal opinion.</para>
-                <para>The title and author's name appears here.</para>
-                <para showme="24">Information about the setting and period is also given.</para>
+                <para showme="23">The writer follows with a personal opinion.</para>
+                <para showme="22">The title and author's name appears here.</para>
+                <para showme="23a,24">Information about the setting and period is also given.</para>
             </commentary>
         </step>
         <step label="Talking about the plot and characters" para_ids="4,26,27,29,35,36,38,45,46,55">
             <commentary>
-                <para>It is usual to use the present tense to describe the story.</para>
+                <para showme="pre1">It is usual to use the present tense to describe the story.</para>
                 <para showme="56">Including information on the style of writing can be helpful.</para>
+				<para showme="pre2">Express your opinion and give reasons to support it.</para>
             </commentary>
         </step>
         <step label="Focus on the conclusion" para_ids="58,59,61">
@@ -91,7 +92,7 @@
             <name eid="2">Title</name>
             <desc eid="3">The title of your review</desc>
             <content eid="4" prompt="Type your title here">
-                <para>A review of Wuthering Heights by Emily Brontë</para>
+                <para><strong>A review of <i>Wuthering Heights</i> by Emily Brontë</strong></para>
             </content>
         </paragraph>
         <paragraph eid="5">
@@ -108,7 +109,7 @@
         <paragraph eid="19">
             <content dup="9" eid="20">
                 <para>
-                    <extra_info eid="21">Is it a darkly passionate tale of love? Or should we call it a highly original gothic story?</extra_info> The classic novel <extra_info eid="22">'Wuthering Heights' by Emily Brontë</extra_info> is, in my opinion, a unique and gripping blend of these genres. <extra_info eid="23">Written in 1847,</extra_info> it is an epic family saga full of desire, hate, revenge and regret, focusing on the main characters of Heathcliff and Catherine. <extra_info eid="24">The atmospheric setting of the wild Yorkshire moors cleverly mirrors these violent emotions.</extra_info>
+                    <extra_info eid="21">Is it a darkly passionate tale of love? Or should we call it a highly original gothic story?</extra_info> The classic novel <extra_info eid="22">'Wuthering Heights' by Emily Brontë</extra_info> is, <extra_info eid="23">in my opinion</extra_info>, a unique and gripping blend of these genres. <extra_info eid="23a">Written in 1847,</extra_info> it is an epic family saga full of desire, hate, revenge and regret, focusing on the main characters of Heathcliff and Catherine. <extra_info eid="24">The atmospheric setting of the wild Yorkshire moors cleverly mirrors these violent emotions.</extra_info>
                 </para>
             </content>
         </paragraph>
@@ -120,7 +121,7 @@
                 <para>Story: Catherine's father adopts Heathcliff. Her brother, Hindley, is jealous. She falls in love with Heathcliff. Father dies and Hindley makes Heathcliff be a servant. Catherine marries Edgar Linton - closer in class and position in society. Leads to tragedy.</para>
             </notes>
             <content eid="29">
-                <para>When Catherine's father adopts the starving orphan boy Heathcliff, Catherine's brother Hindley feels <useful type="collocation" eid="30">deeply hurt</useful> and resentful. She, <useful type="linking" eid="31">on the other hand</useful>, develops an <useful type="collocation" eid="32">immensely strong bond</useful> with Heathcliff, which becomes an all-consuming love. Upon her father's death, Hindley becomes the head of the family and forces Heathcliff to assume the position of a servant. Despite loving Heathcliff, Catherine chooses to marry Edgar Linton, who is closer to her class and position in society. <useful type="linking" eid="33">It is this decision which</useful> leads to heartbreak and tragedy, not only for them but for many others.</para>
+                <para>When Catherine's father <extra_info eid="pre1">adopts</extra_info> the starving orphan boy Heathcliff, Catherine's brother Hindley feels <useful type="collocation" eid="30">deeply hurt</useful> and resentful. She, <useful type="linking" eid="31">on the other hand</useful>, develops an <useful type="collocation" eid="32">immensely strong bond</useful> with Heathcliff, which becomes an all-consuming love. Upon her father's death, Hindley becomes the head of the family and forces Heathcliff to assume the position of a servant. Despite loving Heathcliff, Catherine chooses to marry Edgar Linton, who is closer to her class and position in society. <useful type="linking" eid="33">It is this decision which</useful> leads to heartbreak and tragedy, not only for them but for many others.</para>
             </content>
         </paragraph>
         <paragraph eid="34">
@@ -130,7 +131,7 @@
                 <para>Heathcliff: anti-hero - rough manners, lack of control. Catherine has flaws. Readers empathize with them both. Book brilliant because true: readers horrified by behaviour of Catherine and Heathcliff but don't hate them because the reasons for their actions are clear.</para>
             </notes>
             <content eid="38">
-                <para>Heathcliff <useful type="key" eid="39">could be described as</useful> an <useful type="key" eid="40">anti-hero</useful> with his rough manners and lack of control. <useful type="linking" eid="41">Likewise</useful>, Catherine displays many flaws but the reader can still empathize with these characters. <useful type="linking" eid="42">In fact</useful>, this is the main reason why I believe this novel is so brilliant. It rings with truth. The reader may be horrified at the way that Heathcliff and Catherine behave, and yet, at the same time, the writer ensures we never hate them because the reasons for their actions are <useful type="collocation" eid="43">crystal clear</useful>.</para>
+                <para>Heathcliff <useful type="key" eid="39">could be described as</useful> an <useful type="key" eid="40">anti-hero</useful> with his rough manners and lack of control. <useful type="linking" eid="41">Likewise</useful>, Catherine displays many flaws but the reader can still empathize with these characters. <useful type="linking" eid="42">In fact</useful>, <extra_info eid="pre2">this is the main reason why I believe this novel is so brilliant</extra_info>. It rings with truth. The reader may be horrified at the way that Heathcliff and Catherine behave, and yet, at the same time, the writer ensures we never hate them because the reasons for their actions are <useful type="collocation" eid="43">crystal clear</useful>.</para>
             </content>
         </paragraph>
         <paragraph eid="44">
@@ -140,7 +141,7 @@
                 <para>Book has narrator - Ellen Dean, a servant. Useful because holds the plot together. Book is not an easy read: dense description; dialogue in dialect - can be difficult to understand.</para>
             </notes>
             <content eid="48">
-                <para>The main part of the book relies on a <useful type="key" eid="49">narrator</useful>, Ellen Dean, who is a servant at Wuthering Heights and I think that this is a useful <useful type="key" eid="50">device</useful> which holds the <useful type="key" eid="51">complex plot</useful> together. <useful type="linking" eid="52">However</useful>, Wuthering Heights is not what I would call an 'easy read'. There is <useful type="key" eid="53">dense description</useful> and some of the dialogue is written in dialect, which can be difficult to follow.</para>
+                <para>The main part of the book relies on a <useful type="key" eid="49">narrator</useful>, Ellen Dean, who is a servant at Wuthering Heights and I think that this is a useful <useful type="key" eid="50">device</useful> which holds the <useful type="key" eid="51">complex plot</useful> together. <useful type="linking" eid="52">However</useful>, <i>Wuthering Heights</i> is not what I would call an 'easy read'. There is <useful type="key" eid="53">dense description</useful> and some of the dialogue is written in dialect, which can be difficult to follow.</para>
             </content>
         </paragraph>
         <paragraph eid="54">

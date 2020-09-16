@@ -71,7 +71,7 @@
                 <point>Have I practised enough?</point>
                 <point>Am I sure that I can do the talk within the time allowed?</point>
                 <point>Have I checked the pronunciation of any words I am not sure about?</point>
-                <point>Have I checked  vocabulary and grammar?</point>
+                <point>Have I checked vocabulary and grammar?</point>
             </checklist>
         </checking>
     </practice_rubric>
@@ -80,7 +80,7 @@
             <name eid="1">Title</name>
             <desc eid="2">The title of your presentation.</desc>
             <content eid="3" prompt="Type your title here">
-                <para>The benefits of learning a foreign language.</para>
+                <para><strong>The benefits of learning a foreign language.</strong></para>
             </content>
         </paragraph>
         <paragraph>
