@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<BookList>
+    <Book>
+        <Title>title 1</Title>
+        <Publisher>publisher 1</Publisher>
+    </Book>
+    <Book>
+        <Title name='test'>title 2</Title>
+        <Publisher>publisher 2</Publisher>
+    </Book>
+    <Book>
+        <Title name='test'>title 3</Title>
+        <Publisher>publisher 3</Publisher>
+    </Book>
+    <Book>
+        <Title name='test'>title 4</Title>
+        <Publisher>publisher 4</Publisher>
+    </Book>
+</BookList>

@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<!DOCTYPE framework SYSTEM "ald8_iwriter.dtd">
+<framework>
+    <framework_title> A review of a book or film/movie</framework_title>
+    <framework_intro>
+        <para>Below is a suggested framework to help you structure your review.  There are spaces for you to add your notes and the content of your review.</para>
+        <para>Remember that you can look the word up in the Oxford Advanced Learner's Dictionary.</para>
+        
+    </framework_intro>
+    <guided_tour>
+        <step label="What is the purpose of a review?">
+            <commentary>
+                <para>The main purpose of a book review is to give information to a potential reader so that they can decide whether or not they want to read the book. A review of a film/movie has the same purpose. You can approach it in the same way as a book review.</para>
+            </commentary>
+        </step>
+        <step label="How is it structured?" para_ids="2,3,6,7,26,27,35,36,45,46,58,59">
+            <commentary>
+                <para>Below is the framework that was used to create this review.</para>
+            </commentary>
+        </step>
+        <step label="How was it planned?" para_ids="2,3,6,7,26,27,35,36,45,46,58,59,4,8,28,37,47,60">
+            <commentary>
+                <para>In order to plan the review, the writer decides what to cover in each paragraph and takes notes.</para>
+            </commentary>
+        </step>
+        <step label="Focus on the introduction" para_ids="4,6,7,20">
+            <commentary>
+                <para showme="21">Asking a question is one way to engage the reader.</para>
+                <para>The writer follows with a personal opinion.</para>
+                <para>The title and author's name appears here.</para>
+                <para showme="24">Information about the setting and period is also given.</para>
+            </commentary>
+        </step>
+        <step label="Talking about the plot and characters" para_ids="4,26,27,29,35,36,38,45,46,55">
+            <commentary>
+                <para>It is usual to use the present tense to describe the story.</para>
+                <para showme="56">Including information on the style of writing can be helpful.</para>
+            </commentary>
+        </step>
+        <step label="Focus on the conclusion" para_ids="58,59,61">
+            <commentary>
+                <para>You can restate your opinion of the book as a recommendation to read it or not read it.</para>
+            </commentary>
+        </step>
+        <step label="Show me useful language" para_ids="4,9,29,38,48,61">
+            <commentary>
+                <para showme="11,13,15,17,18,40,49,50,51,53,63,64">The writer uses key language for reviews.</para>
+                <para showme="31,33,41,42,52,62">Linking words aid organization.</para>
+            </commentary>
+        </step>
+    </guided_tour>
+    <practice_rubric>
+        <planning>
+            <checklist>
+                <point>Read or re-read the book and make notes on the plot, the characters, the way the book is written, and your opinion of it.</point>
+                <point help="review_think_about.swf">Think about questions your reader might have</point>
+                <point>When you have made notes, decide on the order in which you wish to present the information and organize your notes, using the framework as a guide.</point>
+            </checklist>
+        </planning>
+        <vocab>
+            <checklist>
+                <point help="review_use_begin_and_end.swf">Use appropriate words and phrases to begin and end.</point>
+                <point help="review_use_describe_plot.swf">Use appropriate words and phrases to describe plot and characters.</point>
+                <point>Find a range of adjectives to use to describe the book, plot and characters.</point>
+                <point>Use your dictionary to help you find synonyms of words such as 'book' or 'story'.</point>
+            </checklist>
+        </vocab>
+        <writing>
+            <checklist>
+                <point>When you have organized your notes into the framework, write your review, following this structure.</point>
+                <point>Remember that the person who reads your review has NOT read the book.</point>
+            </checklist>
+            <checklist>
+                <point>Try to write about both positive and negative aspects of the book.</point>
+            </checklist>
+        </writing>
+        <checking>
+            <checklist>
+                <point>Does the introduction give the title of the book and the author?</point>
+                <point>Does the introduction give general information about the setting, period, etc.?</point>
+                <point>Does the body of the review discuss the plot and the characters?</point>
+                <point>Have I included information about the way the book is written?</point>
+                <point>Does the conclusion give my opinion?</point>
+                <point>Have I used a variety of adjectives and phrases to describe the book?</point>
+                <point>Have I checked vocabulary, grammar and spelling?</point>
+            </checklist>
+        </checking>
+    </practice_rubric>
+    <paragraphs>
+        <paragraph eid="1">
+            <name eid="2">Title</name>
+            <desc eid="3">The title of your review</desc>
+            <content eid="4" prompt="Type your title here">
+                <para>A review of Wuthering Heights by Emily Brontë</para>
+            </content>
+        </paragraph>
+        <paragraph eid="5">
+            <name eid="6">Introduction</name>
+            <desc eid="7">General information and comments about the book. </desc>
+            <tip>TIP Asking a question is one way to engage the reader. Or you could start with a personal opinion. The title and author's name should appear here. Information about the setting and period can be useful  too.</tip>
+            <notes eid="8">
+                <para>Love story or gothic story? Blend of both. Written in 1847. Family saga. Main characters: Catherine and Heathcliff. Violent emotions: desire, hate, revenge, regret. Wild Yorkshire moors reflect this.</para>
+            </notes>
+            <content eid="9" prompt="Type your introduction here">
+                <para>Is it a darkly passionate tale of love? Or should we call it a <useful type="collocation" eid="10">highly original</useful> gothic story? The <useful type="key" eid="11">classic novel</useful> 'Wuthering Heights' by Emily Brontë is, in my opinion, a unique and <useful type="key" eid="12">gripping</useful> blend of these <useful type="key" eid="13">genres</useful>. <useful type="key" eid="14">Written in</useful> 1847, it is an  epic<useful type="key" eid="15">family saga</useful> full of desire, hate, revenge and regret, <useful type="key" eid="16">focusing on</useful> the <useful type="key" eid="17">main characters</useful> of Heathcliff and Catherine. The <useful type="key" eid="18">atmospheric setting</useful> of the wild Yorkshire moors cleverly mirrors these violent emotions.</para>
+            </content>
+        </paragraph>
+        <paragraph eid="19">
+            <content dup="9" eid="20">
+                <para>
+                    <extra_info eid="21">Is it a darkly passionate tale of love? Or should we call it a highly original gothic story?</extra_info> The classic novel <extra_info eid="22">'Wuthering Heights' by Emily Brontë</extra_info> is, in my opinion, a unique and gripping blend of these genres. <extra_info eid="23">Written in 1847,</extra_info> it is an epic family saga full of desire, hate, revenge and regret, focusing on the main characters of Heathcliff and Catherine. <extra_info eid="24">The atmospheric setting of the wild Yorkshire moors cleverly mirrors these violent emotions.</extra_info>
+                </para>
+            </content>
+        </paragraph>
+        <paragraph eid="25">
+            <name eid="26">Plot</name>
+            <desc eid="27">A brief summary of what happens.</desc>
+            <tip>TIP It is usual to use the present tense to describe the story. You can use more than one paragraph for each part of your review.</tip>
+            <notes eid="28">
+                <para>Story: Catherine's father adopts Heathcliff. Her brother, Hindley, is jealous. She falls in love with Heathcliff. Father dies and Hindley makes Heathcliff be a servant. Catherine marries Edgar Linton - closer in class and position in society. Leads to tragedy.</para>
+            </notes>
+            <content eid="29">
+                <para>When Catherine's father adopts the starving orphan boy Heathcliff, Catherine's brother Hindley feels <useful type="collocation" eid="30">deeply hurt</useful> and resentful. She, <useful type="linking" eid="31">on the other hand</useful>, develops an <useful type="collocation" eid="32">immensely strong bond</useful> with Heathcliff, which becomes an all-consuming love. Upon her father's death, Hindley becomes the head of the family and forces Heathcliff to assume the position of a servant. Despite loving Heathcliff, Catherine chooses to marry Edgar Linton, who is closer to her class and position in society. <useful type="linking" eid="33">It is this decision which</useful> leads to heartbreak and tragedy, not only for them but for many others.</para>
+            </content>
+        </paragraph>
+        <paragraph eid="34">
+            <name eid="35">Characters</name>
+            <desc eid="36">Briefly describe and comment on the main characters.</desc>
+            <notes eid="37">
+                <para>Heathcliff: anti-hero - rough manners, lack of control. Catherine has flaws. Readers empathize with them both. Book brilliant because true: readers horrified by behaviour of Catherine and Heathcliff but don't hate them because the reasons for their actions are clear.</para>
+            </notes>
+            <content eid="38">
+                <para>Heathcliff <useful type="key" eid="39">could be described as</useful> an <useful type="key" eid="40">anti-hero</useful> with his rough manners and lack of control. <useful type="linking" eid="41">Likewise</useful>, Catherine displays many flaws but the reader can still empathize with these characters. <useful type="linking" eid="42">In fact</useful>, this is the main reason why I believe this novel is so brilliant. It rings with truth. The reader may be horrified at the way that Heathcliff and Catherine behave, and yet, at the same time, the writer ensures we never hate them because the reasons for their actions are <useful type="collocation" eid="43">crystal clear</useful>.</para>
+            </content>
+        </paragraph>
+        <paragraph eid="44">
+            <name eid="45">Other information</name>
+            <desc eid="46">Anything else important that you want to say about the book (e.g. style of writing, literary devices).</desc>
+            <notes eid="47">
+                <para>Book has narrator - Ellen Dean, a servant. Useful because holds the plot together. Book is not an easy read: dense description; dialogue in dialect - can be difficult to understand.</para>
+            </notes>
+            <content eid="48">
+                <para>The main part of the book relies on a <useful type="key" eid="49">narrator</useful>, Ellen Dean, who is a servant at Wuthering Heights and I think that this is a useful <useful type="key" eid="50">device</useful> which holds the <useful type="key" eid="51">complex plot</useful> together. <useful type="linking" eid="52">However</useful>, Wuthering Heights is not what I would call an 'easy read'. There is <useful type="key" eid="53">dense description</useful> and some of the dialogue is written in dialect, which can be difficult to follow.</para>
+            </content>
+        </paragraph>
+        <paragraph eid="54">
+            <content dup="48" eid="55">
+                <para>The main part of the book relies on a narrator, Ellen Dean, who is a servant at Wuthering Heights and I think that this is a useful device which holds the complex plot together. However, Wuthering Heights is not what I would call an 'easy read'. <extra_info eid="56">There is dense description and some of the dialogue is written in dialect, which can be difficult to follow.</extra_info></para>
+            </content>
+        </paragraph>
+        <paragraph eid="57">
+            <name eid="58">Conclusion</name>
+            <desc eid="59">Include your personal recommendation here.</desc>
+            <tip>TIP You can restate your opinion of the book as a recommendation to read it or not read it.</tip>
+            <notes eid="60">
+                <para>Recommend book highly: exceptional</para>
+            </notes>
+            <content eid="61" prompt="Type your conclusion here">
+                <para>
+                    <useful type="linking" eid="62">Nevertheless</useful>, I persevered and, all in all, can <useful type="key" eid="63">highly recommend</useful> Wuthering Heights. I challenge you to remain unmoved after reading this <useful type="key" eid="64">exceptional book</useful> .</para>
+            </content>
+        </paragraph>
+    </paragraphs>
+</framework>

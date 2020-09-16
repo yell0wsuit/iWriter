@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!DOCTYPE framework SYSTEM "ald8_iwriter.dtd">
+<!--Edited: 02 September 2009 10:21:49 by turnbulj-->
+<!--Edited: 14 May 2009 12:30:27 by bradyf-->
+<!--Edited: 06 May 2009 11:07:44 by bradyf-->
+<framework>
+    <framework_title>A comparison and contrast essay 4 (Longer essays)</framework_title>
+    <framework_intro>
+        <para>Below is a suggested framework to help you structure a longer comparison and contrast essay. There are spaces for you to add your notes and the content of your essay.</para>
+        
+    </framework_intro>
+    <practice_rubric>
+        <planning>
+            <checklist>
+                <point help="argument_brainstorm.swf">Brainstorm ideas about similarities and differences. For example, arrange points in a table.</point>
+                <point help="argument_read_and_research.swf">Read and research the topic.</point>
+                <point>Highlight the similarities and the differences and decide which are more important.</point>
+                <point>Choose which points to include in your essay and which to leave out.</point>
+                <point>Decide how to define the two things you are comparing.</point>
+                <point>Organize your notes into the framework.</point>
+            </checklist>
+        </planning>
+        <vocab>
+            <checklist>
+                <point help="argument_formal.swf">Use formal and impersonal language.</point>
+                <point help="compare_words_differences.swf">Use words and phrases to describe differences.</point>
+                <point help="compare_words_similarities.swf">Use words and phrases to describe similarities.</point>
+            </checklist>
+        </vocab>
+        <writing>
+            <checklist>
+                <point help="argument_connecting_words.swf">Use connecting words and phrases to make the structure of your essay clear to your readers.</point>
+            </checklist>
+        </writing>
+        <checking>
+            <checklist>
+                <point>Have I answered the question?</point>
+                <point>Have I introduced the subject, developed it logically and come to a conclusion?</point>
+                <point>Does the conclusion follow logically from the rest of the essay?</point>
+                <point>Have I used  paragraphs appropriately?</point>
+                <point>Is it the right length?</point>
+                <point>Have I checked vocabulary, grammar, spelling and punctuation?</point>
+            </checklist>
+        </checking>
+    </practice_rubric>
+    <paragraphs>
+        <paragraph>
+            <name>Title</name>
+            <desc>The title of your essay</desc>
+            <content prompt="Type your title here"/>
+        </paragraph>
+        <paragraph>
+            <name>Introduction</name>
+            <desc>Introduce the topic. Explain the scope of the essay.</desc>
+            <notes/>
+            <content prompt="Type your introduction here"/>
+        </paragraph>
+        <paragraph>
+            <name>Aspect 1: compare X and Y</name>
+            <desc>Describe one important feature of the two things you are comparing and discuss how they compare.</desc>
+            <tip>TIP You can use several paragraphs here.</tip>
+            <notes/>
+            <content/>
+        </paragraph>
+        <paragraph>
+            <name>Aspect 2: compare X and Y</name>
+            <desc>Describe another important feature of the two things you are comparing and discuss how they compare.</desc>
+            <tip>TIP You can use several paragraphs here.</tip>
+            <notes/>
+            <content/>
+        </paragraph>
+        <paragraph>
+            <name>Aspect 3: compare X and Y</name>
+            <desc>Describe another important feature of the two things you are comparing and discuss how they compare.</desc>
+            <tip>TIP You can use several paragraphs here.</tip>
+            <notes/>
+            <content/>
+        </paragraph>
+        <paragraph>
+            <name>Conclusion</name>
+            <desc>Summarize and discuss whether X and Y are more similar or more different, based on the discussion in the previous paragraphs.</desc>
+            <notes/>
+            <content prompt="Type your conclusion here"/>
+        </paragraph>
+    </paragraphs>
+</framework>

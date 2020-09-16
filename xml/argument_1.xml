@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<!DOCTYPE framework SYSTEM "Q:\rules\ald8_iwriter.dtd">
+<!--Edited: 20 October 2009 15:49:23 by turnbulj-->
+<!--Edited: 20 October 2009 14:31:26 by turnbulj-->
+<framework>
+    <framework_title>An argument or opinion essay. Framework 1</framework_title>
+    <framework_intro>
+        <para>Below is a suggested framework to help you structure this type of essay. This framework presents all the arguments on one side first, followed by the arguments on the other side. There are spaces for you to add your notes and the content of your essay.</para>
+        <para>Remember that you can look the word up in the Oxford Advanced Learner's Dictionary.</para>
+        
+    </framework_intro>
+    <guided_tour>
+        <step label="What is an argument essay?">
+            <commentary>
+                <para>
+				Many essays that you have to write, whether during your school or college course or in an examination, will require you to present a reasoned argument on a particular issue. This will often be based on your research into the topic, but some questions may ask you to give your opinion. In both cases your argument must be clearly organized and supported with information, evidence and reasons. The language tends to be formal and impersonal.
+                </para>
+            </commentary>
+        </step>
+        <step label="How is it structured?" para_ids="arg1_1, arg1_2, arg1_4, arg1_5, arg1_13, arg1_14, arg1_23, arg1_24, arg1_34, arg1_35, arg1_41, arg1_42, arg1_49, arg1_50">
+            <commentary>
+                <para>Below is the framework that was used to create this essay.</para>
+                <para>When writing this kind of essay it is possible to reverse the arguments for and against.</para>
+            </commentary>
+        </step>
+        <step label="How was it planned?" para_ids="arg1_1, arg1_2, arg1_3, arg1_4, arg1_5, arg1_6, arg1_13, arg1_14, arg1_15, arg1_23, arg1_24, arg1_25, arg1_34, arg1_35, arg1_36, arg1_41, arg1_42, arg1_43, arg1_49, arg1_50, arg1_51">
+            <commentary>
+                <para>In order to plan the essay, the writer decides what to cover in each paragraph and takes notes.</para>
+            </commentary>
+        </step>
+        <step label="Focus on the introduction" para_ids="arg1_3, arg1_4, arg1_5, arg1_10">
+            <commentary>
+                <para>The purpose of an introduction is to explain the subject of your essay (the situation or problem, etc.), and how you intend to deal with it. A typical introduction moves from a general statement to a more specific focus.</para>
+                <para showme="arg1_11">In this model, sentences 1 and 2 introduce the topic in a general way.</para>
+                <para showme="arg1_12">Sentence 3 states the focus of the essay.</para>
+            </commentary>
+        </step>
+        <step label="Look at the development section" para_ids="arg1_3, arg1_13, arg1_14, arg1_16, arg1_23, arg1_24, arg1_26, arg1_34, arg1_35, arg1_37, arg1_41, arg1_42, arg1_44">
+            <commentary>
+                <para>Each paragraph presents a specific argument or counterargument, supported with evidence, examples or reasons. In this model the writer decides from the evidence that he/she agrees with the statement &#x2018;Manned space missions should now be replaced with unmanned missions&#x2019; so puts the main arguments first with evidence and quotations to support them. Arguments against are then given and shown to be unconvincing.</para>
+                <para showme="arg1_18">Factual data is given to support the writer's point of view.</para>
+                <para showme="arg1_17">A quote from an expert adds authority.</para>
+				<para showme="arg1_38">'Some may argue' suggests that the writer will go on to argue against this position.</para>
+				<para showme="arg1_45">'However' introduces the argument against the counterargument.</para>
+            </commentary>
+        </step>
+        <step label="Focus on the conclusion" para_ids="arg1_3, arg1_49, arg1_50, arg1_52">
+            <commentary>
+                <para>This paragraph summarizes the writer’s points and states his/her conclusion on the title.</para>
+				<para showme="arg1_53">'Thus' introduces the conclusion.</para>
+				<para showme="arg1_54">'I would argue that' clearly shows the writer’s position.</para>
+            </commentary>
+        </step>
+        <step label="Show me useful language" para_ids="arg1_3, arg1_7, arg1_19, arg1_26, arg1_39, arg1_46, arg1_55">
+            <commentary>
+                <para>The writer uses key words or phrases to:</para>
+                <para showme="arg1_22, arg1_27, arg1_28, arg1_30, arg1_32, arg1_33, arg1_47, arg1_56, arg1_57">guide the reader through the argument and show the writer's opinion</para>
+                <para showme="arg1_29, arg1_31, arg1_48, arg1_58">modify his/her opinion on the topic</para>
+                <para showme="arg1_8, arg1_9, arg1_21, arg1_40">sound less personal and more objective</para>
+                <para showme="arg1_20">introduce quotes from experts</para>
+            </commentary>
+        </step>
+    </guided_tour>
+    <practice_rubric>
+        <planning>
+            <checklist>
+                <point help="argument_brainstorm.swf">Brainstorm your ideas on the question.</point>
+                <point help="argument_read_and_research.swf">Read and research the topic.</point>
+                <point>When researching, take detailed notes and keep an accurate record of each source.</point>
+                <point>Which do you think are the strongest arguments? Decide what your viewpoint will be.</point>
+                <point>Select 2 or 3 strong ideas on each side, with supporting examples, ideas or evidence. For some questions you can use evidence from your personal experience.</point>
+                <point>Decide roughly how many words you will give to each part of your essay.</point>
+                <point>Note down some useful vocabulary on the topic.</point>
+                <point>Organize your notes into the framework.</point>
+            </checklist>
+        </planning>
+        <vocab>
+            <checklist>
+                <point help="argument_formal.swf">Use formal and impersonal language.</point>
+                <point help="argument_phrases.swf">Use words and phrases to signal your position.</point>
+            </checklist>
+        </vocab>
+        <writing>
+            <checklist>
+                <point help="argument_connecting_words.swf">Use connecting words and phrases to make the structure of your essay clear to your readers.</point>
+                <point>Give quotes or mention sources to support your points.</point>
+                <point help="argument_make_clear.swf">Make it clear which words/ideas are yours and whose words/ideas you have quoted.</point>
+            </checklist>
+        </writing>
+        <checking>
+            <checklist>
+                <point>Have I answered the question?</point>
+                <point>Have I introduced the subject, developed it logically and come to a conclusion?</point>
+                <point>Have I given evidence, examples and reasons for each point I make?</point>
+                <point>Does my conclusion follow from my arguments?</point>
+                <point>Have I used paragraphs appropriately?</point>
+                <point>Is it the right length?</point>
+                <point>Have I checked vocabulary, grammar, spelling and punctuation?</point>
+            </checklist>
+        </checking>
+    </practice_rubric>
+    <paragraphs>
+        <paragraph>
+            <name eid="arg1_1">Title</name>
+            <desc eid="arg1_2">The title of your essay.</desc>
+            <content prompt="Type your title here" eid="arg1_3">
+                <para><strong>'Manned space missions should now be replaced with unmanned missions.' Discuss</strong></para>
+            </content>
+        </paragraph>
+        <paragraph>
+            <name eid="arg1_4">Introduction</name>
+            <desc eid="arg1_5">Introduce the topic and state the focus of the essay.</desc>
+            <tip>TIP Go from broad to narrow focus.</tip>
+            <notes eid="arg1_6">
+                <para>The study of space and planets is expensive. Must balance costs with research benefits.</para>
+                <para>Are the benefits of manned space flight worth the costs?</para>
+            </notes>
+            <content prompt="Type your introduction here" eid="arg1_7">
+                <para>
+                    <useful type="objective" eid="arg1_8">It is clear that</useful> the study of space and the planets is by nature expensive. Scientists and politicians must constantly attempt to balance costs with potential research benefits. A major question <useful type="objective" eid="arg1_9">to be considered</useful> is whether the benefits of manned space flight are worth the costs.</para>
+            </content>
+        </paragraph>
+        <paragraph>
+            <content eid="arg1_10" dup="arg1_7">
+                <para>
+                    <extra_info eid="arg1_11">It is clear that the study of space and the planets is by nature expensive. Scientists and politicians must constantly attempt to balance costs with potential research benefits.</extra_info>
+                    <extra_info eid="arg1_12">A major question to be considered is whether the benefits of manned space flight are worth the costs.</extra_info>
+                </para>
+            </content>
+        </paragraph>
+        <paragraph>
+            <name eid="arg1_13">Arguments for your case 1</name>
+            <desc eid="arg1_14">Make your first point and give supporting evidence, examples or reasons.</desc>
+            <notes eid="arg1_15">
+                <para>Steven Weinberg (use quotation): Humans are not useful in space-radiate heat, very expensive and want to come back.</para>
+                <para>Unmanned missions are cheaper:</para>
+                <para>—don't need to support human life (airtight compartments, food, life support). </para>
+                <para>—lighter, so less fuel and launch equipment needed.</para>
+            </notes>
+            <content eid="arg1_16">
+                <para>For Nobel Prize-winning physicist Steven Weinberg the answer is clear. As he noted in 2007 in a lecture at the Space Telescope Science Institute in Baltimore. <extra_info eid="arg1_17">'Human beings don't serve any useful function in space. They radiate heat, they're very expensive to keep alive, and unlike robotic missions, they have a natural desire to come back, so that anything involving human beings is enormously expensive.'</extra_info></para>
+                <para>Unmanned missions are much less expensive than manned, having no requirement for airtight compartments, food or life support systems. They are also lighter and therefore require less fuel and launch equipment. According to NASA, <extra_info eid="arg1_18">the 1992 manned Space Shuttle Endeavor cost $1.7 billion to build and requires approximately $450 million for each launch. In contrast, the entire unmanned Voyager mission from 1972 until 1989, when it observed Neptune, cost only $864 million.</extra_info></para>
+            </content>
+        </paragraph>
+		<paragraph>
+		    <content eid="arg1_19" dup="arg1_16">
+                <para><useful type="quote" eid="arg1_20">For Nobel Prize-winning physicist Steven Weinberg the answer is clear.</useful> As he noted in 2007 in a lecture at the Space Telescope Science Institute in Baltimore. 'Human beings don't serve any useful function in space. They radiate heat, they're very expensive to keep alive, and unlike robotic missions, they have a natural desire to come back, so that anything involving human beings is enormously expensive.'</para>
+                <para>Unmanned missions are much less expensive than manned, having no requirement for airtight compartments, food or life support systems. They are also lighter and therefore require less fuel and launch equipment. <useful type="objective" eid="arg1_21">According to NASA,</useful> the 1992 manned Space Shuttle Endeavor cost $1.7 billion to build and requires approximately $450 million for each launch. <useful type="structure" eid="arg1_22">In contrast,</useful> the entire unmanned Voyager mission from 1972 until 1989, when it observed Neptune, cost only $864 million.</para>
+            </content>
+		</paragraph>
+        <paragraph>
+            <name eid="arg1_23">Arguments for your case 2</name>
+            <desc eid="arg1_24">Make your second point and give supporting evidence, examples or reasons.</desc>
+            <tip>TIP You can continue with other points if you have them.</tip>
+            <notes eid="arg1_25">
+                <para>Unmanned missions produce more data - have explored almost whole solar system.</para>
+				<para>Manned missions can't go so far, stay away so long or collect so much data.</para>
+            </notes>
+            <content eid="arg1_26">
+                <para>
+                    <useful type="structure" eid="arg1_27">In addition to</useful> their relative <useful type="structure" eid="arg1_28">cost effectiveness</useful>, unmanned projects <useful type="position" eid="arg1_29">generally</useful> yield a much greater volume of data. <useful type="structure" eid="arg1_30">While</useful> manned flights have yet to extend beyond the orbit of Earth's moon, unmanned missions have explored <useful type="position" eid="arg1_31">almost</useful> our entire solar system, and have recently observed an Earth-like planet in a nearby solar system. Manned missions would <useful type="structure" eid="arg1_32">neither</useful> be able to travel so far, be away so long, <useful type="structure" eid="arg1_33">nor</useful> collect so much data while at the same time guaranteeing the astronauts' safe return.</para>
+            </content>
+        </paragraph>
+        <paragraph>
+            <name eid="arg1_34">Arguments against (counterarguments)</name>
+            <desc eid="arg1_35">Make points against your case, with evidence.</desc>
+            <tip>TIP You can continue with other points if you have them. You should start a new paragraph for each point.</tip>
+            <notes eid="arg1_36">
+                <para>But only manned missions inspire people and attract money and interest.</para>
+            </notes>
+            <content eid="arg1_37">
+                <para>
+                    <extra_info eid="38">Some may argue</extra_info> that only manned space flight possesses the ability to inspire and engage the general population, providing much-needed momentum for continued governmental funding and educational interest in mathematics and the sciences.</para>
+            </content>
+        </paragraph>
+		<paragraph>
+		    <content eid="arg1_39" dup="arg1_37">
+                <para>
+                    <useful type="objective" eid="arg1_40">Some may argue</useful> that only manned space flight possesses the ability to inspire and engage the general population, providing much-needed momentum for continued governmental funding and educational interest in mathematics and the sciences.</para>
+            </content>
+		</paragraph>
+        <paragraph>
+            <name eid="arg1_41">Evaluate/refute</name>
+            <desc eid="arg1_42">Evaluate or refute the counterarguments.</desc>
+            <notes eid="arg1_43">
+                <para>But recent unmanned missions have attracted media interest e.g. Hubble.</para>
+            </notes>
+            <content eid="arg1_44">
+                <para>
+					<extra_info eid="arg1_45">However,</extra_info> media coverage of recent projects such as the Mars Rover, the Titan moon lander, and the Hubble telescope's photographs of extrasolar planets demonstrates that unmanned missions clearly have the ability to attract and hold public interest.</para>
+            </content>
+        </paragraph>
+		<paragraph>
+		<content eid="arg1_46" dup="arg1_44">
+				<para><useful type="structure" eid="arg1_47">However</useful>, media coverage of recent projects such as the Mars Rover, the Titan moon lander, and the Hubble telescope's photographs of extrasolar planets demonstrates that unmanned missions <useful type="position" eid="arg1_48">clearly</useful> have the ability to attract and hold public interest.</para>
+        </content>
+		</paragraph>
+        <paragraph>
+            <name eid="arg1_49">Summary and conclusion</name>
+            <desc eid="arg1_50">Summarize the points you have made and state the conclusion you have come to on the question or title of the essay.</desc>
+            <tip>TIP The conclusion may go from narrow to broad focus.</tip>
+            <notes eid="arg1_51">
+                <para>Therefore unmanned missions better: cheaper, get more data and have popular support.</para>
+            </notes>
+            <content prompt="Type your conclusion here" eid="arg1_52">
+                <para>
+                    <extra_info eid="arg1_53">Thus</extra_info>, taking into account the lower cost, the greater quantity of data and widespread popular support, <extra_info eid="arg1_54">I would argue that</extra_info> for now, at least, unmanned space missions undoubtedly yield the most value in terms of public spending.</para>
+            </content>
+        </paragraph>
+		<paragraph>
+		    <content eid="arg1_55" dup="arg1_54">
+                <para>
+                    <useful type="structure" eid="arg1_56">Thus</useful>, taking into account the lower cost, the greater quantity of data and widespread popular support, <useful type="structure" eid="arg1_57">I would argue that</useful> for now, at least, unmanned space missions <useful type="position" eid="arg1_58">undoubtedly</useful> yield the most value in terms of public spending.</para>
+            </content>
+		</paragraph>
+    </paragraphs>
+</framework>

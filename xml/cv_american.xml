@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<!DOCTYPE framework SYSTEM "ald8_iwriter.dtd">
+<framework>
+    <framework_title> American-style résumé</framework_title>
+    <framework_intro>
+        <para>Below is a suggested framework to help you structure your résumé if you are applying for your first job. There are spaces for you to add the content of your résumé.</para>
+        <para>Remember that you can look the word up in the Oxford Advanced Learner's Dictionary.</para>
+        
+    </framework_intro>
+    <guided_tour>
+        <step label="What is a résumé for?">
+            <commentary>
+                <para>A résumé is a summary of the information in your CV that matches the job you are applying for. It gives information about your education, qualifications, skills and work experience. It should be no more than one page.</para>
+                <para>It is advisable to check with a teacher or tutor if there are any special conventions you should use. </para>
+                <para>Also look at the covering/cover letter.</para>
+            </commentary>
+        </step>
+        <step label="How is it structured?" para_ids="1,3,5,8,11,14,17,19">
+            <commentary>
+                <para>Below is the framework that was used to create this résumé.</para>
+            </commentary>
+        </step>
+        <step label="Personal information" para_ids="1,2">
+            <commentary>
+                <para>Provide your college or temporary address if you have one, as well as your permanent address. </para>
+                <para>There is no need to mention your age, gender, nationality, race, religion or marital status. Don't send a photo unless you are asked to.</para>
+            </commentary>
+        </step>
+        <step label="Objective" para_ids="3,4">
+            <commentary>
+                <para>Summarize your goals and customize your résumé for specific positions. Your objective should be stated in terms of a realistic short-term goal and/or a job for which you are currently qualified.</para>
+            </commentary>
+        </step>
+        <step label="Profile" para_ids="21,22">
+            <commentary>
+                <para>Your profile gives an employer an idea of who you are.</para>
+            </commentary>
+        </step>
+        <step label="Education and qualifications" para_ids="5,7">
+            <commentary>
+                <para>These are shown in reverse order and do not include information about elementary school.</para>
+                <para>You should try to include American equivalents of your qualifications. </para>
+            </commentary>
+        </step>
+        <step label="Work experience" para_ids="8,10">
+            <commentary>
+                <para>This is also shown in reverse order, beginning with the most recent. As this is the résumé of a recent graduate it includes holiday and part-time work. </para>
+            </commentary>
+        </step>
+        <step label="Skills" para_ids="14,16">
+            <commentary>
+                <para>These are the practical abilities of the applicant. The section also includes any formal qualifications relating to these skills.</para>
+            </commentary>
+        </step>
+        <step label="Interests" para_ids="17,18">
+            <commentary>
+                <para>This is a short section. It includes things like sport, creative activities and community activities, but not vague subjects such as 'reading' or 'travel'.</para>
+            </commentary>
+        </step>
+    </guided_tour>
+    <practice_rubric>
+        <planning>
+            <checklist>
+                <point>Collect together all the information you need to include in your résumé</point>
+                <point>Select information that is relevant to the job you are applying for</point>
+                <point>Make sure all the information is accurate</point>
+            </checklist>
+        </planning>
+        <vocab>
+            <checklist>
+                <point help="cv_use_action_verbs.swf">Use action verbs and adjectives to present yourself positively.</point>
+                <point help="cv_use_appropriate.swf">Use appropriate vocabulary to describe your skills and experience.</point>
+            </checklist>
+        </vocab>
+        <writing>
+            <checklist>
+                <point>Organize the information into the framework.</point>
+                <point>Show Education and Work experience in reverse order, beginning with the most recent.</point>
+                <point>Use either full sentences (e.g. I taught French at a summer school) or note form (Taught French at summer school).</point>
+                <point>Describe your work experience in terms of self-motivation, teamwork, organization, problem-solving, and enthusiasm.</point>
+            </checklist>
+        </writing>
+        <checking>
+            <checklist>
+                <point>Have I kept my résumé short? (for new graduates not more than one page)</point>
+                <point>Have I used capitals, bold type, spacing and underlining to make my résumé attractive and easy to read?</point>
+                <point>Have I used a typeface such as Times New Roman, Arial or Verdana in at least 10 pt?</point>
+                <point>Have I used the standard US paper size of 216 x 279mm?</point>
+                <point>Have I used reasonable margins on the page?</point>
+                <point>Have I used US spelling and punctuation?</point>
+				<point>Have I asked someone to read and edit the résumé for me?</point>
+            </checklist>
+        </checking>
+    </practice_rubric>
+    <paragraphs>
+        <paragraph>
+            <name eid="1">Personal information</name>
+            <tip>TIP Provide your college or temporary address if you have one, as well as your permanent address. There is no need to mention your age, gender, nationality, race, religion or marital status. Don't send a photo unless you are asked to.</tip>
+            <content eid="2" prompt="Type your personal information here">
+                <para>Name:  Jane Q. Student</para>
+                <para>Email:  jqstudent@mba.nau.edu</para>
+                <para>Present address:</para>
+                <para>508 Blackbird Roost</para>
+                <para>Flagstaff, AZ, USA 86011</para>
+                <para>Telephone:</para>
+                <para>+ 1 929 555 1212</para>
+                <para>
+                    <?xm-replace_text {para}?>
+                </para>
+                <para>Permanent address:</para>
+                <para>50, rue de Vaugirard</para>
+                <para>Saint-Sulpice, France 75006</para>
+                <para>Telephone:</para>
+                <para>+ 33 1234 567 890</para>
+            </content>
+        </paragraph>
+        <paragraph>
+            <name eid="3">Objective</name>
+            <tip>TIP Summarize your goals and customize your résumé for specific positions. Your objective should be stated in terms of a realistic short-term goal and/or a job for which you are currently qualified.</tip>
+            <notes>
+                <?xm-replace_text {notes}?>
+            </notes>
+            <content eid="4" prompt="Type your objective here">
+                <para>OBJECTIVE</para>
+                <para>To obtain an entry-level management position within an international hospitality organization.</para>
+            </content>
+        </paragraph>
+        <paragraph>
+            <name eid="21">Profile</name>
+            <tip>TIP You should include this section to give an employer an idea of who you are.</tip>
+            <notes>
+                <?xm-replace_text {notes}?>
+            </notes>
+            <content eid="22" prompt="Type your objective here">
+                <para>PROFILE</para>
+                <para>An outgoing and articulate post-graduate with experience in the travel business and children’s summer camps</para>
+            </content>
+        </paragraph>
+        <paragraph>
+            <name eid="5">Education</name>
+            <desc eid="6">Education and qualifications are put in reverse order. </desc>
+            <tip>TIP Omit details of your  elementary school. Try to give American equivalents of your qualifications.
+                Experienced candidates: List your key qualifications, but do not include every exam result or grade.</tip>
+            <notes>
+                <?xm-replace_text {notes}?>
+            </notes>
+            <content eid="7" prompt="Type details of your education here">
+                <para>EDUCATION</para>
+                <para>Masters in Business Administration (M.B.A.), 2006-2008</para>
+                <para>Northern Arizona University, Flagstaff, Arizona, USA</para>
+                <para>B.A. in International Hospitality, 2002-2006</para>
+                <para>Université de Savoie, Chambéry, France</para>
+            </content>
+        </paragraph>
+        <paragraph>
+            <name eid="8">Experience</name>
+            <desc eid="9">This is also in reverse order, beginning with the most recent.</desc>
+            <tip>TIP If you are a new graduate, include any holiday or part-time work. Experienced candidates: Put this section before your education. Give more information about the most recent post. Begin each job with the title and responsibilities and follow with your achievements. It is not usual to include details of your salary.</tip>
+            <notes>
+                <?xm-replace_text {notes}?>
+            </notes>
+            <content eid="10" prompt="Type details of your experience here">
+                <para>EXPERIENCE</para>
+                <para>Travel Agent, Sep. 2006-Present</para>
+                <para>Kokopelli Extreme Tours, Sedona, Arizona, USA</para>
+                <para>Organized adventure package tours for large student groups, trained and supervised new staff members, and maintained partner relationships.</para>
+                <para>Camp Counselor, Jun 2002-Aug 2006</para>
+                <para>Voyageurs Summer Camp, Voglans, France</para>
+                <para>Acted as a group leader for children aged 10-15, developed curriculum for campers, and led overnight hiking trips into the nearby wilderness.</para>
+            </content>
+        </paragraph>
+        <paragraph>
+            <name eid="11">Honors</name>
+            <desc eid="12">Any prizes and awards that you have won.</desc>
+            <notes>
+                <?xm-replace_text {notes}?>
+            </notes>
+            <content eid="13" prompt="Type details of your honors here">
+                <para>HONORS</para>
+                <para>Agent of the Month, Kokopelli Extreme Tours, March 2008</para>
+                <para>Voted 'Most Popular Counselor,' Voyageurs, 2005 &amp; 2006</para>
+            </content>
+        </paragraph>
+        <paragraph>
+            <name eid="14">Skills</name>
+            <desc eid="15">Your practical abilities.</desc>
+            <tip>TIP Include any exams you have passed or qualifications you have gained.
+                Experienced candidates: You can make more of this section and include organizational, computer, social, and any other appropriate skills in separate sections.</tip>
+            <notes>
+                <?xm-replace_text {notes}?>
+            </notes>
+            <content eid="16" prompt="Type details of your skills here">
+                <para>SKILLS</para>
+                <para>Fluent in French and English; conversational Spanish</para>
+            </content>
+        </paragraph>
+        <paragraph>
+            <name eid="17">Interests</name>
+            <tip>TIP Keep this short. Include a sport, a creative activity and a community activity, if you can. Avoid vague subjects such as reading or travel (unless you have done some serious travel for fairly long periods of time).</tip>
+            <notes>
+                <?xm-replace_text {notes}?>
+            </notes>
+            <content eid="18" prompt="Type details of your interests here">
+                <para>INTERESTS</para>
+                <para>Enjoy web design in HTML and Flash</para>
+            </content>
+        </paragraph>
+        <paragraph>
+            <name eid="19">References</name>
+            <desc eid="20">Give the names and addresses on a separate page when you send your résumé .</desc>
+        </paragraph>
+    </paragraphs>
+</framework>

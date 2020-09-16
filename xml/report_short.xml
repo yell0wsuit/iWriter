@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<!DOCTYPE framework SYSTEM "ald8_iwriter.dtd">
+<framework>
+    <framework_title>A short report</framework_title>
+    <framework_intro>
+        <para>Below is a suggested framework to help you structure this type of report.  There are spaces for you to add your notes and the content of your report.</para>
+        <para>Remember that you can look the word up in the Oxford Advanced Learner's Dictionary.</para>
+        
+    </framework_intro>
+    <guided_tour>
+        <step label="What is a report for?">
+            <commentary>
+                <para>A report describes a study, an investigation or a project. Its purpose is to provide recommendations or updates, and sometimes to persuade readers to accept an idea. It is written by a single person or a group who has investigated the issue. It is read by people who require the information.</para>
+            </commentary>
+        </step>
+        <step label="How is the report structured?" para_ids="1,2,4,5,11,12,17,18,28,29">
+            <commentary>
+                <para>Below is the framework that was used to create this report.</para>
+            </commentary>
+        </step>
+        <step label="How was the report planned?" para_ids="1,2,3,4,5,6,11,12,13,17,18,19,28,29,30">
+            <commentary>
+                <para>In order to plan the report, the writer decides what to cover in each paragraph and takes notes.</para>
+            </commentary>
+        </step>
+        <step label="Show me useful language" para_ids="3,7,14,20,31">
+            <commentary>
+                <para showme="8,9,10,15,16,21,22,23,24,25,26,27,32,33,34,35">The writer uses key words or phrases for a report.</para>
+            </commentary>
+        </step>
+    </guided_tour>
+    <practice_rubric>
+        <planning>
+            <checklist>
+                <point>Do your research and gather all your information, including facts and figures.</point>
+                <point>Organize your notes into the framework.</point>
+                <point help="reports_ask_yourself.swf">Ask yourself questions about your readers.</point>
+            </checklist>
+        </planning>
+        <vocab>
+            <checklist>
+                <point help="reports_lang_to_state.swf">Use language to state your objectives.</point>
+                <point help="reports_lang_to_outline.swf">Use language to outline your research and present your findings.</point>
+                <point help="reports_lang_to_give_conc.swf">Use language to give conclusions and recommendations.</point>
+            </checklist>
+        </vocab>
+        <writing>
+            <checklist>
+                <point>Make your report as long as necessary but as short as possible.</point>
+                <point>The main body of your report should be mainly factual and not based on opinion.</point>
+            </checklist>
+        </writing>
+        <checking>
+            <checklist>
+                <point>Does the title clearly show what the report is about?</point>
+                <point>Does the aim state the purpose of the report?</point>
+                <point>Does the method explain how I found out information and facts?</point>
+                <point>Are the results reported accurately and clearly?</point>
+                <point>Does the conclusion clearly give my opinion about the findings?</point>
+                <point>Have I checked vocabulary, grammar and spelling?</point>
+            </checklist>
+        </checking>
+    </practice_rubric>
+    <paragraphs>
+        <paragraph>
+            <name eid="1">Title</name>
+            <desc eid="2">Your title should tell the reader what the report is about.</desc>
+            <content eid="3" prompt="Type your title here">
+                <para>Changing shopping habits</para>
+            </content>
+        </paragraph>
+        <paragraph>
+            <name eid="4">Aim</name>
+            <desc eid="5">Explain what you were trying to find out.</desc>
+            <tip>TIP You may need more than one paragraph in each section.</tip>
+            <notes eid="6">
+                <para>To find out how shopping habits have changed since a new mall (Lakewater) was built out of town.</para>
+                <para>Identify future trends.</para>
+            </notes>
+            <content eid="7" prompt="Type your aim here">
+                <para>
+                    <useful type="key" eid="8">The objective of</useful> our survey was <useful type="key" eid="9">to find out whether</useful> shopping habits have changed
+                    since the building of the new out-of-town mall at Lakewater, and <useful type="key" eid="10">to identify trends</useful>
+                    for the future.
+                </para>
+            </content>
+        </paragraph>
+        <paragraph>
+            <name eid="11">Method</name>
+            <desc eid="12">Describe in detail the research you carried out.</desc>
+            <notes eid="13">
+                <para>4 groups: town-centre residents; residents of suburbs 3 miles around town; shopkeepers in town centre; traders in new mall.</para>
+                <para>2 questionnaires - 1 for shoppers, 1 for traders. 50 homes in centre and 50 in suburbs visited. Shops in both areas visited.</para>
+            </notes>
+            <content eid="14" prompt="Type your method here">
+                <para>Four <useful type="key" eid="15">groups of people were targeted</useful>: A - town-centre residents; B - residents of
+                    the suburbs up to three miles around the town centre; C - shopkeepers in the central
+                    area of town; D - traders in the new mall.
+                </para>
+                <para>
+                    <useful type="key" eid="16">The research was conducted</useful> using two questionnaires, one for shoppers and one
+                    for traders. Researchers visited 50 homes in the central area and 50 in the suburbs
+                    as well as a cross section of shops in both locations.
+                </para>
+            </content>
+        </paragraph>
+        <paragraph>
+            <name eid="17">Results</name>
+            <desc eid="18">Give details of the results of your research.</desc>
+            <notes eid="19">
+                <para>Shoppers: 75% had been to mall twice in last month, mostly from group B. Main reasons: plenty of free parking; lots of stores in one place. Families - play area an advantage.</para>
+                <para>Group A: 2 thirds  liked to be able to walk to shops. 8 out of 10 older people said daily shopping was only contact with people. Also preferred personal attention of smaller shops rather than impersonal large stores. But felt prices are increasing.</para>
+                <para>Traders: Group C (town centre) - business has decreased by half. Group D (Lakewater traders) - business steadily increasing. Majority of group D positive about future; only 5% of group C thought sales would increase in next 12 months.</para>
+            </notes>
+            <content eid="20" prompt="Type your results here">
+                <para>Shoppers </para>
+                <para>
+                    <useful type="key" eid="21">75% of</useful> all residents said that they had been to the new mall at least twice during the
+                    last month. <useful type="key" eid="22">Of these, the majority</useful> were from group B (residents of the suburbs). Among <useful type="key" eid="23">the most popular
+                        reasons cited</useful> for visiting Lakewater in preference to the town centre were the
+                    ample free parking there compared with the difficulties of parking in the town
+                    centre and the convenience of having a large number of stores in one location in
+                    the mall. Families, in particular, mentioned the Lakewater children's play area as an
+                    important advantage.
+                </para>
+                <para>
+                    <useful type="key" eid="24">In contrast, two thirds</useful> of those questioned in group A (town-centre residents) reported that they valued
+                    the convenience of being able to walk to the shops. <useful type="key" eid="25">Eight out of ten of</useful> the older
+                    shoppers surveyed said that their daily shopping trip was their only contact with
+                    other people. <useful type="key" eid="26">Moreover</useful>, they preferred the personal attention of the smaller shops
+                    compared with the anonymous atmosphere of the larger outlets. They were, however,
+                    concerned that prices were increasing.
+                </para>
+                <para>Traders </para>
+                <para>Group C, the town-centre traders, have seen business drop off by up to a half, whereas Lakewater
+                    traders (Group D) have recorded a steady increase in sales over the year. When <useful type="key" eid="27">asked whether</useful>
+                    they viewed the future with optimism, a large majority of group D replied positively,
+                    while only 5% of group C said that they expected to see a growth in their business in
+                    the coming year.
+                </para>
+            </content>
+        </paragraph>
+        <paragraph>
+            <name eid="28">Conclusions</name>
+            <desc eid="29">Draw  conclusions from the research and results.</desc>
+            <notes eid="30">
+                <para>Lakewater has had serious effect on town centre - will probably continue. Parking problems in centre important - mobile customers going out of town. Centre shops only for local residents e.g. elderly and those without cars. Many businesses facing difficulties.</para>
+            </notes>
+            <content eid="31" prompt="Type your conclusions here">
+                <para>The opening of the Lakewater shopping centre has clearly <useful type="key" eid="32">had a devastating
+                        effect on</useful> the town centre, and <useful type="key" eid="33">this trend seems set to continue</useful>. Parking problems
+                    in the town centre have been <useful type="key" eid="34">a significant factor</useful> in changing people's habits. Mobile,
+                    better-off consumers are deserting the high street for the new mall, leaving the
+                    town-centre traders relying on the custom of local residents, particularly the elderly
+                    and those without cars. <useful type="key" eid="35">As a result</useful>, many long-established businesses now face grave
+                    difficulties.</para>
+            </content>
+        </paragraph>
+    </paragraphs>
+</framework>

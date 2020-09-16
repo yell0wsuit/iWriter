@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<!DOCTYPE framework SYSTEM "Q:\rules\ald8_iwriter.dtd">
+<!--Edited: 20 October 2009 16:12:10 by turnbulj-->
+<framework>
+    <framework_title>A letter of complaint</framework_title>
+    <framework_intro>
+        <para>Below is a suggested framework to help you structure this type of letter. There are spaces for you to add your notes and the content of your letter.</para>
+        <para>Remember that you can look the word up in the Oxford Advanced Learner's Dictionary.</para>
+        
+    </framework_intro>
+    <guided_tour>
+        <step label="What is special about a formal letter? ">
+            <commentary>
+                <para>The important things to remember about writing formal letters are the layout, which follows particular conventions, and the language, which must be formal or semi-formal and polite, even when you are complaining. The content of your letter should have a clear, logical structure.</para>
+            </commentary>
+        </step>
+        <step label="How is it structured?" para_ids="2,6,10,58,14,18,22,23,28,29,35,36,42,43,48,49,54,55">
+            <commentary>
+                <para>Below is the framework that was used to create this letter.</para>
+            </commentary>
+        </step>
+        <step label="How is it laid out?" para_ids="2,4,6,8,10,12">
+            <commentary>
+                <para>Write your address, but not your name, in the top right-hand corner.</para>
+                <para>Write the name, position and address of the person you are writing to on the left-hand side.</para>
+                <para>The date can go either on the left or the right under the address, or above the address on the left.  It could also be January 31, 2010, (BrE) 31/1/10, or (NAmE) 1/31/10</para>
+            </commentary>
+        </step>
+        <step label="How does the letter start and finish?" para_ids="58,14,16,54,55,57">
+            <commentary>
+                <para>The writer doesn't know the name of the person he is writing to, so begins 'Dear Sir or Madam', and ends 'Yours faithfully'.</para>
+            </commentary>
+        </step>
+        <step label="How was the letter planned?" para_ids="22,23,24,28,29,30,35,36,37,42,43,44,48,49,50">
+            <commentary>
+                <para>The writer took notes for each paragraph before beginning to write.</para>
+            </commentary>
+        </step>
+        <step label="Show me useful language" para_ids="25,31,38,45,51">
+            <commentary>
+                <para showme="26,32,33,39,40,46,52">The writer uses key words or phrases for a letter of complaint.</para>
+            </commentary>
+        </step>
+    </guided_tour>
+    <practice_rubric>
+        <planning>
+            <checklist>
+                <point>Use the framework to organize notes for your own letter.</point>
+            </checklist>
+        </planning>
+        <vocab>
+            <checklist>
+                <point help="argument_formal.swf">Use formal language.</point>
+                <point help="let_complaint_appropriate.swf">Use appropriate words and phrases.</point>
+            </checklist>
+        </vocab>
+        <writing>
+            <checklist>
+                <point help="covering_letter_lay_your.swf">Lay your letter out correctly.</point>
+                <point help="coverl_greeting_and_close.swf">Make sure the greeting and close match.</point>
+            </checklist>
+        </writing>
+        <checking>
+            <checklist>
+                <point>Have I put my address (but not my name) in the right place?</point>
+                <point>Have I put the name and address of the person I'm writing to in the right place?</point>
+                <point>Have I put the date in the right place?</point>
+                <point>Have I given a reference?</point>
+                <point>Does my first paragraph make it clear why I am writing?</point>
+                <point>Have I made it clear what action I would like? (e.g. a meeting, some information, compensation, etc.)</point>
+                <point>Have I matched the greeting (Dear...) with the right ending (Yours...)?</point>
+                <point>Does my letter sound quite formal?</point>
+                <point>Is it polite?</point>
+                <point>Have I checked vocabulary, grammar and spelling?</point>
+            </checklist>
+        </checking>
+    </practice_rubric>
+    <paragraphs>
+        <paragraph eid="1" align="right">
+            <name eid="2">Your address</name>
+            <tip eid="3">Write your address, but not your name, in the top right-hand corner.</tip>
+            <content prompt="Type your address here" eid="4" align="right">
+                <para>6 Fore Street</para>
+                <para>Kensington</para>
+                <para>London W8 9NW</para>
+            </content>
+        </paragraph>
+        <paragraph eid="5">
+            <name eid="6">Name/title and address of the person you are writing to.</name>
+            <tip eid="7">TIP Write the name, position and address of the person you are writing to on the left-hand side. If you are writing in American style use American spelling and punctuation e.g. write Mrs., Dr., etc.</tip>
+            <content prompt="Type the name and address here" eid="8">
+                <para>Customer Services Manager</para>
+                <para>FlyHigh Airways</para>
+                <para>PO Box 589</para>
+                <para>London W3 5NJ</para>
+            </content>
+        </paragraph>
+        <paragraph eid="9">
+            <name eid="10">Date</name>
+            <tip eid="11">TIP This can go either on the left or the right under the address, or above the address on the left. It could be written January 31, 2010, or 31/1/10 (both BrE), or 1/31/10 (NAmE).</tip>
+            <content prompt="Type today's date here" eid="12">
+                <para>31 January 2010</para>
+            </content>
+        </paragraph>
+        <paragraph eid="13">
+            <name eid="58">Greeting</name>
+            <desc eid="14">Dear...</desc>
+            <tip eid="15">TIP Use 'Dear Sir or Madam' if you do not know the name of the person you are writing to. If you do know the name, use the form 'Dear Ms Klein', 'Dear Mr Smith'. If you do not know the gender you can use 'Dear Chris White', but do not use both title and first name. If you are writing in American style and you do not know the name of the person you are writing to, you can use 'To whom it may concern'.</tip>
+            <content prompt="Type Dear..." eid="16">
+                <para>Dear Sir or Madam</para>
+            </content>
+        </paragraph>
+        <paragraph eid="17">
+            <name eid="18">Reference</name>
+            <tip eid="19">TIP You can use a heading instead e.g. Poor service levels.</tip>
+            <content prompt="Type a reference here" eid="20">
+                <para>Booking reference: Porter POR 1359AZ</para>
+            </content>
+        </paragraph>
+        <paragraph eid="21">
+            <name eid="22">Paragraph 1</name>
+            <desc eid="23">Explain clearly why you are writing.</desc>
+            <notes eid="24">
+                <para>We were passengers on flight LZ238 from London to Orlando, USA -  July 23rd 2009. Want to complain about the service - several aspects.</para>
+            </notes>
+            <content eid="25">
+                <para>My wife and I and our two children, aged 2 and 4, were passengers on flight LZ238 from London to Orlando, USA on July 23rd 2009. <useful type="key" eid="26">I am writing to complain</useful> about a number of aspects of the service we received.</para>
+            </content>
+        </paragraph>
+        <paragraph eid="27">
+            <name eid="28">Paragraph 2</name>
+            <desc eid="29">Explain the problem and how you were affected.</desc>
+            <notes eid="30">
+                <para>When plane delayed, staff at the information desk were unhelpful. We were not given a voucher for a drink or meal - delay would be at least seven hours. So had to spend a large amount of money in the restaurant.</para>
+            </notes>
+            <content eid="31">
+                <para>
+                    <useful type="key" eid="32">Firstly</useful>, when the flight was delayed, the staff at the airline's information desk were very unhelpful. We were not even given a voucher for a drink or meal, when it was clear the delay would be at least seven hours. <useful type="key" eid="33">This meant that </useful>we had to spend a considerable amount of money in the restaurant.</para>
+            </content>
+        </paragraph>
+        <paragraph eid="34">
+            <name eid="35">Paragraph 3</name>
+            <desc eid="36">Explain any further problem and the consequences.</desc>
+            <notes eid="37">
+                <para>When able to board, families were not allowed to board first - but  we had paid for this. So we were not able to sit together - children became distressed.</para>
+            </notes>
+            <content eid="38">
+                <para>
+                    <useful type="key" eid="39">Then</useful>, when we were finally able to board, families were not allowed to board first, although we had paid for this. <useful type="key" eid="40">As a result </useful>we were not able to sit together, making our children, already very tired, extremely distressed.</para>
+            </content>
+        </paragraph>
+        <paragraph eid="41">
+            <name eid="42">Paragraph 4</name>
+            <desc eid="43">State clearly what action you wish the company to take.</desc>
+            <notes eid="44">
+                <para>Legal requirement for airline operators to provide refreshments if there is a delay. I expect  compensation for this and no priority boarding although paid for.</para>
+            </notes>
+            <content eid="45">
+                <para>It is a legal requirement for airline operators to provide suitable refreshments in the event of a delay. <useful type="key" eid="46">I would therefore expect some compensation</useful> for your failure both to comply with this regulation and to provide us with the priority boarding for which we had paid.</para>
+            </content>
+        </paragraph>
+        <paragraph eid="47">
+            <name eid="48">Ending</name>
+            <desc eid="49">General comment. Say you would like a quick reply.</desc>
+            <notes eid="50">
+                <para>Enclose boarding passes and look forward to hearing from you shortly.</para>
+            </notes>
+            <content eid="51" prompt="Type your ending here">
+                <para>I enclose our boarding passes and<useful type="key" eid="52">look forward to hearing from you shortly.</useful></para>
+            </content>
+        </paragraph>
+        <paragraph eid="53">
+            <name eid="54">Closing</name>
+            <desc eid="55">Sign your name and print it underneath. Give any other contact details e.g. email.</desc>
+            <tip eid="56">TIP If you begin 'Dear + a name', end 'Yours sincerely'. Use 'Yours faithfully' here if you have begun 'Dear Sir or Madam'.
+                In American style end your letter 'Sincerely', 'Sincerely yours', (if you use Dear + a name) or 'Yours truly'.</tip>
+            <content prompt="Type 'Yours sincerely', 'Yours faithfully' etc, and your name" eid="57">
+                <para>Yours faithfully</para>
+                <para>S R Porter (Dr)</para>
+            </content>
+        </paragraph>
+    </paragraphs>
+</framework>
