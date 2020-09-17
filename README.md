@@ -18,3 +18,4 @@ More information can be found in the [Help](https://auranticus.github.io/iWriter
 ## Known bugs
 - The **Save** and **Save As** options are only available for Chromium browsers. Mozilla Firefox does not support them because it deprecated WebSQL in favor of IndexedDB.  
 For Safari on iOS 13+, you need to disable **Disable Web SQL** in **Setting** > **Safari** > **Advanced** > **Experimental Features**.
+- On iOS, if you don't disable **Disable Web SQL** or use browsers other than Safari, the page is frozen. Attempting to reload will show error "An error occurred while processing XML file."
