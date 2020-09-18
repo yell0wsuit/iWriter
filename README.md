@@ -17,9 +17,9 @@ More information can be found in the [Help](https://auranticus.github.io/iWriter
 - Optimized the Help section for smaller file size (it was bloated before due to Microsoft Word -> HTML).
 - More information is added in the Models/My Writing section.
 - Added new topics (more coming soon).
-- De-bloated the tool.
+- De-bloated the tool by removing unnecessary images and scripts.
 
 ## Known bugs
-- The **Save** and **Save As** options are only available for Chromium browsers. Mozilla Firefox does not support them because it deprecated WebSQL in favor of IndexedDB.  
+- The **Save** and **Save As** options are only available for Chromium browsers. Mozilla Firefox does not support them because it deprecated WebSQL in favor of IndexedDB. See [Issue #1](https://github.com/auranticus/iWriter/issues/1).  
 For Safari on iOS 13+, you need to disable **Disable Web SQL** in **Setting** > **Safari** > **Advanced** > **Experimental Features**.
 - On iOS, if you don't disable **Disable Web SQL** or use browsers other than Safari, the page is frozen. Attempting to reload will show error "An error occurred while processing XML file."
