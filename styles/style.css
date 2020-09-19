@@ -36,6 +36,7 @@
     width: 100%;
     background-color: #0072A6;
     float: left;
+	height: auto;
     /*height: 768px;*/
     /*min-height: 768px;*/
     margin: 0 0 28px 0;
@@ -742,9 +743,20 @@
     font-style: italic;
 }
 .xml_img_wrp{
+    width: auto;
+	text-align: center;
+    display: table;
+}
+.xml_img_wrp > div {
+    display: table-cell;
+    padding: 5px;
+    vertical-align: middle;
+    width: 45%;
+}
+.xml_img_wrp img {
     width: 100%;
-    overflow-x: auto;
-	object-fit: contain; 
+	display:block;
+    margin:auto;
 }
 .home_help{
     float: right;
