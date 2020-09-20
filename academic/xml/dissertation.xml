@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Edited: 18 October 2013 11:17:13 by lead--><!--Edited: 18 October 2013 10:45:53 by lead--><!--Edited: 14 October 2013 15:59:19 by webbsu--><!--Edited: 14 October 2013 15:58:30 by webbsu--><!--Edited: 14 October 2013 14:32:34 by webbsu--><!--Edited: 09 October 2013 12:16:34 by webbsu--><!--Edited: 06 September 2013 12:27:41 by webbsu--><!--Edited: 04 September 2013 14:30:51 by webbsu--><!--Edited: 04 September 2013 10:13:59 by webbsu--><!--Edited: 11 July 2013 12:22:16 by duncanr--><!--Edited: 08 July 2013 14:33:44 by duncanr--><!--Edited: 03 July 2013 13:39:56 by duncanr--><!--Edited: 03 July 2013 13:36:51 by duncanr--><framework>
+   <framework_title>Writing a Dissertation, Research Report or Long Essay</framework_title>
+   <framework_intro>
+      <para>Here is a framework to help you write a long assignment. There are spaces for you to add the content of your assignment.<br />Remember that you can double-click on any word to look it up in the dictionary.</para>
+   </framework_intro>
+   <guided_tour>
+      <step label="What is a long assignment?">
+         <commentary>
+            <para>You may have to write a long assignment as part of your course assessment. This may be a dissertation, long essay, project, research report, etc.</para>
+         </commentary>
+      </step>
+      <step label="What is its purpose?">
+         <commentary>
+            <para>The purpose of these assignments is to show the examiner that you:</para>
+            <para>- have gained research skills, knowledge and understanding from your course;</para>
+            <para>- can apply the methods of your field to a topic of your own choice;</para>
+            <para>- can complete an extended, in-depth piece of work.</para>
+         </commentary>
+      </step>
+      <step label="How long is it?">
+         <commentary>
+            <para>Dissertations can range from about 10 000 words at undergraduate level to about 30 000 words for some Master's degrees.</para>
+            <para>Long essays may be slightly shorter, ranging from 2 000 to 10 000 words.</para>
+            <para>References, appendices, the abstract, and front matter (title page, table of contents, etc.) are not usually included in the word count.</para>
+         </commentary>
+      </step>
+      <step label="What are the main parts?"
+            para_ids="6,7,10,11,15,16,20,21,25,29,30,34,35,39,40">
+         <commentary>
+            <para>A dissertation may have all or only some of the following parts, usually presented in this order.</para>
+            <para>Note: requirements and conventions vary in different fields, departments and institutions. Always consult your tutor/supervisor and departmental guidelines for specific details.</para>
+         </commentary>
+      </step>
+      <step label="How is the main part structured?">
+         <commentary>
+            <para>Requirements and conventions vary in different fields, departments and institutions. Always consult your tutor/supervisor and departmental guidelines for specific details.</para>
+            <para>You can see two typical structures at Preparing to Write, by clicking the Writing tab (above).</para>
+            <para>For more details on individual sections, look at the relevant templates in the iWriter.</para>
+         </commentary>
+      </step>
+   </guided_tour>
+   <practice_rubric>
+      <planning>
+         <checklist>
+            <point help="dissertation1.xml">Carrying out a research study.<br />Tip<br />Back up your files as you collect data and write up your work.</point>
+            <point help="dissertation2.xml">Decide on a structure for your writing. Check requirements with your tutor/supervisor.<br />Long texts consist of several shorter sections which you may also have to write as separate assignments, e.g. Introduction, Literature Review.<br />Look at the individual templates in the iWriter for more detailed information on each section.<br />TIP<br />Choose titles and headings that are short but informative. The examiner needs to know the content of each chapter and section clearly.</point>
+            <point help="dissertation3.xml">Planning the sections<br />TIP<br />1. Chapters do not have to be the same length. Each chapter should be as long as necessary to cover the material.<br />2. Do not be worried by the total number of words. Individual sections are often the same length as assignments you have written already.<br />3. Divide the assignment into manageable sections and build up your writing section by section.</point>
+            <point help="dissertation4.xml">Writing up</point>
+            <point help="dissertation5.xml">Revising<br />Tip<br />Get someone else to proofread your text. They often notice problems more easily.</point>
+            <point help="dissertation6.xml">Final checks</point>
+         </checklist>
+      </planning>
+      <vocab>
+         <checklist>
+            <point help="academic_language.xml">Use academic language.</point>
+         </checklist>
+      </vocab>
+      <writing>
+         <checklist>
+            <point>Look at the Language Banks, Grammar Focus notes and more in the iWriter template for the section you wish to write.</point>
+         </checklist>
+      </writing>
+      <checking>
+         <checklist>
+            <point>Have I proofread for completeness?</point>
+            <point>Have I checked the accuracy of my material?</point>
+            <point>Have I checked that there is no repetition?</point>
+            <point>Have I used appropriate academic language?</point>
+            <point>Have I checked vocabulary, grammar, spelling and punctuation?</point>
+            <point>Have I formatted references consistently, using a suitable convention?</point>
+            <point>Have I followed all the requirements for submission?</point>
+         </checklist>
+      </checking>
+   </practice_rubric>
+   <paragraphs>
+      <paragraph eid="1">
+         <name eid="2">Writing a Dissertation, Research Report or Long Essay</name>
+         <desc eid="3">An overview of the parts and structure of a long assignment, such as a dissertation, long essay, project, research report, etc.</desc>
+         <tip eid="4">TIP Long texts consist of several shorter sections which you may also have to write as separate assignments, e.g. Introduction, Literature Review.<br />TIP Refer to the other sections of the iWriter for templates giving detailed information, tips and language suggestions for each part of a typical dissertation.</tip>
+      </paragraph>
+      <paragraph eid="5">
+         <name eid="6">Title page</name>
+         <desc eid="7">Contains the dissertation title, your name, department, degree and date of submission. There may be a specific form of words required, e.g. ‘A dissertation submitted for the degree of …’.</desc>
+         <content prompt="Draft your title page here" eid="8">
+            <para prompt="Draft your title page here" eid="8"><?xm-replace_text {content}?></para>
+         </content>
+      </paragraph>
+      <paragraph eid="9">
+         <name eid="10">Abstract</name>
+         <desc eid="11">A short summary of the whole text, usually 100–200 words</desc>
+         <tip eid="12">TIP Look at the templates: Writing an Abstract 1: Physical and Life Sciences OR Writing an Abstract 2: Social Sciences OR Writing an Abstract 3: Medicine.</tip>
+         <content prompt="Type your Abstract here." eid="13">
+            <para prompt="Type your Abstract here." eid="13"><?xm-replace_text {content}?></para>
+         </content>
+      </paragraph>
+      <paragraph eid="14">
+         <name eid="15">Acknowledgements</name>
+         <desc eid="16">Thanks are often given in the following order:<br />1. your tutor/supervisor<br />2. other academic help<br />3. technical and financial support; participants in your study<br />4. friends and relations</desc>
+         <tip eid="17">TIP This is an optional section.</tip>
+         <content eid="18" prompt="Type your Acknowledgements here">
+            <para eid="18" prompt="Type your Acknowledgements here"><?xm-replace_text {para}?></para>
+         </content>
+      </paragraph>
+      <paragraph eid="19">
+         <name eid="20">Table of Contents</name>
+         <desc eid="21">A list of all the parts of your dissertation with page numbers</desc>
+         <tip eid="22">TIP Include chapter titles, headings and sub-headings, if used.</tip>
+         <content eid="23" prompt="Draft your Table of Contents here.">
+            <para eid="23" prompt="Draft your Table of Contents here."><?xm-replace_text {para}?></para>
+         </content>
+      </paragraph>
+      <paragraph eid="24">
+         <name eid="25">List of figures, tables or other graphic matter</name>
+         <tip eid="26">TIP Each graphic element should have a title and a number, e.g. Table 2.4 is the fourth table in Chapter 2.</tip>
+         <content eid="27" prompt="Type your list of figures and tables here.">
+            <para eid="27" prompt="Type your list of figures and tables here."></para>
+         </content>
+      </paragraph>
+      <paragraph eid="28">
+         <name eid="29">Chapters 1, 2, etc.</name>
+         <desc eid="30">The body of your dissertation</desc>
+         <tip eid="31">TIP See 'Preparing to Write' for the typical structure for your own field.<br />TIP Refer to individual templates in the iWriter for detailed information, tips and language suggestions for each section that you are using.</tip>
+         <content prompt="Draft or outline the body of your dissertation here." eid="32">
+            <para prompt="Draft or outline the body of your dissertation here." eid="32"><?xm-replace_text {content}?></para>
+         </content>
+      </paragraph>
+      <paragraph eid="33">
+         <name eid="34">References/bibliography</name>
+         <desc eid="35">A list of all the works mentioned in your dissertation</desc>
+         <tip eid="36">TIP Do not include references to works that you do not mention.<br />TIP Check the accepted format for a bibliography with your supervisor. Also look at the template: Writing from Sources.</tip>
+         <content prompt="Type your bibliography here." eid="37">
+            <para prompt="Type your bibliography here." eid="37"><?xm-replace_text {content}?></para>
+         </content>
+      </paragraph>
+      <paragraph eid="38">
+         <name eid="39">Appendix 1,2, etc.</name>
+         <desc eid="40">Appendices are extra matter which supports your dissertation, but is not part of it, e.g. a survey questionnaire in social science.</desc>
+         <content prompt="Draft your appendices here." eid="41">
+            <para prompt="Draft your appendices here." eid="41"><?xm-replace_text {content}?></para>
+         </content>
+      </paragraph>
+   </paragraphs>
+</framework>

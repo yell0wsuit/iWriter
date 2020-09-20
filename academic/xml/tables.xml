@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Edited: 14 October 2013 15:09:49 by webbsu--><!--Edited: 14 October 2013 15:08:52 by webbsu--><!--Edited: 14 October 2013 14:57:12 by webbsu--><!--Edited: 14 October 2013 14:36:07 by webbsu--><!--Edited: 10 October 2013 15:08:46 by webbsu--><!--Edited: 09 October 2013 11:35:57 by webbsu--><!--Edited: 09 October 2013 11:34:51 by webbsu--><!--Edited: 09 October 2013 10:35:11 by webbsu--><!--Edited: 08 October 2013 15:41:37 by webbsu--><!--Edited: 08 October 2013 15:22:09 by webbsu--><!--Edited: 07 October 2013 12:23:01 by webbsu--><!--Edited: 07 October 2013 12:21:15 by webbsu--><!--Edited: 04 October 2013 15:16:18 by webbsu--><!--Edited: 04 October 2013 11:57:29 by webbsu--><!--Edited: 04 September 2013 11:11:03 by webbsu--><!--Edited: 04 September 2013 10:25:15 by webbsu--><!--Edited: 19 July 2013 12:30:02 by duncanr--><!--Edited: 18 July 2013 14:48:02 by webbsu--><!--Edited: 17 July 2013 13:50:42 by duncanr--><!--Edited: 16 July 2013 13:55:58 by duncanr--><!--Edited: 16 July 2013 10:37:27 by duncanr--><!--Edited: 11 July 2013 08:25:27 by duncanr--><!--Edited: 10 July 2013 16:00:28 by duncanr--><!--Edited: 10 July 2013 14:38:46 by duncanr--><!--Edited: 10 July 2013 14:36:44 by duncanr--><!--Edited: 09 July 2013 15:06:21 by duncanr--><!--Edited: 09 July 2013 13:28:19 by duncanr--><!--Edited: 09 July 2013 12:52:57 by duncanr--><!--Edited: 03 July 2013 14:51:28 by duncanr--><!--Edited: 03 July 2013 14:48:25 by duncanr--><!--Edited: 03 July 2013 09:57:47 by duncanr--><!--Edited: 02 July 2013 15:43:16 by duncanr--><!--Edited: 02 July 2013 12:51:07 by duncanr--><!--Edited: 02 July 2013 12:48:11 by duncanr--><!--Edited: 02 July 2013 09:42:55 by duncanr--><!--Edited: 10 June 2013 13:02:32 by duncanr--><!--Edited: 07 June 2013 13:46:22 by duncanr--><!--Edited: 04 June 2013 14:14:34 by duncanr--><!--Edited: 04 June 2013 14:10:08 by duncanr--><!--Edited: 16 April 2013 16:03:24 by duncanr--><!--Edited: 16 April 2013 14:58:20 by duncanr--><!--Edited: 16 April 2013 14:36:52 by duncanr--><!--Edited: 16 April 2013 14:18:14 by duncanr--><!--Edited: 16 April 2013 14:15:01 by duncanr--><!--Edited: 16 April 2013 14:11:35 by duncanr--><!--Edited: 16 April 2013 10:29:14 by duncanr--><!--Edited: 16 April 2013 09:15:38 by duncanr--><!--Edited: 09 April 2013 12:35:25 by duncanr--><!--Edited: 26 February 2013 14:37:20 by duncanr--><!--Edited: 13 February 2013 08:36:48 by duncanr--><!--Edited: 07 February 2013 14:04:48 by duncanr--><!--Edited: 07 February 2013 12:27:47 by duncanr--><!--Edited: 14 December 2012 11:29:07 by duncanr--><!--Edited: 13 December 2012 10:15:03 by duncanr--><!--Edited: 12 December 2012 14:43:28 by duncanr--><!--Edited: 12 December 2012 09:37:33 by duncanr--><!--Edited: 11 December 2012 13:57:52 by duncanr--><framework>
+   <framework_title>Presenting Data: tables</framework_title>
+   <framework_intro>
+      <para>Here is a framework to help you present data effectively using a table. This framework first gives statements summarizing what the table is going to be about; then the table itself; and, finally, commentary based on the table.<br />There are spaces for you to add your own text and table.</para>
+   </framework_intro>
+   <guided_tour>
+      <step label="How can data be presented effectively?">
+         <commentary>
+            <para>One of the main ways you can present your data effectively is to use visuals. Visuals summarize your data and make it easy for readers to understand what has been found in your research.</para>
+            <para>This framework shows you how to use tables effectively.</para>
+         </commentary>
+      </step>
+      <step label="Why has the writer used tables?">
+         <commentary>
+            <para>This is an extract from a findings section in a research article published in the ‘Socio-Economic Review’. The study looked at occupational change in Britain, Germany, Spain and Switzerland from 1990–2008. The writers have chosen tables to present their findings. Tables are used when the data contain relatively few numbers and there are only one or two categories of information that need to be displayed.</para>
+         </commentary>
+      </step>
+      <step label="How is the text organized?" para_ids="5,9,10,17,24,28,29">
+         <commentary>
+            <para>Here is the framework that was used to present these data.</para>
+         </commentary>
+      </step>
+      <step label="Look at the summarizing statements" para_ids="5,6,9,10,11">
+         <commentary>
+            <para>The purpose of the statements is to show what the tables in this section are going to be about.</para>
+         </commentary>
+      </step>
+      <step label="Look at the table" para_ids="17,24,25,18,26">
+         <commentary>
+            <para>Tables are used when the data contain relatively few numbers and there are only one or two categories of information that need to be displayed.</para>
+            <para></para>
+            <para showme="19">The table should have a suitable title.</para>
+         </commentary>
+      </step>
+      <step label="Look at the commentary" para_ids="28,29,31">
+         <commentary>
+            <para>The purpose of the commentary is to interpret the findings for the reader by:</para>
+            <para showme="32">pointing out a trend in the data</para>
+            <para showme="33">contrasting the findings with other findings (usually from this study, but it can sometimes be from other studies too)</para>
+         </commentary>
+      </step>
+      <step label="Show me useful language" para_ids="14,21,26,46">
+         <commentary>
+            <para showme="35,36,37,39,41,42,44">Use numbers or ordering to list findings.</para>
+            <para showme="34">Use passives to report findings.</para>
+            <para showme="15,22,38,40,43,45">Words and phrases that highlight trends</para>
+         </commentary>
+      </step>
+   </guided_tour>
+   <practice_rubric>
+      <planning>
+         <checklist>
+            <point>You must know and understand your data well and then use visuals carefully to ensure that they efficiently display your data in a meaningful way.</point>
+            <point help="presenting_data1.xml">There are many different visuals you can choose from to present your data. Two options are: tables and bar charts. Other common forms of visual are line graphs and pie charts.</point>
+            <point help="presenting_data2.xml">All visuals need to be accompanied by two elements. These are:<br />1. Statements that summarize what your visual is about.<br />2. A commentary that interprets your findings for the reader.</point>
+            <point>Organize your data and comments into the framework.</point>
+         </checklist>
+      </planning>
+      <vocab>
+         <checklist>
+            <point help="academic_language.xml">Use academic language.</point>
+            <point help="presenting_data4.xml">Language Bank: referring to visuals</point>
+            <point help="presenting_data5.xml">Language Bank: expressing percentages</point>
+            <point help="presenting_data6.xml">Language Bank: describing trends</point>
+         </checklist>
+      </vocab>
+      <writing>
+         <checklist>
+            <point help="reflective11.xml">Think about the writing process.</point>
+         </checklist>
+      </writing>
+      <checking>
+         <checklist>
+            <point>Have I used a title for my table?</point>
+            <point>Have I summarized what the table is about?</point>
+            <point>Have I interpreted the findings for the reader?</point>
+            <point>Have I used numbers or ordering to list findings?</point>
+            <point>Have I used words and phrases to highlight trends?</point>
+            <point>Have I used the passive to report the findings?</point>
+            <point>Have I quoted and referenced my sources accurately?</point>
+            <point>Have I checked vocabulary, grammar, spelling and punctuation?</point>
+         </checklist>
+      </checking>
+   </practice_rubric>
+   <paragraphs>
+      <paragraph eid="1">
+         <name eid="2">Presenting Data: tables</name>
+         <desc eid="3">Using tables to present data</desc>
+      </paragraph>
+      <paragraph eid="4">
+         <name eid="5">Section heading</name>
+         <content prompt="Type your section heading here." eid="6">
+            <para prompt="Type your section heading here." eid="6">4. Findings for the pattern of occupational change, 1990–2008</para>
+         </content>
+      </paragraph>
+      <paragraph eid="8">
+         <name eid="9">Summarizing statements</name>
+         <desc eid="10">Statements before the tables summarize what the tables are going to be about.</desc>
+         <content prompt="Type your summarizing statements here." eid="11">
+            <para prompt="Type your summarizing statements here." eid="11">Before examining changes in quintiles' sizes, we present in Tables 1 and 2 the three occupations that have experienced the largest expansion or decline over the last two decades in each country. To convey a sense of quintiles' occupational compositions, the last columns of Tables 1 and 2 report the job quality quintile in which each occupation falls.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="13">
+         <content prompt="Type your summarizing statements here" eid="14" dup="11">
+            <para prompt="Type your summarizing statements here" eid="14" dup="11">Before examining changes in quintiles' sizes, we present in Tables 1 and 2 the three occupations that have experienced<useful eid="15" type="collocation">the largest expansion or decline</useful>over the last two decades in each country. To convey a sense of quintiles' occupational compositions, the last columns of Tables 1 and 2 report the job quality quintile in which each occupation falls.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="16">
+         <name eid="17">Title for the table</name>
+         <content prompt="Type your title here." eid="18">
+            <para prompt="Type your title here." eid="18"><extra_info eid="19">Table 1: The three occupations with the largest increase in their relative share of employment</extra_info>
+            </para>
+         </content>
+      </paragraph>
+      <paragraph eid="20">
+         <content prompt="Type your title here" eid="21" dup="18">
+            <para prompt="Type your title here" eid="21" dup="18">Table 1: The three occupations with the<useful type="collocation" eid="22">largest increase</useful>in their relative share of employment.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="23">
+         <name eid="24">The table</name>
+         <content prompt="Put your table here." eid="26" image="table.swf">
+            <para prompt="Put your table here." eid="26" image="table.swf"/>
+         </content>
+      </paragraph>
+      <paragraph eid="27">
+         <name eid="28">Commentary based on the table</name>
+         <desc eid="29">The commentary interprets the findings for the reader by pointing out a trend in the data and contrasting the findings with other findings (usually from this study but it can sometimes be from other studies too).</desc>
+         <tip eid="30">TIP The commentary on your findings will include some discussion of the significance of your findings. This should not be confused with your discussion section. The commentary on the findings only interprets the data for your reader. In your discussion section, you will widen the discussion by linking it to literature on the topic and discussing the implications of your findings.</tip>
+         <content eid="31" prompt="Type your commentary here.">
+            <para eid="31" prompt="Type your commentary here.">Strongly ‘growing’ occupations can be divided into two groups: the first comprises highly qualified occupations such as financial managers, legal and computer professionals set in (private) business services; the second includes (public) social service occupations such as health care employees, teachers and social workers.<extra_info eid="32">It is noteworthy that computer professionals and (assistant) nurses have expanded very strongly in all four countries.</extra_info>
+               <extra_info eid="33">In contrast, we can distinguish three groups of strongly ‘declining’ occupations.</extra_info>A first group comprises the victims of de-industrialization and includes production workers such as mechanics, maintenance fitters and assemblers. These manufacturing jobs are not particularly low-paid, spreading across the middle Quintiles 2 to 4. The same observation applies to a second group of shrinking occupations—office clerks and secretaries—which represent typical mid-range jobs set in the intermediary Quintile 3. Finally, the fall in employment has also been strong among agricultural workers and farmers. Yet unlike jobs in production or the secretariat, these jobs are unequivocally associated with low earnings and set in Quintile 1.<br />[Further discussion follows.]<br />(Oesch and Rodríguez Menés, 2011) For the full reference, click Help and select References.</para>
+         </content>
+      </paragraph>
+      <paragraph>
+         <content eid="46" dup="31">
+            <para eid="46" dup="31">Strongly ‘growing’ occupations<useful type="structure" eid="34">can be divided</useful>into<useful type="objective" eid="35">two groups:</useful>the<useful eid="36" type="objective">first</useful>comprises highly qualified occupations such as financial managers, legal and computer professionals set in (private) business services; the<useful eid="37" type="objective">second</useful>includes (public) social service occupations such as health care employees, teachers and social workers. It is noteworthy that computer professionals and (assistant) nurses<useful type="collocation" eid="38">have expanded very strongly</useful>in all four countries. In contrast, we can distinguish<useful type="objective" eid="39">three groups</useful>of<useful eid="40" type="collocation">strongly ‘declining’</useful>occupations. A<useful eid="41" type="objective">first</useful>group comprises the victims of de-industrialization and includes production workers such as mechanics, maintenance fitters and assemblers. These manufacturing jobs are not particularly low-paid, spreading across the middle Quintiles 2 to 4. The same observation applies to a<useful type="objective" eid="42">second</useful>group of<useful type="collocation" eid="43">shrinking occupations</useful>—office clerks and secretaries—which represent typical mid-range jobs set in the intermediary Quintile 3.<useful type="objective" eid="44">Finally</useful>,<useful type="collocation" eid="45">the fall in employment has also been strong</useful>among agricultural workers and farmers. Yet unlike jobs in production or the secretariat, these jobs are unequivocally associated with low earnings and set in Quintile 1. [Further discussion follows.]<br />(Oesch and Rodríguez Menés, 2011) For the full reference, click Help and select References.</para>
+         </content>
+      </paragraph>
+   </paragraphs>
+</framework>
