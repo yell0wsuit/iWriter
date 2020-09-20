@@ -2,7 +2,7 @@
 <!--Edited: 18 October 2013 11:17:13 by lead--><!--Edited: 18 October 2013 10:45:53 by lead--><!--Edited: 14 October 2013 15:59:19 by webbsu--><!--Edited: 14 October 2013 15:58:30 by webbsu--><!--Edited: 14 October 2013 14:32:34 by webbsu--><!--Edited: 09 October 2013 12:16:34 by webbsu--><!--Edited: 06 September 2013 12:27:41 by webbsu--><!--Edited: 04 September 2013 14:30:51 by webbsu--><!--Edited: 04 September 2013 10:13:59 by webbsu--><!--Edited: 11 July 2013 12:22:16 by duncanr--><!--Edited: 08 July 2013 14:33:44 by duncanr--><!--Edited: 03 July 2013 13:39:56 by duncanr--><!--Edited: 03 July 2013 13:36:51 by duncanr--><framework>
    <framework_title>Writing a Dissertation, Research Report or Long Essay</framework_title>
    <framework_intro>
-      <para>Here is a framework to help you write a long assignment. There are spaces for you to add the content of your assignment.<br />Remember that you can double-click on any word to look it up in the dictionary.</para>
+      <para>Here is a framework to help you write a long assignment. There are spaces for you to add the content of your assignment.&lt;div&gt;Remember that you can double-click on any word to look it up in the dictionary.&lt;/div&gt;</para>
    </framework_intro>
    <guided_tour>
       <step label="What is a long assignment?">
@@ -43,11 +43,11 @@
    <practice_rubric>
       <planning>
          <checklist>
-            <point help="dissertation1.xml">Carrying out a research study.<br />Tip<br />Back up your files as you collect data and write up your work.</point>
-            <point help="dissertation2.xml">Decide on a structure for your writing. Check requirements with your tutor/supervisor.<br />Long texts consist of several shorter sections which you may also have to write as separate assignments, e.g. Introduction, Literature Review.<br />Look at the individual templates in the iWriter for more detailed information on each section.<br />TIP<br />Choose titles and headings that are short but informative. The examiner needs to know the content of each chapter and section clearly.</point>
-            <point help="dissertation3.xml">Planning the sections<br />TIP<br />1. Chapters do not have to be the same length. Each chapter should be as long as necessary to cover the material.<br />2. Do not be worried by the total number of words. Individual sections are often the same length as assignments you have written already.<br />3. Divide the assignment into manageable sections and build up your writing section by section.</point>
+            <point help="dissertation1.xml">Carrying out a research study.&lt;div&gt;TIP Back up your files as you collect data and write up your work.&lt;/div&gt;</point>
+            <point help="dissertation2.xml">Decide on a structure for your writing. Check requirements with your tutor/supervisor.&lt;div&gt;Long texts consist of several shorter sections which you may also have to write as separate assignments, e.g. Introduction, Literature Review.&lt;/div&gt;Look at the individual templates in the iWriter for more detailed information on each section.&lt;div&gt;TIP Choose titles and headings that are short but informative. The examiner needs to know the content of each chapter and section clearly.&lt;/div&gt;</point>
+            <point help="dissertation3.xml">Planning the sections&lt;div&gt;TIP&lt;/div&gt;1. Chapters do not have to be the same length. Each chapter should be as long as necessary to cover the material.&lt;div&gt;2. Do not be worried by the total number of words. Individual sections are often the same length as assignments you have written already.&lt;/div&gt;3. Divide the assignment into manageable sections and build up your writing section by section.</point>
             <point help="dissertation4.xml">Writing up</point>
-            <point help="dissertation5.xml">Revising<br />Tip<br />Get someone else to proofread your text. They often notice problems more easily.</point>
+            <point help="dissertation5.xml">Revising&lt;div&gt;TIP Get someone else to proofread your text. They often notice problems more easily.&lt;/div&gt;</point>
             <point help="dissertation6.xml">Final checks</point>
          </checklist>
       </planning>
@@ -77,7 +77,7 @@
       <paragraph eid="1">
          <name eid="2">Writing a Dissertation, Research Report or Long Essay</name>
          <desc eid="3">An overview of the parts and structure of a long assignment, such as a dissertation, long essay, project, research report, etc.</desc>
-         <tip eid="4">TIP Long texts consist of several shorter sections which you may also have to write as separate assignments, e.g. Introduction, Literature Review.<br />TIP Refer to the other sections of the iWriter for templates giving detailed information, tips and language suggestions for each part of a typical dissertation.</tip>
+         <tip eid="4">TIP Long texts consist of several shorter sections which you may also have to write as separate assignments, e.g. Introduction, Literature Review.&lt;div&gt;TIP Refer to the other sections of the iWriter for templates giving detailed information, tips and language suggestions for each part of a typical dissertation.&lt;/div&gt;</tip>
       </paragraph>
       <paragraph eid="5">
          <name eid="6">Title page</name>
@@ -96,7 +96,7 @@
       </paragraph>
       <paragraph eid="14">
          <name eid="15">Acknowledgements</name>
-         <desc eid="16">Thanks are often given in the following order:<br />1. your tutor/supervisor<br />2. other academic help<br />3. technical and financial support; participants in your study<br />4. friends and relations</desc>
+         <desc eid="16">Thanks are often given in the following order:&lt;div&gt;1. your tutor/supervisor&lt;/div&gt;2. other academic help&lt;div&gt;3. technical and financial support; participants in your study&lt;/div&gt;4. friends and relations</desc>
          <tip eid="17">TIP This is an optional section.</tip>
          <content eid="18" prompt="Type your Acknowledgements here">
             <para eid="18" prompt="Type your Acknowledgements here"><?xm-replace_text {para}?></para>
@@ -120,7 +120,7 @@
       <paragraph eid="28">
          <name eid="29">Chapters 1, 2, etc.</name>
          <desc eid="30">The body of your dissertation</desc>
-         <tip eid="31">TIP See 'Preparing to Write' for the typical structure for your own field.<br />TIP Refer to individual templates in the iWriter for detailed information, tips and language suggestions for each section that you are using.</tip>
+         <tip eid="31">TIP See 'Preparing to Write' for the typical structure for your own field.&lt;div&gt;TIP Refer to individual templates in the iWriter for detailed information, tips and language suggestions for each section that you are using.&lt;/div&gt;</tip>
          <content prompt="Draft or outline the body of your dissertation here." eid="32">
             <para prompt="Draft or outline the body of your dissertation here." eid="32"><?xm-replace_text {content}?></para>
          </content>
@@ -128,7 +128,7 @@
       <paragraph eid="33">
          <name eid="34">References/bibliography</name>
          <desc eid="35">A list of all the works mentioned in your dissertation</desc>
-         <tip eid="36">TIP Do not include references to works that you do not mention.<br />TIP Check the accepted format for a bibliography with your supervisor. Also look at the template: Writing from Sources.</tip>
+         <tip eid="36">TIP Do not include references to works that you do not mention.&lt;div&gt;TIP Check the accepted format for a bibliography with your supervisor. Also look at the template: Writing from Sources.&lt;/div&gt;</tip>
          <content prompt="Type your bibliography here." eid="37">
             <para prompt="Type your bibliography here." eid="37"><?xm-replace_text {content}?></para>
          </content>

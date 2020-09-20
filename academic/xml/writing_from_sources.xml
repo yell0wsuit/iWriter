@@ -178,7 +178,7 @@
          <name eid="17">References</name>
          <desc eid="18">A list of the references you have used in your text</desc>
          <tip eid="37">TIP Remember to record bibliographic data (title, author, publisher and page numbers) for every source you read during your preparation.
-		 <br />TIP In your bibliography, include all the works men tioned in your writing. Do not include references to works that you do not mention.</tip>
+		 &lt;div&gt;TIP In your bibliography, include all the works men tioned in your writing. Do not include references to works that you do not mention.&lt;/div&gt;</tip>
          <notes/>
          <content prompt="Type your References here." eid="19">
             <para prompt="Type your References here." eid="19">References<br />Kachru B. B. (1985) Standards, codification and sociolinguistic realism: the English language in the Outer Circle. In: Quirk R., Widdowson H. G., editors. English in the World: Teaching and Learning the Language and Literatures. Cambridge University Press; 1985. p. 11-30.</para>
