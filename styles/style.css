@@ -117,6 +117,12 @@
     text-align: center;
     vertical-align: top;
 }
+.first_page h2{
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: top;
+}
 .iwrite_ht_img{
     display: inline-block;
     margin-top: -10px;
