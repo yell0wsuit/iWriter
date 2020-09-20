@@ -16,7 +16,7 @@ if (typeof window.openDatabase === 'undefined')
 						basePath = src.substr(0, l - length);
 					}
 				}
-			})('scripts/websql.js');
+			})('/scripts/websql.js');
 
 			var js = document.createElement("script");
 			js.type = "text/javascript";
@@ -45,7 +45,7 @@ if (typeof window.openDatabase === 'undefined')
 					}
 				}
 			}
-			load('scripts/sql.js');
+			load('/scripts/sql.js');
 		}
 
 		/**
