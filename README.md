@@ -16,7 +16,7 @@ More information can be found in the [Help](https://auranticus.github.io/iWriter
 - Fixed several bugs related to CSS.
 - Re-written the Help section in clean HTML format for smaller file size (it was bloated before due to Microsoft Word -> HTML).
 - More information is added in the Models/My Writing section.
-- Added new topics (more coming soon).
+- Added new topics from the OALD's new design (more coming soon).
 - De-bloated the tool by removing unnecessary images and scripts.
 
 ## Known bugs
