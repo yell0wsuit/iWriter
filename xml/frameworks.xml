@@ -13,6 +13,8 @@
     <framework code="argument_2" shortname="" name="Argument 2" model="n" summary="This type of essay requires you to present a reasoned argument on a particular issue. This framework presents an alternating series of arguments and counterarguments." enabled="true"/>
 	<framework code="complaint_letter" shortname="Complaint letter" name="Letter of complaint" model="y" summary="This framework shows how to present a formal letter of complaint." enabled="true"/>
 	<framework code="enquiry_letter" shortname="Enquiry letter" name="Letter of enquiry" model="y" summary="This framework shows how to present a formal letter asking for information." enabled="true"/>
+	<framework code="academic_email" shortname="" name="Academic email" model="y" summary="This framework shows how to write an academic email." enabled="true"/>
+	<framework code="business_letter" shortname="" name="Formal business letter" model="y" summary="This framework shows how to write a formal business letter." enabled="true"/>
 	<framework code="data_graphs" shortname="Graphs" name="Reporting on data: graphs" model="y" summary="This framework shows how to write about the data shown in a graph." enabled="true"/>
 	<framework code="data_graphs_2" shortname="Graphs" name="Reporting on data: graphs 2" model="y" summary="Another graph reporting model from iWriter's new design." enabled="true"/>
     <framework code="data_piecharts" shortname="Pie charts" name="Reporting on data: pie charts" model="y" summary="This framework shows how to write about the data shown in a pie chart." enabled="true"/>

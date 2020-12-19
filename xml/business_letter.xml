@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<!DOCTYPE framework SYSTEM "Q:\rules\ald8_iwriter.dtd">
+<!--Edited: 20 October 2009 16:12:10 by turnbulj-->
+<framework>
+    <framework_title>Formal business letter</framework_title>
+    <framework_intro>
+        <para>Below is a suggested framework to help you structure this type of letter. There are spaces for you to add your notes and the content of your letter.</para>
+        <para>Remember that you can look the word up in the Oxford Advanced Learner's Dictionary.</para>
+        
+    </framework_intro>
+    <guided_tour>
+        <step label="What is special about a formal letter?">
+            <commentary>
+                <para>The important things to remember about writing formal letters are the layout, which follows particular conventions, and the language, which must be formal or semi-formal and polite. The content of your letter should have a clear, logical structure.</para>
+            </commentary>
+        </step>
+        <step label="How is it structured?" para_ids="2,6,33,14,18,19,24,25,29,30">
+            <commentary>
+                <para>Below is the framework that was used to create this letter.</para>
+            </commentary>
+        </step>
+        <step label="How is it laid out?" para_ids="2,4,6,8,10,12">
+            <commentary>
+                <para>Write your address, but not your name, in the top right-hand corner.</para>
+                <para>The date can go either on the left or the right under the address, or above the address on the left. It could also be March 24, 2019, (&#60;i&#62;BrE&#60;/i&#62;) 24/3/19, or (&#60;i&#62;NAmE&#60;/i&#62;) 3/24/19.</para>
+            </commentary>
+        </step>
+        <step label="How does the letter start and finish?" para_ids="33,14,16,29,30,32">
+            <commentary>
+                <para>The writer doesn't know the name of the person he is writing to, so begins 'Dear Sir or Madam', and ends 'Yours faithfully'.</para>
+            </commentary>
+        </step>
+        <step label="How was the letter planned?" para_ids="18,19,20,24,25,26">
+            <commentary>
+                <para>The writer took notes for each paragraph before beginning to write.</para>
+            </commentary>
+        </step>
+        <step label="Show me useful language" para_ids="21,27">
+            <commentary>
+                <para showme="22">The writer uses full forms and formal words and phrases.</para>
+            </commentary>
+        </step>
+    </guided_tour>
+    <practice_rubric>
+        <planning>
+            <checklist>
+                <point>Use the framework to organize notes for your own letter.</point>
+            </checklist>
+        </planning>
+        <vocab>
+            <checklist>
+                <point help="argument_formal.swf">Use formal language.</point>
+            </checklist>
+        </vocab>
+        <writing>
+            <checklist>
+                <point help="covering_letter_lay_your.swf">Lay your letter out correctly.</point>
+                <point help="coverl_greeting_and_close.swf">Make sure the greeting and closing match.</point>
+            </checklist>
+        </writing>
+        <checking>
+            <checklist>
+                <point>Have I put my address (but not my name) in the right place?</point>
+                <point>Have I put the name and address of the person I'm writing to in the right place?</point>
+                <point>Have I put the date in the right place?</point>
+                <point>Have I made it clear why I am writing?</point>
+                <point>Have I matched the greeting (Dear...) with the right ending (Yours...)?</point>
+                <point>Does my letter sound quite formal?</point>
+                <point>Is it polite?</point>
+                <point>Have I checked vocabulary, grammar and spelling?</point>
+            </checklist>
+        </checking>
+    </practice_rubric>
+    <paragraphs>
+        <paragraph eid="1" align="right">
+            <name eid="2">Your address</name>
+            <tip eid="3">TIP Write your address and company name, but not your own name, in the top right-hand corner.</tip>
+            <content prompt="Type your address here" eid="4" align="right">
+                <para>Logistics Department</para>
+                <para>Unit 12</para>
+                <para>Travis Business Park</para>
+				<para>Milton Keynes</para>
+            </content>
+        </paragraph>
+        <paragraph eid="5">
+            <name eid="6">Name/Title and address of the person you are writing to</name>
+            <tip eid="7">TIP Write the name/position and address of the person you are writing to on the left-hand side. If you are writing in American style use American spelling and punctuation e.g. write Mrs. Dr., etc.</tip>
+            <content prompt="Type the name and address here" eid="8">
+                <para>Area Manager</para>
+                <para>DBL Headquarters</para>
+                <para>Queensway</para>
+                <para>London</para>
+				<para>W2 5NZ</para>
+            </content>
+        </paragraph>
+        <paragraph eid="9">
+            <name eid="10">Date</name>
+            <tip eid="11">TIP This can go either on the left or the right under the address, or above the address on the left. It could be written March 24, 2019, (&#60;i&#62;BrE&#60;/i&#62;) 24/3/19, or (&#60;i&#62;NAmE&#60;/i&#62;) 3/24/19</tip>
+            <content prompt="Type today's date here" eid="12">
+                <para>24th March 2019</para>
+            </content>
+        </paragraph>
+        <paragraph eid="13">
+            <name eid="33">Greeting</name>
+            <desc eid="14">Dear…</desc>
+            <tip eid="15">TIP Use 'Dear Sir or Madam' if you do not know the name of the person you are writing to. If you do know the name, use the form 'Dear Ms Klein'/'Dear Mr Smith'. If you do not know the gender, you can use 'Dear Chris White', but do not use both title and first name. If you are writing in American style and you do not know the name of the person you are writing to, you can use 'To whom it may concern'.</tip>
+            <content prompt="Type Dear…" eid="16">
+                <para>Dear Mr Stevens</para>
+            </content>
+        </paragraph>
+        <paragraph eid="17">
+            <name eid="18">Paragraph 1</name>
+            <desc eid="19">Explain the situation clearly and concisely.</desc>
+            <notes eid="20">
+                <para>Team under pressure due to staff cutbacks and increase in orders. Two members off work with stress.</para>
+            </notes>
+            <content eid="21">
+                <para>As you know, my team <useful type="key" eid="22">has been</useful> under <useful type="key" eid="22">considerable</useful> pressure recently due to the cutbacks in staff. <useful type="key" eid="22">Furthermore,</useful> there has been an increase in the number of orders that need to be processed. <useful type="key" eid="22">As a result,</useful> two members of the team have had to take time off due to overwork and stress.</para>
+            </content>
+        </paragraph>
+        <paragraph eid="23">
+            <name eid="24">Paragraph 2</name>
+            <desc eid="25">State your reason for writing and the action you would like as a result.</desc>
+            <notes eid="26">
+                <para>Request meeting to review situation as soon as possible.</para>
+            </notes>
+            <content eid="27">
+                <para><useful type="key" eid="22">I am therefore writing to request</useful> that <useful type="key" eid="22">there is</useful> a meeting to review the current situation in the Logistics Department. <useful type="key" eid="22">I would be grateful if</useful> this <useful type="key" eid="22">could be arranged</useful> at the earliest possible convenience as the situation has become critical.</para>
+            </content>
+        </paragraph>
+        <paragraph eid="28">
+            <name eid="29">Closing</name>
+            <desc eid="30">Sign your name and print it in full underneath with your job title.</desc>
+            <tip eid="31">TIP If you begin 'Dear + name', end 'Yours sincerely'. Use 'Yours faithfully' here if you have begun 'Dear Sir or Madam'. In American style end your letter 'Sincerely', 'Sincerely yours' (if you use Dear + name) or 'Yours truly'.</tip>
+            <content prompt="Type 'Yours sincerely', 'Yours faithfully' etc, and your name" eid="32">
+                <para>I look forward to hearing from you.</para>
+                <para>Yours sincerely</para>
+				<para>Michelle Edwards</para>
+				<para>Logistics Department Manager</para>
+            </content>
+        </paragraph>
+    </paragraphs>
+</framework>
