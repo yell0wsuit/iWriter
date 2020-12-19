@@ -467,7 +467,7 @@ function Controller() {
                 body_content = body_content.replace(/ ,/g, ",");
                 body_content = body_content.replace(/ <\/span>,/g, "</span>,");
                 body_content = body_content.replace(/\s<\/span>\./g, "</span>.");
-                body_content = body_content.replace(/ <\/span> /g, " </span>");
+                body_content = body_content.replace(/ <\/span> /g, "</span> ");
                 body_content = body_content.replace(/<\/span>\.\./g, "</span>.");
                 $('.models_content').html(body_content);
                 _this.db_clk();
@@ -654,7 +654,7 @@ function Controller() {
                 content_data = content_data.replace(/ ,/g, ",");
                 content_data = content_data.replace(/ <\/span>,/g, "</span>,");
                 content_data = content_data.replace(/\s<\/span>\./g, "</span>.");
-                content_data = content_data.replace(/ <\/span> /g, " </span>");
+                content_data = content_data.replace(/ <\/span> /g, "</span> ");
                 content_data = content_data.replace(/<\/span>\.\./g, "</span>.");
             }
 
@@ -1304,7 +1304,7 @@ function Controller() {
             content_data = content_data.replace(/ ,/g, ",");
             content_data = content_data.replace(/ <\/span>,/g, "</span>,");
             content_data = content_data.replace(/\s<\/span>\./g, "</span>.");
-            content_data = content_data.replace(/ <\/span> /g, " </span>");
+            content_data = content_data.replace(/ <\/span> /g, "</span> ");
             content_data = content_data.replace(/<\/span>\.\./g, "</span>.");
         }
 
