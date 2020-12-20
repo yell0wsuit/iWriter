@@ -90,8 +90,9 @@
             <name eid="8">Comparison</name>
             <desc eid="9">Compare the most significant categories in the charts.</desc>
             <notes eid="10">
-                <para>Mortgage - big item for both  families. Family A: biggest expenditure each month, twice what they spend on entertainment.   Spend much more on bills - about a quarter of their budget. Spend less on entertainment. Food slightly higher than entertainment. Bills other large item- 14%.</para>
-                <para>Family B: mortgage is less- about 1/4 of their budget. Spend much more on bills than Family A.</para>
+                <para>Mortgage—big item for both families</para>
+				<para>Family A: biggest expenditure each month—twice what they spend on entertainment; spend much more on bills—about a quarter of their budget; spend less on entertainment; food slightly higher than entertainment; bills other large item—14%</para>
+                <para>Family B: mortgage is less—about quarter of their budget; spend much more on bills than Family A.</para>
             </notes>
             <content eid="11">
                 <para>The mortgage is a <useful type="key" eid="12">significant</useful> item of expenditure for both families, Family A spending <useful type="key" eid="13">more</useful> on their mortgage <useful type="key" eid="14">than</useful> they do on anything else (32% of their budget). This is <useful type="key" eid="15">exactly twice</useful> what they spend on entertainment each month. Their food budget is <useful type="key" eid="16">slightly higher</useful> at <useful type="key" eid="17">just under</useful> 20%. Bills form the other large item of expenditure at 14% of their monthly budget. Family B, on the other hand, spend <useful type="key" eid="18">considerably more</useful> on their bills, but this is compensated for by their mortgage, which is <useful type="key" eid="19">approximately a quarter of</useful> their budget and 8% less than Family A's.</para>
@@ -102,7 +103,9 @@
             <desc eid="21">Compare other categories.</desc>
             <tip>TIP Depending on the amount of data you are writing about, you may need more than two paragraphs to compare the charts.</tip>
             <notes eid="22">
-                <para>Car: Family B - spend 14%. Family A spend less. Clothes similar, but A slightly more. Entertainment: B less than A</para>
+                <para>Car: Family B—spend 14%. Family A spend less.</para>
+				<para>Clothes: similar, but Family A spend slightly more.</para>
+				<para>Entertainment: Family B spend less than Family A.</para>
             </notes>
             <content eid="23">
                 <para>Both families spend <useful type="key" eid="24">similar amounts</useful> on their car and clothes combined, (19% for Family A and 17% for Family B), although Family B spends a larger amount on their car. Family B also spend <useful type="key" eid="25">significantly less</useful> on entertainment than Family A (9% as opposed to 16%).</para>
@@ -112,7 +115,8 @@
             <name eid="26">Conclusion</name>
             <desc eid="27">Summarize the information in the charts with a general conclusion.</desc>
             <notes eid="28">
-                <para>Family B spend more on necessities (bills, food and car); Family A spend more on entertainment and clothes.</para>
+                <para>Family B spend more on necessities (bills, food and car).</para>
+				<para>Family A spend more on entertainment and clothes.</para>
             </notes>
             <content eid="29" prompt="Type your conclusion here">
                 <para>While the mortgage is  the most important item of expenditure for both families, in general Family B spend more than A on necessary items, such as bills, food and their car, while Family A allow slightly more money for entertainment and clothes.</para>

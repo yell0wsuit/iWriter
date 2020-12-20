@@ -75,47 +75,47 @@
     <paragraphs>
         <paragraph>
             <name eid="1">Title</name>
-            <desc eid="2">Your title should tell the reader what the report is about.</desc>
+            <desc eid="2">Your title should tell the reader exactly what the report is about.</desc>
             <content eid="3" prompt="Type your title here">
                 <para><strong>Web page design</strong></para>
             </content>
         </paragraph>
         <paragraph>
             <name eid="4">Contents list</name>
-            <desc eid="5">Use the same section headings or numbers as you do in the main part of the report.</desc>
+            <desc eid="5">If your report has a number of sections, it is important to include a table of contents so that the readers can find the information they want. Use the same section headings or numbers as you do in the main part of the report.</desc>
             <content prompt="Type your contents list here" eid="6">
-                <para>(Optional for shorter reports, not included in this model)</para>
+                <para>(Contents list optional for shorter reports, not included in this model.)</para>
             </content>
         </paragraph>
         <paragraph>
             <name eid="7">Summary</name>
-            <desc eid="8">Include a summary of the purpose and objectives of the report, the kind of research you did, the main findings and conclusions and your recommendations, if any.</desc>
+            <desc eid="8">Include a summary of the purpose and objectives of the report, the kind of research you did, the main findings and conclusions, and your recommendations, if any.</desc>
             <tip>TIP This is often called an executive summary. It follows the structure of the main report.</tip>
             <notes>
                 <?xm-replace_text {notes}?>
             </notes>
             <content eid="9" prompt="Type your summary here">
-                <para>(Optional for shorter reports, not included in this model.)</para>
+                <para>(Summary optional for shorter reports, not included in this model.)</para>
             </content>
         </paragraph>
         <paragraph>
             <name eid="10">Introduction</name>
-            <desc eid="11">Gives the background to why you are writing the report and explains what the report covers and what research you did.</desc>
+            <desc eid="11">Give the background to why you are writing the report and explains what the report covers and what research you did.</desc>
             <notes eid="12">
-                <para>Compare 2 web designs - see which people prefer.</para>
-                <para>What attracts people and makes them buy products.</para>
+                <para>Compare 2 web designs—see which people prefer.</para>
+                <para>What attracts people and makes them buy products?</para>
             </notes>
             <content eid="13" prompt="Type your introduction here">
                 <para>
-                    <useful type="position" eid="19">The purpose of this report is</useful>  to compare two different web designs. The reason for this is to decide what kind of web page is most likely to attract new customers and to encourage existing customers to buy more products from us.</para>
+                    <useful type="position" eid="19">The purpose of this report is</useful> to compare two different web designs. The reason for this is to decide what kind of web page is most likely to attract new customers and to encourage existing customers to buy more products from us.</para>
             </content>
         </paragraph>
         <paragraph>
             <name eid="14">Main body of report </name>
-            <desc eid="15">Give precise information about your research and what you have found. </desc>
-            <tip>TIP You can include tables and diagrams here, or these can be in an Appendix.</tip>
+            <desc eid="15">Give precise information about your research and what you have found.</desc>
+            <tip>TIP You can include tables and diagrams here, or these can be in an appendix.</tip>
             <notes eid="16">
-                <para>Asked 2 developers for different page designs - one simple (A), one more sophisticated (B).</para>
+                <para>Asked 2 developers for different page designs—one simple (A), one more sophisticated (B).</para>
                 <para>Research: 2 groups of 20 people (range of ages, professions, computer knowledge).</para>
                 <para>Made 2 groups: one used A, one B, once a dayfor a month to do tasks: buying, getting info, returning goods, tracking.</para>
                 <para>Also asked about technology for accessing Internet.</para>
@@ -131,7 +131,8 @@
             <name eid="23">Conclusions/Findings</name>
             <desc eid="24">Give the facts you have discovered and your opinions on them.</desc>
             <notes eid="25">
-                <para>People liked easy-to-use page (A) for buying. Don't want entertainment - Design B may be  slow to load, etc.</para>
+                <para>People liked easy-to-use page (A) for buying.</para>
+				<para>Don't want entertainment—Design B may be slow to load, etc.</para>
             </notes>
             <content eid="26" prompt="Type your conclusions here">
                 <para>
@@ -152,12 +153,12 @@
         </paragraph>
         <paragraph>
             <name eid="34">Appendices</name>
-            <desc eid="35">Give more detailed information here.</desc>
+            <desc eid="35">Give more detailed information here, with cross references to the appendices in the body of the report.</desc>
             <notes>
                 <?xm-replace_text {notes}?>
             </notes>
             <content eid="36" prompt="Type your appendices here">
-                <para>(Optional for shorter reports, not included in this model.)</para>
+                <para>(Appendices optional for shorter reports, not included in this model.)</para>
             </content>
         </paragraph>
         <paragraph>
@@ -167,7 +168,7 @@
                 <?xm-replace_text {notes}?>
             </notes>
             <content eid="39" prompt="Type your bibliography here">
-                <para>(Optional for shorter reports, not included in this model.)</para>
+                <para>(Bibliography optional for shorter reports, not included in this model.)</para>
             </content>
         </paragraph>
     </paragraphs>
