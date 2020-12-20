@@ -559,7 +559,8 @@
     border-bottom: 3px solid #E8EDFF;
 }
 .content_box p{
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 7px;
 }
 .content_contents{
     border-left: 2px solid #2981C1;
@@ -893,7 +894,7 @@
     list-style: square outside none;
 }
 .blueTxtCss{
-    color: #0000FF;
+    color: #0070C0;
     font-weight: bold;
 }
 .delete_project {
