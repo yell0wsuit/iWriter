@@ -1,7 +1,7 @@
 # Oxford iWriter
 An interactive tool designed to help you write more effectively in English.
 
-Visit this website to use the tool: https://auranticus.github.io/iWriter/
+Visit this website to use the tool: https://yell0wsuit.github.io/iWriter/
 
 ![](https://i.imgur.com/Wi3eQVH.png)
 
@@ -9,7 +9,7 @@ Originally, the tool is ported from the **Oxford Advanced Learner's Dictionary 8
 
 This reposity is created to preserve this version, which works independently without relying on the **Oxford Learner's Dictionaries** website's resources. The new design, however, cannot be used independently because premium account is required.
 
-More information can be found in the [Help](https://auranticus.github.io/iWriter/help.html) section.
+More information can be found in the [Help](https://yell0wsuit.github.io/iWriter/help.html) section.
 
 ## Features
 - Original PNG icons are replaced in SVG format to be consistent on most resolutions. Courtesy of https://www.svgrepo.com/.
