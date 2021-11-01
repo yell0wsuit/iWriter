@@ -9,28 +9,11 @@
     z-index: 9999;
 }
 @font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url(fonts/Roboto-Regular.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: italic;
-  font-weight: 400;
-  src: url(fonts/Roboto-Italic.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  src: url(fonts/Roboto-Bold.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: italic;
-  font-weight: 700;
-  src: url(fonts/Roboto-BoldItalic.ttf) format('truetype');
+    font-family: Inter;
+    src: url("../fonts/Inter.var.woff2") format("woff2-variations");
+    font-weight: 300 900;
+    font-stretch: 35% 100%;
+    font-style: normal;
 }
 .main_wrapper{
     width: 100%;
@@ -43,7 +26,7 @@
     border-radius: 10px;
 }
 .main_wrapper h1{
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 .inner_wrapper{
     /*margin: 10px 10px;*/
@@ -61,7 +44,7 @@
     margin: 150px auto;
 }
 .first_page h2{
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 .middle_of_page{
     width: 100%;

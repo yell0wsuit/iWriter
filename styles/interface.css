@@ -118,7 +118,7 @@ html {
   /*16px / 15px (16 is base font size)*/
   line-height: 1.4em;
   /*15px / 21px*/
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
   color: #444444;
   -webkit-font-smoothing: antialiased; }
 
@@ -2408,7 +2408,7 @@ a.backbutton {
   color: #FFF;
   font-size: 13px;
   font-weight: bold;
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
   padding: 2px 0 0 9px;
   margin: 0px;
   text-align: left;
