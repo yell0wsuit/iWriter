@@ -1,3 +1,9 @@
+var connection = new JsStore.Connection(new Worker('scripts/jsstore.worker.js'));
+
+if (!window.indexedDB) {
+    window.alert("Your browser doesn't support a stable version of IndexedDB.")
+}
+
 function get_date() {
     var _date = new Date();
     _date = _date.toString();
@@ -27,108 +33,106 @@ function escapeHtml(s) {
     });
 }
 $(document).ready(function() {
-    if (!html5sql.database) {
-        html5sql.openDatabase("MITR", "iSpeaker", 5 * 1024 * 1024);
+    initDb();
+
+    async function initDb() {
+        var isDbCreated = await connection.initDb(getiWriterDB());
+        if (isDbCreated) {
+            console.log('Database created');
+        }
+        else {
+            console.log('Database opened');
+        }
     }
-    html5sql.logInfo = true;
-    html5sql.logErrors = true;
-
-
-    /*html5sql.process(
-     {
-     sql: "DROP TABLE IF EXISTS projects;",
-     success: function(transaction, results) {
-     console.log(results);
-     }
-     }
-     );*/
-
-
-    //create table if not exist
-    html5sql.process(
-            {
-                sql: "CREATE TABLE IF NOT EXISTS projects (id INTEGER PRIMARY KEY AUTOINCREMENT, name varchar(50), data_id INTEGER, date_time DATETIME, data TEXT, dtime varchar(50));",
-                success: function(transaction, results) {
-                    html5sql.process(
-                            {
-                                sql: "SELECT * FROM projects;",
-                                success: function(transaction, results, rowArray) {
-
-                                }
-                            }
-                    );
-                }
+    
+    function getiWriterDB() {
+    //IndexedDB
+        var dbName ='iWriter';
+        var tblProject = {
+            name: 'iw_projects',
+            columns: {
+                id: { primaryKey: true, autoIncrement: true },
+                name: { notNull: true, dataType: "string" },
+                data_id: { notNull: true, dataType: "string" },
+                date_time: { notNull: true, dataType: "number" },
+                data: { notNull: true, dataType: "string" },
+                dtime: { notNull: true, dataType: "string" }
             }
-    );
+        };
+        var database = {
+            name: dbName,
+            tables: [tblProject]
+        };
+        return database;
+    }
 
     $('.help_btn').off(event_type).on(event_type, function() {
         var OpenWindow = window.open("help.html", "Help Document", '');
     });
 
     //fetch all
-
-    html5sql.process(
-            {
-                sql: "select * from projects order by date_time DESC;",
-                success: function(transaction, results, rowArray) {
-                    if (results.rows.length == 0) {
-                        $('.save_p_btn_txt').html('<span>No projects saved</span><span class="up_home"></span>');
-                    } else {
-                        var temp_html = '';
-                        for (var i in rowArray) {
-
-                            var _name = rowArray[i]['name'].replace(/\#\|\#/g, "'");
-                            _name = _name.replace(/\#\|\|\#/g, '"');
-
-                            temp_html += '<div class="saved_projects_list" data-key="' + rowArray[i]['data_id'] + '" data-project="' + rowArray[i]['name'] + '" data-type="save">' + _name + '</div>';
-                        }
-                        temp_html += '<div class="saved_projects_list">&nbsp;</div>';
-
-
-                        $('.save_p_btn_txt').html('<span>My saved writing</span><span class="up_home"></span>');
-                        $('.saved_projects').empty().html(temp_html);
-
-                        $('.saved_projects').perfectScrollbar({suppressScrollY: false});
-                        var _hgt = $('.saved_projects').height();
-                        $('.saved_projects').attr("actHgt", _hgt).css("overflow", "hidden").css("height", _hgt + "px");
-                        $('.saved_projects').height($('.save_p_btn').height());
-                        var svd_pro_hgt = $('.saved_projects').height();
-
-                        $('.save_p_btn').bind(event_type, function(e) {
-
-                            e.preventDefault();
-                            $('.saved_projects').stop();
-
-                            if (Number(svd_pro_hgt) === 39 || Number(svd_pro_hgt) === 32)
-                            {
-                                $('.saved_projects').animate({height: $('.saved_projects').attr("actHgt")}, 500);
-                            }
-                            else
-                            {
-                                $('.saved_projects').animate({height: svd_pro_hgt}, 500);
-                            }
-                            if ($('.saved_projects').height() > $('.save_p_btn').height()) {
-                                $('.saved_projects').animate({height: $('.save_p_btn').height()}, 500);
-                            }
-                        });
-
-                        $('.saved_projects_list').off(event_type).on(event_type, function() {
-                            if ($(this).attr('data-type') == 'create') {
-                                iWiter_controller.current_pro_name = '';
-                            } else {
-                                iWiter_controller.current_pro_name = $(this).attr('data-project');
-                            }
-                            iWiter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
-                        });
-
-
-
-                        var p_len = ($('.saved_projects_list').length) - 1;
-                        $('.saved_projects_list:nth-child(' + p_len + ')').css('border-bottom', 'none');
-                    }
-                }
+    
+    //IndexedDB version
+    async function listProj() {
+        var results = await connection.select({
+            from: 'iw_projects',
+            order: {
+                by: 'date_time',
+                type: 'desc'
             }
-    );
+        });
+        if (results.length == 0) {
+            $('.save_p_btn_txt').html('<span>No projects saved</span><span class="up_home"></span>');
+            console.log('#IndexedDB nothing')
+        } else {
+            var temp_html = '';
+            for (var i in results) {
+                var _name = results[i]['name'].replace(/\#\|\#/g, "'");
+                _name = _name.replace(/\#\|\|\#/g, '"');
+                temp_html += '<div class="saved_projects_list" data-key="' + results[i]['data_id'] + '" data-project="' + results[i]['name'] + '" data-type="save">' + _name + '</div>';
+            }
+            temp_html += '<div class="saved_projects_list">&nbsp;</div>';
+
+            $('.save_p_btn_txt').html('<span>My saved writing</span><span class="up_home"></span>');
+            $('.saved_projects').empty().html(temp_html);
+
+            $('.saved_projects').perfectScrollbar({suppressScrollY: false});
+            var _hgt = $('.saved_projects').height();
+            $('.saved_projects').attr("actHgt", _hgt).css("overflow", "hidden").css("height", _hgt + "px");
+            $('.saved_projects').height($('.save_p_btn').height());
+            var svd_pro_hgt = $('.saved_projects').height();
+
+            $('.save_p_btn').bind(event_type, function(e) {
+                e.preventDefault();
+                $('.saved_projects').stop();
+
+                if (Number(svd_pro_hgt) === 39 || Number(svd_pro_hgt) === 32)
+                    {
+                        $('.saved_projects').animate({height: $('.saved_projects').attr("actHgt")}, 500);
+                    }
+                    else
+                    {
+                        $('.saved_projects').animate({height: svd_pro_hgt}, 500);
+                    }
+                if ($('.saved_projects').height() > $('.save_p_btn').height()) {
+                    $('.saved_projects').animate({height: $('.save_p_btn').height()}, 500);
+                }
+            });
+
+            $('.saved_projects_list').off(event_type).on(event_type, function() {
+                if ($(this).attr('data-type') == 'create') {
+                    iWiter_controller.current_pro_name = '';
+                } else {
+                    iWiter_controller.current_pro_name = $(this).attr('data-project');
+                }
+                iWiter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
+            });
+
+            var p_len = ($('.saved_projects_list').length) - 1;
+            $('.saved_projects_list:nth-child(' + p_len + ')').css('border-bottom', 'none');
+        }
+    }
+    listProj();
 
 
     /*var formURL = 'database.php?fetchall';

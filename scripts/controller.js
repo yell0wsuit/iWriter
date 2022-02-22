@@ -771,92 +771,66 @@ function Controller() {
                 head_html += '<div class="create_project create_pro_btn" data-type="create" data-key="' + $(this).attr('data-key') + '">Create a new project</div>';
                 _this.current_key = $(this).attr('data-key');
                 var postData = {'data-key': _this.current_key};
-                html5sql.process(
-                        {
-                            sql: "SELECT * FROM projects WHERE data_id  = " + _this.current_key + " order by date_time DESC",
-                            success: function(transaction, results, rowArray) {
-                                var temp_html = '';
-                                //if (rowArray.length != 0) {
-                                for (var i in rowArray) {
-
-                                    var _name = rowArray[i]['name'].replace(/\#\|\#/g, "'");
-                                    _name = _name.replace(/\#\|\|\#/g, '"');
-                                    temp_html += '<div class="create_project" data-key="' + rowArray[i]['data_id'] + '" data-project="' + rowArray[i]['name'] + '" data-type="save">' + _name + '<br>' + rowArray[i]['dtime'] + '</div>';
-                                    temp_html += '<div class="delete_project" data-key="' + rowArray[i]['id'] + '">X</div>';
-                                }
-                                head_html += temp_html;
-                                $('.second_page_body_right').show().empty().html(head_html);
-                                $('.second_page_body_right .delete_project').unbind(event_type).bind(event_type, function(e2) {
-                                    e2.preventDefault();
-                                    //alert('delete pressed');
-
-
-                                    var delete_id = $(this).attr('data-key');
-                                    var temp_this = this;
-                                    //var r = confirm("Are you sure you want to delete this project?");
-
-                                    $('.white_content').remove();
-                                    var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Are you sure you want to delete this project?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
-                                    $('body').append(temp_pop);
-                                    $('.white_content').show();
-                                    $('.ok_btn_pop').off(event_type).on(event_type, function() {
-                                        $('.white_content').hide();
-                                        html5sql.process(
-                                                {
-                                                    sql: "DELETE FROM projects WHERE id = " + delete_id + ";",
-                                                    success: function(transaction, results, rowArray) {
-                                                        if (results.rowsAffected == 1) {
-                                                            $(temp_this).prev().remove();
-                                                            $(temp_this).remove();
-                                                        } else {
-                                                            alert('Please  try again');
-                                                        }
-                                                    }
-                                                }
-                                        );
-                                        /*
-                                         var formURL = 'database.php?delete';
-                                         var postData = {'id': delete_id};
-                                         $.ajax(
-                                         {
-                                         url: formURL,
-                                         type: "POST",
-                                         data: postData,
-                                         success: function(data, textStatus, jqXHR)
-                                         {
-                                         if (data == '0') {
-                                         alert('Please  try again');
-                                         } else {
-                                         $(temp_this).prev().remove();
-                                         $(temp_this).remove();
-                                         }
-                                         },
-                                         error: function(jqXHR, textStatus, errorThrown)
-                                         {
-                                         //if fails
-                                         alert('Please  try again');
-                                         }
-                                         }
-                                         );*/
-
-                                    });
-                                    $('.can_btn_pop').off(event_type).on(event_type, function() {
-                                        $('.white_content').hide();
-                                    });
-                                    return false;
-                                });
-                                $('.create_project').off().on(event_type, function(e3) {
-                                    if ($(this).attr('data-type') == 'create') {
-                                        _this.current_pro_name = '';
-                                    } else {
-                                        _this.current_pro_name = $(this).attr('data-project');
-                                    }
-                                    _this.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
-                                });
-                                //}
-                            }
+                
+                //IndexedDB
+                async function showProj() {
+                    var results = await connection.select({
+                        from: 'iw_projects',
+                        where: {data_id: _this.current_key},
+                        order: {
+                            by: 'date_time',
+                            type: 'desc'
                         }
-                );
+                    })
+                    var temp_html = '';
+                    for (var i in results) {
+                        var _name = results[i]['name'].replace(/\#\|\#/g, "'");
+                        _name = _name.replace(/\#\|\|\#/g, '"');
+                        temp_html += '<div class="create_project" data-key="' + results[i]['data_id'] + '" data-project="' + results[i]['name'] + '" data-type="save">' + _name + '<br>' + results[i]['dtime'] + '</div>';
+                        temp_html += '<div class="delete_project" data-key="' + results[i]['id'] + '">X</div>';
+                    }
+                    head_html += temp_html;
+                    $('.second_page_body_right').show().empty().html(head_html);
+                    $('.second_page_body_right .delete_project').unbind(event_type).bind(event_type, function(e2) {
+                        e2.preventDefault();
+                        var delete_id = $(this).attr('data-key');
+                        var delete_name = $(this).attr('data-project');
+                        var temp_this = this;
+                        //var r = confirm("Are you sure you want to delete this project?");
+                        $('.white_content').remove();
+                        var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Are you sure you want to delete this project?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
+                        $('body').append(temp_pop);
+                        $('.white_content').show();
+                        $('.ok_btn_pop').off(event_type).on(event_type, function() {
+                            $('.white_content').hide();
+                            async function removeProj() {
+                                var deleteProj = await connection.remove({
+                                    from: 'iw_projects',
+                                    where: {
+                                        id: Number(delete_id)
+                                    }
+                                });
+                            };
+                            removeProj();
+                            $(temp_this).prev().remove();
+                            (temp_this).remove();
+                        });
+                        $('.can_btn_pop').off(event_type).on(event_type, function() {
+                            $('.white_content').hide();
+                        });
+                        return false;
+                    });
+                    $('.create_project').off().on(event_type, function(e3) {
+                        if ($(this).attr('data-type') == 'create') {
+                            _this.current_pro_name = '';
+                        } else {
+                            _this.current_pro_name = $(this).attr('data-project');
+                        }
+                        _this.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
+                    });
+                }
+                showProj();
+                
                 /*
                  var formURL = 'database.php?fetchmodel';
                  $.ajax(
@@ -1160,20 +1134,26 @@ function Controller() {
             //alert('project_name::' + data_project + 'current_key::' + _this.current_key);
             //data_project = data_project.replace(/'/g, '&#39;');
             //data_project = data_project.replace(/"/g, '&#34;');
-            html5sql.process(
-                    {
-                        sql: "SELECT * FROM projects WHERE data_id = " + _this.current_key + " AND name = '" + data_project + "';",
-                        success: function(transaction, results, rowArray) {
-                            if (rowArray.length != 0) {
-                                $('.save_pro').attr('data-project-name', data_project);
-                                var data = rowArray[0]['data'];
-                                data = data.replace(/\#\|\#/g, "'");
-                                data = data.replace(/\#\|\|\#/g, '"');
-                                _this.load_save_project(_this.StringToXML(data));
-                            }
-                        }
+            
+            //IndexedDB
+            async function loadProj() {
+                var load = await connection.select({
+                    from: 'iw_projects',
+                    where: {
+                        data_id: _this.current_key,
+                        name: data_project
                     }
-            );
+                })
+                if (load.length != 0) {
+                    $('.save_pro').attr('data-project-name', data_project);
+                    var data = load[0]['data'];
+                    data = data.replace(/\#\|\#/g, "'");
+                    data = data.replace(/\#\|\|\#/g, '"');
+                    _this.load_save_project(_this.StringToXML(data));
+                }
+            }
+            loadProj();
+            
             /*var postData = {'data-key': _this.current_key, 'project_name': data_project};
              var formURL = 'database.php?fetch';
              $.ajax(
@@ -1465,56 +1445,62 @@ function Controller() {
 //ajax
                 load_status = false;
                 var postData = {'data-key': _this.current_key};
-                html5sql.process(
-                        {
-                            sql: "SELECT * FROM projects WHERE data_id = " + postData['data-key'] + " order by date_time DESC;",
-                            success: function(transaction, results, rowArray) {
-                                if (rowArray.length != 0) {
-
-                                    var temp_html = '<ul>';
-                                    for (var i in rowArray) {
-
-                                        var _name = rowArray[i]['name'].replace(/\#\|\#/g, "'");
-                                        _name = _name.replace(/\#\|\|\#/g, '"');
-                                        temp_html += '<li data-type="save" data-project="' + rowArray[i]['name'] + '" data-key="' + rowArray[i]['data_id'] + '">' + _name + '</li>';
-                                    }
-                                    temp_html += '</ul>';
-                                    $('.prolist_load').empty().html(temp_html);
-                                    $('.load_pop_d').show().css('right', '105%').css('top', '0px');
-                                    $('.tool_down_arrow_wrp li,.tool_wrapper li').mouseout(function() {
-                                        if (!$(this).hasClass('load_pro')) {
-                                            $('.load_pop_d').hide();
-                                        }
-                                    });
-                                    $('.prolist_load li').off(event_type).on(event_type, function() {
-                                        if (_this.show_popup) {
-                                            $('.white_content').remove();
-                                            var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
-                                            $('body').append(temp_pop);
-                                            $('.white_content').show();
-                                            $('.ok_btn_pop').off(event_type).on(event_type, function() {
-                                                $('.load_pop_d').hide();
-                                                _this.show_popup = false;
-                                                _this.current_pro_name = $(this).attr('data-project');
-                                                iWiter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
-                                            });
-                                            $('.can_btn_pop').off(event_type).on(event_type, function() {
-                                                $('.white_content').hide();
-                                            });
-                                        } else {
-                                            $('.load_pop_d').hide();
-                                            _this.show_popup = false;
-                                            _this.current_pro_name = $(this).attr('data-project');
-                                            iWiter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
-                                        }
-                                    });
-                                } else {
-                                    $('.prolist_load').empty();
-                                    $('.load_pop_d').hide();
-                                }
-                            }
+                //IndexedDB
+                async function allProj() {
+                    var lists = await connection.select({
+                        from: 'iw_projects',
+                        where: {
+                            data_id: postData['data-key']
+                        },
+                        order: {
+                            by: 'date_time',
+                            type: 'desc'
                         }
-                );
+                    })
+                    if (lists.length != 0) {
+                        var temp_html = '<ul>';
+                        for (var i in lists) {
+                            var _name = lists[i]['name'].replace(/\#\|\#/g, "'");
+                            _name = _name.replace(/\#\|\|\#/g, '"');
+                            temp_html += '<li data-type="save" data-project="' + lists[i]['name'] + '" data-key="' + lists[i]['data_id'] + '">' + _name + '</li>';
+                        }
+                        temp_html += '</ul>';
+                        $('.prolist_load').empty().html(temp_html);
+                        $('.load_pop_d').show().css('right', '105%').css('top', '0px');
+                        $('.tool_down_arrow_wrp li,.tool_wrapper li').mouseout(function() {
+                            if (!$(this).hasClass('load_pro')) {
+                                $('.load_pop_d').hide();
+                            }
+                        });
+                        $('.prolist_load li').off(event_type).on(event_type, function() {
+                            if (_this.show_popup) {
+                                $('.white_content').remove();
+                                var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
+                                $('body').append(temp_pop);
+                                $('.white_content').show();
+                                $('.ok_btn_pop').off(event_type).on(event_type, function() {
+                                    $('.load_pop_d').hide();
+                                    _this.show_popup = false;
+                                    _this.current_pro_name = $(this).attr('data-project');
+                                    iWiter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
+                                });
+                                $('.can_btn_pop').off(event_type).on(event_type, function() {
+                                    $('.white_content').hide();
+                                });
+                                } else {
+                                    $('.load_pop_d').hide();
+                                    _this.show_popup = false;
+                                    _this.current_pro_name = $(this).attr('data-project');
+                                    iWiter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
+                                }
+                        });
+                        } else {
+                            $('.prolist_load').empty();
+                            $('.load_pop_d').hide();
+                        }
+                }
+                allProj();
+                
                 /*var formURL = 'database.php?fetch_project';
                  $.ajax(
                  {
@@ -1666,38 +1652,42 @@ function Controller() {
                         postData['xml_data'] = postData['xml_data'].replace(/'/g, '#|#');
                         project_name = project_name.replace(/"/g, '#||#');
                         postData['xml_data'] = postData['xml_data'].replace(/"/g, '#||#');
-                        html5sql.process(
-                                {
-                                    sql: "SELECT * FROM projects WHERE data_id = " + postData['data-key'] + " AND name = '" + project_name + "'",
-                                    success: function(transaction, results) {
-                                        if (results.rows.length == 0) {
-                                            html5sql.process(
-                                                    {
-                                                        sql: "INSERT INTO projects (name, data_id, data, date_time, dtime) VALUES ('" + project_name + "'," + postData['data-key'] + ",'" + postData['xml_data'] + "'," + new Date().getTime() + ",'" + get_date() + "')",
-                                                        success: function(transaction, results) {
-                                                            //console.log(results.rowsAffected);
-                                                            if (results.rowsAffected == 1) {
-                                                                _this.save_type = 'save';
-                                                                $('.save_pro').attr('data-project-name', project_name);
-                                                                //alert('Project created successfully');
-                                                                $('.save_pop_1').hide();
-                                                                $('.save_pop_2').show();
-                                                                $('.pop_msg_d').text('New project created!');
-                                                                $('.err').text('');
-                                                                _this.show_popup = false;
-                                                                _this.current_pro_name = project_name;
-                                                            } else {
-                                                                alert('Please try again');
-                                                            }
-                                                        }
-                                                    }
-                                            );
-                                        } else {
-                                            $('.err').text('This file already exists. Do you want to replace it?');
-                                        }
-                                    }
+
+                        //IndexedDB
+                        async function saveProj() {
+                            var results = await connection.select({
+                                from: 'iw_projects',
+                                where: {
+                                    data_id: postData['data-key'],
+                                    name: project_name
                                 }
-                        );
+                            })
+                            if (results.length == 0) {
+                                var value = {
+                                    name: project_name,
+                                    data_id: postData['data-key'],
+                                    data: postData['xml_data'],
+                                    date_time: new Date().getTime(),
+                                    dtime: new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'medium' }).format(new Date().getTime())
+                                }
+                                var results = await connection.insert({
+                                    into: 'iw_projects',
+                                    values: [value]
+                                })
+                                if (results > 0) {
+                                    _this.save_type = 'save';
+                                    $('.save_pro').attr('data-project-name', project_name);
+                                    $('.save_pop_1').hide();
+                                    $('.save_pop_2').show();
+                                    $('.pop_msg_d').text('New project created!');
+                                    $('.err').text('');
+                                    _this.show_popup = false;
+                                    _this.current_pro_name = project_name;
+                                }
+                            }
+                        }
+                        saveProj();
+                        
                         /*var formURL = 'database.php?add';
                          $.ajax(
                          {
@@ -1741,28 +1731,31 @@ function Controller() {
                     var postData = {'data-key': _this.current_key, 'project_name': $('.save_pro').attr('data-project-name'), 'xml_data': _this.XMLToString(data_to_save[0]), 'jdate': new Date()};
                     postData['xml_data'] = postData['xml_data'].replace(/'/g, '#|#');
                     postData['xml_data'] = postData['xml_data'].replace(/"/g, '#||#');
-                    html5sql.process(
-                            {
-                                sql: "UPDATE projects SET data = '" + postData['xml_data'] + "', date_time = " + new Date().getTime() + ", dtime = '" + get_date() + "' WHERE data_id = " + postData['data-key'] + " AND name ='" + postData['project_name'] + "'",
-                                success: function(transaction, results, rowArray) {
-                                    if (results.rowsAffected == 1) {
-                                        $('.save_pop_d').show().css('right', '105%').css('top', '0px');
-                                        $('.save_pop_1').hide();
-                                        $('.save_pop_2').show();
-                                        $('.pop_msg_d').text('Project updated successfully');
-                                        $('.err').text('');
-                                        _this.show_popup = false;
-                                        _this.current_pro_name = $('.save_pro').attr('data-project-name');
-                                    } else {
-                                        $('.save_pop_d').show().css('right', '105%').css('top', '0px');
-                                        $('.save_pop_1').hide();
-                                        $('.save_pop_2').show();
-                                        $('.pop_msg_d').text('Please try again');
-                                        $('.err').text('');
-                                    }
-                                }
+                    
+                    //IndexedDB
+                    async function updateProj() {
+                        var update = await connection.update({
+                            in: 'iw_projects',
+                            where: {
+                                data_id: postData['data-key'],
+                                name: postData['project_name']
+                            },
+                            set: {
+                                data: postData['xml_data'],
+                                date_time: new Date().getTime(),
+                                dtime: new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'medium' }).format(new Date().getTime())
                             }
-                    );
+                        })
+                    }
+                    updateProj();
+                    $('.save_pop_d').show().css('right', '105%').css('top', '0px');
+                    $('.save_pop_1').hide();
+                    $('.save_pop_2').show();
+                    $('.pop_msg_d').text('Project updated successfully');
+                    $('.err').text('');
+                    _this.show_popup = false;
+                    _this.current_pro_name = $('.save_pro').attr('data-project-name');
+                    
                     /*var formURL = 'database.php?update';
                      $.ajax(
                      {
@@ -1807,30 +1800,33 @@ function Controller() {
 
                 postData['xml_data'] = postData['xml_data'].replace(/'/g, '#|#');
                 postData['xml_data'] = postData['xml_data'].replace(/"/g, '#||#');
-                html5sql.process(
-                        {
-                            sql: "UPDATE projects SET data = '" + postData['xml_data'] + "', date_time = " + new Date().getTime() + ", dtime = '" + get_date() + "' WHERE data_id = " + postData['data-key'] + " AND name ='" + postData['project_name'] + "'",
-                            success: function(transaction, results, rowArray) {
-                                if (results.rowsAffected == 1) {
-                                    temp_p.find('.save_pop_d').show().css('right', '105%').css('top', '0px');
-                                    temp_p.find('.save_pop_1').hide();
-                                    temp_p.find('.save_pop_2').show();
-                                    temp_p.find('.pop_msg_d').text('Project updated successfully');
-                                    temp_p.find('.err').text('');
-                                    _this.save_type = 'save';
-                                    $('.save_pro').attr('data-project-name', project_name);
-                                    _this.show_popup = false;
-                                    _this.current_pro_name = project_name;
-                                } else {
-                                    temp_p.find('.save_pop_d').show().css('right', '105%').css('top', '0px');
-                                    temp_p.find('.save_pop_1').hide();
-                                    temp_p.find('.save_pop_2').show();
-                                    temp_p.find('.pop_msg_d').text('Please try again');
-                                    temp_p.find('.err').text('');
-                                }
+                
+                //IndexedDB
+                    async function updateProj() {
+                        var update = await connection.update({
+                            in: 'iw_projects',
+                            where: {
+                                data_id: postData['data-key'],
+                                name: postData['project_name']
+                            },
+                            set: {
+                                data: postData['xml_data'],
+                                date_time: new Date().getTime(),
+                                dtime: new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'medium' }).format(new Date().getTime())
                             }
-                        }
-                );
+                        })
+                    }
+                    updateProj();
+                    temp_p.find('.save_pop_d').show().css('right', '105%').css('top', '0px');
+                    temp_p.find('.save_pop_1').hide();
+                    temp_p.find('.save_pop_2').show();
+                    temp_p.find('.pop_msg_d').text('Project updated successfully');
+                    temp_p.find('.err').text('');
+                    _this.save_type = 'save';
+                    $('.save_pro').attr('data-project-name', project_name);
+                    _this.show_popup = false;
+                    _this.current_pro_name = project_name;
+                    
                 /*$.ajax(
                  {
                  url: formURL,
