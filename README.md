@@ -22,6 +22,8 @@ More information can be found in the [Help](https://yell0wsuit.github.io/iWriter
 - De-bloated the tool by removing unnecessary images and scripts.
 
 ## Known bugs
-- The **Save** and **Save As** options are only available for Chromium browsers. Mozilla Firefox does not support them because it deprecated WebSQL in favor of IndexedDB. See [Issue #1](https://github.com/auranticus/iWriter/issues/1).  
-For Safari on iOS 13+, you need to disable **Disable Web SQL** in **Setting** > **Safari** > **Advanced** > **Experimental Features**.
-- On iOS, if you don't disable **Disable Web SQL** or use browsers other than Safari, the page is frozen. Attempting to reload will show error "An error occurred while processing XML file."
+None as so far.
+
+~~- The **Save** and **Save As** options are only available for Chromium browsers. Mozilla Firefox does not support them because it deprecated WebSQL in favor of IndexedDB. See [Issue #1](https://github.com/auranticus/iWriter/issues/1).  
+For Safari on iOS 13+, you need to disable **Disable Web SQL** in **Setting** > **Safari** > **Advanced** > **Experimental Features**.~~
+  ~~- On iOS, if you don't disable **Disable Web SQL** or use browsers other than Safari, the page is frozen. Attempting to reload will show error "An error occurred while processing XML file."~~
