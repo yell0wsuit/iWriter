@@ -1,9 +1,11 @@
-var iWiter_controller = new Controller();
 var event_type = 'click';
+
+var device_detect = false;
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     event_type = 'touchend';
+    device_detect = true;
 }
-iWiter_controller.init();
+
 function Controller() {
     //Properties
     this.project_xml_data = new Object();
@@ -22,8 +24,9 @@ function Controller() {
     //functions
     this.init = function(load_data_arg) {
         //load_data_arg = yes = load all the xml in init else when required
-		var iLoader = document.getElementById('iLoader');
-		$(iLoader).remove();
+        //_this.xml_file_path = load_data_arg.xmlPath;
+        //_this.image_file_path = load_data_arg.imgPath + 'mitr/';
+        //_this.xml_img_path = load_data_arg.imgPath + 'mitr/xml/';
         var project_count = 0;
         this.load_data = load_data_arg;
         $.ajax({// to get project list
@@ -61,6 +64,8 @@ function Controller() {
         });
     };
     this.loadFramework = function() {
+        var iLoader = document.getElementById('iLoader');
+        $(iLoader).remove();
         $.ajax({
             type: "GET",
             url: "xml/frameworks.xml",
@@ -158,9 +163,12 @@ function Controller() {
                 }
             });
         });
-        $(wrapper + ' .sp_left').off().on(event_type, function(e) {
+        $(wrapper + ' .sp_left').off('click').on('click', function(e) {
             _this.current_pro_name = '';
             _this.createModel($(this).html(), $(this).attr('data-key'));
+
+            var scroll_pos = $('.main_wrapper').position();
+            $(window).scrollTop(scroll_pos.top);
         });
     };
     this.modelInit = function() {
@@ -173,7 +181,7 @@ function Controller() {
         $('.current_tool').on(event_type, function(e) {
 
             if ($('.second_page').is(':visible')) {
-                $('.fn_rigth').trigger(event_type);
+                $('.fn_rigth').trigger('click');
             } else {
                 _this.writerInit();
                 if (_this.current_pro_name == '') {
@@ -254,12 +262,16 @@ function Controller() {
         });
         $('.models_page_body_left .medels_steps').append(guided_html);
         $('.models_page_body_left .medels_steps li').on(event_type, function() {
+
+            var scroll_pos = $('.main_wrapper').position();
+            $(window).scrollTop(scroll_pos.top);
+
             _this.reset_drop();
             $('.str_common').each(function() {
                 $(this).children('.tick_mark').removeClass('_selected');
             });
             $('.medels_steps li').removeAttr('style');
-            $('.models_page_body_left .medels_steps li').css('background-color', 'rgba(0, 0, 0, 0)');
+            $('.models_page_body_left .medels_steps li').css('background-color', 'rgba(0, 0, 0, 0)').css('color', '#000000');
             $(this).css('background-color', '#00123c').css('color', '#FFFFFF');
             var left_pos = $('.models_page_body_left').position();
             if (Number(left_pos.left) == 0) {
@@ -461,8 +473,8 @@ function Controller() {
                 body_content = body_content.replace(/<useful/g, " <span");
                 body_content = body_content.replace(/<extra_info/g, " <span");
                 body_content = body_content.replace(/<\/para/g, " </p");
-                body_content = body_content.replace(/<\/useful/g, " </span");
-                body_content = body_content.replace(/<\/extra_info/g, " </span");
+                body_content = body_content.replace(/<\/useful/g, "</span");
+                body_content = body_content.replace(/<\/extra_info/g, "</span");
                 body_content = body_content.replace(/  /g, " ");
                 body_content = body_content.replace(/ ,/g, ",");
                 body_content = body_content.replace(/ <\/span>,/g, "</span>,");
@@ -741,9 +753,9 @@ function Controller() {
                     $(this).css('background-image', 'url("images/mitr/oxford/info_01.svg")');
                 }
             });
-            $('.sp_left').off().on(event_type, function(e1) {
-
-
+            $('.sp_left').off('click').on('click', function(e1) {
+                var scroll_pos = $('.main_wrapper').position();
+                $(window).scrollTop(scroll_pos.top);
                 //for device
                 e1.preventDefault();
                 $('.tool_wrapper,.down_arrow_wrapper').hide();
@@ -794,13 +806,13 @@ function Controller() {
                     $('.second_page_body_right .delete_project').unbind(event_type).bind(event_type, function(e2) {
                         e2.preventDefault();
                         var delete_id = $(this).attr('data-key');
-                        var delete_name = $(this).attr('data-project');
                         var temp_this = this;
                         //var r = confirm("Are you sure you want to delete this project?");
                         $('.white_content').remove();
                         var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Are you sure you want to delete this project?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
                         $('body').append(temp_pop);
                         $('.white_content').show();
+                        call_pop();
                         $('.ok_btn_pop').off(event_type).on(event_type, function() {
                             $('.white_content').hide();
                             async function removeProj() {
@@ -925,7 +937,7 @@ function Controller() {
         _this.reset_drop();
         $('.current_tool').off(event_type).on(event_type, function(e) {
             if ($('.second_page').is(':visible')) {
-                $('.fn_left').trigger(event_type);
+                $('.fn_left').trigger('click');
             } else {
                 _this.switchToModel();
             }
@@ -950,7 +962,7 @@ function Controller() {
             if (_this.show_popup) {
                 show_pop();
             } else {
-                $('.fn_left').trigger(event_type);
+                $('.fn_left').trigger('click');
             }
 
         }
@@ -960,6 +972,7 @@ function Controller() {
             var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
             $('body').append(temp_pop);
             $('.white_content').show();
+            call_pop();
             $('.ok_btn_pop').off(event_type).on(event_type, function() {
                 $('.white_content').hide();
                 _this.modelInit();
@@ -978,10 +991,11 @@ function Controller() {
             var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
             $('body').append(temp_pop);
             $('.white_content').show();
+            call_pop();
             $('.ok_btn_pop').off(event_type).on(event_type, function() {
                 $('.white_content').hide();
                 hide_elem();
-                $('.fn_rigth').trigger(event_type);
+                $('.fn_rigth').trigger('click');
             });
             $('.can_btn_pop').off(event_type).on(event_type, function() {
                 $('.white_content').hide();
@@ -989,7 +1003,7 @@ function Controller() {
         } else {
             $('.white_content').hide();
             hide_elem();
-            $('.fn_rigth').trigger(event_type);
+            $('.fn_rigth').trigger('click');
         }
 
         //} else {
@@ -1030,6 +1044,7 @@ function Controller() {
             var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
             $('body').append(temp_pop);
             $('.white_content').show();
+            call_pop();
             $('.ok_btn_pop').off(event_type).on(event_type, function() {
                 $('.white_content').hide();
                 hide_elem();
@@ -1048,7 +1063,7 @@ function Controller() {
         $('.current_tool').text('Models');
         $('.current_tool').off(event_type).on(event_type, function(e) {
             if ($('.second_page').is(':visible')) {
-                $('.fn_left').trigger(event_type);
+                $('.fn_left').trigger('click');
             } else {
                 _this.switchToModel();
             }
@@ -1406,7 +1421,7 @@ function Controller() {
         top_html_ck += '</ul></div>';
         $('.left_wrapper').empty().html(top_html_ck);
         $('.checkpoints').hide();
-        $('.menu_1').off(event_type).on(event_type, function(e_p) {
+        $('.menu_1').off('click').on('click', function(e_p) {
 
             if (!$(this).hasClass('_select')) {
                 $(this).addClass('_select');
@@ -1439,10 +1454,22 @@ function Controller() {
         //left side content
 
         //load btn
+        //$('.prolist_load').empty();
+        //$('.load_pop_d').hide();
         var load_status = true;
-        $('.load_pro').mouseover(function() {
+        
+        $('.load_pro').bind("mouseover touchend", function(e) {
+            if (e.type == event_type) {
+                load_pro(e);
+                //$('.load_pop_d').show().css('right', '0px').css('top', '0px');
+            } else {
+                load_pro(e);
+            }
+        });
+        
+        function load_pro(e) {
             if (load_status) {
-//ajax
+                //ajax
                 load_status = false;
                 var postData = {'data-key': _this.current_key};
                 //IndexedDB
@@ -1467,6 +1494,11 @@ function Controller() {
                         temp_html += '</ul>';
                         $('.prolist_load').empty().html(temp_html);
                         $('.load_pop_d').show().css('right', '105%').css('top', '0px');
+                        if (e.type == event_type || e.type == 'click') {
+                            // for device
+                            $('.load_pop_d').show().css('right', '0px').css('top', '0px').css('z-index', '10');
+                            $('.load_pop_d').children('.arrowp_box').addClass('remove_arrow');
+                        }
                         $('.tool_down_arrow_wrp li,.tool_wrapper li').mouseout(function() {
                             if (!$(this).hasClass('load_pro')) {
                                 $('.load_pop_d').hide();
@@ -1478,6 +1510,7 @@ function Controller() {
                                 var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
                                 $('body').append(temp_pop);
                                 $('.white_content').show();
+                                call_pop();
                                 $('.ok_btn_pop').off(event_type).on(event_type, function() {
                                     $('.load_pop_d').hide();
                                     _this.show_popup = false;
@@ -1562,28 +1595,65 @@ function Controller() {
 
             }
 
-        });
+        };
         //end load btn
 
         //save as
-        $('.saveas_pro').mouseover(function(event) {
+        $('.project_name').off(event_type).on(event_type, function() {
+            $(this).focus();
+        });
+        //$('.saveas_pro').mouseover(function(event) {
+        $('.saveas_pro').bind("mouseover touchend", function(event) {
+            var current_class = event.target.className.split(" ")[0];
             if (event.target.className.split(" ")[0] == 'saveas_pro') {
                 if (!$('.save_pop_2').is(':visible')) {
                     $('.save_pop_1').show();
-                    $('.save_pop_2').hide();
+                    $('.save_pop_2,.save_pop_d').hide();
                     $('.saveas_pop_d').show().css('right', '105%').css('top', '0px');
                     $('.err').text('');
                 }
             }
+            //for device
+            if (current_class == 'saveas_pro' || current_class == 'saveas_pro_in') {
+                if (device_detect) {
+                    $(this).css('z-index', '10');
+                    if (!$('.save_pop_2').is(':visible')) {
+                        $('.save_pop_1').show();
+                        $('.save_pop_2').hide();
+                        $('.saveas_pop_d,.save_pop_d').show().css('right', '105%').css('top', '0px');
+                        $('.err').text('');
+
+                        $('.saveas_pop_d').show().css('right', '0px').css('top', '0px');
+                        $('.saveas_pop_d').children('.arrowp_box').addClass('remove_arrow');
+                        $('.save_pop_d').hide();
+                    }
+                }
+            }
         });
         //end save as
-        $('.save_pro').mouseover(function(event) {
+        
+        //$('.save_pro').mouseover(function(event) {
+        $('.save_pro').bind("mouseover touchend", function(event) {
+            var current_class = event.target.className.split(" ")[0];
             if (event.target.className.split(" ")[0] == 'save_pro') {
                 if (_this.save_type == 'create') {
                     $('.save_pop_1').show();
-                    $('.save_pop_2').hide();
+                    $('.save_pop_2,.saveas_pop_d').hide();
                     $('.save_pop_d').show().css('right', '105%').css('top', '0px');
                     $('.err').text('');
+                }
+            }
+            if (current_class == 'save_pro' || current_class == 'save_pro_in') {
+                if (device_detect) {
+                    $(this).css('z-index', '11');
+                    if (_this.save_type == 'create') {
+                        $('.save_pop_1').show();
+                        $('.save_pop_2,.saveas_pop_d').hide();
+                        $('.err').text('');
+                        $('.save_pop_d').show().css('right', '0px').css('top', '0px');
+                        $('.save_pop_d').children('.arrowp_box').addClass('remove_arrow');
+                        $('.saveas_pop_d').hide();
+                    }
                 }
             }
         });
@@ -1684,6 +1754,8 @@ function Controller() {
                                     _this.show_popup = false;
                                     _this.current_pro_name = project_name;
                                 }
+                            } else {
+                                $('.err').text('This project name already exists. Please change into another.');
                             }
                         }
                         saveProj();
@@ -1755,6 +1827,10 @@ function Controller() {
                     $('.err').text('');
                     _this.show_popup = false;
                     _this.current_pro_name = $('.save_pro').attr('data-project-name');
+                    if (device_detect) {
+                        $('.save_pop_d').show().css('right', '0px').css('top', '0px');
+                        $('.arrowp_box').addClass('remove_arrow');
+                    }
                     
                     /*var formURL = 'database.php?update';
                      $.ajax(
@@ -1826,6 +1902,10 @@ function Controller() {
                     $('.save_pro').attr('data-project-name', project_name);
                     _this.show_popup = false;
                     _this.current_pro_name = project_name;
+                    if (device_detect) {
+                        temp_p.$('.save_pop_d').css('right', '0px').css('top', '0px');
+                        temp_p.$('.arrowp_box').addClass('remove_arrow');
+                    }
                     
                 /*$.ajax(
                  {
@@ -2021,6 +2101,7 @@ function Controller() {
                 $('.notes_content').show();
             }
         }
+        _this.wordCount();
     };
     this.set_wheader = function() {
 
@@ -2033,9 +2114,16 @@ function Controller() {
         //need to load config xml
 
         var top_header_html = "";
-        $(_this.project_xml_data[_this.current_key]['xml_data']).find('framework_intro').children('para').each(function() {
-            top_header_html += '<p>' + $(this).text() + '</p>';
-        });
+        var xmlText = new XMLSerializer();
+        for (var m = 0; m < $(_this.project_xml_data[_this.current_key]['xml_data']).find('framework_intro')[0].childNodes.length; m++)
+        {
+            if ($(_this.project_xml_data[_this.current_key]['xml_data']).find('framework_intro')[0].childNodes[m].nodeName == 'para') {
+                top_header_html += xmlText.serializeToString($(_this.project_xml_data[_this.current_key]['xml_data']).find('framework_intro')[0].childNodes[m]);
+            }
+        }
+
+        top_header_html = top_header_html.replace(/<para/g, " <p");
+        top_header_html = top_header_html.replace(/<\/para/g, " </p");
         top_header_html += '<div class="word_count_text">Word count 0</div>';
         $('.str_common:visible').each(function() {
             if (!$(this).children('.tick_mark').hasClass('_selected')) {
@@ -2043,6 +2131,28 @@ function Controller() {
             }
         });
         $('.models_header').html(top_header_html);
+        setTimeout(function() {
+            var append_look_up = '';
+            $('.models_header').each(function() {
+                if ($(this).is(":visible")) {
+                    var len = $(this).children('p').length;
+                    $(this).children('p').each(function(index) {
+                        if (index >= (len - 3)) {
+                            $(this).addClass('look_up');
+                            if (index == (len - 3)) {
+                                $('.look_click').remove();
+                                $(this).before('<div class="look_click">Dictionary Look-up</div>')
+                            }
+                        }
+                    });
+                }
+            });
+            $('.look_up').hide();
+            $('.look_click').unbind('click').bind('click', function() {
+                $('.look_up').toggle();
+            });
+        }, 500);
+
         var show_top_head = true;
         //$('.str_common:visible').each(function() {
         $('.str_common').each(function() {
@@ -2102,6 +2212,15 @@ function Controller() {
     };
 }
 
+function call_pop() {
+    var pops = $('.white_content');
+    pops.css('top', '50%').css('left', '50%').css('position', 'fixed');
+    var w_h = pops.height() / 2;
+    var w_w = pops.width() / 2;
+    pops.css('margin-top', -w_h + 'px');
+    pops.css('margin-left', -w_w + 'px');
+}
+
 function create_xml_dom() {
 
     this.generate_xml_dom = function(xml_data, html_dom_data) {
@@ -2129,3 +2248,8 @@ function create_xml_dom() {
         }
     };
 }
+
+function iWriterOnload() {
+  initiateController();
+}
+iWriterOnload();
