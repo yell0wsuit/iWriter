@@ -108,14 +108,14 @@ $(document).ready(function() {
 
                 if (Number(svd_pro_hgt) === 39 || Number(svd_pro_hgt) === 32)
                     {
-                        $('.saved_projects').animate({height: $('.saved_projects').attr("actHgt")}, 500);
+                        $('.saved_projects').animate({height: $('.saved_projects').attr("actHgt")}, 200);
                     }
                     else
                     {
-                        $('.saved_projects').animate({height: svd_pro_hgt}, 500);
+                        $('.saved_projects').animate({height: svd_pro_hgt}, 200);
                     }
                 if ($('.saved_projects').height() > $('.save_p_btn').height()) {
-                    $('.saved_projects').animate({height: $('.save_p_btn').height()}, 500);
+                    $('.saved_projects').animate({height: $('.save_p_btn').height()}, 200);
                 }
             });
 

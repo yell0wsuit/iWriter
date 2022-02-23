@@ -272,7 +272,11 @@ function Controller() {
             });
             $('.medels_steps li').removeAttr('style');
             $('.models_page_body_left .medels_steps li').css('background-color', 'rgba(0, 0, 0, 0)').css('color', '#000000');
-            $(this).css('background-color', '#00123c').css('color', '#FFFFFF');
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                $(this).css('background-color', '#3f51b5');
+            } else {
+                $(this).css('background-color', '#00123c').css('color', '#FFFFFF');
+            }
             var left_pos = $('.models_page_body_left').position();
             if (Number(left_pos.left) == 0) {
                 if ($(window).width() <= 480) {
