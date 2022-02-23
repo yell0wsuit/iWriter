@@ -261,7 +261,7 @@ function Controller() {
             guided_html = guided_html + '<li data-key="' + _this.current_key + '" data-para_ids="' + $(this).attr('para_ids') + '"><span data-key="' + _this.current_key + '" data-para_ids="' + $(this).attr('para_ids') + '">' + $(this).attr('label') + '</span></li>';
         });
         $('.models_page_body_left .medels_steps').append(guided_html);
-        $('.models_page_body_left .medels_steps li').on(event_type, function() {
+        $('.models_page_body_left .medels_steps li').on('click', function() {
 
             var scroll_pos = $('.main_wrapper').position();
             $(window).scrollTop(scroll_pos.top);
@@ -810,7 +810,7 @@ function Controller() {
                         //var r = confirm("Are you sure you want to delete this project?");
                         $('.white_content').remove();
                         var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Are you sure you want to delete this project?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
-                        $('body').append(temp_pop);
+                        $('.main_wrapper').append(temp_pop);
                         $('.white_content').show();
                         call_pop();
                         $('.ok_btn_pop').off(event_type).on(event_type, function() {
@@ -871,7 +871,7 @@ function Controller() {
 
                  $('.white_content').remove();
                  var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Are you sure you want to delete this project?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
-                 $('body').append(temp_pop);
+                 $('.main_wrapper').append(temp_pop);
                  $('.white_content').show();
 
                  $('.ok_btn_pop').off(event_type).on(event_type, function() {
@@ -970,7 +970,7 @@ function Controller() {
         function show_pop() {
             $('.white_content').remove();
             var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
-            $('body').append(temp_pop);
+            $('.main_wrapper').append(temp_pop);
             $('.white_content').show();
             call_pop();
             $('.ok_btn_pop').off(event_type).on(event_type, function() {
@@ -989,7 +989,7 @@ function Controller() {
         if (_this.show_popup) {
             $('.white_content').remove();
             var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
-            $('body').append(temp_pop);
+            $('.main_wrapper').append(temp_pop);
             $('.white_content').show();
             call_pop();
             $('.ok_btn_pop').off(event_type).on(event_type, function() {
@@ -1042,7 +1042,7 @@ function Controller() {
         function show_pop() {
             $('.white_content').remove();
             var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
-            $('body').append(temp_pop);
+            $('.main_wrapper').append(temp_pop);
             $('.white_content').show();
             call_pop();
             $('.ok_btn_pop').off(event_type).on(event_type, function() {
@@ -1454,8 +1454,8 @@ function Controller() {
         //left side content
 
         //load btn
-        //$('.prolist_load').empty();
-        //$('.load_pop_d').hide();
+        $('.prolist_load').empty();
+        $('.load_pop_d').hide();
         var load_status = true;
         
         $('.load_pro').bind("mouseover touchend", function(e) {
@@ -1508,7 +1508,7 @@ function Controller() {
                             if (_this.show_popup) {
                                 $('.white_content').remove();
                                 var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
-                                $('body').append(temp_pop);
+                                $('.main_wrapper').append(temp_pop);
                                 $('.white_content').show();
                                 call_pop();
                                 $('.ok_btn_pop').off(event_type).on(event_type, function() {
@@ -1559,7 +1559,7 @@ function Controller() {
                  if (_this.show_popup) {
                  $('.white_content').remove();
                  var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
-                 $('body').append(temp_pop);
+                 $('.main_wrapper').append(temp_pop);
                  $('.white_content').show();
 
                  $('.ok_btn_pop').off(event_type).on(event_type, function() {
