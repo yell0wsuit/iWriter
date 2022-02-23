@@ -509,24 +509,23 @@ body {
   outline: none; }
 
 .btn, input[type='submit'] {
-  display: inline-block;
+  display: inline-flex;
   width: auto;
-  height: 30px;
-  line-height: 26px;
-  margin: 0 6px 6px 0;
+  height: 32px;
+  line-height: 1;
+  align-items: center;
+  padding: 0 9px;
   background: #FFF;
-  border: 2px solid #4577bf;
-  border-radius: 15px;
+  border: 1px solid #4577bf;
+  border-radius: 4px;
   -webkit-appearance: none;
   text-align: center;
   position: relative;
   vertical-align: middle; }
   .btn > a, input[type='submit'] > a {
-    display: table-cell;
-    padding: 0 12px;
-    color: #444444;
+    display: inline-flex;
+    padding: 0 9px;
     color: #4577bf;
-    height: 26px;
     font-weight: normal;
     white-space: nowrap; }
     .btn > a:hover, input[type='submit'] > a:hover {
