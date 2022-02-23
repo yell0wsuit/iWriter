@@ -199,13 +199,13 @@ p.zero {
   margin-bottom: 0; }
 
 i {
-  font-style: italic; }
+  /*font-style: italic;*/ }
 
 em {
   font-weight: bold; }
 
 strong {
-  font-weight: bold; }
+  font-weight: 600; }
 
 .right_col h4.no-rule {
   margin-top: 4px; }

@@ -730,7 +730,7 @@
     background-image: url("../images/mitr/oxford/closebtn.svg");
 }
 .italic_style{
-    font-style: italic;
+    font-variation-settings: 'slnt' -10;
 }
 .xml_img_wrp{
     width: auto;
