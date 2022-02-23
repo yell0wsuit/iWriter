@@ -102,7 +102,7 @@ $(document).ready(function() {
             $('.saved_projects').height($('.save_p_btn').height());
             var svd_pro_hgt = $('.saved_projects').height();
 
-            $('.save_p_btn').bind(event_type, function(e) {
+            $('.save_p_btn').bind('click', function(e) {
                 e.preventDefault();
                 $('.saved_projects').stop();
 
@@ -119,7 +119,7 @@ $(document).ready(function() {
                 }
             });
 
-            $('.saved_projects_list').off(event_type).on(event_type, function() {
+            $('.saved_projects_list').off('click').on('click', function() {
                 if ($(this).attr('data-type') == 'create') {
                     iWiter_controller.current_pro_name = '';
                 } else {
@@ -262,6 +262,7 @@ $(document).ready(function() {
                 var downloadLink = document.createElement("a");
                 downloadLink.download = fileNameToSaveAs;
                 downloadLink.innerHTML = "Download File";
+                $(downloadLink).attr('target', '_blank');
                 if (window.webkitURL != null)
                 {
                     // Chrome allows the link to be clicked
