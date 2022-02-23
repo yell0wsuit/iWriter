@@ -19,24 +19,26 @@
     width: 100%;
     background-color: #0072A6;
     float: left;
-	height: auto;
+    height: auto;
     /*height: 768px;*/
     /*min-height: 768px;*/
-    margin: 0 0 28px 0;
+    /*margin: 0 0 28px 0;*/
     border-radius: 10px;
+    position: relative;
 }
 .main_wrapper h1{
-    font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: Inter, system-ui, sans-serif;
 }
 .inner_wrapper{
     /*margin: 10px 10px;*/
     width: auto;
-    background-color: #e0f2fd;
+    background-color: #f7f7f7;
     overflow: auto;
     /*height: 748px;*/
     /*min-height: 748px;*/
     box-sizing:border-box;
-    border-radius: 7px;
+    /*border-radius: 7px;*/
+    position: relative;
 }
 
 .first_page{
@@ -44,7 +46,7 @@
     margin: 150px auto;
 }
 .first_page h2{
-    font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: Inter, system-ui, sans-serif;
 }
 .middle_of_page{
     width: 100%;
@@ -54,7 +56,6 @@
 }
 .fn_left{
     cursor: pointer;
-    box-shadow: 3px 4px 6px 0px rgba(128, 128, 128, 0.78),inset -5px -5px 5px rgba(170, 143, 0, 0.39), inset 5px 5px 5px rgba(255, 255, 255, 0.43)
         /*
         width:35%;
         padding: 5%;
@@ -67,10 +68,10 @@
         */
 }
 .fn_left:hover{
-    background-color: #e0f2fd !important;
+    background-color: #f7f7f7 !important;
 }
 .fn_rigth:hover{
-    background-color: #e0f2fd !important;
+    background-color: #f7f7f7 !important;
 }
 .fn_middle{
     /*
@@ -81,7 +82,6 @@
 }
 .fn_rigth{
     cursor: pointer;
-    box-shadow: 3px 4px 6px 0px rgba(128, 128, 128, 0.78),inset -5px -5px 5px rgba(170, 143, 0, 0.39), inset 5px 5px 5px rgba(255, 255, 255, 0.43)
         /*
         width: 35%;
         padding: 5%;
@@ -99,6 +99,8 @@
     margin: 0 auto;
     text-align: center;
     vertical-align: top;
+    width: 100%;
+    display: table
 }
 .first_page h2{
     font-size: 20px;
@@ -178,9 +180,7 @@
     background-repeat:no-repeat;
     font-weight: bold;
     background-color: #ebba17;
-    border-radius: 8px;
-    box-shadow: 3px 4px 6px 0px rgba(128, 128, 128, 0.78),inset -5px -5px 5px rgba(170, 143, 0, 0.39), inset 5px 5px 5px rgba(255, 255, 255, 0.43)
-
+    border-radius: 4px;
 }
 .save_p_btn_txt span{
     display: inline-block;
@@ -227,9 +227,9 @@
 }
 .second_page_body{
     height: 94%;
-    background-color: #e0f2fd;
+    background-color: #f7f7f7;
     margin-top: -15px;
-    border-radius: 7px 7px 0 0;
+    /*border-radius: 7px 7px 0 0;*/
     float: left;
     width: 100%;
 }
@@ -240,7 +240,7 @@
     border-radius: 7px 0 0 0;
     border-right: 1px solid #D2D5DB;
     padding: 10px;
-    background-color: #e0f2fd;
+    background-color: #f7f7f7;
 }
 .second_page_body_right{
     float: left;
@@ -258,14 +258,13 @@
 }
 .model_right_panel{
     float: right;
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
 }
-.model_right_panel *{
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
+.model_right_panel *:not(input) {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .sp_left, .sp_left_dis{
     color: #000000;
@@ -315,13 +314,13 @@
     float: left;
 }
 .down_arrow{
-    margin: 18px 10px 0;
+    margin: 16px 10px 0;
     float: left;
     font-size: 0px;
     width: 0px;
-    border-top: 7px solid #EFF3FC;
-    border-left: 7px solid #4577bf;
-    border-right: 7px solid #4577bf;
+    border-top: 12px solid #EFF3FC;
+    border-left: 12px solid #4577bf;
+    border-right: 12px solid #4577bf;
     cursor: pointer;
     position: relative;
     display: block;
@@ -343,9 +342,9 @@
 }
 .models_page_body{
     height: 94%;
-    background-color: #e0f2fd;
+    background-color: #f7f7f7;
     margin-top: -15px;
-    border-radius: 7px 7px 0 0;
+    /*border-radius: 7px 7px 0 0;*/
     float: left;
     width: 100%;
 }
@@ -354,11 +353,11 @@
     height: 100%;
     /*min-height: 700px;*/
     float: left;
-    border-radius: 7px 0 0 0;
+    /*border-radius: 7px 0 0 0;*/
     border-right: 1px solid #D2D5DB;
     padding: 10px;
     /*position: relative;*/
-    background-color: #e0f2fd;
+    background-color: #f7f7f7;
 
 }
 .models_page_body_right{
@@ -383,13 +382,13 @@
     float: left;
 }
 .models_page_down_arrow{
-    margin: 18px 10px 0;
+    margin: 16px 10px 0;
     float: left;
     font-size: 0px;
     width: 0px;
-    border-top: 7px solid #EFF3FC;
-    border-left: 7px solid #4577bf;
-    border-right: 7px solid #4577bf;
+    border-top: 12px solid #EFF3FC;
+    border-left: 12px solid #4577bf;
+    border-right: 12px solid #4577bf;
     cursor: pointer;
     position: relative;
     display: block;
@@ -399,7 +398,7 @@
     height: 100%;
 
 }
-.models_page_right_panel *{
+.models_page_right_panel *:not(input) {
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
@@ -426,7 +425,7 @@
     /*position: absolute;*/
     bottom: 5px;
     margin-top: 35px;
-    background-color: #e0f2fd;
+    background-color: #f7f7f7;
 }
 .search_title > p:first-child{
     margin-bottom: 0;
@@ -446,7 +445,7 @@
 }
 .str_common{
     margin-top: 5px;
-    border-radius: 5px;
+    border-radius: 4px;
     overflow: hidden;
     cursor: pointer;
 }
@@ -467,41 +466,13 @@
     width: 11px;
 }
 .show_structre{
-    /*background-color: #9C121F;*/
-    background: #a90329; /* Old browsers */
-    background: -moz-linear-gradient(top,  #a90329 10%, #8f0222 52%, #6d0019 90%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(10%,#a90329), color-stop(52%,#8f0222), color-stop(90%,#6d0019)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #a90329 10%,#8f0222 52%,#6d0019 90%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #a90329 10%,#8f0222 52%,#6d0019 90%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #a90329 10%,#8f0222 52%,#6d0019 90%); /* IE10+ */
-    background: linear-gradient(to bottom,  #a90329 10%,#8f0222 52%,#6d0019 90%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
-
+    background-color: #9C121F;
 }
 .show_notes{
-    /*background-color: #90A52C;*/
-    background: #bfd255; /* Old browsers */
-    background: -moz-linear-gradient(top,  #bfd255 42%, #72aa00 92%, #9ecb2d 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(42%,#bfd255), color-stop(92%,#72aa00), color-stop(100%,#9ecb2d)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #bfd255 42%,#72aa00 92%,#9ecb2d 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #bfd255 42%,#72aa00 92%,#9ecb2d 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #bfd255 42%,#72aa00 92%,#9ecb2d 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #bfd255 42%,#72aa00 92%,#9ecb2d 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd255', endColorstr='#9ecb2d',GradientType=0 ); /* IE6-9 */
-
-
+    background-color: #90A52C;
 }
 .show_content{
-    /*background-color: #0765AF;*/
-    background: #207cca; /* Old browsers */
-    background: -moz-linear-gradient(top,  #207cca 35%, #207cca 35%, #1e5799 68%, #1e5799 68%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(35%,#207cca), color-stop(35%,#207cca), color-stop(68%,#1e5799), color-stop(68%,#1e5799)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #207cca 35%,#207cca 35%,#1e5799 68%,#1e5799 68%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #207cca 35%,#207cca 35%,#1e5799 68%,#1e5799 68%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #207cca 35%,#207cca 35%,#1e5799 68%,#1e5799 68%); /* IE10+ */
-    background: linear-gradient(to bottom,  #207cca 35%,#207cca 35%,#1e5799 68%,#1e5799 68%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207cca', endColorstr='#1e5799',GradientType=0 ); /* IE6-9 */
-
+    background-color: #0765AF;
 }
 .show_all{
     background-color: #EBBA17;
@@ -518,18 +489,18 @@
     width: 95%;
 }
 .models_content{
-    border: 2px solid #d4d8df;
-    padding: 10px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 4px;
+    padding: 16px;
     margin: 0 0 0 3px;
     min-height: 520px;
-    max-height: 520px;
+    max-height: 590px;
     /*height: 100%;*/
 
     background-color: #ffffff;
     width: 99%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    box-shadow: rgb(0 0 0 / 13%) 0px 1.6px 3.6px, rgb(0 0 0 / 11%) 0px 0px 2.9px;
+    -webkit-box-shadow: rgb(0 0 0 / 13%) 0px 1.6px 3.6px, rgb(0 0 0 / 11%) 0px 0px 2.9px;
     overflow-y: auto;
 }
 .content_box{
@@ -576,15 +547,15 @@
     width: 35%;
 }
 .up_arrow{
-    margin: 18px 10px 0;
+    margin: 13px 10px 0;
     float: right;
     font-size: 0px;
     line-height: 0%;
     width: 0px;
     font-size: 0px; line-height: 0%; width: 0px;
-    border-bottom: 7px solid #EFF3FC;
-    border-left: 7px solid #4577bf;
-    border-right: 7px solid #4577bf;
+    border-bottom: 12px solid #EFF3FC;
+    border-left: 12px solid #4577bf;
+    border-right: 12px solid #4577bf;
     cursor: pointer;
     /*display: none;*/
 }
@@ -599,7 +570,7 @@
     /*font-family: Arial;*/
 }
 .left_wrapper{
-    background-color: #e0f2fd;
+    background-color: #f7f7f7;
     position: relative;
 }
 .btn_phone{
@@ -618,7 +589,7 @@
     height: 20px;
     width: 20px;
     background-image: url("../images/mitr/oxford/iphone/tool_icon.svg");
-	background-size: 20px;
+    background-size: 20px;
     float: left;
     /*display: block;*/
     margin: 8px 8px 0;
@@ -657,7 +628,7 @@
 .down_arrow_wrapper{
     position: absolute;
     right: -14px;
-    top: 16px;
+    top: 15px;
     width: 100px;
     z-index: 2;
     background-color: #4577bf;
@@ -804,8 +775,8 @@
 }
 .checklist_ul > li{
     background-image: url("../images/mitr/down_a.svg");
-	background-size: 12px;
-    background-position: 98% 13px;
+    background-size: 12px;
+    background-position: 98% 15px;
     background-repeat: no-repeat;
     border-bottom: 1px solid #d4d8df;
     color: #000000;
@@ -827,7 +798,8 @@
 }
 .check_box_w{
     display: block;
-    float: right;
+    float: left;
+    margin-right: 5px;
 }
 .checkpoints{
     border-radius: 5px;
@@ -850,12 +822,12 @@
 }
 .check_top{
     background-color: #4577bf;
-    background-position: 99% 2px;
+    background-position: right 2px;
     background-repeat: no-repeat;
     border-radius: 5px 5px 0 0;
     color: #ffffff;
     background-image: url("../images/mitr/_closebtn.svg");
-	background-size: 12px;
+    background-size: 15px;
     cursor: pointer;
 }
 .check_top > span {
@@ -891,7 +863,9 @@
 .f_normal{
     font-style: normal;
 }
-
+.remove_arrow:after, .arrowp_box:before {
+    border: none !important;
+}
 .arrowp_wrp{
     position: absolute;
     cursor: default;
@@ -904,7 +878,7 @@
     border-radius: 8px;
     color: #ffffff;
     padding: 5px;
-    width: 300px;
+    width: 280px;
 }
 .arrowp_box:after, .arrowp_box:before {
     left: 100%;
@@ -1057,9 +1031,9 @@
 .white_content {
     display: none;
     position: absolute;
-    top: 25%;
-    left: 25%;
-    width: 300px;
+    top: 50%;
+    left: 50%;
+    width: 280px;
     z-index:1002;
     overflow: auto;
     background-color: #4577bf;
@@ -1068,7 +1042,7 @@
     border: 1px solid #fcfeff;
     color: #ffffff;
 }
-.white_content *{
+.white_content *:not(input) {
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
@@ -1076,7 +1050,7 @@
 .pop_wrap{
     padding: 5px;
 }
-.show_structure_panel *{
+.show_structure_panel *:not(input) {
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
@@ -1108,11 +1082,11 @@
 }
 .up_home{
     background-image: url("../images/mitr/up_a.svg");
-	background-repeat: no-repeat;
+    background-repeat: no-repeat;
     display: inline-block;
     height: 8px;
-    margin-left: 4px;
-    width: 13px;
+    margin-left: 10px;
+    width: 8px;
 }
 .middle_wrap, .box:hover {
     background-color: #f4ce50 !important;
@@ -1122,15 +1096,15 @@
 }
 .content_box div[data-align="right"]{
     text-align: left !important;
-    padding-left: 70% !important;
+    padding-left: 60% !important;
 }
 .sturcture_content[style="text-align:right"]{
     text-align: left !important;
-    padding-left: 70% !important;
+    padding-left: 60% !important;
 }
 .content_contents[style="text-align:right"]{
     text-align: left !important;
-    padding-left: 70% !important;
+    padding-left: 60% !important;
 }
 @media only screen
 and (min-device-width : 768px)
@@ -1165,6 +1139,9 @@ and (orientation : landscape) {
     .models_page_tools{
         display: none;
     }
+    .tool_down_arrow_wrp{
+        top:33px;
+    }
 }
 
 @media only screen
@@ -1190,7 +1167,7 @@ and (orientation : portrait) {
     }
     .left_menu{
         background-image: url("../images/mitr/oxford/model_menu.svg");
-		background-size: 24px;
+        background-size: 24px;
         background-repeat: no-repeat;
         display: block;
         float: left;
@@ -1217,9 +1194,9 @@ and (orientation : portrait) {
     }
     .models_content {
         height: 100%;
-        position: absolute;
+        position: relative;
         width: 99%;
-        overflow:auto;
+        overflow-y:auto;
         max-height: 100%;
     }
 
@@ -1238,6 +1215,7 @@ and (orientation : portrait) {
         min-height: 100%;
         position: absolute;
         width: 98%;
+        overflow-y: auto;
     }
 
     .up_arrow{
@@ -1253,13 +1231,16 @@ and (orientation : portrait) {
         width: 0px;
     }
     .middle_of_page h2{
-        font-size: 16px;
+        font-size: 24px;
     }
     .down_arrow{
         display: block;
     }
     .models_page_tools{
         display: none;
+    }
+    .tool_down_arrow_wrp{
+        top:27px;
     }
 }
 
@@ -1301,7 +1282,7 @@ and (orientation : portrait) {
 
     }
     .first_page h1{
-        font-size: 23px;
+        font-size: 35px;
     }
     .models_page_left_panel{
         /*width: 66%;*/
@@ -1314,7 +1295,7 @@ and (orientation : portrait) {
         position: absolute;
         width: 100.5%;
         z-index: 1;
-        border-radius: 7px 7px 0 0;
+        /*border-radius: 7px 7px 0 0;*/
         padding: 0;
         background-color: #808080;
         min-height: 100%;
@@ -1325,7 +1306,7 @@ and (orientation : portrait) {
         width: 100%;
     }
     .second_page_top h1{
-        width: 60%;
+        /*width: 60%;*/
         padding: 12px 0 0 12px;
         font-size: 16px;
         line-height: 13px;
@@ -1347,6 +1328,7 @@ and (orientation : portrait) {
         position: absolute;
         width: 100%;
         display: none;
+        overflow-y: auto;
     }
     .top_model_menu_text{
         margin: 9px 0 0;
@@ -1364,18 +1346,18 @@ and (orientation : portrait) {
     }
     .left_menu{
         background-image: url("../images/mitr/oxford/model_menu.svg");
-		background-size: 24px;
+        background-size: 24px;
         background-repeat: no-repeat;
         display: block;
         float: left;
         height: 24px;
-        margin: 7px 0 0 -3px;
-        width: 22px;
+        margin: 7px 0 0 0px;
+        width: 25px;
         cursor: pointer;
     }
     .up_arrow{
         display: block;
-        margin: 14px 0 0;
+        margin: 13px 0 0;
     }
     .models_page_top h1{
         padding: 12px 0 0 2px;
@@ -1388,7 +1370,7 @@ and (orientation : portrait) {
     }
 
     .left_wrapper {
-        border-radius: 0 7px;
+        /*border-radius: 0 7px;*/
         width: 89%;
         position: absolute;
         height: 100%;
@@ -1408,7 +1390,7 @@ and (orientation : portrait) {
     .show_top {
         background-color: #EFF3FC;
         background-image: url("../images/mitr/oxford/btn_01.svg");
-		background-size: 20px;
+        background-size: 20px;
         background-position: 32px center;
         background-repeat: no-repeat;
         border-radius: 0 50% 50% 0;
@@ -1420,7 +1402,7 @@ and (orientation : portrait) {
     .show_bottom {
         background-color: #EFF3FC;
         background-image: url("../images/mitr/oxford/btn_02.svg");
-		background-size: 20px;
+        background-size: 20px;
         background-position: 32px center;
         background-repeat: no-repeat;
         border-radius: 0 50% 50% 0;
@@ -1459,10 +1441,13 @@ and (orientation : portrait) {
         height: 20px;
         width: 20px;
         background-image: url("../images/mitr/oxford/iphone/tool_icon.svg");
-		background-size: 20px;
+        background-size: 20px;
         float: left;
         display: block;
-        margin: 8px 8px 0;
+        margin: 9px 10px 0;
+        background-repeat: no-repeat;
+        padding-right: 30px;
+        margin-right: 0;
     }
     .down_arrow .down_arrow_wrapper{
         right: -14px;
@@ -1470,7 +1455,7 @@ and (orientation : portrait) {
         width: 101px;
     }
     .models_content{
-        min-height: 0;
+        min-height: 300px;
         max-height: 100%;
     }
     .models_header{
@@ -1484,10 +1469,14 @@ and (orientation : portrait) {
         padding: 15px;
         margin-left: 10%;
         */
+        margin: 0 auto;
+        max-width: 288px;
     }
     .fn_rigth{
         /*
         padding: 15px;*/
+        margin: 10px auto;
+        max-width: 288px;
     }
     .fn_in_left{
         width: 60px;
@@ -1499,14 +1488,11 @@ and (orientation : portrait) {
         width: 10%;
     }
     .middle_of_page h2{
-        font-size: 16px;
+        font-size: 24px;
     }
     .tool_wrapper{
         top: 27px;
     }
-	.tool_down_arrow_wrp{
-		top: 27px;
-	}
 
 }
 
@@ -1549,7 +1535,7 @@ and (orientation : portrait) {
 
     }
     .first_page h1{
-        font-size: 23px;
+        font-size: 35px;
     }
     .models_page_left_panel{
         /*width: 66%;*/
@@ -1573,7 +1559,7 @@ and (orientation : portrait) {
         width: 100%;
     }
     .second_page_top h1{
-        width: 60%;
+        /*width: 60%;*/
         padding: 12px 0 0 12px;
         font-size: 16px;
         line-height: 13px;
@@ -1595,6 +1581,7 @@ and (orientation : portrait) {
         position: absolute;
         width: 100%;
         display: none;
+        overflow-y: auto;
     }
     .top_model_menu_text{
         margin: 9px 0 0;
@@ -1612,7 +1599,7 @@ and (orientation : portrait) {
     }
     .left_menu{
         background-image: url("../images/mitr/oxford/model_menu.svg");
-		background-size: 24px;
+        background-size: 24px;
         background-repeat: no-repeat;
         display: block;
         float: left;
@@ -1623,7 +1610,7 @@ and (orientation : portrait) {
     }
     .up_arrow{
         display: block;
-        margin: 16px 0 0;
+        margin: 13px 0 0;
     }
     .models_page_top h1{
         padding: 12px 0 0 2px;
@@ -1656,7 +1643,7 @@ and (orientation : portrait) {
     .show_top {
         background-color: #EFF3FC;
         background-image: url("../images/mitr/oxford/btn_01.svg");
-		background-size: 20px;
+        background-size: 20px;
         background-position: 32px center;
         background-repeat: no-repeat;
         border-radius: 0 50% 50% 0;
@@ -1668,7 +1655,7 @@ and (orientation : portrait) {
     .show_bottom {
         background-color: #EFF3FC;
         background-image: url("../images/mitr/oxford/btn_02.svg");
-		background-size: 20px;
+        background-size: 20px;
         background-position: 32px center;
         background-repeat: no-repeat;
         border-radius: 0 50% 50% 0;
@@ -1685,6 +1672,7 @@ and (orientation : portrait) {
         position: absolute;
         height: 100%;
         border-radius: 0 7px 0 0;
+        overflow-y: scroll;
     }
     .models_page_top{
         z-index: 2;
@@ -1704,10 +1692,13 @@ and (orientation : portrait) {
         height: 20px;
         width: 20px;
         background-image: url("../images/mitr/oxford/iphone/tool_icon.svg");
-		background-size: 20px;
+        background-size: 20px;
         float: left;
         display: block;
-        margin: 8px 8px 0;
+        margin: 10px 10px 0;
+        background-repeat: no-repeat;
+        padding-right: 30px;
+        margin-right: 0;
     }
     .down_arrow{
         display: none;
@@ -1718,7 +1709,7 @@ and (orientation : portrait) {
         width: 101px;
     }
     .models_content{
-        min-height: 0;
+        min-height: 300px;
         max-height: 100%;
     }
     .models_header{
@@ -1751,9 +1742,60 @@ and (orientation : portrait) {
     .tool_wrapper{
         top: 27px;
     }
-	.tool_down_arrow_wrp{
-		top: 27px;
-	}
+    .tool_down_arrow_wrp{
+        top: 27px;
+    }
 
 }
 
+@media screen and (max-width : 500px){
+    .tool_wrapper{
+        top: 27px;
+    }
+}
+
+/*migrated CSS start*/
+
+.first_page h1 {
+    font-size: 35px;
+    font-weight: normal;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+    display: table;
+    color: #0d3880;
+}
+
+.middle_of_page .responsive_row {
+    clear: both;
+    margin-bottom: 14px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+@media screen and (max-width: 900px) {
+.fn_left {
+    margin: 0 auto;
+    max-width: 288px;
+}
+}
+
+@media screen and (max-width: 900px){
+.fn_rigth {
+    /* padding: 15px; */
+    margin: 10px auto;
+    max-width: 288px;
+}
+}
+
+/*migrated CSS end*/
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: #858585;
+}
