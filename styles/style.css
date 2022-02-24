@@ -765,7 +765,7 @@
     cursor: pointer;
     margin: 5px;
     padding: 20px;
-    box-shadow: 0 1px 5px grey;
+    box-shadow: rgb(0 0 0 / 13%) 0px 1.6px 3.6px, rgb(0 0 0 / 11%) 0px 0px 2.9px;
 }
 [contentEditable]{
     -moz-appearance: textfield-multiline;
@@ -804,14 +804,17 @@
 }
 .tell_me_btn{
     background-color: #ebba17;
-    border-radius: 5px;
+    border-radius: 4px;
     color: #000000;
-    display: block;
+    display: inline-flex;
+    align-items: center;
     margin: 4px 0 0;
-    padding: 1px 0 1px 4px;
-    width: 116px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-    border: 2px solid #d4d8df;
+    padding: 0 9px;
+    width: auto;
+    line-height: 1;
+    height: 32px;
+    box-shadow: rgb(0 0 0 / 13%) 0px 1.6px 3.6px, rgb(0 0 0 / 11%) 0px 0px 2.9px;
+    border: 1px solid transparent;
     cursor: pointer;
 }
 .check_content{
@@ -824,7 +827,7 @@
     background-repeat: no-repeat;
     border-radius: 5px 5px 0 0;
     color: #ffffff;
-    background-image: url("../images/mitr/_closebtn.svg");
+    background-image: url("../images/mitr/closebtn.svg");
     background-size: 15px;
     cursor: pointer;
 }
@@ -1011,6 +1014,7 @@
     background-color: rgb(0, 18, 60);
     text-align: center;
     color: #FFFFFF;
+    border-radius: 4px
 }
 .black_overlay{
     display: none;
@@ -1819,5 +1823,12 @@ and (orientation : portrait) {
     .models_content {box-shadow: 0px 1.6px 3.6px rgb(0 0 0 / 25%), 0px 0px 2.9px rgb(0 0 0 / 22%); background-color: #3b3b3b}
     .cont_wrp_box {border-bottom: 3px solid #84adf7}
     .content_contents {color: rgb(89, 187, 255)}
-    .notes_content {}
+    .notes_content {color: #7fb785}
+    .sturcture_content {color: #f18c96}
+    .checklist_ul > li {color: white; border-bottom: 1px solid #4F4F4F;}
+    .checkpoints_ul > li{color: white; border-bottom: 1px solid #4F4F4F; background-color: #3b3b3b}
+    .check_con {color: white; background-color: #3b3b3b}
+    .blueTxtCss{color: rgb(89, 187, 255)}
+    .create_project {box-shadow: 0px 1.6px 3.6px rgb(0 0 0 / 25%), 0px 0px 2.9px rgb(0 0 0 / 22%)}
+    .create_pro_btn {background-color: rgb(81, 122, 218)}
 }

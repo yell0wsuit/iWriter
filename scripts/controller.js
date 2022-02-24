@@ -2151,11 +2151,11 @@ function Controller() {
                     });
                 }
             });
-            $('.look_up').hide();
+            $('.look_up').show();
             $('.look_click').unbind('click').bind('click', function() {
                 $('.look_up').toggle();
             });
-        }, 500);
+        }, 1000);
 
         var show_top_head = true;
         //$('.str_common:visible').each(function() {
