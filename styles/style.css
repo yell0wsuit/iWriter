@@ -1831,4 +1831,5 @@ and (orientation : portrait) {
     .blueTxtCss{color: rgb(89, 187, 255)}
     .create_project {box-shadow: 0px 1.6px 3.6px rgb(0 0 0 / 25%), 0px 0px 2.9px rgb(0 0 0 / 22%)}
     .create_pro_btn {background-color: rgb(81, 122, 218)}
+    .tell_me_btn {box-shadow: 0px 1.6px 3.6px rgb(0 0 0 / 25%), 0px 0px 2.9px rgb(0 0 0 / 22%)}
 }
