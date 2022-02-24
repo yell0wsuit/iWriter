@@ -509,24 +509,23 @@ body {
   outline: none; }
 
 .btn, input[type='submit'] {
-  display: inline-block;
+  display: inline-flex;
   width: auto;
-  height: 30px;
-  line-height: 26px;
-  margin: 0 6px 6px 0;
+  height: 32px;
+  line-height: 1;
+  align-items: center;
+  padding: 0 9px;
   background: #FFF;
-  border: 2px solid #4577bf;
-  border-radius: 15px;
+  border: 1px solid #4577bf;
+  border-radius: 4px;
   -webkit-appearance: none;
   text-align: center;
   position: relative;
   vertical-align: middle; }
   .btn > a, input[type='submit'] > a {
-    display: table-cell;
-    padding: 0 12px;
-    color: #444444;
+    display: inline-flex;
+    padding: 0 9px;
     color: #4577bf;
-    height: 26px;
     font-weight: normal;
     white-space: nowrap; }
     .btn > a:hover, input[type='submit'] > a:hover {
@@ -700,7 +699,6 @@ li .soundList {
 .box {
   display: table-cell;
   padding: 18px;
-  box-shadow: 0 3px 2px #C0C0C0;
   margin-right: 18px;
   width: 296px;
   /*background: url(../images/old-ball.png) no-repeat 15px 15px white;*/ }
@@ -2090,9 +2088,8 @@ a.go-to-top {
 
 .middle_wrap, .box {
   background-color: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 1px 5px grey; }
+  border-radius: 8px;
+  overflow: hidden; }
 
 .header form {
   padding: 0;
