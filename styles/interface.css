@@ -701,6 +701,7 @@ li .soundList {
   padding: 18px;
   margin-right: 18px;
   width: 296px;
+  box-shadow: rgb(0 0 0 / 13%) 0px 1.6px 3.6px, rgb(0 0 0 / 11%) 0px 0px 2.9px;
   /*background: url(../images/old-ball.png) no-repeat 15px 15px white;*/ }
 
 .box ul {
