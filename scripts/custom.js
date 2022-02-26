@@ -304,7 +304,7 @@ $(document).ready(function() {
     });
 
 
-    $('.main_wrapper').parent().css('background-color', '#e0f2fd').css('padding', '0');
+    //$('.main_wrapper').parent().css('background-color', '#e0f2fd').css('padding', '0');
 
     $('.models_page_body_right').click(function(e) {
         var left_pos = $('.models_page_body_left').position();
