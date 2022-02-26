@@ -139,11 +139,11 @@ function Controller() {
                     if ($(this).attr('data-show') == 'hide') {
                         $(this).parent().next().slideDown();
                         $(this).attr('data-show', 'show');
-                        $(this).css('background-image', 'url("images/mitr/info_btn_active.svg")');
+                        $(this).css('filter', 'saturate(8)');
                     } else {
                         $(".info_text").slideUp();
                         $(this).attr('data-show', 'hide');
-                        $(this).css('background-image', 'url("images/mitr/oxford/info_01.svg")');
+                        $(this).css('filter', 'saturate(1)');
                     }
                 }
             });
@@ -734,11 +734,11 @@ function Controller() {
                     if ($(this).attr('data-show') == 'hide') {
                         $(this).parent().next().slideDown();
                         $(this).attr('data-show', 'show');
-                        $(this).css('background-image', 'url("images/mitr/info_btn_active.svg")');
+                        $(this).css('filter', 'saturate(8)');
                     } else {
                         $(".info_text").slideUp();
                         $(this).attr('data-show', 'hide');
-                        $(this).css('background-image', 'url("images/mitr/oxford/info_01.svg")');
+                        $(this).css('filter', 'saturate(1)');
                     }
                 }
             });
