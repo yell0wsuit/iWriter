@@ -1,9 +1,11 @@
-var iWiter_controller = new Controller();
 var event_type = 'click';
+
+var device_detect = false;
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     event_type = 'touchend';
+    device_detect = true;
 }
-iWiter_controller.init();
+
 function Controller() {
     //Properties
     this.project_xml_data = new Object();
@@ -22,8 +24,9 @@ function Controller() {
     //functions
     this.init = function(load_data_arg) {
         //load_data_arg = yes = load all the xml in init else when required
-		var iLoader = document.getElementById('iLoader');
-		$(iLoader).remove();
+        //_this.xml_file_path = load_data_arg.xmlPath;
+        //_this.image_file_path = load_data_arg.imgPath + 'mitr/';
+        //_this.xml_img_path = load_data_arg.imgPath + 'mitr/xml/';
         var project_count = 0;
         this.load_data = load_data_arg;
         $.ajax({// to get project list
@@ -61,6 +64,8 @@ function Controller() {
         });
     };
     this.loadFramework = function() {
+        var iLoader = document.getElementById('iLoader');
+        $(iLoader).remove();
         $.ajax({
             type: "GET",
             url: "xml/frameworks.xml",
@@ -134,11 +139,11 @@ function Controller() {
                     if ($(this).attr('data-show') == 'hide') {
                         $(this).parent().next().slideDown();
                         $(this).attr('data-show', 'show');
-                        $(this).css('background-image', 'url("../images/mitr/info_btn_active.svg")');
+                        $(this).css('filter', 'saturate(8)');
                     } else {
                         $(".info_text").slideUp();
                         $(this).attr('data-show', 'hide');
-                        $(this).css('background-image', 'url("../images/mitr/oxford/info_01.svg")');
+                        $(this).css('filter', 'saturate(1)');
                     }
                 }
             });
@@ -149,18 +154,21 @@ function Controller() {
                     $('.arrow_wrp').css('top', pos.top - ($('.arrow_wrp').height() / 2) + 16);
                     $('.arrow_wrp').css('left', pos.left + 36);
                     $('.arrow_wrp').show();
-                    $(this).css('background-image', 'url("../images/mitr/info_btn_active.svg")');
+                    $(this).css('filter', 'saturate(8)');
                 }
             }).mouseout(function(e) {
                 if ($(window).width() > 768) {
                     $('.arrow_wrp').hide();
-                    $(this).css('background-image', 'url("../images/mitr/oxford/info_01.svg")');
+                    $(this).css('filter', 'saturate(1)');
                 }
             });
         });
-        $(wrapper + ' .sp_left').off().on(event_type, function(e) {
+        $(wrapper + ' .sp_left').off('click').on('click', function(e) {
             _this.current_pro_name = '';
             _this.createModel($(this).html(), $(this).attr('data-key'));
+
+            var scroll_pos = $('.main_wrapper').position();
+            $(window).scrollTop(scroll_pos.top);
         });
     };
     this.modelInit = function() {
@@ -173,7 +181,7 @@ function Controller() {
         $('.current_tool').on(event_type, function(e) {
 
             if ($('.second_page').is(':visible')) {
-                $('.fn_rigth').trigger(event_type);
+                $('.fn_rigth').trigger('click');
             } else {
                 _this.writerInit();
                 if (_this.current_pro_name == '') {
@@ -253,14 +261,22 @@ function Controller() {
             guided_html = guided_html + '<li data-key="' + _this.current_key + '" data-para_ids="' + $(this).attr('para_ids') + '"><span data-key="' + _this.current_key + '" data-para_ids="' + $(this).attr('para_ids') + '">' + $(this).attr('label') + '</span></li>';
         });
         $('.models_page_body_left .medels_steps').append(guided_html);
-        $('.models_page_body_left .medels_steps li').on(event_type, function() {
+        $('.models_page_body_left .medels_steps li').on('click', function() {
+
+            var scroll_pos = $('.main_wrapper').position();
+            $(window).scrollTop(scroll_pos.top);
+
             _this.reset_drop();
             $('.str_common').each(function() {
                 $(this).children('.tick_mark').removeClass('_selected');
             });
             $('.medels_steps li').removeAttr('style');
-            $('.models_page_body_left .medels_steps li').css('background-color', 'rgba(0, 0, 0, 0)');
-            $(this).css('background-color', '#00123c').css('color', '#FFFFFF');
+            $('.models_page_body_left .medels_steps li').css('background-color', 'rgba(0, 0, 0, 0)').css('color', '#000000');
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                $(this).css('background-color', '#3f51b5');
+            } else {
+                $(this).css('background-color', '#00123c').css('color', '#FFFFFF');
+            }
             var left_pos = $('.models_page_body_left').position();
             if (Number(left_pos.left) == 0) {
                 if ($(window).width() <= 480) {
@@ -461,8 +477,8 @@ function Controller() {
                 body_content = body_content.replace(/<useful/g, " <span");
                 body_content = body_content.replace(/<extra_info/g, " <span");
                 body_content = body_content.replace(/<\/para/g, " </p");
-                body_content = body_content.replace(/<\/useful/g, " </span");
-                body_content = body_content.replace(/<\/extra_info/g, " </span");
+                body_content = body_content.replace(/<\/useful/g, "</span");
+                body_content = body_content.replace(/<\/extra_info/g, "</span");
                 body_content = body_content.replace(/  /g, " ");
                 body_content = body_content.replace(/ ,/g, ",");
                 body_content = body_content.replace(/ <\/span>,/g, "</span>,");
@@ -718,11 +734,11 @@ function Controller() {
                     if ($(this).attr('data-show') == 'hide') {
                         $(this).parent().next().slideDown();
                         $(this).attr('data-show', 'show');
-                        $(this).css('background-image', 'url("../images/mitr/info_btn_active.svg")');
+                        $(this).css('filter', 'saturate(8)');
                     } else {
                         $(".info_text").slideUp();
                         $(this).attr('data-show', 'hide');
-                        $(this).css('background-image', 'url("../images/mitr/oxford/info_01.svg")');
+                        $(this).css('filter', 'saturate(1)');
                     }
                 }
             });
@@ -733,17 +749,17 @@ function Controller() {
                     $('.arrow_wrp').css('top', pos.top - ($('.arrow_wrp').height() / 2) + 16);
                     $('.arrow_wrp').css('left', pos.left + 36);
                     $('.arrow_wrp').show();
-                    $(this).css('background-image', 'url("../images/mitr/info_btn_active.svg")');
+                    $(this).css('filter', 'saturate(8)');
                 }
             }).mouseout(function(e) {
                 if ($(window).width() > 768) {
                     $('.arrow_wrp').hide();
-                    $(this).css('background-image', 'url("../images/mitr/oxford/info_01.svg")');
+                    $(this).css('filter', 'saturate(1)');
                 }
             });
-            $('.sp_left').off().on(event_type, function(e1) {
-
-
+            $('.sp_left').off('click').on('click', function(e1) {
+                var scroll_pos = $('.main_wrapper').position();
+                $(window).scrollTop(scroll_pos.top);
                 //for device
                 e1.preventDefault();
                 $('.tool_wrapper,.down_arrow_wrapper').hide();
@@ -771,92 +787,66 @@ function Controller() {
                 head_html += '<div class="create_project create_pro_btn" data-type="create" data-key="' + $(this).attr('data-key') + '">Create a new project</div>';
                 _this.current_key = $(this).attr('data-key');
                 var postData = {'data-key': _this.current_key};
-                html5sql.process(
-                        {
-                            sql: "SELECT * FROM projectacademic WHERE data_id  = " + _this.current_key + " order by date_time DESC",
-                            success: function(transaction, results, rowArray) {
-                                var temp_html = '';
-                                //if (rowArray.length != 0) {
-                                for (var i in rowArray) {
-
-                                    var _name = rowArray[i]['name'].replace(/\#\|\#/g, "'");
-                                    _name = _name.replace(/\#\|\|\#/g, '"');
-                                    temp_html += '<div class="create_project" data-key="' + rowArray[i]['data_id'] + '" data-project="' + rowArray[i]['name'] + '" data-type="save">' + _name + '<br>' + rowArray[i]['dtime'] + '</div>';
-                                    temp_html += '<div class="delete_project" data-key="' + rowArray[i]['id'] + '">X</div>';
-                                }
-                                head_html += temp_html;
-                                $('.second_page_body_right').show().empty().html(head_html);
-                                $('.second_page_body_right .delete_project').unbind(event_type).bind(event_type, function(e2) {
-                                    e2.preventDefault();
-                                    //alert('delete pressed');
-
-
-                                    var delete_id = $(this).attr('data-key');
-                                    var temp_this = this;
-                                    //var r = confirm("Are you sure you want to delete this project?");
-
-                                    $('.white_content').remove();
-                                    var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Are you sure you want to delete this project?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
-                                    $('body').append(temp_pop);
-                                    $('.white_content').show();
-                                    $('.ok_btn_pop').off(event_type).on(event_type, function() {
-                                        $('.white_content').hide();
-                                        html5sql.process(
-                                                {
-                                                    sql: "DELETE FROM projectacademic WHERE id = " + delete_id + ";",
-                                                    success: function(transaction, results, rowArray) {
-                                                        if (results.rowsAffected == 1) {
-                                                            $(temp_this).prev().remove();
-                                                            $(temp_this).remove();
-                                                        } else {
-                                                            alert('Please  try again');
-                                                        }
-                                                    }
-                                                }
-                                        );
-                                        /*
-                                         var formURL = 'database.php?delete';
-                                         var postData = {'id': delete_id};
-                                         $.ajax(
-                                         {
-                                         url: formURL,
-                                         type: "POST",
-                                         data: postData,
-                                         success: function(data, textStatus, jqXHR)
-                                         {
-                                         if (data == '0') {
-                                         alert('Please  try again');
-                                         } else {
-                                         $(temp_this).prev().remove();
-                                         $(temp_this).remove();
-                                         }
-                                         },
-                                         error: function(jqXHR, textStatus, errorThrown)
-                                         {
-                                         //if fails
-                                         alert('Please  try again');
-                                         }
-                                         }
-                                         );*/
-
-                                    });
-                                    $('.can_btn_pop').off(event_type).on(event_type, function() {
-                                        $('.white_content').hide();
-                                    });
-                                    return false;
-                                });
-                                $('.create_project').off().on(event_type, function(e3) {
-                                    if ($(this).attr('data-type') == 'create') {
-                                        _this.current_pro_name = '';
-                                    } else {
-                                        _this.current_pro_name = $(this).attr('data-project');
-                                    }
-                                    _this.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
-                                });
-                                //}
-                            }
+                
+                //IndexedDB
+                async function showProj() {
+                    var results = await connection.select({
+                        from: 'iw_aca_projects',
+                        where: {data_id: _this.current_key},
+                        order: {
+                            by: 'date_time',
+                            type: 'desc'
                         }
-                );
+                    })
+                    var temp_html = '';
+                    for (var i in results) {
+                        var _name = results[i]['name'].replace(/\#\|\#/g, "'");
+                        _name = _name.replace(/\#\|\|\#/g, '"');
+                        temp_html += '<div class="create_project" data-key="' + results[i]['data_id'] + '" data-project="' + results[i]['name'] + '" data-type="save">' + _name + '<br>' + results[i]['dtime'] + '</div>';
+                        temp_html += '<div class="delete_project" data-key="' + results[i]['id'] + '">X</div>';
+                    }
+                    head_html += temp_html;
+                    $('.second_page_body_right').show().empty().html(head_html);
+                    $('.second_page_body_right .delete_project').unbind(event_type).bind(event_type, function(e2) {
+                        e2.preventDefault();
+                        var delete_id = $(this).attr('data-key');
+                        var temp_this = this;
+                        //var r = confirm("Are you sure you want to delete this project?");
+                        $('.white_content').remove();
+                        var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Are you sure you want to delete this project?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
+                        $('.main_wrapper').append(temp_pop);
+                        $('.white_content').show();
+                        call_pop();
+                        $('.ok_btn_pop').off(event_type).on(event_type, function() {
+                            $('.white_content').hide();
+                            async function removeProj() {
+                                var deleteProj = await connection.remove({
+                                    from: 'iw_aca_projects',
+                                    where: {
+                                        id: Number(delete_id)
+                                    }
+                                });
+                            };
+                            removeProj();
+                            $(temp_this).prev().remove();
+                            (temp_this).remove();
+                        });
+                        $('.can_btn_pop').off(event_type).on(event_type, function() {
+                            $('.white_content').hide();
+                        });
+                        return false;
+                    });
+                    $('.create_project').off().on(event_type, function(e3) {
+                        if ($(this).attr('data-type') == 'create') {
+                            _this.current_pro_name = '';
+                        } else {
+                            _this.current_pro_name = $(this).attr('data-project');
+                        }
+                        _this.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
+                    });
+                }
+                showProj();
+                
                 /*
                  var formURL = 'database.php?fetchmodel';
                  $.ajax(
@@ -885,7 +875,7 @@ function Controller() {
 
                  $('.white_content').remove();
                  var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Are you sure you want to delete this project?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
-                 $('body').append(temp_pop);
+                 $('.main_wrapper').append(temp_pop);
                  $('.white_content').show();
 
                  $('.ok_btn_pop').off(event_type).on(event_type, function() {
@@ -951,7 +941,7 @@ function Controller() {
         _this.reset_drop();
         $('.current_tool').off(event_type).on(event_type, function(e) {
             if ($('.second_page').is(':visible')) {
-                $('.fn_left').trigger(event_type);
+                $('.fn_left').trigger('click');
             } else {
                 _this.switchToModel();
             }
@@ -976,7 +966,7 @@ function Controller() {
             if (_this.show_popup) {
                 show_pop();
             } else {
-                $('.fn_left').trigger(event_type);
+                $('.fn_left').trigger('click');
             }
 
         }
@@ -984,8 +974,9 @@ function Controller() {
         function show_pop() {
             $('.white_content').remove();
             var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
-            $('body').append(temp_pop);
+            $('.main_wrapper').append(temp_pop);
             $('.white_content').show();
+            call_pop();
             $('.ok_btn_pop').off(event_type).on(event_type, function() {
                 $('.white_content').hide();
                 _this.modelInit();
@@ -1002,12 +993,13 @@ function Controller() {
         if (_this.show_popup) {
             $('.white_content').remove();
             var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
-            $('body').append(temp_pop);
+            $('.main_wrapper').append(temp_pop);
             $('.white_content').show();
+            call_pop();
             $('.ok_btn_pop').off(event_type).on(event_type, function() {
                 $('.white_content').hide();
                 hide_elem();
-                $('.fn_rigth').trigger(event_type);
+                $('.fn_rigth').trigger('click');
             });
             $('.can_btn_pop').off(event_type).on(event_type, function() {
                 $('.white_content').hide();
@@ -1015,7 +1007,7 @@ function Controller() {
         } else {
             $('.white_content').hide();
             hide_elem();
-            $('.fn_rigth').trigger(event_type);
+            $('.fn_rigth').trigger('click');
         }
 
         //} else {
@@ -1054,8 +1046,9 @@ function Controller() {
         function show_pop() {
             $('.white_content').remove();
             var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
-            $('body').append(temp_pop);
+            $('.main_wrapper').append(temp_pop);
             $('.white_content').show();
+            call_pop();
             $('.ok_btn_pop').off(event_type).on(event_type, function() {
                 $('.white_content').hide();
                 hide_elem();
@@ -1074,7 +1067,7 @@ function Controller() {
         $('.current_tool').text('Models');
         $('.current_tool').off(event_type).on(event_type, function(e) {
             if ($('.second_page').is(':visible')) {
-                $('.fn_left').trigger(event_type);
+                $('.fn_left').trigger('click');
             } else {
                 _this.switchToModel();
             }
@@ -1160,20 +1153,26 @@ function Controller() {
             //alert('project_name::' + data_project + 'current_key::' + _this.current_key);
             //data_project = data_project.replace(/'/g, '&#39;');
             //data_project = data_project.replace(/"/g, '&#34;');
-            html5sql.process(
-                    {
-                        sql: "SELECT * FROM projectacademic WHERE data_id = " + _this.current_key + " AND name = '" + data_project + "';",
-                        success: function(transaction, results, rowArray) {
-                            if (rowArray.length != 0) {
-                                $('.save_pro').attr('data-project-name', data_project);
-                                var data = rowArray[0]['data'];
-                                data = data.replace(/\#\|\#/g, "'");
-                                data = data.replace(/\#\|\|\#/g, '"');
-                                _this.load_save_project(_this.StringToXML(data));
-                            }
-                        }
+            
+            //IndexedDB
+            async function loadProj() {
+                var load = await connection.select({
+                    from: 'iw_aca_projects',
+                    where: {
+                        data_id: _this.current_key,
+                        name: data_project
                     }
-            );
+                })
+                if (load.length != 0) {
+                    $('.save_pro').attr('data-project-name', data_project);
+                    var data = load[0]['data'];
+                    data = data.replace(/\#\|\#/g, "'");
+                    data = data.replace(/\#\|\|\#/g, '"');
+                    _this.load_save_project(_this.StringToXML(data));
+                }
+            }
+            loadProj();
+            
             /*var postData = {'data-key': _this.current_key, 'project_name': data_project};
              var formURL = 'database.php?fetch';
              $.ajax(
@@ -1426,7 +1425,7 @@ function Controller() {
         top_html_ck += '</ul></div>';
         $('.left_wrapper').empty().html(top_html_ck);
         $('.checkpoints').hide();
-        $('.menu_1').off(event_type).on(event_type, function(e_p) {
+        $('.menu_1').off('click').on('click', function(e_p) {
 
             if (!$(this).hasClass('_select')) {
                 $(this).addClass('_select');
@@ -1459,62 +1458,86 @@ function Controller() {
         //left side content
 
         //load btn
+        $('.prolist_load').empty();
+        $('.load_pop_d').hide();
         var load_status = true;
-        $('.load_pro').mouseover(function() {
+        
+        $('.load_pro').bind("mouseover touchend", function(e) {
+            if (e.type == event_type) {
+                load_pro(e);
+                //$('.load_pop_d').show().css('right', '0px').css('top', '0px');
+            } else {
+                load_pro(e);
+            }
+        });
+        
+        function load_pro(e) {
             if (load_status) {
-//ajax
+                //ajax
                 load_status = false;
                 var postData = {'data-key': _this.current_key};
-                html5sql.process(
-                        {
-                            sql: "SELECT * FROM projectacademic WHERE data_id = " + postData['data-key'] + " order by date_time DESC;",
-                            success: function(transaction, results, rowArray) {
-                                if (rowArray.length != 0) {
-
-                                    var temp_html = '<ul>';
-                                    for (var i in rowArray) {
-
-                                        var _name = rowArray[i]['name'].replace(/\#\|\#/g, "'");
-                                        _name = _name.replace(/\#\|\|\#/g, '"');
-                                        temp_html += '<li data-type="save" data-project="' + rowArray[i]['name'] + '" data-key="' + rowArray[i]['data_id'] + '">' + _name + '</li>';
-                                    }
-                                    temp_html += '</ul>';
-                                    $('.prolist_load').empty().html(temp_html);
-                                    $('.load_pop_d').show().css('right', '105%').css('top', '0px');
-                                    $('.tool_down_arrow_wrp li,.tool_wrapper li').mouseout(function() {
-                                        if (!$(this).hasClass('load_pro')) {
-                                            $('.load_pop_d').hide();
-                                        }
-                                    });
-                                    $('.prolist_load li').off(event_type).on(event_type, function() {
-                                        if (_this.show_popup) {
-                                            $('.white_content').remove();
-                                            var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
-                                            $('body').append(temp_pop);
-                                            $('.white_content').show();
-                                            $('.ok_btn_pop').off(event_type).on(event_type, function() {
-                                                $('.load_pop_d').hide();
-                                                _this.show_popup = false;
-                                                _this.current_pro_name = $(this).attr('data-project');
-                                                iWiter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
-                                            });
-                                            $('.can_btn_pop').off(event_type).on(event_type, function() {
-                                                $('.white_content').hide();
-                                            });
-                                        } else {
-                                            $('.load_pop_d').hide();
-                                            _this.show_popup = false;
-                                            _this.current_pro_name = $(this).attr('data-project');
-                                            iWiter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
-                                        }
-                                    });
-                                } else {
-                                    $('.prolist_load').empty();
-                                    $('.load_pop_d').hide();
-                                }
-                            }
+                //IndexedDB
+                async function allProj() {
+                    var lists = await connection.select({
+                        from: 'iw_aca_projects',
+                        where: {
+                            data_id: postData['data-key']
+                        },
+                        order: {
+                            by: 'date_time',
+                            type: 'desc'
                         }
-                );
+                    })
+                    if (lists.length != 0) {
+                        var temp_html = '<ul>';
+                        for (var i in lists) {
+                            var _name = lists[i]['name'].replace(/\#\|\#/g, "'");
+                            _name = _name.replace(/\#\|\|\#/g, '"');
+                            temp_html += '<li data-type="save" data-project="' + lists[i]['name'] + '" data-key="' + lists[i]['data_id'] + '">' + _name + '</li>';
+                        }
+                        temp_html += '</ul>';
+                        $('.prolist_load').empty().html(temp_html);
+                        $('.load_pop_d').show().css('right', '105%').css('top', '0px');
+                        if (e.type == event_type || e.type == 'click') {
+                            // for device
+                            $('.load_pop_d').show().css('right', '0px').css('top', '0px').css('z-index', '10');
+                            $('.load_pop_d').children('.arrowp_box').addClass('remove_arrow');
+                        }
+                        $('.tool_down_arrow_wrp li,.tool_wrapper li').mouseout(function() {
+                            if (!$(this).hasClass('load_pro')) {
+                                $('.load_pop_d').hide();
+                            }
+                        });
+                        $('.prolist_load li').off(event_type).on(event_type, function() {
+                            if (_this.show_popup) {
+                                $('.white_content').remove();
+                                var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
+                                $('.main_wrapper').append(temp_pop);
+                                $('.white_content').show();
+                                call_pop();
+                                $('.ok_btn_pop').off(event_type).on(event_type, function() {
+                                    $('.load_pop_d').hide();
+                                    _this.show_popup = false;
+                                    _this.current_pro_name = $(this).attr('data-project');
+                                    iWiter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
+                                });
+                                $('.can_btn_pop').off(event_type).on(event_type, function() {
+                                    $('.white_content').hide();
+                                });
+                                } else {
+                                    $('.load_pop_d').hide();
+                                    _this.show_popup = false;
+                                    _this.current_pro_name = $(this).attr('data-project');
+                                    iWiter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
+                                }
+                        });
+                        } else {
+                            $('.prolist_load').empty();
+                            $('.load_pop_d').hide();
+                        }
+                }
+                allProj();
+                
                 /*var formURL = 'database.php?fetch_project';
                  $.ajax(
                  {
@@ -1524,7 +1547,7 @@ function Controller() {
                  success: function(data, textStatus, jqXHR)
                  {
                  if (data == '0') {
-                 //alert('no projectacademic found');
+                 //alert('no projects found');
                  $('.prolist_load').empty();
                  $('.load_pop_d').hide();
                  } else {
@@ -1540,7 +1563,7 @@ function Controller() {
                  if (_this.show_popup) {
                  $('.white_content').remove();
                  var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
-                 $('body').append(temp_pop);
+                 $('.main_wrapper').append(temp_pop);
                  $('.white_content').show();
 
                  $('.ok_btn_pop').off(event_type).on(event_type, function() {
@@ -1576,28 +1599,65 @@ function Controller() {
 
             }
 
-        });
+        };
         //end load btn
 
         //save as
-        $('.saveas_pro').mouseover(function(event) {
+        $('.project_name').off(event_type).on(event_type, function() {
+            $(this).focus();
+        });
+        //$('.saveas_pro').mouseover(function(event) {
+        $('.saveas_pro').bind("mouseover touchend", function(event) {
+            var current_class = event.target.className.split(" ")[0];
             if (event.target.className.split(" ")[0] == 'saveas_pro') {
                 if (!$('.save_pop_2').is(':visible')) {
                     $('.save_pop_1').show();
-                    $('.save_pop_2').hide();
+                    $('.save_pop_2,.save_pop_d').hide();
                     $('.saveas_pop_d').show().css('right', '105%').css('top', '0px');
                     $('.err').text('');
                 }
             }
+            //for device
+            if (current_class == 'saveas_pro' || current_class == 'saveas_pro_in') {
+                if (device_detect) {
+                    $(this).css('z-index', '10');
+                    if (!$('.save_pop_2').is(':visible')) {
+                        $('.save_pop_1').show();
+                        $('.save_pop_2').hide();
+                        $('.saveas_pop_d,.save_pop_d').show().css('right', '105%').css('top', '0px');
+                        $('.err').text('');
+
+                        $('.saveas_pop_d').show().css('right', '0px').css('top', '0px');
+                        $('.saveas_pop_d').children('.arrowp_box').addClass('remove_arrow');
+                        $('.save_pop_d').hide();
+                    }
+                }
+            }
         });
         //end save as
-        $('.save_pro').mouseover(function(event) {
+        
+        //$('.save_pro').mouseover(function(event) {
+        $('.save_pro').bind("mouseover touchend", function(event) {
+            var current_class = event.target.className.split(" ")[0];
             if (event.target.className.split(" ")[0] == 'save_pro') {
                 if (_this.save_type == 'create') {
                     $('.save_pop_1').show();
-                    $('.save_pop_2').hide();
+                    $('.save_pop_2,.saveas_pop_d').hide();
                     $('.save_pop_d').show().css('right', '105%').css('top', '0px');
                     $('.err').text('');
+                }
+            }
+            if (current_class == 'save_pro' || current_class == 'save_pro_in') {
+                if (device_detect) {
+                    $(this).css('z-index', '11');
+                    if (_this.save_type == 'create') {
+                        $('.save_pop_1').show();
+                        $('.save_pop_2,.saveas_pop_d').hide();
+                        $('.err').text('');
+                        $('.save_pop_d').show().css('right', '0px').css('top', '0px');
+                        $('.save_pop_d').children('.arrowp_box').addClass('remove_arrow');
+                        $('.saveas_pop_d').hide();
+                    }
                 }
             }
         });
@@ -1666,38 +1726,44 @@ function Controller() {
                         postData['xml_data'] = postData['xml_data'].replace(/'/g, '#|#');
                         project_name = project_name.replace(/"/g, '#||#');
                         postData['xml_data'] = postData['xml_data'].replace(/"/g, '#||#');
-                        html5sql.process(
-                                {
-                                    sql: "SELECT * FROM projectacademic WHERE data_id = " + postData['data-key'] + " AND name = '" + project_name + "'",
-                                    success: function(transaction, results) {
-                                        if (results.rows.length == 0) {
-                                            html5sql.process(
-                                                    {
-                                                        sql: "INSERT INTO projectacademic (name, data_id, data, date_time, dtime) VALUES ('" + project_name + "'," + postData['data-key'] + ",'" + postData['xml_data'] + "'," + new Date().getTime() + ",'" + get_date() + "')",
-                                                        success: function(transaction, results) {
-                                                            //console.log(results.rowsAffected);
-                                                            if (results.rowsAffected == 1) {
-                                                                _this.save_type = 'save';
-                                                                $('.save_pro').attr('data-project-name', project_name);
-                                                                //alert('Project created successfully');
-                                                                $('.save_pop_1').hide();
-                                                                $('.save_pop_2').show();
-                                                                $('.pop_msg_d').text('New project created!');
-                                                                $('.err').text('');
-                                                                _this.show_popup = false;
-                                                                _this.current_pro_name = project_name;
-                                                            } else {
-                                                                alert('Please try again');
-                                                            }
-                                                        }
-                                                    }
-                                            );
-                                        } else {
-                                            $('.err').text('This file already exists. Do you want to replace it?');
-                                        }
-                                    }
+
+                        //IndexedDB
+                        async function saveProj() {
+                            var results = await connection.select({
+                                from: 'iw_aca_projects',
+                                where: {
+                                    data_id: postData['data-key'],
+                                    name: project_name
                                 }
-                        );
+                            })
+                            if (results.length == 0) {
+                                var value = {
+                                    name: project_name,
+                                    data_id: postData['data-key'],
+                                    data: postData['xml_data'],
+                                    date_time: new Date().getTime(),
+                                    dtime: new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'medium' }).format(new Date().getTime())
+                                }
+                                var results = await connection.insert({
+                                    into: 'iw_aca_projects',
+                                    values: [value]
+                                })
+                                if (results > 0) {
+                                    _this.save_type = 'save';
+                                    $('.save_pro').attr('data-project-name', project_name);
+                                    $('.save_pop_1').hide();
+                                    $('.save_pop_2').show();
+                                    $('.pop_msg_d').text('New project created!');
+                                    $('.err').text('');
+                                    _this.show_popup = false;
+                                    _this.current_pro_name = project_name;
+                                }
+                            } else {
+                                $('.err').text('This project name already exists. Please change into another.');
+                            }
+                        }
+                        saveProj();
+                        
                         /*var formURL = 'database.php?add';
                          $.ajax(
                          {
@@ -1741,28 +1807,35 @@ function Controller() {
                     var postData = {'data-key': _this.current_key, 'project_name': $('.save_pro').attr('data-project-name'), 'xml_data': _this.XMLToString(data_to_save[0]), 'jdate': new Date()};
                     postData['xml_data'] = postData['xml_data'].replace(/'/g, '#|#');
                     postData['xml_data'] = postData['xml_data'].replace(/"/g, '#||#');
-                    html5sql.process(
-                            {
-                                sql: "UPDATE projectacademic SET data = '" + postData['xml_data'] + "', date_time = " + new Date().getTime() + ", dtime = '" + get_date() + "' WHERE data_id = " + postData['data-key'] + " AND name ='" + postData['project_name'] + "'",
-                                success: function(transaction, results, rowArray) {
-                                    if (results.rowsAffected == 1) {
-                                        $('.save_pop_d').show().css('right', '105%').css('top', '0px');
-                                        $('.save_pop_1').hide();
-                                        $('.save_pop_2').show();
-                                        $('.pop_msg_d').text('Project updated successfully');
-                                        $('.err').text('');
-                                        _this.show_popup = false;
-                                        _this.current_pro_name = $('.save_pro').attr('data-project-name');
-                                    } else {
-                                        $('.save_pop_d').show().css('right', '105%').css('top', '0px');
-                                        $('.save_pop_1').hide();
-                                        $('.save_pop_2').show();
-                                        $('.pop_msg_d').text('Please try again');
-                                        $('.err').text('');
-                                    }
-                                }
+                    
+                    //IndexedDB
+                    async function updateProj() {
+                        var update = await connection.update({
+                            in: 'iw_aca_projects',
+                            where: {
+                                data_id: postData['data-key'],
+                                name: postData['project_name']
+                            },
+                            set: {
+                                data: postData['xml_data'],
+                                date_time: new Date().getTime(),
+                                dtime: new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'medium' }).format(new Date().getTime())
                             }
-                    );
+                        })
+                    }
+                    updateProj();
+                    $('.save_pop_d').show().css('right', '105%').css('top', '0px');
+                    $('.save_pop_1').hide();
+                    $('.save_pop_2').show();
+                    $('.pop_msg_d').text('Project updated successfully');
+                    $('.err').text('');
+                    _this.show_popup = false;
+                    _this.current_pro_name = $('.save_pro').attr('data-project-name');
+                    if (device_detect) {
+                        $('.save_pop_d').show().css('right', '0px').css('top', '0px');
+                        $('.arrowp_box').addClass('remove_arrow');
+                    }
+                    
                     /*var formURL = 'database.php?update';
                      $.ajax(
                      {
@@ -1807,30 +1880,37 @@ function Controller() {
 
                 postData['xml_data'] = postData['xml_data'].replace(/'/g, '#|#');
                 postData['xml_data'] = postData['xml_data'].replace(/"/g, '#||#');
-                html5sql.process(
-                        {
-                            sql: "UPDATE projectacademic SET data = '" + postData['xml_data'] + "', date_time = " + new Date().getTime() + ", dtime = '" + get_date() + "' WHERE data_id = " + postData['data-key'] + " AND name ='" + postData['project_name'] + "'",
-                            success: function(transaction, results, rowArray) {
-                                if (results.rowsAffected == 1) {
-                                    temp_p.find('.save_pop_d').show().css('right', '105%').css('top', '0px');
-                                    temp_p.find('.save_pop_1').hide();
-                                    temp_p.find('.save_pop_2').show();
-                                    temp_p.find('.pop_msg_d').text('Project updated successfully');
-                                    temp_p.find('.err').text('');
-                                    _this.save_type = 'save';
-                                    $('.save_pro').attr('data-project-name', project_name);
-                                    _this.show_popup = false;
-                                    _this.current_pro_name = project_name;
-                                } else {
-                                    temp_p.find('.save_pop_d').show().css('right', '105%').css('top', '0px');
-                                    temp_p.find('.save_pop_1').hide();
-                                    temp_p.find('.save_pop_2').show();
-                                    temp_p.find('.pop_msg_d').text('Please try again');
-                                    temp_p.find('.err').text('');
-                                }
+                
+                //IndexedDB
+                    async function updateProj() {
+                        var update = await connection.update({
+                            in: 'iw_aca_projects',
+                            where: {
+                                data_id: postData['data-key'],
+                                name: postData['project_name']
+                            },
+                            set: {
+                                data: postData['xml_data'],
+                                date_time: new Date().getTime(),
+                                dtime: new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'medium' }).format(new Date().getTime())
                             }
-                        }
-                );
+                        })
+                    }
+                    updateProj();
+                    temp_p.find('.save_pop_d').show().css('right', '105%').css('top', '0px');
+                    temp_p.find('.save_pop_1').hide();
+                    temp_p.find('.save_pop_2').show();
+                    temp_p.find('.pop_msg_d').text('Project updated successfully');
+                    temp_p.find('.err').text('');
+                    _this.save_type = 'save';
+                    $('.save_pro').attr('data-project-name', project_name);
+                    _this.show_popup = false;
+                    _this.current_pro_name = project_name;
+                    if (device_detect) {
+                        temp_p.$('.save_pop_d').css('right', '0px').css('top', '0px');
+                        temp_p.$('.arrowp_box').addClass('remove_arrow');
+                    }
+                    
                 /*$.ajax(
                  {
                  url: formURL,
@@ -2025,6 +2105,7 @@ function Controller() {
                 $('.notes_content').show();
             }
         }
+        _this.wordCount();
     };
     this.set_wheader = function() {
 
@@ -2037,9 +2118,16 @@ function Controller() {
         //need to load config xml
 
         var top_header_html = "";
-        $(_this.project_xml_data[_this.current_key]['xml_data']).find('framework_intro').children('para').each(function() {
-            top_header_html += '<p>' + $(this).text() + '</p>';
-        });
+        var xmlText = new XMLSerializer();
+        for (var m = 0; m < $(_this.project_xml_data[_this.current_key]['xml_data']).find('framework_intro')[0].childNodes.length; m++)
+        {
+            if ($(_this.project_xml_data[_this.current_key]['xml_data']).find('framework_intro')[0].childNodes[m].nodeName == 'para') {
+                top_header_html += xmlText.serializeToString($(_this.project_xml_data[_this.current_key]['xml_data']).find('framework_intro')[0].childNodes[m]);
+            }
+        }
+
+        top_header_html = top_header_html.replace(/<para/g, " <p");
+        top_header_html = top_header_html.replace(/<\/para/g, " </p");
         top_header_html += '<div class="word_count_text">Word count 0</div>';
         $('.str_common:visible').each(function() {
             if (!$(this).children('.tick_mark').hasClass('_selected')) {
@@ -2047,6 +2135,28 @@ function Controller() {
             }
         });
         $('.models_header').html(top_header_html);
+        setTimeout(function() {
+            var append_look_up = '';
+            $('.models_header').each(function() {
+                if ($(this).is(":visible")) {
+                    var len = $(this).children('p').length;
+                    $(this).children('p').each(function(index) {
+                        if (index >= (len - 3)) {
+                            $(this).addClass('look_up');
+                            if (index == (len - 3)) {
+                                $('.look_click').remove();
+                                $(this).before('<div class="look_click">Dictionary Look-up</div>')
+                            }
+                        }
+                    });
+                }
+            });
+            $('.look_up').show();
+            $('.look_click').unbind('click').bind('click', function() {
+                $('.look_up').toggle();
+            });
+        }, 1000);
+
         var show_top_head = true;
         //$('.str_common:visible').each(function() {
         $('.str_common').each(function() {
@@ -2106,6 +2216,15 @@ function Controller() {
     };
 }
 
+function call_pop() {
+    var pops = $('.white_content');
+    pops.css('top', '50%').css('left', '50%').css('position', 'fixed');
+    var w_h = pops.height() / 2;
+    var w_w = pops.width() / 2;
+    pops.css('margin-top', -w_h + 'px');
+    pops.css('margin-left', -w_w + 'px');
+}
+
 function create_xml_dom() {
 
     this.generate_xml_dom = function(xml_data, html_dom_data) {
@@ -2133,3 +2252,8 @@ function create_xml_dom() {
         }
     };
 }
+
+function iWriterOnload() {
+  initiateController();
+}
+iWriterOnload();

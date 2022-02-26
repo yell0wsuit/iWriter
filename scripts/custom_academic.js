@@ -1,3 +1,9 @@
+var connection = new JsStore.Connection(new Worker('../scripts/jsstore.worker.js'));
+
+if (!window.indexedDB) {
+    window.alert("Your browser doesn't support a stable version of IndexedDB.")
+}
+
 function get_date() {
     var _date = new Date();
     _date = _date.toString();
@@ -27,108 +33,106 @@ function escapeHtml(s) {
     });
 }
 $(document).ready(function() {
-    if (!html5sql.database) {
-        html5sql.openDatabase("MITR", "iSpeaker", 5 * 1024 * 1024);
+    initDb();
+
+    async function initDb() {
+        var isDbCreated = await connection.initDb(getiWriterDB());
+        if (isDbCreated) {
+            console.log('Database created');
+        }
+        else {
+            console.log('Database opened');
+        }
     }
-    html5sql.logInfo = true;
-    html5sql.logErrors = true;
-
-
-    /*html5sql.process(
-     {
-     sql: "DROP TABLE IF EXISTS projectacademic;",
-     success: function(transaction, results) {
-     console.log(results);
-     }
-     }
-     );*/
-
-
-    //create table if not exist
-    html5sql.process(
-            {
-                sql: "CREATE TABLE IF NOT EXISTS projectacademic (id INTEGER PRIMARY KEY AUTOINCREMENT, name varchar(50), data_id INTEGER, date_time DATETIME, data TEXT, dtime varchar(50));",
-                success: function(transaction, results) {
-                    html5sql.process(
-                            {
-                                sql: "SELECT * FROM projectacademic;",
-                                success: function(transaction, results, rowArray) {
-
-                                }
-                            }
-                    );
-                }
+    
+    function getiWriterDB() {
+    //IndexedDB
+        var dbName ='iWriter_academic';
+        var tblProject = {
+            name: 'iw_aca_projects',
+            columns: {
+                id: { primaryKey: true, autoIncrement: true },
+                name: { notNull: true, dataType: "string" },
+                data_id: { notNull: true, dataType: "string" },
+                date_time: { notNull: true, dataType: "number" },
+                data: { notNull: true, dataType: "string" },
+                dtime: { notNull: true, dataType: "string" }
             }
-    );
+        };
+        var database = {
+            name: dbName,
+            tables: [tblProject]
+        };
+        return database;
+    }
 
     $('.help_btn').off(event_type).on(event_type, function() {
         var OpenWindow = window.open("../help.html", "Help Document", '');
     });
 
     //fetch all
-
-    html5sql.process(
-            {
-                sql: "select * from projectacademic order by date_time DESC;",
-                success: function(transaction, results, rowArray) {
-                    if (results.rows.length == 0) {
-                        $('.save_p_btn_txt').html('<span>No academic writing saved</span><span class="up_home"></span>');
-                    } else {
-                        var temp_html = '';
-                        for (var i in rowArray) {
-
-                            var _name = rowArray[i]['name'].replace(/\#\|\#/g, "'");
-                            _name = _name.replace(/\#\|\|\#/g, '"');
-
-                            temp_html += '<div class="saved_projectacademic_list" data-key="' + rowArray[i]['data_id'] + '" data-project="' + rowArray[i]['name'] + '" data-type="save">' + _name + '</div>';
-                        }
-                        temp_html += '<div class="saved_projectacademic_list">&nbsp;</div>';
-
-
-                        $('.save_p_btn_txt').html('<span>My saved academic writing</span><span class="up_home"></span>');
-                        $('.saved_projectacademic').empty().html(temp_html);
-
-                        $('.saved_projectacademic').perfectScrollbar({suppressScrollY: false});
-                        var _hgt = $('.saved_projectacademic').height();
-                        $('.saved_projectacademic').attr("actHgt", _hgt).css("overflow", "hidden").css("height", _hgt + "px");
-                        $('.saved_projectacademic').height($('.save_p_btn').height());
-                        var svd_pro_hgt = $('.saved_projectacademic').height();
-
-                        $('.save_p_btn').bind(event_type, function(e) {
-
-                            e.preventDefault();
-                            $('.saved_projectacademic').stop();
-
-                            if (Number(svd_pro_hgt) === 39 || Number(svd_pro_hgt) === 32)
-                            {
-                                $('.saved_projectacademic').animate({height: $('.saved_projectacademic').attr("actHgt")}, 500);
-                            }
-                            else
-                            {
-                                $('.saved_projectacademic').animate({height: svd_pro_hgt}, 500);
-                            }
-                            if ($('.saved_projectacademic').height() > $('.save_p_btn').height()) {
-                                $('.saved_projectacademic').animate({height: $('.save_p_btn').height()}, 500);
-                            }
-                        });
-
-                        $('.saved_projectacademic_list').off(event_type).on(event_type, function() {
-                            if ($(this).attr('data-type') == 'create') {
-                                iWiter_controller.current_pro_name = '';
-                            } else {
-                                iWiter_controller.current_pro_name = $(this).attr('data-project');
-                            }
-                            iWiter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
-                        });
-
-
-
-                        var p_len = ($('.saved_projectacademic_list').length) - 1;
-                        $('.saved_projectacademic_list:nth-child(' + p_len + ')').css('border-bottom', 'none');
-                    }
-                }
+    
+    //IndexedDB version
+    async function listProj() {
+        var results = await connection.select({
+            from: 'iw_aca_projects',
+            order: {
+                by: 'date_time',
+                type: 'desc'
             }
-    );
+        });
+        if (results.length == 0) {
+            $('.save_p_btn_txt').html('<span>No projects saved</span><span class="up_home"></span>');
+            console.log('#IndexedDB nothing')
+        } else {
+            var temp_html = '';
+            for (var i in results) {
+                var _name = results[i]['name'].replace(/\#\|\#/g, "'");
+                _name = _name.replace(/\#\|\|\#/g, '"');
+                temp_html += '<div class="saved_projects_list" data-key="' + results[i]['data_id'] + '" data-project="' + results[i]['name'] + '" data-type="save">' + _name + '</div>';
+            }
+            temp_html += '<div class="saved_projects_list">&nbsp;</div>';
+
+            $('.save_p_btn_txt').html('<span>My saved writing</span><span class="up_home"></span>');
+            $('.saved_projects').empty().html(temp_html);
+
+            $('.saved_projects').perfectScrollbar({suppressScrollY: false});
+            var _hgt = $('.saved_projects').height();
+            $('.saved_projects').attr("actHgt", _hgt).css("overflow", "hidden").css("height", _hgt + "px");
+            $('.saved_projects').height($('.save_p_btn').height());
+            var svd_pro_hgt = $('.saved_projects').height();
+
+            $('.save_p_btn').bind('click', function(e) {
+                e.preventDefault();
+                $('.saved_projects').stop();
+
+                if (Number(svd_pro_hgt) === 39 || Number(svd_pro_hgt) === 32)
+                    {
+                        $('.saved_projects').animate({height: $('.saved_projects').attr("actHgt")}, 200);
+                    }
+                    else
+                    {
+                        $('.saved_projects').animate({height: svd_pro_hgt}, 200);
+                    }
+                if ($('.saved_projects').height() > $('.save_p_btn').height()) {
+                    $('.saved_projects').animate({height: $('.save_p_btn').height()}, 200);
+                }
+            });
+
+            $('.saved_projects_list').off('click').on('click', function() {
+                if ($(this).attr('data-type') == 'create') {
+                    iWiter_controller.current_pro_name = '';
+                } else {
+                    iWiter_controller.current_pro_name = $(this).attr('data-project');
+                }
+                iWiter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
+            });
+
+            var p_len = ($('.saved_projects_list').length) - 1;
+            $('.saved_projects_list:nth-child(' + p_len + ')').css('border-bottom', 'none');
+        }
+    }
+    listProj();
 
 
     /*var formURL = 'database.php?fetchall';
@@ -140,37 +144,37 @@ $(document).ready(function() {
      success: function(data, textStatus, jqXHR)
      {
      if (data == '0') {
-     // no projectacademic
-     $('.save_p_btn_txt').html('<span>No academic writing saved</span><span class="up_home"></span>');
+     // no projects
+     $('.save_p_btn_txt').html('<span>No projects saved</span><span class="up_home"></span>');
      } else {
-     $('.save_p_btn_txt').html('<span>My saved academic writing</span><span class="up_home"></span>');
-     $('.saved_projectacademic').empty().html(data);
+     $('.save_p_btn_txt').html('<span>My saved writing</span><span class="up_home"></span>');
+     $('.saved_projects').empty().html(data);
 
-     $('.saved_projectacademic').perfectScrollbar({suppressScrollY: false});
-     var _hgt = $('.saved_projectacademic').height();
-     $('.saved_projectacademic').attr("actHgt", _hgt).css("overflow", "hidden").css("height", _hgt + "px");
-     $('.saved_projectacademic').height($('.save_p_btn').height());
-     var svd_pro_hgt = $('.saved_projectacademic').height();
+     $('.saved_projects').perfectScrollbar({suppressScrollY: false});
+     var _hgt = $('.saved_projects').height();
+     $('.saved_projects').attr("actHgt", _hgt).css("overflow", "hidden").css("height", _hgt + "px");
+     $('.saved_projects').height($('.save_p_btn').height());
+     var svd_pro_hgt = $('.saved_projects').height();
 
      $('.save_p_btn').bind(event_type, function(e) {
 
      e.preventDefault();
-     $('.saved_projectacademic').stop();
+     $('.saved_projects').stop();
 
      if (Number(svd_pro_hgt) === 39 || Number(svd_pro_hgt) === 32)
      {
-     $('.saved_projectacademic').animate({height: $('.saved_projectacademic').attr("actHgt")}, 500);
+     $('.saved_projects').animate({height: $('.saved_projects').attr("actHgt")}, 500);
      }
      else
      {
-     $('.saved_projectacademic').animate({height: svd_pro_hgt}, 500);
+     $('.saved_projects').animate({height: svd_pro_hgt}, 500);
      }
-     if ($('.saved_projectacademic').height() > $('.save_p_btn').height()) {
-     $('.saved_projectacademic').animate({height: $('.save_p_btn').height()}, 500);
+     if ($('.saved_projects').height() > $('.save_p_btn').height()) {
+     $('.saved_projects').animate({height: $('.save_p_btn').height()}, 500);
      }
      });
 
-     $('.saved_projectacademic_list').off(event_type).on(event_type, function() {
+     $('.saved_projects_list').off(event_type).on(event_type, function() {
      if ($(this).attr('data-type') == 'create') {
      iWiter_controller.current_pro_name = '';
      } else {
@@ -181,8 +185,8 @@ $(document).ready(function() {
 
 
 
-     var p_len = ($('.saved_projectacademic_list').length) - 1;
-     $('.saved_projectacademic_list:nth-child(' + p_len + ')').css('border-bottom', 'none');
+     var p_len = ($('.saved_projects_list').length) - 1;
+     $('.saved_projects_list:nth-child(' + p_len + ')').css('border-bottom', 'none');
      }
      },
      error: function(jqXHR, textStatus, errorThrown)
@@ -206,27 +210,45 @@ $(document).ready(function() {
         });
 
         if (doc_data.length != 0) {
-            var _temp_arr = new Array();
-            var _string = '';
-            for (var i in doc_data[0]) {
-                var _str = doc_data[0][i].replace(/\<br\>/g, "/ppp");
-                _str = _str.replace(/\<div\>/g, "/ppp<div>");
-                var temp_str = _str.split('/ppp<div>');
-                for (var k in temp_str) {
-                    _temp_arr.push(temp_str[k]);
+            var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+            if (is_chrome) {
+                var _temp_arr = new Array();
+                var _string = '';
+                for (var i in doc_data[0]) {
+                    var _str = doc_data[0][i].replace(/\<br\>/g, "/ppp");
+                    _str = _str.replace(/\<div\>/g, "/ppp<div>");
+                    var temp_str = _str.split('/ppp<div>');
+                    for (var k in temp_str) {
+                        _temp_arr.push(temp_str[k]);
+                    }
                 }
-            }
-            for (var i in _temp_arr) {
-                if (_temp_arr[i] == '/ppp</div>') {
-                    _temp_arr[i] = '\r\n';
-                } else {
-                    _temp_arr[i] = _temp_arr[i].replace(/\<\/div\>/g, "");
-                    _temp_arr[i] += '\r\n';
+                for (var i in _temp_arr) {
+                    if (_temp_arr[i] == '/ppp</div>') {
+                        _temp_arr[i] = '\r\n';
+                    } else {
+                        _temp_arr[i] = _temp_arr[i].replace(/\<\/div\>/g, "");
+                        _temp_arr[i] += '\r\n';
+                    }
+                    _string += _temp_arr[i];
                 }
-                _string += _temp_arr[i];
+                _string = _string.replace(/\/ppp/g, " ");
+                _string = _string.replace(/(<([^>]+)>)/ig, "");
+                _string = _string.replace(/\&nbsp\;/g, " ");
+            } else {
+                if (doc_data.length != 0) {
+                    var temp = '';
+                    var domString = '';
+                    if (doc_data[0].length != 0) {
+                        for (var i in doc_data[0]) {
+                            temp = doc_data[0][i];
+                            domString += "<br>" + ((temp == "<br>") ? "" : temp);
+                        }
+
+                    }
+                }
+                var _string = domString.replace(/\<br\>/g, "\r\n");
+                _string = _string.replace(/\&nbsp\;/g, " ");
             }
-            _string = _string.replace(/(<([^>]+)>)/ig, "");
-            _string = _string.replace(/\&nbsp\;/g, " ");
 
             //var fs = require('fs');
             saveTextAsFile();
@@ -240,6 +262,7 @@ $(document).ready(function() {
                 var downloadLink = document.createElement("a");
                 downloadLink.download = fileNameToSaveAs;
                 downloadLink.innerHTML = "Download File";
+                $(downloadLink).attr('target', '_blank');
                 if (window.webkitURL != null)
                 {
                     // Chrome allows the link to be clicked
@@ -257,7 +280,13 @@ $(document).ready(function() {
                 }
 
                 downloadLink.click();
-            }/*
+                
+                function destroyClickedElement(e) {
+                    console.log(e);
+                }
+            }
+            
+            /*
              fs.writeFile("./www/project/my_project.txt", _string, function(err) {
              if (err) {
              alert("Please try again");
@@ -275,7 +304,7 @@ $(document).ready(function() {
     });
 
 
-    $('.main_wrapper').parent().css('background-color', '#e0f2fd').css('padding', '0');
+    //$('.main_wrapper').parent().css('background-color', '#e0f2fd').css('padding', '0');
 
     $('.models_page_body_right').click(function(e) {
         var left_pos = $('.models_page_body_left').position();
@@ -294,33 +323,64 @@ $(document).ready(function() {
 
     $('.first_page .box').css('background', 'none repeat scroll 0 0 #ebba17');
 
-    $(window).resize(function() {
+    $(window).resize(function () {
         //set_max_height();
-        if (Number($(window).width()) <= 480) {
+        if (Number($(window).width()) <= 768) {
             $('.second_page_top h1').text('Choose a model');
-            $('.show_structure_panel').removeAttr('style').hide();
+
+            if ($('.left_wrapper').is(':visible')) {
+                $('.show_structure_panel').removeAttr('style').hide();
+                $('.show_structure_panel').hide();
+            } else {
+                $('.show_structure_panel').show();
+                $('.left_wrapper').hide();
+            }
+
+
             $('.models_page_body').scrollTop(0);
         } else {
-            $('.second_page_top h1').text('Choose the model you want to see');
+            if (iWiter_controller.current_tool == "model") {
+                $('.second_page_top h1').text('Choose the model you want to see');
+            } else {
+                $('.second_page_top h1').text('Choose the type of writing you want to do');
+            }
             $('.left_wrapper').removeAttr('style').show();
             $('.show_structure_panel').removeAttr('style').show();
         }
+        if ($(window).width() <= 768) {
+            if (iWiter_controller.project_short_name != '') {
+                $('.models_page_left_panel h1').html(iWiter_controller.project_short_name);
+            }
+        }
     });
-    $('.show_top').bind(event_type, function(e) {
+    
+    $('.show_top').bind(event_type, function (e) {
+        e.preventDefault();
         $('.left_wrapper').show();
         $('.show_structure_panel').removeAttr('style').hide();
+
+        $(this).css('background-color', 'rgb(0, 18, 60)');
+        $('.show_bottom').css('background-color', '#eff3fc');
     });
-    $('.show_bottom').bind(event_type, function(e) {
-        $('.show_structure_panel').show().css('min-height', '335px').css('margin-top', '0');
+    $('.show_bottom').bind(event_type, function (e) {
+        e.preventDefault();
+        $('.show_structure_panel').show();
         $('.left_wrapper').hide();
+        $(this).css('background-color', 'rgb(0, 18, 60)');
+        $('.show_top').css('background-color', '#eff3fc');
     });
-    $('.models_page_tools').bind(event_type, function(e) {
+    /*$('.show_structure_panel').bind(event_type, function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        alert('in');
+    });*/
+    $('.models_page_tools').bind(event_type, function (e) {
         e.preventDefault();
         $('.tool_wrapper').toggle();
-        $('.down_arrow_wrapper').hide();
+        $('.down_arrow_wrapper,.tool_down_arrow_wrp').hide();
     });
 
-    $('.models_page_home').bind(event_type, function(e) {
+    $('.models_page_home').bind(event_type, function (e) {
         e.preventDefault();
         //$('.common_page').hide();
         //$('.first_page,.home_help,.language_btn').show();
@@ -328,21 +388,21 @@ $(document).ready(function() {
         iWiter_controller.switchToHome();
     });
 
-    $('.tool_down_arrow').bind(event_type, function(e) {
+    $('.tool_down_arrow').bind(event_type, function (e) {
         e.preventDefault();
         if ($(e.target).hasClass('tool_down_arrow')) {
             //if (!$(this).find('.arrowp_wrp').is(':visible')) {
             $('.tool_down_arrow_wrp').toggle();
             //$('.arrowp_wrp').toggle();
-            $('.load_pop_d').hide();
+            $('.load_pop_d,.arrowp_wrp').hide();
             //}
             $('.tool_wrapper,.down_arrow_wrapper').hide();
 
-
+            $('.project_name').val('');
         }
         //alert('In');
     });
-    $('.models_page_down_arrow,.down_arrow').bind(event_type, function(e) {
+    $('.models_page_down_arrow,.down_arrow').bind(event_type, function (e) {
         e.preventDefault();
         if (!$('.arrowp_wrp').is(':visible')) {
             $('.down_arrow_wrapper').toggle();
@@ -353,7 +413,7 @@ $(document).ready(function() {
 
     });
 
-    $('.drp_home_clk').bind(event_type, function(e) {
+    $('.drp_home_clk').bind(event_type, function (e) {
         e.preventDefault();
         //$('.common_page').hide();
         //$('.first_page,.home_help,.language_btn').show();
@@ -362,7 +422,7 @@ $(document).ready(function() {
         iWiter_controller.switchToHome();
     });
 
-    $('.up_arrow').bind(event_type, function(e) {
+    $('.up_arrow').bind('click', function (e) {
         e.preventDefault();
 
         if (iWiter_controller.current_tool == 'writer') {
@@ -371,12 +431,12 @@ $(document).ready(function() {
 
             //$('.fn_rigth').trigger(event_type);
         } else {
-            $('.fn_left').trigger(event_type);
+            $('.fn_left').trigger('click');
         }
 
     });
 
-    $('.left_menu').bind(event_type, function(e) {
+    $('.left_menu,.h1_click').bind(event_type, function (e) {
 
         if (!$('.second_page').is(':visible')) {
             e.preventDefault();
@@ -386,15 +446,15 @@ $(document).ready(function() {
             $('.models_page_body_left').stop();
             if (Number(left_pos.left) == 0) {
                 if ($(window).width() <= 480) {
-                    $('.models_page_body_left').animate({'left': '-100%'});
+                    $('.models_page_body_left').animate({ 'left': '-100%' });
                     $('.left_menu').css('background-position', '0px 0px');
                 } else {
-                    $('.models_page_body_left').animate({'left': '-100%'});
+                    $('.models_page_body_left').animate({ 'left': '-100%' });
                     $('.left_menu').css('background-position', '0px 0px');
                 }
                 //$('.models_page_body,.second_page_body,.second_page_body_left,.models_page_body_left').css('overflow-y', 'scroll');
             } else {
-                $('.models_page_body_left').animate({'left': '0'});
+                $('.models_page_body_left').animate({ 'left': '0' });
                 //$('.models_page_body').css('overflow', 'hidden');
                 $('.left_menu').css('background-position', '-5px 0px');
             }
@@ -406,15 +466,15 @@ $(document).ready(function() {
             $('.second_page_body_left').stop();
             if (Number(left_pos.left) == 0) {
                 if ($(window).width() <= 480) {
-                    $('.second_page_body_left').animate({'left': '-100%'});
+                    $('.second_page_body_left').animate({ 'left': '-100%' });
                     $('.left_menu').css('background-position', '0px 0px');
                 } else {
-                    $('.second_page_body_left').animate({'left': '-100%'});
+                    $('.second_page_body_left').animate({ 'left': '-100%' });
                     $('.left_menu').css('background-position', '0px 0px');
                 }
                 $('.models_page_body,.second_page_body,.second_page_body_left,.models_page_body_left').css('overflow-y', 'scroll');
             } else {
-                $('.second_page_body_left').animate({'left': '0'});
+                $('.second_page_body_left').animate({ 'left': '0' });
                 $('.second_page_body').css('overflow', 'hidden');
                 $('.left_menu').css('background-position', '-5px 0px');
             }
@@ -424,7 +484,7 @@ $(document).ready(function() {
 
 
 
-    $('.fn_left').bind(event_type, function(e) {
+    $('.fn_left').bind('click', function (e) {
         e.preventDefault();
         $('.common_page').hide();
         $('.second_page').show();
@@ -433,22 +493,22 @@ $(document).ready(function() {
         iWiter_controller.leftPanelModel('li', '.second_page_body_left ul');
 
     });
-    $('.fn_rigth').bind(event_type, function(e) {
+    $('.fn_rigth').bind('click', function (e) {
         e.preventDefault();
         $('.common_page').hide();
         $('.second_page').show();
         $('.tool_wrapper,.down_arrow_wrapper').hide();
         iWiter_controller.leftPanelWriter('li', '.second_page_body_left ul');
     });
-    $('.left_wrapper li,.str_common').bind(event_type, function(e) {
+    $('.left_wrapper li,.str_common').bind(event_type, function (e) {
         if (iWiter_controller.current_tool == 'model') {
             var left_pos = $('.models_page_body_left').position();
 
             if (Number(left_pos.left) == 0) {
                 if ($(window).width() <= 480) {
-                    $('.models_page_body_left').animate({'left': '-100%'});
+                    $('.models_page_body_left').animate({ 'left': '-100%' });
                 } else {
-                    $('.models_page_body_left').animate({'left': '-100%'});
+                    $('.models_page_body_left').animate({ 'left': '-100%' });
                 }
             }
         }
@@ -456,7 +516,7 @@ $(document).ready(function() {
         $('.tool_wrapper,.down_arrow_wrapper').hide();
     });
 
-    $('.models_page_body_right').bind(event_type, function(e) {
+    $('.models_page_body_right').bind(event_type, function (e) {
         iWiter_controller.reset_drop();
     });
     set_max_height();
@@ -465,8 +525,8 @@ $(document).ready(function() {
         var _margin = $('.inner_wrapper').outerHeight(true) - $('.inner_wrapper').height();
         window_height = $(window).height() - 50 - _margin;
 
-        $('.models_page_body,.second_page_body,.second_page_body_left,.models_page_body_left,.models_page_body_right').css('min-height', window_height);
-        var scroll_pos = $('.inner_wrapper').position();
+        $('.models_page_body,.second_page_body,.second_page_body_left,.models_page_body_right').css('min-height', window_height);
+        var scroll_pos = $('.main_wrapper').position();
         $(window).scrollTop(scroll_pos.top);
         $('.models_page_body').scrollTop(0);
 
