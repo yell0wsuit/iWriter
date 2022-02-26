@@ -2,77 +2,83 @@
 <!--Edited: 18 October 2013 10:37:28 by lead--><!--Edited: 14 October 2013 16:16:51 by webbsu--><!--Edited: 14 October 2013 16:15:00 by webbsu--><!--Edited: 14 October 2013 14:29:18 by webbsu--><!--Edited: 14 October 2013 11:54:15 by webbsu--><!--Edited: 10 October 2013 16:34:12 by webbsu--><!--Edited: 09 October 2013 16:33:58 by webbsu--><!--Edited: 04 September 2013 11:06:49 by webbsu--><!--Edited: 04 September 2013 10:08:52 by webbsu--><!--Edited: 19 July 2013 15:30:51 by webbsu--><!--Edited: 16 July 2013 10:37:20 by duncanr--><!--Edited: 16 July 2013 10:09:53 by duncanr--><!--Edited: 11 July 2013 08:35:11 by duncanr--><!--Edited: 10 July 2013 11:06:31 by duncanr--><!--Edited: 10 July 2013 11:02:16 by duncanr--><!--Edited: 10 July 2013 10:57:56 by duncanr--><!--Edited: 09 July 2013 12:46:34 by duncanr--><!--Edited: 08 July 2013 10:54:53 by duncanr--><!--Edited: 03 July 2013 10:31:29 by duncanr--><!--Edited: 03 July 2013 09:37:26 by duncanr--><!--Edited: 02 July 2013 15:10:52 by duncanr--><!--Edited: 02 July 2013 15:08:44 by duncanr--><!--Edited: 02 July 2013 11:39:07 by duncanr--><!--Edited: 02 July 2013 10:52:19 by duncanr--><!--Edited: 02 July 2013 10:47:54 by duncanr--><!--Edited: 02 July 2013 10:08:33 by duncanr--><!--Edited: 02 July 2013 10:05:36 by duncanr--><!--Edited: 02 July 2013 10:03:05 by duncanr--><!--Edited: 02 July 2013 09:29:08 by duncanr--><!--Edited: 07 June 2013 11:30:43 by duncanr--><!--Edited: 07 June 2013 11:20:35 by duncanr--><!--Edited: 05 June 2013 15:57:54 by duncanr--><!--Edited: 04 June 2013 15:45:23 by duncanr--><!--Edited: 09 May 2013 13:44:41 by duncanr--><!--Edited: 09 May 2013 12:52:06 by duncanr--><!--Edited: 09 May 2013 12:49:36 by duncanr--><!--Edited: 09 May 2013 12:37:17 by duncanr--><!--Edited: 07 May 2013 10:20:30 by duncanr--><!--Edited: 22 April 2013 16:44:08 by duncanr--><framework>
    <framework_title>Writing Essays 1: an explanation essay</framework_title>
    <framework_intro>
-      <para>Here is a framework to help you write an explanation essay. There are spaces for you to add the content of your essay.<br />Remember that you can double-click on any word to look it up in the dictionary.</para>
+      <para><![CDATA[]]>Here is a framework to help you write an explanation essay. There are spaces for you to add the content of your essay.<![CDATA[
+]]><?xm-replace_text {para}?><![CDATA[
+]]><br></br></para>
    </framework_intro>
    <guided_tour>
       <step label="What is an explanation essay?">
          <commentary>
-            <para>Explanation essays allow you to demonstrate your understanding of a particular subject area without having to analyse, interpret or criticize. You should not include your opinion or any criticism unless the prompt specifically asks for it.</para>
+            <para><![CDATA[]]>Explanation essays allow you to demonstrate your understanding of a particular subject area without having to analyse, interpret or criticize. You should not include your opinion or any criticism unless the prompt specifically asks for it.</para>
          </commentary>
       </step>
       <step label="How is it structured?"
             para_ids="5,6,14,15,21,22,40,41,55,56,63,64,78,79">
          <commentary>
-            <para>Like most academic writing, explanation essays begin with an introduction and end with a conclusion. The structure and ordering of the body paragraphs will vary depending on the prompt or assignment. The model essay, from the field of psychology, is on Pavlovian and instrumental conditioning, and uses the following broad structure.</para>
+            <para><![CDATA[]]>Like most academic writing, explanation essays begin with an introduction and end with a conclusion. The structure and ordering of the body paragraphs will vary depending on the prompt or assignment. The model essay, from the field of psychology, is on Pavlovian and instrumental conditioning, and uses the following broad structure.</para>
          </commentary>
       </step>
       <step label="Look at the essay prompt" para_ids="5,6,8">
          <commentary>
-            <para>Note that this is a three-part prompt:</para>
-            <para showme="9">1) describe the two approaches</para>
-            <para showme="10">2) explain how they are different</para>
-            <para showme="11,12">3) contrast them in one specific context</para>
+            <para><![CDATA[]]>Note that this is a three-part prompt:</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para showme="9"><![CDATA[]]>1) describe the two approaches</para>
+            <para showme="10"><![CDATA[]]>2) explain how they are different</para>
+            <para showme="11,12"><![CDATA[]]>3) contrast them in one specific context</para>
          </commentary>
       </step>
       <step label="Look at Paragraph 1: Introduction " para_ids="14,15,17">
          <commentary>
-            <para>The introduction places the two approaches in context and relates them to one another.</para>
-            <para showme="91">Using the words of the question in your opening paragraph will help you to be sure you are answering it accurately.</para>
+            <para><![CDATA[]]>The introduction places the two approaches in context and relates them to one another.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para showme="91"><![CDATA[]]>Using the words of the question in your opening paragraph will help you to be sure you are answering it accurately.</para>
          </commentary>
       </step>
       <step label="Look at Paragraph 2: First idea" para_ids="21,22,24">
          <commentary>
-            <para>Description of the first approach</para>
-            <para showme="25,26,27,28,29">This paragraph includes definitions of key vocabulary related to this approach.</para>
+            <para><![CDATA[]]>Description of the first approach</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para showme="25,26,27,28,29"><![CDATA[]]>This paragraph includes definitions of key vocabulary related to this approach.</para>
          </commentary>
       </step>
       <step label="Look at Paragraph 3: Second idea" para_ids="40,41,43">
          <commentary>
-            <para>This paragraph describes the second approach and contrasts it with the first.</para>
-            <para showme="44">Description of the second approach.</para>
-            <para showme="45">Contrast with the first approach.</para>
+            <para><![CDATA[]]>This paragraph describes the second approach and contrasts it with the first.</para>
+            <para showme="44"><![CDATA[]]>Description of the second approach.</para>
+            <para showme="45"><![CDATA[]]>Contrast with the first approach.</para>
          </commentary>
       </step>
       <step label="Look at Paragraph 4: New/Development" para_ids="55,56,57">
          <commentary>
-            <para>This paragraph gives a definition of a particular context (omission training) and explains its applications.</para>
-            <para>It includes a discussion of the effects of omission training within a Pavlovian approach.</para>
+            <para><![CDATA[]]>This paragraph gives a definition of a particular context (omission training) and explains its applications.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para><![CDATA[]]>It includes a discussion of the effects of omission training within a Pavlovian approach.</para>
          </commentary>
       </step>
       <step label="Look at Paragraph 5: Development" para_ids="63,64,66">
          <commentary>
-            <para>This paragraph introduces further applications of the particular context.</para>
-            <para>It discusses the contrasting effects of omission training within an instrumental approach.</para>
+            <para><![CDATA[]]>This paragraph introduces further applications of the particular context.</para>
+            <para><![CDATA[]]>It discusses the contrasting effects of omission training within an instrumental approach.</para>
          </commentary>
       </step>
       <step label="Look at Paragraph 6: Conclusion" para_ids="78,79,81">
          <commentary>
-            <para>This paragraph is a final summary of the two contradictory effects of omission scheduling in the two approaches which captures the essay's main point.</para>
+            <para><![CDATA[]]>This paragraph is a final summary of the two contradictory effects of omission scheduling in the two approaches which captures the essay's main point.</para>
          </commentary>
       </step>
       <step label="Show me useful language" para_ids="8,17,31,47,57,66,81">
          <commentary>
-            <para showme="49,50,52,67,84,85,86,89">Words and phrases to highlight differences between two elements.</para>
-            <para showme="18,32,35,36,38,48,58,82,83">Defining language is used to describe theories and processes. Use the present tense, unless you are providing a historical perspective.</para>
-            <para showme="33,37,51,53,61,73,76,92,93,94,95,96,97,98,99">Words and phrases to show cause and effect.</para>
-            <para showme="19,34,90,60,68,70,71,72,74,75,87,88,500,59,69">The passive voice is often used in academic and scientific writing, especially in cases where the agent or actor is unknown, unimportant, or obvious.</para>
+            <para showme="49,50,52,67,84,85,86,89"><![CDATA[]]>Words and phrases to highlight differences between two elements.</para>
+            <para showme="18,32,35,36,38,48,58,82,83"><![CDATA[]]>Defining language is used to describe theories and processes. Use the present tense, unless you are providing a historical perspective.</para>
+            <para showme="33,37,51,53,61,73,76,92,93,94,95,96,97,98,99"><![CDATA[]]>Words and phrases to show cause and effect.</para>
+            <para showme="19,34,90,60,68,70,71,72,74,75,87,88,500,59,69"><![CDATA[]]>The passive voice is often used in academic and scientific writing, especially in cases where the agent or actor is unknown, unimportant, or obvious.</para>
          </commentary>
       </step>
    </guided_tour>
    <practice_rubric>
       <planning>
          <checklist>
-            <point help="essay_explan9.xml">Look carefully at the essay prompt and decide what you are required to write about and how you must write about it. Analyse the essay prompt carefully, identifying the topic, focus and, scope, angle and viewpoint.</point>
+            <point help="essay_explan9.xml">Look carefully at the essay prompt and decide what you are required to write about and how you must write about it. Analyse the essay prompt carefully, identifying the topic, focus, scope, angle and viewpoint.</point>
             <point>Read and research the topic.</point>
          </checklist>
          <checklist>
@@ -118,8 +124,8 @@
          <name eid="5">Prompt</name>
          <desc eid="6">The essay question that you are asked to write about</desc>
          <tip eid="7">TIP Prompts may include ‘Discuss …’ or ‘Consider the advantages and disadvantages …’.</tip>
-         <content prompt="Type your prompt here." eid="8">
-            <para prompt="Type your prompt here." eid="8"><extra_info eid="9">Describe</extra_info>and<extra_info eid="10">distinguish between</extra_info>Pavlovian (classical) and instrumental conditioning.<extra_info eid="11">Discuss how</extra_info>performance in an omission schedule<extra_info eid="12">can distinguish between</extra_info>these two types of conditioning.</para>
+         <content prompt="Type your Prompt here." eid="8">
+            <para prompt="Type your Prompt here." eid="8"><![CDATA[]]><extra_info eid="9">Describe</extra_info> and<extra_info eid="10">distinguish between</extra_info> Pavlovian (classical) and instrumental conditioning.<extra_info eid="11">Discuss how</extra_info> performance in an omission schedule<extra_info eid="12">can distinguish between</extra_info> these two types of conditioning.</para>
          </content>
       </paragraph>
       <paragraph eid="13">
@@ -127,7 +133,7 @@
          <desc eid="15">Introduce the topic(s) that you are asked to write about.</desc>
          <tip eid="16">TIP In the introduction you can put your topic(s) in context. If you are discussing more than one topic, you can relate them to each other here.</tip>
          <content prompt="Type your Introduction here." eid="17">
-            <para prompt="Type your Introduction here." eid="17"><useful type="position" eid="18">Associative learning is the process of</useful>linking the onset of a particular stimulus with that of another, subsequent event. Animals<useful type="linking" eid="19">can be conditioned</useful>to acquire such associative links, and the behaviour that goes with them, by two means:<extra_info eid="91">Pavlovian conditioning and instrumental conditioning</extra_info>.</para>
+            <para prompt="Type your Introduction here." eid="17"><![CDATA[]]><useful eid="18">Associative learning is the process of</useful> linking the onset of a particular stimulus with that of another, subsequent event. Animals<useful type="linking" eid="19">can be conditioned</useful> to acquire such associative links, and the behaviour that goes with them, by two means:<extra_info eid="91">Pavlovian conditioning and instrumental conditioning</extra_info>.</para>
          </content>
       </paragraph>
       <paragraph eid="20">
@@ -135,12 +141,14 @@
          <desc eid="22">A description and explanation of the first theory, argument or idea, etc.</desc>
          <tip eid="23">TIP You can define some key vocabulary here.</tip>
          <content prompt="Type Paragraph 2 here." eid="24">
-            <para prompt="Type Paragraph 2 here." eid="24">Pavlovian conditioning was noted by Pavlov in 1927. While conducting various digestive experiments on dogs, he found that they began salivating at the sight of the experimenter who brought their food. Thus, the stimulus of the experimenter's presence predicted the arrival of food: an association was formed. In such cases, the experimenter is termed the<extra_info eid="25">conditioned stimulus (CS)</extra_info>, due to its capacity to elicit the<extra_info eid="26">conditioned response (CR)</extra_info>—salivation—depending on the learning experience. The food is the<extra_info eid="27">unconditioned stimulus (US)</extra_info>, as it would provoke the<extra_info eid="28">unconditioned response</extra_info>(also salivation) even without any learning. The<extra_info eid="29">US is also termed the reinforcer</extra_info>because it strengthens the CR. Inversely, in the absence of a reinforcer, the CR will extinguish over time.<br />[A paragraph follows (omitted) giving further description of the first approach, explaining two types of Pavlovian conditioning: appetite and aversive.]</para>
+            <para prompt="Type Paragraph 2 here." eid="24"><![CDATA[]]>Pavlovian conditioning was noted by Pavlov in 1927. While conducting various digestive experiments on dogs, he found that they began salivating at the sight of the experimenter who brought their food. Thus, the stimulus of the experimenter's presence predicted the arrival of food: an association was formed. In such cases, the experimenter is termed the<extra_info eid="25">conditioned stimulus (CS)</extra_info>, due to its capacity to elicit the<extra_info eid="26">conditioned response (CR)</extra_info> —salivation—depending on the learning experience. The food is the<extra_info eid="27">unconditioned stimulus (US)</extra_info>, as it would provoke the<extra_info eid="28">unconditioned response</extra_info> (also salivation) even without any learning. The<extra_info eid="29">US is also termed the reinforcer</extra_info> because it strengthens the CR. Inversely, in the absence of a reinforcer, the CR will extinguish over time.<![CDATA[
+]]><p>[A paragraph follows (omitted) giving further description of the first approach, explaining two types of Pavlovian conditioning: appetite and aversive.]</p></para>
          </content>
       </paragraph>
       <paragraph eid="30">
          <content prompt="Type Paragraph 2 here." eid="31" dup="24">
-            <para prompt="Type Paragraph 2 here." eid="31" dup="24">Pavlovian conditioning<useful type="position" eid="32">was noted by Pavlov in 1927</useful>.<useful eid="92" type="structure">While conducting various digestive experiments on dogs, he found</useful>that they began salivating at the sight of the experimenter who brought their food. Thus, the stimulus of the experimenter's presence<useful type="structure" eid="33">predicted</useful>the arrival of food: an association<useful type="linking" eid="34">was formed</useful>. In such cases,<useful type="position" eid="35">the experimenter is termed the conditioned stimulus</useful>(CS), due to its capacity<useful type="structure" eid="93">to elicit</useful>the conditioned response (CR)—salivation—depending on the learning experience.<useful type="position" eid="36">The food is the unconditioned stimulus</useful>(US), as it would<useful type="structure" eid="37">provoke</useful>the unconditioned response (also salivation) even without any learning.<useful type="position" eid="38">The US is also termed the reinforcer</useful>because it<useful type="structure" eid="94">strengthens</useful>the CR. Inversely, in the absence of a reinforcer, the CR will<useful type="structure" eid="95">extinguish</useful>over time.<br />[A paragraph follows (omitted) giving further description of the first approach, explaining two types of Pavlovian conditioning: appetite and aversive.]</para>
+            <para prompt="Type Paragraph 2 here." eid="31" dup="24"><![CDATA[]]>Pavlovian conditioning<useful type="position" eid="32">was noted by Pavlov in 1927</useful>.<useful eid="92" type="structure">While conducting various digestive experiments on dogs, he found</useful> that they began salivating at the sight of the experimenter who brought their food. Thus, the stimulus of the experimenter's presence<useful type="structure" eid="33">predicted</useful> the arrival of food: an association<useful type="linking" eid="34">was formed</useful>. In such cases,<useful type="position" eid="35">the experimenter is termed the conditioned stimulus</useful> (CS), due to its capacity<useful type="structure" eid="93">to elicit</useful> the conditioned response (CR)—salivation—depending on the learning experience.<useful type="position" eid="36">The food is the unconditioned stimulus</useful> (US), as it would<useful type="structure" eid="37">provoke</useful> the unconditioned response (also salivation) even without any learning.<useful type="position" eid="38">The US is also termed the reinforcer</useful> because it<useful type="structure" eid="94">strengthens</useful> the CR. Inversely, in the absence of a reinforcer, the CR will<useful type="structure" eid="95">extinguish</useful> over time.<![CDATA[
+]]><p>[A paragraph follows (omitted) giving further description of the first approach, explaining two types of Pavlovian conditioning: appetite and aversive.]</p></para>
          </content>
       </paragraph>
       <paragraph eid="39">
@@ -148,30 +156,32 @@
          <desc eid="41">A description and explanation of the second theory, argument, idea, etc.</desc>
          <tip eid="42">TIP You can also contrast it with the first theory, argument, idea, etc. at this point.</tip>
          <content prompt="Type Paragraph 3 here." eid="43">
-            <para prompt="Type Paragraph 3 here." eid="43"><extra_info eid="44">Instrumental conditioning involves a more voluntary kind of response. The original experiment by Thorndike showed that, over time, cats learned to press a lever in order to access food. Again we have a reinforcer, the food, responsible for strengthening the instrumental behaviour.</extra_info>
-               <extra_info eid="45">In this case, however, a behavioural change is produced as a result of the causal relationship between the subject's behaviour and the reinforcer. This is in comparison to Pavlovian conditioning, in which the behavioural change is produced by the predictive relationship between a signal (CS) and the reinforcer.</extra_info><br />[Three paragraphs follow giving further description of the second approach, namely two kinds of instrumental responses: habitual and goal-directed (omitted here).]</para>
+            <para prompt="Type Paragraph 3 here." eid="43"><![CDATA[]]><extra_info eid="44">Instrumental conditioning involves a more voluntary kind of response. The original experiment by Thorndike showed that, over time, cats learned to press a lever in order to access food. Again we have a reinforcer, the food, responsible for strengthening the instrumental behaviour.</extra_info> 
+               <extra_info eid="45">In this case, however, a behavioural change is produced as a result of the causal relationship between the subject's behaviour and the reinforcer. This is in comparison to Pavlovian conditioning, in which the behavioural change is produced by the predictive relationship between a signal (CS) and the reinforcer.</extra_info> <![CDATA[
+]]>[Three paragraphs follow giving further description of the second approach, namely two kinds of instrumental responses: habitual and goal-directed (omitted here).]</para>
          </content>
       </paragraph>
       <paragraph eid="46">
          <content prompt="Type Paragraph 3 here." eid="47" dup="43">
-            <para prompt="Type Paragraph 3 here." eid="47" dup="43">Instrumental conditioning<useful type="position" eid="48">involves</useful>
-               <useful type="objective" eid="49">a more voluntary kind of response</useful>. The original experiment by Thorndike<useful eid="95" type="structure">showed</useful>that, over time, cats learned to press a lever in order to access food. Again we have a reinforcer, the food, responsible for<useful type="structure" eid="96">strengthening</useful>the instrumental behaviour. In this case,<useful type="objective" eid="50">however</useful>, a behavioural change<useful type="linking" eid="90">is produced</useful>
-               <useful type="structure" eid="51">as a result of</useful>the causal relationship between the subject's behaviour and the reinforcer.<useful type="objective" eid="52">This is in comparison to Pavlovian conditioning, in which</useful>the behavioural change<useful type="structure" eid="53">is produced by</useful>the predictive relationship between a signal (CS) and the reinforcer.<br />[Three paragraphs follow giving further description of the second approach, namely two kinds of instrumental responses: habitual and goal-directed (omitted here).]</para>
+            <para prompt="Type Paragraph 3 here." eid="47" dup="43"><![CDATA[]]>Instrumental conditioning<useful type="position" eid="48">involves</useful> 
+               <useful type="objective" eid="49">a more voluntary kind of response</useful>. The original experiment by Thorndike<useful eid="95" type="structure">showed</useful> that, over time, cats learned to press a lever in order to access food. Again we have a reinforcer, the food, responsible for<useful type="structure" eid="96">strengthening</useful> the instrumental behaviour. In this case,<useful type="objective" eid="50">however</useful>, a behavioural change<useful type="linking" eid="90">is produced</useful> 
+               <useful type="structure" eid="51">as a result of</useful> the causal relationship between the subject's behaviour and the reinforcer.<useful type="objective" eid="52">This is in comparison to Pavlovian conditioning, in which</useful> the behavioural change<useful type="structure" eid="53">is produced by</useful> the predictive relationship between a signal (CS) and the reinforcer.<![CDATA[
+]]>[Three paragraphs follow giving further description of the second approach, namely two kinds of instrumental responses: habitual and goal-directed (omitted here).]</para>
          </content>
       </paragraph>
       <paragraph eid="54">
          <name eid="55">Paragraph 4</name>
          <desc eid="56">Introduction of a new idea from the essay prompt or development of ideas in the first part of the essay</desc>
          <content prompt="Type Paragraph 4 here." eid="57">
-            <para prompt="Type Paragraph 4 here." eid="57"><useful type="position" eid="58">In omission training</useful>, the reinforcer<useful type="linking" eid="59">is given</useful>when the action<useful type="linking" eid="60">is not performed</useful>. In Pavlovian conditioning, the association between the CS and the reinforcer<useful type="structure" eid="97">tends to persist</useful>. For example, the dog cannot control its salivation, nor can a human prevent sweating before receiving an expected shock. Thus, omission scheduling will not<useful type="structure" eid="61">bring about a change in</useful>the innate behaviour displayed after Pavlovian conditioning.</para>
+            <para prompt="Type Paragraph 4 here." eid="57"><![CDATA[]]><useful eid="58">In omission training</useful>, the reinforcer<useful type="linking" eid="59">is given</useful> when the action<useful type="linking" eid="60">is not performed</useful>. In Pavlovian conditioning, the association between the CS and the reinforcer<useful type="structure" eid="97">tends to persist</useful>. For example, the dog cannot control its salivation, nor can a human prevent sweating before receiving an expected shock. Thus, omission scheduling will not<useful type="structure" eid="61">bring about a change in</useful> the innate behaviour displayed after Pavlovian conditioning.</para>
          </content>
       </paragraph>
       <paragraph eid="62">
          <name eid="63">Paragraph 5</name>
          <desc eid="64">Development of the discussion</desc>
-         <tip eid="65">TIP You can contrast the ideas in th e essay further, if you are asked to.</tip>
+         <tip eid="65">TIP You can contrast the ideas in the essay further, if you are asked to.</tip>
          <content prompt="Type Paragraph 5 here." eid="66">
-            <para prompt="Type Paragraph 5 here." eid="66"><useful type="objective" eid="67">On the other hand</useful>, instrumental behaviour<useful type="linking" eid="68">can be suppressed</useful>in such a schedule. If a pleasant reward<useful type="linking" eid="69">is given</useful>only when an action<useful type="linking" eid="500">is not performed</useful>, and nothing<useful type="linking" eid="70">is given</useful>when it is, the action<useful type="linking" eid="71">will be extinguished</useful>. If, by contrast, subjects<useful type="linking" eid="72">are initially trained</useful>that an instrumental response<useful type="structure" eid="73">leads to</useful>an aversive ‘punisher’, they will not<useful type="structure" eid="98">perform</useful>that behaviour. In the omission schedule, the punishment<useful type="linking" eid="74">is delivered</useful>only if the response<useful type="linking" eid="75">is not performed</useful>. This will again<useful type="structure" eid="76">lead to</useful>a reversal of behaviour in an attempt to<useful type="structure" eid="99">avoid</useful>the punishment.</para>
+            <para prompt="Type Paragraph 5 here." eid="66"><![CDATA[]]><useful eid="67">On the other hand</useful>, instrumental behaviour<useful type="linking" eid="68">can be suppressed</useful> in such a schedule. If a pleasant reward<useful type="linking" eid="69">is given</useful> only when an action<useful type="linking" eid="500">is not performed</useful>, and nothing<useful type="linking" eid="70">is given</useful> when it is, the action<useful type="linking" eid="71">will be extinguished</useful>. If, by contrast, subjects<useful type="linking" eid="72">are initially trained</useful> that an instrumental response<useful type="structure" eid="73">leads to</useful> an aversive ‘punisher’, they will not<useful type="structure" eid="98">perform</useful> that behaviour. In the omission schedule, the punishment<useful type="linking" eid="74">is delivered</useful> only if the response<useful type="linking" eid="75">is not performed</useful>. This will again<useful type="structure" eid="76">lead to</useful> a reversal of behaviour in an attempt to<useful type="structure" eid="99">avoid</useful> the punishment.</para>
          </content>
       </paragraph>
       <paragraph eid="77">
@@ -179,7 +189,7 @@
          <desc eid="79">Summarize your discussion to capture the essay's main point.</desc>
          <tip eid="80">TIP Remember that explanation essays should not include your opinion or any criticism unless the prompt specifically asks for it.</tip>
          <content prompt="Type your Conclusion here." eid="81">
-            <para prompt="Type your Conclusion here." eid="81">Pavlovian conditioning<useful type="position" eid="82">involves the pairing of</useful>an unrelated stimulus with a biologically relevant reinforcer. Instrumental conditioning<useful type="position" eid="83">involves the pairing of</useful>an action with a resulting reinforcer.<useful type="objective" eid="84">These two approaches may be distinguished by</useful>the effect omission scheduling has on them.<useful type="objective" eid="85">In the former case</useful>, behaviour is not modified by omission, as the response is autonomic.<useful type="objective" eid="86">In only the latter case</useful>, behaviour<useful type="linking" eid="87">is modified</useful>to suit the omission schedule. Thus, the behaviour<useful type="linking" eid="88">is extinguished</useful>in instrumental<useful type="objective" eid="89">but not</useful>in Pavlovian conditioning.</para>
+            <para prompt="Type your Conclusion here." eid="81"><![CDATA[]]>Pavlovian conditioning<useful type="position" eid="82">involves the pairing of</useful> an unrelated stimulus with a biologically relevant reinforcer. Instrumental conditioning<useful type="position" eid="83">involves the pairing of</useful> an action with a resulting reinforcer.<useful type="objective" eid="84">These two approaches may be distinguished by</useful> the effect omission scheduling has on them.<useful type="objective" eid="85">In the former case</useful>, behaviour is not modified by omission, as the response is autonomic.<useful type="objective" eid="86">In only the latter case</useful>, behaviour<useful type="linking" eid="87">is modified</useful> to suit the omission schedule. Thus, the behaviour<useful type="linking" eid="88">is extinguished</useful> in instrumental<useful type="objective" eid="89">but not</useful> in Pavlovian conditioning.</para>
          </content>
       </paragraph>
    </paragraphs>

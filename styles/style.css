@@ -372,6 +372,10 @@
     font-size: 18px;
     padding: 12px;
     float: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 85%;
+    white-space: nowrap;
 }
 .models_page_menu_text{
     color: #FFFFFF;
@@ -784,14 +788,15 @@
     border-bottom: 1px solid #FFFFFF;
     color: #000000;
     padding: 10px;
-    background-color: #d4d8df;
+    background-color: #E5E5E5;
 }
 .checkpoints_ul > li:last-child{
     border-bottom: none;
 }
 .check_con{
-    background-color: #d4d8df;
-    padding-left: 10px;
+    background-color: #E5E5E5;
+    padding: 10px;
+    word-wrap: break-word;
     /*font-size: 13px;*/
 }
 .check_box_w{
@@ -809,6 +814,21 @@
     display: inline-flex;
     align-items: center;
     margin: 4px 0 0;
+    padding: 0 9px;
+    width: auto;
+    line-height: 1;
+    height: 32px;
+    box-shadow: rgb(0 0 0 / 13%) 0px 1.6px 3.6px, rgb(0 0 0 / 11%) 0px 0px 2.9px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.awl_listing{
+    background-color: #ebba17;
+    border-radius: 4px;
+    color: #000000;
+    display: inline-flex;
+    align-items: center;
+    margin: 4px 15px 0;
     padding: 0 9px;
     width: auto;
     line-height: 1;
@@ -1834,5 +1854,8 @@ and (orientation : portrait) {
     .create_project {box-shadow: 0px 1.6px 3.6px rgb(0 0 0 / 25%), 0px 0px 2.9px rgb(0 0 0 / 22%)}
     .create_pro_btn {background-color: rgb(81, 122, 218)}
     .tell_me_btn {box-shadow: 0px 1.6px 3.6px rgb(0 0 0 / 25%), 0px 0px 2.9px rgb(0 0 0 / 22%)}
+    .arrow_box {background-color: #74b4e8;}
+    .arrow_box:after {border-right-color: #74b4e8;}
+    .arrow_box:before {border-right-color: #74b4e8;}
     ::-webkit-scrollbar-thumb {background: #7d7d7d;}
 }

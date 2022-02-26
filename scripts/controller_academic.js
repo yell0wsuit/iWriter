@@ -1,4 +1,6 @@
 var event_type = 'click';
+var global_str = "";
+var awl_list = "";
 
 var device_detect = false;
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -60,6 +62,17 @@ function Controller() {
             },
             error: function() {
                 alert("An error occurred while processing XML file.");
+            }
+        });
+        $.ajax({ // AWL list
+            type: "GET",
+            url: "xml/awl_list.json",
+            dataType: "json",
+            success: function(json) {
+                awl_list = json.awl;
+            },
+            error: function() {
+                alert("An error occurred while processing JSON file.");
             }
         });
     };
@@ -1355,7 +1368,7 @@ function Controller() {
 
         //left side content
         var checklist_cnt = 0;
-        var top_html_ck = '<div class="check_content"><div class="check_top"><span>Use formal and impersonal language.</span></div><div class="check_con"></div></div>';
+        var top_html_ck = '<div class="check_content"><div class="check_top"><span></span></div><div class="check_con"></div></div>';
         top_html_ck += '<div class="checklist_wrp" ><ul class="checklist_ul">';
         var statis_menu = new Array();
         statis_menu[0] = 'Before you start';
@@ -1450,10 +1463,13 @@ function Controller() {
             $('.checklist_wrp').show();
         });
         $('.tell_me_btn').off(event_type).on(event_type, function() {
-            $('.check_top span').text($(this).parent().find('.checklist_p').text());
+            var tell_string = "";
+            //$('.check_top span').text($(this).parent().find('.checklist_p').text());
+            //$('.check_top span').html(writer_header[$(this).attr('data-file')]);
             $('.check_content').show();
             $('.checklist_wrp').hide();
             $('.check_con').html(writer_content[$(this).attr('data-file')]);
+            $('.check_top span').text($('.check_con').find('p').first().attr('header'));
         });
         //left side content
 
@@ -2129,6 +2145,7 @@ function Controller() {
         top_header_html = top_header_html.replace(/<para/g, " <p");
         top_header_html = top_header_html.replace(/<\/para/g, " </p");
         top_header_html += '<div class="word_count_text">Word count 0</div>';
+        top_header_html += '<div type="button" class="awl_listing">AWL</div><div class="arrow_wrp" style="display:none;"><div class="arrow_box">Highlight Academic Word List</div></div></div>';
         $('.str_common:visible').each(function() {
             if (!$(this).children('.tick_mark').hasClass('_selected')) {
                 top_header_html = $(_this.config_msg).find('commentary_help').text();
@@ -2170,22 +2187,72 @@ function Controller() {
             $('.models_header').empty();
             $('.cont_wrp_box').hide();
         }
+        
+        var awl_status = false;
+        
+        $(".awl_listing").mouseover(function() {
+            if ($(window).width() > 768) {
+                var pos = $(this).position();
+                $('.arrow_box').html($(this).parents('.li_inner').next().html());
+                $('.arrow_wrp').css('top', pos.top - ($('.arrow_wrp').height() / 2) - 2);
+                $('.arrow_wrp').css('left', pos.left + 75);
+                $('.arrow_wrp').show();
+            }
+        }).mouseout(function(e) {
+            if ($(window).width() > 768) {
+                $('.arrow_wrp').hide();
+            }
+        });
+
+        $(".awl_listing").on("click", function() {
+            // var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+            var temp = "";
+            if (awl_status == false) {
+                var x = document.querySelectorAll("[class='content_contents']");
+                $(".awl_listing").addClass('selected');
+                for (var j = 0; j < x.length; j++) {
+                    global_str = x[j].innerText;
+                    var a = global_str.split(/(\s)/);
+
+                    //console.log(a);
+                    for (var i = 0; i < a.length; i++) {
+                        // if(format.test(a[i])){
+                        temp = a[i].replace(/[^[^a-zA-Z0-9]/g, "");
+                        temp = temp.toLowerCase();
+                        // }
+                        // else{
+                        // temp = a[i].toLowerCase();
+                        // }
+                        if (awl_list.indexOf(temp) >= 0) {
+                            a[i] = '<span class="awl_highlight">' + a[i] + '</span>';
+                        }
+                    }
+
+                    global_str = a.join(" ");
+                    x[j].innerHTML = global_str;
+                }
+            } else {
+                $(".awl_listing").removeClass('selected');
+                $(".awl_highlight").css("background-color", "white");
+            }
+            awl_status = !(awl_status);
+        });
     };
     this.sendToSocket = function(_msg) {
         if (_msg != '') {
-            var net = require('net');
+            //var net = require('net');
 
             var HOST = '127.0.0.1';
             var PORT = 8888;
 
-            var client = new net.Socket();
+           // var client = new net.Socket();
 
-            client.connect(PORT, HOST, function() {
+            /*client.connect(PORT, HOST, function() {
                 //alert('CONNECTED TO: ' + HOST + ':' + PORT);
                 // Write a message to the socket as soon as the client is connected, the server will receive it as message from the client
                 client.write(_msg);
                 client.destroy();
-            });
+            });*/
 
             /*var formURL = 'socket.php';
              $.ajax(

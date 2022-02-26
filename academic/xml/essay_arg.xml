@@ -2,61 +2,70 @@
 <!--Edited: 18 October 2013 10:39:52 by lead--><!--Edited: 14 October 2013 16:14:30 by webbsu--><!--Edited: 14 October 2013 14:29:31 by webbsu--><!--Edited: 14 October 2013 11:02:29 by webbsu--><!--Edited: 10 October 2013 16:09:25 by webbsu--><!--Edited: 09 October 2013 16:22:28 by webbsu--><!--Edited: 01 October 2013 10:31:06 by webbsu--><!--Edited: 04 September 2013 12:43:46 by webbsu--><!--Edited: 04 September 2013 11:46:25 by webbsu--><!--Edited: 04 September 2013 11:27:27 by webbsu--><!--Edited: 04 September 2013 11:06:30 by webbsu--><!--Edited: 04 September 2013 10:08:20 by webbsu--><!--Edited: 10 July 2013 11:21:53 by duncanr--><!--Edited: 08 July 2013 14:36:56 by duncanr--><!--Edited: 08 July 2013 09:10:29 by duncanr--><!--Edited: 08 July 2013 08:56:39 by duncanr--><!--Edited: 05 July 2013 16:04:55 by duncanr--><!--Edited: 03 July 2013 10:41:23 by duncanr--><!--Edited: 03 July 2013 10:39:47 by duncanr--><!--Edited: 03 July 2013 09:41:35 by duncanr--><!--Edited: 02 July 2013 11:59:59 by duncanr--><!--Edited: 11 June 2013 13:40:08 by duncanr--><!--Edited: 11 June 2013 13:38:49 by duncanr--><!--Edited: 04 June 2013 15:50:34 by duncanr--><!--Edited: 14 May 2013 08:46:28 by duncanr--><!--Edited: 13 May 2013 09:01:14 by duncanr--><!--Edited: 13 May 2013 08:40:18 by duncanr--><!--Edited: 13 May 2013 08:30:44 by duncanr--><!--Edited: 13 May 2013 08:29:23 by duncanr--><!--Edited: 10 May 2013 15:06:57 by duncanr--><!--Edited: 10 May 2013 14:57:42 by duncanr--><!--Edited: 10 May 2013 14:51:41 by duncanr--><!--Edited: 07 May 2013 09:22:45 by duncanr--><!--Edited: 07 May 2013 08:57:10 by duncanr--><!--Edited: 26 April 2013 14:48:44 by duncanr--><!--Edited: 18 April 2013 16:50:39 by duncanr--><framework>
    <framework_title>Writing Essays 2: an argument essay</framework_title>
    <framework_intro>
-      <para>Here is a framework to help you write an argument essay. There are spaces for you to add the content of your essay.<br />Remember that you can double-click on any word to look it up in the dictionary.</para>
+      <para><![CDATA[]]>Here is a framework to help you write an argument essay. There are spaces for you to add the content of your essay.<![CDATA[
+]]><?xm-replace_text {para}?><![CDATA[
+]]><br></br></para>
    </framework_intro>
    <guided_tour>
       <step label="What is an argument essay?">
          <commentary>
-            <para>The argument essay is one of the most common types of essay you will encounter at school or university. In this type of essay, you need to display your ability to weigh up different viewpoints and arrive at an informed conclusion. These viewpoints are a result of reading and evaluating research on the topic.</para>
+            <para><![CDATA[]]>The argument essay is one of the most common types of essay you will encounter at school or university. In this type of essay, you need to display your ability to weigh up different viewpoints and arrive at an informed conclusion. These viewpoints are a result of reading and evaluating research on the topic.</para>
          </commentary>
       </step>
       <step label="What are the main features?">
          <commentary>
-            <para>In most cases, the essay will require you to state what your opinion is, but in some cases it might only be a presentation of a series of arguments and counterarguments.</para>
+            <para><![CDATA[]]>In most cases, the essay will require you to state what your opinion is, but in some cases it might only be a presentation of a series of arguments and counterarguments.</para>
          </commentary>
       </step>
       <step label="How is it structured?" para_ids="5,6,20,21,39,40,52,53">
          <commentary>
-            <para>The model text is an extract from an essay about language acquisition by deaf children. It is divided into four parts—introduction, spoken language acquisition, sign language acquisition and conclusion.</para>
+            <para><![CDATA[]]>The model text is an extract from an essay about language acquisition by deaf children. It is divided into four parts—introduction, spoken language acquisition, sign language acquisition and conclusion.</para>
          </commentary>
       </step>
       <step label="Look at the Introduction" para_ids="5,6,7">
          <commentary>
-            <para>The introduction features three key things:</para>
-            <para showme="8">background information on the topic</para>
-            <para showme="9">a specific introduction to the topic</para>
-            <para showme="10">the scope and aim of the essay</para>
+            <para><![CDATA[]]>The introduction features three key things:</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para showme="8"><![CDATA[]]>background information on the topic</para>
+            <para showme="9"><![CDATA[]]>a specific introduction to the topic</para>
+            <para showme="10"><![CDATA[]]>the scope and aim of the essay</para>
          </commentary>
       </step>
       <step label="Look at Arguments against" para_ids="20,21,23">
          <commentary>
-            <para>The writer discusses arguments against their case (that sign language is a more natural choice of communication).</para>
-            <para>This section explores research around the first topic (the issue of how deaf children acquire spoken language) and lists the different methods available (speech reading, cued speech and other factors).</para>
-            <para>The purpose of this section is to point out the difficulties deaf children have with acquiring spoken language and how the different methods of getting them to acquire spoken language are unsuccessful.</para>
-            <para showme="24,25,26">All the points are supported by research studies.</para>
+            <para><![CDATA[]]>The writer discusses arguments against their case (that sign language is a more natural choice of communication).</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para><![CDATA[]]>This section explores research around the first topic (the issue of how deaf children acquire spoken language) and lists the different methods available (speech reading, cued speech and other factors).</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para><![CDATA[]]>The purpose of this section is to point out the difficulties deaf children have with acquiring spoken language and how the different methods of getting them to acquire spoken language are unsuccessful.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para showme="24,25,26"><![CDATA[]]>All the points are supported by research studies.</para>
          </commentary>
       </step>
       <step label="Look at Arguments for" para_ids="39,40,42">
          <commentary>
-            <para>The writer discusses arguments for their case (that sign language is a more natural choice of communication).</para>
-            <para>This section promotes the second topic (the use of sign language) as the solution to the problem deaf children face with communication, highlighted in the previous section.</para>
-            <para>It begins by presenting an alternative combined system, where the parents also learn sign language, and ends by suggesting that sign language is the most useful solution.</para>
-            <para showme="43,44,45">All the points are supported by research studies.</para>
+            <para><![CDATA[]]>The writer discusses arguments for their case (that sign language is a more natural choice of communication).</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para><![CDATA[]]>This section promotes the second topic (the use of sign language) as the solution to the problem deaf children face with communication, highlighted in the previous section.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para><![CDATA[]]>It begins by presenting an alternative combined system, where the parents also learn sign language, and ends by suggesting that sign language is the most useful solution.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para showme="43,44,45"><![CDATA[]]>All the points are supported by research studies.</para>
          </commentary>
       </step>
       <step label="Look at the Conclusion" para_ids="52,53,54">
          <commentary>
-            <para showme="55">The conclusion first summarizes and evaluates the approaches discussed in the essay.</para>
-            <para showme="56">Then it presents opposing views to the argument (the use of sign language) promoted in the previous section.</para>
-            <para showme="57">It ends by addressing the opposing views through promoting a different approach, the informed conclusion, (a bilingual approach, using sign language and learning oral skills, as the most effective means of teaching deaf children how to communicate.)</para>
+            <para showme="55"><![CDATA[]]>The conclusion first summarizes and evaluates the approaches discussed in the essay.</para>
+            <para showme="56"><![CDATA[]]>Then it presents opposing views to the argument (the use of sign language) promoted in the previous section.</para>
+            <para showme="57"><![CDATA[]]>It ends by addressing the opposing views through promoting a different approach, the informed conclusion, (a bilingual approach, using sign language and learning oral skills, as the most effective means of teaching deaf children how to communicate.)</para>
          </commentary>
       </step>
       <step label="Show me useful language" para_ids="12,28,47,59">
          <commentary>
-            <para showme="13,15,17,36,61">Phrases which express the writer's viewpoints more objectively.</para>
-            <para showme="14,16,18,30,31,35,49,60,62,65">Words which show the connection and progression of the argument.</para>
-            <para showme="33,37,48,64,67">Hedging language is useful for putting your view across less assertively.</para>
-            <para showme="29,32,34,50,63,66">Appropriate reporting verbs show how the cited source fits in with your argument.</para>
+            <para showme="13,15,17,36,61"><![CDATA[]]>Phrases which express the writer's viewpoints more objectively.</para>
+            <para showme="14,16,18,30,31,35,49,60,62,65"><![CDATA[]]>Words which show the connection and progression of the argument.</para>
+            <para showme="33,37,48,64,67"><![CDATA[]]>Hedging language is useful for putting your view across less assertively.</para>
+            <para showme="29,32,34,50,63,66"><![CDATA[]]>Appropriate reporting verbs show how the cited source fits in with your argument.</para>
          </commentary>
       </step>
    </guided_tour>
@@ -65,7 +74,8 @@
          <checklist>
             <point>Read widely around your topic. Make notes of the different points that emerge in your reading.</point>
             <point help="essay_arg1.xml">Focus on the question and decide what your stance is going to be.</point>
-            <point>Select two or three arguments and identify suitable supporting evidence.<br />Explain each argument in terms of how it supports your viewpoint or provides an opposing argument, which you then argue against (i.e. present evidence which questions the validity of the opposing argument).</point>
+            <point>Select two or three arguments and identify suitable supporting evidence.<![CDATA[
+]]>Explain each argument in terms of how it supports your viewpoint or provides an opposing argument, which you then argue against (i.e. present evidence which questions the validity of the opposing argument).</point>
             <point help="essay_arg2.xml">Use counterarguments.</point>
             <point help="essay_arg3.xml">Provide good evidence.</point>
             <point help="essay_arg4.xml">Decide on a suitable organization of your ideas.</point>
@@ -107,59 +117,91 @@
       </paragraph>
       <paragraph eid="4">
          <name eid="5">Introduction</name>
-         <desc eid="6">Begin with background information on the topic.<br />Give a specific explanation of the topic.<br />State the aims and/or scope of the essay.</desc>
+         <desc eid="6"><p>Begin with background information on the topic.</p><![CDATA[<p>
+]]>Give a specific explanation of the topic.<![CDATA[</p>
+]]><p>State the aims and/or scope of the essay.</p></desc>
          <content prompt="Type your Introduction here." eid="7">
-            <para prompt="Type your Introduction here." eid="7">Introduction<br /><br /><extra_info eid="8">There are approximately 688 000 people who are severely or profoundly deaf in the United Kingdom, and 840 children who are born deaf each year (RNID, 2011a). It is clear from these figures that there is a large community of people who are deaf in the United Kingdom alone.</extra_info>
-               <extra_info eid="9">Consequently, it must be considered how deafness may affect language acquisition and what steps caregivers can take to overcome any difficulties.</extra_info>
-               <extra_info eid="10">There are different levels of deafness and hearing loss (RNID, 2011b); however, it is not within the scope of this essay to consider all of these levels. Therefore, this essay will mainly focus on people who are born with severe or profound deafness (RNID, 2011b).</extra_info>
+            <para prompt="Type your Introduction here." eid="7"><![CDATA[]]>Introduction<![CDATA[
+]]><![CDATA[
+]]><extra_info eid="8"><br></br><br></br>There are approximately 688 000 people who are severely or profoundly deaf in the United Kingdom, and 840 children who are born deaf each year (RNID, 2011a). It is clear from these figures that there is a large community of people who are deaf in the United Kingdom alone.</extra_info> 
+               <extra_info eid="9">Consequently, it must be considered how deafness may affect language acquisition and what steps caregivers can take to overcome any difficulties.</extra_info> 
+               <extra_info eid="10">There are different levels of deafness and hearing loss (RNID, 2011b); however, it is not within the scope of this essay to consider all of these levels. Therefore, this essay will mainly focus on people who are born with severe or profound deafness (RNID, 2011b).</extra_info> 
             </para>
          </content>
       </paragraph>
       <paragraph eid="11">
          <content prompt="Type your Introduction here." eid="12" dup="7">
-            <para prompt="Type your Introduction here." eid="12" dup="7">Introduction<br /><br />There are approximately 688 000 people who are severely or profoundly deaf in the United Kingdom, and 840 children who are born deaf each year (RNID, 2011a).<useful type="structure" eid="13">It is clear from these figures that</useful>there is a large community of people who are deaf in the United Kingdom alone.<useful type="linking" eid="14">Consequently</useful>,<useful eid="15" type="structure">it must be considered how</useful>deafness may affect language acquisition and what steps caregivers can take to overcome any difficulties. There are different levels of deafness and hearing loss (RNID, 2011b);<useful type="linking" eid="16">however</useful>,<useful type="structure" eid="17">it is not within the scope of this essay</useful>to consider all of these levels.<useful type="linking" eid="18">Therefore</useful>, this essay will mainly focus on people who are born with severe or profound deafness (RNID, 2011b).</para>
+            <para prompt="Type your Introduction here." eid="12" dup="7"><![CDATA[]]>Introduction<![CDATA[
+]]><![CDATA[
+]]><br></br><br></br>There are approximately 688 000 people who are severely or profoundly deaf in the United Kingdom, and 840 children who are born deaf each year (RNID, 2011a).<useful type="structure" eid="13">It is clear from these figures that</useful> there is a large community of people who are deaf in the United Kingdom alone.<useful type="linking" eid="14">Consequently</useful>,<useful eid="15" type="structure">it must be considered how</useful> deafness may affect language acquisition and what steps caregivers can take to overcome any difficulties. There are different levels of deafness and hearing loss (RNID, 2011b);<useful type="linking" eid="16">however</useful>,<useful type="structure" eid="17">it is not within the scope of this essay</useful> to consider all of these levels.<useful type="linking" eid="18">Therefore</useful>, this essay will mainly focus on people who are born with severe or profound deafness (RNID, 2011b).</para>
          </content>
       </paragraph>
       <paragraph eid="19">
          <name eid="20">Arguments against your case</name>
          <desc eid="21">Present the arguments against your case, including supporting evidence.</desc>
          <tip eid="22">TIP Evidence is crucial for any argument. You can draw on statistics, the results of research studies, newspaper reports/editorials or case studies.</tip>
-         <content prompt="Type the arguments against your case here." eid="23">
-            <para prompt="Type the arguments against your case here." eid="23">Spoken language acquisition<br /><br />Ninety percent of children who are deaf are born into hearing families … [Statistics are presented (omitted here).] …<br />Researchers have argued that deaf people are less proficient in speechreading than hearing people as the auditory aspect of language enables more competence in speech recognition<extra_info eid="24">(Bernstein et al., 1998: 212)</extra_info>. … [Evidence is provided through research studies (omitted here).] Therefore, speechreading will not be an effective means of communication for all people who are deaf.<br />Cued Speech is another method used by some people to help children who are deaf to communicate. ... [Elaboration on benefits and drawbacks is provided through citing research studies (omitted here).] However,<extra_info eid="25">Bavelier et al. (2003: 3)</extra_info>reason that this form of communication is not a natural language … This method could therefore impact negatively on the deaf child's language development (ibid).<br /><extra_info eid="26">Lewis (1987: 74)</extra_info>suggests that the acquisition of a spoken language can depend on many factors. [Elaboration on these factors follows (omitted here).] … However, regardless of the level of assistance … it is advisable that another approach to language could be sought to enable a child who is deaf to communicate.</para>
+         <content prompt="Type the Arguments against your case here." eid="23">
+            <para prompt="Type the Arguments against your case here." eid="23"><![CDATA[]]>Spoken language acquisition<![CDATA[
+]]><![CDATA[
+]]><br></br><br></br><p>Ninety percent of children who are deaf are born into hearing families … [Statistics are presented (omitted here).] …</p><![CDATA[
+]]>Researchers have argued that deaf people are less proficient in speechreading than hearing people as the auditory aspect of language enables more competence in speech recognition<extra_info eid="24">(Bernstein et al., 1998: 212)</extra_info>. … [Evidence is provided through research studies (omitted here).] Therefore, speechreading will not be an effective means of communication for all people who are deaf.<![CDATA[
+]]><p>Cued Speech is another method used by some people to help children who are deaf to communicate. ... [Elaboration on benefits and drawbacks is provided through citing research studies (omitted here).] However,<extra_info eid="25">Bavelier et al. (2003: 3)</extra_info> reason that this form of communication is not a natural language … This method could therefore impact negatively on the deaf child's language development (ibid).</p><![CDATA[
+]]><extra_info eid="26">Lewis (1987: 74)</extra_info> suggests that the acquisition of a spoken language can depend on many factors. [Elaboration on these factors follows (omitted here).] … However, regardless of the level of assistance … it is advisable that another approach to language could be sought to enable a child who is deaf to communicate.</para>
          </content>
       </paragraph>
       <paragraph eid="27">
-         <content prompt="Type the arguments against your case here."
+         <content prompt="Type the Arguments against your case here."
                   eid="28"
                   dup="23">
-            <para prompt="Type the arguments against your case here."
+            <para prompt="Type the Arguments against your case here."
                   eid="28"
-                  dup="23">Spoken language acquisition<br /><br />Ninety percent of children who are deaf are born into hearing families … [Statistics are presented (omitted here).] …<br /><useful type="position" eid="29">Researchers have argued that</useful>deaf people are less proficient in speechreading than hearing people as the auditory aspect of language enables more competence in speech recognition (Bernstein et al., 1998: 212). … [Evidence is provided through research studies (omitted here).]<useful type="linking" eid="30">Therefore</useful>, speechreading will not be an effective means of communication for all people who are deaf.<br />Cued Speech is another method used by some people to help children who are deaf to communicate. ... [Elaboration on benefits and drawbacks is provided through citing research studies (omitted here).]<useful type="linking" eid="31">However</useful>,<useful type="position" eid="32">Bavelier et al. (2003: 3) reason that</useful>this form of communication is not a natural language … This method<useful type="objective" eid="33">could therefore impact</useful>negatively on the deaf child's language development (ibid).<br /><useful type="position" eid="34">Lewis (1987: 74) suggests that</useful>the acquisition of a spoken language can depend on many factors. [Elaboration on these factors follows (omitted here).] …<useful type="linking" eid="35">However</useful>, regardless of the level of assistance …<useful type="structure" eid="36">it is advisable that</useful>another approach to language<useful type="objective" eid="37">could be sought</useful>to enable a child who is deaf to communicate.</para>
+                  dup="23"><![CDATA[]]>Spoken language acquisition<![CDATA[
+]]><![CDATA[
+]]><br></br><br></br><p>Ninety percent of children who are deaf are born into hearing families … [Statistics are presented (omitted here).] …</p><![CDATA[
+]]><useful type="position" eid="29">Researchers have argued that</useful> deaf people are less proficient in speechreading than hearing people as the auditory aspect of language enables more competence in speech recognition (Bernstein et al., 1998: 212). … [Evidence is provided through research studies (omitted here).]<useful type="linking" eid="30">Therefore</useful>, speechreading will not be an effective means of communication for all people who are deaf.<![CDATA[
+]]><p>Cued Speech is another method used by some people to help children who are deaf to communicate. ... [Elaboration on benefits and drawbacks is provided through citing research studies (omitted here).]<useful type="linking" eid="31">However</useful>,<useful type="position" eid="32">Bavelier et al. (2003: 3) reason that</useful> this form of communication is not a natural language … This method<useful type="objective" eid="33">could therefore impact</useful> negatively on the deaf child's language development (ibid).</p><![CDATA[
+]]><useful type="position" eid="34">Lewis (1987: 74) suggests that</useful> the acquisition of a spoken language can depend on many factors. [Elaboration on these factors follows (omitted here).] …<useful type="linking" eid="35">However</useful>, regardless of the level of assistance …<useful type="structure" eid="36">it is advisable that</useful> another approach to language<useful type="objective" eid="37">could be sought</useful> to enable a child who is deaf to communicate.</para>
          </content>
       </paragraph>
       <paragraph eid="38">
          <name eid="39">Arguments for your case</name>
          <desc eid="40">Present the arguments for your case, including supporting evidence.</desc>
          <tip eid="41">TIP Evidence is crucial for any argument. You can draw on statistics, the results of research studies, newspaper reports/editorials or case studies.</tip>
-         <content prompt="Type your arguments for your case here." eid="42">
-            <para prompt="Type your arguments for your case here." eid="42">Sign language acquisition<br /><br />Sign language appears to be a more natural language of people who are deaf<extra_info eid="43">(Sacks, 1989: 27–28)</extra_info>. A way of teaching deaf children to communicate, using both signed and spoken language, was through simultaneous communication<extra_info eid="44">(Dodd et al., 1998: 229)</extra_info>. [Elaboration on this method follows (omitted here).] …<br />Nevertheless, the majority of children who were educated with the simultaneous communication method had poor spoken and signed English … [Evidence is cited from research (omitted here).]<br />Sign languages, such as British Sign Language, are naturally occurring languages. Each one is a unique system of communication …<extra_info eid="45">Bavelier et al. (2003: 6–7)</extra_info>support this notion by highlighting research … [Related issues around the learning of sign language, including an example of a case study, are highlighted (omitted here).]</para>
+         <content prompt="Type your Arguments for your case here." eid="42">
+            <para prompt="Type your Arguments for your case here." eid="42"><![CDATA[]]>Sign language acquisition<![CDATA[
+]]><![CDATA[
+]]><br></br><br></br><p>Sign language appears to be a more natural language of people who are deaf<extra_info eid="43">(Sacks, 1989: 27–28)</extra_info>. A way of teaching deaf children to communicate, using both signed and spoken language, was through simultaneous communication<extra_info eid="44">(Dodd et al., 1998: 229)</extra_info>. [Elaboration on this method follows (omitted here).] …</p><![CDATA[
+]]>Nevertheless, the majority of children who were educated with the simultaneous communication method had poor spoken and signed English … [Evidence is cited from research (omitted here).]<![CDATA[
+]]><p>Sign languages, such as British Sign Language, are naturally occurring languages. Each one is a unique system of communication …<extra_info eid="45">Bavelier et al. (2003: 6–7)</extra_info> support this notion by highlighting research … [Related issues around the learning of sign language, including an example of a case study, are highlighted (omitted here).]</p></para>
          </content>
       </paragraph>
       <paragraph eid="46">
-         <content prompt="Type your arguments for your case here." eid="47" dup="42">
-            <para prompt="Type your arguments for your case here." eid="47" dup="42">Sign language acquisition<br /><br />Sign language<useful type="objective" eid="48">appears to be</useful>a more natural language of people who are deaf (Sacks, 1989: 27–28). A way of teaching deaf children to communicate, using both signed and spoken language, was through simultaneous communication (Dodd et al., 1998: 229). [Elaboration on this method follows (omitted here).] …<br /><useful type="linking" eid="49">Nevertheless</useful>, the majority of children who were educated with the simultaneous communication method had poor spoken and signed English … [Evidence is cited from research (omitted here).]<br />Sign languages, such as British Sign Language, are naturally occurring languages. Each one is a unique system of communication …<useful type="position" eid="50">Bavelier et al. (2003: 6–7) support this notion</useful>by highlighting research … [Related issues around the learning of sign language, including an example of a case study, are highlighted (omitted here).]</para>
+         <content prompt="Type your Arguments for your case here." eid="47" dup="42">
+            <para prompt="Type your Arguments for your case here." eid="47" dup="42"><![CDATA[]]>Sign language acquisition<![CDATA[
+]]><![CDATA[
+]]><br></br><br></br><p>Sign language<useful type="objective" eid="48">appears to be</useful> a more natural language of people who are deaf (Sacks, 1989: 27–28). A way of teaching deaf children to communicate, using both signed and spoken language, was through simultaneous communication (Dodd et al., 1998: 229). [Elaboration on this method follows (omitted here).] …</p><![CDATA[
+]]><useful type="linking" eid="49">Nevertheless</useful>, the majority of children who were educated with the simultaneous communication method had poor spoken and signed English … [Evidence is cited from research (omitted here).]<![CDATA[
+]]><p>Sign languages, such as British Sign Language, are naturally occurring languages. Each one is a unique system of communication …<useful type="position" eid="50">Bavelier et al. (2003: 6–7) support this notion</useful> by highlighting research … [Related issues around the learning of sign language, including an example of a case study, are highlighted (omitted here).]</p></para>
          </content>
       </paragraph>
       <paragraph eid="51">
          <name eid="52">Conclusion</name>
          <desc eid="53">Summarize your points and explain your informed conclusion.</desc>
          <content prompt="Type your Conclusion here." eid="54">
-            <para prompt="Type your Conclusion here." eid="54">Conclusion<br /><br /><extra_info eid="55">In conclusion, this essay has … [Evaluation of the approaches suggested in the essay follows.] … Thus, it seems that sign language is a more natural choice of communication. This has implications … [Elaboration on the implications follows.] …</extra_info><br /><extra_info eid="56">Although some parents may be concerned that learning a sign language will isolate their child from the community of hearing people</extra_info>, Mayberry et al. (2002, cited in Bavelier et al., 2003: 12) suggest that the acquisition of a sign language could facilitate the acquisition of a spoken language. …<extra_info eid="57">Thus, to reduce the risk of this happening, Bavelier et al. (2003: 15) propose that there should be a bilingual approach … This approach may help children who are deaf to reach their full potential.</extra_info><br />[A full list of references follows.]</para>
+            <para prompt="Type your Conclusion here." eid="54"><![CDATA[]]>Conclusion<![CDATA[
+]]><![CDATA[
+]]><br></br><br></br><p><extra_info eid="55">In conclusion, this essay has … [Evaluation of the approaches suggested in the essay follows.] … Thus, it seems that sign language is a more natural choice of communication. This has implications … [Elaboration on the implications follows.] …</extra_info> </p><![CDATA[
+]]><extra_info eid="56">Although some parents may be concerned that learning a sign language will isolate their child from the community of hearing people</extra_info>, Mayberry et al. (2002, cited in Bavelier et al., 2003: 12) suggest that the acquisition of a sign language could facilitate the acquisition of a spoken language. …<extra_info eid="57">Thus, to reduce the risk of this happening, Bavelier et al. (2003: 15) propose that there should be a bilingual approach … This approach may help children who are deaf to reach their full potential.</extra_info> <![CDATA[
+]]><p>[A full list of references follows.]</p></para>
          </content>
       </paragraph>
       <paragraph eid="58">
          <content prompt="Type your Conclusion here." eid="59" dup="54">
-            <para prompt="Type your Conclusion here." eid="59" dup="54">Conclusion<br /><br />In conclusion, this essay has … [Evaluation of the approaches suggested in the essay follows.] …<useful type="linking" eid="60">Thus</useful>,<useful type="structure" eid="61">it seems that</useful>sign language is a more natural choice of communication. This has implications … [Elaboration on the implications follows.] …<br /><useful type="linking" eid="62">Although</useful>some parents may be concerned that learning a sign language will isolate their child from the community of hearing people,<useful type="position" eid="63">Mayberry et al. (2002, cited in Bavelier et al., 2003: 12) suggest that</useful>the acquisition of a sign language<useful type="objective" eid="64">could facilitate</useful>the acquisition of a spoken language. …<useful type="linking" eid="65">Thus</useful>, to reduce the risk of this happening,<useful type="position" eid="66">Bavelier et al. (2003: 15) propose that</useful>there should be a bilingual approach … This approach<useful type="objective" eid="67">may help</useful>children who are deaf to reach their full potential.<br />[A full list of references follows.]</para>
+            <para prompt="Type your Conclusion here." eid="59" dup="54"><![CDATA[]]>Conclusion<![CDATA[
+]]><![CDATA[
+]]><br></br><br></br><p>In conclusion, this essay has … [Evaluation of the approaches suggested in the essay follows.] …<useful type="linking" eid="60">Thus</useful>,<useful type="structure" eid="61">it seems that</useful> sign language is a more natural choice of communication. This has implications … [Elaboration on the implications follows.] …</p><![CDATA[
+]]><useful type="linking" eid="62">Although</useful> some parents may be concerned that learning a sign language will isolate their child from the community of hearing people,<useful type="position" eid="63">Mayberry et al. (2002, cited in Bavelier et al., 2003: 12) suggest that</useful> the acquisition of a sign language<useful type="objective" eid="64">could facilitate</useful> the acquisition of a spoken language. …<useful type="linking" eid="65">Thus</useful>, to reduce the risk of this happening,<useful type="position" eid="66">Bavelier et al. (2003: 15) propose that</useful> there should be a bilingual approach … This approach<useful type="objective" eid="67">may help</useful> children who are deaf to reach their full potential.<![CDATA[
+]]><p>[A full list of references follows.]</p></para>
          </content>
       </paragraph>
    </paragraphs>

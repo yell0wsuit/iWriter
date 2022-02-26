@@ -2,43 +2,48 @@
 <!--Edited: 18 October 2013 10:49:09 by lead--><!--Edited: 14 October 2013 15:56:55 by webbsu--><!--Edited: 14 October 2013 15:55:29 by webbsu--><!--Edited: 09 October 2013 11:40:26 by webbsu--><!--Edited: 09 October 2013 10:18:08 by webbsu--><!--Edited: 04 October 2013 15:22:34 by webbsu--><!--Edited: 04 October 2013 11:52:02 by webbsu--><!--Edited: 30 September 2013 11:24:37 by webbsu--><!--Edited: 04 September 2013 10:15:08 by webbsu--><!--Edited: 10 July 2013 12:15:27 by duncanr--><!--Edited: 03 July 2013 12:42:16 by duncanr--><!--Edited: 03 July 2013 09:54:21 by duncanr--><!--Edited: 10 June 2013 14:50:09 by duncanr--><!--Edited: 05 June 2013 14:30:07 by duncanr--><!--Edited: 04 June 2013 14:03:29 by duncanr--><!--Edited: 16 April 2013 15:48:01 by duncanr--><!--Edited: 13 February 2013 08:36:58 by duncanr--><!--Edited: 07 February 2013 14:37:36 by duncanr--><!--Edited: 07 February 2013 12:39:50 by duncanr--><!--Edited: 05 February 2013 16:06:55 by duncanr--><!--Edited: 05 February 2013 15:21:35 by duncanr--><!--Edited: 05 February 2013 13:07:58 by duncanr--><framework>
    <framework_title>Writing an Abstract 2: social sciences</framework_title>
    <framework_intro>
-      <para>Here is a plan to help you write an abstract. Abstracts in the social sciences have a combination of three or four moves.<br />There are spaces for you to add the content of your abstract.</para>
+      <para><![CDATA[]]>Here is a plan to help you write an abstract. Abstracts in the social sciences have a combination of three or four moves.<![CDATA[
+]]><?xm-replace_text {para}?><![CDATA[
+]]><br></br>There are spaces for you to add the content of your abstract.</para>
    </framework_intro>
    <guided_tour>
       <step label="What is an abstract?">
          <commentary>
-            <para>The abstract occurs at the beginning of your dissertation or thesis. The main aim of the abstract is to provide the reader with a summary of your research.</para>
-            <para>The abstract is usually written at the end of the research process, and after writing the rest of the dissertation.</para>
+            <para><![CDATA[]]>The abstract occurs at the beginning of your dissertation or thesis. The main aim of the abstract is to provide the reader with a summary of your research.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para><![CDATA[]]>The abstract is usually written at the end of the research process, and after writing the rest of the dissertation.</para>
          </commentary>
       </step>
       <step label="How is it structured?" para_ids="4,10,15">
          <commentary>
-            <para>This model is from a social science field and appears in the journal ‘Applied Linguistics’. The research is on the use of language within a family and considers the impact of this on language fluency and school performance.</para>
-            <para>Abstracts in most disciplines have a combination of four moves. This abstract has three moves; it would be possible to include the move ‘Providing background information’.</para>
-            <para>Here is the framework that was used to present this abstract.</para>
+            <para><![CDATA[]]>This model is from a social science field and appears in the journal ‘Applied Linguistics’. The research is on the use of language within a family and considers the impact of this on language fluency and school performance.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para><![CDATA[]]>Abstracts in most disciplines have a combination of four moves. This abstract has three moves; it would be possible to include the move ‘Providing background information’.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para><![CDATA[]]>Here is the framework that was used to present this abstract.</para>
          </commentary>
       </step>
       <step label="Look at Move 1: Explaining the methods" para_ids="4,6">
          <commentary>
-            <para>The purpose of this move is to recount the methodological steps in the research. Here, the author provides information on the participants in the study (working-class and middle-class mothers of Cuban heritage) and the method (were questioned).</para>
+            <para><![CDATA[]]>The purpose of this move is to recount the methodological steps in the research. Here, the author provides information on the participants in the study (working-class and middle-class mothers of Cuban heritage) and the method (were questioned).</para>
          </commentary>
       </step>
       <step label="Look at Move 2: Presenting the aims" para_ids="10,12">
          <commentary>
-            <para>The purpose of this move is to summarize either the aims of the text (i.e. this paper, essay, thesis or dissertation) or the research process (the aims, methods, findings). Here, the past tense is used to summarize the aims of the research process.</para>
+            <para><![CDATA[]]>The purpose of this move is to summarize either the aims of the text (i.e. this paper, essay, thesis or dissertation) or the research process (the aims, methods, findings). Here, the past tense is used to summarize the aims of the research process.</para>
          </commentary>
       </step>
       <step label="Look at Move 3: Summarizing the results" para_ids="15,17">
          <commentary>
-            <para>The purpose is to summarize the findings/results of the study.</para>
+            <para><![CDATA[]]>The purpose is to summarize the findings/results of the study.</para>
          </commentary>
       </step>
       <step label="Show me useful language" para_ids="6,12,17">
          <commentary>
-            <para showme="7,8">Use of the passive voice when explaining the method.</para>
-            <para showme="13">Use of the past tense is to summarize the aims of the research process.</para>
-            <para showme="18">Use of the present tense or the past tense when summarizing results. Here, the past tense is used.</para>
-            <para showme="19">Language to contrast findings within a study</para>
+            <para showme="7,8"><![CDATA[]]>Use of the passive voice when explaining the method.</para>
+            <para showme="13"><![CDATA[]]>Use of the past tense is to summarize the aims of the research process.</para>
+            <para showme="18"><![CDATA[]]>Use of the present tense or the past tense when summarizing results. Here, the past tense is used.</para>
+            <para showme="19"><![CDATA[]]>Language to contrast findings within a study</para>
          </commentary>
       </step>
    </guided_tour>
@@ -89,21 +94,22 @@
          <name eid="4">Move 1: Explaining the methods</name>
          <desc eid="5">Recount the methodological steps in your research.</desc>
          <content prompt="Type Move 1 here." eid="6">
-            <para prompt="Type Move 1 here." eid="6"><useful type="position" eid="7">Working-class and middle-class mothers of Cuban heritage were questioned</useful>about their modes of accommodation to America in terms of language proficiencies. Specifically, they<useful type="position" eid="8">were asked</useful>about their own language fluency, in both Spanish and English, and that of their children.</para>
+            <para prompt="Type Move 1 here." eid="6"><![CDATA[]]><useful eid="7">Working-class and middle-class mothers of Cuban heritage were questioned</useful> about their modes of accommodation to America in terms of language proficiencies.<br></br> Specifically, they<useful type="position" eid="8">were asked</useful> about their own language fluency, in both Spanish and English, and that of their children.</para>
          </content>
       </paragraph>
       <paragraph eid="9">
          <name eid="10">Move 2: Presenting the aims</name>
          <desc eid="11">Summarize either the aims of the text (i.e. this paper, essay, thesis or dissertation) or the research process (the aims, methods, findings).</desc>
          <content prompt="Type Move 2 here." eid="12">
-            <para prompt="Type Move 2 here." eid="12"><useful type="objective" eid="13">The focus was on</useful>the within-family dynamics of the accommodation process, and the links between mothers' and children's language fluencies and children's school performance.</para>
+            <para prompt="Type Move 2 here." eid="12"><![CDATA[]]><useful eid="13">The focus was on</useful> the within-family dynamics of the accommodation process, and the links between mothers' and children's language fluencies and children's school performance.</para>
          </content>
       </paragraph>
       <paragraph eid="14">
          <name eid="15">Move 3: Summarizing the results</name>
          <desc eid="16">Summarize the findings/results of the study.</desc>
          <content prompt="Type Move 3 here." eid="17">
-            <para prompt="Type Move 3 here." eid="17"><useful type="structure" eid="18">Two distinct patterns emerged.</useful>For working-class mothers, the emphasis was more on encouraging their children to learn English in order to ‘succeed’ in America, especially in school—a ‘subtractive’ form of bilingualism and biculturalism where advances in English appear to be at the expense of Spanish fluency and heritage culture maintenance.<useful type="linking" eid="19">In contrast</useful>, for middle-class mothers, success was associated more with the encouragement of Spanish competence, not English—a form of ‘additive’ bilingualism where the heritage language and culture are protected as the process of Americanization runs its course.<br />(Lambert and Taylor, 1996) For the full reference, click Help and select References.</para>
+            <para prompt="Type Move 3 here." eid="17"><![CDATA[]]><useful eid="18">Two distinct patterns emerged.</useful> For working-class mothers, the emphasis was more on encouraging their children to learn English in order to ‘succeed’ in America, especially in school—a ‘subtractive’ form of bilingualism and biculturalism where advances in English appear to be at the expense of Spanish fluency and heritage culture maintenance.<useful type="linking" eid="19">In contrast</useful>, for middle-class mothers, success was associated more with the encouragement of Spanish competence, not English—a form of ‘additive’ bilingualism where the heritage language and culture are protected as the process of Americanization runs its course.<![CDATA[
+]]><br></br>(Lambert and Taylor, 1996) For the full reference, see <a target="_blank" href="iWriter_References.pdf">References</a>.</para>
          </content>
       </paragraph>
    </paragraphs>

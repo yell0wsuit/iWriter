@@ -2,77 +2,85 @@
 <!--Edited: 14 October 2013 16:12:35 by webbsu--><!--Edited: 14 October 2013 16:11:39 by webbsu--><!--Edited: 14 October 2013 14:29:49 by webbsu--><!--Edited: 09 October 2013 16:04:23 by webbsu--><!--Edited: 04 September 2013 11:07:08 by webbsu--><!--Edited: 04 September 2013 10:09:26 by webbsu--><!--Edited: 16 July 2013 10:37:15 by duncanr--><!--Edited: 16 July 2013 08:45:39 by duncanr--><!--Edited: 10 July 2013 11:32:10 by duncanr--><!--Edited: 10 July 2013 11:27:51 by duncanr--><!--Edited: 09 July 2013 09:38:38 by duncanr--><!--Edited: 09 July 2013 09:36:53 by duncanr--><!--Edited: 08 July 2013 13:52:21 by duncanr--><!--Edited: 08 July 2013 10:13:32 by duncanr--><!--Edited: 08 July 2013 09:54:37 by duncanr--><!--Edited: 08 July 2013 09:10:32 by duncanr--><!--Edited: 03 July 2013 10:49:09 by duncanr--><!--Edited: 03 July 2013 09:34:14 by duncanr--><!--Edited: 02 July 2013 09:34:15 by duncanr--><!--Edited: 07 June 2013 11:22:13 by duncanr--><!--Edited: 05 June 2013 16:07:26 by duncanr--><!--Edited: 05 June 2013 16:04:06 by duncanr--><!--Edited: 04 June 2013 15:33:44 by duncanr--><!--Edited: 04 June 2013 15:32:07 by duncanr--><!--Edited: 13 May 2013 16:04:10 by duncanr--><!--Edited: 13 May 2013 16:02:46 by duncanr--><!--Edited: 13 May 2013 08:59:00 by duncanr--><!--Edited: 07 May 2013 09:41:25 by duncanr--><!--Edited: 07 May 2013 09:22:32 by duncanr--><!--Edited: 29 April 2013 09:12:46 by duncanr--><!--Edited: 29 April 2013 09:10:29 by duncanr--><!--Edited: 29 April 2013 08:50:57 by duncanr--><!--Edited: 29 April 2013 08:44:50 by duncanr--><!--Edited: 29 April 2013 08:35:16 by duncanr--><!--Edited: 26 April 2013 16:28:28 by duncanr--><!--Edited: 26 April 2013 14:41:41 by duncanr--><!--Edited: 24 April 2013 16:37:08 by duncanr--><framework>
    <framework_title>Writing Essays 3: a compare and contrast essay</framework_title>
    <framework_intro>
-      <para>Here is a framework to help you write a compare and contrast essay. There are spaces for you to add the content of your essay.<br />Remember that you can double-click on any word to look it up in the dictionary.</para>
+      <para><![CDATA[]]>Here is a framework to help you write a compare and contrast essay. There are spaces for you to add the content of your essay.<![CDATA[
+]]><?xm-replace_text {para}?><![CDATA[
+]]><br></br></para>
    </framework_intro>
    <guided_tour>
       <step label="What is a compare and contrast essay?">
          <commentary>
-            <para>It is used when you need to point out similarities (compare) or differences (contrast) between two or more theories, arguments or ideas. In many essays, you will need to focus on both similarities and differences. The essay will need to show your understanding of the two or more things you are comparing and/or contrasting by referring to research.</para>
+            <para><![CDATA[]]>It is used when you need to point out similarities (compare) or differences (contrast) between two or more theories, arguments or ideas. In many essays, you will need to focus on both similarities and differences. The essay will need to show your understanding of the two or more things you are comparing and/or contrasting by referring to research.</para>
          </commentary>
       </step>
       <step label="How is a critique different?">
          <commentary>
-            <para>It is similar to the essay, but in addition to showing your understanding of the similarities and differences between the issues, you will need to display an element of critical evaluation. This means you need to question the information you read and assess its validity.</para>
+            <para><![CDATA[]]>It is similar to the essay, but in addition to showing your understanding of the similarities and differences between the issues, you will need to display an element of critical evaluation. This means you need to question the information you read and assess its validity.</para>
          </commentary>
       </step>
       <step label="How is it structured? "
             para_ids="6,10,11,17,18,24,25,33,34,48,49,58,70,71">
          <commentary>
-            <para>The model text is an example of a compare and contrast critique from the area of development economics.</para>
+            <para><![CDATA[]]>The model text is an example of a compare and contrast critique from the area of development economics.</para>
          </commentary>
       </step>
       <step label="Look at Paragraph 1: Introduction" para_ids="10,11,12">
          <commentary>
-            <para showme="13,82">The introduction begins with an overall statement on the topic.</para>
-            <para showme="14,83">It then articulates the two theories to be compared and contrasted.</para>
-            <para showme="15,84">It also states the aims of the essay.</para>
+            <para showme="13,82"><![CDATA[]]>The introduction begins with an overall statement on the topic.</para>
+            <para showme="14,83"><![CDATA[]]>It then articulates the two theories to be compared and contrasted.</para>
+            <para showme="15,84"><![CDATA[]]>It also states the aims of the essay.</para>
          </commentary>
       </step>
       <step label="Look at Paragraph 2" para_ids="17,18,20">
          <commentary>
-            <para>This paragraph introduces the theory and explains it.</para>
+            <para><![CDATA[]]>This paragraph introduces the theory and explains it.</para>
          </commentary>
       </step>
       <step label="Look at Paragraph 3" para_ids="24,25,26">
          <commentary>
-            <para>This paragraph presents an evaluation of the first theory.</para>
-            <para>It highlights the problems with it.</para>
-            <para>It points out the limitations of the theory.</para>
+            <para><![CDATA[]]>This paragraph presents an evaluation of the first theory.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para><![CDATA[]]>It highlights the problems with it.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para><![CDATA[]]>It points out the limitations of the theory.</para>
          </commentary>
       </step>
       <step label="Look at Paragraph 4: Differences" para_ids="33,34,36">
          <commentary>
-            <para>This paragraph introduces the second theory.</para>
-            <para showme="37">The second theory is presented as a solution to the problems of the first theory.</para>
-            <para showme="38">It highlights the different focus that dependency theory has.</para>
+            <para><![CDATA[]]>This paragraph introduces the second theory.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para showme="37"><![CDATA[]]>The second theory is presented as a solution to the problems of the first theory.</para>
+            <para showme="38"><![CDATA[]]>It highlights the different focus that dependency theory has.</para>
          </commentary>
       </step>
       <step label="Look at Paragraph 5 " para_ids="48,49,50">
          <commentary>
-            <para>This paragraph evaluates the second theory.</para>
-            <para showme="51">It highlights the limitations of the theory.</para>
-            <para showme="52,85">Then it refers to research to explain the limitations.</para>
+            <para><![CDATA[]]>This paragraph evaluates the second theory.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para showme="51"><![CDATA[]]>It highlights the limitations of the theory.</para>
+            <para showme="52,85"><![CDATA[]]>Then it refers to research to explain the limitations.</para>
          </commentary>
       </step>
       <step label="Look at Paragraph 6: Similarities" para_ids="58,59,60">
          <commentary>
-            <para>This paragraph assesses the research presented thus far and evaluates both theories.</para>
-            <para showme="61">The conclusion is that both theories are limited. This is the author's evaluation and interpretation of the research.</para>
+            <para><![CDATA[]]>This paragraph assesses the research presented thus far and evaluates both theories.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para showme="61"><![CDATA[]]>The conclusion is that both theories are limited. This is the author's evaluation and interpretation of the research.</para>
          </commentary>
       </step>
       <step label="Look at Paragraph 7: Conclusion" para_ids="70,71,72">
          <commentary>
-            <para>This paragraph summarizes the information in the essay.</para>
-            <para showme="73,74">The author highlights the value of the two theories.</para>
-            <para showme="86,75">Then the limitations of both theories are mentioned.</para>
+            <para><![CDATA[]]>This paragraph summarizes the information in the essay.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para showme="73,74"><![CDATA[]]>The author highlights the value of the two theories.</para>
+            <para showme="86,75"><![CDATA[]]>Then the limitations of both theories are mentioned.</para>
          </commentary>
       </step>
       <step label="Show me useful language" para_ids="8,12,20,28,40,54,63,77">
          <commentary>
-            <para showme="44,45,64,65">Phrases which express the notion of comparison</para>
-            <para showme="81">Phrases which express the notion of contrast</para>
-            <para showme="29,31,42,46,55,56,80,66,68,79,82">Negative evaluative words which help with comparison</para>
-            <para showme="30,41,43,67,78">Phrases which reflect the writer's position</para>
+            <para showme="44,45,64,65"><![CDATA[]]>Phrases which express the notion of comparison</para>
+            <para showme="81"><![CDATA[]]>Phrases which express the notion of contrast</para>
+            <para showme="29,31,42,46,55,56,80,66,68,79,82"><![CDATA[]]>Negative evaluative words which help with comparison</para>
+            <para showme="30,41,43,67,78"><![CDATA[]]>Phrases which reflect the writer's position</para>
          </commentary>
       </step>
    </guided_tour>
@@ -118,15 +126,17 @@
          <name eid="5">Title</name>
          <desc eid="6">The title of the essay or the question that the essay answers</desc>
          <tip eid="7">TIP If you are asked to write a critique, in addition to showing your understanding of the similarities and differences between the issues, you will need to display an element of critical evaluation. This means you need to question the information you read and assess its validity.</tip>
-         <content prompt="Type your title here." eid="8">
-            <para prompt="Type your title here." eid="8">Examine any two development theories, evaluating their effectiveness.</para>
+         <content prompt="Type your Title here." eid="8">
+            <para prompt="Type your Title here." eid="8"><![CDATA[]]>Examine any two development theories, evaluating their effectiveness.</para>
          </content>
       </paragraph>
       <paragraph eid="9">
          <name eid="10">Paragraph 1: Introduction</name>
-         <desc eid="11">Begin with a general statement on the topic.<br />Clearly state the theories, arguments or ideas to be compared.<br />State the aims and organization of the essay.</desc>
+         <desc eid="11"><p>Begin with a general statement on the topic.</p><![CDATA[<p>
+]]>Clearly state the theories, arguments or ideas to be compared.<![CDATA[</p>
+]]><p>State the aims and organization of the essay.</p></desc>
          <content prompt="Type your Introduction here." eid="12">
-            <para prompt="Type your Introduction here." eid="12"><extra_info eid="13">The concept of development</extra_info>as a means to alleviate poverty and improve the lives of people<extra_info eid="82">is an extremely complex, problematic thesis</extra_info>...<extra_info eid="14">This essay will focus on two development theories: firstly</extra_info>, Rostow's 1960 … modernization theory,<extra_info eid="83">and secondly</extra_info>dependency theory.<extra_info eid="15">Both of these theories will be examined critically</extra_info>by placing them in a wider temporal context,<extra_info eid="84">and their effectiveness evaluated</extra_info>in relation to their practical application.</para>
+            <para prompt="Type your Introduction here." eid="12"><![CDATA[]]><extra_info eid="13">The concept of development</extra_info> as a means to alleviate poverty and improve the lives of people<extra_info eid="82">is an extremely complex, problematic thesis</extra_info>...<extra_info eid="14">This essay will focus on two development theories: firstly</extra_info>, Rostow's 1960 … modernization theory,<extra_info eid="83">and secondly</extra_info> dependency theory.<extra_info eid="15">Both of these theories will be examined critically</extra_info> by placing them in a wider temporal context,<extra_info eid="84">and their effectiveness evaluated</extra_info> in relation to their practical application.</para>
          </content>
       </paragraph>
       <paragraph eid="16">
@@ -134,19 +144,19 @@
          <desc eid="18">A description and explanation of the first theory, argument or idea</desc>
          <tip eid="19">TIP Use research and provide supporting evidence.</tip>
          <content prompt="Type Paragraph 2 here." eid="20">
-            <para prompt="Type Paragraph 2 here." eid="20">Modernization theory is a concept explicated … by American economist Walt Rostow in 1960. Rostow outlines five stages … [Description of the five stages follows (omitted here).] … This conceptualization of development can therefore be seen to offer an optimistic pathway for countries to follow and ultimately achieve modernization.</para>
+            <para prompt="Type Paragraph 2 here." eid="20"><![CDATA[]]>Modernization theory is a concept explicated … by American economist Walt Rostow in 1960. Rostow outlines five stages … [Description of the five stages follows (omitted here).] … This conceptualization of development can therefore be seen to offer an optimistic pathway for countries to follow and ultimately achieve modernization.</para>
          </content>
       </paragraph>
       <paragraph eid="23">
          <name eid="24">Paragraph 3</name>
          <desc eid="25">Evaluation of the first theory, argument or idea</desc>
          <content prompt="Type Paragraph 3 here." eid="26">
-            <para prompt="Type Paragraph 3 here." eid="26">The thematic, structured approach by Rostow presents value for examination … [Evaluation of the theory follows (omitted here).] ... Three further fundamental problems undermine Rostow's model … [Three problems are stated (omitted here).] These criticisms are echoed by Kothari and Minogue (2002) … It is clear that there are a variety of limitations …</para>
+            <para prompt="Type Paragraph 3 here." eid="26"><![CDATA[]]>The thematic, structured approach by Rostow presents value for examination … [Evaluation of the theory follows (omitted here).] ... Three further fundamental problems undermine Rostow's model … [Three problems are stated (omitted here).] These criticisms are echoed by Kothari and Minogue (2002) … It is clear that there are a variety of limitations …</para>
          </content>
       </paragraph>
       <paragraph eid="27">
          <content prompt="Type Paragraph 3 here." eid="28" dup="26">
-            <para prompt="Type Paragraph 3 here." eid="28" dup="26">The thematic, structured approach by Rostow presents value for examination … [Evaluation of the theory follows (omitted here).] ... Three further fundamental problems<useful type="collocation" eid="29">undermine</useful>Rostow's model … [Three problems are stated (omitted here).] These criticisms are echoed by Kothari and Minogue (2002) …<useful type="structure" eid="30">It is clear that</useful>there are a variety of<useful type="collocation" eid="31">limitations</useful>…</para>
+            <para prompt="Type Paragraph 3 here." eid="28" dup="26"><![CDATA[]]>The thematic, structured approach by Rostow presents value for examination … [Evaluation of the theory follows (omitted here).] ... Three further fundamental problems<useful type="collocation" eid="29">undermine</useful> Rostow's model … [Three problems are stated (omitted here).] These criticisms are echoed by Kothari and Minogue (2002) …<useful type="structure" eid="30">It is clear that</useful> there are a variety of<useful type="collocation" eid="31">limitations</useful> …</para>
          </content>
       </paragraph>
       <paragraph eid="32">
@@ -154,55 +164,56 @@
          <desc eid="34">Introduce the second theory, argument or idea and highlight the differences.</desc>
          <tip eid="35">TIP Use research and provide supporting evidence.</tip>
          <content prompt="Type Paragraph 4 here." eid="36">
-            <para prompt="Type Paragraph 4 here." eid="36"><extra_info eid="37">These critiques were contemporarily recognized, and led to the emergence of dependency theory as a development thesis.</extra_info>This chronological development arguably represents that only a few years' hindsight was sufficient to discredit Rostow and modernization as a practical means of development. The dependency school is most commonly associated with the work of Andre Gunder Frank in 1967… [Reference to other research follows (omitted here).] … It is therefore more realistic to view the global economic system not as a potentially cooperative one as implied by Rostow and modernization, but as an exploitative system, reliant on inequality that fundamentally benefits the core and stifles any notion of significant development for the periphery. This contextual approach offers an insight into development issues that modernization fails to capture and,<extra_info eid="38">in this respect, dependency theory offers a more plausible framework of how development strategies should be considered</extra_info>.</para>
+            <para prompt="Type Paragraph 4 here." eid="36"><![CDATA[]]><extra_info eid="37">These critiques were contemporarily recognized, and led to the emergence of dependency theory as a development thesis.</extra_info> This chronological development arguably represents that only a few years' hindsight was sufficient to discredit Rostow and modernization as a practical means of development. The dependency school is most commonly associated with the work of Andre Gunder Frank in 1967… [Reference to other research follows (omitted here).] … It is therefore more realistic to view the global economic system not as a potentially cooperative one as implied by Rostow and modernization, but as an exploitative system, reliant on inequality that fundamentally benefits the core and stifles any notion of significant development for the periphery. This contextual approach offers an insight into development issues that modernization fails to capture and,<extra_info eid="38">in this respect, dependency theory offers a more plausible framework of how development strategies should be considered</extra_info>.</para>
          </content>
       </paragraph>
       <paragraph eid="39">
          <content prompt="Type Paragraph 4 here." eid="40" dup="36">
-            <para prompt="Type Paragraph 4 here." eid="40" dup="36">These critiques were contemporarily recognized, and led to the emergence of dependency theory as a development thesis. This chronological development<useful type="structure" eid="41">arguably</useful>represents that only a few years' hindsight was sufficient to<useful type="collocation" eid="42">discredit</useful>Rostow and modernization as a practical means of development. The dependency school is most commonly associated with the work of Andre Gunder Frank in 1967… [Reference to other research follows (omitted here).] …<useful type="structure" eid="43">It is therefore more realistic to view</useful>the global economic system<useful type="objective" eid="44">not as</useful>a potentially cooperative one as implied by Rostow and modernization,<useful type="objective" eid="45">but as</useful>an exploitative system, reliant on inequality that fundamentally benefits the core and stifles any notion of significant development for the periphery. This contextual approach offers an insight into development issues that modernization<useful type="collocation" eid="46">fails</useful>to capture and, in this respect, dependency theory offers a<useful type="position" eid="81">more plausible framework</useful>of how development strategies should be considered.</para>
+            <para prompt="Type Paragraph 4 here." eid="40" dup="36"><![CDATA[]]>These critiques were contemporarily recognized, and led to the emergence of dependency theory as a development thesis. This chronological development<useful type="structure" eid="41">arguably</useful> represents that only a few years' hindsight was sufficient to<useful type="collocation" eid="42">discredit</useful> Rostow and modernization as a practical means of development. The dependency school is most commonly associated with the work of Andre Gunder Frank in 1967… [Reference to other research follows (omitted here).] …<useful type="structure" eid="43">It is therefore more realistic to view</useful> the global economic system<useful type="objective" eid="44">not as</useful> a potentially cooperative one as implied by Rostow and modernization,<useful type="objective" eid="45">but as</useful> an exploitative system, reliant on inequality that fundamentally benefits the core and stifles any notion of significant development for the periphery. This contextual approach offers an insight into development issues that modernization<useful type="collocation" eid="46">fails</useful> to capture and, in this respect, dependency theory offers a<useful type="position" eid="81">more plausible framework</useful> of how development strategies should be considered.</para>
          </content>
       </paragraph>
       <paragraph eid="47">
          <name eid="48">Paragraph 5</name>
          <desc eid="49">Evaluation of the second theory, argument or idea</desc>
          <content prompt="Type Paragraph 5 here." eid="50">
-            <para prompt="Type Paragraph 5 here." eid="50">Dependency theory is a valuable geographical concept …<extra_info eid="51">However, it has continued to receive extensive criticism within the field of development studies.</extra_info>
-               <extra_info eid="52">Gulalp (1998) argues that … These critiques pose several questions …</extra_info>Although it offers some rational explanation as to the situation of many developing countries,<extra_info eid="85">it fails to offer enough reason and clarity</extra_info>in formulating a holistic development strategy.</para>
+            <para prompt="Type Paragraph 5 here." eid="50"><![CDATA[]]>Dependency theory is a valuable geographical concept …<extra_info eid="51">However, it has continued to receive extensive criticism within the field of development studies.</extra_info> 
+               <extra_info eid="52">Gulalp (1998) argues that … These critiques pose several questions …</extra_info> Although it offers some rational explanation as to the situation of many developing countries,<extra_info eid="85">it fails to offer enough reason and clarity</extra_info> in formulating a holistic development strategy.</para>
          </content>
       </paragraph>
       <paragraph eid="53">
          <content prompt="Type Paragraph 5 here." eid="54" dup="50">
-            <para prompt="Type Paragraph 5 here." eid="54" dup="50">Dependency theory is a valuable geographical concept … However, it has continued to receive extensive<useful type="collocation" eid="80">criticism</useful>within the field of development studies. Gulalp (1998) argues that … These critiques pose several questions …<useful type="collocation" eid="55">Although it offers some</useful>rational explanation as to the situation of many developing countries,<useful type="collocation" eid="56">it fails to offer enough</useful>reason and clarity in formulating a holistic development strategy.</para>
+            <para prompt="Type Paragraph 5 here." eid="54" dup="50"><![CDATA[]]>Dependency theory is a valuable geographical concept … However, it has continued to receive extensive<useful type="collocation" eid="80">criticism</useful> within the field of development studies. Gulalp (1998) argues that … These critiques pose several questions …<useful type="collocation" eid="55">Although it offers some</useful> rational explanation as to the situation of many developing countries,<useful type="collocation" eid="56">it fails to offer enough</useful> reason and clarity in formulating a holistic development strategy.</para>
          </content>
       </paragraph>
       <paragraph eid="57">
          <name eid="58">Paragraph 6: Similarities</name>
          <desc eid="59">Examine the similarities between both theories, arguments or ideas.</desc>
          <content prompt="Type Paragraph 6 here." eid="60">
-            <para prompt="Type Paragraph 6 here." eid="60">The final point of comment with regards to both of the development theories is how they relate to a wider development paradigm. Both theories emerged chronologically …<extra_info eid="61">They both, however, strongly represent what development at that time meant … In this context, the dynamic nature of the entire development thesis renders both modernization and dependency theory of little realistic value, and arguably ineffective as development theories.</extra_info>
+            <para prompt="Type Paragraph 6 here." eid="60"><![CDATA[]]>The final point of comment with regards to both of the development theories is how they relate to a wider development paradigm. Both theories emerged chronologically …<extra_info eid="61">They both, however, strongly represent what development at that time meant … In this context, the dynamic nature of the entire development thesis renders both modernization and dependency theory of little realistic value, and arguably ineffective as development theories.</extra_info> 
             </para>
          </content>
       </paragraph>
       <paragraph eid="62">
          <content prompt="Type Paragraph 6 here." eid="63" dup="60">
-            <para prompt="Type Paragraph 6 here." eid="63" dup="60">The final point of comment with regards to both of the development theories is how they relate to a wider development paradigm.<useful type="objective" eid="64">Both theories emerged</useful>chronologically …<useful type="objective" eid="65">They both, however</useful>, strongly represent what development at that time meant … In this context, the dynamic nature of the entire development thesis renders both modernization and dependency theory of<useful type="collocation" eid="66">little</useful>realistic value, and<useful type="structure" eid="67">arguably</useful>
-               <useful type="collocation" eid="68">ineffective</useful>as development theories.</para>
+            <para prompt="Type Paragraph 6 here." eid="63" dup="60"><![CDATA[]]>The final point of comment with regards to both of the development theories is how they relate to a wider development paradigm.<useful type="objective" eid="64">Both theories emerged</useful> chronologically …<useful type="objective" eid="65">They both, however</useful>, strongly represent what development at that time meant … In this context, the dynamic nature of the entire development thesis renders both modernization and dependency theory of<useful type="collocation" eid="66">little</useful> realistic value, and<useful type="structure" eid="67">arguably</useful> 
+               <useful type="collocation" eid="68">ineffective</useful> as development theories.</para>
          </content>
       </paragraph>
       <paragraph eid="69">
          <name eid="70">Paragraph 7: Conclusion</name>
-         <desc eid="71">Summarize the information in the essay.<br />Evaluate the theories, arguments or ideas by highlighting their value and mentioning their limitations.</desc>
+         <desc eid="71"><p>Summarize the information in the essay.</p><![CDATA[</br>
+]]>Evaluate the theories, arguments or ideas by highlighting their value and mentioning their limitations.</desc>
          <tip>Address the outcome of the comparison or contrast.</tip>
          <content prompt="Type your Conclusion here." eid="72">
-            <para prompt="Type your Conclusion here." eid="72">In conclusion, it is clear that<extra_info eid="73">both Rostow's modernization model and dependency theory have attempted to address the complex notion of development in different ways. …</extra_info>
-               <extra_info eid="86">The two theories, however, have received extensive criticism …</extra_info>
-               <extra_info eid="74">The overall contribution of modernization theory and dependency theory cannot be entirely disregarded</extra_info>, as they have each helped contemporary development theories realize their present form,<extra_info eid="75">but their effectiveness in their own right holds little practical value within the current field of development.</extra_info>
+            <para prompt="Type your Conclusion here." eid="72"><![CDATA[]]>In conclusion, it is clear that<extra_info eid="73">both Rostow's modernization model and dependency theory have attempted to address the complex notion of development in different ways. …</extra_info> 
+               <extra_info eid="86">The two theories, however, have received extensive criticism …</extra_info> 
+               <extra_info eid="74">The overall contribution of modernization theory and dependency theory cannot be entirely disregarded</extra_info>, as they have each helped contemporary development theories realize their present form,<extra_info eid="75">but their effectiveness in their own right holds little practical value within the current field of development.</extra_info> 
             </para>
          </content>
       </paragraph>
       <paragraph eid="76">
          <content prompt="Type your Conclusion here." eid="77" dup="72">
-            <para prompt="Type your Conclusion here." eid="77" dup="72">In conclusion,<useful type="structure" eid="78">it is clear that</useful>both Rostow's modernization model and dependency theory have attempted to address the complex notion of development in different ways. … The two theories, however, have received extensive<useful type="collocation" eid="79">criticism</useful>… The overall contribution of modernization theory and dependency theory cannot be entirely disregarded, as they have each helped contemporary development theories realize their present form, but their effectiveness in their own right holds<useful type="collocation" eid="82">little</useful>practical value within the current field of development.</para>
+            <para prompt="Type your Conclusion here." eid="77" dup="72"><![CDATA[]]>In conclusion,<useful type="structure" eid="78">it is clear that</useful> both Rostow's modernization model and dependency theory have attempted to address the complex notion of development in different ways. … The two theories, however, have received extensive<useful type="collocation" eid="79">criticism</useful> … The overall contribution of modernization theory and dependency theory cannot be entirely disregarded, as they have each helped contemporary development theories realize their present form, but their effectiveness in their own right holds<useful type="collocation" eid="82">little</useful> practical value within the current field of development.</para>
          </content>
       </paragraph>
    </paragraphs>

@@ -2,61 +2,64 @@
 <!--Edited: 18 October 2013 10:41:29 by lead--><!--Edited: 14 October 2013 16:08:26 by webbsu--><!--Edited: 14 October 2013 14:31:33 by webbsu--><!--Edited: 10 October 2013 15:52:15 by webbsu--><!--Edited: 10 October 2013 15:43:04 by webbsu--><!--Edited: 10 October 2013 15:26:31 by webbsu--><!--Edited: 10 October 2013 14:02:10 by webbsu--><!--Edited: 09 October 2013 14:55:05 by webbsu--><!--Edited: 09 October 2013 14:53:26 by webbsu--><!--Edited: 09 October 2013 14:46:12 by webbsu--><!--Edited: 09 October 2013 14:42:57 by webbsu--><!--Edited: 06 September 2013 12:13:36 by webbsu--><!--Edited: 04 September 2013 16:15:21 by webbsu--><!--Edited: 04 September 2013 12:47:39 by webbsu--><!--Edited: 04 September 2013 12:03:48 by webbsu--><!--Edited: 04 September 2013 11:45:21 by webbsu--><!--Edited: 04 September 2013 11:42:07 by webbsu--><!--Edited: 04 September 2013 11:30:30 by webbsu--><!--Edited: 04 September 2013 11:03:56 by webbsu--><!--Edited: 07 August 2013 16:29:39 by webbsu--><!--Edited: 07 August 2013 16:25:46 by webbsu--><!--Edited: 18 July 2013 10:16:38 by duncanr--><!--Edited: 18 July 2013 09:40:32 by duncanr--><!--Edited: 18 July 2013 09:30:26 by duncanr--><framework>
    <framework_title>Case Studies 2: health sciences</framework_title>
    <framework_intro>
-      <para>Here is a framework to help you write an effective health sciences case study. There are spaces for you to add your own text.<br />Remember that you can double-click on any word to look it up in the dictionary.</para>
+      <para><![CDATA[]]>Here is a framework to help you write an effective health sciences case study. There are spaces for you to add your own text.<![CDATA[
+]]><?xm-replace_text {para}?><![CDATA[
+]]><br></br><br></br>Remember that you can double-click on any word to look it up in the dictionary.</para>
    </framework_intro>
    <guided_tour>
       <step label="What is a health sciences case study?">
          <commentary>
-            <para>Case studies are widely used in the health sciences. The case presentation invariably relates to a real-life patient and typically contains the presenting features and the relevant medical/social/family history, along with investigations, treatment and follow-up.</para>
+            <para><![CDATA[]]>Case studies are widely used in the health sciences. The case presentation invariably relates to a real-life patient and typically contains the presenting features and the relevant medical/social/family history, along with investigations, treatment and follow-up.</para>
          </commentary>
       </step>
       <step label="What is its purpose?">
          <commentary>
-            <para>The primary aim of case studies in the health field generally is the identification and definition of a problem followed by recommendations. However, different areas of the health sciences may have different aims, such as: proposing a plan of action or a care treatment plan, or suggesting interventions. There may also be more reflective practice in some case studies than others.</para>
+            <para><![CDATA[]]>The primary aim of case studies in the health field generally is the identification and definition of a problem followed by recommendations. However, different areas of the health sciences may have different aims, such as: proposing a plan of action or a care treatment plan, or suggesting interventions. There may also be more reflective practice in some case studies than others.</para>
          </commentary>
       </step>
       <step label="How is the text organized?"
             para_ids="5,6,9,10,13,14,29,30,42,43">
          <commentary>
-            <para>Here is the framework that was used to present this case study.</para>
+            <para><![CDATA[]]>Here is the framework that was used to present this case study.</para>
          </commentary>
       </step>
       <step label="Look at the Introduction" para_ids="5,6">
          <commentary>
-            <para>The extracts in the model are taken from a case study relating to a patient suffering from Parkinson's Disease, written by a student nurse.</para>
-            <para>The Introduction is omitted from the model, but it identifies the patient under study and the framework and criteria for assessment.</para>
+            <para><![CDATA[]]>The extracts in the model are taken from a case study relating to a patient suffering from Parkinson's Disease, written by a student nurse.</para>
+            <para><![CDATA[]]><?xm-replace_text {para}?></para>
+            <para><![CDATA[]]>The Introduction is omitted from the model, but it identifies the patient under study and the framework and criteria for assessment.</para>
          </commentary>
       </step>
       <step label="Look at the Case Presentation" para_ids="9,10">
          <commentary>
-            <para>The Case Presentation is omitted from the model, but it presents the patient's case, explaining that the patient suffers from a long-term condition and is cared for by her husband. It states that the patient was admitted to hospital following a fall in her home. The writer then identifies a problem: failure in the care provided at discharge.</para>
+            <para><![CDATA[]]>The Case Presentation is omitted from the model, but it presents the patient's case, explaining that the patient suffers from a long-term condition and is cared for by her husband. It states that the patient was admitted to hospital following a fall in her home. The writer then identifies a problem: failure in the care provided at discharge.</para>
          </commentary>
       </step>
       <step label="Look at the Evaluation" para_ids="13,14,15">
          <commentary>
-            <para>Evaluation of the case from legal and policy perspectives.</para>
-            <para>The section first gives background information, which is omitted here. The writer outlines The National Service Framework for Long-term Conditions, supported by statistics and references to official and professional sources.</para>
-            <para showme="16">These points are related to the case, leading to questions about the management of the case.</para>
-            <para showme="17">The legal guidelines are set out.</para>
-            <para showme="18,19,20,21">Then the particulars of the case are assessed, leading to criticism of the shortcomings.</para>
+            <para><![CDATA[]]>Evaluation of the case from legal and policy perspectives.</para>
+            <para><![CDATA[]]>The section first gives background information, which is omitted here. The writer outlines The National Service Framework for Long-term Conditions, supported by statistics and references to official and professional sources.</para>
+            <para showme="16"><![CDATA[]]>These points are related to the case, leading to questions about the management of the case.</para>
+            <para showme="17"><![CDATA[]]>The legal guidelines are set out.</para>
+            <para showme="18,19,20,21"><![CDATA[]]>Then the particulars of the case are assessed, leading to criticism of the shortcomings.</para>
          </commentary>
       </step>
       <step label="Look at the Recommendations" para_ids="29,30,31">
          <commentary>
-            <para>This contains learning points for future care.</para>
-            <para showme="32">The most important point is identified first.</para>
+            <para><![CDATA[]]>This contains learning points for future care.</para>
+            <para showme="32"><![CDATA[]]>The most important point is identified first.</para>
          </commentary>
       </step>
       <step label="Look at the Conclusion" para_ids="42,43,45">
          <commentary>
-            <para>This contains more general reflections on what can be learned from this case study about managing patients' care.</para>
+            <para><![CDATA[]]>This contains more general reflections on what can be learned from this case study about managing patients' care.</para>
          </commentary>
       </step>
       <step label="Show me useful language" para_ids="23,34,45">
          <commentary>
-            <para showme="24,25,26,27,46">Evaluation words and phrases (negative and positive)</para>
-            <para showme="35,37,39">Modal verbs used to make recommendations</para>
-            <para showme="36,38,40">Words and phrases to state purpose</para>
+            <para showme="24,25,26,27,46"><![CDATA[]]>Evaluation words and phrases (negative and positive)</para>
+            <para showme="35,37,39"><![CDATA[]]>Modal verbs used to make recommendations</para>
+            <para showme="36,38,40"><![CDATA[]]>Words and phrases to state purpose</para>
          </commentary>
       </step>
    </guided_tour>
@@ -108,39 +111,53 @@
          <name eid="5">Introduction of the case study</name>
          <desc eid="6">Identify a problem or describe an issue relating to a patient.</desc>
          <content prompt="Type your Introduction here" eid="7">
-            <para prompt="Type your Introduction here" eid="7">The Introduction is omitted in the model text.</para>
+            <para prompt="Type your Introduction here" eid="7"><![CDATA[]]>The Introduction is omitted in the model text.</para>
          </content>
       </paragraph>
       <paragraph eid="8">
          <name eid="9">Presentation of the case</name>
          <desc eid="10">Present the patient's case from the medical, social and family perspective.</desc>
          <content prompt="Type the case presentation here." eid="11">
-            <para prompt="Type the case presentation here." eid="11">The case presentation is omitted in the model text.</para>
+            <para prompt="Type the case presentation here." eid="11"><![CDATA[]]>The case presentation is omitted in the model text.</para>
          </content>
       </paragraph>
       <paragraph eid="12">
          <name eid="13">Evaluation of the case</name>
          <desc eid="14">Evaluate the case using criteria such as legislation and/or professional guidelines.</desc>
          <content prompt="Type your Evaluation here." eid="15">
-            <para prompt="Type your Evaluation here." eid="15"><extra_info eid="16">As seen in the above case study, Mr Jones suggested he was unable to manage the sole care of his wife. Many authors have suggested anxiety and depression to be high amongst full-time carers (Playfer et al., 2001; Twigg et al., 1994). So, what acts, policies, recommendations and frameworks have been set in place to ensure that Mr Jones is able not only to provide a good quality of life to his wife, but to expect a quality of life he was unable to have without outside input? Furthermore, was the discharge planning in hospital of clinical governance standard, or did the multi-disciplinary team overlook Mr Jones's needs?</extra_info><br />• Supporting the carer through clinical governance and policies<br /><extra_info eid="17">Ensuring patients and carers receive the gold standard of care is the responsibility of clinical governance. Implemented in the 1998 Health Act …, it set out to provide a quality service and clear lines for accountability, the management of risks and addressing poor performance (National Audit Office, 2007) … [Further paragraphs (omitted here) discuss the legal guidelines and clinical best practice in more detail.] …</extra_info><br /><extra_info eid="18">Applying the National Service Framework for Long-term Conditions (2005) to the case study leads to the conclusion that health care professionals did not comply with the necessary requirements of the framework. The key requirements of this framework state that the care provided must be patient- and carer-centred so that they can make their own informed decisions on the care that will be installed.</extra_info><br /><extra_info eid="19">When these guidelines are applied to Mrs Jones and compared with the actions taken by the MDT, those actions appear inadequate. ...</extra_info><br /><extra_info eid="21">Due to the failure to recognize other falls prevention plans, clinical governance has not been applied at an optimal level.</extra_info>
+            <para prompt="Type your Evaluation here." eid="15"><![CDATA[]]><extra_info eid="16">As seen in the above case study, Mr Jones suggested he was unable to manage the sole care of his wife. Many authors have suggested anxiety and depression to be high amongst full-time carers (Playfer et al., 2001; Twigg et al., 1994). So, what acts, policies, recommendations and frameworks have been set in place to ensure that Mr Jones is able not only to provide a good quality of life to his wife, but to expect a quality of life he was unable to have without outside input? Furthermore, was the discharge planning in hospital of clinical governance standard, or did the multi-disciplinary team overlook Mr Jones's needs?</extra_info> <![CDATA[
+]]><br></br>• Supporting the carer through clinical governance and policies<![CDATA[
+]]><extra_info eid="17"><br></br>Ensuring patients and carers receive the gold standard of care is the responsibility of clinical governance. Implemented in the 1998 Health Act …, it set out to provide a quality service and clear lines for accountability, the management of risks and addressing poor performance (National Audit Office, 2007) … [Further paragraphs (omitted here) discuss the legal guidelines and clinical best practice in more detail.] …</extra_info> <![CDATA[
+]]><extra_info eid="18"><br></br>Applying the National Service Framework for Long-term Conditions (2005) to the case study leads to the conclusion that health care professionals did not comply with the necessary requirements of the framework. The key requirements of this framework state that the care provided must be patient- and carer-centred so that they can make their own informed decisions on the care that will be installed.</extra_info> <![CDATA[
+]]><extra_info eid="19"><br></br>When these guidelines are applied to Mrs Jones and compared with the actions taken by the MDT, those actions appear inadequate. ...</extra_info> <![CDATA[
+]]><extra_info eid="21"><br></br>Due to the failure to recognize other falls prevention plans, clinical governance has not been applied at an optimal level.</extra_info> 
             </para>
          </content>
       </paragraph>
       <paragraph eid="22">
          <content prompt="Type your Evaluation here." eid="23" dup="15">
-            <para prompt="Type your Evaluation here." eid="23" dup="15">As seen in the above case study, Mr Jones suggested he was unable to manage the sole care of his wife. Many authors have suggested anxiety and depression to be high amongst full-time carers (Playfer et al., 2001; Twigg et al., 1994). So, what acts, policies, recommendations and frameworks have been set in place to ensure that Mr Jones is able not only to provide a good quality of life to his wife, but to expect a quality of life he was unable to have without outside input? Furthermore, was the discharge planning in hospital of clinical governance standard, or did the multi-disciplinary team overlook Mr Jones's needs?<br />• Supporting the carer through clinical governance and policies<br />Ensuring patients and carers receive the gold standard of care is the responsibility of clinical governance. Implemented in the 1998 Health Act …, it set out to provide a quality service and clear lines for accountability, the management of risks and addressing poor performance (National Audit Office 2007) … [Further paragraphs (omitted here) discuss the legal guidelines and clinical best practice in more detail.] …<br />Applying the National Service Framework for Long-term Conditions (2005) to the case study leads to the conclusion that health care professionals<useful type="objective" eid="24">did not comply with</useful>the necessary requirements of the framework. The key requirements of this framework state that the care provided must be patient- and carer-centred so that they can make their own informed decisions on the care that will be installed.<br />When these guidelines are applied to Mrs Jones and compared with the actions taken by the MDT, those actions appear<useful type="objective" eid="25">inadequate.</useful>…<br />Due to the<useful type="objective" eid="26">failure to recognize</useful>other falls prevention plans, clinical governance<useful type="objective" eid="27">has not been applied</useful>at an optimal level.</para>
+            <para prompt="Type your Evaluation here." eid="23" dup="15"><![CDATA[]]>As seen in the above case study, Mr Jones suggested he was unable to manage the sole care of his wife. Many authors have suggested anxiety and depression to be high amongst full-time carers (Playfer et al., 2001; Twigg et al., 1994). So, what acts, policies, recommendations and frameworks have been set in place to ensure that Mr Jones is able not only to provide a good quality of life to his wife, but to expect a quality of life he was unable to have without outside input? Furthermore, was the discharge planning in hospital of clinical governance standard, or did the multi-disciplinary team overlook Mr Jones's needs?<![CDATA[
+]]><br></br>• Supporting the carer through clinical governance and policies<![CDATA[
+]]><br></br>Ensuring patients and carers receive the gold standard of care is the responsibility of clinical governance. Implemented in the 1998 Health Act …, it set out to provide a quality service and clear lines for accountability, the management of risks and addressing poor performance (National Audit Office 2007) … [Further paragraphs (omitted here) discuss the legal guidelines and clinical best practice in more detail.] …<![CDATA[
+]]><br></br>Applying the National Service Framework for Long-term Conditions (2005) to the case study leads to the conclusion that health care professionals<useful type="objective" eid="24">did not comply with</useful> the necessary requirements of the framework. The key requirements of this framework state that the care provided must be patient- and carer-centred so that they can make their own informed decisions on the care that will be installed.<![CDATA[
+]]><br></br>When these guidelines are applied to Mrs Jones and compared with the actions taken by the MDT, those actions appear<useful type="objective" eid="25">inadequate.</useful> …<![CDATA[
+]]><br></br>Due to the<useful type="objective" eid="26">failure to recognize</useful> other falls prevention plans, clinical governance<useful type="objective" eid="27">has not been applied</useful> at an optimal level.</para>
          </content>
       </paragraph>
       <paragraph eid="28">
          <name eid="29">Recommendations</name>
          <desc eid="30">Make recommendations addressing any failures or problems you identified.</desc>
          <content prompt="Type your Recommendations here." eid="31">
-            <para prompt="Type your Recommendations here." eid="31">Recommendations<br />If the planning of Mrs Jones's discharge were to occur again, then the following steps should be taken so that it was carried out in accordance with the Local Discharge Policy (2007) as well as the NICE falls assessment (2004), the Community Care Act (1990), the NSF for Long-term Conditions (2005) and the New Deal for Carers (2008) policy.<br /><extra_info eid="32">First and foremost, admission through to discharge must be personalized to the individual patient (NSF, 2005).</extra_info>This ensures that the patient receives the best standard of care tailored to their needs, in accordance with clinical governance (McSherry, 2007). To ensure this personalized care is put into action, individual care plans must be drawn up so that they include, in Mrs Jones's case, mobility, dignity, falls and hygiene (NSF, 2005; NICE, 2004; Lee, 2008). [Two further paragraphs (omitted here) identify more learning points.]</para>
+            <para prompt="Type your Recommendations here." eid="31"><![CDATA[]]>Recommendations<![CDATA[
+]]><br></br>If the planning of Mrs Jones's discharge were to occur again, then the following steps should be taken so that it was carried out in accordance with the Local Discharge Policy (2007) as well as the NICE falls assessment (2004), the Community Care Act (1990), the NSF for Long-term Conditions (2005) and the New Deal for Carers (2008) policy.<![CDATA[
+]]><extra_info eid="32"><br></br>First and foremost, admission through to discharge must be personalized to the individual patient (NSF, 2005).</extra_info> This ensures that the patient receives the best standard of care tailored to their needs, in accordance with clinical governance (McSherry, 2007). To ensure this personalized care is put into action, individual care plans must be drawn up so that they include, in Mrs Jones's case, mobility, dignity, falls and hygiene (NSF, 2005; NICE, 2004; Lee, 2008). [Two further paragraphs (omitted here) identify more learning points.]</para>
          </content>
       </paragraph>
       <paragraph eid="33">
          <content prompt="Type your Recommendations here." eid="34" dup="31">
-            <para prompt="Type your Recommendations here." eid="34" dup="31">Recommendations<br />If the planning of Mrs Jones's discharge were to occur again, then the following steps<useful type="position" eid="35">should</useful>be taken<useful type="structure" eid="36">so that</useful>it was carried out in accordance with the Local Discharge Policy (2007) as well as the NICE falls assessment (2004), the Community Care Act (1990), the NSF for Long-term Conditions (2005) and the New Deal for Carers (2008) policy.<br />First and foremost, admission through to discharge<useful type="position" eid="37">must</useful>be personalized to the individual patient (NSF, 2005). This ensures that the patient receives the best standard of care tailored to their needs, in accordance with clinical governance (McSherry, 2007).<useful type="structure" eid="38">To ensure</useful>this personalized care is put into action, individual care plans<useful type="position" eid="39">must</useful>be drawn up<useful type="structure" eid="40">so that</useful>they include, in Mrs Jones's case, mobility, dignity, falls and hygiene (NSF, 2005; NICE, 2004; Lee, 2008). [Two further paragraphs (omitted here) identify more learning points.]</para>
+            <para prompt="Type your Recommendations here." eid="34" dup="31"><![CDATA[]]>Recommendations<![CDATA[
+]]><br></br>If the planning of Mrs Jones's discharge were to occur again, then the following steps<useful type="position" eid="35">should</useful> be taken<useful type="structure" eid="36">so that</useful> it was carried out in accordance with the Local Discharge Policy (2007) as well as the NICE falls assessment (2004), the Community Care Act (1990), the NSF for Long-term Conditions (2005) and the New Deal for Carers (2008) policy.<![CDATA[
+]]><br></br>First and foremost, admission through to discharge<useful type="position" eid="37">must</useful> be personalized to the individual patient (NSF, 2005). This ensures that the patient receives the best standard of care tailored to their needs, in accordance with clinical governance (McSherry, 2007).<useful type="structure" eid="38">To ensure</useful> this personalized care is put into action, individual care plans<useful type="position" eid="39">must</useful> be drawn up<useful type="structure" eid="40">so that</useful> they include, in Mrs Jones's case, mobility, dignity, falls and hygiene (NSF, 2005; NICE, 2004; Lee, 2008). [Two further paragraphs (omitted here) identify more learning points.]</para>
          </content>
       </paragraph>
       <paragraph eid="41">
@@ -148,7 +165,8 @@
          <desc eid="43">Summarize the achievements of your assignment and generalize your findings.</desc>
          <tip eid="44">TIP This may come before the Recommendations section.</tip>
          <content prompt="Type your Conclusion here." eid="45">
-            <para prompt="Type your Conclusion here." eid="45">Conclusion<br />This assignment has revealed a gap in providing support for informal carers ... Patients with long term conditions, and their carers,<useful type="objective" eid="46">are not being provided with</useful>the appropriate knowledge needed to live independently, because of poor communication with members of the MDT. As well as this, an increase in funding and therefore availability of services needs to be addressed so that those who need the services can access them easily. To conclude, patients and their carers are the best people to inform health care professionals of their needs, not the other way around.</para>
+            <para prompt="Type your Conclusion here." eid="45"><![CDATA[]]>Conclusion<![CDATA[
+]]><br></br>This assignment has revealed a gap in providing support for informal carers ... Patients with long term conditions, and their carers,<useful type="objective" eid="46">are not being provided with</useful> the appropriate knowledge needed to live independently, because of poor communication with members of the MDT. As well as this, an increase in funding and therefore availability of services needs to be addressed so that those who need the services can access them easily. To conclude, patients and their carers are the best people to inform health care professionals of their needs, not the other way around.</para>
          </content>
       </paragraph>
    </paragraphs>

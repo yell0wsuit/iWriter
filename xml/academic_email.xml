@@ -1,12 +1,10 @@
 <?xml version="1.0"?>
 <!DOCTYPE framework SYSTEM "ald8_iwriter.dtd">
-<!--Edited: 02 September 2009 10:23:01 by turnbulj-->
-<!--Edited: 13 May 2009 14:42:09 by bradyf-->
-<!--Edited: 05 May 2009 16:28:19 by bradyf-->
-<!--
-Edited: 05 May 2009 15:50:17 by bradyf-->
 <framework>
     <framework_title>Academic email</framework_title>
+    <framework_intro>
+        <para>Below is a suggested framework to help you structure the email. There are spaces for you to add your notes and the content of your email.</para>
+    </framework_intro>
     <guided_tour>
         <step label="What is special about an academic email?">
             <commentary>

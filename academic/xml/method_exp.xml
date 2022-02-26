@@ -2,65 +2,69 @@
 <!--Edited: 18 October 2013 11:01:11 by lead--><!--Edited: 14 October 2013 15:33:30 by webbsu--><!--Edited: 08 October 2013 16:02:59 by webbsu--><!--Edited: 07 October 2013 12:14:48 by webbsu--><!--Edited: 04 October 2013 15:10:13 by webbsu--><!--Edited: 04 October 2013 12:15:06 by webbsu--><!--Edited: 04 October 2013 11:45:45 by webbsu--><!--Edited: 04 October 2013 11:08:12 by webbsu--><!--Edited: 04 October 2013 10:57:04 by webbsu--><!--Edited: 03 October 2013 12:02:49 by webbsu--><!--Edited: 01 October 2013 16:00:39 by webbsu--><!--Edited: 01 October 2013 12:27:55 by webbsu--><!--Edited: 01 October 2013 12:26:26 by webbsu--><!--Edited: 04 September 2013 10:19:29 by webbsu--><!--Edited: 04 September 2013 10:19:00 by webbsu--><!--Edited: 17 July 2013 12:29:56 by duncanr--><!--Edited: 10 July 2013 14:22:59 by duncanr--><!--Edited: 09 July 2013 12:48:54 by duncanr--><!--Edited: 03 July 2013 14:36:58 by duncanr--><!--Edited: 02 July 2013 16:07:22 by duncanr--><!--Edited: 04 June 2013 13:23:37 by duncanr--><!--Edited: 16 April 2013 15:38:45 by duncanr--><!--Edited: 16 April 2013 14:33:16 by duncanr--><!--Edited: 16 April 2013 14:06:25 by duncanr--><!--Edited: 15 April 2013 16:03:49 by duncanr--><!--Edited: 09 April 2013 12:34:15 by duncanr--><!--Edited: 13 February 2013 14:45:11 by duncanr--><!--Edited: 13 February 2013 12:33:19 by duncanr--><!--Edited: 13 February 2013 12:26:40 by duncanr--><!--Edited: 13 February 2013 11:52:10 by duncanr--><!--Edited: 13 February 2013 11:37:18 by duncanr--><!--Edited: 13 February 2013 11:35:02 by duncanr--><!--Edited: 12 February 2013 16:22:45 by duncanr--><!--Edited: 12 February 2013 15:49:50 by duncanr--><!--Edited: 11 February 2013 16:11:54 by duncanr--><framework>
    <framework_title>Writing up Methods 1: an experimental method</framework_title>
    <framework_intro>
-      <para>Here is a framework to help you write up your experimental methods (after Lim, 2006). For the full reference, click Help and select References.<br />There are spaces for you to add the content of your method section.</para>
+      <para><![CDATA[]]>Here is a framework to help you write up your experimental methods (after Lim, 2006). For the full reference, see <a target="_blank" href="iWriter_References.pdf">References</a>.<![CDATA[
+]]><?xm-replace_text {para}?><![CDATA[
+]]><br></br>There are spaces for you to add the content of your method section.</para>
    </framework_intro>
    <guided_tour>
       <step label="What is a method section?">
          <commentary>
-            <para>Reporting on the method used in undertaking your research is a crucial part of the research writing process. A detailed step-by-step explanation allows other researchers to replicate your experiment.</para>
+            <para><![CDATA[]]>Reporting on the method used in undertaking your research is a crucial part of the research writing process. A detailed step-by-step explanation allows other researchers to replicate your experiment.</para>
          </commentary>
       </step>
       <step label="What is its purpose?">
          <commentary>
-            <para>Method sections in dissertations in any discipline will usually have a combination of three purposes. A method section aims to:</para>
-            <para>1. describe the data and method used;</para>
-            <para>2. explain how the data were collected and how the method(s) were employed in the research; and</para>
-            <para>3. justify why the data were selected and why particular method(s) were chosen.</para>
-            <para>Method sections in different disciplines differ in terms of the emphasis they place on the different purposes. Science disciplines tend to favour a more concise description and explanation of the data and method used. Whatever the discipline, the primary goal of the method section is to convey to the readers the validity of the research you have undertaken.</para>
+            <para><![CDATA[]]>Method sections in dissertations in any discipline will usually have a combination of three purposes. A method section aims to:</para>
+            <para><![CDATA[]]>1. describe the data and method used;</para>
+            <para><![CDATA[]]>2. explain how the data were collected and how the method(s) were employed in the research; and</para>
+            <para><![CDATA[]]>3. justify why the data were selected and why particular method(s) were chosen.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para><![CDATA[]]>Method sections in different disciplines differ in terms of the emphasis they place on the different purposes. Science disciplines tend to favour a more concise description and explanation of the data and method used. Whatever the discipline, the primary goal of the method section is to convey to the readers the validity of the research you have undertaken.</para>
          </commentary>
       </step>
       <step label="What are its main features?">
          <commentary>
-            <para>A key feature of the method section in the sciences is the need for a description of the experiment which typically details the procedures followed in the experiment and the ways in which the results were calculated.</para>
+            <para><![CDATA[]]>A key feature of the method section in the sciences is the need for a description of the experiment which typically details the procedures followed in the experiment and the ways in which the results were calculated.</para>
          </commentary>
       </step>
       <step label="How is it structured?" para_ids="6,7,21,22,34,35,41,42">
          <commentary>
-            <para>(After Lim, 2006)</para>
-            <para>This is a method section from a research article published in the journal ‘Behavioral Ecology’, investigating the feeding preferences of hummingbirds.</para>
+            <para><![CDATA[]]>(After Lim, 2006)</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para><![CDATA[]]>This is a method section from a research article published in the journal ‘Behavioral Ecology’, investigating the feeding preferences of hummingbirds.</para>
          </commentary>
       </step>
       <step label="Look at Paragraph 1: the data" para_ids="6,7,8">
          <commentary>
-            <para>Here the writer describes the data:</para>
-            <para showme="9">size</para>
-            <para showme="10">location</para>
+            <para><![CDATA[]]>Here the writer describes the data:</para>
+            <para showme="9"><![CDATA[]]>size</para>
+            <para showme="10"><![CDATA[]]>location</para>
          </commentary>
       </step>
       <step label="Look at Paragraph 2: the experiment" para_ids="21,22,23">
          <commentary>
-            <para>The writer explains how the experiment was set up:</para>
-            <para showme="24">the materials used</para>
-            <para showme="26">how the materials were prepared</para>
-            <para showme="25">the duration of the experiment</para>
+            <para><![CDATA[]]>The writer explains how the experiment was set up:</para>
+            <para showme="24"><![CDATA[]]>the materials used</para>
+            <para showme="26"><![CDATA[]]>how the materials were prepared</para>
+            <para showme="25"><![CDATA[]]>the duration of the experiment</para>
          </commentary>
       </step>
       <step label="Look at Paragraph 3: the procedure" para_ids="34,35,36">
          <commentary>
-            <para>This describes the procedures followed in carrying out the experiment step by step and in chronological order.</para>
+            <para><![CDATA[]]>This describes the procedures followed in carrying out the experiment step by step and in chronological order.</para>
          </commentary>
       </step>
       <step label="Look at Paragraph 4: the method" para_ids="41,42,43">
          <commentary>
-            <para>This explains how the results were calculated.</para>
-            <para showme="44">It includes information on how the calculations were obtained.</para>
+            <para><![CDATA[]]>This explains how the results were calculated.</para>
+            <para showme="44"><![CDATA[]]>It includes information on how the calculations were obtained.</para>
          </commentary>
       </step>
       <step label="Show me useful language" para_ids="12,28,36,43">
          <commentary>
-            <para showme="13,15,30">Complex noun phrases are used for concise description.</para>
-            <para showme="17,18,37">A series of verbs describes actions that follow one after the other.</para>
-            <para showme="14,16,19,29,31,32,38,39">Additional information, such as measurements or timing, is provided in parentheses.</para>
+            <para showme="13,15,30"><![CDATA[]]>Complex noun phrases are used for concise description.</para>
+            <para showme="17,18,37"><![CDATA[]]>A series of verbs describes actions that follow one after the other.</para>
+            <para showme="14,16,19,29,31,32,38,39"><![CDATA[]]>Additional information, such as measurements or timing, is provided in parentheses.</para>
          </commentary>
       </step>
    </guided_tour>
@@ -108,43 +112,44 @@
          <name eid="6">Paragraph 1: Description of the data</name>
          <desc eid="7">Describes the data in terms of size and location.</desc>
          <content prompt="Type Paragraph 1 here." eid="8">
-            <para prompt="Type Paragraph 1 here." eid="8"><extra_info eid="9">Twelve male rufous hummingbirds (6 in 2007 and 6 in 2008)</extra_info>, which had been defending territories containing a 250-ml inverted bottle feeder (filled with 14% sucrose) for at least a week, were trapped, color-marked, banded for individual identification, and released.<extra_info eid="10">The field site was the Westcastle river valley in the Rocky Mountains, Alberta, Canada (lat: 49.349024, long: -114.410902).</extra_info>
+            <para prompt="Type Paragraph 1 here." eid="8"><![CDATA[]]><extra_info eid="9">Twelve male rufous hummingbirds (6 in 2007 and 6 in 2008)</extra_info>, which had been defending territories containing a 250-ml inverted bottle feeder (filled with 14% sucrose) for at least a week, were trapped, color-marked, banded for individual identification, and released.<extra_info eid="10">The field site was the Westcastle river valley in the Rocky Mountains, Alberta, Canada (lat: 49.349024, long: -114.410902).</extra_info> 
             </para>
          </content>
       </paragraph>
       <paragraph eid="11">
          <content prompt="Type  Paragraph 1 here." eid="12" dup="8">
-            <para prompt="Type  Paragraph 1 here." eid="12" dup="8"><useful type="objective" eid="13">Twelve male rufous hummingbirds</useful>
-               <useful type="similarity" eid="14">(6 in 2007 and 6 in 2008)</useful>, which had been defending territories containing<useful type="objective" eid="15">a 250-ml inverted bottle feeder</useful>
-               <useful type="similarity" eid="16">(filled with 14% sucrose)</useful>for at least a week,<useful type="structure" eid="17">were trapped, color-marked, banded</useful>for individual identification,<useful type="structure" eid="18">and released</useful>. The field site was the Westcastle river valley in the Rocky Mountains, Alberta, Canada<useful type="similarity" eid="19">(lat: 49.349024, long: -114.410902)</useful>.</para>
+            <para prompt="Type  Paragraph 1 here." eid="12" dup="8"><![CDATA[]]><useful eid="13">Twelve male rufous hummingbirds</useful> 
+               <useful type="similarity" eid="14">(6 in 2007 and 6 in 2008)</useful>, which had been defending territories containing<useful type="objective" eid="15">a 250-ml inverted bottle feeder</useful> 
+               <useful type="similarity" eid="16">(filled with 14% sucrose)</useful> for at least a week,<useful type="structure" eid="17">were trapped, color-marked, banded</useful> for individual identification,<useful type="structure" eid="18">and released</useful>. The field site was the Westcastle river valley in the Rocky Mountains, Alberta, Canada<useful type="similarity" eid="19">(lat: 49.349024, long: -114.410902)</useful>.</para>
          </content>
       </paragraph>
       <paragraph eid="20">
          <name eid="21">Paragraph 2: Explanation of the design of the experiment</name>
          <desc eid="22">Explains the set-up of the experiment. Information on the materials used, how they were prepared for the study, and the duration of the experiment is included here.</desc>
          <content prompt="Type Paragraph 2 here." eid="23">
-            <para prompt="Type Paragraph 2 here." eid="23">Not less than 3 days after trapping, birds were trained to feed from<extra_info eid="24">an artificial flower containing 14% sucrose</extra_info>
-               <extra_info eid="25">during the course of a day (6–9 h)</extra_info>.<extra_info eid="26">The “flower” was a red cardboard disk (diameter 4.5 cm) with a syringe cap inserted through its center to act as a well. The flower was taped with red tape to the top of a cane (1 m), which was pushed into the ground within 5 m of the usual position of the feeder.</extra_info>Observers sat at least 10 m from the flower.</para>
+            <para prompt="Type Paragraph 2 here." eid="23"><![CDATA[]]>Not less than 3 days after trapping, birds were trained to feed from<extra_info eid="24">an artificial flower containing 14% sucrose</extra_info> 
+               <extra_info eid="25">during the course of a day (6–9 h)</extra_info>.<extra_info eid="26">The “flower” was a red cardboard disk (diameter 4.5 cm) with a syringe cap inserted through its center to act as a well. The flower was taped with red tape to the top of a cane (1 m), which was pushed into the ground within 5 m of the usual position of the feeder.</extra_info> Observers sat at least 10 m from the flower.</para>
          </content>
       </paragraph>
       <paragraph eid="27">
          <content prompt="Type Paragraph 2 here." eid="28" dup="23">
-            <para prompt="Type Paragraph 2 here." eid="28" dup="23">Not less than 3 days after trapping, birds were trained to feed from an artificial flower containing 14% sucrose during the course of a day<useful type="similarity" eid="29">(6–9 h)</useful>. The "flower" was<useful type="objective" eid="30">a red cardboard disk</useful>
-               <useful type="similarity" eid="31">(diameter 4.5 cm)</useful>with a syringe cap inserted through its center to act as a well. The flower was taped with red tape to the top of a cane<useful type="similarity" eid="32">(1 m)</useful>, which was pushed into the ground within 5 m of the usual position of the feeder. Observers sat at least 10 m from the flower.</para>
+            <para prompt="Type Paragraph 2 here." eid="28" dup="23"><![CDATA[]]>Not less than 3 days after trapping, birds were trained to feed from an artificial flower containing 14% sucrose during the course of a day<useful type="similarity" eid="29">(6–9 h)</useful>. The "flower" was<useful type="objective" eid="30">a red cardboard disk</useful> 
+               <useful type="similarity" eid="31">(diameter 4.5 cm)</useful> with a syringe cap inserted through its center to act as a well. The flower was taped with red tape to the top of a cane<useful type="similarity" eid="32">(1 m)</useful>, which was pushed into the ground within 5 m of the usual position of the feeder. Observers sat at least 10 m from the flower.</para>
          </content>
       </paragraph>
       <paragraph eid="33">
          <name eid="34">Paragraph 3: Description of the experiment</name>
          <desc eid="35">Describes the list of procedures followed in carrying out the experiment.</desc>
          <content prompt="Type Paragraph 3 here." eid="36">
-            <para prompt="Type Paragraph 3 here." eid="36">Following training, there were 2 experimental days: Treatment 1 and Treatment 2, which weather permitting immediately followed the training day. As on the training day, the feeder<useful type="structure" eid="37">was removed and replaced</useful>with the artificial flower. In Treatment 1<useful type="similarity" eid="38">(low, high, and low)</useful>, the flower contained 14% sucrose for the first 3 h, 25% sucrose for the next 3 h, and 14% sucrose for the final 3 h. In Treatment 2<useful type="similarity" eid="39">(high, low, and high)</useful>, the flower contained 25% sucrose for the first 3 h, 14% sucrose for the next 3 h, and 25% sucrose for the final 3 h. Half the birds received Treatment 1 first and the other half Treatment 2 first.</para>
+            <para prompt="Type Paragraph 3 here." eid="36"><![CDATA[]]>Following training, there were 2 experimental days: Treatment 1 and Treatment 2, which weather permitting immediately followed the training day. As on the training day, the feeder<useful type="structure" eid="37">was removed and replaced</useful> with the artificial flower. In Treatment 1<useful type="similarity" eid="38">(low, high, and low)</useful>, the flower contained 14% sucrose for the first 3 h, 25% sucrose for the next 3 h, and 14% sucrose for the final 3 h. In Treatment 2<useful type="similarity" eid="39">(high, low, and high)</useful>, the flower contained 25% sucrose for the first 3 h, 14% sucrose for the next 3 h, and 25% sucrose for the final 3 h. Half the birds received Treatment 1 first and the other half Treatment 2 first.</para>
          </content>
       </paragraph>
       <paragraph eid="40">
          <name eid="41">Paragraph 4: Explanation of the method</name>
          <desc eid="42">Explains how the results were calculated. This includes information on how the calculations were obtained.</desc>
          <content prompt="Type Paragraph 4 here." eid="43">
-            <para prompt="Type Paragraph 4 here." eid="43">The volume drunk and the timing and duration of each of a bird's visit[s] to the flower were recorded during both training and treatment days.<extra_info eid="44">Volumes were measured by refilling the syringe cap using a repeating pipette accurate to 10 μl. Duration of a feeding bout was the interval between the first insertion of the bird's bill into the flower and the last withdrawal from the flower before flying away.</extra_info><br />(Bacon et al., 2011) For the full reference, click Help and select References.</para>
+            <para prompt="Type Paragraph 4 here." eid="43"><![CDATA[]]>The volume drunk and the timing and duration of each of a bird's visit[s] to the flower were recorded during both training and treatment days.<extra_info eid="44">Volumes were measured by refilling the syringe cap using a repeating pipette accurate to 10 μl. Duration of a feeding bout was the interval between the first insertion of the bird's bill into the flower and the last withdrawal from the flower before flying away.</extra_info> <![CDATA[
+]]><br></br>(Bacon et al., 2011) For the full reference, see <a target="_blank" href="iWriter_References.pdf">References</a>.</para>
          </content>
       </paragraph>
    </paragraphs>
