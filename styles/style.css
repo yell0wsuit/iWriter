@@ -1365,6 +1365,7 @@ and (orientation : portrait) {
     .models_page_top h1{
         padding: 12px 0 0 2px;
         font-size: 14px;
+        display: none;
     }
     .models_page_menu_text{
         margin: 9px 0 0;
