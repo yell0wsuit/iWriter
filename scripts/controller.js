@@ -154,12 +154,12 @@ function Controller() {
                     $('.arrow_wrp').css('top', pos.top - ($('.arrow_wrp').height() / 2) + 16);
                     $('.arrow_wrp').css('left', pos.left + 36);
                     $('.arrow_wrp').show();
-                    $(this).css('background-image', 'url("images/mitr/info_btn_active.svg")');
+                    $(this).css('filter', 'saturate(8)');
                 }
             }).mouseout(function(e) {
                 if ($(window).width() > 768) {
                     $('.arrow_wrp').hide();
-                    $(this).css('background-image', 'url("images/mitr/oxford/info_01.svg")');
+                    $(this).css('filter', 'saturate(1)');
                 }
             });
         });
@@ -749,12 +749,12 @@ function Controller() {
                     $('.arrow_wrp').css('top', pos.top - ($('.arrow_wrp').height() / 2) + 16);
                     $('.arrow_wrp').css('left', pos.left + 36);
                     $('.arrow_wrp').show();
-                    $(this).css('background-image', 'url("images/mitr/info_btn_active.svg")');
+                    $(this).css('filter', 'saturate(8)');
                 }
             }).mouseout(function(e) {
                 if ($(window).width() > 768) {
                     $('.arrow_wrp').hide();
-                    $(this).css('background-image', 'url("images/mitr/oxford/info_01.svg")');
+                    $(this).css('filter', 'saturate(1)');
                 }
             });
             $('.sp_left').off('click').on('click', function(e1) {
