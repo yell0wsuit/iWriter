@@ -1,6 +1,7 @@
 var event_type = 'click';
 var global_str = "";
 var awl_list = "";
+var overWrite_flag = false;
 
 var device_detect = false;
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -1774,9 +1775,10 @@ function Controller() {
                                     _this.show_popup = false;
                                     _this.current_pro_name = project_name;
                                 }
-                                console.log(results);
                             } else {
                                 $('.err').text('This project name already exists. Do you want to update?');
+                                $('.err').addClass('overWrite_flag');
+                                return;
                             }
                         }
                         saveProj();
@@ -1889,14 +1891,15 @@ function Controller() {
                      );*/
                 }
             }
-            if ($('.err').text().indexOf("replace") != (-1)) {
+            if ($('.err').hasClass('overWrite_flag')) {
                 var temp_p = $(this).parents('.arrowp_wrp');
                 var postData = {'data-key': _this.current_key, 'project_name': $('.save_pro').attr('data-project-name'), 'xml_data': _this.XMLToString(data_to_save[0]), 'jdate': new Date()};
                 //var formURL = 'database.php?update_ex';
-
-
+                updateExistProj();
+                
                 postData['xml_data'] = postData['xml_data'].replace(/'/g, '#|#');
                 postData['xml_data'] = postData['xml_data'].replace(/"/g, '#||#');
+                //console.log(updateExistProj());
                 
                 //IndexedDB
                     async function updateExistProj() {
@@ -1904,7 +1907,7 @@ function Controller() {
                             in: 'iw_aca_projects',
                             where: {
                                 data_id: postData['data-key'],
-                                name: postData['project_name']
+                                name: project_name || postData['project_name']
                             },
                             set: {
                                 data: postData['xml_data'],
@@ -1913,7 +1916,7 @@ function Controller() {
                             }
                         })
                     }
-                    updateExistProj();
+                    
                     temp_p.find('.save_pop_d').show().css('right', '105%').css('top', '0px');
                     temp_p.find('.save_pop_1').hide();
                     temp_p.find('.save_pop_2').show();
@@ -1927,6 +1930,8 @@ function Controller() {
                         temp_p.$('.save_pop_d').css('right', '0px').css('top', '0px');
                         temp_p.$('.arrowp_box').addClass('remove_arrow');
                     }
+                    $('.err').removeClass('overWrite_flag');
+                    
                     
                 /*$.ajax(
                  {
@@ -1962,6 +1967,7 @@ function Controller() {
                  }
                  );*/
             }
+            load_status = true;
         });
         $('.save_pro_in').off(event_type).on(event_type, function() {
             if (_this.save_type != 'create') {
