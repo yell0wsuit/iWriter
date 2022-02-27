@@ -837,6 +837,12 @@
     border: 1px solid transparent;
     cursor: pointer;
 }
+.awl_listing .selected{
+    background-color: #efd374;
+}
+.awl_highlight{
+    background-color: #ffff00;
+}
 .check_content{
     width: 100%;
     display: none;

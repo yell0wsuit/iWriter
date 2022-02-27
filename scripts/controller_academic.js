@@ -1760,11 +1760,11 @@ function Controller() {
                                     date_time: new Date().getTime(),
                                     dtime: new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'medium' }).format(new Date().getTime())
                                 }
-                                var results = await connection.insert({
+                                var results1 = await connection.insert({
                                     into: 'iw_aca_projects',
                                     values: [value]
                                 })
-                                if (results > 0) {
+                                if (results1 == 1) {
                                     _this.save_type = 'save';
                                     $('.save_pro').attr('data-project-name', project_name);
                                     $('.save_pop_1').hide();
@@ -1774,8 +1774,9 @@ function Controller() {
                                     _this.show_popup = false;
                                     _this.current_pro_name = project_name;
                                 }
+                                console.log(results);
                             } else {
-                                $('.err').text('This project name already exists. Please change into another.');
+                                $('.err').text('This project name already exists. Do you want to update?');
                             }
                         }
                         saveProj();
@@ -1898,7 +1899,7 @@ function Controller() {
                 postData['xml_data'] = postData['xml_data'].replace(/"/g, '#||#');
                 
                 //IndexedDB
-                    async function updateProj() {
+                    async function updateExistProj() {
                         var update = await connection.update({
                             in: 'iw_aca_projects',
                             where: {
@@ -1912,7 +1913,7 @@ function Controller() {
                             }
                         })
                     }
-                    updateProj();
+                    updateExistProj();
                     temp_p.find('.save_pop_d').show().css('right', '105%').css('top', '0px');
                     temp_p.find('.save_pop_1').hide();
                     temp_p.find('.save_pop_2').show();
@@ -2204,7 +2205,7 @@ function Controller() {
             }
         });
 
-        $(".awl_listing").on("click", function() {
+        $(".awl_listing").on('click', function() {
             // var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
             var temp = "";
             if (awl_status == false) {
@@ -2233,7 +2234,7 @@ function Controller() {
                 }
             } else {
                 $(".awl_listing").removeClass('selected');
-                $(".awl_highlight").css("background-color", "white");
+                $(".awl_highlight").css({"background-color": "yellow", "color": "black"});
             }
             awl_status = !(awl_status);
         });

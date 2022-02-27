@@ -1744,11 +1744,11 @@ function Controller() {
                                     date_time: new Date().getTime(),
                                     dtime: new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'medium' }).format(new Date().getTime())
                                 }
-                                var results = await connection.insert({
+                                var results1 = await connection.insert({
                                     into: 'iw_projects',
                                     values: [value]
                                 })
-                                if (results > 0) {
+                                if (results1 == 1) {
                                     _this.save_type = 'save';
                                     $('.save_pro').attr('data-project-name', project_name);
                                     $('.save_pop_1').hide();
@@ -1882,7 +1882,7 @@ function Controller() {
                 postData['xml_data'] = postData['xml_data'].replace(/"/g, '#||#');
                 
                 //IndexedDB
-                    async function updateProj() {
+                    async function updateExistProj() {
                         var update = await connection.update({
                             in: 'iw_projects',
                             where: {
@@ -1896,7 +1896,7 @@ function Controller() {
                             }
                         })
                     }
-                    updateProj();
+                    updateExistProj();
                     temp_p.find('.save_pop_d').show().css('right', '105%').css('top', '0px');
                     temp_p.find('.save_pop_1').hide();
                     temp_p.find('.save_pop_2').show();
