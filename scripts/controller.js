@@ -1949,6 +1949,7 @@ function Controller() {
                  }
                  );*/
             }
+            load_status = true;
         });
         $('.save_pro_in').off(event_type).on(event_type, function() {
             if (_this.save_type != 'create') {
