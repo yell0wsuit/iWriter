@@ -765,6 +765,7 @@
     min-height: 100px;
 }
 .create_project {
+    border-radius: 4px;
     background-color: #ffffff;
     cursor: pointer;
     margin: 5px;
@@ -884,8 +885,9 @@
     cursor: pointer;
     float: right;
     height: 20px;
-    margin: -58px 0 0;
+    margin: -58px 15px 0;
     width: 20px;
+    font-variation-settings: 'wght' 900;
 }
 .f_normal{
     font-style: normal;
@@ -1857,7 +1859,7 @@ and (orientation : portrait) {
     .checkpoints_ul > li{color: white; border-bottom: 1px solid #4F4F4F; background-color: #3b3b3b}
     .check_con {color: white; background-color: #3b3b3b}
     .blueTxtCss{color: rgb(89, 187, 255)}
-    .create_project {box-shadow: 0px 1.6px 3.6px rgb(0 0 0 / 25%), 0px 0px 2.9px rgb(0 0 0 / 22%)}
+    .create_project {background-color: #3b3b3b; box-shadow: 0px 1.6px 3.6px rgb(0 0 0 / 25%), 0px 0px 2.9px rgb(0 0 0 / 22%)}
     .create_pro_btn {background-color: rgb(81, 122, 218)}
     .tell_me_btn {box-shadow: 0px 1.6px 3.6px rgb(0 0 0 / 25%), 0px 0px 2.9px rgb(0 0 0 / 22%)}
     .arrow_box {background-color: #74b4e8;}
