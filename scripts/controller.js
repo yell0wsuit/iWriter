@@ -1,4 +1,5 @@
 var event_type = 'click';
+var overWrite_flag = false;
 
 var device_detect = false;
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -1759,7 +1760,9 @@ function Controller() {
                                     _this.current_pro_name = project_name;
                                 }
                             } else {
-                                $('.err').text('This project name already exists. Please change into another.');
+                                $('.err').text('This project name already exists. Do you want to update?');
+                                $('.err').addClass('overWrite_flag');
+                                return;
                             }
                         }
                         saveProj();
@@ -1872,10 +1875,11 @@ function Controller() {
                      );*/
                 }
             }
-            if ($('.err').text().indexOf("replace") != (-1)) {
+            if ($('.err').hasClass('overWrite_flag')) {
                 var temp_p = $(this).parents('.arrowp_wrp');
                 var postData = {'data-key': _this.current_key, 'project_name': $('.save_pro').attr('data-project-name'), 'xml_data': _this.XMLToString(data_to_save[0]), 'jdate': new Date()};
                 //var formURL = 'database.php?update_ex';
+                updateExistProj();
 
 
                 postData['xml_data'] = postData['xml_data'].replace(/'/g, '#|#');
@@ -1896,7 +1900,6 @@ function Controller() {
                             }
                         })
                     }
-                    updateExistProj();
                     temp_p.find('.save_pop_d').show().css('right', '105%').css('top', '0px');
                     temp_p.find('.save_pop_1').hide();
                     temp_p.find('.save_pop_2').show();
@@ -1910,6 +1913,7 @@ function Controller() {
                         temp_p.$('.save_pop_d').css('right', '0px').css('top', '0px');
                         temp_p.$('.arrowp_box').addClass('remove_arrow');
                     }
+                    $('.err').removeClass('overWrite_flag');
                     
                 /*$.ajax(
                  {
