@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Edited: 18 October 2013 10:55:11 by lead--><!--Edited: 15 October 2013 14:44:41 by webbsu--><!--Edited: 14 October 2013 15:30:58 by webbsu--><!--]Edited: 14 October 2013 14:41:19 by webbsu--><!--Edited: 09 October 2013 10:46:07 by webbsu--><!--Edited: 08 October 2013 15:00:06 by webbsu--><!--Edited: 07 October 2013 13:05:19 by webbsu--><!--Edited: 04 October 2013 15:13:54 by webbsu--><!--Edited: 04 October 2013 12:18:41 by webbsu--><!--Edited: 04 October 2013 11:48:27 by webbsu--><!--Edited: 01 October 2013 11:58:53 by webbsu--><!--Edited: 04 September 2013 14:22:36 by webbsu--><!--Edited: 19 July 2013 12:36:12 by duncanr--><!--Edited: 19 July 2013 12:34:06 by duncanr--><!--Edited: 19 July 2013 12:23:08 by duncanr--><!--Edited: 18 July 2013 10:34:23 by duncanr--><!--Edited: 10 July 2013 14:54:56 by duncanr--><!--Edited: 03 July 2013 16:04:02 by duncanr--><!--Edited: 03 July 2013 09:49:11 by duncanr--><!--Edited: 02 July 2013 08:55:41 by duncanr--><!--Edited: 27 June 2013 13:00:43 by duncanr--><!--Edited: 27 June 2013 12:27:19 by duncanr--><!--Edited: 27 June 2013 11:31:08 by duncanr--><!--Edited: 27 June 2013 11:28:53 by duncanr--><!--Edited: 27 June 2013 10:57:07 by duncanr--><!--Edited: 26 June 2013 16:02:38 by duncanr--><!--Edited: 26 June 2013 15:51:35 by duncanr--><!--Edited: 10 June 2013 15:07:35 by duncanr--><!--Edited: 07 June 2013 11:18:07 by duncanr--><!--Edited: 04 June 2013 13:17:05 by duncanr--><!--Edited: 04 June 2013 13:10:04 by duncanr--><!--Edited: 04 June 2013 13:07:10 by duncanr--><!--Edited: 16 April 2013 15:29:02 by duncanr--><!--Edited: 16 April 2013 14:27:32 by duncanr--><!--Edited: 09 April 2013 12:31:57 by duncanr--><!--Edited: 09 April 2013 12:02:06 by duncanr--><!--Edited: 15 February 2013 16:09:13 by duncanr--><!--Edited: 15 February 2013 15:51:05 by duncanr--><!--Edited: 15 February 2013 15:36:50 by duncanr--><framework>
+   <framework_title>Discussing Results</framework_title>
+   <framework_intro>
+      <para><![CDATA[]]>Here is a framework to help you write up your discussion section. There are spaces for you to add the content of your discussion section.<![CDATA[
+]]><?xm-replace_text {para}?><![CDATA[
+]]><br></br></para>
+   </framework_intro>
+   <guided_tour>
+      <step label="What is a discussion section?">
+         <commentary>
+            <para><![CDATA[]]>In the discussion section of your dissertation, the focus is on the findings of the study and the interpretation of the findings for the reader. The discussion section of the dissertation primarily involves an explanation of your findings.</para>
+         </commentary>
+      </step>
+      <step label="What is its purpose?">
+         <commentary>
+            <para><![CDATA[]]>In the discussion section, your aim is to persuade the reader to accept the findings you have previously highlighted.</para>
+         </commentary>
+      </step>
+      <step label="What are the main features?">
+         <commentary>
+            <para><![CDATA[]]>Discussion sections use a move and step structure. There are 3 main moves, Moves 1 and 3 each having 3 main steps. Discussions typically include several cycles of Moves 2 and 3, with each cycle focusing on a different finding from the study.</para>
+         </commentary>
+      </step>
+      <step label="How is it structured?"
+            para_ids="67,68,5,6,70,71,13,14,73,74,26,27,76,77,40,41,79,55,80,56">
+         <commentary>
+            <para><![CDATA[]]>This is an extract from the discussion section of a research article published in ‘Health Education Research’. The topic is on the eating habits of children.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para><![CDATA[]]>Several different paragraphs have been extracted to show you the different ways in which you can explain your findings.</para>
+         </commentary>
+      </step>
+      <step label="Look at Move 1" para_ids="67,68,5,6,8">
+         <commentary>
+            <para><![CDATA[]]>This is an extract from the discussion section of a research article published in ‘Health Education Research’. The topic is on the eating habits of children. Several different paragraphs have been extracted to show you the different ways in which you can explain your findings.</para>
+            <para><![CDATA[]]></para>
+            <para showme="9"><![CDATA[]]>Step 1: restating the purpose of the study</para>
+            <para showme="11"><![CDATA[]]>Step 2: summarizing the main findings of the study</para>
+            <para showme="10"><![CDATA[]]>Step 3: pointing out the value of the study</para>
+         </commentary>
+      </step>
+      <step label="Look at the first cycle" para_ids="70,71,13,14,16">
+         <commentary>
+            <para><![CDATA[]]>Move 2 is embedded in Move 3 in the first sentence of this paragraph.</para>
+            <para><![CDATA[]]>The structure here is: Move 3 Step 1, followed by Move 2; then Move 3 Step 2.</para>
+            <para><![CDATA[]]></para>
+            <para showme="17,18"><![CDATA[]]>Move 3: Discussing the finding. Step 1: Comparing the finding with other studies</para>
+            <para showme="18"><![CDATA[]]>Move 2: Stating the finding</para>
+            <para showme="19"><![CDATA[]]>Move 3: Discussing the finding. Step 2: Explaining the finding by providing an example</para>
+         </commentary>
+      </step>
+      <step label="Look at the second cycle" para_ids="73,74,26,27,29">
+         <commentary>
+            <para><![CDATA[]]>This paragraph repeats the cycle of Moves and Steps in the previous paragraph. Again Move 2 is embedded in Move 3.</para>
+            <para><![CDATA[]]></para>
+            <para showme="30"><![CDATA[]]>Move 3: Discussing the finding. Step 1: Comparing the finding with other studies</para>
+            <para showme="31"><![CDATA[]]>Move 2: Stating the finding</para>
+            <para showme="32"><![CDATA[]]>Move 3: Discussing the finding. Step 3: Hypothesizing on the specific findings</para>
+         </commentary>
+      </step>
+      <step label="Look at the third cycle" para_ids="76,77,40,41,43">
+         <commentary>
+            <para><![CDATA[]]>Move 2 occurs as an independent move here. The structure is: Move 2 followed by Move 3 Steps 1, 2 and 3.</para>
+            <para><![CDATA[]]></para>
+            <para showme="44"><![CDATA[]]>Move 2: Stating the finding</para>
+            <para showme="45"><![CDATA[]]>Move 3: Discussing the finding. Step 1: Comparing with previous studies</para>
+            <para showme="46"><![CDATA[]]>Step 2: Explaining the finding by using an example</para>
+            <para showme="47"><![CDATA[]]>Step 3: Hypothesizing on the specific findings</para>
+         </commentary>
+      </step>
+      <step label="Look at the fourth cycle" para_ids="79,80,55,56,58">
+         <commentary>
+            <para><![CDATA[]]>This paragraph repeats the first cycle of Moves and Steps. Move 2 is embedded in Move 3.</para>
+            <para><![CDATA[]]></para>
+            <para showme="59"><![CDATA[]]>Move 3: Discussing the finding. Step 1: Comparing the finding with other studies</para>
+            <para showme="60"><![CDATA[]]>Move 2: Stating the finding</para>
+            <para showme="61"><![CDATA[]]>Move 3: Discussing the finding. Step 2: Explaining the finding by giving possible reasons</para>
+         </commentary>
+      </step>
+      <step label="Show me useful language" para_ids="8,21,34,49,63">
+         <commentary>
+            <para showme="23,24,36,50,52,65"><![CDATA[]]>Use the past tense when stating the findings of the study.</para>
+            <para showme="22,35,51,64"><![CDATA[]]>Refer to previous research to compare and contrast your own findings.</para>
+            <para showme="37,38,53"><![CDATA[]]>Use hedging language when giving reasons for, or hypothesizing from, the findings.</para>
+         </commentary>
+      </step>
+   </guided_tour>
+   <practice_rubric>
+      <planning>
+         <checklist>
+            <point help="discussion1.xml">Think about the core findings that you want to focus on in your discussion.</point>
+            <point help="discussion2.xml">Think about how previous research relates to your findings.</point>
+            <point help="discussion6.xml">Think about how many cycles of Moves 2 and 3 of the framework you will need.</point>
+            <point help="discussion7.xml">Make some notes and organize them into the plan.</point>
+         </checklist>
+      </planning>
+      <vocab>
+         <checklist>
+            <point help="academic_language.xml">Use academic language.</point>
+            <point help="discussion10.xml">Language Bank: hedging</point>
+         </checklist>
+      </vocab>
+      <writing>
+         <checklist>
+            <point help="discussion11.xml">Grammar Focus: pronouns</point>
+         </checklist>
+      </writing>
+      <checking>
+         <checklist>
+            <point>Have I given sufficient background information on my study?</point>
+            <point>Have I stated my findings?</point>
+            <point>Have I compared my findings with previous studies?</point>
+            <point>Have I explained each finding with an example or by giving reasons?</point>
+            <point>Have I used first person pronouns?</point>
+            <point>Have I used ‘hedging’ language appropriately to discuss my findings?</point>
+            <point>Have I checked vocabulary, grammar, spelling and punctuation?</point>
+         </checklist>
+      </checking>
+   </practice_rubric>
+   <paragraphs>
+      <paragraph eid="1">
+         <name eid="2">Discussing Results</name>
+         <desc eid="3">How to explain your findings in order to persuade the reader to accept them</desc>
+      </paragraph>
+      <paragraph eid="66">
+         <name eid="67">Move 1: Background information on the study</name>
+         <desc eid="68">The purpose of Move 1 is to provide some information on the study.</desc>
+      </paragraph>
+      <paragraph eid="4">
+         <name eid="5">Steps 1–3</name>
+         <desc eid="6">Step 1: Restating the purpose of the study<![CDATA[
+</br>]]>Step 2: Summarizing the main finding of the study<![CDATA[
+</br>]]>Step 3: Pointing out the value of the study</desc>
+         <tip eid="7">TIP Step 1 and Step 2 are usually present in the study. Step 3 is optional, as pointing out the value of your study may take place in the Conclusion section.</tip>
+         <content prompt="Type Move 1 here." eid="8">
+            <para prompt="Type Move 1 here." eid="8"><![CDATA[]]><extra_info eid="9">The purpose of the current study was to explore the family and environmental factors underlying resilience to unhealthy eating.</extra_info> 
+               <extra_info eid="10">Individual interview discussions with mothers from disadvantaged neighbourhoods and their children revealed the presence of parental strategies and external barriers and supports to promoting healthy eating behaviours.</extra_info> 
+               <extra_info eid="11">This is one of the first studies to include both mother and child reports and focus exclusively on low SEP families of children who eat well. Our study underscores the importance of focusing specifically on ‘resilient’ children (i.e. those eating relatively well) to further elucidate potentially effective parent-child attitudes and behaviours in preventing unhealthy eating.</extra_info> 
+            </para>
+         </content>
+      </paragraph>
+      <paragraph eid="69">
+         <name eid="70">First cycle of Moves 2 and 3</name>
+         <desc eid="71">The Discussion section includes several cycles of Moves 2 and 3, with each cycle focusing on a different finding.</desc>
+      </paragraph>
+      <paragraph eid="12">
+         <name eid="13">Move 2: Stating the finding<![CDATA[
+</br>]]>Move 3: Discussing the finding</name>
+         <desc eid="14">Move 3 has 3 Steps:<![CDATA[
+</br>]]>1. Comparing with previous studies<![CDATA[
+</br>]]>2. Explaining the finding by using an example or providing reasons<![CDATA[
+</br>]]>3. Hypothesizing on the specific findings</desc>
+         <tip eid="15">TIP Move 2 may be embedded within Move 3. It is an important move as it contextualizes the discussion which follows. In addition to reminding your reader of the finding, Move 2 can also mark a finding as expected or unexpected.<![CDATA[
+</br>]]>TIP Move 3: A very common step is to compare your study with previous studies. This may include pointing out similarities/differences between your studies and the ones you are referring to. It is not necessary to have all three steps in Move 3.</tip>
+         <content prompt="Type your first cycle of Moves 2 and 3 here." eid="16">
+            <para prompt="Type your first cycle of Moves 2 and 3 here." eid="16"><![CDATA[]]><extra_info eid="17">Compared with previous studies that have predominantly focussed on the barriers to healthy eating and a healthy weight status,</extra_info> 
+               <extra_info eid="18">our results highlighted the active role mothers from disadvantaged neighbourhoods played in promoting healthy eating</extra_info>.<extra_info eid="19">For instance, almost all the mothers in the current study believed that parents were the main vehicle for influencing healthy eating and as a result, they exercised significant control over their child's food by implementing ‘food rules’, providing access to fruit and vegetables and restricting unhealthy food items.</extra_info> 
+            </para>
+         </content>
+      </paragraph>
+      <paragraph eid="20">
+         <content prompt="Type your first cycle of Moves 2 and 3 here."
+                  eid="21"
+                  dup="16">
+            <para prompt="Type your first cycle of Moves 2 and 3 here."
+                  eid="21"
+                  dup="16"><![CDATA[]]><useful eid="22">Compared with previous studies that have predominantly focussed on</useful> the barriers to healthy eating and a healthy weight status,<useful type="presentation" eid="23">our results highlighted</useful> the active role mothers from disadvantaged neighbourhoods played in promoting healthy eating. For instance,<useful type="presentation" eid="24">almost all the mothers in the current study believed</useful> that parents were the main vehicle for influencing healthy eating and as a result, they exercised significant control over their child's food by implementing ‘food rules’, providing access to fruit and vegetables and restricting unhealthy food items.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="72">
+         <name eid="73">Second cycle of Moves 2 and 3</name>
+         <desc eid="74">The Discussion section includes several cycles of Moves 2 and 3, with each cycle focusing on a different finding.</desc>
+      </paragraph>
+      <paragraph eid="25">
+         <name eid="26">Move 2: Stating the finding<![CDATA[
+</br>]]>Move 3: Discussing the finding</name>
+         <desc eid="27">Move 3 has 3 Steps:<![CDATA[
+</br>]]>1. Comparing with previous studies<![CDATA[
+</br>]]>2. Explaining the finding by using an example or providing reasons<![CDATA[
+</br>]]>3. Hypothesizing on the specific findings</desc>
+         <tip eid="28">TIP Move 2 may be embedded within Move 3. It is an important move as it contextualizes the discussion which follows. In addition to reminding your reader of the finding, Move 2 can also mark a finding as expected or unexpected.<![CDATA[
+</br>]]>TIP Move 3: A very common step is to compare your study with previous studies. This may include pointing out similarities/differences between your studies and the ones you are referring to. It is not necessary to have all three steps in Move 3.</tip>
+         <content prompt="Type your second cycle of Moves 2 and 3 here." eid="29">
+            <para prompt="Type your second cycle of Moves 2 and 3 here." eid="29"><![CDATA[]]><extra_info eid="30">Although there is some evidence to suggest that excessive control over access to certain foods and implementing food rules has a negative effect on eating and weight [18, 19, 21]</extra_info>,<extra_info eid="31">the children did not report their mothers to be too strict or controlling</extra_info>.<extra_info eid="32">Perhaps, this was because mothers also offered education and explanations about unhealthy food items and promoted the importance of being healthy. It is also possible that the children in the current study, particularly those who were younger, were also accustomed to this parenting style (or unaware of anything different) and shared similar attitudes about food and eating.</extra_info> <![CDATA[
+]]><br></br>[Two paragraphs follow with a further discussion on parental attributes and style (omitted here).]</para>
+         </content>
+      </paragraph>
+      <paragraph eid="33">
+         <content prompt="Type your second cycle of Moves 2 and 3 here."
+                  eid="34"
+                  dup="29">
+            <para prompt="Type your second cycle of Moves 2 and 3 here."
+                  eid="34"
+                  dup="29"><![CDATA[]]><useful eid="35">Although there is some evidence to suggest</useful> that excessive control over access to certain foods and implementing food rules has a negative effect on eating and weight [18, 19, 21],<useful type="presentation" eid="36">the children did not report</useful> their mothers to be too strict or controlling.<useful type="position" eid="37">Perhaps</useful>, this was because mothers also offered education and explanations about unhealthy food items and promoted the importance of being healthy.<useful type="position" eid="38">It is also possible</useful> that the children in the current study, particularly those who were younger, were also accustomed to this parenting style (or unaware of anything different) and shared similar attitudes about food and eating.<![CDATA[
+]]><br></br>[Two paragraphs follow with a further discussion on parental attributes and style (omitted here).]</para>
+         </content>
+      </paragraph>
+      <paragraph eid="75">
+         <name eid="76">Third cycle of Moves 2 and 3</name>
+         <desc eid="77">The Discussion section includes several cycles of Moves 2 and 3, with each cycle focusing on a different finding.</desc>
+      </paragraph>
+      <paragraph eid="39">
+         <name eid="40">Move 2: Stating the finding<![CDATA[
+</br>]]>Move 3: Discussing the finding</name>
+         <desc eid="41">Move 3 has 3 Steps:<![CDATA[
+</br>]]>1. Comparing with previous studies<![CDATA[
+</br>]]>2. Explaining the finding by using an example or providing reasons<![CDATA[
+</br>]]>3. Hypothesizing on the specific findings</desc>
+         <tip eid="42">Move 2 may be embedded within Move 3. It is an important move as it contextualizes the discussion which follows. In addition to reminding your reader of the finding, Move 2 can also mark a finding as expected or unexpected.<![CDATA[
+</br>]]>Move 3: A very common step is to compare your study with previous studies. This may include pointing out similarities/differences between your studies and the ones you are referring to. It is not necessary to have all three steps in Move 3.</tip>
+         <content prompt="Type your third cycle of Moves 2 and 3 here." eid="43">
+            <para prompt="Type your third cycle of Moves 2 and 3 here." eid="43"><![CDATA[]]><extra_info eid="44">The results from our study also highlighted some environmental influences as both barriers and supports to healthy eating among families residing in disadvantaged neighbourhoods.</extra_info> 
+               <extra_info eid="45">Previous research has indicated the negative impact on eating of advertising and poorer access [to] and availability of healthy food options [40, 41]. Some mothers from our study reported instances of poor availability and quality of healthy produce yet many had developed strategies to overcome these barriers, namely, through responding to and creating more sustainable access to fruit and vegetables and other healthy food options.</extra_info> 
+               <extra_info eid="46">For instance, many families had their own fruit and vegetable garden, a practice consistently associated with increased fruit and vegetable consumption [23, 42].</extra_info> 
+               <extra_info eid="47">Although a number of families in the current study benefited from residing in rural or provincial areas where fruit and vegetables were the town's primary industry and accessibility to larger garden space was more available, it is possible that provision of skills and resources for home-grown produce is a potential avenue for increasing fruit and vegetable consumption among low SEP families.</extra_info> 
+            </para>
+         </content>
+      </paragraph>
+      <paragraph eid="48">
+         <content prompt="Type your third cycle of Moves 2 and 3 here."
+                  eid="49"
+                  dup="43">
+            <para prompt="Type your third cycle of Moves 2 and 3 here."
+                  eid="49"
+                  dup="43"><![CDATA[]]><useful eid="50">The results from our study also highlighted</useful> some environmental influences as both barriers and supports to healthy eating among families residing in disadvantaged neighbourhoods.<useful type="objective" eid="51">Previous research has indicated</useful> the negative impact on eating of advertising and poorer access [to] and availability of healthy food options [40, 41].<useful type="presentation" eid="52">Some mothers from our study reported</useful> instances of poor availability and quality of healthy produce yet many had developed strategies to overcome these barriers, namely, through responding to and creating more sustainable access to fruit and vegetables and other healthy food options. For instance, many families had their own fruit and vegetable garden, a practice consistently associated with increased fruit and vegetable consumption [23, 42]. Although a number of families in the current study benefited from residing in rural or provincial areas where fruit and vegetables were the town's primary industry and accessibility to larger garden space was more available,<useful type="position" eid="53">it is possible that</useful> provision of skills and resources for home-grown produce is a potential avenue for increasing fruit and vegetable consumption among low SEP families.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="78">
+         <name eid="79">Fourth cycle of Moves 2 and 3</name>
+         <desc eid="80">The discussion section includes several cycles of Moves 2 and 3, with each cycle focusing on a different finding.</desc>
+      </paragraph>
+      <paragraph eid="54">
+         <name eid="55">Move 2: Stating the finding<![CDATA[
+</br>]]>Move 3: Discussing the finding</name>
+         <desc eid="56">Move 3 has 3 Steps:<![CDATA[
+</br>]]>1. Comparing with previous studies<![CDATA[
+</br>]]>2. Explaining the finding by using an example or providing reasons<![CDATA[
+</br>]]>3. Hypothesizing on the specific findings</desc>
+         <tip eid="57">TIP Move 2 may be embedded within Move 3. It is an important move as it contextualizes the discussion which follows. In addition to reminding your reader of the finding, Move 2 can also mark a finding as expected or unexpected.<![CDATA[
+</br>]]>Move 3: A very common step is to compare your study with previous studies. This may include pointing out similarities/differences between your studies and the ones you are referring to. It is not necessary to have all three steps in Move 3.</tip>
+         <content prompt="Type your fourth cycle of Moves 2 and 3 here." eid="58">
+            <para prompt="Type your fourth cycle of Moves 2 and 3 here." eid="58"><![CDATA[]]><extra_info eid="59">Previous research has consistently highlighted the negative impact advertising has on children's eating, yet</extra_info> 
+               <extra_info eid="60">our results indicated that although some children reported an awareness of the negative influence of food advertising, most children did not feel negatively influenced by televised food advertisements</extra_info>.<extra_info eid="61">There are three plausible explanations for this finding. Firstly … Secondly … Thirdly …</extra_info> [Three reasons are provided and explained.]<![CDATA[
+]]><br></br>(Williams, Veitch and Ball, 2011) For the full reference, see <a target="_blank" href="iWriter_References.pdf">References</a>.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="62">
+         <content prompt="Type your fourth cycle of Moves 2 and 3 here."
+                  eid="63"
+                  dup="58">
+            <para prompt="Type your fourth cycle of Moves 2 and 3 here."
+                  eid="63"
+                  dup="58"><![CDATA[]]><useful eid="64">Previous research has consistently highlighted</useful> the negative impact advertising has on children's eating, yet<useful type="presentation" eid="65">our results indicated</useful> that although some children reported an awareness of the negative influence of food advertising, most children did not feel negatively influenced by televised food advertisements. There are three plausible explanations for this finding. Firstly … Secondly … Thirdly … [Three reasons are provided and explained.]<![CDATA[
+]]><br></br>(Williams, Veitch and Ball, 2011) For the full reference, see <a target="_blank" href="iWriter_References.pdf">References</a>.</para>
+         </content>
+      </paragraph>
+   </paragraphs>
+</framework>

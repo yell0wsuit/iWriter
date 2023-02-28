@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Edited: 18 October 2013 10:58:15 by lead--><!--Edited: 18 October 2013 10:54:10 by lead--><!--Edited: 14 October 2013 15:48:46 by webbsu--><!--Edited: 14 October 2013 13:12:29 by webbsu--><!--Edited: 14 October 2013 13:11:38 by webbsu--><!--Edited: 11 October 2013 09:40:43 by webbsu--><!--Edited: 09 October 2013 11:54:41 by webbsu--><!--Edited: 09 October 2013 09:51:35 by webbsu--><!--Edited: 04 October 2013 15:10:45 by webbsu--><!--Edited: 04 October 2013 15:03:44 by webbsu--><!--Edited: 04 October 2013 12:11:11 by webbsu--><!--Edited: 04 October 2013 11:38:35 by webbsu--><!--Edited: 04 October 2013 11:03:22 by webbsu--><!--Edited: 04 October 2013 10:56:07 by webbsu--><!--Edited: 03 October 2013 11:39:34 by webbsu--><!--Edited: 01 October 2013 12:29:17 by webbsu--><!--Edited: 01 October 2013 12:20:53 by webbsu--><!--Edited: 06 September 2013 12:38:43 by webbsu--><!--Edited: 04 September 2013 11:49:12 by webbsu--><!--Edited: 04 September 2013 10:16:41 by webbsu--><!--Edited: 11 July 2013 14:12:07 by duncanr--><!--Edited: 10 July 2013 12:43:15 by duncanr--><!--Edited: 09 July 2013 14:59:32 by duncanr--><!--Edited: 09 July 2013 13:22:31 by duncanr--><!--Edited: 09 July 2013 09:13:22 by duncanr--><!--Edited: 09 July 2013 09:11:24 by duncanr--><!--Edited: 09 July 2013 08:47:05 by duncanr--><!--Edited: 09 July 2013 08:43:20 by duncanr--><!--Edited: 08 July 2013 16:05:47 by duncanr--><!--Edited: 08 July 2013 15:52:35 by duncanr--><!--Edited: 08 July 2013 15:41:04 by duncanr--><!--Edited: 08 July 2013 14:57:12 by duncanr--><!--Edited: 03 July 2013 09:17:27 by duncanr--><!--Edited: 02 July 2013 09:24:50 by duncanr--><!--Edited: 14 June 2013 11:30:38 by duncanr--><!--Edited: 14 June 2013 09:26:54 by duncanr--><!--Edited: 14 June 2013 09:03:32 by duncanr--><!--Edited: 13 June 2013 16:01:33 by duncanr--><framework>
+   <framework_title>Writing an Introduction 2: social sciences and humanities</framework_title>
+   <framework_intro>
+      <para><![CDATA[]]>Social science and humanities introductions often have a similar three-move structure to that of the natural sciences. However, there is more flexibility in the sequence of moves, and moves may overlap or be performed simultaneously. A wider range of steps is also found.<![CDATA[
+]]><?xm-replace_text {para}?><![CDATA[
+]]><br></br>Here is a framework to help you write your introduction (after Swales and Feak, 2004). For the full reference, see <a target="_blank" href="iWriter_References.pdf">References</a>.<![CDATA[
+]]><?xm-replace_text {para}?><![CDATA[
+]]><br></br>There are spaces for you to add the content of your introduction.</para>
+   </framework_intro>
+   <guided_tour>
+      <step label="What is the purpose of the introduction? ">
+         <commentary>
+            <para><![CDATA[]]>The main purpose of an introduction is to situate research within its context, showing how it relates to other research in the field and/or to circumstances in the world.</para>
+         </commentary>
+      </step>
+      <step label="Why is it important?">
+         <commentary>
+            <para><![CDATA[]]>It gives the examiners their first impression of your study and shows your knowledge of the research area. This helps them know what to expect and makes it easier for them to follow the rest of your work.</para>
+         </commentary>
+      </step>
+      <step label="How is it structured?" para_ids="6,7,18,97,40,41,55,56,76,77">
+         <commentary>
+            <para><![CDATA[]]>Social science and humanities introductions often have a similar three-move structure to that of natural sciences. However, the introduction is likely to be more discursive, with extended descriptions and examples to establish the context of the research. There is more flexibility in the sequence of moves, and moves may overlap or be performed simultaneously. A wider range of steps is also found (see ‘The structure in detail’ section).</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para><![CDATA[]]>Writers in these disciplines are often concerned with the stylistic effect of their text on their readers. The introduction may begin with a step designed to attract the reader's attention: it may give a relevant quotation, example or personal reason for interest in the topic, or present the purpose or contribution of the study first.</para>
+         </commentary>
+      </step>
+      <step label="The structure in detail" para_ids="6,7,18,97,40,41,55,56,76,77">
+         <commentary>
+            <para><![CDATA[]]>(After Swales and Feak, 2004)</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+         </commentary>
+      </step>
+      <step label="Look at Paragraph 1" para_ids="6,7,9">
+         <commentary>
+            <para><![CDATA[]]>The model text is an extract from an introduction to a research article in the ‘Journal of African Economies’. The study estimates the benefits and costs of improving the road network in Africa.</para>
+            <para><![CDATA[]]>This introduction combines steps from both Move 1 and Move 3.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para showme="10"><![CDATA[]]>Sentence 1 presents the contribution of the research and attracts attention. This is a combination of Move 3 Step 8 and Move 1 Step 1.</para>
+            <para showme="11"><![CDATA[]]>The rest of the paragraph gives background information and describes an important world problem. This is Move 1 Steps 3 and 2.</para>
+         </commentary>
+      </step>
+      <step label="Look at Paragraph 2" para_ids="18,97,23">
+         <commentary>
+            <para><![CDATA[]]>This paragraph reviews the literature. This is Step 5 of Move 1.</para>
+            <para showme="24"><![CDATA[]]>Sentence 1 makes a summary statement about the literature so far.</para>
+            <para showme="25"><![CDATA[]]>Sentences 2 and 3 cite individual studies and give details of their findings.</para>
+            <para showme="26"><![CDATA[]]>Sentence 4 generalizes from the literature and claims that the area is important.</para>
+            <para showme="27"><![CDATA[]]>The writer quotes the literature for support.</para>
+         </commentary>
+      </step>
+      <step label="Look at Paragraph 3" para_ids="40,41,43">
+         <commentary>
+            <para><![CDATA[]]>This paragraph reviews the situation in the world. It uses Step 3 of Move 1.</para>
+            <para showme="44"><![CDATA[]]>Sentence 1 makes a generalization about programmes for addressing the problem.</para>
+            <para showme="45"><![CDATA[]]>Examples are then given.</para>
+            <para showme="46"><![CDATA[]]>The last sentence generalizes about the programmes and claims that they are important.</para>
+            <para showme="47"><![CDATA[]]>The writer refers to the literature to support the claim.</para>
+         </commentary>
+      </step>
+      <step label="Look at Paragraph 4" para_ids="55,56,61">
+         <commentary>
+            <para><![CDATA[]]>This paragraph situates the research in relation to previous work. It uses steps from Move 2 and Move 3.</para>
+            <para><![CDATA[]]>Move 2: Establishing a niche</para>
+            <para showme="62"><![CDATA[]]>Sentence 1 raises a new question. (Step 3)</para>
+            <para><![CDATA[]]>Moves 2 and 3: Establishing and occupying the niche</para>
+            <para showme="63"><![CDATA[]]>Sentence 2 presents the research as a continuation of previous work (Move 2 Step 4) and gives the method ('by developing …') (Move 3 Step 5)</para>
+            <para showme="64"><![CDATA[]]>The last part of the paragraph indicates how this study differs from previous research approaches. (Move 3 Step 5)</para>
+         </commentary>
+      </step>
+      <step label="Look at Paragraph 5" para_ids="76,77,82">
+         <commentary>
+            <para><![CDATA[]]>This paragraph explains the organization of the paper. It uses Step 9 of Move 3.</para>
+            <para showme="83,84,85,86,87,88"><![CDATA[]]>The paragraph gives details of the contents of each section in turn.</para>
+         </commentary>
+      </step>
+      <step label="Show me useful language" para_ids="13,29,49,66,90">
+         <commentary>
+            <para showme="14,15,16,34,36,37,67,70,71,73,74,93,95,99"><![CDATA[]]>The present tense is often used in the introduction.</para>
+            <para showme="31,50,51,52"><![CDATA[]]>The present perfect tense is used to look back over a recent time period and to summarize what has been done so far in the literature or in the world.</para>
+            <para showme="91,92,94,96"><![CDATA[]]>Different ways of describing the organization and contents of your dissertation.</para>
+            <para showme="30,32,33,35,38,53,68,69,72"><![CDATA[]]>Different ways of referring to the literature.</para>
+         </commentary>
+      </step>
+   </guided_tour>
+   <practice_rubric>
+      <planning>
+         <checklist>
+            <point help="intro_ss1.xml">Social science and humanities introductions often have a similar three-move structure to that of natural sciences. However, the introduction is likely to be more discursive, with extended descriptions and examples to establish the context of the research. There is more flexibility in the sequence of moves. A wider range of steps is also found.</point>
+            <point help="intro_ss2.xml">You can use the three-move structure to help you write your introduction.</point>
+            <point>In a long dissertation, you may need to situate your research in relation to several different areas. To do this, repeat the cycle of moves and steps as often as necessary.</point>
+            <point help="intro_ss3.xml">The Introduction is often the last chapter or section to be written.</point>
+            <point help="intro_ss4.xml">Organize the points you want to make into the framework.</point>
+         </checklist>
+      </planning>
+      <vocab>
+         <checklist>
+            <point help="academic_language.xml">Use academic language.</point>
+         </checklist>
+      </vocab>
+      <writing>
+         <checklist>
+            <point help="intro_ss5.xml">Grammar Focus: tenses</point>
+            <point help="intro_ss6.xml">Grammar focus: presenting your work</point>
+         </checklist>
+      </writing>
+      <checking>
+         <checklist>
+            <point>Have I attracted the reader's attention at the beginning?</point>
+            <point>Have I established a territory?</point>
+            <point>Have I established a niche?</point>
+            <point>Have I occupied the niche?</point>
+            <point>Have I used present and present perfect tenses appropriately?</point>
+            <point>Have I used different ways to describe the organization and contents of my dissertation?</point>
+            <point>Have I used different ways of referring to the literature?</point>
+            <point>Have I quoted and referenced my sources accurately?</point>
+            <point>Have I checked vocabulary, grammar, spelling and punctuation?</point>
+         </checklist>
+      </checking>
+   </practice_rubric>
+   <paragraphs>
+      <paragraph eid="1">
+         <name eid="2">Writing an Introduction 2: social sciences and humanities</name>
+         <desc eid="3">How to write an effective introduction to your work</desc>
+         <tip eid="4">TIP The three-move structure will help you to write your introduction, but there is a great deal of flexibility in the sequence of moves. They may overlap or be performed simultaneously.</tip>
+      </paragraph>
+      <paragraph eid="5">
+         <name eid="6">Paragraph 1: Introduction</name>
+         <desc eid="7">Attracts attention to your research and gives background information.</desc>
+         <tip eid="8">TIP This is where you start to establish your research territory (Move 1) by attracting the reader's attention (Step 1).</tip>
+         <content prompt="Type your Introduction here." eid="9">
+            <para prompt="Type your Introduction here." eid="9"><![CDATA[]]><extra_info eid="10">This paper presents evidence on the trade expansion potential of improvements in Sub-Saharan Africa's road network</extra_info>.<extra_info eid="11">At present, overland transport is so difficult and costly that Africa's diverse regions remain largely isolated from one another. Overland trade between the large urban centres of West Africa and South Africa is almost non-existent. …</extra_info> 
+            </para>
+         </content>
+      </paragraph>
+      <paragraph eid="12">
+         <content prompt="Type your Introduction here." eid="13" dup="9">
+            <para prompt="Type your Introduction here." eid="13" dup="9"><![CDATA[]]>This paper<useful type="structure" eid="14">presents</useful> evidence on the trade expansion potential of improvements in Sub-Saharan Africa's road network. At present, overland transport<useful type="structure" eid="15">is</useful> so difficult and costly that Africa's diverse regions<useful type="structure" eid="16">remain</useful> largely isolated from one another. Overland trade between the large urban centres of West Africa and South Africa<useful type="structure" eid="99">is</useful> almost non-existent. …</para>
+         </content>
+      </paragraph>
+      <paragraph eid="17">
+         <name eid="18">Paragraph 2</name>
+         <desc eid="97">Reviews the literature.
+		 <![CDATA[<br/>]]>Move 1: Establishing a territory
+           <![CDATA[<br/>]]>Steps
+            <![CDATA[<br/>]]>1. Attract the reader's attention and interest, e.g. with a relevant example or quotation.
+            <![CDATA[<br/>]]>2. Describe why your general study area is relevant or important in research and/or the world.
+            <![CDATA[<br/>]]>3. Make generalizations about your area; give background information or examples. Each generalization becomes narrower until you focus on your own specific topic.
+            <![CDATA[<br/>]]>4. Define terms, especially when there is no agreement in the field.
+            <![CDATA[<br/>]]>5. Review previous research.</desc>
+         <tip eid="98">TIP Continue establishing your research territory (Move 1) by looking at the literature (Step 5).
+		 </tip>
+         <content prompt="Type Paragraph 2 here." eid="23">
+            <para prompt="Type Paragraph 2 here." eid="23"><![CDATA[]]><extra_info eid="24">Numerous empirical studies have examined the economic impact of poor road conditions (see, e.g., Henderson et al., 2001, for a review).</extra_info> 
+               <extra_info eid="25">Amjadi and Yeats (1995) find that the relatively low level of Sub-Saharan African exports is essentially due to high transport costs. In a study of transport costs and trade, Limao and Venables (2001) find that poor infrastructure accounts for 60% of transport costs for landlocked countries, as opposed to 40% for coastal countries.</extra_info> 
+               <extra_info eid="26">Improving cross-border infrastructure is therefore an important part of the development agenda in Africa:</extra_info> 
+               <extra_info eid="27">‘The vision and ultimate objective for Africa should be to create a single market of 750 million people that is competitive within itself and within the global economy. A critical pre-requisite to this is regional infrastructure integration across Africa.’ (Simuyemba, 2000, p.3).</extra_info> 
+            </para>
+         </content>
+      </paragraph>
+      <paragraph eid="28">
+         <content prompt="Type Paragraph 2 here." eid="29" dup="23">
+            <para prompt="Type Paragraph 2 here." eid="29" dup="23"><![CDATA[]]><useful eid="30">Numerous empirical studies</useful> 
+               <useful type="position" eid="31">have examined</useful> the economic impact of poor road conditions<useful type="objective" eid="32">(see, e.g., Henderson et al., 2001, for a review)</useful>.<useful type="objective" eid="33">Amjadi and Yeats (1995) find that</useful> the relatively low level of Sub-Saharan African exports<useful type="structure" eid="34">is</useful> essentially due to high transport costs. In a study of transport costs and trade,<useful type="objective" eid="35">Limao and Venables (2001) find that</useful> poor infrastructure<useful type="structure" eid="36">accounts</useful> for 60% of transport costs for landlocked countries, as opposed to 40% for coastal countries. Improving cross-border infrastructure<useful type="structure" eid="37">is</useful> therefore an important part of the development agenda in Africa: ‘The vision and ultimate objective for Africa should be to create a single market of 750 million people that is competitive within itself and within the global economy. A critical pre-requisite to this is regional infrastructure integration across Africa.’<useful type="objective" eid="38">(Simuyemba, 2000, p.3)</useful>.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="39">
+         <name eid="40">Paragraph 3</name>
+         <desc eid="41">Reviews the situation in the world.</desc>
+         <tip eid="42">TIP Continue establishing your research territory (Move 1) by making a generalization (Step 3).</tip>
+         <content prompt="Type Paragraph 3 here." eid="43">
+            <para prompt="Type Paragraph 3 here." eid="43"><![CDATA[]]><extra_info eid="44">The World Bank and the African Development Bank (ADB) have both launched initiatives to encourage more integrated infrastructure development.</extra_info> 
+               <extra_info eid="45">The [World] Bank's Sub-Saharan Africa Transport Policy Program (SSATP) has focused on … The ADB has proposed …</extra_info> 
+               <extra_info eid="46">Such programmes could give a significant boost to regional integration efforts on the continent</extra_info> 
+               <extra_info eid="47">(Deichmann and Gill, 2008; Naudé, 2009)</extra_info>.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="48">
+         <content prompt="Type Paragraph 3 here." eid="49" dup="43">
+            <para prompt="Type Paragraph 3 here." eid="49" dup="43"><![CDATA[]]>The World Bank and the African Development Bank (ADB)<useful type="position" eid="50">have both launched</useful> initiatives to encourage more integrated infrastructure development. The [World] Bank's Sub-Saharan Africa Transport Policy Program (SSATP)<useful type="position" eid="51">has focused on</useful> … The ADB<useful type="position" eid="52">has proposed</useful> … Such programmes could give a significant boost to regional integration efforts on the continent<useful type="objective" eid="53">(Deichmann and Gill, 2008; Naudé, 2009)</useful>.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="54">
+         <name eid="55">Paragraph 4</name>
+         <desc eid="56">Situates the research in relation to previous work.
+		    <![CDATA[<br/>]]>Move 2: Establishing a niche
+            <![CDATA[<br/>]]>Steps
+            <![CDATA[<br/>]]>1. Indicate a gap, problem or need in previous research.
+            <![CDATA[<br/>]]>2. Indicate a problem or need in the world.
+            <![CDATA[<br/>]]>3. Raise a new question to be answered.
+            <![CDATA[<br/>]]>4. Continue or extend the work of other researchers.</desc>
+         <tip>TIP This is where you establish your particular niche (Move 2) by, for example, raising a new question (Step 3) and presenting your work as a continuation of previous work (Step 4).</tip>
+         <content prompt="Type Paragraph 4 here." eid="61">
+            <para prompt="Type Paragraph 4 here." eid="61"><![CDATA[]]><extra_info eid="62">How much difference would an integrated, functional road network make for African development?</extra_info> 
+               <extra_info eid="63">This paper extends the previously cited work by developing an analytical framework for quantifying the benefits and costs of continental road network upgrading</extra_info>.<extra_info eid="64">In contrast to the trade literature on the topic discussed in what follows, we estimate the costs as well as trade benefits of transport improvements and we base our analysis on geographically explicit modelling of a realistic trans-African transport network. In contrast to project cost-benefit analysis or engineering studies, we estimate the continent-wide economic benefits from transport improvements, rather than focusing on local benefits alone, which are often measured as traffic volume increases or imputed time savings.</extra_info> 
+            </para>
+         </content>
+      </paragraph>
+      <paragraph eid="65">
+         <content prompt="Type Paragraph 4 here." eid="66" dup="61">
+            <para prompt="Type Paragraph 4 here." eid="66" dup="61"><![CDATA[]]>How much difference would an integrated, functional road network make for African development? This paper<useful type="structure" eid="67">extends</useful> 
+               <useful type="objective" eid="68">the previously cited work</useful> by developing an analytical framework for quantifying the benefits and costs of continental road network upgrading. In contrast to<useful type="objective" eid="69">the trade literature on</useful> the topic discussed in what follows, we<useful type="structure" eid="70">estimate</useful> the costs as well as trade benefits of transport improvements and we<useful type="structure" eid="71">base</useful> our analysis on geographically explicit modelling of a realistic trans-African transport network. In contrast to project cost-benefit analysis or<useful type="objective" eid="72">engineering studies</useful>, we<useful type="structure" eid="73">estimate</useful> the continent-wide economic benefits from transport improvements, rather than focusing on local benefits alone, which<useful type="structure" eid="74">are often measured</useful> as traffic volume increases or imputed time savings.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="75">
+         <name eid="76">Paragraph 5</name>
+         <desc eid="77">Describes the organization of the paper.
+		 <![CDATA[<br/>]]>Move 3: Occupying the niche
+            <![CDATA[<br/>]]>Steps
+            <![CDATA[<br/>]]>1. Present your research and state its purpose, aims or objectives.
+            <![CDATA[<br/>]]>2. State your research questions or hypotheses.
+            <![CDATA[<br/>]]>3. State your theoretical position.
+            <![CDATA[<br/>]]>4. Set out the parameters of your research.
+            <![CDATA[<br/>]]>5. Describe briefly your methods and participants in survey research.
+            <![CDATA[<br/>]]>6. Outline your argument.
+            <![CDATA[<br/>]]>7. Give brief details of your findings or a model you propose.
+            <![CDATA[<br/>]]>8. Justify your research by showing the significance or contribution of your study.
+            <![CDATA[<br/>]]>9. Describe the organization of your dissertation.</desc>
+         <tip>TIP This is where you occupy your research niche (Move 3) by, for example, detailing your research aims (Step 1), your research questions (Step 2) and/or your study methods (Step 5), and/or describing the organization of your paper (Step 9).</tip>
+         <content prompt="Type Paragraph 5 here." eid="82">
+            <para prompt="Type Paragraph 5 here." eid="82"><![CDATA[]]>The remainder of the paper is organised as follows.<extra_info eid="83">Section 2 reviews</extra_info> the theoretical and empirical literature on gravity models, highlighting evidence on overland trade flows in developing countries.<extra_info eid="84">In Section 3, we identify</extra_info> a network of primary roads connecting all 42 mainland Sub-Saharan capitals ...<extra_info eid="85">Section 4 estimates</extra_info> a gravity model for Sub-Saharan Africa … We use the results to estimate current trade flows in the inter-city network and to simulate the impact of a major improvement in road network quality.<extra_info eid="86">We then explore the implications</extra_info> of our results for trade expansion at the regional, country and city levels.<extra_info eid="87">In Section 5, we estimate</extra_info> the costs of network improvement, using a World Bank database ...<extra_info eid="88">Section 6 concludes the paper.</extra_info> <![CDATA[
+]]><br></br>(Buys et al., 2010) For the full reference, see <a target="_blank" href="iWriter_References.pdf">References</a>.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="89">
+         <content prompt="Type Paragraph 5 here." eid="90" dup="82">
+            <para prompt="Type Paragraph 5 here." eid="90" dup="82"><![CDATA[]]><useful eid="91">The remainder of the paper is organised as follows. Section 2 reviews</useful> the theoretical and empirical literature on gravity models, highlighting evidence on overland trade flows in developing countries.<useful type="verbs" eid="92">In Section 3, we identify</useful> a network of primary roads connecting all 42 mainland Sub-Saharan capitals ... Section 4<useful type="structure" eid="93">estimates</useful> a gravity model for Sub-Saharan Africa … We use the results to estimate current trade flows in the inter-city network and to simulate the impact of a major improvement in road network quality.<useful type="verbs" eid="94">We then explore</useful> the implications of our results for trade expansion at the regional, country and city levels. In Section 5, we<useful type="structure" eid="95">estimate</useful> the costs of network improvement, using a World Bank database ...<useful type="verbs" eid="96">Section 6 concludes the paper</useful> <![CDATA[
+]]><br></br>(Buys et al., 2010) For the full reference, see <a target="_blank" href="iWriter_References.pdf">References</a>.</para>
+         </content>
+      </paragraph>
+   </paragraphs>
+</framework>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Edited: 18 October 2013 10:52:36 by lead--><!--Edited: 15 October 2013 14:31:14 by webbsu--><!--Edited: 14 October 2013 15:49:22 by webbsu--><!--Edited: 14 October 2013 13:12:45 by webbsu--><!--Edited: 11 October 2013 09:46:52 by webbsu--><!--Edited: 09 October 2013 10:03:51 by webbsu--><!--Edited: 04 October 2013 15:10:28 by webbsu--><!--Edited: 04 October 2013 15:07:26 by webbsu--><!--Edited: 04 October 2013 12:09:57 by webbsu--><!--Edited: 04 October 2013 11:20:02 by webbsu--><!--Edited: 04 October 2013 10:55:33 by webbsu--><!--Edited: 03 October 2013 11:56:15 by webbsu--><!--Edited: 01 October 2013 12:29:50 by webbsu--><!--Edited: 04 September 2013 11:31:19 by webbsu--><!--Edited: 10 July 2013 14:17:39 by duncanr--><!--Edited: 10 July 2013 12:31:44 by duncanr--><!--Edited: 08 July 2013 14:41:46 by duncanr--><!--Edited: 08 July 2013 14:39:24 by duncanr--><!--Edited: 03 July 2013 13:02:58 by duncanr--><!--Edited: 03 July 2013 13:00:33 by duncanr--><!--Edited: 03 July 2013 12:56:50 by duncanr--><!--Edited: 03 July 2013 09:18:41 by duncanr--><!--Edited: 03 July 2013 08:26:33 by duncanr--><!--Edited: 02 July 2013 15:06:25 by duncanr--><!--Edited: 02 July 2013 12:44:44 by duncanr--><!--Edited: 02 July 2013 12:42:36 by duncanr--><!--Edited: 02 July 2013 12:41:23 by duncanr--><!--Edited: 02 July 2013 09:37:56 by duncanr--><!--Edited: 02 July 2013 09:19:38 by duncanr--><!--Edited: 25 June 2013 12:05:32 by duncanr--><!--Edited: 14 June 2013 11:10:49 by duncanr--><!--Edited: 13 June 2013 14:37:05 by duncanr--><!--Edited: 13 June 2013 14:35:12 by duncanr--><!--Edited: 13 June 2013 13:39:36 by duncanr--><!--Edited: 13 June 2013 13:31:49 by duncanr--><!--Edited: 13 June 2013 13:26:43 by duncanr--><!--Edited: 13 June 2013 10:58:02 by duncanr--><!--Edited: 12 June 2013 12:25:54 by duncanr--><!--Edited: 12 June 2013 11:41:34 by duncanr--><!--Edited: 12 June 2013 11:36:45 by duncanr--><!--Edited: 11 June 2013 13:47:18 by duncanr--><!--Edited: 07 June 2013 12:41:34 by duncanr--><!--Edited: 07 June 2013 12:35:10 by duncanr--><!--Edited: 07 June 2013 12:33:09 by duncanr--><!--Edited: 07 June 2013 11:51:31 by duncanr--><!--Edited: 07 June 2013 11:49:50 by duncanr--><!--Edited: 07 June 2013 11:45:12 by duncanr--><!--Edited: 06 June 2013 08:17:10 by duncanr--><!--Edited: 04 June 2013 15:20:33 by duncanr--><!--Edited: 28 May 2013 16:08:51 by duncanr--><!--Edited: 28 May 2013 15:47:18 by duncanr--><!--Edited: 21 May 2013 12:26:35 by duncanr--><!--Edited: 21 May 2013 11:04:17 by duncanr--><!--Edited: 21 May 2013 09:57:19 by duncanr--><!--Edited: 21 May 2013 09:53:34 by duncanr--><!--Edited: 21 May 2013 09:06:07 by duncanr--><!--Edited: 20 May 2013 16:05:16 by duncanr--><!--Edited: 14 May 2013 09:10:08 by duncanr--><framework>
+   <framework_title>Introduction to a dissertation or research report: physical or life sciences</framework_title>
+   <framework_intro>
+      <para><![CDATA[]]>Introductions in all disciplines often consist of a sequence of three moves.<![CDATA[
+]]><?xm-replace_text {para}?><![CDATA[
+]]><br></br>Here is a framework to help you write your Introduction (after Swales and Feak, 2004). For the full reference, see <a target="_blank" href="iWriter_References.pdf">References</a>.<![CDATA[
+]]><?xm-replace_text {para}?><![CDATA[
+]]><br></br>There are spaces for you to add the content of your introduction.</para>
+   </framework_intro>
+   <guided_tour>
+      <step label="What is the purpose of the introduction?">
+         <commentary>
+            <para><![CDATA[]]>The main purpose of an introduction is to situate research within its context, showing how it relates to other research in the field and/or to circumstances in the world.</para>
+         </commentary>
+      </step>
+      <step label="Why is it important?">
+         <commentary>
+            <para><![CDATA[]]>It gives the examiners their first impression of your study and shows your knowledge of the research area. This helps them know what to expect and makes it easier for them to follow the rest of your work.</para>
+         </commentary>
+      </step>
+      <step label="How is it structured?"
+            para_ids="93,94,6,7,14,15,35,36,38,39,50,51,53,54,59,60,75,76,80,81">
+         <commentary>
+            <para><![CDATA[]]>Introductions in all disciplines often consist of a sequence of three moves (Swales and Feak, 2004): (1) Establishing a Territory gives the general background to your study; (2) Establishing a Niche shows that there is a need for your study, often by establishing that there is a gap or problem in previous research; (3) Occupying the Niche gives details of your study, showing how it fills the gap or deals with the problem.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para><![CDATA[]]>There are differences between disciplines in the way the moves are typically carried out, so look at dissertations in your field to see exactly how it is done.</para>
+         </commentary>
+      </step>
+      <step label="Look at Paragraph 1, Move 1" para_ids="93,94,6,7,9,14,15,17">
+         <commentary>
+            <para><![CDATA[]]>The model text is an extract from an introduction to a research article published in the ‘Journal of Electron Microscopy’. It describes a new form of water purification.</para>
+            <para><![CDATA[]]>Step 1. The writer:</para>
+            <para showme="10"><![CDATA[]]>gives background and describes an important world problem</para>
+            <para showme="11"><![CDATA[]]>claims that the general study area (water purification methods) is important and relevant to the problem</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para><![CDATA[]]>Step 2. The writer narrows down the focus, until he/she reaches the specific focus of this study.</para>
+            <para><![CDATA[]]>The writer:</para>
+            <para showme="18"><![CDATA[]]>makes a generalization about the study area and gives examples</para>
+            <para showme="19,22"><![CDATA[]]>narrows down the general area to a specific topic (filtration). It claims that filtration is the best method (implies that it is worth studying)</para>
+            <para showme="21"><![CDATA[]]>makes generalizations about this topic and gives examples and details</para>
+            <para showme="23"><![CDATA[]]>narrows down the topic to a specific subtopic (MF membranes) and claims that these membranes are effective in some cases</para>
+            <para showme="12,20,24"><![CDATA[]]>supports all the claims by referring to the literature</para>
+         </commentary>
+      </step>
+      <step label="Look at Paragraph 1, Move 2" para_ids="35,36,38,39,41">
+         <commentary>
+            <para><![CDATA[]]>The final sentence of the first paragraph establishes the need for this study. Notice that the writer uses only Step 2.</para>
+            <para showme="42"><![CDATA[]]>The writer indicates a problem related to the subtopic.</para>
+            <para showme="43"><![CDATA[]]>The writer supports the claim by referring to the literature.</para>
+         </commentary>
+      </step>
+      <step label="Look at Paragraph 2, Move 3" para_ids="50,51,53,54,56,59,60,62">
+         <commentary>
+            <para><![CDATA[]]>This paragraph demonstrates how this study addresses the problem identified in the first paragraph.</para>
+            <para showme="57"><![CDATA[]]>The writer presents the research and claims that it addresses the problem.</para>
+            <para showme="63"><![CDATA[]]>The work carried out is described.</para>
+            <para showme="64"><![CDATA[]]>The method is explained.</para>
+         </commentary>
+      </step>
+      <step label="Look at Paragraph 3, Move 3 cont'd."
+            para_ids="50,75,76,77,80,81,83">
+         <commentary>
+            <para showme="78"><![CDATA[]]>The writer describes the results and product of the research.</para>
+            <para showme="84"><![CDATA[]]>The writer explains the significance of the research.</para>
+            <para showme="85"><![CDATA[]]>Possibilities for further development are suggested.</para>
+         </commentary>
+      </step>
+      <step label="Show me useful language" para_ids="26,45,66,87">
+         <commentary>
+            <para showme="27,28,29,30,31,32,33,46,47,48,68,70,73,89,90,91"><![CDATA[]]>The present tense is often used in all three moves of the introduction.</para>
+            <para showme="69,71,72"><![CDATA[]]>The past tense is used for describing the work carried out.</para>
+            <para showme="67,88"><![CDATA[]]>You can present your research using reporting verbs.</para>
+         </commentary>
+      </step>
+   </guided_tour>
+   <practice_rubric>
+      <planning>
+         <checklist>
+            <point>Think about the needs of your readers. You have to show that you know the research context and that your study is a valid and useful piece of research. Consider what information you need to give them.<![CDATA[
+]]>Why is your study area important?<![CDATA[
+]]>What is the background to your research question?<![CDATA[
+]]>What previous research is relevant to your study?</point>
+            <point help="intro_ps1.xml">Use the three-move structure to help write your introduction.</point>
+            <point help="intro_ps2.xml">Specific disciplines use the three moves in different ways. Look at dissertations in your field to see exactly how it is done.</point>
+            <point help="intro_ps3.xml">The Introduction is often the last chapter or section to be written.</point>
+            <point>Check that you refer to your sources in the correct way for your discipline.</point>
+         </checklist>
+      </planning>
+      <vocab>
+         <checklist>
+            <point help="academic_language.xml">Use academic language.</point>
+         </checklist>
+      </vocab>
+      <writing>
+         <checklist>
+            <point help="intro_ps5.xml">Claiming that the research area is important or relevant</point>
+            <point help="intro_ps6.xml">Indicating a gap, problem or need</point>
+         </checklist>
+      </writing>
+      <checking>
+         <checklist>
+            <point>Have I placed my research within the relevant context?</point>
+            <point>Have I related it to other research in the field and/or to circumstances in the world?</point>
+            <point>Have I demonstrated my knowledge of the research area?</point>
+            <point>Have I shown a gap in the existing research or indicated a problem or need in the world?</point>
+            <point>Have I presented the aims of my research clearly, showing how it addresses the gap or problem?</point>
+            <point>Have I adequately described the methods and materials of my research?</point>
+            <point>Have I given details of the findings and results?</point>
+            <point>Have I shown the significance or contribution of my study?</point>
+            <point>Have I referenced other sources clearly and correctly?</point>
+            <point>Have I used clear, appropriate academic language?</point>
+            <point>Have I checked vocabulary, grammar, spelling and punctuation?</point>
+         </checklist>
+      </checking>
+   </practice_rubric>
+   <paragraphs>
+      <paragraph eid="1">
+         <name eid="2">Writing an Introduction: physical and life sciences</name>
+         <desc eid="3">How to write an effective introduction to your work</desc>
+         <tip eid="4">TIP The three-move structure will help you write your introduction. Choose only the steps that are appropriate for your study. Moves and steps can be any length from a few words to a whole section of the introduction.</tip>
+      </paragraph>
+      <paragraph eid="92">
+         <name eid="93">Move 1: Establishing a territory</name>
+         <desc eid="94">Move 1 gives the general background to your study.</desc>
+      </paragraph>
+      <paragraph eid="5">
+         <name eid="6">Step 1</name>
+         <desc eid="7">1. Describe why your general study area is relevant or important in the field and/or the world.</desc>
+         <tip eid="8">TIP Use references to support your claims.</tip>
+         <content eid="9" prompt="Type Step 1 here.">
+            <para eid="9" prompt="Type Step 1 here."><![CDATA[]]><extra_info eid="10">More than one billion people currently lack access to low-cost drinking water and more than 2.3 billion people live in water-stressed areas.</extra_info> 
+               <extra_info eid="11">Thus, it is of paramount importance to develop efficient and cost-effective water purification methods especially for the removal of bacteria and viruses</extra_info> 
+               <extra_info eid="12">[1–10]</extra_info>.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="13">
+         <name eid="14">Steps 2 and 3</name>
+         <desc eid="15">2. Make generalizations about your area; give background information or examples. Each generalization becomes narrower until you focus on your own specific topic.<![CDATA[
+</br>]]>3. Review previous research.</desc>
+         <tip eid="16">TIP Use references to support your claims.</tip>
+         <content prompt="Type Steps 2 and 3 here." eid="17">
+            <para prompt="Type Steps 2 and 3 here." eid="17"><![CDATA[]]><extra_info eid="18">There are many water purification methods, including filtration (size separation), adsorption, chemical coagulation, photodegradation, biodegradation, distillation and active sludge</extra_info>,<extra_info eid="19">but filtration is the most versatile chemical-free method, and it is extremely cost-effective, time- and energy-saving</extra_info> 
+               <extra_info eid="20">[11,12]</extra_info>.<extra_info eid="21">Filtration systems have considerably improved in the past decade and many of them possess complex structures, mechanisms and materials such as porous media, polymer membranes …</extra_info> 
+               <extra_info eid="22">The filtration processes are categorized mainly by the average size of the pores in the membranes, which include microfiltration (MF), ultrafiltration (UF), nanofiltration and reverse osmosis.</extra_info> 
+               <extra_info eid="23">MF filters have relatively large pores and thus yield a high flux rate compared with UF filters with smaller pores (10–100 nm)</extra_info> 
+               <extra_info eid="24">[13,14]</extra_info>.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="25">
+         <content eid="26" dup="9,17">
+            <para eid="26" dup="9,17"><![CDATA[]]>More than one billion people currently<useful type="objective" eid="27">lack</useful> access to low-cost drinking water and more than 2.3 billion people<useful type="objective" eid="28">live</useful> in water-stressed areas. Thus, it is of paramount importance to develop efficient and cost-effective water purification methods especially for the removal of bacteria and viruses [1–10]. There are many water purification methods, including filtration (size separation), adsorption, chemical coagulation, photodegradation, biodegradation, distillation and active sludge, but filtration<useful type="objective" eid="29">is</useful> the most versatile chemical-free method, and it<useful type="objective" eid="30">is</useful> extremely cost-effective, time- and energy-saving [11,12]. Filtration systems have considerably improved in the past decade and many of them<useful type="objective" eid="31">possess</useful> complex structures, mechanisms and materials such as porous media, polymer membranes … The filtration processes<useful type="objective" eid="32">are categorized</useful> mainly by the average size of the pores in the membranes, which<useful type="objective" eid="33">include</useful> microfiltration (MF), ultrafiltration (UF), nanofiltration and reverse osmosis. MF filters have relatively large pores and thus yield a high flux rate compared with UF filters with smaller pores (10–100nm) [13,14]. An MF membrane with a pore size ranging from 0.1 to 10 μm nominally<useful type="objective" eid="46">is</useful> capable of retaining microbe-like bacteria larger than 0.2 μm in diameter, but this<useful type="objective" eid="47">is</useful> not suitable for removing viruses, which<useful type="objective" eid="48">are</useful> often smaller in size by a factor of 10 [15].</para>
+         </content>
+      </paragraph>
+      <paragraph eid="34">
+         <name eid="35">Move 2: Establishing a Niche</name>
+         <desc eid="36">Move 2 shows that there is a need for your study, often by establishing that there is a gap or problem in previous research.</desc>
+      </paragraph>
+      <paragraph eid="37">
+         <name eid="38">Steps 1, 2 and 3</name>
+         <desc eid="39">1. Indicate a gap, problem or need in previous research.<![CDATA[
+</br>]]>2. Indicate a problem or need in the world.<![CDATA[
+</br>]]>3. Continue or extend the work of other researchers.</desc>
+         <tip eid="40">TIP Use Step 1 and/or Step 2. Step 3 is optional. Use references to support your claims.</tip>
+         <content prompt="Type Move 2 here." eid="41">
+            <para prompt="Type Move 2 here." eid="41"><![CDATA[]]>An MF membrane with a pore size ranging from 0.1 to 10 μm nominally is capable of retaining microbe-like bacteria larger than 0.2 μm in diameter,<extra_info eid="42">but this is not suitable for removing viruses, which are often smaller in size by a factor of 10</extra_info> 
+               <extra_info eid="43">[15]</extra_info>.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="49">
+         <name eid="50">Move 3: Occupying the niche</name>
+         <desc eid="51">Move 3 gives details of your study, showing how it fills the gap or deals with the problem.</desc>
+      </paragraph>
+      <paragraph eid="52">
+         <name eid="53">Steps 1 and 2</name>
+         <desc eid="54">1. Present your research and state its purposes, aims or objectives.<![CDATA[
+</br>]]>2. State your research questions or hypotheses.</desc>
+         <tip eid="55">Step 2 is optional.</tip>
+         <content prompt="Type Steps 1 and 2 here." eid="56">
+            <para prompt="Type Steps 1 and 2 here." eid="56"><![CDATA[]]><extra_info eid="57">In this study, we report a promising method for producing porous membranes that are based on MF but have capabilities for retaining viruses.</extra_info> 
+            </para>
+         </content>
+      </paragraph>
+      <paragraph eid="58">
+         <name eid="59">Steps 3 and 4</name>
+         <desc eid="60">3. Describe briefly the work you carried out.<![CDATA[
+</br>]]>4. Describe briefly the methods, materials or subjects you used.</desc>
+         <tip eid="61">TIP Steps 3 and 4 can come in either order.</tip>
+         <content prompt="Type Steps 3 and 4 here." eid="62">
+            <para prompt="Type Steps 3 and 4 here." eid="62"><![CDATA[]]><extra_info eid="63">The membranes are composed of ultra-fine cellulose nanofibers (UFCNs) (5–10 nm in diameter) derived from safe, inexpensive and sustainable nanomaterials such as wood pulp. The cellulose nanofibers were infused into the submicron-sized fibrous scaffolds (100–300 nm in diameter) fabricated by electrospinning.</extra_info> 
+               <extra_info eid="64">By controlling the processing parameters and material ingredients, we were able to create a composite fibrous membrane structure that has an appropriate pore size to sieve bacteria and a suitable static charge to adsorb viruses.</extra_info> 
+            </para>
+         </content>
+      </paragraph>
+      <paragraph eid="65">
+         <content prompt="Type Steps 3 and 4 here." eid="66" dup="56,62">
+            <para prompt="Type Steps 3 and 4 here." eid="66" dup="56,62"><![CDATA[]]><useful eid="67">In this study, we report a promising method</useful> for producing porous membranes that<useful type="objective" eid="68">are based</useful> on MF but have capabilities for retaining viruses. The membranes<useful type="objective" eid="70">are composed</useful> of ultra-fine cellulose nanofibers (UFCNs) (5–10 nm in diameter) derived from safe, inexpensive and sustainable nanomaterials such as wood pulp. The cellulose nanofibers<useful type="structure" eid="71">were</useful> infused into the submicron-sized fibrous scaffolds (100–300 nm in diameter) fabricated by electrospinning. By controlling the processing parameters and material ingredients, we<useful type="structure" eid="72">were</useful> able to create a composite fibrous membrane structure that<useful type="objective" eid="73">has</useful> an appropriate pore size to sieve bacteria and a suitable static charge to adsorb viruses.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="74">
+         <name eid="75">Step 5</name>
+         <desc eid="76">5. Give brief details of your findings or results.</desc>
+         <content prompt="Type Step 5 here." eid="77">
+            <para prompt="Type Step 5 here." eid="77"><![CDATA[]]><extra_info eid="78">Measurements of the filtration properties indicate that these membranes have a high retention rate in removing bacteria (‘Escherichia coli’, hereafter referred to as ‘E. coli’) and viruses (MS2 bacteriophage) in water, while maintaining high flux permeation.</extra_info> 
+            </para>
+         </content>
+      </paragraph>
+      <paragraph eid="79">
+         <name eid="80">Steps 6 and 7</name>
+         <desc eid="81">6. Justify your research by showing the significance or contribution of your study.<![CDATA[
+</br>]]>7. Describe briefly the organization of your dissertation.</desc>
+         <tip eid="82">TIP Step 7 is optional, but likely to be included in a full dissertation, where the Introduction is a complete chapter.</tip>
+         <content prompt="Type Steps 6 and 7 here." eid="83">
+            <para prompt="Type Steps 6 and 7 here." eid="83"><![CDATA[]]><extra_info eid="84">High-resolution electron microscopy investigations revealed, for the first time, the detailed nanoscale fibrous networks in membranes that are responsible for these superior filtration properties.</extra_info> 
+               <extra_info eid="85">The demonstrated membrane system opens a door to the further development of other nanostructured biomaterials to adsorb water pathogens and contaminants and increases the realization of the much needed inexpensive MF membranes.</extra_info> <![CDATA[
+]]><br></br>(Sato et al., 2011) For the full reference, see <a target="_blank" href="iWriter_References.pdf">References</a>.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="86">
+         <content prompt="Type Steps 6 and 7 here." eid="87" dup="77,83">
+            <para prompt="Type Steps 6 and 7 here." eid="87" dup="77,83"><![CDATA[]]><useful eid="88">Measurements of the filtration properties indicate that</useful> these membranes<useful type="objective" eid="89">have</useful> a high retention rate in removing bacteria (‘Escherichia coli’, hereafter referred to as ‘E. coli’) and viruses (MS2 bacteriophage) in water, while maintaining high flux permeation. High-resolution electron microscopy investigations revealed, for the first time, the detailed nanoscale fibrous networks in membranes that are responsible for these superior filtration properties. The demonstrated membrane system<useful type="objective" eid="90">opens</useful> a door to the further development of other nanostructured biomaterials to adsorb water pathogens and contaminants and<useful type="objective" eid="91">increases</useful> the realization of the much needed inexpensive MF membranes.<![CDATA[
+]]><br></br>(Sato et al., 2011) For the full reference, see <a target="_blank" href="iWriter_References.pdf">References</a>.</para>
+         </content>
+      </paragraph>
+   </paragraphs>
+</framework>
