@@ -1112,6 +1112,7 @@ function Controller() {
             });
             $('.can_btn_pop').off(event_type).on(event_type, function() {
                 $('.white_content').hide();
+                $('#leaveModal').modal('hide');
             });
         }
         function hide_elem() {
@@ -1352,7 +1353,7 @@ function Controller() {
                         temp_pl += 'Type your paragraph here';
                     }
                     content_data += '<div class="content_box"><div data-ph="' + temp_pl + '" class="form-control content_contents text-primary-emphasis mb-4" contenteditable="true" data-align="' + $(this).attr('align') + '" style="text-align:' + $(this).attr('align') + '">';
-                    content_data += '';
+                    content_data += content_html_temp;
                     content_data += '</div></div>';
                 }
             }
@@ -1776,6 +1777,8 @@ function Controller() {
         $('.can_btn,.ok_btn_common').off(event_type).on(event_type, function() {
             $('.saveas_pop_d').hide();
             $('.save_pop_d').hide();
+            $('.save_pop_1').show();
+            $('.save_pop_2').hide();
             $('.project_name').val('');
             $('.err').text('');
             $('.err').removeClass('overWrite_flag');
@@ -1851,7 +1854,7 @@ function Controller() {
                                     }
                                 })
                             }
-                            if (results.length == 0) {
+                            if (results.length === 0) {
                                 var value = {
                                     name: project_name,
                                     data_id: postData['data-key'],
@@ -1871,7 +1874,7 @@ function Controller() {
                                     })
                                 }
                                 
-                                if (results1 == 1) {
+                                if (results1 === 1) {
                                     _this.save_type = 'save';
                                     $('.save_pro').attr('data-project-name', project_name);
                                     $('.save_pop_1').hide();
@@ -1880,6 +1883,8 @@ function Controller() {
                                     $('.err').text('');
                                     _this.show_popup = false;
                                     _this.current_pro_name = project_name;
+                                } else {
+                                    console.log(results1)
                                 }
                             } else {
                                 $('.err').text('This project name already exists. Do you want to overwrite it?');

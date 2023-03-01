@@ -344,11 +344,11 @@ ul, li {
 }
 
 .steps_title{
-    border-bottom: 1px solid #D4D8DF;
+    border-bottom: 1px solid var(--bs-border-color);
     padding: 10px;
 }
 .medels_steps li{
-    border-bottom: 1px solid #D4D8DF;
+    border-bottom: 1px solid var(--bs-border-color);
     
     padding: 10px;
     cursor: pointer;
@@ -533,7 +533,7 @@ ul, li {
     /*padding: 0 5px;*/
 }
 .tool_wrapper li{
-    border-bottom: 1px solid #D4D8DF;
+    border-bottom: 1px solid var(--bs-border-color);
     color: #FFFFFF;
     cursor: pointer;
     padding: 5px;
@@ -561,7 +561,7 @@ ul, li {
     /*padding: 0 5px;*/
 }
 .down_arrow_wrapper li{
-    border-bottom: 1px solid #D4D8DF;
+    border-bottom: 1px solid var(--bs-border-color);
     /*color: #0E76A1;*/
     color: #FFFFFF;
     cursor: pointer;
@@ -867,7 +867,7 @@ ul, li {
     display: none;
 }
 .tool_down_arrow_wrp li{
-    border-bottom: 1px solid #d4d8df;
+    border-bottom: 1px solid var(--bs-border-color);
     color: #ffffff;
     cursor: pointer;
     font-size: 13px;
