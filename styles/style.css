@@ -901,18 +901,7 @@ ul, li {
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
 }
-.ok_btn_pop{
 
-}
-.can_btn_pop{
-    border: 1px solid #fcfeff;
-    border-radius: 23px;
-    float: right;
-    margin-left: 15px;
-    text-align: center;
-    width: 70px;
-    cursor: pointer;
-}
 .word_count_text{
     background-color: #EBBA17;
     padding: 5px 10px;

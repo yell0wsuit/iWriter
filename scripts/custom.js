@@ -550,7 +550,7 @@ $(document).ready(function() {
     $('.models_page_body_right').bind(event_type, function (e) {
         iWriter_controller.reset_drop();
     });
-    set_max_height();
+    //set_max_height();
     function set_max_height() {
         var window_height = Number(($(window).height() * 10) / 100);
         var _margin = $('.inner_wrapper').outerHeight(true) - $('.inner_wrapper').height();

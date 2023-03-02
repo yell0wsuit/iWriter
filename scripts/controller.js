@@ -1007,8 +1007,7 @@ function Controller() {
             if (_this.show_popup) {
                 show_pop();
             } else {
-                //$('.white_content').hide();
-                $('#leaveModal').modal('hide');
+                $('.white_content').hide();
                 _this.modelInit();
                 _this.createModel(_this.project_xml_data[_this.current_key]['project_name'], _this.current_key);
             }
@@ -1022,21 +1021,18 @@ function Controller() {
         }
 
         function show_pop() {
-            //$('.white_content').remove();
-            //var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
-            //$('.main_wrapper').append(temp_pop);
-            //$('.white_content').show();
-            //call_pop();
-            $('#leaveModal').modal('show');
+            $('.white_content').remove();
+            var temp_pop = '<div class="white_content"><div class="h-100 d-flex justify-content-center align-items-center"><div class="modal-backdrop fade show" style="z-index: 0"></div><div class="alert alert-warning alert-dismissible fade show" role="alert"> <h4 class="alert-heading"><span class="alertMsg">Confirm leave?</span></h4> <button type="button" class="btn-close can_btn_pop" data-bs-dismiss="alert" aria-label="Close"></button><p>You have unsaved changes. Do you still want to leave?</p><button type="button" class="btn btn-outline-primary ok_btn_pop">Yes</button> <button type="button" class="btn btn-outline-primary can_btn_pop" data-bs-dismiss="alert">No</button> </div> </div></div>';
+            $('.main_wrapper').append(temp_pop);
+            $('.white_content').show();
+            call_pop();
             $('.ok_btn_pop').off(event_type).on(event_type, function() {
-                //$('.white_content').hide();
-                $('#leaveModal').modal('hide');
+                $('.white_content').hide();
                 _this.modelInit();
                 _this.createModel(_this.project_xml_data[_this.current_key]['project_name'], _this.current_key);
             });
             $('.can_btn_pop').off(event_type).on(event_type, function() {
-                //$('.white_content').hide();
-                $('#leaveModal').modal('hide');
+                $('.white_content').hide();
             });
         }
     };
@@ -1044,15 +1040,13 @@ function Controller() {
         //if ($(_this.project_xml_data[_this.current_key]['xml_data']).find('step').length != 0) {
         //when model exists
         if (_this.show_popup) {
-            /*$('.white_content').remove();
-            var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
+            $('.white_content').remove();
+            var temp_pop = '<div class="white_content"><div class="h-100 d-flex justify-content-center align-items-center"><div class="modal-backdrop fade show" style="z-index: 0"></div><div class="alert alert-warning alert-dismissible fade show" role="alert"> <h4 class="alert-heading"><span class="alertMsg">Confirm leave?</span></h4> <button type="button" class="btn-close can_btn_pop" data-bs-dismiss="alert" aria-label="Close"></button><p>You have unsaved changes. Do you still want to leave?</p><button type="button" class="btn btn-outline-primary ok_btn_pop">Yes</button> <button type="button" class="btn btn-outline-primary can_btn_pop" data-bs-dismiss="alert">No</button> </div> </div></div>';
             $('.main_wrapper').append(temp_pop);
             $('.white_content').show();
-            call_pop();*/
-            $('#leaveModal').modal('show');
+            call_pop();
             $('.ok_btn_pop').off(event_type).on(event_type, function() {
-                //$('.white_content').hide();
-                $('#leaveModal').modal('hide');
+                $('.white_content').hide();
                 hide_elem();
                 $('.fn_rigth').trigger('click');
             });
@@ -1099,20 +1093,17 @@ function Controller() {
             }
         }
         function show_pop() {
-            /* $('.white_content').remove();
-            var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
+             $('.white_content').remove();
+            var temp_pop = '<div class="white_content"><div class="h-100 d-flex justify-content-center align-items-center"><div class="modal-backdrop fade show" style="z-index: 0"></div><div class="alert alert-warning alert-dismissible fade show" role="alert"> <h4 class="alert-heading"><span class="alertMsg">Confirm leave?</span></h4> <button type="button" class="btn-close can_btn_pop" data-bs-dismiss="alert" aria-label="Close"></button><p>You have unsaved changes. Do you still want to leave?</p><button type="button" class="btn btn-outline-primary ok_btn_pop">Yes</button> <button type="button" class="btn btn-outline-primary can_btn_pop" data-bs-dismiss="alert">No</button> </div> </div></div>';
             $('.main_wrapper').append(temp_pop);
             $('.white_content').show();
-            call_pop(); */
-            $('#leaveModal').modal('show');
+            call_pop(); 
             $('.ok_btn_pop').off(event_type).on(event_type, function() {
-                //$('.white_content').hide();
-                $('#leaveModal').modal('hide');
+                $('.white_content').hide();
                 hide_elem();
             });
             $('.can_btn_pop').off(event_type).on(event_type, function() {
                 $('.white_content').hide();
-                $('#leaveModal').modal('hide');
             });
         }
         function hide_elem() {
@@ -1599,26 +1590,22 @@ function Controller() {
                         });
                         $('.prolist_load li').off(event_type).on(event_type, function() {
                             if (_this.show_popup) {
-                                /* $('.white_content').remove();
-                                var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
+                                $('.white_content').remove();
+                                var temp_pop = '<div class="white_content"><div class="h-100 d-flex justify-content-center align-items-center"><div class="modal-backdrop fade show" style="z-index: 0"></div><div class="alert alert-warning alert-dismissible fade show" role="alert"> <h4 class="alert-heading"><span class="alertMsg">Confirm leave?</span></h4> <button type="button" class="btn-close can_btn_pop" data-bs-dismiss="alert" aria-label="Close"></button><p>You have unsaved changes. Do you still want to leave?</p><button type="button" class="btn btn-outline-primary ok_btn_pop">Yes</button> <button type="button" class="btn btn-outline-primary can_btn_pop" data-bs-dismiss="alert">No</button> </div> </div></div>';
                                 $('.main_wrapper').append(temp_pop);
                                 $('.white_content').show();
-                                call_pop(); */
-                                $('#leaveModal').modal('show');
+                                call_pop();
                                 $('.ok_btn_pop').off(event_type).on(event_type, function() {
                                     $('.load_pop_d').hide();
-                                    $('#leaveModal').modal('hide');
                                     _this.show_popup = false;
                                     _this.current_pro_name = $(this).attr('data-project');
                                     iWriter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
                                 });
                                 $('.can_btn_pop').off(event_type).on(event_type, function() {
                                     $('.white_content').hide();
-                                    $('#leaveModal').modal('hide');
                                 });
                                 } else {
                                     //$('.load_pop_d').hide();
-                                    $('#leaveModal').modal('hide');
                                     _this.show_popup = false;
                                     _this.current_pro_name = $(this).attr('data-project');
                                     iWriter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
@@ -1656,7 +1643,7 @@ function Controller() {
                  $('.prolist_load li').off(event_type).on(event_type, function() {
                  if (_this.show_popup) {
                  $('.white_content').remove();
-                 var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
+                 var temp_pop = '<div class="white_content"><div class="h-100 d-flex justify-content-center align-items-center"><div class="modal-backdrop fade show" style="z-index: 0"></div><div class="alert alert-warning alert-dismissible fade show" role="alert"> <h4 class="alert-heading"><span class="alertMsg">Confirm leave?</span></h4> <button type="button" class="btn-close can_btn_pop" data-bs-dismiss="alert" aria-label="Close"></button><p>You have unsaved changes. Do you still want to leave?</p><button type="button" class="btn btn-outline-primary ok_btn_pop">Yes</button> <button type="button" class="btn btn-outline-primary can_btn_pop" data-bs-dismiss="alert">No</button> </div> </div></div>';
                  $('.main_wrapper').append(temp_pop);
                  $('.white_content').show();
 
