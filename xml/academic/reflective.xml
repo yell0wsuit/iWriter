@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Edited: 18 October 2013 11:14:06 by lead--><!--Edited: 14 October 2013 16:07:27 by webbsu--><!--Edited: 14 October 2013 16:06:29 by webbsu--><!--Edited: 14 October 2013 14:52:40 by webbsu--><!--Edited: 14 October 2013 14:31:55 by webbsu--><!--Edited: 09 October 2013 14:23:59 by webbsu--><!--Edited: 30 September 2013 17:05:15 by webbsu--><!--Edited: 04 September 2013 12:49:37 by webbsu--><!--Edited: 04 September 2013 11:05:59 by webbsu--><!--Edited: 04 September 2013 10:12:32 by webbsu--><!--Edited: 17 July 2013 15:42:24 by webbsu--><!--Edited: 17 July 2013 10:54:08 by duncanr--><!--Edited: 16 July 2013 10:37:10 by duncanr--><!--Edited: 16 July 2013 10:28:42 by duncanr--><!--Edited: 03 July 2013 11:08:15 by duncanr--><!--Edited: 03 July 2013 11:05:53 by duncanr--><!--Edited: 03 July 2013 09:31:44 by duncanr--><!--Edited: 02 July 2013 09:13:26 by duncanr--><!--Edited: 26 June 2013 14:08:31 by duncanr--><!--Edited: 26 June 2013 12:05:30 by duncanr--><!--Edited: 26 June 2013 11:56:25 by duncanr--><!--Edited: 26 June 2013 11:54:35 by duncanr--><!--Edited: 26 June 2013 11:48:33 by duncanr--><!--Edited: 26 June 2013 11:46:22 by duncanr--><!--Edited: 26 June 2013 11:38:45 by duncanr--><!--Edited: 26 June 2013 10:46:33 by duncanr--><!--Edited: 26 June 2013 10:42:28 by duncanr--><!--Edited: 26 June 2013 10:07:22 by duncanr--><!--Edited: 10 June 2013 15:21:35 by duncanr--><!--Edited: 07 June 2013 12:58:02 by duncanr--><!--Edited: 07 June 2013 11:39:00 by duncanr--><!--Edited: 05 June 2013 17:02:30 by duncanr--><!--Edited: 04 June 2013 15:27:03 by duncanr--><!--Edited: 14 May 2013 11:30:43 by duncanr--><!--Edited: 14 May 2013 11:17:29 by duncanr--><!--Edited: 14 May 2013 11:14:51 by duncanr--><!--Edited: 14 May 2013 11:05:12 by duncanr--><framework>
+   <framework_title>Reflective Writing</framework_title>
+   <framework_intro>
+      <para><![CDATA[]]>Here is a framework to help you do a piece of reflective writing. There are spaces for you to add your own text.<![CDATA[
+]]><?xm-replace_text {para}?><![CDATA[
+]]><br></br></para>
+   </framework_intro>
+   <guided_tour>
+      <step label="What is reflective writing?">
+         <commentary>
+            <para><![CDATA[]]>Academic learning is not simply acquiring new knowledge; it also involves developing skills and new ways of thinking. Reflective writing asks students to think critically about the course and themselves as learners.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para><![CDATA[]]>You may be asked to reflect on an experience, such as a field trip, on specific aspects of a task, such as how you chose a topic, or on your course as a whole. The writing may be a task on its own or a final section to an assignment such as a research report or an oral presentation.</para>
+         </commentary>
+      </step>
+      <step label="What are the main features?">
+         <commentary>
+            <para><![CDATA[]]>You will need to show evidence that you are developing relevant skills and attitudes, that you can question your initial assumptions, and that you can connect theory and practice. You do this by reflecting on how a particular theory relates to your personal experience of an event or a situation.</para>
+         </commentary>
+      </step>
+      <step label="How is it structured?"
+            para_ids="5,6,100,11,103,31,106,48,109,62,112,71">
+         <commentary>
+            <para><![CDATA[]]>You can use this outline to structure your reflective writing or vary it as necessary.</para>
+         </commentary>
+      </step>
+      <step label="Look at the title" para_ids="5,6,8">
+         <commentary>
+            <para><![CDATA[]]>The model text is from a student reflecting on course material.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para><![CDATA[]]>The writer will need to limit the comments on personal development to those that can be linked to specific literature and learning.</para>
+         </commentary>
+      </step>
+      <step label="Look at Move 1" para_ids="100,11,13">
+         <commentary>
+            <para><![CDATA[]]>Your introduction previews your themes, and shows awareness of the academic context.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para showme="14,15"><![CDATA[]]>Giving a reference to a key academic related to your course demonstrates that you are aware of the important writers and researchers in your field.</para>
+            <para showme="16,20,114"><![CDATA[]]>Connect what you have read to what you have personally experienced.</para>
+            <para showme="17,18,19"><![CDATA[]]>The three abstract nouns listed preview the structure of the text—each one is further discussed in the following paragraphs. This gives coherence to the text as a whole.</para>
+         </commentary>
+      </step>
+      <step label="Look at Move 2" para_ids="103,31,33">
+         <commentary>
+            <para showme="34"><![CDATA[]]>The writer admits a previous mistaken belief. If you feel you have changed your thinking about a topic, it is useful to include this.</para>
+            <para showme="35"><![CDATA[]]>Giving concrete examples helps your reader. Make sure that if you generalize you have some examples for clarification.</para>
+            <para showme="37"><![CDATA[]]>The writer summarizes the lesson learnt by making a generalization. Moving from evidence to implication in this way helps your reader follow your points.</para>
+         </commentary>
+      </step>
+      <step label="Look at Move 3" para_ids="106,48,50">
+         <commentary>
+            <para showme="51"><![CDATA[]]>Give specific examples to back up your claims, e.g. for a change in your thinking and behaviour.</para>
+            <para><![CDATA[]]>Even if this event is negative in some way, it is effective to show how you have learnt from the problem.</para>
+         </commentary>
+      </step>
+      <step label="Look at Move 4" para_ids="109,62,64">
+         <commentary>
+            <para><![CDATA[]]>This paragraph shows self-awareness. You do not need to have completely gained a skill—it is usually enough to reflect honestly on how you are changing, and admit to weaknesses that you are working on.</para>
+         </commentary>
+      </step>
+      <step label="Look at Move 5" para_ids="112,71,73">
+         <commentary>
+            <para><![CDATA[]]>In this paragraph the writer compares present feelings / skills with earlier ones - this also indicates that it is an on-going development.</para>
+            <para showme="74"><![CDATA[]]>The writer shows awareness of relevant literature.</para>
+            <para><![CDATA[]]>Reflective writing that is assessed should have a balance of academic rigour and personal reflection; neither one should overshadow the other.</para>
+            <para showme="78"><![CDATA[]]>Make reference to the words of your assignment task in your conclusion.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para><![CDATA[]]>Look to the future too—what changes in yourself or the situation do you expect to see?</para>
+         </commentary>
+      </step>
+      <step label="Show me useful language" para_ids="22,39,53,64,81">
+         <commentary>
+            <para showme="26,41,42,58,59,115,67,88,89,91,93,96,116"><![CDATA[]]>Use the personal pronouns ‘I’ and ‘me’ to make personal claims.</para>
+            <para showme="25,27,28,40,43,44,54,56,57,65,82,83,84,86,87,92"><![CDATA[]]>The present perfect tense and the present continuous tense express an unfinished, on-going process. It is effective if you can show that you are changing and are open to development.</para>
+            <para showme="23,24,45,55,66,68,85,90,94,95,97,98"><![CDATA[]]>Word and phrases to compare and contrast</para>
+         </commentary>
+      </step>
+   </guided_tour>
+   <practice_rubric>
+      <planning>
+         <checklist>
+            <point>Read the assignment brief carefully and decide what the limits of the task are. What exactly do you need to reflect on?</point>
+            <point help="reflective7.xml">Make notes on academic sources that might be useful—choose a good quotation or write a summarizing statement.</point>
+            <point>List events, key incidents or examples that will support your case.</point>
+            <point help="reflective8.xml">Compose a draft, writing freely.</point>
+            <point help="reflective9.xml">Look for themes in your draft and rearrange your writing around topics.</point>
+            <point help="reflective10.xml">Give your writing an introduction that previews your themes, and shows awareness of the academic context.</point>
+         </checklist>
+      </planning>
+      <vocab>
+         <checklist>
+            <point help="academic_language2.xml">Use academic language.</point>
+            <point help="reflective1.xml">Language Bank: Expressing your beliefs and feelings</point>
+            <point help="reflective2.xml">Language Bank: Expressing what you have learnt</point>
+            <point help="reflective3.xml">Language Bank: Expressing a change in your thinking</point>
+            <point help="reflective4.xml">Language Bank: Expressing positive changes</point>
+            <point help="reflective5.xml">Language Bank: Admitting weaknesses</point>
+         </checklist>
+      </vocab>
+      <writing>
+         <checklist>
+            <point help="reflective6.xml">Evaluative adjectives</point>
+            <point help="reflective39.xml">Grammar focus: use of tenses</point>
+            <point help="reflective11.xml">Think about the writing process.</point>
+         </checklist>
+      </writing>
+      <checking>
+         <checklist>
+            <point>Have I reflected on exactly what the task asks me to?</point>
+            <point>Have I used some academic sources?</point>
+            <point>Have I used specific events or examples to support my case?</point>
+            <point>Have I shown self-awareness e.g. how I have changed or what I still need to do?</point>
+            <point>Does my work follow a clear structure, with an introduction that puts the essay in the academic context?</point>
+            <point>Have I referred to the words of the task in my conclusion?</point>
+            <point>Have I checked vocabulary, grammar, spelling and punctuation?</point>
+         </checklist>
+      </checking>
+   </practice_rubric>
+   <paragraphs>
+      <paragraph eid="1">
+         <name eid="2">Reflective Writing</name>
+         <desc eid="3">Reflective writing asks students to think critically about the course and themselves as learners.</desc>
+      </paragraph>
+      <paragraph eid="4">
+         <name eid="5">Title</name>
+         <desc eid="6">The heading of the task you are given</desc>
+         <tip eid="7">TIP Notice the task heading and exactly what you are asked to write about. Think about the limits of the task.</tip>
+         <content prompt="Type your Title here." eid="8">
+            <para prompt="Type your Title here." eid="8"><![CDATA[]]>The Impact of the Introduction to Stage Two Counselling Skills on my Personal Development</para>
+         </content>
+      </paragraph>
+      <paragraph eid="99">
+         <name eid="100">Move 1: Connecting theory to practice</name>
+         <desc eid="101">This connects the theory you have studied to your experience.</desc>
+      </paragraph>
+      <paragraph eid="9">
+         <name eid="10">Steps 1 and 2</name>
+         <desc eid="11">Step 1. Set out the general framework, using a quotation if relevant.<![CDATA[</br>
+]]>Step 2. Connect the theory to your experience.</desc>
+         <tip eid="12">TIP Connect what you have read to what you have personally experienced.</tip>
+         <content prompt="Type Move 1 here." eid="13">
+            <para prompt="Type Move 1 here." eid="13"><![CDATA[]]><extra_info eid="14">Carl Rogers argued</extra_info> that becoming a counsellor is not just the acquiring of a set of skills, but is a way of being; utilizing the three core conditions is a key aspect of this<extra_info eid="15">(Sanders, 2002: 67)</extra_info>. Since embarking on the Introduction to Counselling Skills course,<extra_info eid="16">I have been made aware of Rogers' core conditions</extra_info> of<extra_info eid="17">genuineness</extra_info>,<extra_info eid="18">empathy</extra_info> and<extra_info eid="19">acceptance</extra_info>.<extra_info eid="20">I believe I possessed elements of these unknowingly;</extra_info> 
+               <extra_info eid="114">however, becoming conscious of them has enabled me to incorporate them into my being and to develop personally.</extra_info> 
+            </para>
+         </content>
+      </paragraph>
+      <paragraph eid="21">
+         <content prompt="Type Move 1 here." eid="22" dup="13">
+            <para prompt="Type Move 1 here." eid="22" dup="13"><![CDATA[]]>Carl Rogers argued that becoming a counsellor is<useful type="position" eid="23">not just</useful> the acquiring of a set of skills,<useful type="position" eid="24">but</useful> is a way of being; utilizing the three core conditions is a key aspect of this (Sanders, 2002: 67). Since embarking on the Introduction to Counselling Skills course,<useful type="objective" eid="25">I have been made aware</useful> of Rogers' core conditions of genuineness, empathy and acceptance.<useful type="linking" eid="26">I believe</useful> I possessed elements of these unknowingly; however,<useful type="objective" eid="27">becoming conscious</useful> of them<useful type="objective" eid="28">has enabled me</useful> to incorporate them into my being and to develop personally.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="102">
+         <name eid="103">Move 2: Internal changes</name>
+         <desc eid="104">This examines your own feelings and behaviour and any changes that have taken place.</desc>
+      </paragraph>
+      <paragraph eid="29">
+         <name eid="30">Steps 1 and 2</name>
+         <desc eid="31">Step 1. Explore the reasons for your feelings and behaviour, or for those of others.<![CDATA[</br>
+]]>Step 2. Describe any changes that have taken place in your thinking.</desc>
+         <tip eid="32">TIP Giving concrete examples helps your reader.</tip>
+         <content prompt="Type Move 2 here." eid="33">
+            <para prompt="Type Move 2 here." eid="33"><![CDATA[]]><extra_info eid="34">The Counselling Skills course has taught me the importance of listening to others attentively. I thought that this was a skill I always held. However, on reflection, I noticed that I would often be preoccupied with other endeavours</extra_info>,<extra_info eid="35">such as watching television or sending a text. Recently, I have made a conscious effort to give my full attention to conversations and I have begun to notice when others do not offer me the same courtesy. This is sometimes hurtful.</extra_info> 
+               <extra_info eid="37">Listening to people and showing my interest and genuineness is a valuable skill to have and one that makes other people feel appreciated.</extra_info> 
+            </para>
+         </content>
+      </paragraph>
+      <paragraph eid="38">
+         <content prompt="Type Move 2 here." eid="39" dup="33">
+            <para prompt="Type Move 2 here." eid="39" dup="33"><![CDATA[]]>The Counselling Skills course<useful type="objective" eid="40">has taught me</useful> the importance of listening to others attentively.<useful type="linking" eid="41">I thought</useful> that this was a skill I always held. However, on reflection,<useful type="linking" eid="42">I noticed</useful> that I would often be preoccupied with other endeavours, such as watching television or sending a text. Recently,<useful type="objective" eid="43">I have made a conscious effort</useful> to give my full attention to conversations and<useful type="objective" eid="44">I have begun to notice</useful> when others do not offer me<useful type="position" eid="45">the same</useful> courtesy. This is sometimes hurtful. Listening to people and showing my interest and genuineness is a valuable skill to have and one that makes other people feel appreciated.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="105">
+         <name eid="106">Move 3: External evidence</name>
+         <desc eid="107">This gives specific examples to back up your claims.</desc>
+      </paragraph>
+      <paragraph eid="46">
+         <name eid="47">Steps 1 and 2</name>
+         <desc eid="48">Step 1. Describe the specific event or aspect you wish to focus on.<![CDATA[</br>
+]]>Step 2. Connect specific events or aspects to your course or given theory.</desc>
+         <tip eid="49">TIP You can vary the order of Moves 2 and 3.<![CDATA[
+</br>]]>TIP Give specific examples to back up your claims.</tip>
+         <content prompt="Type Move 3 here." eid="50">
+            <para prompt="Type Move 3 here." eid="50"><![CDATA[]]>This course has also taught me the difference between ‘knowing’ how people feel and understanding how people may feel from their perspective. I have learnt that it is impossible to know exactly how someone else feels and to say that one does may distract attention away from their problem.<extra_info eid="51">For example, my course friends and I have found the first term back at university stressful and we frequently share our feelings about this. I am often tempted to tell them ‘I know exactly how you feel’. However, I am now more considered in my response and rephrase this to something like ‘I understand how you must be feeling’. This validates what the others have said whilst letting them know I appreciate their views.</extra_info> 
+            </para>
+         </content>
+      </paragraph>
+      <paragraph eid="52">
+         <content prompt="Type Move 3 here." eid="53" dup="50">
+            <para prompt="Type Move 3 here." eid="53" dup="50"><![CDATA[]]>This course<useful type="objective" eid="54">has also taught me</useful> 
+               <useful type="position" eid="55">the difference between</useful> ‘knowing’ how people feel and understanding how people may feel from their perspective.<useful type="objective" eid="56">I have learnt</useful> that it is impossible to know exactly how someone else feels and to say that one does may distract attention away from their problem. For example, my course friends and<useful type="objective" eid="57">I have found</useful> the first term back at university stressful and we frequently share our feelings about this.<useful type="linking" eid="58">I am often tempted</useful> to tell them ‘I know exactly how you feel’. However,<useful type="linking" eid="59">I am now more considered</useful> in my response and rephrase this to something like ‘I understand how you must be feeling’. This validates what the others have said whilst letting them know I appreciate their views.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="108">
+         <name eid="109">Move 4: Learning from failure</name>
+         <desc eid="110">This shows your self-awareness.</desc>
+      </paragraph>
+      <paragraph eid="60">
+         <name eid="61">Steps 1 and 2</name>
+         <desc eid="62">Step 1. Admit to problems, if appropriate.<![CDATA[</br>
+]]>Step 2. Interpret the situation in the light of your given framework.</desc>
+         <content prompt="Type Move 4 here." eid="64">
+            <para prompt="Type Move 4 here." eid="64"><![CDATA[]]><useful eid="65">I have also learnt</useful> 
+               <useful type="position" eid="66">the difference between</useful> empathizing and sympathizing;<useful eid="115" type="linking">this is extremely beneficial to me</useful>.<useful type="linking" eid="67">I am a person that</useful> can get caught up in other people's difficulties; this is neither helpful nor supportive.<useful type="position" eid="68">Much better</useful> is to empathize and remain objective as this is both helpful and supportive and may enable the other person to progress.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="111">
+         <name eid="112">Move 5: Comparing past with present and future</name>
+         <desc eid="113">This compares your present feelings and skills with your earlier ones and looks at what changes you expect to see in the future.</desc>
+      </paragraph>
+      <paragraph eid="69">
+         <name eid="70">Steps 1, 2 and 3</name>
+         <desc eid="71">Step 1. Compare your past thinking to your present thinking.<![CDATA[</br>
+]]>Step 2. Consider the implications for the future.<![CDATA[</br>
+]]>Step 3. Conclude your reflection with reference to the task brief and your future plans.</desc>
+         <tip eid="72">TIP Make reference to the words of the assignment task in your conclusion.<![CDATA[
+</br>]]>TIP Look to the future too—what changes in yourself or the situation do you expect to see?</tip>
+         <content prompt="Type Move 5 here." eid="73">
+            <para prompt="Type Move 5 here." eid="73"><![CDATA[]]>During the course, I have learnt that before you can understand others you must first understand yourself.<extra_info eid="74">Sutton and Stewart (2002: 20) argue that by gaining self-awareness our chances of becoming genuine and empathic increase.</extra_info> This course has provided me with an opportunity to reflect on my own thoughts and my belief system. As a result of this,<extra_info eid="75">I am becoming more aware</extra_info> of my prejudices and values and have learnt that, in order to develop an empathic understanding,<extra_info eid="76">I need to try</extra_info> to suspend these so I can give a non-judgemental and respectful response. I am much more aware of how this challenges me personally. I would find it difficult to deal with racist, sexist or prejudiced people as this opposes how I have been brought up to think. However, I now understand that other people may have been brought up with a different belief system. As a result of the course,<extra_info eid="77">I feel more capable of being less judgemental</extra_info>.<extra_info eid="78">Looking inward is the biggest and perhaps most difficult element of the Counselling Skills module, but the one which has been most beneficial to my personal development.</extra_info> 
+            </para>
+         </content>
+      </paragraph>
+      <paragraph eid="80">
+         <content prompt="Type Move 5 here." eid="81" dup="73">
+            <para prompt="Type Move 5 here." eid="81" dup="73"><![CDATA[]]>During the course,<useful type="objective" eid="82">I have learnt</useful> that before you can understand others you must first understand yourself. Sutton and Stewart (2002: 20) argue that by gaining self-awareness our chances of becoming genuine and empathic increase.<useful type="objective" eid="83">This course has provided me with</useful> an opportunity to reflect on my own thoughts and my belief system. As a result of this,<useful type="objective" eid="84">I am becoming</useful> 
+               <useful type="position" eid="85">more</useful> 
+               <useful type="objective" eid="86">aware</useful> of my prejudices and values<useful type="objective" eid="87">and have learnt</useful> that, in order to develop an empathic understanding,<useful type="linking" eid="88">I need to try</useful> to suspend these so I can give a non-judgemental and respectful response.<useful type="linking" eid="89">I am</useful> 
+               <useful type="position" eid="90">much more</useful> 
+               <useful type="linking" eid="91">aware</useful> of how this<useful eid="116" type="linking">challenges me personally</useful>. I would find it difficult to deal with racist, sexist or prejudiced people as this opposes how<useful type="objective" eid="92">I have been brought up</useful> to think. However,<useful type="linking" eid="93">I now understand</useful> that<useful type="position" eid="94">other</useful> people may have been brought up with a<useful type="position" eid="95">different</useful> belief system. As a result of the course,<useful type="linking" eid="96">I feel more capable</useful> of being<useful type="position" eid="97">less</useful> judgemental. Looking inward is the biggest and perhaps most difficult element of the Counselling Skills module, but the one which has been<useful type="position" eid="98">most</useful> beneficial to my personal development.</para>
+         </content>
+      </paragraph>
+   </paragraphs>
+</framework>

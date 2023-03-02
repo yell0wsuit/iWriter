@@ -1,4 +1,6 @@
 var event_type = 'click';
+var global_str = "";
+var awl_list = "";
 var overWrite_flag = false;
 
 var device_detect = false;
@@ -32,7 +34,7 @@ function Controller() {
         this.load_data = load_data_arg;
         $.ajax({// to get project list
             type: "GET",
-            url: "xml/frameworks.xml",
+            url: (/academic/.test(location.pathname)) ? "xml/academic/frameworks.xml" : "xml/frameworks.xml",
             dataType: "xml",
             success: function(xml) {
                 $(xml).find('framework').each(function() {
@@ -45,6 +47,8 @@ function Controller() {
                     _this.project_count = project_count;
                     if (Number($(xml).find('framework').length) === _this.project_count) {
                         _this.loadFramework();
+                        var iLoader = document.getElementById('iLoader');
+                        $(iLoader).remove();
                     }
                 });
             },
@@ -54,7 +58,7 @@ function Controller() {
         });
         $.ajax({// to get config
             type: "GET",
-            url: "xml/config.xml",
+            url: (/academic/.test(location.pathname)) ? "xml/academic/config.xml" : "xml/config.xml",
             dataType: "xml",
             success: function(xml) {
                 _this.config_msg = xml;
@@ -63,13 +67,24 @@ function Controller() {
                 alert("An error occurred while processing XML file.");
             }
         });
+        $.ajax({ // AWL list
+            type: "GET",
+            url: "xml/academic/awl_list.json",
+            dataType: "json",
+            success: function(json) {
+                awl_list = json.awl;
+            },
+            error: function() {
+                alert("An error occurred while processing JSON file.");
+            }
+        });
     };
     this.loadFramework = function() {
-        var iLoader = document.getElementById('iLoader');
-        $(iLoader).remove();
+        
         $.ajax({
             type: "GET",
-            url: "xml/frameworks.xml",
+            async: false,
+            url: (/academic/.test(location.pathname)) ? "xml/academic/frameworks.xml" : "xml/frameworks.xml",
             dataType: "xml",
             success: function(xml) {
                 $(xml).find('framework').each(function() {
@@ -82,6 +97,8 @@ function Controller() {
                     }
                 });
                 _this.loadXML();
+                //var iLoader = document.getElementById('iLoader');
+                //$(iLoader).remove();
             },
             error: function() {
                 alert("An error occurred while processing XML file.");
@@ -92,12 +109,15 @@ function Controller() {
         if (_this.load_count < _this.project_count) {
             $.ajax({
                 type: "GET",
-                url: "xml/" + _this.project_xml_data[_this.load_count]['file_name'],
+                async: false,
+                url: (/academic/.test(location.pathname)) ? "xml/academic/" + _this.project_xml_data[_this.load_count]['file_name'] : "xml/" + _this.project_xml_data[_this.load_count]['file_name'],
                 dataType: "xml",
                 success: function(xml) {
                     _this.project_xml_data[_this.load_count]['xml_data'] = xml;
                     _this.load_count++;
                     _this.loadXML();
+                    var iLoader = document.getElementById('iLoader');
+                    $(iLoader).remove();
                 },
                 error: function() {
                     alert("An error occurred while processing XML file.");
@@ -219,8 +239,8 @@ function Controller() {
         $('.str_common').each(function() {
             $(this).children('.tick_mark').removeClass('_selected');
         });
-        $('.models_page_left_panel h1').html(m_name);
-        $('.models_page_body .left_wrapper').empty().html('<div class="steps_title"><p>Guided tour of the model</p><p>Take a step-by-step tour of how  the model was written</p></div><ul class="medels_steps"></ul>');
+        $('.models_page_left_panel').html(m_name);
+        $('.models_page_body .left_wrapper').empty().html('<div class="steps_title"><p>Guided tour of the model</p><p>Take a step-by-step tour of how the model was written</p></div><ul class="medels_steps"></ul>');
         $('.models_page_body_left .medels_steps').empty();
         $('.models_header').empty();
         $('.models_content').empty();
@@ -234,7 +254,7 @@ function Controller() {
         _this.project_short_name = _this.project_xml_data[_this.current_key]['short_name'];
         if ($(window).width() <= 768) {
             if (_this.project_short_name != '') {
-                $('.models_page_left_panel h1').html(_this.project_short_name);
+                $('.models_page_left_panel').html(_this.project_short_name);
             }
         }
 
@@ -272,12 +292,12 @@ function Controller() {
                 $(this).children('.tick_mark').removeClass('_selected');
             });
             $('.medels_steps li').removeAttr('style');
-            $('.models_page_body_left .medels_steps li').css('background-color', 'rgba(0, 0, 0, 0)').css('color', '#000000');
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                $(this).css('background-color', '#3f51b5');
-            } else {
-                $(this).css('background-color', '#00123c').css('color', '#FFFFFF');
-            }
+            $('.models_page_body_left .medels_steps li').css('background-color', 'rgba(0, 0, 0, 0)');
+            //if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+             //   $(this).css('background-color', '#3f51b5');
+            //} else {
+                $(this).css('background-color', 'var(--bs-primary)').css('color','white');
+            //}
             var left_pos = $('.models_page_body_left').position();
             if (Number(left_pos.left) == 0) {
                 if ($(window).width() <= 480) {
@@ -298,6 +318,7 @@ function Controller() {
             $('.models_header').empty();
             $('.models_content').empty();
             if ($(this).attr('data-para_ids') === 'undefined') {
+                $('.models_content').addClass('d-none');
                 $(_this.project_xml_data[_this.current_key]['xml_data']).find('step').each(function() {
                     if ($(this).attr('label') == $(parent_0).children('span').text()) {
                         $(this).children().find('para').each(function(index) {
@@ -305,9 +326,11 @@ function Controller() {
                             top_para_content = top_para_content + '<p>' + $(this).text() + '</p>';
                         });
                         $('.models_header').html(top_para_content);
+                        
                     }
                 });
             } else {
+                $('.models_content').removeClass('d-none');
                 para_ids = $(parent_0).attr('data-para_ids').toString().split(',');
                 for (var i = 0; i < para_ids.length; i++) {
                     para_ids[i] = para_ids[i].split('_');
@@ -320,6 +343,7 @@ function Controller() {
                     return a - b
                 });
                 var colors = ["#E8BCC1", "#C5DBF4", "#FFF7B4", "#B6CD72", "#F2D4A6", "#DBDED8"];
+                var bscolors = ["bg-primary text-bg-primary", "bg-success text-bg-success", "bg-danger text-bg-danger", "bg-warning text-bg-warning", "bg-info text-bg-info", "bg-secondary text-bg-secondary"];
                 var colors_cnt = 0;
                 $(_this.project_xml_data[_this.current_key]['xml_data']).find('step').each(function() {
                     if ($(this).attr('label') == $(parent_0).children('span').text()) {
@@ -328,7 +352,7 @@ function Controller() {
                             top_para_content = top_para_content + '<p>' + $(this).text();
                             if ($(this).attr('showme')) {
                                 //top_para_content = top_para_content + '<div data-showme="' + $(this).attr('showme') + '"class="show_me_btn"></div>';
-                                top_para_content = top_para_content + '<input class="show_me_btn" data-color="' + colors[colors_cnt] + '" data-showme="' + $(this).attr('showme') + '" type="checkbox" name="showme">';
+                                top_para_content = top_para_content + ' ' + '<input class="show_me_btn form-check-input" data-color="' + bscolors[colors_cnt] + '" data-showme="' + $(this).attr('showme') + '" type="checkbox" name="showme">';
                                 colors_cnt++;
                             }
                             top_para_content = top_para_content + '</p>';
@@ -378,7 +402,7 @@ function Controller() {
                     }
 
                     if (tag_status) {
-                        body_content += '<div class="cont_wrp_box">';
+                        body_content += '<div class="cont_wrp_box mt-4">';
                     }
                     //for (var i = 0; i < para_ids.length; i++) {
 
@@ -416,7 +440,7 @@ function Controller() {
                     if ($(this).find('name').length != 0 && typeof ($(this).children('name').attr('eid')) != 'undefined') {
                         var name_node = $(this).children('name').attr('eid').split('_');
                         if (para_ids.indexOf(parseInt(name_node[name_node.length - 1])) != (-1)) {
-                            body_content += '<div class="content_box"><div class="sturcture_content" style="text-align:' + $(this).attr('align') + '">';
+                            body_content += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
                             body_content += '<p>' + $(this).children('name').text() + '</p>';
                             if ($(this).find('desc').length == 0 && typeof ($(this).children('desc').attr('eid')) == 'undefined') {
                                 body_content += '</div></div>';
@@ -438,11 +462,11 @@ function Controller() {
                         if (para_ids.indexOf(parseInt(desc_node[desc_node.length - 1])) != (-1)) {
 
                             if ($(this).find('name').length == 0 && typeof ($(this).children('name').attr('eid')) == 'undefined') {
-                                body_content += '<div class="content_box"><div class="sturcture_content" style="text-align:' + $(this).attr('align') + '">';
+                                body_content += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
                             } else {
                                 var _para_id = $(this).children('name').attr('eid').split('_');
                                 if (para_ids.indexOf(parseInt(_para_id[_para_id.length - 1])) == (-1)) {
-                                    body_content += '<div class="content_box"><div class="sturcture_content" style="text-align:' + $(this).attr('align') + '">';
+                                    body_content += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
                                 }
                             }
                             body_content += '<p>' + $(this).find('desc').text() + '</p>';
@@ -453,7 +477,7 @@ function Controller() {
                     if ($(this).find('notes').length != 0 && typeof ($(this).children('notes').attr('eid')) != 'undefined') {
                         var notes_node = $(this).children('notes').attr('eid').split('_');
                         if (para_ids.indexOf(parseInt(notes_node[notes_node.length - 1])) != (-1)) {
-                            body_content += '<div class="content_box"><div class="notes_content italic_style" style="text-align:' + $(this).attr('align') + '">';
+                            body_content += '<div class="content_box"><div class="notes_content text-success-emphasis fst-italic" style="text-align:' + $(this).attr('align') + '">';
                             body_content += notes_html_temp;
                             body_content += '</div></div>';
                         }
@@ -463,7 +487,7 @@ function Controller() {
                         var content_node = $(this).children('content').attr('eid').split('_');
                         if (para_ids.indexOf(parseInt(content_node[content_node.length - 1])) != (-1)) {
                             body_content += xml_img;
-                            body_content += '<div class="content_box"><div class="content_contents" style="text-align:' + $(this).attr('align') + '">';
+                            body_content += '<div class="content_box"><div class="content_contents text-primary-emphasis mb-4" style="text-align:' + $(this).attr('align') + '">';
                             body_content += content_html_temp;
                             body_content += '</div></div>';
                         }
@@ -487,7 +511,7 @@ function Controller() {
                 body_content = body_content.replace(/ <\/span> /g, "</span> ");
                 body_content = body_content.replace(/<\/span>\.\./g, "</span>.");
                 $('.models_content').html(body_content);
-                _this.db_clk();
+                //_this.db_clk();
                 $('.show_me_btn').on('change', function(e) {
                     _this.reset_drop();
                     //$('.content_box span').removeAttr('class');
@@ -501,7 +525,8 @@ function Controller() {
                                 var con_id = $(this).attr('eid').split('_');
                                 if (con_id[con_id.length - 1] == show_ids[i]) {
                                     $(this).addClass('highlight_txt');
-                                    $(this).css('background-color', color_code);
+                                    //$(this).css({'background-color': color_code, 'color': 'black'});
+                                    $(this).addClass(color_code);
                                 }
                             });
                         }
@@ -512,8 +537,9 @@ function Controller() {
                             $('.content_box span').each(function() {
                                 var con_id = $(this).attr('eid').split('_');
                                 if (con_id[con_id.length - 1] == show_ids[i]) {
-                                    $(this).removeClass('highlight_txt');
-                                    $(this).removeAttr('style');
+                                    //$(this).removeClass('highlight_txt');
+                                    //$(this).removeAttr('style');
+                                    $(this).removeClass();
                                 }
                             });
                         }
@@ -580,7 +606,7 @@ function Controller() {
                 }
 
                 if (tag_status) {
-                    content_data += '<div class="cont_wrp_box">';
+                    content_data += '<div class="cont_wrp_box mt-4">';
                 }
 
 
@@ -618,14 +644,14 @@ function Controller() {
                         }
                     }
                 }
-
+                $('.models_content').removeClass('d-none');
                 if ($('.show_structre').children('.tick_mark').hasClass('_selected') || $('.show_all').children('.tick_mark').hasClass('_selected')) {
                     if ($(this).children('name').length != 0 && $(this).children('name').text() != "") {
-                        content_data += '<div class="content_box"><div class="sturcture_content" style="text-align:' + $(this).attr('align') + '">';
+                        content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
                         content_data += '<p>' + $(this).find('name').text() + '</p>';
                     } else {
                         if ($(this).children('desc').length != 0 && $(this).children('desc').text() != "") {
-                            content_data += '<div class="content_box"><div class="sturcture_content" style="text-align:' + $(this).attr('align') + '">';
+                            content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
                         }
                     }
                     if ($(this).children('desc').length != 0 && $(this).children('desc').text() != "") {
@@ -638,7 +664,7 @@ function Controller() {
                 if ($('.show_notes').is(':visible')) {
                     if ($('.show_notes').children('.tick_mark').hasClass('_selected') || $('.show_all').children('.tick_mark').hasClass('_selected')) {
                         if ($(this).children('notes').length != 0 && $(this).children('notes').text() != "" && typeof ($(this).children('notes').attr('dup')) == 'undefined') {
-                            content_data += '<div class="content_box"><div class="notes_content italic_style" style="text-align:' + $(this).attr('align') + '">';
+                            content_data += '<div class="content_box"><div class="notes_content text-success-emphasis fst-italic" style="text-align:' + $(this).attr('align') + '">';
                             content_data += notes_html_temp;
                             content_data += '</div></div>';
                         }
@@ -648,7 +674,7 @@ function Controller() {
                     if ($('.show_content').children('.tick_mark').hasClass('_selected') || $('.show_all').children('.tick_mark').hasClass('_selected')) {
                         if ($(this).children('content').length != 0 && $(this).children('content').text() != "" && typeof ($(this).children('content').attr('dup')) == 'undefined') {
                             content_data += xml_img;
-                            content_data += '<div class="content_box"><div class="content_contents" style="text-align:' + $(this).attr('align') + '">';
+                            content_data += '<div class="content_box"><div class="content_contents text-primary-emphasis mb-4" style="text-align:' + $(this).attr('align') + '">';
                             content_data += content_html_temp;
                             content_data += '</div></div>';
                         }
@@ -678,7 +704,7 @@ function Controller() {
 
 
             $('.models_content').html(content_data);
-            _this.db_clk();
+            //_this.db_clk();
             $('.cont_wrp_box').each(function() {
                 if ($(this).html() == '') {
                     $(this).remove();
@@ -778,33 +804,45 @@ function Controller() {
                     //$('.models_page_body,.second_page_body,.second_page_body_left,.models_page_body_left').css('overflow-y', 'scroll');
                 } else {
                     $('.second_page_body_left').animate({'left': '0'});
-                    $//('.second_page_body').css('overflow', 'hidden');
-                    $('.left_menu').css('background-position', '-5px 0px');
+                    //$('.second_page_body').css('overflow', 'hidden');
+                    //$('.left_menu').css('background-position', '-5px 0px');
                 }
                 //end for device
 
 
                 var head_html = '<div class="models_header w_models_header"><p>' + $(this).parents('.li_inner').next().html() + '</p></div>';
-                head_html += '<div class="create_project create_pro_btn" data-type="create" data-key="' + $(this).attr('data-key') + '">Create a new project</div>';
+                head_html += '<div class="d-grid"><button class="btn btn-primary mb-4 p-3 create_project create_pro_btn" data-type="create" data-key="' + $(this).attr('data-key') + '" role="button">Create a new project</button></div>';
                 _this.current_key = $(this).attr('data-key');
                 var postData = {'data-key': _this.current_key};
                 
                 //IndexedDB
                 async function showProj() {
-                    var results = await connection.select({
-                        from: 'iw_projects',
-                        where: {data_id: _this.current_key},
-                        order: {
-                            by: 'date_time',
-                            type: 'desc'
-                        }
-                    })
+                    if (/academic/.test(location.pathname) == !1) {
+                        var results = await connection.select({
+                            from: 'iw_projects',
+                            where: {data_id: _this.current_key},
+                            order: {
+                                by: 'date_time',
+                                type: 'desc'
+                            }
+                        })
+                    } else {
+                        var results = await connection.select({
+                            from: 'iw_aca_projects',
+                            where: {data_id: _this.current_key},
+                            order: {
+                                by: 'date_time',
+                                type: 'desc'
+                            }
+                        })
+                    }
+                    
                     var temp_html = '';
                     for (var i in results) {
                         var _name = results[i]['name'].replace(/\#\|\#/g, "'");
                         _name = _name.replace(/\#\|\|\#/g, '"');
-                        temp_html += '<div class="create_project" data-key="' + results[i]['data_id'] + '" data-project="' + results[i]['name'] + '" data-type="save">' + _name + '<br>' + results[i]['dtime'] + '</div>';
-                        temp_html += '<div class="delete_project" data-key="' + results[i]['id'] + '">X</div>';
+                        temp_html += '<div class="create_project mb-2 bg-body-tertiary" data-key="' + results[i]['data_id'] + '" data-project="' + results[i]['name'] + '" data-type="save">' + _name + '<br>' + results[i]['dtime'] + '</div>';
+                        temp_html += '<div class="delete_project" data-key="' + results[i]['id'] + '" data-bs-toggle="modal" data-bs-target="#deleteModal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16"><path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/></svg></div>';
                     }
                     head_html += temp_html;
                     $('.second_page_body_right').show().empty().html(head_html);
@@ -813,27 +851,37 @@ function Controller() {
                         var delete_id = $(this).attr('data-key');
                         var temp_this = this;
                         //var r = confirm("Are you sure you want to delete this project?");
-                        $('.white_content').remove();
-                        var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Are you sure you want to delete this project?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
-                        $('.main_wrapper').append(temp_pop);
-                        $('.white_content').show();
-                        call_pop();
-                        $('.ok_btn_pop').off(event_type).on(event_type, function() {
-                            $('.white_content').hide();
+                        //$('.white_content').remove();
+                        //var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Are you sure you want to delete this project?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
+                        //$('.main_wrapper').append(temp_pop);
+                        //$('.white_content').show();
+                        //call_pop();
+                        $('.ok_btn_delete').off(event_type).on(event_type, function() {
+                            //$('.white_content').hide();
                             async function removeProj() {
-                                var deleteProj = await connection.remove({
-                                    from: 'iw_projects',
-                                    where: {
-                                        id: Number(delete_id)
-                                    }
-                                });
+                                if (/academic/.test(location.pathname) == !1) {
+                                    var deleteProj = await connection.remove({
+                                        from: 'iw_projects',
+                                        where: {
+                                            id: Number(delete_id)
+                                        }
+                                    });
+                                } else {
+                                    var deleteProj = await connection.remove({
+                                        from: 'iw_aca_projects',
+                                        where: {
+                                            id: Number(delete_id)
+                                        }
+                                    });
+                                }
+                                
                             };
                             removeProj();
                             $(temp_this).prev().remove();
                             (temp_this).remove();
                         });
                         $('.can_btn_pop').off(event_type).on(event_type, function() {
-                            $('.white_content').hide();
+                            //$('.white_content').hide();
                         });
                         return false;
                     });
@@ -974,7 +1022,7 @@ function Controller() {
 
         function show_pop() {
             $('.white_content').remove();
-            var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
+            var temp_pop = '<div class="white_content"><div class="h-100 d-flex justify-content-center align-items-center"><div class="modal-backdrop fade show" style="z-index: 0"></div><div class="alert alert-warning alert-dismissible fade show" role="alert"> <h4 class="alert-heading"><span class="alertMsg">Confirm leave?</span></h4> <button type="button" class="btn-close can_btn_pop" data-bs-dismiss="alert" aria-label="Close"></button><p>You have unsaved changes. Do you still want to leave?</p><button type="button" class="btn btn-outline-primary ok_btn_pop">Yes</button> <button type="button" class="btn btn-outline-primary can_btn_pop" data-bs-dismiss="alert">No</button> </div> </div></div>';
             $('.main_wrapper').append(temp_pop);
             $('.white_content').show();
             call_pop();
@@ -993,7 +1041,7 @@ function Controller() {
         //when model exists
         if (_this.show_popup) {
             $('.white_content').remove();
-            var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
+            var temp_pop = '<div class="white_content"><div class="h-100 d-flex justify-content-center align-items-center"><div class="modal-backdrop fade show" style="z-index: 0"></div><div class="alert alert-warning alert-dismissible fade show" role="alert"> <h4 class="alert-heading"><span class="alertMsg">Confirm leave?</span></h4> <button type="button" class="btn-close can_btn_pop" data-bs-dismiss="alert" aria-label="Close"></button><p>You have unsaved changes. Do you still want to leave?</p><button type="button" class="btn btn-outline-primary ok_btn_pop">Yes</button> <button type="button" class="btn btn-outline-primary can_btn_pop" data-bs-dismiss="alert">No</button> </div> </div></div>';
             $('.main_wrapper').append(temp_pop);
             $('.white_content').show();
             call_pop();
@@ -1045,11 +1093,11 @@ function Controller() {
             }
         }
         function show_pop() {
-            $('.white_content').remove();
-            var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
+             $('.white_content').remove();
+            var temp_pop = '<div class="white_content"><div class="h-100 d-flex justify-content-center align-items-center"><div class="modal-backdrop fade show" style="z-index: 0"></div><div class="alert alert-warning alert-dismissible fade show" role="alert"> <h4 class="alert-heading"><span class="alertMsg">Confirm leave?</span></h4> <button type="button" class="btn-close can_btn_pop" data-bs-dismiss="alert" aria-label="Close"></button><p>You have unsaved changes. Do you still want to leave?</p><button type="button" class="btn btn-outline-primary ok_btn_pop">Yes</button> <button type="button" class="btn btn-outline-primary can_btn_pop" data-bs-dismiss="alert">No</button> </div> </div></div>';
             $('.main_wrapper').append(temp_pop);
             $('.white_content').show();
-            call_pop();
+            call_pop(); 
             $('.ok_btn_pop').off(event_type).on(event_type, function() {
                 $('.white_content').hide();
                 hide_elem();
@@ -1092,7 +1140,8 @@ function Controller() {
         $('.str_common').each(function() {
             $(this).children('.tick_mark').removeClass('_selected');
         });
-        $('.models_page_left_panel h1').html(_this.project_xml_data[data_key]['project_name']);
+        $('.models_page_left_panel').html(_this.project_xml_data[data_key]['project_name']);
+        console.log(_this.project_xml_data[data_key]['project_name']);
         //$('.models_page_body .left_wrapper').empty();
 
         $('.models_header').empty();
@@ -1109,7 +1158,7 @@ function Controller() {
         _this.project_short_name = _this.project_xml_data[_this.current_key]['short_name'];
         if ($(window).width() <= 768) {
             if (_this.project_short_name != '') {
-                $('.models_page_left_panel h1').html(_this.project_short_name);
+                $('.models_page_left_panel').html(_this.project_short_name);
             }
         }
 
@@ -1157,13 +1206,24 @@ function Controller() {
             
             //IndexedDB
             async function loadProj() {
-                var load = await connection.select({
-                    from: 'iw_projects',
-                    where: {
-                        data_id: _this.current_key,
-                        name: data_project
-                    }
-                })
+                if (/academic/.test(location.pathname) == !1) {
+                    var load = await connection.select({
+                        from: 'iw_projects',
+                        where: {
+                            data_id: _this.current_key,
+                            name: data_project
+                        }
+                    })
+                } else {
+                    var load = await connection.select({
+                        from: 'iw_aca_projects',
+                        where: {
+                            data_id: _this.current_key,
+                            name: data_project
+                        }
+                    })
+                }
+                
                 if (load.length != 0) {
                     $('.save_pro').attr('data-project-name', data_project);
                     var data = load[0]['data'];
@@ -1216,7 +1276,7 @@ function Controller() {
             }
 
             if (tag_status) {
-                content_data += '<div class="cont_wrp_box">';
+                content_data += '<div class="cont_wrp_box mt-4">';
             }
 
 
@@ -1239,7 +1299,7 @@ function Controller() {
 
             if ($('.show_structre').children('.tick_mark').hasClass('_selected') || $('.show_all').children('.tick_mark').hasClass('_selected')) {
                 if ($(this).children('name').length != 0 && $(this).children('name').text() != "") {
-                    content_data += '<div class="content_box"><div class="sturcture_content" style="text-align:' + $(this).attr('align') + '">';
+                    content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
                     content_data += '<p>' + $(this).find('name').text() + '</p>';
                     if ($(this).children('tip').length != 0 && $(this).children('desc').length == 0) {
                         content_data += '<p>' + $(this).find('tip').text() + '</p>';
@@ -1247,7 +1307,7 @@ function Controller() {
 
                 } else {
                     if ($(this).children('desc').length != 0 && $(this).children('desc').text() != "") {
-                        content_data += '<div class="content_box"><div class="sturcture_content" style="text-align:' + $(this).attr('align') + '">';
+                        content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
                     }
                 }
 
@@ -1270,8 +1330,8 @@ function Controller() {
                         temp_pl += "Type your notes here";
                     }
 
-                    content_data += '<div class="content_box"><div data-ph="Type your notes here" class="notes_content italic_style" contenteditable="true" style="text-align:' + $(this).attr('align') + '">';
-                    content_data += temp_pl;
+                    content_data += '<div class="content_box"><div data-ph="Type your notes here" class="form-control notes_content text-success-emphasis fst-italic" contenteditable="true" style="text-align:' + $(this).attr('align') + '">';
+                    content_data += '';
                     content_data += '</div></div>';
                 }
             }
@@ -1283,7 +1343,7 @@ function Controller() {
                     } else {
                         temp_pl += 'Type your paragraph here';
                     }
-                    content_data += '<div class="content_box"><div data-ph="' + temp_pl + '" class="content_contents" contenteditable="true" data-align="' + $(this).attr('align') + '" style="text-align:' + $(this).attr('align') + '">';
+                    content_data += '<div class="content_box"><div data-ph="' + temp_pl + '" class="form-control content_contents text-primary-emphasis mb-4" contenteditable="true" data-align="' + $(this).attr('align') + '" style="text-align:' + $(this).attr('align') + '">';
                     content_data += content_html_temp;
                     content_data += '</div></div>';
                 }
@@ -1311,13 +1371,13 @@ function Controller() {
 
 
         $('.models_content').html(content_data);
-        _this.db_clk();
+        //_this.db_clk();
         //placeholder functionality
 
         $('.content_contents').keyup(function() {
             _this.wordCount();
         });
-        $(".models_content div[contenteditable='true']").css('min-height', '23px').css('border-top', '1px solid grey').css('border-right', '1px solid grey').css('border-bottom', '1px solid grey');
+        $(".models_content div[contenteditable='true']").css('min-height', '23px');
         $(".models_content div[contenteditable='true']").focus(function() {
             if ($(this).text().trim() == $(this).attr('data-ph')) {
                 $(this).text('');
@@ -1356,74 +1416,75 @@ function Controller() {
 
         //left side content
         var checklist_cnt = 0;
-        var top_html_ck = '<div class="check_content"><div class="check_top"><span>Use formal and impersonal language.</span></div><div class="check_con"></div></div>';
-        top_html_ck += '<div class="checklist_wrp" ><ul class="checklist_ul">';
+        var top_html_ck = '<div class="mt-2 check_content card"><div class="card-header check_top fw-semibold"><span>Use formal and impersonal language.</span></div><div class="card-body check_con bg-body-tertiary"></div></div>';
+        //top_html_ck += '<div class="checklist_wrp" ><ul class="checklist_ul">';
+        top_html_ck += '<div class="checklist_wrp accordion accordion-flush" id="checkListAccordion">';
         var statis_menu = new Array();
         statis_menu[0] = 'Before you start';
         statis_menu[1] = 'Choose your language';
         statis_menu[2] = 'While you are writing';
         statis_menu[3] = 'Check';
         $(_this.project_xml_data[_this.current_key]['xml_data']).find('planning').each(function() {
-            top_html_ck += '<li>';
-            top_html_ck += '<div class="menu_1">' + statis_menu[0] + '</div><div class="checkpoints"><ul class="checkpoints_ul">';
+            top_html_ck += '<div class="accordion-item">';
+            top_html_ck += '<h2 class="accordion-header" id="flush-headingOne"><button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">' + statis_menu[0] + '</button></h2><div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#checkListAccordion"><div class="checkpoints_ul bg-body-tertiary"><div class="accordion-body">';
             $(this).find('point').each(function(_index) {
-                top_html_ck += '<li>';
-                top_html_ck += '<div><span class="check_box_w"><input type="checkbox"/></span><span class="checklist_p">' + $(this).text() + '</span></div>';
+                top_html_ck += '<div>';
+                top_html_ck += '<div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="" id="'+ $(this).text().replace(/\s/g,'').substr(0,17) +'"><label class="form-check-label checklist_p" for="'+ $(this).text().replace(/\s/g,'').substr(0,17) +'">' + $(this).text() + '</label></div>';
                 if (typeof ($(this).attr('help')) != 'undefined') {
-                    top_html_ck += '<span class="tell_me_btn" data-file="' + $(this).attr('help').split('.')[0] + '">tell me more...</span>';
+                    top_html_ck += '<span class="mb-2 btn btn-warning tell_me_btn" data-file="' + $(this).attr('help').split('.')[0] + '">tell me more...</span>';
                 }
 
-                top_html_ck += '</li>';
+                top_html_ck += '</div>';
             });
-            top_html_ck += '</ul></div>';
-            top_html_ck += '</li>';
+            top_html_ck += '</div></div></div>';
+            top_html_ck += '</div>';
         });
         $(_this.project_xml_data[_this.current_key]['xml_data']).find('vocab').each(function() {
-            top_html_ck += '<li>';
-            top_html_ck += '<div class="menu_1">' + statis_menu[1] + '</div><div class="checkpoints"><ul class="checkpoints_ul">';
+            top_html_ck += '<div class="accordion-item">';
+            top_html_ck += '<h2 class="accordion-header" id="flush-headingTwo"><button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">' + statis_menu[1] + '</button></h2><div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#checkListAccordion"><div class="checkpoints_ul bg-body-tertiary"><div class="accordion-body">';
             $(this).find('point').each(function(_index) {
-                top_html_ck += '<li>';
-                top_html_ck += '<div><span class="check_box_w"><input type="checkbox"/></span><span class="checklist_p">' + $(this).text() + '</span></div>';
+                top_html_ck += '<div>';
+                top_html_ck += '<div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="" id="'+ $(this).text().replace(/\s/g,'').substr(0,18) +'"><label class="form-check-label checklist_p" for="'+ $(this).text().replace(/\s/g,'').substr(0,18) +'">' + $(this).text() + '</label></div>';
                 if (typeof ($(this).attr('help')) != 'undefined') {
-                    top_html_ck += '<span class="tell_me_btn" data-file="' + $(this).attr('help').split('.')[0] + '">tell me more...</span>';
+                    top_html_ck += '<span class="mb-2 btn btn-warning tell_me_btn" data-file="' + $(this).attr('help').split('.')[0] + '">tell me more...</span>';
                 }
 
-                top_html_ck += '</li>';
+                top_html_ck += '</div>';
             });
-            top_html_ck += '</ul></div>';
-            top_html_ck += '</li>';
+            top_html_ck += '</div></div></div>';
+            top_html_ck += '</div>';
         });
         $(_this.project_xml_data[_this.current_key]['xml_data']).find('writing').each(function() {
-            top_html_ck += '<li>';
-            top_html_ck += '<div class="menu_1">' + statis_menu[2] + '</div><div class="checkpoints"><ul class="checkpoints_ul">';
+            top_html_ck += '<div class="accordion-item">';
+            top_html_ck += '<h2 class="accordion-header" id="flush-headingThree"><button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">' + statis_menu[2] + '</button></h2><div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#checkListAccordion"><div class="checkpoints_ul bg-body-tertiary"><div class="accordion-body">';
             $(this).find('point').each(function(_index) {
-                top_html_ck += '<li>';
-                top_html_ck += '<div><span class="check_box_w"><input type="checkbox"/></span><span class="checklist_p">' + $(this).text() + '</span></div>';
+                top_html_ck += '<div>';
+                top_html_ck += '<div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="" id="'+ $(this).text().replace(/\s/g,'').substr(0,19) +'"><label class="form-check-label checklist_p" for="'+ $(this).text().replace(/\s/g,'').substr(0,19) +'">' + $(this).text() + '</label></div>';
                 if (typeof ($(this).attr('help')) != 'undefined') {
-                    top_html_ck += '<span class="tell_me_btn" data-file="' + $(this).attr('help').split('.')[0] + '">tell me more...</span>';
+                    top_html_ck += '<span class="mb-2 btn btn-warning tell_me_btn" data-file="' + $(this).attr('help').split('.')[0] + '">tell me more...</span>';
                 }
 
-                top_html_ck += '</li>';
+                top_html_ck += '</div>';
             });
-            top_html_ck += '</ul></div>';
-            top_html_ck += '</li>';
+            top_html_ck += '</div></div></div>';
+            top_html_ck += '</div>';
         });
         $(_this.project_xml_data[_this.current_key]['xml_data']).find('checking').each(function() {
-            top_html_ck += '<li>';
-            top_html_ck += '<div class="menu_1">' + statis_menu[3] + '</div><div class="checkpoints"><ul class="checkpoints_ul">';
+            top_html_ck += '<div class="accordion-item">';
+            top_html_ck += '<h2 class="accordion-header" id="flush-headingFour"><button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">' + statis_menu[3] + '</button></h2><div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#checkListAccordion"><div class="checkpoints_ul bg-body-tertiary"><div class="accordion-body">';
             $(this).find('point').each(function(_index) {
-                top_html_ck += '<li>';
-                top_html_ck += '<div><span class="check_box_w"><input type="checkbox"/></span><span class="checklist_p">' + $(this).text() + '</span></div>';
+                top_html_ck += '<div>';
+                top_html_ck += '<div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="" id="'+ $(this).text().replace(/\s/g,'').substr(0,20) +'"><label class="form-check-label checklist_p" for="'+ $(this).text().replace(/\s/g,'').substr(0,20) +'">' + $(this).text() + '</label></div>';
                 if (typeof ($(this).attr('help')) != 'undefined') {
-                    top_html_ck += '<span class="tell_me_btn" data-file="' + $(this).attr('help').split('.')[0] + '">tell me more...</span>';
+                    top_html_ck += '<span class="mb-2 btn btn-warning tell_me_btn" data-file="' + $(this).attr('help').split('.')[0] + '">tell me more...</span>';
                 }
 
-                top_html_ck += '</li>';
+                top_html_ck += '</div>';
             });
-            top_html_ck += '</ul></div>';
-            top_html_ck += '</li>';
+            top_html_ck += '</div></div></div>';
+            top_html_ck += '</div>';
         });
-        top_html_ck += '</ul></div>';
+        top_html_ck += '</div>'; //end accordion
         $('.left_wrapper').empty().html(top_html_ck);
         $('.checkpoints').hide();
         $('.menu_1').off('click').on('click', function(e_p) {
@@ -1454,7 +1515,11 @@ function Controller() {
             $('.check_top span').text($(this).parent().find('.checklist_p').text());
             $('.check_content').show();
             $('.checklist_wrp').hide();
-            $('.check_con').html(writer_content[$(this).attr('data-file')]);
+            if (/academic/.test(location.pathname) == !1) {
+                $('.check_con').html(writer_content[$(this).attr('data-file')]);
+            } else {
+                $('.check_con').html(writer_aca_content[$(this).attr('data-file')]);
+            }
         });
         //left side content
 
@@ -1479,24 +1544,38 @@ function Controller() {
                 var postData = {'data-key': _this.current_key};
                 //IndexedDB
                 async function allProj() {
-                    var lists = await connection.select({
-                        from: 'iw_projects',
-                        where: {
-                            data_id: postData['data-key']
-                        },
-                        order: {
-                            by: 'date_time',
-                            type: 'desc'
-                        }
-                    })
+                    if (/academic/.test(location.pathname) == !1) {
+                        var lists = await connection.select({
+                            from: 'iw_projects',
+                            where: {
+                                data_id: postData['data-key']
+                            },
+                            order: {
+                                by: 'date_time',
+                                type: 'desc'
+                            }
+                        })
+                    } else {
+                        var lists = await connection.select({
+                            from: 'iw_aca_projects',
+                            where: {
+                                data_id: postData['data-key']
+                            },
+                            order: {
+                                by: 'date_time',
+                                type: 'desc'
+                            }
+                        })
+                    }
+                    
                     if (lists.length != 0) {
-                        var temp_html = '<ul>';
+                        var temp_html = (_this.current_pro_name === '' ? '' : '<li><a class="dropdown-item disabled">Current project name: <span class="proj_curr_nam">'+ _this.current_pro_name +'</span></a></li><li><hr class="dropdown-divider"></li>');
                         for (var i in lists) {
                             var _name = lists[i]['name'].replace(/\#\|\#/g, "'");
                             _name = _name.replace(/\#\|\|\#/g, '"');
-                            temp_html += '<li data-type="save" data-project="' + lists[i]['name'] + '" data-key="' + lists[i]['data_id'] + '">' + _name + '</li>';
+                            temp_html += '<li class="dropdown-item" role="button" data-type="save" data-project="' + lists[i]['name'] + '" data-key="' + lists[i]['data_id'] + '">' + _name + '</li>';
                         }
-                        temp_html += '</ul>';
+                        //temp_html += '';
                         $('.prolist_load').empty().html(temp_html);
                         $('.load_pop_d').show().css('right', '105%').css('top', '0px');
                         if (e.type == event_type || e.type == 'click') {
@@ -1512,7 +1591,7 @@ function Controller() {
                         $('.prolist_load li').off(event_type).on(event_type, function() {
                             if (_this.show_popup) {
                                 $('.white_content').remove();
-                                var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
+                                var temp_pop = '<div class="white_content"><div class="h-100 d-flex justify-content-center align-items-center"><div class="modal-backdrop fade show" style="z-index: 0"></div><div class="alert alert-warning alert-dismissible fade show" role="alert"> <h4 class="alert-heading"><span class="alertMsg">Confirm leave?</span></h4> <button type="button" class="btn-close can_btn_pop" data-bs-dismiss="alert" aria-label="Close"></button><p>You have unsaved changes. Do you still want to leave?</p><button type="button" class="btn btn-outline-primary ok_btn_pop">Yes</button> <button type="button" class="btn btn-outline-primary can_btn_pop" data-bs-dismiss="alert">No</button> </div> </div></div>';
                                 $('.main_wrapper').append(temp_pop);
                                 $('.white_content').show();
                                 call_pop();
@@ -1520,20 +1599,21 @@ function Controller() {
                                     $('.load_pop_d').hide();
                                     _this.show_popup = false;
                                     _this.current_pro_name = $(this).attr('data-project');
-                                    iWiter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
+                                    iWriter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
                                 });
                                 $('.can_btn_pop').off(event_type).on(event_type, function() {
                                     $('.white_content').hide();
                                 });
                                 } else {
-                                    $('.load_pop_d').hide();
+                                    //$('.load_pop_d').hide();
                                     _this.show_popup = false;
                                     _this.current_pro_name = $(this).attr('data-project');
-                                    iWiter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
+                                    iWriter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
                                 }
                         });
                         } else {
-                            $('.prolist_load').empty();
+                            let HTML_empty = '<li><a class="dropdown-item disabled">(empty)</a></li>';
+                            $('.prolist_load').html(HTML_empty);
                             $('.load_pop_d').hide();
                         }
                 }
@@ -1563,7 +1643,7 @@ function Controller() {
                  $('.prolist_load li').off(event_type).on(event_type, function() {
                  if (_this.show_popup) {
                  $('.white_content').remove();
-                 var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Do you want to leave your project without saving your latest changes?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
+                 var temp_pop = '<div class="white_content"><div class="h-100 d-flex justify-content-center align-items-center"><div class="modal-backdrop fade show" style="z-index: 0"></div><div class="alert alert-warning alert-dismissible fade show" role="alert"> <h4 class="alert-heading"><span class="alertMsg">Confirm leave?</span></h4> <button type="button" class="btn-close can_btn_pop" data-bs-dismiss="alert" aria-label="Close"></button><p>You have unsaved changes. Do you still want to leave?</p><button type="button" class="btn btn-outline-primary ok_btn_pop">Yes</button> <button type="button" class="btn btn-outline-primary can_btn_pop" data-bs-dismiss="alert">No</button> </div> </div></div>';
                  $('.main_wrapper').append(temp_pop);
                  $('.white_content').show();
 
@@ -1571,7 +1651,7 @@ function Controller() {
                  $('.load_pop_d').hide();
                  _this.show_popup = false;
                  _this.current_pro_name = $(this).attr('data-project');
-                 iWiter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
+                 iWriter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
                  });
                  $('.can_btn_pop').off(event_type).on(event_type, function() {
                  $('.white_content').hide();
@@ -1580,7 +1660,7 @@ function Controller() {
                  $('.load_pop_d').hide();
                  _this.show_popup = false;
                  _this.current_pro_name = $(this).attr('data-project');
-                 iWiter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
+                 iWriter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
                  }
                  });
                  }
@@ -1608,7 +1688,18 @@ function Controller() {
             $(this).focus();
         });
         //$('.saveas_pro').mouseover(function(event) {
-        $('.saveas_pro').bind("mouseover touchend", function(event) {
+        $('#saveAsModal').on('show.bs.modal', function (event) {
+            //var current_class = event.target.className.split(" ")[0];
+            //if (event.target.className.split(" ")[0] == 'saveas_pro') {
+                if (!$('.save_pop_2').is(':visible')) {
+                    $('.save_pop_1').show();
+                    $('.save_pop_2,.save_pop_d').hide();
+                    $('.saveas_pop_d').show().css('right', '105%').css('top', '0px');
+                    $('.err').text('');
+                }
+            //}
+        })
+        $('.saveas_pro_in').bind("mouseover touchend", function(event) {
             var current_class = event.target.className.split(" ")[0];
             if (event.target.className.split(" ")[0] == 'saveas_pro') {
                 if (!$('.save_pop_2').is(':visible')) {
@@ -1673,8 +1764,11 @@ function Controller() {
         $('.can_btn,.ok_btn_common').off(event_type).on(event_type, function() {
             $('.saveas_pop_d').hide();
             $('.save_pop_d').hide();
+            $('.save_pop_1').show();
+            $('.save_pop_2').hide();
             $('.project_name').val('');
             $('.err').text('');
+            $('.err').removeClass('overWrite_flag');
         });
         $('.ok_btn').off(event_type).on(event_type, function() {
 
@@ -1730,14 +1824,24 @@ function Controller() {
 
                         //IndexedDB
                         async function saveProj() {
-                            var results = await connection.select({
-                                from: 'iw_projects',
-                                where: {
-                                    data_id: postData['data-key'],
-                                    name: project_name
-                                }
-                            })
-                            if (results.length == 0) {
+                            if (/academic/.test(location.pathname) == !1) {
+                                var results = await connection.select({
+                                    from: 'iw_projects',
+                                    where: {
+                                        data_id: postData['data-key'],
+                                        name: project_name
+                                    }
+                                })
+                            } else {
+                                var results = await connection.select({
+                                    from: 'iw_aca_projects',
+                                    where: {
+                                        data_id: postData['data-key'],
+                                        name: project_name
+                                    }
+                                })
+                            }
+                            if (results.length === 0) {
                                 var value = {
                                     name: project_name,
                                     data_id: postData['data-key'],
@@ -1745,11 +1849,19 @@ function Controller() {
                                     date_time: new Date().getTime(),
                                     dtime: new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'medium' }).format(new Date().getTime())
                                 }
-                                var results1 = await connection.insert({
-                                    into: 'iw_projects',
-                                    values: [value]
-                                })
-                                if (results1 == 1) {
+                                if (/academic/.test(location.pathname) == !1) {
+                                    var results1 = await connection.insert({
+                                        into: 'iw_projects',
+                                        values: [value]
+                                    })
+                                } else {
+                                    var results1 = await connection.insert({
+                                        into: 'iw_aca_projects',
+                                        values: [value]
+                                    })
+                                }
+                                
+                                if (results1 === 1) {
                                     _this.save_type = 'save';
                                     $('.save_pro').attr('data-project-name', project_name);
                                     $('.save_pop_1').hide();
@@ -1758,9 +1870,11 @@ function Controller() {
                                     $('.err').text('');
                                     _this.show_popup = false;
                                     _this.current_pro_name = project_name;
+                                } else {
+                                    console.log(results1)
                                 }
                             } else {
-                                $('.err').text('This project name already exists. Do you want to update?');
+                                $('.err').text('This project name already exists. Do you want to overwrite it?');
                                 $('.err').addClass('overWrite_flag');
                                 return;
                             }
@@ -1801,9 +1915,7 @@ function Controller() {
                          }
                          );*/
                     } else {
-                        setTimeout(function() {
-                            $('.err').text('Please enter project name');
-                        }, 400);
+                        $('.err').text('Project name cannot be blank. Please enter project name.');
                     }
                 } else {
                     //update project data
@@ -1813,24 +1925,40 @@ function Controller() {
                     
                     //IndexedDB
                     async function updateProj() {
-                        var update = await connection.update({
-                            in: 'iw_projects',
-                            where: {
-                                data_id: postData['data-key'],
-                                name: postData['project_name']
-                            },
-                            set: {
-                                data: postData['xml_data'],
-                                date_time: new Date().getTime(),
-                                dtime: new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'medium' }).format(new Date().getTime())
-                            }
-                        })
+                        if (/academic/.test(location.pathname) == !1) {
+                            var update = await connection.update({
+                                in: 'iw_projects',
+                                where: {
+                                    data_id: postData['data-key'],
+                                    name: postData['project_name']
+                                },
+                                set: {
+                                    data: postData['xml_data'],
+                                    date_time: new Date().getTime(),
+                                    dtime: new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'medium' }).format(new Date().getTime())
+                                }
+                            })
+                        } else {
+                            var update = await connection.update({
+                                in: 'iw_aca_projects',
+                                where: {
+                                    data_id: postData['data-key'],
+                                    name: postData['project_name']
+                                },
+                                set: {
+                                    data: postData['xml_data'],
+                                    date_time: new Date().getTime(),
+                                    dtime: new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'medium' }).format(new Date().getTime())
+                                }
+                            })
+                        }
+                        
                     }
                     updateProj();
                     $('.save_pop_d').show().css('right', '105%').css('top', '0px');
                     $('.save_pop_1').hide();
                     $('.save_pop_2').show();
-                    $('.pop_msg_d').text('Project updated successfully');
+                    $('.pop_msg_d').text('Project updated successfully.');
                     $('.err').text('');
                     _this.show_popup = false;
                     _this.current_pro_name = $('.save_pro').attr('data-project-name');
@@ -1876,8 +2004,9 @@ function Controller() {
                 }
             }
             if ($('.err').hasClass('overWrite_flag')) {
-                var temp_p = $(this).parents('.arrowp_wrp');
-                var postData = {'data-key': _this.current_key, 'project_name': $('.save_pro').attr('data-project-name'), 'xml_data': _this.XMLToString(data_to_save[0]), 'jdate': new Date()};
+                var temp_p = $(this).parents('#saveAsModal');
+                var postData = {'data-key': _this.current_key, 'project_name': postData['project_name'], 'xml_data': _this.XMLToString(data_to_save[0]), 'jdate': new Date()};
+                console.log(postData['project_name']);
                 //var formURL = 'database.php?update_ex';
                 updateExistProj();
 
@@ -1887,23 +2016,39 @@ function Controller() {
                 
                 //IndexedDB
                     async function updateExistProj() {
-                        var update = await connection.update({
-                            in: 'iw_projects',
-                            where: {
-                                data_id: postData['data-key'],
-                                name: postData['project_name']
-                            },
-                            set: {
-                                data: postData['xml_data'],
-                                date_time: new Date().getTime(),
-                                dtime: new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'medium' }).format(new Date().getTime())
-                            }
-                        })
+                        if (/academic/.test(location.pathname) == !1) {
+                            var update = await connection.update({
+                                in: 'iw_projects',
+                                where: {
+                                    data_id: postData['data-key'],
+                                    name: postData['project_name']
+                                },
+                                set: {
+                                    data: postData['xml_data'],
+                                    date_time: new Date().getTime(),
+                                    dtime: new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'medium' }).format(new Date().getTime())
+                                }
+                            })
+                        } else {
+                            var update = await connection.update({
+                                in: 'iw_aca_projects',
+                                where: {
+                                    data_id: postData['data-key'],
+                                    name: postData['project_name']
+                                },
+                                set: {
+                                    data: postData['xml_data'],
+                                    date_time: new Date().getTime(),
+                                    dtime: new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'medium' }).format(new Date().getTime())
+                                }
+                            })
+                        }
+                        
                     }
-                    temp_p.find('.save_pop_d').show().css('right', '105%').css('top', '0px');
+                    //temp_p.find('.save_pop_d').show().css('right', '105%').css('top', '0px');
                     temp_p.find('.save_pop_1').hide();
                     temp_p.find('.save_pop_2').show();
-                    temp_p.find('.pop_msg_d').text('Project updated successfully');
+                    temp_p.find('.pop_msg_d').text('Project overwritten.');
                     temp_p.find('.err').text('');
                     _this.save_type = 'save';
                     $('.save_pro').attr('data-project-name', project_name);
@@ -2002,7 +2147,7 @@ function Controller() {
             words = val.replace(/\s+/gi, ' ').split(' ').length;
         }
 
-        $('.word_count_text').text('Word count ' + words);
+        $('.text-bg-success').text('Word count: ' + words);
     };
     this.XMLToString = function(oXML) {
 
@@ -2065,9 +2210,9 @@ function Controller() {
         });
     };
     this.writer_btns = function(element) {
-
         _this.reset_drop();
         if ($(element).hasClass('show_all')) {
+
             if ($(element).children('.tick_mark').hasClass('_selected')) {
                 $('.str_common').each(function() {
                     $(this).children('.tick_mark').removeClass('_selected');
@@ -2133,7 +2278,11 @@ function Controller() {
 
         top_header_html = top_header_html.replace(/<para/g, " <p");
         top_header_html = top_header_html.replace(/<\/para/g, " </p");
-        top_header_html += '<div class="word_count_text">Word count 0</div>';
+        top_header_html += '<div class="row"><div class="col-auto"><div class="p-2 rounded-3 text-bg-success d-inline-flex">Word count: 0</div></div>';
+        if (/academic/.test(location.pathname) == !0) {
+            top_header_html += '<div class="col"><div type="button" class="awl_listing p-2 rounded-3 text-bg-warning d-inline-flex">AWL</div><div class="arrow_wrp" style="display:none;"><div class="arrow_box">Highlight Academic Word List</div></div></div></div>';
+        }
+        top_header_html += '</div>'
         $('.str_common:visible').each(function() {
             if (!$(this).children('.tick_mark').hasClass('_selected')) {
                 top_header_html = $(_this.config_msg).find('commentary_help').text();
@@ -2175,6 +2324,58 @@ function Controller() {
             $('.models_header').empty();
             $('.cont_wrp_box').hide();
         }
+        
+        var awl_status = false;
+        
+        $(".awl_listing").mouseover(function() {
+            if ($(window).width() > 768) {
+                var pos = $(this).position();
+                $('.arrow_box').html($(this).parents('.li_inner').next().html());
+                $('.arrow_wrp').css('top', pos.top - ($('.arrow_wrp').height() / 2) - 2);
+                $('.arrow_wrp').css('left', pos.left + 75);
+                $('.arrow_wrp').show();
+            }
+        }).mouseout(function(e) {
+            if ($(window).width() > 768) {
+                $('.arrow_wrp').hide();
+            }
+        });
+        
+        $(".awl_listing").on('click', function() {
+            // var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+            var temp = "";
+            if (awl_status == false) {
+                var x = document.querySelectorAll(".content_contents");
+                $(".awl_listing").addClass('selected');
+                for (var j = 0; j < x.length; j++) {
+                    global_str = x[j].innerText;
+                    var a = global_str.split(/(\s)/);
+
+                    //console.log(a);
+                    for (var i = 0; i < a.length; i++) {
+                        // if(format.test(a[i])){
+                        temp = a[i].replace(/[^[^a-zA-Z0-9]/g, "");
+                        temp = temp.toLowerCase();
+                        // }
+                        // else{
+                        // temp = a[i].toLowerCase();
+                        // }
+                        if (awl_list.indexOf(temp) >= 0) {
+                            a[i] = '<span class="awl_highlight" style="background-color: yellow; color: black">' + a[i] + '</span>';
+                        }
+                    }
+
+                    global_str = a.join(" ");
+                    x[j].innerHTML = global_str;
+                }
+            } else {
+                $(".awl_listing").removeClass('selected');
+                $(".awl_highlight").removeAttr("style");
+            }
+            awl_status = !(awl_status);
+        });
+        
+
     };
     this.sendToSocket = function(_msg) {
         if (_msg != '') {
@@ -2258,7 +2459,34 @@ function create_xml_dom() {
     };
 }
 
-function iWriterOnload() {
-  initiateController();
-}
-iWriterOnload();
+addEventListener("DOMContentLoaded", (event) => {
+    initiateController()
+});
+
+(function () {
+  // Multi level menu dropdown
+  if ($(".dropdown-menu a.dropdown-toggle").length) {
+    $(".dropdown-menu a.dropdown-toggle").on("click", function (e) {
+      if (!$(this)
+        .next()
+        .hasClass("show")
+      ) {
+        $(this)
+          .parents(".dropdown-menu")
+          .first()
+          .find(".show")
+          .removeClass("show");
+      }
+      var $subMenu = $(this).next(".dropdown-menu");
+      $subMenu.toggleClass("show");
+
+      $(this)
+        .parents("li.nav-item.dropdown.show")
+        .on("hidden.bs.dropdown", function (e) {
+          $(".dropdown-submenu .show").removeClass("show");
+        });
+
+      return false;
+    });
+  }
+})();

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Edited: 14 October 2013 15:10:27 by webbsu--><!--Edited: 14 October 2013 14:57:38 by webbsu--><!--Edited: 14 October 2013 14:39:01 by webbsu--><!--Edited: 14 October 2013 13:09:17 by webbsu--><!--Edited: 09 October 2013 11:36:21 by webbsu--><!--Edited: 09 October 2013 11:33:50 by webbsu--><!--Edited: 08 October 2013 15:17:49 by webbsu--><!--Edited: 07 October 2013 12:27:21 by webbsu--><!--Edited: 04 October 2013 15:16:44 by webbsu--><!--Edited: 04 October 2013 12:00:29 by webbsu--><!--Edited: 04 September 2013 12:33:58 by webbsu--><!--Edited: 04 September 2013 11:50:18 by webbsu--><!--Edited: 04 September 2013 11:35:37 by webbsu--><!--Edited: 04 September 2013 11:11:44 by webbsu--><!--Edited: 04 September 2013 10:26:03 by webbsu--><!--Edited: 19 July 2013 12:29:59 by duncanr--><!--Edited: 19 July 2013 12:25:05 by duncanr--><!--Edited: 17 July 2013 13:53:36 by duncanr--><!--Edited: 10 July 2013 16:00:26 by duncanr--><!--Edited: 10 July 2013 14:42:06 by duncanr--><!--Edited: 03 July 2013 14:56:17 by duncanr--><!--Edited: 03 July 2013 10:01:12 by duncanr--><!--Edited: 02 July 2013 12:53:07 by duncanr--><!--Edited: 02 July 2013 09:49:14 by duncanr--><!--Edited: 02 July 2013 09:47:13 by duncanr--><!--Edited: 12 June 2013 12:24:17 by duncanr--><!--Edited: 10 June 2013 13:02:35 by duncanr--><!--Edited: 04 June 2013 15:02:50 by duncanr--><!--Edited: 17 April 2013 10:46:54 by duncanr--><!--Edited: 16 April 2013 16:09:29 by duncanr--><!--Edited: 16 April 2013 14:55:27 by duncanr--><!--Edited: 16 April 2013 14:54:19 by duncanr--><!--Edited: 16 April 2013 14:52:47 by duncanr--><!--Edited: 16 April 2013 14:41:00 by duncanr--><!--Edited: 16 April 2013 13:57:42 by duncanr--><!--Edited: 16 April 2013 08:58:03 by duncanr--><!--Edited: 09 April 2013 12:30:34 by duncanr--><!--Edited: 22 February 2013 08:20:12 by duncanr--><!--Edited: 13 February 2013 08:36:54 by duncanr--><!--Edited: 07 February 2013 12:54:25 by duncanr--><!--Edited: 22 January 2013 13:37:20 by duncanr--><!--Edited: 14 December 2012 16:07:51 by duncanr--><!--Edited: 14 December 2012 11:28:29 by duncanr--><!--Edited: 13 December 2012 10:14:36 by duncanr--><!--Edited: 12 December 2012 15:24:22 by duncanr--><!--Edited: 12 December 2012 15:21:15 by duncanr--><!--Edited: 12 December 2012 15:17:27 by duncanr--><!--Edited: 12 December 2012 15:14:13 by duncanr--><!--Edited: 12 December 2012 14:42:35 by duncanr--><!--Edited: 12 December 2012 09:37:38 by duncanr--><!--Edited: 12 December 2012 09:25:58 by duncanr--><!--Edited: 11 December 2012 11:18:48 by duncanr--><!--Edited: 10 December 2012 16:05:00 by duncanr--><!--Edited: 10 December 2012 15:33:10 by duncanr--><!--Edited: 10 December 2012 15:31:10 by duncanr--><!--Edited: 10 December 2012 15:27:10 by duncanr--><!--Edited: 10 December 2012 15:23:18 by duncanr--><framework>
+   <framework_title>Presenting Data: bar charts</framework_title>
+   <framework_intro>
+      <para><![CDATA[]]>Here is a framework to help you present data effectively using a bar chart. This framework first gives a commentary based on the findings in the bar chart, followed by the bar chart itself with an informative caption.<![CDATA[
+]]><?xm-replace_text {para}?><![CDATA[
+]]><br></br>There are spaces for you to add your own text and bar chart.</para>
+   </framework_intro>
+   <guided_tour>
+      <step label="How can data be presented effectively?">
+         <commentary>
+            <para><![CDATA[]]>One of the main ways you can present your data effectively is to use visuals. Visuals summarize your data and make it easy for readers to understand what has been found in your research.</para>
+            <para><![CDATA[]]>This framework shows you how to use bar charts effectively.</para>
+         </commentary>
+      </step>
+      <step label="Why has the writer used bar charts?">
+         <commentary>
+            <para><![CDATA[]]>The following extract is from the ‘European Journal of Public Health’. It reports on a study of how Swedish children travel to school. The results are reported using a bar chart. Bar charts are useful for showing differences between discrete groups or categories.</para>
+         </commentary>
+      </step>
+      <step label="How is the text organized?" para_ids="5,6,10,14,15">
+         <commentary>
+            <para><![CDATA[]]>Here is the framework that was used to present these data.</para>
+         </commentary>
+      </step>
+      <step label="Look at the commentary on the findings" para_ids="5,6,8">
+         <commentary>
+            <para><![CDATA[]]>The purpose of the commentary is to interpret the findings for the reader by:</para>
+            <para showme="17"><![CDATA[]]>summarizing the overall finding</para>
+            <para showme="18"><![CDATA[]]>pointing out a trend</para>
+         </commentary>
+      </step>
+      <step label="Look at the bar chart" para_ids="10,12,16">
+         <commentary>
+            <para><![CDATA[]]>Bar charts are useful for showing differences between discrete groups or categories.</para>
+         </commentary>
+      </step>
+      <step label="Look at the caption for the bar chart" para_ids="14,15,16">
+         <commentary>
+            <para><![CDATA[]]>The purpose of the caption is to explain clearly what the bar chart shows.</para>
+         </commentary>
+      </step>
+      <step label="Show me useful language" para_ids="24,16,12">
+         <commentary>
+            <para showme="19"><![CDATA[]]>Use the passive form of the verb to report findings.</para>
+            <para showme="20,21,22"><![CDATA[]]>Words and phrases that highlight trends</para>
+         </commentary>
+      </step>
+   </guided_tour>
+   <practice_rubric>
+      <planning>
+         <checklist>
+            <point>You must know and understand your data well and then use visuals carefully to ensure that they efficiently display your data in a meaningful way.</point>
+            <point help="presenting_data1.xml">There are many different visuals you can choose from to present your data. Common forms of visual are tables, bar charts, line graphs and pie charts.</point>
+            <point help="presenting_data2.xml">All visuals need to be accompanied by two elements. These are:<![CDATA[
+</br>]]>1. Statements that summarize what your visual is about.<![CDATA[
+</br>]]>2. A commentary that interprets your findings for the reader.</point>
+            <point>Organize your data and comments into the framework.</point>
+         </checklist>
+      </planning>
+      <vocab>
+         <checklist>
+            <point help="academic_language.xml">Use academic language.</point>
+            <point help="presenting_data4.xml">Language Bank: referring to visuals</point>
+            <point help="presenting_data5.xml">Language Bank: expressing percentages</point>
+            <point help="presenting_data6.xml">Language Bank: describing trends</point>
+         </checklist>
+      </vocab>
+      <writing>
+         <checklist>
+            <point help="reflective11.xml">Think about the writing process.</point>
+         </checklist>
+      </writing>
+      <checking>
+         <checklist>
+            <point>Have I used a caption for my bar chart?</point>
+            <point>Have I summarized what the bar chart is about?</point>
+            <point>Have I interpreted the findings for the reader?</point>
+            <point>Have I used numbers or ordering to list findings?</point>
+            <point>Have I used words and phrases to highlight trends?</point>
+            <point>Have I used the passive to report the findings?</point>
+            <point>Have I quoted and referenced my sources accurately?</point>
+            <point>Have I checked vocabulary, grammar, spelling and punctuation?</point>
+         </checklist>
+      </checking>
+   </practice_rubric>
+   <paragraphs>
+      <paragraph eid="1">
+         <name eid="2">Presenting Data: bar charts</name>
+         <desc eid="3">Using bar charts to present data</desc>
+      </paragraph>
+      <paragraph eid="4">
+         <name eid="5">Commentary on the bar chart</name>
+         <desc eid="6">The commentary interprets the findings for the reader by summarizing the overall finding and pointing out a trend.</desc>
+         <tip eid="7">TIP The commentary on your findings will include some discussion of the significance of your findings. This should not be confused with your discussion section. The commentary on the findings only interprets the data for your reader. In your discussion section, you will widen the discussion by linking it to literature on the topic and discussing the implications of your findings.</tip>
+         <content prompt="Type your commentary here." eid="8">
+            <para prompt="Type your commentary here." eid="8"><![CDATA[]]><extra_info eid="17">Active commuting was reported by 62.9% of the whole national sample (37.8% walking and 25.6% cycling at least one way).</extra_info> 
+               <extra_info eid="18">However, it decreased with age (figure 1): 76.4% of fifth graders (~11 years old), 61.9% of seventh graders (~13 years old) and 50.0% of ninth graders (~15 years old).</extra_info> Public transport on the other hand increased with age: 18.8% of fifth graders, 36.3% of seventh graders and 42.6% of ninth graders. Only around 10% in any age group got to school by car or moped, though significantly fewer in the seventh grade, compared with both grades five and nine.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="23">
+         <content eid="24" prompt="Type your commentary here." dup="8">
+            <para eid="24" prompt="Type your commentary here." dup="8"><![CDATA[]]>Active commuting<useful eid="19" type="structure">was reported</useful> by 62.9% of the whole national sample (37.8% walking and 25.6% cycling at least one way). However, it<useful eid="20" type="contrast">decreased with age</useful> (figure 1): 76.4% of fifth graders (~11 years old), 61.9% of seventh graders (~13 years old) and 50.0% of ninth graders (~15 years old). Public transport on the other hand<useful eid="21" type="contrast">increased with age</useful>: 18.8% of fifth graders, 36.3% of seventh graders and 42.6% of ninth graders. Only around 10% in any age group got to school by car or moped, though<useful eid="22" type="contrast">significantly fewer</useful> in the seventh grade, compared with both grades five and nine.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="9">
+         <name eid="10">The bar chart</name>
+         <content prompt="Put your bar chart here." image="EAP_graph.png" eid="12">
+            <para prompt="Put your bar chart here." image="EAP_graph.png" eid="12"/>
+         </content>
+      </paragraph>
+      <paragraph eid="13">
+         <name eid="14">Caption for the bar chart</name>
+         <desc eid="15">This explains what the chart shows.</desc>
+         <content prompt="Type your caption here." eid="16">
+            <para prompt="Type your caption here." eid="16"><![CDATA[]]>Figure 1 Active commuting, public transport and car/moped/motorcycle use to or from school in grades five, seven and nine in Sweden. Data from HBSC 2005/06.<![CDATA[
+]]><br></br>(Johansson, Laflamme and Hasselberg, 2012) For the full reference, see <a target="_blank" href="iWriter_References.pdf">References</a>.</para>
+         </content>
+      </paragraph>
+   </paragraphs>
+</framework>

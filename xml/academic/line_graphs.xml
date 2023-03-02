@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Edited: 14 October 2013 15:09:33 by webbsu--><!--Edited: 14 October 2013 14:59:18 by webbsu--><!--Edited: 14 October 2013 14:40:38 by webbsu--><!--Edited: 14 October 2013 14:37:13 by webbsu--><!--Edited: 14 October 2013 13:10:22 by webbsu--><!--Edited: 11 October 2013 10:57:16 by webbsu--><!--Edited: 09 October 2013 11:36:08 by webbsu--><!--Edited: 09 October 2013 11:33:12 by webbsu--><!--Edited: 08 October 2013 15:04:35 by webbsu--><!--Edited: 07 October 2013 12:26:52 by webbsu--><!--Edited: 04 October 2013 15:17:14 by webbsu--><!--Edited: 04 October 2013 12:07:29 by webbsu--><!--Edited: 24 September 2013 14:55:22 by webbsu--><!--Edited: 04 September 2013 11:11:22 by webbsu--><!--Edited: 19 July 2013 12:30:50 by duncanr--><!--Edited: 19 July 2013 12:30:05 by duncanr--><!--Edited: 19 July 2013 12:28:27 by duncanr--><!--Edited: 17 July 2013 13:56:35 by duncanr--><!--Edited: 16 July 2013 12:58:05 by duncanr--><!--Edited: 16 July 2013 12:07:49 by duncanr--><!--Edited: 11 July 2013 08:27:47 by duncanr--><!--Edited: 10 July 2013 16:00:23 by duncanr--><!--Edited: 10 July 2013 14:46:53 by duncanr--><!--Edited: 03 July 2013 15:57:17 by duncanr--><!--Edited: 03 July 2013 14:58:12 by duncanr--><!--Edited: 03 July 2013 09:20:46 by duncanr--><!--Edited: 02 July 2013 12:57:19 by duncanr--><!--Edited: 02 July 2013 12:56:12 by duncanr--><!--Edited: 02 July 2013 12:54:46 by duncanr--><!--Edited: 02 July 2013 09:56:03 by duncanr--><!--Edited: 13 June 2013 13:50:20 by duncanr--><!--Edited: 13 June 2013 13:47:36 by duncanr--><!--Edited: 12 June 2013 10:32:07 by duncanr--><!--Edited: 12 June 2013 10:16:01 by duncanr--><!--Edited: 12 June 2013 10:10:40 by duncanr--><!--Edited: 12 June 2013 10:08:50 by duncanr--><!--Edited: 12 June 2013 09:38:04 by duncanr--><!--Edited: 11 June 2013 16:12:18 by duncanr--><framework>
+   <framework_title>Presenting Data: line graphs</framework_title>
+   <framework_intro>
+      <para><![CDATA[]]>Here is a framework to help you present data effectively using a line graph. This framework first gives statements summarizing what the line graph is going to be about; then commentary based on the line graph; and, finally, the line graph itself with a title.<![CDATA[
+]]><?xm-replace_text {para}?><![CDATA[
+]]><br></br>There are spaces for you to add your own text and graph.</para>
+   </framework_intro>
+   <guided_tour>
+      <step label="How can data be presented effectively?">
+         <commentary>
+            <para><![CDATA[]]>One of the main ways you can present your data effectively is to use visuals. Visuals summarize your data and make it easy for readers to understand what has been found in your research.</para>
+            <para><![CDATA[]]>This framework shows you how to use line graphs effectively.</para>
+         </commentary>
+      </step>
+      <step label="Why has the writer used line graphs?">
+         <commentary>
+            <para><![CDATA[]]>This is an extract from the ‘International Journal of Epidemiology’. It looks at social disparities in BMI trajectories and uses a line graph to convey findings. Line graphs are used when you need to show how one or more variables vary and they are particularly useful for noting trends.</para>
+         </commentary>
+      </step>
+      <step label="How is the text organized?" para_ids="5,6,9,10,14,18,19">
+         <commentary>
+            <para><![CDATA[]]>Here is the framework that was used to present these data.</para>
+         </commentary>
+      </step>
+      <step label="Look at the summarizing statements" para_ids="5,6,7">
+         <commentary>
+            <para><![CDATA[]]>The purpose of the statements is to show what the line graph in this section is going to be about.</para>
+         </commentary>
+      </step>
+      <step label="Look at the commentary" para_ids="9,10,12">
+         <commentary>
+            <para><![CDATA[]]>The purpose of the commentary is to interpret the findings for the reader by:</para>
+            <para showme="21"><![CDATA[]]>pointing out what the reader should notice from the visual</para>
+            <para showme="22"><![CDATA[]]>drawing a conclusion from the visual</para>
+         </commentary>
+      </step>
+      <step label="Look at the line graph" para_ids="14,16,18,19,20">
+         <commentary>
+            <para><![CDATA[]]>Line graphs are used when you need to show how one or more variables vary and they are particularly useful for noting trends.</para>
+            <para showme="23"><![CDATA[]]>The graph should have a suitable title.</para>
+         </commentary>
+      </step>
+      <step label="Show me useful language" para_ids="16,23,26">
+         <commentary>
+            <para showme="101,27,29"><![CDATA[]]>Use numbers or ordering to list findings.</para>
+            <para showme="100"><![CDATA[]]>Use passives to report findings.</para>
+            <para showme="28,30,31"><![CDATA[]]>Words and phrases that highlight trends.</para>
+         </commentary>
+      </step>
+   </guided_tour>
+   <practice_rubric>
+      <planning>
+         <checklist>
+            <point>You must know and understand your data well and then use visuals carefully to ensure that they efficiently display your data in a meaningful way.</point>
+            <point help="presenting_data1.xml">There are many different visuals you can choose from to present your data. Two options are: tables and bar charts. Other common forms of visual are line graphs and pie charts.</point>
+            <point help="presenting_data2.xml">All visuals need to be accompanied by two elements. These are:<![CDATA[
+</br>]]>1. Statements that summarize what your visual is about.<![CDATA[
+</br>]]>2. A commentary that interprets your findings for the reader.</point>
+            <point>Organize your data and comments into the framework.</point>
+         </checklist>
+      </planning>
+      <vocab>
+         <checklist>
+            <point help="academic_language.xml">Use academic language.</point>
+            <point help="presenting_data4.xml">Language Bank: referring to visuals</point>
+            <point help="presenting_data5.xml">Language Bank: expressing percentages</point>
+            <point help="presenting_data6.xml">Language Bank: describing trends</point>
+         </checklist>
+      </vocab>
+      <writing>
+         <checklist>
+            <point help="reflective11.xml">Think about the writing process.</point>
+         </checklist>
+      </writing>
+      <checking>
+         <checklist>
+            <point>Have I used a title for my line graph?</point>
+            <point>Have I summarized what the line graph is about?</point>
+            <point>Have I interpreted the findings for the reader?</point>
+            <point>Have I used numbers or ordering to list findings?</point>
+            <point>Have I used words and phrases to highlight trends?</point>
+            <point>Have I used the passive to report the findings?</point>
+            <point>Have I quoted and referenced my sources accurately?</point>
+            <point>Have I checked vocabulary, grammar, spelling and punctuation?</point>
+         </checklist>
+      </checking>
+   </practice_rubric>
+   <paragraphs>
+      <paragraph eid="1">
+         <name eid="2">Presenting Data: line graphs</name>
+         <desc eid="3">Using line graphs to present data</desc>
+      </paragraph>
+      <paragraph eid="4">
+         <name eid="5">Summarizing statements</name>
+         <desc eid="6">Statements before the line graph summarize what the line graph is going to be about.</desc>
+         <content prompt="Type your Summarizing statements here." eid="7">
+            <para prompt="Type your Summarizing statements here." eid="7"><![CDATA[]]>A visual depiction of this age and period effect<useful eid="24" type="objective">is presented</useful> in Figure 2. For simplicity, only<useful type="structure" eid="25">three</useful> specific high-school cohorts are illustrated.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="8">
+         <name eid="9">Commentary on the line graph</name>
+         <desc eid="10"><br></br>This interprets the findings for the reader by:<![CDATA[
+</br>]]>pointing out what the reader should notice from the visual;<![CDATA[
+</br>]]>and drawing a conclusion from the visual.</desc>
+         <tip eid="11">TIP The commentary on your findings will include some discussion of the significance of your findings. This should not be confused with your discussion section. The commentary on the findings only interprets the data for your reader. In your discussion section, you will widen the discussion by linking it to literature on the topic and discussing the implications of your findings.</tip>
+         <content eid="12" prompt="Type your commentary here.">
+            <para eid="12" prompt="Type your commentary here."><![CDATA[]]>Members of the earliest cohort (born in 1958) were high-school seniors in 1976. Although height and weight data are not available for this cohort until the age of 28 (in 1986),<extra_info eid="21">the BMI trajectory for this group exhibits a gradual increase over adulthood. However, for each successive cohort, BMI scores are higher and the early adult BMI trajectory becomes increasingly steep</extra_info>.<extra_info eid="22">As a result, successive cohorts become ‘overweight’ (BMI&gt;25) at increasingly earlier points in the life course.</extra_info> <![CDATA[
+]]><br></br>(Clarke P., O'Malley P. M., Johnston L. D. and Schulenberg J. E., 2009) For the full reference, see <a target="_blank" href="iWriter_References.pdf">References</a>.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="28">
+         <content eid="26" dup="7,12">
+            <para eid="26" dup="7,12"><![CDATA[]]>A visual depiction of this age and period effect<useful eid="100" type="similarity">is presented</useful> in Figure 2. For simplicity, only<useful eid="101" type="structure">three</useful> specific high-schools are illustrated. Members of the<useful eid="27" type="structure">earliest cohort</useful> (born in 1958) were high-school seniors in 1976. Although height and weight data are not available for this cohort until the age of 28 (in 1986), the BMI trajectory for this group exhibits<useful type="verbs" eid="28">a gradual increase</useful> over adulthood. However, for each<useful type="structure" eid="29">successive cohort</useful>, BMI<useful eid="30" type="verbs">scores are higher</useful> and the<useful eid="31" type="verbs">early adult BMI trajectory becomes increasingly steep</useful>. As a result, successive cohorts become ‘overweight’ (BMI&gt;25) at increasingly earlier points in the life course.<![CDATA[
+]]><br></br>(Clarke P., O'Malley P. M., Johnston L. D. and Schulenberg J. E., 2009) For the full reference, see <a target="_blank" href="iWriter_References.pdf">References</a>.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="13">
+         <name eid="14">The line graph</name>
+         <content image="line_graph.png" eid="16" prompt="Put your line graph here.">
+            <para image="line_graph.png" eid="16" prompt="Put your line graph here."/>
+         </content>
+      </paragraph>
+      <paragraph eid="17">
+         <name eid="18">Title of the line graph</name>
+         <desc eid="19">This states what the line graph shows.</desc>
+         <content prompt="Put your title here." eid="20">
+            <para prompt="Put your title here." eid="20"><![CDATA[]]><extra_info eid="23">Figure 2: Predicted trajectories of BMI by high-school cohorts: MTF (1986–2004)</extra_info> 
+            </para>
+         </content>
+      </paragraph>
+   </paragraphs>
+</framework>

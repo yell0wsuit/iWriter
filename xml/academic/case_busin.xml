@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Edited: 18 October 2013 10:40:53 by lead--><!--Edited: 14 October 2013 16:09:00 by webbsu--><!--Edited: 14 October 2013 14:31:22 by webbsu--><!--Edited: 14 October 2013 11:19:00 by webbsu--><!--Edited: 09 October 2013 15:11:12 by webbsu--><!--Edited: 20 September 2013 14:51:30 by webbsu--><!--Edited: 04 September 2013 16:15:03 by webbsu--><!--Edited: 04 September 2013 12:37:25 by webbsu--><!--Edited: 04 September 2013 11:55:12 by webbsu--><!--Edited: 04 September 2013 10:59:21 by webbsu--><!--Edited: 04 September 2013 10:46:01 by webbsu--><!--Edited: 27 August 2013 16:25:17 by webbsu--><!--Edited: 17 July 2013 10:47:18 by duncanr--><!--Edited: 11 July 2013 11:45:14 by duncanr--><!--Edited: 11 July 2013 11:43:37 by duncanr--><!--Edited: 10 July 2013 15:44:58 by duncanr--><!--Edited: 10 July 2013 15:42:04 by duncanr--><!--Edited: 10 July 2013 11:47:04 by duncanr--><!--Edited: 10 July 2013 11:45:15 by duncanr--><!--Edited: 09 July 2013 12:37:17 by duncanr--><!--Edited: 09 July 2013 11:42:54 by duncanr--><!--Edited: 08 July 2013 13:44:23 by duncanr--><!--Edited: 08 July 2013 12:57:32 by duncanr--><!--Edited: 05 July 2013 14:58:58 by duncanr--><!--Edited: 05 July 2013 14:22:37 by duncanr--><!--Edited: 05 July 2013 14:18:35 by duncanr--><!--Edited: 05 July 2013 14:10:29 by duncanr--><!--Edited: 05 July 2013 14:07:31 by duncanr--><!--Edited: 05 July 2013 14:06:32 by duncanr--><!--Edited: 05 July 2013 13:58:55 by duncanr--><!--Edited: 05 July 2013 12:56:15 by duncanr--><!--Edited: 05 July 2013 12:08:34 by duncanr--><!--Edited: 05 July 2013 11:55:21 by duncanr--><!--Edited: 05 July 2013 11:52:35 by duncanr--><!--Edited: 05 July 2013 10:37:37 by duncanr--><!--Edited: 05 July 2013 09:43:10 by duncanr--><!--Edited: 03 July 2013 10:56:44 by duncanr--><!--Edited: 03 July 2013 09:22:59 by duncanr--><!--Edited: 03 July 2013 08:39:07 by duncanr--><!--Edited: 10 June 2013 15:27:52 by duncanr--><!--Edited: 07 June 2013 11:35:50 by duncanr--><!--Edited: 07 June 2013 11:26:23 by duncanr--><!--Edited: 07 June 2013 11:24:26 by duncanr--><!--Edited: 24 May 2013 15:38:44 by duncanr--><!--Edited: 24 May 2013 15:11:52 by duncanr--><!--Edited: 24 May 2013 15:06:22 by duncanr--><!--Edited: 24 May 2013 15:02:51 by duncanr--><framework>
+   <framework_title>Case Studies 1: business</framework_title>
+   <framework_intro>
+      <para><![CDATA[]]>Here is a framework to help you write an effective business case study. There are spaces for you to add your own text.<![CDATA[
+]]><?xm-replace_text {para}?><![CDATA[
+]]><br></br></para>
+   </framework_intro>
+   <guided_tour>
+      <step label="What is a business case study?">
+         <commentary>
+            <para><![CDATA[]]>A business case study explores, in detail, a specific company or business situation.</para>
+         </commentary>
+      </step>
+      <step label="What is its purpose?">
+         <commentary>
+            <para><![CDATA[]]>The main purpose of writing a case study is to demonstrate your ability to apply the analytical techniques learned on your course to a specific business case.</para>
+         </commentary>
+      </step>
+      <step label="How is the text organized?"
+            para_ids="5,6,15,16,26,27,35,36,49,50">
+         <commentary>
+            <para><![CDATA[]]>The model is an extract from a business case report about the retailer Marks and Spencer plc.</para>
+            <para><![CDATA[]]><?xm-replace_text?></para>
+            <para><![CDATA[]]>Here is the framework that was used to present this case study.</para>
+         </commentary>
+      </step>
+      <step label="Look at the Introduction" para_ids="5,6,7">
+         <commentary>
+            <para><![CDATA[]]>The Introduction introduces the company.</para>
+            <para showme="8,9"><![CDATA[]]>It then states the focus and aims of the text.</para>
+         </commentary>
+      </step>
+      <step label="Look at the Context" para_ids="15,16,18">
+         <commentary>
+            <para showme="19"><![CDATA[]]>Here, an analytical technique, PESTEL, is used to evaluate the company's position within the business environment.</para>
+         </commentary>
+      </step>
+      <step label="Look at Description and analysis" para_ids="26,27,29">
+         <commentary>
+            <para showme="30"><![CDATA[]]>The writer applies another analytical tool—SWOT analysis—to the business case.</para>
+            <para><![CDATA[]]>Application of current theory has been omitted in this extract.</para>
+         </commentary>
+      </step>
+      <step label="Look at Recommendations" para_ids="35,36,37">
+         <commentary>
+            <para showme="38,39,40"><![CDATA[]]>The writer suggests action to be taken.</para>
+         </commentary>
+      </step>
+      <step label="Look at the Conclusion" para_ids="49,50,51">
+         <commentary>
+            <para showme="52"><![CDATA[]]>The writer generalizes out from the recommendations to the wider context.</para>
+         </commentary>
+      </step>
+      <step label="Show me useful language" para_ids="11,21,32,42,54">
+         <commentary>
+            <para showme="12,13,22,33"><![CDATA[]]>Words and phrases to guide the reader through the document</para>
+            <para showme="24,45,55,58,59"><![CDATA[]]>Transitions and connecting words and phrases</para>
+            <para showme="23,47,57"><![CDATA[]]>Words and phrases to introduce examples</para>
+            <para showme="43,46,56,44"><![CDATA[]]>Words and phrases to give recommendations</para>
+         </commentary>
+      </step>
+   </guided_tour>
+   <practice_rubric>
+      <planning>
+         <checklist>
+            <point>When you plan your case study, think about the problem you want to look at and the possible solutions you might suggest.</point>
+            <point>Make notes for your case study and keep a record of the sources you want to use to support your points.</point>
+            <point>Organize your notes into the framework.</point>
+            <point>Draft your case study. Focus on ensuring that your ideas are clear and your arguments are logically structured.</point>
+            <point>Review and revise your draft as necessary.</point>
+         </checklist>
+      </planning>
+      <vocab>
+         <checklist>
+            <point help="academic_language3.xml">Use academic language.</point>
+            <point help="case_busin1.xml">Language Bank: making recommendations</point>
+            <point help="case_busin4.xml">Language Bank: hedging your recommendations</point>
+            <point help="case_busin5.xml">Language Bank: making your recommendations stronger</point>
+         </checklist>
+      </vocab>
+      <writing>
+         <checklist>
+            <point help="case_busin6.xml">Remember to use sources to support your points.</point>
+            <point help="reflective11.xml">Think about the writing process.</point>
+         </checklist>
+      </writing>
+      <checking>
+         <checklist>
+            <point>Have I given sufficient background information on the company or situation?</point>
+            <point>Have I made my focus and aims clear?</point>
+            <point>Have I used analytical techniques?</point>
+            <point>Have I suggested solutions or made recommendations?</point>
+            <point>Have I generalized from the recommendations to the wider business context?</point>
+            <point>Have I used appropriate language to make my recommendations?</point>
+            <point>Have I quoted and referenced my sources accurately?</point>
+            <point>Have I checked vocabulary, grammar, spelling and punctuation?</point>
+         </checklist>
+      </checking>
+   </practice_rubric>
+   <paragraphs>
+      <paragraph eid="1">
+         <name eid="2">Case Studies 1: business</name>
+         <desc eid="3">How to write an effective business case study</desc>
+      </paragraph>
+      <paragraph eid="4">
+         <name eid="5">Introduction</name>
+         <desc eid="6">Give background information about the company or situation and state the focus of your case.</desc>
+         <content prompt="Type your Introduction here." eid="7">
+            <para prompt="Type your Introduction here." eid="7"><![CDATA[]]>Introduction<![CDATA[
+]]><br></br>Since the late 1990s, Marks and Spencer plc has been through some turbulent times. The giant of the British high street has seen its share price fluctuate from a worrying low of less than 200 pence per share in 2000 to a comfortable high of around 750 pence in 2007 (Johnson, Scholes and Whittington, 2008: 839). This aside, M&amp;S has long been regarded as one of the most spectacular corporate successes in the UK (Tse, 1985).<![CDATA[
+]]><br></br>Using a 2011 report by Johnson and Collier,<extra_info eid="8">this paper will look at some of the strategic decisions</extra_info> which might have led M&amp;S to the problems of 2008.<extra_info eid="9">I will also offer some recommendations</extra_info> for the long-term strategic development of the organization using corporate strategy frameworks.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="10">
+         <content prompt="Type your Introduction here" eid="11" dup="7">
+            <para prompt="Type your Introduction here" eid="11" dup="7"><![CDATA[]]>Introduction<![CDATA[
+]]><br></br>Since the late 1990s, Marks and Spencer plc has been through some turbulent times. The giant of the British high street has seen its share price fluctuate from a worrying low of less than 200 pence per share in 2000 to a comfortable high of around 750 pence in 2007 (Johnson, Scholes and Whittington, 2008: 839).<useful type="objective" eid="59">This aside</useful>, M&amp;S has long been regarded as one of the most spectacular corporate successes in the UK (Tse, 1985).<![CDATA[
+]]><br></br>Using a 2011 report by Johnson and Collier,<useful type="linking" eid="12">this paper will look at</useful> some of the strategic decisions which might have led M&amp;S to the problems of 2008.<useful type="linking" eid="13">I will also</useful> offer some recommendations for the long-term strategic development of the organization using corporate strategy frameworks.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="14">
+         <name eid="15">Context</name>
+         <desc eid="16">Explain how this case fits within the greater business environment.</desc>
+         <tip eid="17">TIP You can use analytical techniques here.</tip>
+         <content prompt="Type your Context section here." eid="18">
+            <para prompt="Type your Context section here." eid="18"><![CDATA[]]>Strategic Position<![CDATA[
+]]><extra_info eid="19"><br></br>Firstly, let us look at the strategic position and analyse the macro environment … using the PESTEL framework</extra_info> (Johnson, Scholes and Whittington, 2008: 55). Johnson and Collier (2011) point to several social and technological factors that may have had an effect on the business. For instance, M&amp;S always sold clothing under their own ‘St Michael’ label; this line offered good value for money but failed to keep up with current fashions. Meanwhile, consumer requirements were changing, and other high street retail outlets were popping up and offering alternatives to the basics at M&amp;S. [Two paragraphs follow (omitted) stating the company's reluctance to enter the online marketplace and to set out an effective long-term strategy.] …</para>
+         </content>
+      </paragraph>
+      <paragraph eid="20">
+         <content prompt="Type your Context section here." eid="21" dup="18">
+            <para prompt="Type your Context section here." eid="21" dup="18"><![CDATA[]]>Strategic Position<![CDATA[
+]]><useful type="linking" eid="22"><br></br>Firstly, let us look at</useful> the strategic position and analyse the macro environment … using the PESTEL framework (Johnson, Scholes and Whittington, 2008: 55). Johnson and Collier (2011) point to several social and technological factors that may have had an effect on the business.<useful type="structure" eid="23">For instance</useful>, M&amp;S always sold clothing under their own ‘St Michael’ label; this line offered good value for money but failed to keep up with current fashions.<useful type="objective" eid="24">Meanwhile</useful>, consumer requirements were changing, and other high street retail outlets were popping up and offering alternatives to the basics at M&amp;S. [Two paragraphs follow (omitted) stating the company's reluctance to enter the online marketplace and to set out an effective long-term strategy.] …</para>
+         </content>
+      </paragraph>
+      <paragraph eid="25">
+         <name eid="26">Description and analysis of the case</name>
+         <desc eid="27">Give details of the case, including how theory applies to it.</desc>
+         <tip eid="28">TIP You can use analytical techniques here.</tip>
+         <content prompt="Type your Description and analysis here." eid="29">
+            <para prompt="Type your Description and analysis here." eid="29"><![CDATA[]]>Future Development<![CDATA[
+]]><br></br>It would appear that the company was slow to react to the changing social and technological environment. …<extra_info eid="30">Let us now use a SWOT analysis to examine M&amp;S's strengths, weaknesses, opportunities and threats</extra_info> (as described in Kew and Stredwick, 2008: 11), focusing on what is most important for the future success of the company.<![CDATA[
+]]><br></br>Strengths:<![CDATA[
+]]><br></br>• Largest UK retailer<![CDATA[
+]]><br></br>• Strong balance sheet/Stakeholder investment<![CDATA[
+]]><br></br>• Product diversity (clothes, food, home furnishings, financial products, flowers, wine)<![CDATA[
+]]><br></br>Weaknesses:<![CDATA[
+]]><br></br>• Premium retailer with premium prices<![CDATA[
+]]><br></br>• Unsure of target market<![CDATA[
+]]><br></br>• Internal politics with board members, CEO and Chairman engaged in power struggles<![CDATA[
+]]><br></br>Opportunities:<![CDATA[
+]]><br></br>• Diversify into other markets<![CDATA[
+]]><br></br>• Inviting more brand names into store<![CDATA[
+]]><br></br>• Acquisitions of smaller retail organizations to increase market share<![CDATA[
+]]><br></br>Threats:<![CDATA[
+]]><br></br>• Economic recession<![CDATA[
+]]><br></br>• Lower-cost retailers/market competition<![CDATA[
+]]><br></br>• Takeover bids (e.g. Philip Green—Arcadia group)</para>
+         </content>
+      </paragraph>
+      <paragraph eid="31">
+         <content prompt="Type your Description and analysis here." eid="32" dup="29">
+            <para prompt="Type your Description and analysis here." eid="32" dup="29"><![CDATA[]]>Future Development<![CDATA[
+]]><br></br>It would appear that the company was slow to react to the changing social and technological environment. …<useful type="linking" eid="33">Let us now</useful> use a SWOT analysis to examine M&amp;S's strengths, weaknesses, opportunities and threats (as described in Kew and Stredwick, 2008: 11), focusing on what is most important for the future success of the company.<![CDATA[
+]]><br></br>Strengths:<![CDATA[
+]]><br></br>• Largest UK retailer<![CDATA[
+]]><br></br>• Strong balance sheet/Stakeholder investment<![CDATA[
+]]><br></br>• Product diversity (clothes, food, home furnishings, financial products, flowers, wine)<![CDATA[
+]]><br></br>Weaknesses:<![CDATA[
+]]><br></br>• Premium retailer with premium prices<![CDATA[
+]]><br></br>• Unsure of target market<![CDATA[
+]]><br></br>• Internal politics with board members, CEO and Chairman engaged in power struggles<![CDATA[
+]]><br></br>Opportunities:<![CDATA[
+]]><br></br>• Diversify into other markets<![CDATA[
+]]><br></br>• Inviting more brand names into store<![CDATA[
+]]><br></br>• Acquisitions of smaller retail organizations to increase market share<![CDATA[
+]]><br></br>Threats:<![CDATA[
+]]><br></br>• Economic recession<![CDATA[
+]]><br></br>• Lower-cost retailers/market competition<![CDATA[
+]]><br></br>• Takeover bids (e.g. Philip Green—Arcadia group)</para>
+         </content>
+      </paragraph>
+      <paragraph eid="34">
+         <name eid="35">Recommendations</name>
+         <desc eid="36">Suggest actions to be taken or give possible solutions.</desc>
+         <content prompt="Type your Recommendations here." eid="37">
+            <para prompt="Type your Recommendations here." eid="37"><![CDATA[]]>Recommendations<![CDATA[
+]]><br></br>For long-term success,<extra_info eid="38">M&amp;S will need to rebuild its reputation and its brand. The company must also make some important strategic choices</extra_info> which take into account both internal and external factors.<extra_info eid="39">The organization</extra_info> has diversified into finance and<extra_info eid="40">possibly should consider other ways to break into emerging markets</extra_info>, particularly those with strong e-commerce potential. [Further recommendations and discussion follow (three paragraphs omitted).] …</para>
+         </content>
+      </paragraph>
+      <paragraph eid="41">
+         <content prompt="Type your Recommendations here." eid="42" dup="37">
+            <para prompt="Type your Recommendations here." eid="42" dup="37"><![CDATA[]]>Recommendations<![CDATA[
+]]><br></br>For long-term success, M&amp;S<useful type="position" eid="43">will need to</useful> rebuild its reputation and its brand. The company<useful type="position" eid="44">must</useful> 
+               <useful type="objective" eid="45">also</useful> make some important strategic choices which take into account both internal and external factors. The organization has diversified into finance and<useful type="position" eid="46">possibly should consider</useful> other ways to break into emerging markets,<useful type="structure" eid="47">particularly</useful> those with strong e-commerce potential. [Further recommendations and discussion follow (three paragraphs omitted).] …</para>
+         </content>
+      </paragraph>
+      <paragraph eid="48">
+         <name eid="49">Conclusion</name>
+         <desc eid="50">Generalize out to the wider context.</desc>
+         <content prompt="Type your Conclusion here." eid="51">
+            <para prompt="Type your Conclusion here." eid="51"><![CDATA[]]>Conclusion<![CDATA[
+]]><extra_info eid="52"><br></br>Going forward, perhaps the company would be better served with a more diverse and transparent management structure</extra_info>, such as one based on the approach of a ‘learning organization’, defined by Johnson, Scholes and Whittington as one which is ‘capable of continual regeneration from the variety of knowledge, experience and skills of individuals within a culture which encourages mutual questioning and challenge around a shared purpose or vision’ (Johnson, Scholes and Whittington, 2008: 421).<![CDATA[
+]]><br></br>In 2008, CEO Sir Stuart Rose introduced the necessary changes and implemented the short-term strategies that helped M&amp;S recover. However, for the long-term success of M&amp;S, current and future CEOs must continue on this path, or else they will risk destroying this icon of British retailing.</para>
+         </content>
+      </paragraph>
+      <paragraph eid="53">
+         <content prompt="Type your Conclusion here." eid="54" dup="51">
+            <para prompt="Type your Conclusion here." eid="54" dup="51"><![CDATA[]]>Conclusion<![CDATA[
+]]><useful type="objective" eid="55"><br></br>Going forward</useful>,<useful type="position" eid="56">perhaps the company would be better served with</useful> a more diverse and transparent management structure,<useful type="structure" eid="57">such as</useful> one based on the approach of a ‘learning organization’, defined by Johnson, Scholes and Whittington as one which is ‘capable of continual regeneration from the variety of knowledge, experience and skills of individuals within a culture which encourages mutual questioning and challenge around a shared purpose or vision’ (Johnson, Scholes and Whittington, 2008: 421).<![CDATA[
+]]><br></br>In 2008, CEO Sir Stuart Rose introduced the necessary changes and implemented the short-term strategies that helped M&amp;S recover.<useful type="objective" eid="58">However</useful>, for the long-term success of M&amp;S, current and future CEOs must continue on this path, or else they will risk destroying this icon of British retailing.</para>
+         </content>
+      </paragraph>
+   </paragraphs>
+</framework>

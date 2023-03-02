@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
     <head>
-        <title>Oxford iWriter</title>
+        <title>Oxford Academic iWriter</title>
         <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -43,7 +43,7 @@
         </div>
         <nav class="mb-2 navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid d-flex align-items-stretch">
-                <a class="navbar-brand" href="#">Oxford iWriter</a>
+                <a class="navbar-brand" href="#">Oxford Academic iWriter</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -53,10 +53,10 @@
                             <a class="nav-link" href="https://yell0wsuit.page/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./">Oxford iWriter</a>
+                            <a class="nav-link active" aria-current="page" href="../index.html">Oxford iWriter</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../ispeaker/">Oxford iSpeaker</a>
+                            <a class="nav-link" href="../../ispeaker/">Oxford iSpeaker</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="javascript:void(0);" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
@@ -105,6 +105,7 @@
                 </div>
             </div>
         </nav>
+        
         <div class="main_wrapper container-fluid mb-4">
             <div class="inner_wrapper container-lg">
                 <div class="d-flex justify-content-end">
@@ -113,9 +114,9 @@
                 </div>
                 <div class="first_page common_page" id="first_page">
                     <h1 class="fw-semibold text-primary-emphasis mb-4">
-                        <span>Oxford <span class="p-2 bg-warning rounded-3 text-dark">iWriter</span></span>
+                        <span>Oxford Academic <span class="p-2 bg-warning rounded-3 text-dark">iWriter</span></span>
                     </h1>
-                    <h2><a href="./academic.html">Go to Oxford Academic iWriter</a></h2>
+                    <h2><a href="./index.html">Go to Oxford iWriter</a></h2>
                     <div class="middle_of_page d-flex justify-content-center">
                         <div class="row">
                             <div class="col-md-6 mb-4">
@@ -263,38 +264,6 @@
                                     </div>
                                 </div>
                                 <div class="checklist_wrp">
-                                    <div class="accordion accordion-flush" id="checkListAccordion">
-                                      <div class="accordion-item">
-                                        <h2 class="accordion-header" id="flush-headingOne">
-                                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                            Accordion Item #1
-                                          </button>
-                                        </h2>
-                                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#checkListAccordion">
-                                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-                                        </div>
-                                      </div>
-                                      <div class="accordion-item">
-                                        <h2 class="accordion-header" id="flush-headingTwo">
-                                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                            Accordion Item #2
-                                          </button>
-                                        </h2>
-                                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#checkListAccordion">
-                                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                                        </div>
-                                      </div>
-                                      <div class="accordion-item">
-                                        <h2 class="accordion-header" id="flush-headingThree">
-                                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                            Accordion Item #3
-                                          </button>
-                                        </h2>
-                                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#checkListAccordion">
-                                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                                        </div>
-                                      </div>
-                                    </div>
                                     <ul class="checklist_ul">
                                         <li>
                                             <div class="menu_1">Before you start</div>
@@ -495,7 +464,7 @@
             function initiateController() {
                 iWriter_controller = new Controller();
                 iWriter_controller.init({
-                    xmlPath: 'xml/',
+                    xmlPath: 'xml/academic/',
                     imgPath: 'images/'
                 });
             }
