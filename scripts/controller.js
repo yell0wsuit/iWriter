@@ -1491,8 +1491,8 @@ function Controller() {
         });
         top_html_ck += '</div>'; //end accordion
         $('.left_wrapper').empty().html(top_html_ck);
-        $('.checkpoints').hide();
-        $('.menu_1').off('click').on('click', function(e_p) {
+        //$('.checkpoints').hide();
+        /*$('.menu_1').off('click').on('click', function(e_p) {
 
             if (!$(this).hasClass('_select')) {
                 $(this).addClass('_select');
@@ -1511,7 +1511,7 @@ function Controller() {
                 $(this).removeClass('_select');
                 $(this).parent('li').css('background-image', 'url("images/mitr/down_a.svg")');
             }
-        });
+        });*/
         $('.close-check-top').off(event_type).on(event_type, function() {
             $('.check_content').hide();
             $('.checklist_wrp').show();
