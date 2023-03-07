@@ -10,23 +10,13 @@
         <link href="styles/jquery.reject.css" rel="stylesheet" type="text/css" />
         <script src="scripts/jsstore.min.js"></script>
         <style>
-            * {
-            font-family: Inter, system-ui, sans-serif;
-            }
-            @font-face {
-            font-family: Inter;
-            src: url("../fonts/Inter.var.woff2") format("woff2-variations");
-            font-weight: 300 900;
-            font-stretch: 35% 100%;
-            font-style: normal;
-            }
             .bi-nav {
-            fill: currentcolor;
-            height: 1em;
-            width: 1em;
+                fill: currentcolor;
+                height: 1em;
+                width: 1em;
             }
             .active .bi-nav {
-            display: block !important;
+                display: block !important;
             }
         </style>
         <!--[if gte IE 7 ]>
@@ -152,8 +142,7 @@
                 <div class="second_page common_page" id="second_page" style="display: none;">
                     <nav class="navbar navbar-expand-lg bg-primary-subtle">
                         <div class="container-fluid">
-                            <div class="navbar-brand text-truncate fw-semibold">
-                                <span class="left_menu" style="background-position: 0px 0px;"></span>
+                            <div id="modelnavbar" class="navbar-brand text-truncate fw-semibold">
                                 Choose the model you want to see
                             </div>
                             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#innerNavbar2" aria-controls="innerNavbar2" aria-expanded="false" aria-label="Toggle navigation">
@@ -181,22 +170,27 @@
                             </div>
                         </div>
                     </nav>
-                    <div class="second_page_body">
+                    <div class="second_page_body container-lg mt-2">
                         <div class="arrow_wrp">
                             <div class="arrow_box"></div>
                         </div>
                         <div class="second_page_body_left">
-                            <ul>
+                            <p>Click/tap on the project name to get started, or click/tap on the information icon to learn more.</p>
+                            <ul class="list-group list-group-flush">
                             </ul>
                         </div>
-                        <div class="second_page_body_right"></div>
                     </div>
                 </div>
                 <div class="models_page common_page" id="models_page" style="display: none;">
                     <nav class="models_page_top navbar navbar-expand-lg bg-primary-subtle">
                         <div class="container-fluid">
+                            <div class="guideleft-panel-toggle d-sm-block d-md-none">
+                              <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#modelspagebodyleft" aria-controls="modelspagebodyleft" aria-label="Toggle left panel">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16"> <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/> </svg>
+                                <span class="d-none fs-6 pe-1">Browse</span>
+                              </button>
+                            </div>
                             <div class="navbar-brand text-truncate fw-semibold">
-                                <span class="left_menu"></span>
                                 <span class="models_page_left_panel text-truncate">Comparison 1</span>
                                 <span class="up_arrow" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Go back"></span>
                             </div>
@@ -248,148 +242,60 @@
                             </div>
                         </div>
                     </nav>
-                    <div class="models_page_body">
-                        <div class="models_page_body_left">
-                            <div class="btn_phone">
-                                <div class="show_top"></div>
-                                <div class="show_bottom"></div>
-                            </div>
-                            <div class="left_wrapper">
-                                <div class="check_content">
-                                    <div class="check_top fw-semibold">
-                                        <span>Use formal and impersonal language.</span>
+                    <div class="models_page_body mt-2 container-lg">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="offcanvas offcanvas-start offcanvas-collapse border-0" tabindex="-1" id="modelspagebodyleft" aria-labelledby="modelspagebodyleftLabel">
+                                    <div class="offcanvas-header d-md-none">
+                                        <h5 class="offcanvas-title" id="modelspagebodyleftLabel">Guides & Choose what to show</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                     </div>
-                                    <div class="check_con">
-                                    </div>
-                                </div>
-                                <div class="checklist_wrp">
-                                    <div class="accordion accordion-flush" id="checkListAccordion">
-                                      <div class="accordion-item">
-                                        <h2 class="accordion-header" id="flush-headingOne">
-                                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                            Accordion Item #1
-                                          </button>
-                                        </h2>
-                                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#checkListAccordion">
-                                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-                                        </div>
-                                      </div>
-                                      <div class="accordion-item">
-                                        <h2 class="accordion-header" id="flush-headingTwo">
-                                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                            Accordion Item #2
-                                          </button>
-                                        </h2>
-                                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#checkListAccordion">
-                                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                                        </div>
-                                      </div>
-                                      <div class="accordion-item">
-                                        <h2 class="accordion-header" id="flush-headingThree">
-                                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                            Accordion Item #3
-                                          </button>
-                                        </h2>
-                                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#checkListAccordion">
-                                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <ul class="checklist_ul">
-                                        <li>
-                                            <div class="menu_1">Before you start</div>
-                                            <div class="checkpoints">
-                                                <ul class="checkpoints_ul bg-body-tertiary">
-                                                    <li>
-                                                        <div>
-                                                            <span>Use formal and impersonal language.</span>
-                                                            <span class="check_box_w"><input type="checkbox" value="Bike" /></span>
-                                                        </div>
-                                                        <span class="tell_me_btn">tell me more...</span>
-                                                    </li>
-                                                    <li>
-                                                        <div>
-                                                            <span>Use formal and impersonal language.</span>
-                                                            <span class="check_box_w"><input type="checkbox" value="Bike" /></span>
-                                                        </div>
-                                                        <span class="tell_me_btn">tell me more...</span>
-                                                    </li>
-                                                    <li>
-                                                        <div>
-                                                            <span>Use formal and impersonal language.</span>
-                                                            <span class="check_box_w"><input type="checkbox" value="Bike" /></span>
-                                                        </div>
-                                                        <span class="tell_me_btn">tell me more...</span>
-                                                    </li>
-                                                </ul>
+                                  <div class="offcanvas-body">
+                                    <div class="models_page_body_left">
+                                        <div class="left_wrapper mb-4">
+                                            <div class="check_content">
+                                                <div class="check_top fw-semibold">
+                                                    <span>Use formal and impersonal language.</span>
+                                                </div>
+                                                <div class="check_con">
+                                                </div>
                                             </div>
-                                        </li>
-                                        <li>
-                                            <div class="menu_1">Before you start</div>
-                                            <div class="checkpoints">
-                                                <ul class="checkpoints_ul bg-body-tertiary">
-                                                    <li>
-                                                        <div>
-                                                            <span>Use formal and impersonal language.</span>
-                                                            <span class="check_box_w"><input type="checkbox" value="Bike" /></span>
-                                                        </div>
-                                                        <span class="tell_me_btn">tell me more...</span>
-                                                    </li>
-                                                    <li>
-                                                        <div>
-                                                            <span>Use formal and impersonal language.</span>
-                                                            <span class="check_box_w"><input type="checkbox" value="Bike" /></span>
-                                                        </div>
-                                                        <span class="tell_me_btn">tell me more...</span>
-                                                    </li>
-                                                    <li>
-                                                        <div>
-                                                            <span>Use formal and impersonal language.</span>
-                                                            <span class="check_box_w"><input type="checkbox" value="Bike" /></span>
-                                                        </div>
-                                                        <span class="tell_me_btn">tell me more...</span>
-                                                    </li>
-                                                </ul>
+                                            <div class="checklist_wrp">
                                             </div>
-                                        </li>
-                                        <li>
-                                            <div class="menu_1">Before you start</div>
-                                        </li>
-                                        <li>
-                                            <div class="menu_1">Before you start</div>
-                                        </li>
-                                    </ul>
+                                        </div>
+                                        <div class="show_structure_panel">
+                                            <div class="search_title">
+                                                <p>Choose what to show</p>
+                                                <p>Explore the model by showing and hiding different elements</p>
+                                            </div>
+                                            <div class="structure_elements">
+                                                <div class="show_structre str_common">
+                                                    <span>Show structure</span>
+                                                    <div class="tick_mark"></div>
+                                                </div>
+                                                <div class="show_notes str_common">
+                                                    <span>Show notes</span>
+                                                    <div class="tick_mark"></div>
+                                                </div>
+                                                <div class="show_content str_common">
+                                                    <span>Show content</span>
+                                                    <div class="tick_mark"></div>
+                                                </div>
+                                                <div class="show_all str_common">
+                                                    <span>Show all</span>
+                                                    <div class="tick_mark"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
                                 </div>
                             </div>
-                            <div class="show_structure_panel">
-                                <div class="search_title">
-                                    <p>Choose what to show</p>
-                                    <p>Explore the model by showing and hiding different elements</p>
+                            <div class="col-md-8 col-sm-12">
+                                <div class="models_page_body_right">
+                                    <div class="models_header"></div>
+                                    <div class="models_content bg-body-tertiary p-4"></div>
                                 </div>
-                                <div class="structure_elements">
-                                    <div class="show_structre str_common">
-                                        <span>Show structure</span>
-                                        <div class="tick_mark"></div>
-                                    </div>
-                                    <div class="show_notes str_common">
-                                        <span>Show notes</span>
-                                        <div class="tick_mark"></div>
-                                    </div>
-                                    <div class="show_content str_common">
-                                        <span>Show content</span>
-                                        <div class="tick_mark"></div>
-                                    </div>
-                                    <div class="show_all str_common">
-                                        <span>Show all</span>
-                                        <div class="tick_mark"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="models_page_body_right">
-                            <div class="models_header">
-                            </div>
-                            <div class="models_content bg-body-tertiary p-4 shadow">
                             </div>
                         </div>
                     </div>
@@ -474,6 +380,22 @@
                 </div>
                 </div>
             </div>
+        </div>
+        <div class="modal fade" id="newProjectModal" tabindex="-1" aria-labelledby="newProjectModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="newProjectModalLabel">Covering/Cover Letter</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
             <symbol id="check2" viewBox="0 0 16 16">
@@ -571,8 +493,6 @@
                         })
                 })
             })()
-            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
         </script>
     </body>
 </html>

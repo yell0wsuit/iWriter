@@ -338,7 +338,7 @@ $(document).ready(function() {
     //$('.main_wrapper').parent().css('background-color', '#e0f2fd').css('padding', '0');
 
     $('.models_page_body_right').click(function(e) {
-        var left_pos = $('.models_page_body_left').position();
+        /*var left_pos = $('.models_page_body_left').position();
 
         if (Number(left_pos.left) == 0) {
             if ($(window).width() <= 480) {
@@ -348,7 +348,7 @@ $(document).ready(function() {
                 $('.models_page_body_left').animate({'left': '-100%'});
                 $('.left_menu').css('background-position', '0px 0px');
             }
-        }
+        }*/
         $('.tool_wrapper,.down_arrow_wrapper').hide();
     });
 

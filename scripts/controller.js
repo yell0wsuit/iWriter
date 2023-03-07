@@ -134,18 +134,18 @@ function Controller() {
         var project_html = '';
         for (var key in _this.project_xml_data) {
             if (_this.project_xml_data[key]['framework_model'] === 'y' && _this.project_xml_data[key]['framework_enabled'] === 'true') {
-                project_html = project_html + '<' + element + ' data-key="' + key + '"><div class="li_inner"><span class="sp_left" data-key="' + key + '">' + _this.project_xml_data[key]['project_name'] + '</span><span class="info_ic"></span></div><div class="info_text">' + _this.project_xml_data[key]['framework_summery'] + '</div>' + '</' + element + '>';
+                project_html = project_html + '<' + element + ' data-key="' + key + '" class="list-group-item list-group-item-action d-flex"><div class="li_inner me-2"><span class="sp_left" data-key="' + key + '">' + _this.project_xml_data[key]['project_name'] + '</span><span class="info_ic"></span></div><a href="javascript:void(0)" data-bs-toggle="popover" data-bs-content="'+ _this.project_xml_data[key]['framework_summery'] +'"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16"> <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/> </svg></a>' + '</' + element + '>';
             } else {
                 //project_html = project_html + '<' + element + ' data-key="' + key + '"><div style="opacity: 0.3; cursor: default;"class="li_inner_dis"><span class="sp_left_dis" data-key="' + key + '">' + _this.project_xml_data[key]['project_name'] + '</span><span class="info_ic_dis"></span></div><div class="info_text">' + _this.project_xml_data[key]['framework_summery'] + '</div>' + '</' + element + '>';
             }
         }
-        $('.left_menu').hide();
+        //$('.left_menu').hide();
         $('.second_page_body_left').css('left', '0');
         $('.second_page_body_right').empty();
         $(wrapper).empty().append(project_html);
-        $('.second_page_top h1').html('Choose the model you want to see');
+        $('#modelnavbar').html('Choose the model you want to see');
         if (Number($(window).width()) <= 480) {
-            $('.second_page_top h1').text('Choose a model');
+            $('#modelnavbar').text('Choose a model');
         }
         $('.top_model_menu_text,.models_page_menu_text').html('Models');
         $(".info_ic").each(function(index, element) {
@@ -156,7 +156,7 @@ function Controller() {
                     //$(".info_text").hide("blind");
                     //$(this).parent().next().show("blind");
                     $(".info_text").slideUp();
-                    $(".info_ic").css('background-image', 'url("images/mitr/oxford/info_01.svg")');
+                    //$(".info_ic").css('background-image', 'url("images/mitr/oxford/info_01.svg")');
                     if ($(this).attr('data-show') == 'hide') {
                         $(this).parent().next().slideDown();
                         $(this).attr('data-show', 'show');
@@ -227,20 +227,20 @@ function Controller() {
         $('.common_page').hide();
         $('.info_text').hide();
         $('.models_page').show();
-        $('.left_menu').show();
-        $('.models_page_body_left').css('left', 0);
+        //$('.left_menu').show();
+        /*$('.models_page_body_left').css('left', 0);
         if ($(window).width() <= 480) {
             var left_pos = $('.models_page_body_left').position();
             if (Number(left_pos.left) == 0) {
                 //$('.models_page_body').css('overflow', 'hidden');
             }
-        }
+        }*/
 
         $('.str_common').each(function() {
             $(this).children('.tick_mark').removeClass('_selected');
         });
         $('.models_page_left_panel').html(m_name);
-        $('.models_page_body .left_wrapper').empty().html('<div class="steps_title"><p>Guided tour of the model</p><p>Take a step-by-step tour of how the model was written</p></div><ul class="medels_steps"></ul>');
+        $('.models_page_body .left_wrapper').empty().html('<div class="steps_title"><p>Guided tour of the model</p><p>Take a step-by-step tour of how the model was written</p></div><ul class="medels_steps list-group list-group-flush"></ul>');
         $('.models_page_body_left .medels_steps').empty();
         $('.models_header').empty();
         $('.models_content').empty();
@@ -279,7 +279,7 @@ function Controller() {
         //end check for filter
 
         $(_this.project_xml_data[_this.current_key]['xml_data']).find('step').each(function() {
-            guided_html = guided_html + '<li data-key="' + _this.current_key + '" data-para_ids="' + $(this).attr('para_ids') + '"><span data-key="' + _this.current_key + '" data-para_ids="' + $(this).attr('para_ids') + '">' + $(this).attr('label') + '</span></li>';
+            guided_html = guided_html + '<li data-key="' + _this.current_key + '" data-para_ids="' + $(this).attr('para_ids') + '" class="list-group-item"><span data-key="' + _this.current_key + '" data-para_ids="' + $(this).attr('para_ids') + '" data-bs-dismiss="offcanvas">' + $(this).attr('label') + '</span></li>';
         });
         $('.models_page_body_left .medels_steps').append(guided_html);
         $('.models_page_body_left .medels_steps li').on('click', function() {
@@ -298,7 +298,7 @@ function Controller() {
             //} else {
                 $(this).css('background-color', 'var(--bs-primary)').css('color','white');
             //}
-            var left_pos = $('.models_page_body_left').position();
+            /*var left_pos = $('.models_page_body_left').position();
             if (Number(left_pos.left) == 0) {
                 if ($(window).width() <= 480) {
                     $('.models_page_body_left').animate({'left': '-100%'});
@@ -307,7 +307,8 @@ function Controller() {
                     $('.models_page_body_left').animate({'left': '-100%'});
                     $('.left_menu').css('background-position', '0px 0px');
                 }
-            }
+            }*/
+            
 
 
             var parent_0 = this;
@@ -737,10 +738,10 @@ function Controller() {
         var project_html = '';
         for (var key in _this.project_xml_data) {
             if (_this.project_xml_data[key]['framework_enabled'] === 'true') {
-                project_html = project_html + '<' + element + ' data-key="' + key + '"><div class="li_inner"><span class="sp_left" data-key="' + key + '">' + _this.project_xml_data[key]['project_name'] + '</span><span class="info_ic"></span></div><div class="info_text">' + _this.project_xml_data[key]['framework_summery'] + '</div>' + '</' + element + '>';
+                project_html = project_html + '<' + element + ' data-key="' + key + '" class="list-group-item list-group-item-action d-flex"><div class="li_inner me-2"><span class="sp_left" data-key="' + key + '">' + _this.project_xml_data[key]['project_name'] + '</span><span class="info_ic"></span></div><a href="javascript:void(0)" data-bs-toggle="popover" data-bs-content="'+ _this.project_xml_data[key]['framework_summery'] +'"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16"> <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/> </svg></a>' + '</' + element + '>';
             }
         }
-        $('.left_menu').show();
+        //$('.left_menu').show();
         $('.second_page_body_left').css('left', '0');
         $(wrapper).empty().append(project_html);
         $('.second_page_top h1').html('Choose the type of writing you want to do');
@@ -757,7 +758,7 @@ function Controller() {
                     ///$(this).parent().next().show("blind");
 
                     $(".info_text").slideUp();
-                    $(".info_ic").css('background-image', 'url("images/mitr/oxford/info_01.svg")');
+                    //$(".info_ic").css('background-image', 'url("images/mitr/oxford/info_01.svg")');
                     if ($(this).attr('data-show') == 'hide') {
                         $(this).parent().next().slideDown();
                         $(this).attr('data-show', 'show');
@@ -790,10 +791,10 @@ function Controller() {
                 //for device
                 e1.preventDefault();
                 $('.tool_wrapper,.down_arrow_wrapper').hide();
-                var left_pos = $('.second_page_body_left').position();
+                //var left_pos = $('.second_page_body_left').position();
                 $('.second_page_body').scrollTop(0);
                 $('.second_page_body_left').stop();
-                if (Number(left_pos.left) == 0) {
+                /*if (Number(left_pos.left) == 0) {
                     if ($(window).width() <= 480) {
                         $('.second_page_body_left').animate({'left': '-100%'});
                         $('.left_menu').css('background-position', '0px 0px');
@@ -806,11 +807,11 @@ function Controller() {
                     $('.second_page_body_left').animate({'left': '0'});
                     //$('.second_page_body').css('overflow', 'hidden');
                     //$('.left_menu').css('background-position', '-5px 0px');
-                }
+                } */
                 //end for device
 
 
-                var head_html = '<div class="models_header w_models_header"><p>' + $(this).parents('.li_inner').next().html() + '</p></div>';
+                var head_html = '<div class="models_header w_models_header"><p>' + _this.project_xml_data[$(this).attr('data-key')]['framework_summery'] + '</p></div>';
                 head_html += '<div class="d-grid"><button class="btn btn-primary mb-4 p-3 create_project create_pro_btn" data-type="create" data-key="' + $(this).attr('data-key') + '" role="button">Create a new project</button></div>';
                 _this.current_key = $(this).attr('data-key');
                 var postData = {'data-key': _this.current_key};
@@ -845,8 +846,10 @@ function Controller() {
                         temp_html += '<div class="delete_project" data-key="' + results[i]['id'] + '" data-bs-toggle="modal" data-bs-target="#deleteModal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16"><path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/></svg></div>';
                     }
                     head_html += temp_html;
-                    $('.second_page_body_right').show().empty().html(head_html);
-                    $('.second_page_body_right .delete_project').unbind(event_type).bind(event_type, function(e2) {
+                    //$('.second_page_body_right').show().empty().html(head_html);
+                    $('#newProjectModal').modal('show').find('.modal-body').html(head_html);
+                    $('#newProjectModalLabel').text(_this.project_xml_data[_this.current_key]['project_name']);
+                    $('.delete_project').unbind(event_type).bind(event_type, function(e2) {
                         e2.preventDefault();
                         var delete_id = $(this).attr('data-key');
                         var temp_this = this;
@@ -892,6 +895,7 @@ function Controller() {
                             _this.current_pro_name = $(this).attr('data-project');
                         }
                         _this.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
+                        $('#newProjectModal').modal('hide')
                     });
                 }
                 showProj();
@@ -1131,10 +1135,10 @@ function Controller() {
         $('.info_text').hide();
         $('.models_page').show();
         if ($(window).width() <= 480) {
-            var left_pos = $('.models_page_body_left').position();
-            if (Number(left_pos.left) == 0) {
+            //var left_pos = $('.models_page_body_left').position();
+            //if (Number(left_pos.left) == 0) {
                 //$('.models_page_body').css('overflow', 'hidden');
-            }
+            //}
         }
 
         $('.str_common').each(function() {
@@ -1416,9 +1420,9 @@ function Controller() {
 
         //left side content
         var checklist_cnt = 0;
-        var top_html_ck = '<div class="mt-2 check_content card"><div class="card-header check_top fw-semibold"><span>Use formal and impersonal language.</span></div><div class="card-body check_con bg-body-tertiary"></div></div>';
+        var top_html_ck = '<div class="mt-2 check_content card"><div class="card-header check_top fw-semibold d-flex justify-content-between"><span>Use formal and impersonal language.</span><button type="button" class="btn-close close-check-top" aria-label="Close"></button></div><div class="card-body check_con"></div></div>';
         //top_html_ck += '<div class="checklist_wrp" ><ul class="checklist_ul">';
-        top_html_ck += '<div class="checklist_wrp accordion accordion-flush" id="checkListAccordion">';
+        top_html_ck += '<div class="steps_title"><p>Checklists</p></div><div class="checklist_wrp accordion accordion-flush" id="checkListAccordion">';
         var statis_menu = new Array();
         statis_menu[0] = 'Before you start';
         statis_menu[1] = 'Choose your language';
@@ -1431,7 +1435,7 @@ function Controller() {
                 top_html_ck += '<div>';
                 top_html_ck += '<div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="" id="'+ $(this).text().replace(/\s/g,'').substr(0,17) +'"><label class="form-check-label checklist_p" for="'+ $(this).text().replace(/\s/g,'').substr(0,17) +'">' + $(this).text() + '</label></div>';
                 if (typeof ($(this).attr('help')) != 'undefined') {
-                    top_html_ck += '<span class="mb-2 btn btn-warning tell_me_btn" data-file="' + $(this).attr('help').split('.')[0] + '">tell me more...</span>';
+                    top_html_ck += '<span class="ms-4 mb-2 btn btn-warning tell_me_btn" data-file="' + $(this).attr('help').split('.')[0] + '">tell me more...</span>';
                 }
 
                 top_html_ck += '</div>';
@@ -1446,7 +1450,7 @@ function Controller() {
                 top_html_ck += '<div>';
                 top_html_ck += '<div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="" id="'+ $(this).text().replace(/\s/g,'').substr(0,18) +'"><label class="form-check-label checklist_p" for="'+ $(this).text().replace(/\s/g,'').substr(0,18) +'">' + $(this).text() + '</label></div>';
                 if (typeof ($(this).attr('help')) != 'undefined') {
-                    top_html_ck += '<span class="mb-2 btn btn-warning tell_me_btn" data-file="' + $(this).attr('help').split('.')[0] + '">tell me more...</span>';
+                    top_html_ck += '<span class="ms-4 mb-2 btn btn-warning tell_me_btn" data-file="' + $(this).attr('help').split('.')[0] + '">tell me more...</span>';
                 }
 
                 top_html_ck += '</div>';
@@ -1461,7 +1465,7 @@ function Controller() {
                 top_html_ck += '<div>';
                 top_html_ck += '<div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="" id="'+ $(this).text().replace(/\s/g,'').substr(0,19) +'"><label class="form-check-label checklist_p" for="'+ $(this).text().replace(/\s/g,'').substr(0,19) +'">' + $(this).text() + '</label></div>';
                 if (typeof ($(this).attr('help')) != 'undefined') {
-                    top_html_ck += '<span class="mb-2 btn btn-warning tell_me_btn" data-file="' + $(this).attr('help').split('.')[0] + '">tell me more...</span>';
+                    top_html_ck += '<span class="ms-4 mb-2 btn btn-warning tell_me_btn" data-file="' + $(this).attr('help').split('.')[0] + '">tell me more...</span>';
                 }
 
                 top_html_ck += '</div>';
@@ -1476,7 +1480,7 @@ function Controller() {
                 top_html_ck += '<div>';
                 top_html_ck += '<div class="form-check mb-2"><input class="form-check-input" type="checkbox" value="" id="'+ $(this).text().replace(/\s/g,'').substr(0,20) +'"><label class="form-check-label checklist_p" for="'+ $(this).text().replace(/\s/g,'').substr(0,20) +'">' + $(this).text() + '</label></div>';
                 if (typeof ($(this).attr('help')) != 'undefined') {
-                    top_html_ck += '<span class="mb-2 btn btn-warning tell_me_btn" data-file="' + $(this).attr('help').split('.')[0] + '">tell me more...</span>';
+                    top_html_ck += '<span class="ms-4 mb-2 btn btn-warning tell_me_btn" data-file="' + $(this).attr('help').split('.')[0] + '">tell me more...</span>';
                 }
 
                 top_html_ck += '</div>';
@@ -1507,7 +1511,7 @@ function Controller() {
                 $(this).parent('li').css('background-image', 'url("images/mitr/down_a.svg")');
             }
         });
-        $('.check_top').off(event_type).on(event_type, function() {
+        $('.close-check-top').off(event_type).on(event_type, function() {
             $('.check_content').hide();
             $('.checklist_wrp').show();
         });
@@ -2490,3 +2494,10 @@ addEventListener("DOMContentLoaded", (event) => {
     });
   }
 })();
+
+$(function () {
+    $('body').popover({
+        selector: '[data-bs-toggle=popover]',
+        trigger: 'focus'
+    })
+})
