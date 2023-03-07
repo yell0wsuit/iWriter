@@ -359,13 +359,13 @@ $(document).ready(function() {
         if (Number($(window).width()) <= 768) {
             $('.second_page_top h1').text('Choose a model');
 
-            if ($('.left_wrapper').is(':visible')) {
+            /*if ($('.left_wrapper').is(':visible')) {
                 $('.show_structure_panel').removeAttr('style').hide();
                 $('.show_structure_panel').hide();
             } else {
                 $('.show_structure_panel').show();
                 $('.left_wrapper').hide();
-            }
+            }*/
 
 
             $('.models_page_body').scrollTop(0);

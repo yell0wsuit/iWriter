@@ -1375,6 +1375,7 @@ function Controller() {
 
 
         $('.models_content').html(content_data);
+        $('.models_content').removeClass('d-none');
         //_this.db_clk();
         //placeholder functionality
 
