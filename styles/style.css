@@ -320,7 +320,7 @@ ul, li {
 }
 .tick_mark{
     background-color: #FFFFFF;
-    /*background-image: url("../images/mitr/oxford/closebtn.png");*/
+    /*background-image: url("../images/mitr/closebtn.png");*/
     /*background-position: 1px 1px;*/
     background-repeat: no-repeat;
     float: right;
@@ -383,13 +383,7 @@ ul, li {
     padding-left: 5px;
     color: #00965E;
 }
-.show_me_btn{
-    /*width: 71px;
-    height: 17px;
-    background-image: url("../images/mitr/oxford/showme.png");
-    background-repeat: no-repeat;
-    cursor: pointer;*/
-}
+
 .highlight_txt{
     background-color: #00965E;
     
@@ -411,33 +405,6 @@ ul, li {
     /*display: none;*/
 }
 
-.second_page h1{
-    /*font-family: Arial;*/
-}
-.models_page h1{
-    /*font-family: Arial;*/
-}
-
-.models_page_home{
-    height: 20px;
-    width: 20px;
-    background-image: url("../images/mitr/oxford/iphone/home_icon.png");
-    float: left;
-    display: block;
-    margin: 10px 10px 0;
-    display: none;
-}
-.models_page_tools{
-    height: 20px;
-    width: 20px;
-    background-image: url("../images/mitr/oxford/iphone/tool_icon.svg");
-    background-size: 20px;
-    float: left;
-    /*display: block;*/
-    margin: 8px 8px 0;
-    position: relative;
-    display: none;
-}
 .tool_wrapper{
     position: absolute;
     right: -7px;
@@ -538,7 +505,7 @@ ul, li {
     display: none;
 }
 ._selected{
-    background-image: url("../images/mitr/oxford/closebtn.svg");
+    background-image: url("../images/mitr/closebtn.svg");
 }
 .italic_style{
     font-variation-settings: 'slnt' -10;
