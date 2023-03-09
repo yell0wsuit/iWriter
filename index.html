@@ -100,11 +100,11 @@
                     <button type="button" class="btn btn-primary help_btn common_page">Help
                     </button>
                 </div>
-                <div class="first_page common_page container-lg mt-4" id="first_page">
-                    <h1 class="mb-4 fw-semibold text-primary-emphasis d-flex justify-content-center">
+                <div class="first_page common_page container-lg mt-4 p-5" id="first_page">
+                    <h1 class="mb-4 fw-semibold text-primary-emphasis d-flex justify-content-center text-center">
                         <span>Oxford <span class="p-2 bg-warning rounded-5 text-dark">iWriter</span></span>
                     </h1>
-                    <p class="lead mb-4 d-flex justify-content-center"><a href="./academic.html">Go to Oxford Academic iWriter</a></p>
+                    <p class="lead mb-4 d-flex justify-content-center text-center"><a href="./academic.html">Go to Oxford Academic iWriter</a></p>
                     <div class="middle_of_page d-flex justify-content-center">
                         <div class="row">
                             <div class="col-md-6 mb-4">
@@ -170,9 +170,6 @@
                         </div>
                     </nav>
                     <div class="second_page_body container-lg mt-2">
-                        <div class="arrow_wrp">
-                            <div class="arrow_box"></div>
-                        </div>
                         <div class="second_page_body_left">
                             <p>Click/tap on the project name to get started, or click/tap on the information icon to learn more.</p>
                             <ul class="list-group list-group-flush">
@@ -190,9 +187,9 @@
                               </button>
                             </div>
                             <div class="navbar-brand text-truncate fw-semibold">
-                                <span class="models_page_left_panel text-truncate">Comparison 1</span>
-                                <span class="up_arrow" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Go back"></span>
+                                <span class="models_page_left_panel">Comparison 1</span>
                             </div>
+                            <span class="up_arrow d-flex" data-bs-toggle="popover" data-bs-content="Go back"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-90deg-up" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M4.854 1.146a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L4 2.707V12.5A2.5 2.5 0 0 0 6.5 15h8a.5.5 0 0 0 0-1h-8A1.5 1.5 0 0 1 5 12.5V2.707l3.146 3.147a.5.5 0 1 0 .708-.708l-4-4z"/> </svg></span>
                             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#innerNavbar" aria-controls="innerNavbar" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                             </button>
@@ -268,19 +265,19 @@
                                                 <p>Explore the model by showing and hiding different elements</p>
                                             </div>
                                             <div class="structure_elements">
-                                                <div class="show_structre str_common">
+                                                <div class="show_structre str_common" data-bs-dismiss="offcanvas">
                                                     <span>Show structure</span>
                                                     <div class="tick_mark"></div>
                                                 </div>
-                                                <div class="show_notes str_common">
+                                                <div class="show_notes str_common" data-bs-dismiss="offcanvas">
                                                     <span>Show notes</span>
                                                     <div class="tick_mark"></div>
                                                 </div>
-                                                <div class="show_content str_common">
+                                                <div class="show_content str_common" data-bs-dismiss="offcanvas">
                                                     <span>Show content</span>
                                                     <div class="tick_mark"></div>
                                                 </div>
-                                                <div class="show_all str_common">
+                                                <div class="show_all str_common" data-bs-dismiss="offcanvas">
                                                     <span>Show all</span>
                                                     <div class="tick_mark"></div>
                                                 </div>
@@ -315,10 +312,10 @@
                                 <input type="text" name="project_name" class="form-control mb-4 project_name">
                                 <p class="err text-danger"></p>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary ok_btn">OK</button>
-                                <button type="button" class="btn btn-secondary can_btn" data-bs-dismiss="modal">Close</button>
-                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary ok_btn">OK</button>
+                            <button type="button" class="btn btn-secondary can_btn" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
                     <div class="save_pop_2">
@@ -346,10 +343,10 @@
                                 <input type="text" name="project_name" class="form-control mb-4 project_name">
                                 <p class="err text-danger"></p>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary ok_btn create_mode">OK</button>
-                                <button type="button" class="btn btn-secondary ok_btn_common" data-bs-dismiss="modal">Close</button>
-                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary ok_btn create_mode">OK</button>
+                            <button type="button" class="btn btn-secondary ok_btn_common" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
                     <div class="save_pop_2">
@@ -373,10 +370,10 @@
                     <div class="modal-body">
                         Do you want to delete this project?
                     </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary ok_btn_delete" data-bs-dismiss="modal">OK</button>
-                    <button type="button" class="btn btn-secondary can_btn" data-bs-dismiss="modal">Cancel</button>
-                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary ok_btn_delete" data-bs-dismiss="modal">OK</button>
+                        <button type="button" class="btn btn-secondary can_btn" data-bs-dismiss="modal">Cancel</button>
+                    </div>
                 </div>
             </div>
         </div>
