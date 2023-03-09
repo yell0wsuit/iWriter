@@ -4,34 +4,6 @@ if (!window.indexedDB) {
     window.alert("Your browser doesn't support a stable version of IndexedDB.")
 }
 
-function get_date() {
-    var _date = new Date();
-    _date = _date.toString();
-    var _date_arr = _date.split(' ');
-    return _date_arr[0] + ' ' + _date_arr[1] + ' ' + _date_arr[2] + ' ' + _date_arr[3] + ' ' + _date_arr[4];
-}
-function escapeHtml(s) {
-    if (!s) {
-        return "";
-    }
-    s = s + "";
-    return s.replace(/[\&"<>\\]/g, function(s) {
-        switch (s) {
-            case "&":
-                return "&amp;";
-            case "\\":
-                return "\\\\";
-            case '"':
-                return '\"';
-            case "<":
-                return "&lt;";
-            case ">":
-                return "&gt;";
-            default:
-                return s;
-        }
-    });
-}
 $(document).ready(function() {
     initDb();
 
@@ -82,9 +54,9 @@ $(document).ready(function() {
 
     $('.help_btn').off(event_type).on(event_type, function() {
         if (/academic/.test(location.pathname) == !1) {
-            var OpenWindow = window.open("help.html", "Help Document", '');
+            window.open("help.html", "Help Document", '');
         } else {
-            var OpenWindow = window.open("help-academic.html", "Help Document", '');
+            window.open("help-academic.html", "Help Document", '');
         }
     });
 
@@ -122,33 +94,8 @@ $(document).ready(function() {
                 temp_html += '<div class="dropdown-item saved_projects_list" role="button" data-key="' + results[i]['data_id'] + '" data-project="' + results[i]['name'] + '" data-type="save">' + _name + ' (project ' + results[i]['data_id'] + ')' + '</div>';
                 $('.save_p_btn_home').html(temp_html);
             }
-            //temp_html += '<div class="saved_projects_list">&nbsp;</div>';
 
-            //$('.save_p_btn_txt').html('<span>My saved writing</span><span class="up_home"></span>');
             $('.saved_projects').empty().html(temp_html);
-
-            //$('.saved_projects').perfectScrollbar({suppressScrollY: false});
-            var _hgt = $('.saved_projects').height();
-            $('.saved_projects').attr("actHgt", _hgt).css("overflow", "hidden").css("height", _hgt + "px");
-            $('.saved_projects').height($('.save_p_btn').height());
-            /* var svd_pro_hgt = $('.saved_projects').height();
-
-            $('.save_p_btn').bind('click', function(e) {
-                e.preventDefault();
-                $('.saved_projects').stop();
-
-                if (Number(svd_pro_hgt) === 39 || Number(svd_pro_hgt) === 32)
-                    {
-                        $('.saved_projects').animate({height: $('.saved_projects').attr("actHgt")}, 200);
-                    }
-                    else
-                    {
-                        $('.saved_projects').animate({height: svd_pro_hgt}, 200);
-                    }
-                if ($('.saved_projects').height() > $('.save_p_btn').height()) {
-                    $('.saved_projects').animate({height: $('.save_p_btn').height()}, 200);
-                }
-            }); */
 
             $('.saved_projects_list').off('click').on('click', function() {
                 if ($(this).attr('data-type') == 'create') {
@@ -159,73 +106,9 @@ $(document).ready(function() {
                 iWriter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
             });
 
-            var p_len = ($('.saved_projects_list').length) - 1;
-            $('.saved_projects_list:nth-child(' + p_len + ')').css('border-bottom', 'none');
         }
     }
     listProj();
-
-
-    /*var formURL = 'database.php?fetchall';
-     $.ajax(
-     {
-     url: formURL,
-     type: "GET",
-     data: {},
-     success: function(data, textStatus, jqXHR)
-     {
-     if (data == '0') {
-     // no projects
-     $('.save_p_btn_txt').html('<span>No projects saved</span><span class="up_home"></span>');
-     } else {
-     $('.save_p_btn_txt').html('<span>My saved writing</span><span class="up_home"></span>');
-     $('.saved_projects').empty().html(data);
-
-     $('.saved_projects').perfectScrollbar({suppressScrollY: false});
-     var _hgt = $('.saved_projects').height();
-     $('.saved_projects').attr("actHgt", _hgt).css("overflow", "hidden").css("height", _hgt + "px");
-     $('.saved_projects').height($('.save_p_btn').height());
-     var svd_pro_hgt = $('.saved_projects').height();
-
-     $('.save_p_btn').bind(event_type, function(e) {
-
-     e.preventDefault();
-     $('.saved_projects').stop();
-
-     if (Number(svd_pro_hgt) === 39 || Number(svd_pro_hgt) === 32)
-     {
-     $('.saved_projects').animate({height: $('.saved_projects').attr("actHgt")}, 500);
-     }
-     else
-     {
-     $('.saved_projects').animate({height: svd_pro_hgt}, 500);
-     }
-     if ($('.saved_projects').height() > $('.save_p_btn').height()) {
-     $('.saved_projects').animate({height: $('.save_p_btn').height()}, 500);
-     }
-     });
-
-     $('.saved_projects_list').off(event_type).on(event_type, function() {
-     if ($(this).attr('data-type') == 'create') {
-     iWriter_controller.current_pro_name = '';
-     } else {
-     iWriter_controller.current_pro_name = $(this).attr('data-project');
-     }
-     iWriter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
-     });
-
-
-
-     var p_len = ($('.saved_projects_list').length) - 1;
-     $('.saved_projects_list:nth-child(' + p_len + ')').css('border-bottom', 'none');
-     }
-     },
-     error: function(jqXHR, textStatus, errorThrown)
-     {
-     //if fails
-     }
-     }
-     );*/
 
     $('.export_doc').off(event_type).on(event_type, function() {
         var doc_data = new Object();
@@ -281,7 +164,6 @@ $(document).ready(function() {
                 _string = _string.replace(/\&nbsp\;/g, " ");
             }
 
-            //var fs = require('fs');
             saveTextAsFile();
 
             function saveTextAsFile()
@@ -316,261 +198,49 @@ $(document).ready(function() {
                     console.log(e);
                 }
             }
-            
-            /*
-             fs.writeFile("./www/project/my_project.txt", _string, function(err) {
-             if (err) {
-             alert("Please try again");
-             } else {
-             var uri = 'project/my_project.txt';
-             var link = document.createElement("a");
-             link.download = 'My project';
-             link.href = uri;
-             link.click();
-             $(link).remove();
-             $('.tool_down_arrow_wrp').hide();
-             }
-             });*/
         }
     });
 
-
-    //$('.main_wrapper').parent().css('background-color', '#e0f2fd').css('padding', '0');
-
-    $('.models_page_body_right').click(function(e) {
-        /*var left_pos = $('.models_page_body_left').position();
-
-        if (Number(left_pos.left) == 0) {
-            if ($(window).width() <= 480) {
-                $('.models_page_body_left').animate({'left': '-100%'});
-                $('.left_menu').css('background-position', '0px 0px');
-            } else {
-                $('.models_page_body_left').animate({'left': '-100%'});
-                $('.left_menu').css('background-position', '0px 0px');
-            }
-        }*/
-        $('.tool_wrapper,.down_arrow_wrapper').hide();
-    });
-
-    //$('.first_page .box').css('background', 'none repeat scroll 0 0 #ebba17');
-
-    $(window).resize(function () {
-        //set_max_height();
-        if (Number($(window).width()) <= 768) {
-            $('.second_page_top h1').text('Choose a model');
-
-            /*if ($('.left_wrapper').is(':visible')) {
-                $('.show_structure_panel').removeAttr('style').hide();
-                $('.show_structure_panel').hide();
-            } else {
-                $('.show_structure_panel').show();
-                $('.left_wrapper').hide();
-            }*/
-
-
-            $('.models_page_body').scrollTop(0);
+    if ($(window).width() <= 768) {
+        if (iWriter_controller.project_short_name != '') {
+            $('.models_page_left_panel').html(iWriter_controller.project_short_name);
         } else {
-            if (iWriter_controller.current_tool == "model") {
-                $('.second_page_top h1').text('Choose the model you want to see');
-            } else {
-                $('.second_page_top h1').text('Choose the type of writing you want to do');
-            }
-            $('.left_wrapper').removeAttr('style').show();
-            $('.show_structure_panel').removeAttr('style').show();
+            $('.models_page_left_panel').parents('.navbar-brand').addClass('w-25');
         }
-        if ($(window).width() <= 768) {
-            if (iWriter_controller.project_short_name != '') {
-                $('.models_page_left_panel h1').html(iWriter_controller.project_short_name);
-            }
-        }
-    });
-    
-    $('.show_top').bind(event_type, function (e) {
-        e.preventDefault();
-        $('.left_wrapper').show();
-        $('.show_structure_panel').removeAttr('style').hide();
+    }
 
-        $(this).css('background-color', 'rgb(0, 18, 60)');
-        $('.show_bottom').css('background-color', '#eff3fc');
-    });
-    $('.show_bottom').bind(event_type, function (e) {
+    $('.models_page_home, .drp_home_clk').bind(event_type, function (e) {
         e.preventDefault();
-        $('.show_structure_panel').show();
-        $('.left_wrapper').hide();
-        $(this).css('background-color', 'rgb(0, 18, 60)');
-        $('.show_top').css('background-color', '#eff3fc');
-    });
-    /*$('.show_structure_panel').bind(event_type, function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        alert('in');
-    });*/
-    $('.models_page_tools').bind(event_type, function (e) {
-        e.preventDefault();
-        $('.tool_wrapper').toggle();
-        $('.down_arrow_wrapper,.tool_down_arrow_wrp').hide();
-    });
-
-    $('.models_page_home').bind(event_type, function (e) {
-        e.preventDefault();
-        //$('.common_page').hide();
-        //$('.first_page,.home_help,.language_btn').show();
-        //window.location.href = window.location.href;
-        iWriter_controller.switchToHome();
-    });
-
-    $('.tool_down_arrow').bind(event_type, function (e) {
-        e.preventDefault();
-        if ($(e.target).hasClass('tool_down_arrow')) {
-            //if (!$(this).find('.arrowp_wrp').is(':visible')) {
-            $('.tool_down_arrow_wrp').toggle();
-            //$('.arrowp_wrp').toggle();
-            $('.load_pop_d,.arrowp_wrp').hide();
-            //}
-            $('.tool_wrapper,.down_arrow_wrapper').hide();
-
-            $('.project_name').val('');
-        }
-        //alert('In');
-    });
-    $('.models_page_down_arrow,.down_arrow').bind(event_type, function (e) {
-        e.preventDefault();
-        if (!$('.arrowp_wrp').is(':visible')) {
-            $('.down_arrow_wrapper').toggle();
-        }
-        $('.tool_down_arrow_wrp').hide();
-        $('.tool_wrapper').hide();
-
-
-    });
-
-    $('.drp_home_clk').bind(event_type, function (e) {
-        e.preventDefault();
-        //$('.common_page').hide();
-        //$('.first_page,.home_help,.language_btn').show();
-        //window.location.href = window.location.href;
-        //$('.tool_wrapper,.down_arrow_wrapper').hide();
         iWriter_controller.switchToHome();
     });
 
     $('.up_arrow').bind('click', function (e) {
         e.preventDefault();
-
         if (iWriter_controller.current_tool == 'writer') {
-
             iWriter_controller.switchFromWriter();
-
-            //$('.fn_rigth').trigger(event_type);
         } else {
             $('.fn_left').trigger('click');
         }
-
     });
-
-    $('.left_menu,.h1_click').bind(event_type, function (e) {
-
-        if (!$('.second_page').is(':visible')) {
-            e.preventDefault();
-            $('.tool_wrapper,.down_arrow_wrapper').hide();
-            var left_pos = $('.models_page_body_left').position();
-            $('.models_page_body').scrollTop(0);
-            $('.models_page_body_left').stop();
-            if (Number(left_pos.left) == 0) {
-                if ($(window).width() <= 480) {
-                    $('.models_page_body_left').animate({ 'left': '-100%' });
-                    $('.left_menu').css('background-position', '0px 0px');
-                } else {
-                    $('.models_page_body_left').animate({ 'left': '-100%' });
-                    $('.left_menu').css('background-position', '0px 0px');
-                }
-                //$('.models_page_body,.second_page_body,.second_page_body_left,.models_page_body_left').css('overflow-y', 'scroll');
-            } else {
-                $('.models_page_body_left').animate({ 'left': '0' });
-                //$('.models_page_body').css('overflow', 'hidden');
-                $('.left_menu').css('background-position', '-5px 0px');
-            }
-        } else {
-            e.preventDefault();
-            $('.tool_wrapper,.down_arrow_wrapper').hide();
-            var left_pos = $('.second_page_body_left').position();
-            $('.second_page_body').scrollTop(0);
-            $('.second_page_body_left').stop();
-            if (Number(left_pos.left) == 0) {
-                if ($(window).width() <= 480) {
-                    $('.second_page_body_left').animate({ 'left': '-100%' });
-                    $('.left_menu').css('background-position', '0px 0px');
-                } else {
-                    $('.second_page_body_left').animate({ 'left': '-100%' });
-                    $('.left_menu').css('background-position', '0px 0px');
-                }
-                $('.models_page_body,.second_page_body,.second_page_body_left,.models_page_body_left').css('overflow-y', 'scroll');
-            } else {
-                $('.second_page_body_left').animate({ 'left': '0' });
-                $('.second_page_body').css('overflow', 'hidden');
-                $('.left_menu').css('background-position', '-5px 0px');
-            }
-        }
-
-    });
-
-
 
     $('.fn_left').bind('click', function (e) {
         e.preventDefault();
         $('.common_page').hide();
         $('.second_page').show();
-        $('.tool_wrapper,.down_arrow_wrapper').hide();
-
         iWriter_controller.leftPanelModel('li', '.second_page_body_left ul');
 
     });
+
     $('.fn_rigth').bind('click', function (e) {
         e.preventDefault();
         $('.common_page').hide();
         $('.second_page').show();
-        $('.tool_wrapper,.down_arrow_wrapper').hide();
         iWriter_controller.leftPanelWriter('li', '.second_page_body_left ul');
-    });
-    $('.left_wrapper li,.str_common').bind(event_type, function (e) {
-        if (iWriter_controller.current_tool == 'model') {
-            var left_pos = $('.models_page_body_left').position();
-
-            if (Number(left_pos.left) == 0) {
-                if ($(window).width() <= 480) {
-                    $('.models_page_body_left').animate({ 'left': '-100%' });
-                } else {
-                    $('.models_page_body_left').animate({ 'left': '-100%' });
-                }
-            }
-        }
-
-        $('.tool_wrapper,.down_arrow_wrapper').hide();
     });
 
     $('.models_page_body_right').bind(event_type, function (e) {
         iWriter_controller.reset_drop();
     });
-    //set_max_height();
-    function set_max_height() {
-        var window_height = Number(($(window).height() * 10) / 100);
-        var _margin = $('.inner_wrapper').outerHeight(true) - $('.inner_wrapper').height();
-        window_height = $(window).height() - 50 - _margin;
-
-        $('.models_page_body,.second_page_body,.second_page_body_left,.models_page_body_right').css('min-height', window_height);
-        var scroll_pos = $('.main_wrapper').position();
-        $(window).scrollTop(scroll_pos.top);
-        $('.models_page_body').scrollTop(0);
-
-        $('.inner_wrapper,.main_wrapper').css('min-height', $(window).height() - _margin).css('min-height', $(window).height() - _margin);
-
-        //$('.models_page_body,.second_page_body,.second_page_body_left,.models_page_body_left,.models_page_body_right').css('overflow-y', 'auto');
-
-        //$('.models_page_body,.second_page_body').css('overflow-y', 'auto');
-        if (Number($(window).width()) <= 480) {
-            $('.second_page_top h1').text('Choose a model');
-            //$('.models_page_body').css('overflow', 'hidden');
-        }
-    }
 
 });
 
@@ -594,7 +264,7 @@ writer_content['compare_words_differences'] = '<p><i><span>X... On the other han
 
 writer_content['compare_words_differences-a'] = '<p><span class="text-primary-emphasis fw-bold"><strong>despite X... Y</strong></span><br><span><i><strong>Despite these similarities</strong>, there are a number of significant <strong>differences</strong> between the two types of course.</i></span><br><span class="text-primary-emphasis fw-bold"><strong>on the other hand</strong></span><br><span><i><strong>On the other hand</strong>, face-to-face learning happens only in the classroom according to a fixed timetable.</i></span><br><span class="text-primary-emphasis fw-bold"><strong>however</strong></span><br><span><i><strong>However</strong>, the news is not all good for online courses.</i></span><br><span class="text-primary-emphasis fw-bold"><strong>unlike X, Y...</strong></span><br><span><strong><i>Unlike</i></strong><i> traditional courses, which require buildings and teachers, online courses only need digital learning materials.</i></span><br><span class="text-primary-emphasis fw-bold"><strong>X... whereas Y...</strong></span><br><span><i>Some online courses have completion rates as low as 13%, <strong>whereas</strong> between 70-80% of students on traditional courses complete their degrees.</i></span><br><span class="text-primary-emphasis fw-bold"><strong>difference/s between</strong></span><br><span><i>There are a number of <strong>differences between</strong>...</i></span><br><span><strong>while</strong></span><br><span><i>Online courses can take an almost unlimited number of students <strong>while</strong> traditional courses are limited to the number of people that can fit into a lecture hall.</i></span><br></p>';
 
-writer_content['compare_words_similarities'] = '<p><i><span>X... Similarly, Y...</span><br><span>Both X and Y...</span><br><span>X... Y also...</span><br><span class="f_normal">Both + plural noun:</span><br><span>Both types of school...</span><br><span>Like X, Y...</span><br><span>Like state schools, private schools...</span><br><span>X and Y are similar in that they both...</span><br><span>X is similar to Y in terms of / with regard to...</span><br><span>X resembles Y in that they both...</span><br><span>X is the same as Y.</span><br><span>X is <span class="f_normal">almost / nearly / virtually / just / exactly /</span></span><br><span>precisely the same as Y.</span><br><span>X and Y are very / rather / quite  similar.</span><br></i></p>';
+writer_content['compare_words_similarities'] = '<p><i><span>X... Similarly, Y...</span><br><span>Both X and Y...</span><br><span>X... Y also...</span><br><span class="fw-normal">Both + plural noun:</span><br><span>Both types of school...</span><br><span>Like X, Y...</span><br><span>Like state schools, private schools...</span><br><span>X and Y are similar in that they both...</span><br><span>X is similar to Y in terms of / with regard to...</span><br><span>X resembles Y in that they both...</span><br><span>X is the same as Y.</span><br><span>X is <span class="fw-normal">almost / nearly / virtually / just / exactly /</span></span><br><span>precisely the same as Y.</span><br><span>X and Y are very / rather / quite  similar.</span><br></i></p>';
 
 writer_content['compare_words_similarities-a'] = '<p><span class="text-primary-emphasis fw-bold"><strong>both X and Y</strong></span><br><span><strong><i>Both</i></strong><i> online courses <strong>and</strong> face-to-face courses have the same aims.</i></span><br><span class="text-primary-emphasis fw-bold"><strong>X is similar to Y</strong></span><br><span><i>Online courses <strong>are similar to</strong> traditional courses in that they have a syllabus.</i></span><br><span class="text-primary-emphasis fw-bold"><strong>also</strong></span><br><span><i>They <strong>also</strong> provide learning materials such as course notes and videos.</i></span><br><span><strong>share</strong></span><br><span class=""><i>... they <strong>share</strong> the same primary aim of providing an educational service.</i></span></p>';
 
@@ -606,18 +276,18 @@ writer_content['coverl_greeting_and_close'] = '<p><span class="text-primary-emph
 
 writer_content['cv_use_action_verbs'] = '<p><span class="text-primary-emphasis fw-bold">Action verbs</span><br>Use action verbs to <span>describe your achievements and make them look more dynamic.</span><br><span><strong>Examples:</strong><i> achieved, administered,analyzed,advised, arranged, compiled, conducted, coordinated, created, designed, developed, devised, distributed, evaluated, examined, executed, implemented, increased, introduced, instructed, liaised, managed, mentored, monitored, negotiated, organized, oversaw prepared, recommended, reduced, researched, represented, solved, supervised, trained.</i></span><br><span class="text-primary-emphasis fw-bold">Positive Adjectives</span><br><span>Use positive adjectives to describe yourself.</span><br><span><strong>Examples: </strong><i>active, adaptable, committed, competent, dynamic, effective, efficient, enthusiastic, experienced, flexible, (highly) motivated, organized, professional, proficient, qualified, successful.</i></span><br></p>';
 
-writer_content['cv_use_appropriate'] = '<p><span class="text-primary-emphasis fw-bold">Skills</span><br><span><i>Native French speaker<br>Near-native command of English<br>Good spoken and written German<br>Computer literate<br>Familiar with HTML<br>Experienced trainer and facilitator</span><br><span class="text-primary-emphasis fw-bold f_normal">Education and experience</span><br><span><i>Baccalaur&#233;at s&#233;rie C (equivalent of A levels in Maths and Physics)<br/>The qualifications described below do not have exact equivalents in the British / American system.<br/>I enclose photocopies of my certificates with English translations.<br/>Four weeks&apos; work experience at a leading software house. <br/>Summer internship at a marketing firm.</i></span><br><span class="text-primary-emphasis fw-bold f_normal">Personal Qualities</span><br><span><i>Team player<br>Work well as part of a team<br>Work well under pressure<br>Able to meet deadlines<br>Welcome new challenges<br>Can-do attitude </i></span><br></p>';
+writer_content['cv_use_appropriate'] = '<p><span class="text-primary-emphasis fw-bold">Skills</span><br><span><i>Native French speaker<br>Near-native command of English<br>Good spoken and written German<br>Computer literate<br>Familiar with HTML<br>Experienced trainer and facilitator</span><br><span class="text-primary-emphasis fw-bold fw-normal">Education and experience</span><br><span><i>Baccalaur&#233;at s&#233;rie C (equivalent of A levels in Maths and Physics)<br/>The qualifications described below do not have exact equivalents in the British / American system.<br/>I enclose photocopies of my certificates with English translations.<br/>Four weeks&apos; work experience at a leading software house. <br/>Summer internship at a marketing firm.</i></span><br><span class="text-primary-emphasis fw-bold fw-normal">Personal Qualities</span><br><span><i>Team player<br>Work well as part of a team<br>Work well under pressure<br>Able to meet deadlines<br>Welcome new challenges<br>Can-do attitude </i></span><br></p>';
 
 writer_content['datagraphs_ask_yourself'] = '<span>What is the information about?<br>What do the numbers on each axis represent?<br>What changes do the lines show?<br>How do the lines stand in relation to each other?<br>Which feature of the lines stands out most?<br>What conclusions can be drawn from the graph?</span><br></p>';
 
-writer_content['datagraphs_developments'] = '<span><i>a <span class="f_normal">small / slight</span> / <span class="f_normal">gradual</span> increase / decrease<br>a <span class="f_normal">significant / marked / dramatic</span> increase / decrease<br>a <span class="f_normal">small / slight</span> rise / fall / dip<br>steady growth<br>to rise / increase / fall / decrease / decline / drop (by 5%)<br>to rise / fall <span class="f_normal">steadily / dramatically / sharply / rapidly</span><br>Customer numbers have fluctuated.<br>(Online sales) reached an all-time high / low.<br>The graph shows a marked change in...</span></p>';
+writer_content['datagraphs_developments'] = '<span><i>a <span class="fw-normal">small / slight</span> / <span class="fw-normal">gradual</span> increase / decrease<br>a <span class="fw-normal">significant / marked / dramatic</span> increase / decrease<br>a <span class="fw-normal">small / slight</span> rise / fall / dip<br>steady growth<br>to rise / increase / fall / decrease / decline / drop (by 5%)<br>to rise / fall <span class="fw-normal">steadily / dramatically / sharply / rapidly</span><br>Customer numbers have fluctuated.<br>(Online sales) reached an all-time high / low.<br>The graph shows a marked change in...</span></p>';
 
 writer_content['datagraphs_general_trends'] = '<span><i>The graph shows / represents / indicates...<br>The figures show / indicate (that)...<br>From the graph it can be seen that...<br>The following conclusions can be drawn from the data:<br>The main trend seen in the data is that...<br>The main trend is upwards / downwards.</i></span><br></p>';
 writer_content['datapiecharts_differences'] = '<span><i>There were almost twice / three times / half as many... as...<br/>Far / slightly / 20% fewer X... than Y...<br/>Many / far / a few / 20% more X... than Y...<br/>A greater proportion of ... than of...<br/>20% of women..., while only 10% of men...<br/>80% of (adults send emails), compared to 34% (who prefer texts).</i></span></p>';
 
 writer_content['datapiecharts_gen_features'] = '<span><i>The chart shows / represents / indicates...<br>The figures show / indicate (that)...<br>From the chart it can be seen that...<br>The following conclusions can be drawn from the data:</i></span></p>';
 
-writer_content['datapiecharts_proportions'] = '<span><i>More / Less than half of the total...<br>Only a third / a quarter...<br>Just / slightly under / over 50%...<br> The biggest / smallest proportion / sector...<br>The vast majority of...<br>X and Y are <span class="f_normal">roughly / approximately</span> equal.<br>As many (people were learning French) as (Spanish).</i></span></p>';
+writer_content['datapiecharts_proportions'] = '<span><i>More / Less than half of the total...<br>Only a third / a quarter...<br>Just / slightly under / over 50%...<br> The biggest / smallest proportion / sector...<br>The vast majority of...<br>X and Y are <span class="fw-normal">roughly / approximately</span> equal.<br>As many (people were learning French) as (Spanish).</i></span></p>';
 
 writer_content['let_complaint_appropriate'] = '<p><span class="text-primary-emphasis fw-bold">Introducing the topic</span><br><i>I am writing to complain about / to express my dissatisfaction with...<br/>The purpose of this letter is to express my disappointment with...</i><br><span class="text-primary-emphasis fw-bold">Describing the problem</span><br>Strong adjectives: <i>appalled, distressed, disgusted, shocked</i><br>Less strong: </i><i>disappointed, dismayed, dissatisfied</i><br><span class="text-primary-emphasis fw-bold">What do you want?</span><br>Definite:<i> a full / partial refund, a replacement,an apology</i><br>More flexible:<i> compensation, reimbursement, recompense</i><br><span class="text-primary-emphasis fw-bold">Endings<br/></span><i>I look forward to your swift reply.<br>I look forward to hearing from you at your earliest convenience. <br/>I look forward to hearing from you without delay.<br/>I very much hope to hear from you shortly.<br>I await your prompt reply.</i></p>';
 
@@ -636,7 +306,7 @@ writer_content['presentations_prep_vis_aid'] = '<p><ul class="circle_li mx-4"><l
 
 writer_content['reports_ask_yourself'] = '<span>You need to make the objective of the report clear so that people who are reading it know why they are reading. Thinking about the readers and what they need to know will help improve your report.</span><ul class="circle_li mx-4"><li>Is the purpose of the report clear throughout?</li><li> Can the readers find the information they need?</li><li> Will diagrams or tables make the information clearer?</li><li> Should I just present the facts or include recommendations as well?</li></ul></p>';
 
-writer_content['reports_lang_to_give_conc'] = '<p><span class="text-primary-emphasis fw-bold">Giving Conclusions</span><br><i>In conclusion...<br>The research shows / demonstrates that...<br>The research shows / demonstrates  <span class="f_normal">+ noun</span>  (e.g. the effect of...)<br>From the research / From the evidence we conclude that...</i><br><span class="text-primary-emphasis fw-bold">Giving recommendations</span><br><i>We recommend that...<br>It is recommended that...<br>The best solution is / would be to... (e.g. adopt design A)<br>The best solution is /would be  <span class="f_normal">+ noun</span> (e.g. a reduction in office hours)<br>If we do A, we will see B.<br>This will have an impact on <span class="f_normal">+ noun</span> (e.g. costs /productivity / the business)</i></p>';
+writer_content['reports_lang_to_give_conc'] = '<p><span class="text-primary-emphasis fw-bold">Giving Conclusions</span><br><i>In conclusion...<br>The research shows / demonstrates that...<br>The research shows / demonstrates  <span class="fw-normal">+ noun</span>  (e.g. the effect of...)<br>From the research / From the evidence we conclude that...</i><br><span class="text-primary-emphasis fw-bold">Giving recommendations</span><br><i>We recommend that...<br>It is recommended that...<br>The best solution is / would be to... (e.g. adopt design A)<br>The best solution is /would be  <span class="fw-normal">+ noun</span> (e.g. a reduction in office hours)<br>If we do A, we will see B.<br>This will have an impact on <span class="fw-normal">+ noun</span> (e.g. costs /productivity / the business)</i></p>';
 writer_content['reports_lang_to_outline'] = '<p><span class="text-primary-emphasis fw-bold">Outlining research</span><br><i>We asked (two developers) to...<br>We conducted our research by... (asking a group of...)<br>We examined / looked at / researched... (the problem / the cost / several companies) <br/>We surveyed... (a total of 250 employees)<br>We compared A and B.<br>The group was made up of...</i><br><span class="text-primary-emphasis fw-bold">Presenting findings</span><br><i>We found that, on the whole, ...<br>According to the majority of respondents...<br>Overall people preferred...<br>50% of those surveyed said (that)...<br></i></p>';
 writer_content['reports_lang_to_state'] = '<p><i>The purpose / aim / objective of this report is to...</i><br/><i>This report aims to...</i></br><i>This report presents / gives information on...</i></p>';
 writer_content['review_think_about'] = '<p style="margin:0;">Your review should try to answer the questions a reader might have:</br><span class="text-primary-emphasis fw-bold">Fiction</span><ul class="circle_li mx-4"><li>What kind of book is it?</li><li>What happens in the story?</li><li>Who are the main characters?</li><li>What is the main theme of the book?</li><li>Is it well written?</li><li>Would you recommend this book?</li></ul><span class="text-primary-emphasis fw-bold">Non-fiction</span><ul class="circle_li mx-4"><li>What is the author&apos;s reason for writing the book?</li><li>Is it well organized? Can you follow the argument easily and find the important  information?</li><li>Does the author support his / her findings well?</li><li>How does it compare to other books on the same subject?</li></ul></p>';
