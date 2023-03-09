@@ -899,90 +899,6 @@ function Controller() {
                     });
                 }
                 showProj();
-                
-                /*
-                 var formURL = 'database.php?fetchmodel';
-                 $.ajax(
-                 {
-                 url: formURL,
-                 type: "POST",
-                 data: postData,
-                 success: function(data, textStatus, jqXHR)
-                 {
-                 if (data == '0') {
-
-                 } else {
-                 head_html += data;
-                 }
-                 $('.second_page_body_right').show().empty().html(head_html);
-                 $('.second_page_body_right .delete_project').unbind(event_type).bind(event_type, function(e2) {
-                 e2.preventDefault();
-                 //alert('delete pressed');
-
-
-                 var delete_id = $(this).attr('data-key');
-                 var temp_this = this;
-
-
-                 //var r = confirm("Are you sure you want to delete this project?");
-
-                 $('.white_content').remove();
-                 var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Are you sure you want to delete this project?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
-                 $('.main_wrapper').append(temp_pop);
-                 $('.white_content').show();
-
-                 $('.ok_btn_pop').off(event_type).on(event_type, function() {
-                 $('.white_content').hide();
-
-                 var formURL = 'database.php?delete';
-                 var postData = {'id': delete_id};
-                 $.ajax(
-                 {
-                 url: formURL,
-                 type: "POST",
-                 data: postData,
-                 success: function(data, textStatus, jqXHR)
-                 {
-                 if (data == '0') {
-                 alert('Please  try again');
-                 } else {
-                 $(temp_this).prev().remove();
-                 $(temp_this).remove();
-                 }
-                 },
-                 error: function(jqXHR, textStatus, errorThrown)
-                 {
-                 //if fails
-                 alert('Please  try again');
-                 }
-                 }
-                 );
-
-                 });
-                 $('.can_btn_pop').off(event_type).on(event_type, function() {
-                 $('.white_content').hide();
-                 });
-
-
-
-                 return false;
-                 });
-                 $('.create_project').off().on(event_type, function(e3) {
-                 if ($(this).attr('data-type') == 'create') {
-                 _this.current_pro_name = '';
-                 } else {
-                 _this.current_pro_name = $(this).attr('data-project');
-                 }
-                 _this.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
-                 });
-                 },
-                 error: function(jqXHR, textStatus, errorThrown)
-                 {
-                 //if fails
-
-                 }
-                 }
-                 );*/
             });
         });
     };
@@ -1237,32 +1153,6 @@ function Controller() {
                 }
             }
             loadProj();
-            
-            /*var postData = {'data-key': _this.current_key, 'project_name': data_project};
-             var formURL = 'database.php?fetch';
-             $.ajax(
-             {
-             url: formURL,
-             type: "POST",
-             data: postData,
-             //dataType: "xml",
-             success: function(data, textStatus, jqXHR)
-             {
-             if (data == '0') {
-
-             } else {
-             //xml_dom = data;
-             $('.save_pro').attr('data-project-name', data_project);
-             _this.load_save_project(_this.StringToXML(data));
-             }
-             },
-             error: function(jqXHR, textStatus, errorThrown)
-             {
-             //if fails
-             alert('Please try again');
-             }
-             }
-             );*/
         }
 
 
@@ -1623,61 +1513,6 @@ function Controller() {
                         }
                 }
                 allProj();
-                
-                /*var formURL = 'database.php?fetch_project';
-                 $.ajax(
-                 {
-                 url: formURL,
-                 type: "POST",
-                 data: postData,
-                 success: function(data, textStatus, jqXHR)
-                 {
-                 if (data == '0') {
-                 //alert('no projects found');
-                 $('.prolist_load').empty();
-                 $('.load_pop_d').hide();
-                 } else {
-                 $('.prolist_load').empty().html(data);
-                 $('.load_pop_d').show().css('right', '105%').css('top', '0px');
-                 $('.tool_down_arrow_wrp li,.tool_wrapper li').mouseout(function() {
-                 if (!$(this).hasClass('load_pro')) {
-                 $('.load_pop_d').hide();
-                 }
-                 });
-
-                 $('.prolist_load li').off(event_type).on(event_type, function() {
-                 if (_this.show_popup) {
-                 $('.white_content').remove();
-                 var temp_pop = '<div class="white_content"><div class="h-100 d-flex justify-content-center align-items-center"><div class="modal-backdrop fade show" style="z-index: 0"></div><div class="alert alert-warning alert-dismissible fade show" role="alert"> <h4 class="alert-heading"><span class="alertMsg">Confirm leave?</span></h4> <button type="button" class="btn-close can_btn_pop" data-bs-dismiss="alert" aria-label="Close"></button><p>You have unsaved changes. Do you still want to leave?</p><button type="button" class="btn btn-outline-primary ok_btn_pop">Yes</button> <button type="button" class="btn btn-outline-primary can_btn_pop" data-bs-dismiss="alert">No</button> </div> </div></div>';
-                 $('.main_wrapper').append(temp_pop);
-                 $('.white_content').show();
-
-                 $('.ok_btn_pop').off(event_type).on(event_type, function() {
-                 $('.load_pop_d').hide();
-                 _this.show_popup = false;
-                 _this.current_pro_name = $(this).attr('data-project');
-                 iWriter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
-                 });
-                 $('.can_btn_pop').off(event_type).on(event_type, function() {
-                 $('.white_content').hide();
-                 });
-                 } else {
-                 $('.load_pop_d').hide();
-                 _this.show_popup = false;
-                 _this.current_pro_name = $(this).attr('data-project');
-                 iWriter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
-                 }
-                 });
-                 }
-                 },
-                 error: function(jqXHR, textStatus, errorThrown)
-                 {
-                 //if fails
-                 alert('Please try again');
-                 }
-                 }
-                 );*/
-                //end ajax
             } else {
                 if ($('.prolist_load').html() != '') {
                     $('.load_pop_d').show();
@@ -1885,40 +1720,6 @@ function Controller() {
                             }
                         }
                         saveProj();
-                        
-                        /*var formURL = 'database.php?add';
-                         $.ajax(
-                         {
-                         url: formURL,
-                         type: "POST",
-                         data: postData,
-                         success: function(data, textStatus, jqXHR)
-                         {
-                         if (data == '1') {
-                         _this.save_type = 'save';
-                         $('.save_pro').attr('data-project-name', project_name);
-                         //alert('Project created successfully');
-                         $('.save_pop_1').hide();
-                         $('.save_pop_2').show();
-                         $('.pop_msg_d').text('New project created!');
-                         $('.err').text('');
-                         _this.show_popup = false;
-                         _this.current_pro_name = project_name;
-                         } else {
-                         if (data == '00') {
-                         $('.err').text('This file already exists. Do you want to replace it?');
-                         } else {
-                         alert('Please try again');
-                         }
-                         }
-                         },
-                         error: function(jqXHR, textStatus, errorThrown)
-                         {
-                         //if fails
-                         alert('Please try again');
-                         }
-                         }
-                         );*/
                     } else {
                         $('.err').text('Project name cannot be blank. Please enter project name.');
                     }
@@ -1971,41 +1772,6 @@ function Controller() {
                         $('.save_pop_d').show().css('right', '0px').css('top', '0px');
                         $('.arrowp_box').addClass('remove_arrow');
                     }
-                    
-                    /*var formURL = 'database.php?update';
-                     $.ajax(
-                     {
-                     url: formURL,
-                     type: "POST",
-                     data: postData,
-                     success: function(data, textStatus, jqXHR)
-                     {
-                     if (data == '1') {
-                     //alert('Project updated successfully');
-                     $('.save_pop_d').show().css('right', '105%').css('top', '0px');
-                     $('.save_pop_1').hide();
-                     $('.save_pop_2').show();
-                     $('.pop_msg_d').text('Project updated successfully');
-                     $('.err').text('');
-
-                     _this.show_popup = false;
-                     _this.current_pro_name = $('.save_pro').attr('data-project-name');
-                     } else {
-                     //alert('Please try again');
-                     $('.save_pop_d').show().css('right', '105%').css('top', '0px');
-                     $('.save_pop_1').hide();
-                     $('.save_pop_2').show();
-                     $('.pop_msg_d').text('Please try again');
-                     $('.err').text('');
-                     }
-                     },
-                     error: function(jqXHR, textStatus, errorThrown)
-                     {
-                     //if fails
-                     alert('Please try again');
-                     }
-                     }
-                     );*/
                 }
             }
             if ($('.err').hasClass('overWrite_flag')) {
@@ -2064,40 +1830,6 @@ function Controller() {
                         temp_p.$('.arrowp_box').addClass('remove_arrow');
                     }
                     $('.err').removeClass('overWrite_flag');
-                    
-                /*$.ajax(
-                 {
-                 url: formURL,
-                 type: "POST",
-                 data: postData,
-                 success: function(data, textStatus, jqXHR)
-                 {
-                 if (data == '1') {
-                 temp_p.find('.save_pop_d').show().css('right', '105%').css('top', '0px');
-                 temp_p.find('.save_pop_1').hide();
-                 temp_p.find('.save_pop_2').show();
-                 temp_p.find('.pop_msg_d').text('Project updated successfully');
-                 temp_p.find('.err').text('');
-                 _this.save_type = 'save';
-                 $('.save_pro').attr('data-project-name', project_name);
-                 _this.show_popup = false;
-                 _this.current_pro_name = project_name;
-                 } else {
-                 //alert('Please try again');
-                 temp_p.find('.save_pop_d').show().css('right', '105%').css('top', '0px');
-                 temp_p.find('.save_pop_1').hide();
-                 temp_p.find('.save_pop_2').show();
-                 temp_p.find('.pop_msg_d').text('Please try again');
-                 temp_p.find('.err').text('');
-                 }
-                 },
-                 error: function(jqXHR, textStatus, errorThrown)
-                 {
-                 //if fails
-                 alert('Please try again');
-                 }
-                 }
-                 );*/
             }
             load_status = true;
         });
@@ -2294,27 +2026,6 @@ function Controller() {
             }
         });
         $('.models_header').html(top_header_html);
-        setTimeout(function() {
-            var append_look_up = '';
-            $('.models_header').each(function() {
-                if ($(this).is(":visible")) {
-                    var len = $(this).children('p').length;
-                    $(this).children('p').each(function(index) {
-                        if (index >= (len - 3)) {
-                            $(this).addClass('look_up');
-                            if (index == (len - 3)) {
-                                $('.look_click').remove();
-                                $(this).before('<div class="look_click">Dictionary Look-up</div>')
-                            }
-                        }
-                    });
-                }
-            });
-            $('.look_up').show();
-            $('.look_click').unbind('click').bind('click', function() {
-                $('.look_up').toggle();
-            });
-        }, 1000);
 
         var show_top_head = true;
         //$('.str_common:visible').each(function() {
@@ -2380,51 +2091,7 @@ function Controller() {
             awl_status = !(awl_status);
         });
         
-
-    };
-    this.sendToSocket = function(_msg) {
-        if (_msg != '') {
-            var net = require('net');
-
-            var HOST = '127.0.0.1';
-            var PORT = 8888;
-
-            var client = new net.Socket();
-
-            client.connect(PORT, HOST, function() {
-                //alert('CONNECTED TO: ' + HOST + ':' + PORT);
-                // Write a message to the socket as soon as the client is connected, the server will receive it as message from the client
-                client.write(_msg);
-                client.destroy();
-            });
-
-            /*var formURL = 'socket.php';
-             $.ajax(
-             {
-             url: formURL,
-             type: "POST",
-             data: {'msg': _msg},
-             success: function(data, textStatus, jqXHR)
-             {
-             console.log(data);
-             },
-             error: function(jqXHR, textStatus, errorThrown)
-             {
-             //if fails
-             alert('Please try again');
-             }
-             }
-             );*/
-        }
-    };
-    this.db_clk = function() {
-        $('.models_page_body_right').unbind('dblclick').bind('dblclick', function() {
-            var sel = (this.selection && this.selection.createRange().text) || (window.getSelection && window.getSelection().toString());
-            if (sel.trim() != '') {
-                _this.sendToSocket(sel);
-            }
-        });
-    };
+    }
 }
 
 function call_pop() {
