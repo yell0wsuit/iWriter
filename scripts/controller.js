@@ -2498,7 +2498,7 @@ addEventListener("DOMContentLoaded", (event) => {
 
 $(function () {
     $('body').popover({
-        selector: '[data-bs-toggle=popover]',
-        trigger: 'focus'
+        selector: '[data-bs-toggle="popover"]',
+        trigger: 'hover focus'
     })
 })
