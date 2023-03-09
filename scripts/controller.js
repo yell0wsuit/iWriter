@@ -2429,11 +2429,7 @@ function Controller() {
 
 function call_pop() {
     var pops = $('.white_content');
-    pops.css('top', '50%').css('left', '50%').css('position', 'fixed');
-    var w_h = pops.height() / 2;
-    var w_w = pops.width() / 2;
-    pops.css('margin-top', -w_h + 'px');
-    pops.css('margin-left', -w_w + 'px');
+    pops.css('top', '50%').css('left', '50%').css('margin-top', '-80vh'); //leave alert: center of the screen
 }
 
 function create_xml_dom() {
