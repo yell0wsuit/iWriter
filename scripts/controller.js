@@ -374,7 +374,7 @@ function Controller() {
                         if (typeof ($(this).children('content').attr('eid')) != 'undefined') {
                             temp_con_n = $(this).children('content').attr('eid').split('_');
                             if (typeof ($(this).children('content').attr('image')) != 'undefined') {
-                                xml_img = '<div class="xml_img_wrp"><img src="' + _this.xml_img_path + '/' + $(this).children('content').attr('image') + '"/></div>';
+                                xml_img = '<img class="img-fluid mb-2 mx-auto d-block" src="' + _this.xml_img_path + '/' + $(this).children('content').attr('image') + '"/>';
                             }
                         }
                         if (typeof ($(this).children('notes').attr('eid')) != 'undefined') {
@@ -616,7 +616,7 @@ function Controller() {
                 if ($(this).find('content').length != 0) {
 
                     if (typeof ($(this).children('content').attr('image')) != 'undefined') {
-                        xml_img = '<div class="xml_img_wrp"><img src="' + _this.xml_img_path + '/' + $(this).children('content').attr('image') + '"/></div>';
+                        xml_img = '<img class="img-fluid mb-2 mx-auto d-block" src="' + _this.xml_img_path + '/' + $(this).children('content').attr('image') + '"/>';
                     }
 
 
