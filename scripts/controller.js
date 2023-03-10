@@ -240,7 +240,7 @@ function Controller() {
             $(this).children('.tick_mark').removeClass('_selected');
         });
         $('.models_page_left_panel').html(m_name);
-        $('.models_page_body .left_wrapper').empty().html('<div class="steps_title"><p>Guided tour of the model</p><p>Take a step-by-step tour of how the model was written</p></div><ul class="medels_steps list-group list-group-flush"></ul>');
+        $('.models_page_body .left_wrapper').empty().html('<div class="steps_title"><p>Guided tour of the model</p><p>Take a step-by-step tour of how the model was written</p></div><div class="medels_steps list-group list-group-flush"></div>');
         $('.models_page_body_left .medels_steps').empty();
         $('.models_header').empty();
         $('.models_content').empty();
@@ -281,10 +281,10 @@ function Controller() {
         //end check for filter
 
         $(_this.project_xml_data[_this.current_key]['xml_data']).find('step').each(function() {
-            guided_html = guided_html + '<li data-key="' + _this.current_key + '" data-para_ids="' + $(this).attr('para_ids') + '" class="list-group-item"><span data-key="' + _this.current_key + '" data-para_ids="' + $(this).attr('para_ids') + '" data-bs-dismiss="offcanvas">' + $(this).attr('label') + '</span></li>';
+            guided_html = guided_html + '<button data-bs-dismiss="offcanvas" data-key="' + _this.current_key + '" data-para_ids="' + $(this).attr('para_ids') + '" class="list-group-item list-group-item-action"><span data-key="' + _this.current_key + '" data-para_ids="' + $(this).attr('para_ids') + '">' + $(this).attr('label') + '</span></button>';
         });
         $('.models_page_body_left .medels_steps').append(guided_html);
-        $('.models_page_body_left .medels_steps li').on('click', function() {
+        $('.models_page_body_left .medels_steps button').on('click', function() {
 
             var scroll_pos = $('.main_wrapper').position();
             $(window).scrollTop(scroll_pos.top);
@@ -293,13 +293,9 @@ function Controller() {
             $('.str_common').each(function() {
                 $(this).children('.tick_mark').removeClass('_selected');
             });
-            $('.medels_steps li').removeAttr('style');
-            $('.models_page_body_left .medels_steps li').css('background-color', 'rgba(0, 0, 0, 0)');
-            //if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-             //   $(this).css('background-color', '#3f51b5');
-            //} else {
-                $(this).css('background-color', 'var(--bs-primary)').css('color','white');
-            //}
+            //$('.medels_steps li').removeAttr('style');
+            $('.models_page_body_left .medels_steps button').removeClass('active');
+            $(this).addClass('active');
             /*var left_pos = $('.models_page_body_left').position();
             if (Number(left_pos.left) == 0) {
                 if ($(window).width() <= 480) {
@@ -567,7 +563,7 @@ function Controller() {
         //$('.show_all').children('.tick_mark').addClass('_selected');
         $('.str_common').off(event_type).on(event_type, function() {
 
-            $('.medels_steps li').removeAttr('style');
+            $('.medels_steps button').removeClass('active');
             _this.reset_drop();
             if ($(this).hasClass('show_all')) {
                 if ($(this).children('.tick_mark').hasClass('_selected')) {
