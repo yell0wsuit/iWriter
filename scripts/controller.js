@@ -255,6 +255,8 @@ function Controller() {
         if ($(window).width() <= 768) {
             if (_this.project_short_name != '') {
                 $('.models_page_left_panel').html(_this.project_short_name);
+            } else {
+                $('.models_page_left_panel').parents('.navbar-brand').addClass('w-25');
             }
         }
 
@@ -744,9 +746,9 @@ function Controller() {
         //$('.left_menu').show();
         $('.second_page_body_left').css('left', '0');
         $(wrapper).empty().append(project_html);
-        $('.second_page_top h1').html('Choose the type of writing you want to do');
+        $('#modelnavbar').html('Choose the type of writing you want to do');
         if (Number($(window).width()) <= 480) {
-            $('.second_page_top h1').text('Choose a model');
+            $('#modelnavbar').text('Choose a model');
         }
 
         $(".info_ic").each(function(index, element) {
@@ -790,7 +792,6 @@ function Controller() {
                 $(window).scrollTop(scroll_pos.top);
                 //for device
                 e1.preventDefault();
-                $('.tool_wrapper,.down_arrow_wrapper').hide();
                 //var left_pos = $('.second_page_body_left').position();
                 $('.second_page_body').scrollTop(0);
                 $('.second_page_body_left').stop();
@@ -986,7 +987,6 @@ function Controller() {
         function hide_elem() {
             $('.common_page').hide();
             $('.second_page').show();
-            $('.tool_wrapper,.down_arrow_wrapper').hide();
             $('.second_page_body_right').hide();
             $('.second_page_body_left').css('left', '0');
         }
@@ -1079,6 +1079,8 @@ function Controller() {
         if ($(window).width() <= 768) {
             if (_this.project_short_name != '') {
                 $('.models_page_left_panel').html(_this.project_short_name);
+            } else {
+                $('.models_page_left_panel').parents('.navbar-brand').addClass('w-25');
             }
         }
 
@@ -1943,7 +1945,6 @@ function Controller() {
     this.reset_drop = function() {
         setTimeout(function() {
             $('.white_content').hide();
-            $('.tool_down_arrow_wrp,.down_arrow_wrapper,.tool_wrapper').hide();
         });
     };
     this.writer_btns = function(element) {
