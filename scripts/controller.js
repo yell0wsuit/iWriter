@@ -18,7 +18,7 @@ function Controller() {
     this.para_ids = new Array();
     this.event_type = 'click';
     this.config_msg;
-    this.xml_img_path = 'images/mitr/xml/';
+    this.xml_img_path = 'images/mitr/xml';
     this.project_short_name = "";
     this.current_tool = '';
     this.show_popup = false;
