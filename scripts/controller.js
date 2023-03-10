@@ -1603,8 +1603,10 @@ function Controller() {
         $('.can_btn,.ok_btn_common').off(event_type).on(event_type, function() {
             $('.saveas_pop_d').hide();
             $('.save_pop_d').hide();
-            $('.save_pop_1').show();
-            $('.save_pop_2').hide();
+            if ('ontouchstart' in window == !1) {
+                $('.save_pop_1').show();
+                $('.save_pop_2').hide();
+            }
             $('.project_name').val('');
             $('.err').text('');
             $('.err').removeClass('overWrite_flag');
