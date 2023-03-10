@@ -1311,7 +1311,7 @@ function Controller() {
 
         //left side content
         var checklist_cnt = 0;
-        var top_html_ck = '<div class="mt-2 check_content card"><div class="card-header check_top fw-semibold d-flex justify-content-between"><span>Use formal and impersonal language.</span><button type="button" class="btn-close close-check-top" aria-label="Close"></button></div><div class="card-body check_con"></div></div>';
+        var top_html_ck = '<div class="check_content card"><div class="card-header check_top fw-semibold d-flex justify-content-between"><span class="text-truncate me-2">Use formal and impersonal language.</span><button type="button" class="btn-close close-check-top" aria-label="Close"></button></div><div class="card-body check_con"></div></div>';
         //top_html_ck += '<div class="checklist_wrp" ><ul class="checklist_ul">';
         top_html_ck += '<div class="checklist_wrp accordion accordion-flush" id="checkListAccordion"><div class="steps_title"><p>Checklists</p></div>';
         var statis_menu = new Array();
