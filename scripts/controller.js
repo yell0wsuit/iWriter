@@ -348,13 +348,16 @@ function Controller() {
                     if ($(this).attr('label') == $(parent_0).children('span').text()) {
                         $(this).children().find('para').each(function(index) {
                             top_para[index] = $(this).text();
-                            top_para_content = top_para_content + '<p>' + $(this).text();
+                            top_para_content = top_para_content;
                             if ($(this).attr('showme')) {
                                 //top_para_content = top_para_content + '<div data-showme="' + $(this).attr('showme') + '"class="show_me_btn"></div>';
-                                top_para_content = top_para_content + ' ' + '<input class="show_me_btn form-check-input" data-color="' + bscolors[colors_cnt] + '" data-showme="' + $(this).attr('showme') + '" type="checkbox" name="showme">';
+                                top_para_content = top_para_content + '<div class="form-check"><input class="show_me_btn form-check-input" data-color="' + bscolors[colors_cnt] + '" data-showme="' + $(this).attr('showme') + '" type="checkbox" name="showme" id="'+ $(this).text().replace(/\s/g,'').substr(0,20) +'"><label class="form-check-label" for="'+ $(this).text().replace(/\s/g,'').substr(0,20) +'">' + $(this).text() + '</label></div>';
                                 colors_cnt++;
+                                
+                            } else {
+                                top_para_content = '<p>' + $(this).text() + '</p>';
                             }
-                            top_para_content = top_para_content + '</p>';
+                            //top_para_content = top_para_content + '</p>';
                         });
                         $('.models_header').html(top_para_content);
                     }
@@ -510,26 +513,28 @@ function Controller() {
                 body_content = body_content.replace(/ <\/span> /g, "</span> ");
                 body_content = body_content.replace(/<\/span>\.\./g, "</span>.");
                 $('.models_content').html(body_content);
-                //_this.db_clk();
                 $('.show_me_btn').on('change', function(e) {
                     _this.reset_drop();
                     //$('.content_box span').removeAttr('class');
                     var show_ids = $(this).attr('data-showme').toString().split(',');
                     var color_code = $(this).attr('data-color');
                     if (this.checked) {
+                        $(this).parent().find('.form-check-label').addClass(color_code); //Highlight the text next to checkbox
+                        $(this).addClass(color_code); //Change the checkbox bg color
                         for (var i = 0; i < show_ids.length; i++) {
                             show_ids[i] = show_ids[i].split('_');
                             show_ids[i] = show_ids[i][show_ids[i].length - 1];
                             $('.content_box span').each(function() {
                                 var con_id = $(this).attr('eid').split('_');
                                 if (con_id[con_id.length - 1] == show_ids[i]) {
-                                    $(this).addClass('highlight_txt');
                                     //$(this).css({'background-color': color_code, 'color': 'black'});
                                     $(this).addClass(color_code);
                                 }
                             });
                         }
                     } else {
+                        $(this).parent().find('.form-check-label').removeClass(color_code); //Remove bg color
+                        $(this).removeClass(color_code);
                         for (var i = 0; i < show_ids.length; i++) {
                             show_ids[i] = show_ids[i].split('_');
                             show_ids[i] = show_ids[i][show_ids[i].length - 1];
