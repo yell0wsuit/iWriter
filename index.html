@@ -263,24 +263,24 @@
                                                 <p>Choose what to show</p>
                                                 <p>Explore the model by showing and hiding different elements</p>
                                             </div>
-                                            <div class="structure_elements">
-                                                <div class="show_structre str_common" data-bs-dismiss="offcanvas">
-                                                    <span>Show structure</span>
-                                                    <div class="tick_mark"></div>
-                                                </div>
-                                                <div class="show_notes str_common" data-bs-dismiss="offcanvas">
-                                                    <span>Show notes</span>
-                                                    <div class="tick_mark"></div>
-                                                </div>
-                                                <div class="show_content str_common" data-bs-dismiss="offcanvas">
-                                                    <span>Show content</span>
-                                                    <div class="tick_mark"></div>
-                                                </div>
-                                                <div class="show_all str_common" data-bs-dismiss="offcanvas">
-                                                    <span>Show all</span>
-                                                    <div class="tick_mark"></div>
-                                                </div>
-                                            </div>
+                                            <ul class="structure_elements list-group">
+                                              <li class="list-group-item bg-danger-subtle str_common">
+                                                <input class="form-check-input me-1 checkOrNot" type="checkbox" value="" id="showStructure">
+                                                <label class="form-check-label fw-semibold stretched-link text-danger-emphasis" for="showStructure">Show structure</label>
+                                              </li>
+                                              <li class="list-group-item bg-success-subtle str_common show_Notes">
+                                                <input class="form-check-input me-1 checkOrNot" type="checkbox" value="" id="showNotes">
+                                                <label class="form-check-label fw-semibold stretched-link text-success-emphasis" for="showNotes">Show notes</label>
+                                              </li>
+                                              <li class="list-group-item bg-primary-subtle str_common show_Content">
+                                                <input class="form-check-input me-1 checkOrNot" type="checkbox" value="" id="showContent">
+                                                <label class="form-check-label fw-semibold stretched-link text-primary-emphasis" for="showContent">Show content</label>
+                                              </li>
+                                              <li class="list-group-item bg-secondary-subtle str_common">
+                                                <input class="form-check-input me-1 checkOrNot" type="checkbox" value="" id="showAll">
+                                                <label class="form-check-label fw-semibold stretched-link text-secondary-emphasis" for="showAll">Show all</label>
+                                              </li>
+                                            </ul>
                                         </div>
                                     </div>
                                   </div>

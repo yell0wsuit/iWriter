@@ -227,17 +227,9 @@ function Controller() {
         $('.common_page').hide();
         $('.info_text').hide();
         $('.models_page').show();
-        //$('.left_menu').show();
-        /*$('.models_page_body_left').css('left', 0);
-        if ($(window).width() <= 480) {
-            var left_pos = $('.models_page_body_left').position();
-            if (Number(left_pos.left) == 0) {
-                //$('.models_page_body').css('overflow', 'hidden');
-            }
-        }*/
 
         $('.str_common').each(function() {
-            $(this).children('.tick_mark').removeClass('_selected');
+            $(this).children('.checkOrNot').prop('checked', false);
         });
         $('.models_page_left_panel').html(m_name);
         $('.models_page_body .left_wrapper').empty().html('<div class="steps_title"><p>Guided tour of the model</p><p>Take a step-by-step tour of how the model was written</p></div><div class="medels_steps list-group list-group-flush"></div>');
@@ -273,10 +265,12 @@ function Controller() {
             });
         });
         if (!notes_status) {
-            $('.show_notes').hide();
+            //$('.show_notes').hide();
+            $('.show_Notes').hide();
         }
         if (!content_status) {
-            $('.show_content').hide();
+            //$('.show_content').hide();
+            $('.show_Content').hide();
         }
         //end check for filter
 
@@ -291,23 +285,11 @@ function Controller() {
 
             _this.reset_drop();
             $('.str_common').each(function() {
-                $(this).children('.tick_mark').removeClass('_selected');
+                $(this).children('.checkOrNot').prop('checked', false);
             });
-            //$('.medels_steps li').removeAttr('style');
+
             $('.models_page_body_left .medels_steps button').removeClass('active');
             $(this).addClass('active');
-            /*var left_pos = $('.models_page_body_left').position();
-            if (Number(left_pos.left) == 0) {
-                if ($(window).width() <= 480) {
-                    $('.models_page_body_left').animate({'left': '-100%'});
-                    $('.left_menu').css('background-position', '0px 0px');
-                } else {
-                    $('.models_page_body_left').animate({'left': '-100%'});
-                    $('.left_menu').css('background-position', '0px 0px');
-                }
-            }*/
-            
-
 
             var parent_0 = this;
             var top_para = new Array(); //It contains header info.
@@ -566,34 +548,51 @@ function Controller() {
             _this.para_ids[i] = _this.para_ids[i].trim();
         }
         //$('.show_all').children('.tick_mark').addClass('_selected');
+
         $('.str_common').off(event_type).on(event_type, function() {
 
             $('.medels_steps button').removeClass('active');
             _this.reset_drop();
-            if ($(this).hasClass('show_all')) {
-                if ($(this).children('.tick_mark').hasClass('_selected')) {
+
+            // Show structure: Checkbox version
+            if ($(this).children('#showAll').length > 0) {
+                // "Show all" ticks everything
+                if ($(this).children('#showAll').is(':checked')) {
                     $('.str_common').each(function() {
-                        $(this).children('.tick_mark').removeClass('_selected');
-                    });
+                        $(this).children('.checkOrNot').prop('checked', false);
+                    })
                 } else {
                     $('.str_common').each(function() {
-                        $(this).children('.tick_mark').addClass('_selected');
-                    });
+                        $(this).children('.checkOrNot').prop('checked', true);
+                    })
                 }
             } else {
-
-                $('.show_structre:hidden').children('.tick_mark').addClass('_selected');
-                $('.show_notes:hidden').children('.tick_mark').addClass('_selected');
-                $('.show_content:hidden').children('.tick_mark').addClass('_selected');
-                $('.show_all').children('.tick_mark').removeClass('_selected');
-                if ($(this).children('.tick_mark').hasClass('_selected')) {
-                    $(this).children('.tick_mark').removeClass('_selected');
+                // Allow other structure to be (un)ticked
+                if ($(this).children('.checkOrNot').is(':checked')) {
+                    $(this).children('.checkOrNot').prop('checked', false)
                 } else {
-                    $(this).children('.tick_mark').addClass('_selected');
+                    $(this).children('.checkOrNot').prop('checked', true)
                 }
 
-                if ($('.show_structre').children('.tick_mark').hasClass('_selected') && $('.show_notes').children('.tick_mark').hasClass('_selected') && $('.show_content').children('.tick_mark').hasClass('_selected')) {
-                    $('.show_all').children('.tick_mark').addClass('_selected');
+                // Logic to tick "show all" when ticking one-by-one
+                if ($('.show_Content').is(':hidden') && $('.show_Notes').is(':hidden')) {
+                    if ($('#showStructure').is(':checked')) {
+                        $('#showAll').prop('checked', true)
+                    } else {
+                        $('#showAll').prop('checked', true)
+                    }
+                } else if ($('.show_Notes').is(':hidden')) {
+                    if ($('#showStructure').is(':checked') && $('#showContent').is(':checked')) {
+                        $('#showAll').prop('checked', true)
+                    } else {
+                        $('#showAll').prop('checked', false)
+                    }
+                } else {
+                    if ($('#showStructure').is(':checked') && $('#showNotes').is(':checked') && $('#showContent').is(':checked')) {
+                        $('#showAll').prop('checked', true)
+                    } else {
+                        $('#showAll').prop('checked', false)
+                    }
                 }
             }
 
@@ -649,7 +648,7 @@ function Controller() {
                     }
                 }
                 $('.models_content').removeClass('d-none');
-                if ($('.show_structre').children('.tick_mark').hasClass('_selected') || $('.show_all').children('.tick_mark').hasClass('_selected')) {
+                if ($('#showStructure').is(':checked') || $('#showAll').is(':checked')) {
                     if ($(this).children('name').length != 0 && $(this).children('name').text() != "") {
                         content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
                         content_data += '<p>' + $(this).find('name').text() + '</p>';
@@ -665,8 +664,8 @@ function Controller() {
                         content_data += '</div></div>';
                     }
                 }
-                if ($('.show_notes').is(':visible')) {
-                    if ($('.show_notes').children('.tick_mark').hasClass('_selected') || $('.show_all').children('.tick_mark').hasClass('_selected')) {
+                if ($('.show_Notes').is(':visible')) {
+                    if ($('#showNotes').is(':checked') || $('#showAll').is(':checked')) {
                         if ($(this).children('notes').length != 0 && $(this).children('notes').text() != "" && typeof ($(this).children('notes').attr('dup')) == 'undefined') {
                             content_data += '<div class="content_box"><div class="notes_content text-success-emphasis fst-italic" style="text-align:' + $(this).attr('align') + '">';
                             content_data += notes_html_temp;
@@ -674,8 +673,8 @@ function Controller() {
                         }
                     }
                 }
-                if ($('.show_content').is(':visible')) {
-                    if ($('.show_content').children('.tick_mark').hasClass('_selected') || $('.show_all').children('.tick_mark').hasClass('_selected')) {
+                if ($('.show_Content').is(':visible')) {
+                    if ($('#showContent').is(':checked') || $('#showAll').is(':checked')) {
                         if ($(this).children('content').length != 0 && $(this).children('content').text() != "" && typeof ($(this).children('content').attr('dup')) == 'undefined') {
                             content_data += xml_img;
                             content_data += '<div class="content_box"><div class="content_contents text-primary-emphasis mb-4" style="text-align:' + $(this).attr('align') + '">';
@@ -708,7 +707,6 @@ function Controller() {
 
 
             $('.models_content').html(content_data);
-            //_this.db_clk();
             $('.cont_wrp_box').each(function() {
                 if ($(this).html() == '') {
                     $(this).remove();
@@ -719,7 +717,7 @@ function Controller() {
             $('.models_header').html('<p>' + $(_this.config_msg).find('commentary_help').text() + '</p>');
             var show_top_head = true;
             $('.str_common:visible').each(function() {
-                if ($(this).children('.tick_mark').hasClass('_selected')) {
+                if ($(this).children('.checkOrNot').is(':checked')) {
                     show_top_head = false;
                 }
             });
@@ -730,7 +728,7 @@ function Controller() {
 
         });
         $('.str_common').each(function() {
-            if ($(this).hasClass('show_all')) {
+            if ($(this).children('#showAll').length > 0) {
                 $(this).trigger(event_type);
                 return false;
             }
@@ -793,23 +791,9 @@ function Controller() {
                 $(window).scrollTop(scroll_pos.top);
                 //for device
                 e1.preventDefault();
-                //var left_pos = $('.second_page_body_left').position();
                 $('.second_page_body').scrollTop(0);
                 $('.second_page_body_left').stop();
-                /*if (Number(left_pos.left) == 0) {
-                    if ($(window).width() <= 480) {
-                        $('.second_page_body_left').animate({'left': '-100%'});
-                        $('.left_menu').css('background-position', '0px 0px');
-                    } else {
-                        $('.second_page_body_left').animate({'left': '-100%'});
-                        $('.left_menu').css('background-position', '0px 0px');
-                    }
-                    //$('.models_page_body,.second_page_body,.second_page_body_left,.models_page_body_left').css('overflow-y', 'scroll');
-                } else {
-                    $('.second_page_body_left').animate({'left': '0'});
-                    //$('.second_page_body').css('overflow', 'hidden');
-                    //$('.left_menu').css('background-position', '-5px 0px');
-                } */
+
                 //end for device
 
 
@@ -1052,15 +1036,10 @@ function Controller() {
         $('.common_page').hide();
         $('.info_text').hide();
         $('.models_page').show();
-        if ($(window).width() <= 480) {
-            //var left_pos = $('.models_page_body_left').position();
-            //if (Number(left_pos.left) == 0) {
-                //$('.models_page_body').css('overflow', 'hidden');
-            //}
-        }
 
         $('.str_common').each(function() {
-            $(this).children('.tick_mark').removeClass('_selected');
+            //$(this).children('.tick_mark').removeClass('_selected');
+            $(this).children('.checkOrNot').prop('checked', true);
         });
         $('.models_page_left_panel').html(_this.project_xml_data[data_key]['project_name']);
         console.log(_this.project_xml_data[data_key]['project_name']);
@@ -1100,7 +1079,8 @@ function Controller() {
             $('.show_notes').hide();
         }
         if (!content_status) {
-            $('.show_content').hide();
+            //$('.show_content').hide();
+            $('.show_Content').hide();
         }
         //end check for filter
 
@@ -1108,7 +1088,8 @@ function Controller() {
         $('.str_common').off(event_type).on(event_type, function() {
             _this.writer_btns(this);
         });
-        $('.show_all').trigger(event_type);
+        //$('.show_all').trigger(event_type);
+        $('#showAll').trigger(event_type);
         //right side content
         $('.models_header').empty();
         $('.models_content').empty();
@@ -1195,7 +1176,7 @@ function Controller() {
                 }
             }
 
-            if ($('.show_structre').children('.tick_mark').hasClass('_selected') || $('.show_all').children('.tick_mark').hasClass('_selected')) {
+            if ($('#showStructure').is(':checked') || $('#showAll').is(':checked')) {
                 if ($(this).children('name').length != 0 && $(this).children('name').text() != "") {
                     content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
                     content_data += '<p>' + $(this).find('name').text() + '</p>';
@@ -1219,7 +1200,8 @@ function Controller() {
                     content_data += '</div></div>';
                 }
             }
-            if ($('.show_notes').children('.tick_mark').hasClass('_selected') || $('.show_all').children('.tick_mark').hasClass('_selected')) {
+
+            if ($('#showNotes').is(':checked') || $('#showAll').is(':checked')) {
                 if ($(this).children('notes').length != 0 && typeof ($(this).children('notes').attr('dup')) == 'undefined') {
                     var temp_pl = '';
                     if (typeof ($(this).find('notes').attr('data-val')) != 'undefined') {
@@ -1233,7 +1215,8 @@ function Controller() {
                     content_data += '</div></div>';
                 }
             }
-            if ($('.show_content').children('.tick_mark').hasClass('_selected') || $('.show_all').children('.tick_mark').hasClass('_selected')) {
+
+            if ($('#showContent').is(':checked') || $('#showAll').is(':checked')) {
                 if ($(this).children('content').length != 0 && typeof ($(this).children('content').attr('dup')) == 'undefined') {
                     var temp_pl = '';
                     if (typeof ($(this).find('content').attr('prompt')) != 'undefined') {
@@ -1270,7 +1253,6 @@ function Controller() {
 
         $('.models_content').html(content_data);
         $('.models_content').removeClass('d-none');
-        //_this.db_clk();
         //placeholder functionality
 
         $('.content_contents').keyup(function() {
@@ -1385,27 +1367,7 @@ function Controller() {
         });
         top_html_ck += '</div>'; //end accordion
         $('.left_wrapper').empty().html(top_html_ck);
-        //$('.checkpoints').hide();
-        /*$('.menu_1').off('click').on('click', function(e_p) {
 
-            if (!$(this).hasClass('_select')) {
-                $(this).addClass('_select');
-                $(this).next('.checkpoints').show('blind');
-                $(this).parent('li').css('background-image', 'url("images/mitr/up_a.svg")');
-                var pr_thi = this;
-                $('.menu_1').each(function(e_c) {
-                    if (pr_thi != this) {
-                        $(this).next('.checkpoints').hide('blind');
-                        $(this).removeClass('_select');
-                        $(this).parent('li').css('background-image', 'url("images/mitr/down_a.svg")');
-                    }
-                });
-            } else {
-                $(this).next('.checkpoints').hide('blind');
-                $(this).removeClass('_select');
-                $(this).parent('li').css('background-image', 'url("images/mitr/down_a.svg")');
-            }
-        });*/
         $('.close-check-top').off(event_type).on(event_type, function() {
             $('.check_content').hide();
             $('.checklist_wrp').show();
@@ -1953,47 +1915,62 @@ function Controller() {
     };
     this.writer_btns = function(element) {
         _this.reset_drop();
-        if ($(element).hasClass('show_all')) {
 
-            if ($(element).children('.tick_mark').hasClass('_selected')) {
+        // Show structure: Checkbox version
+        if ($(element).children('#showAll').length > 0) {
+            // "Show all" ticks everything
+            if ($(element).children('#showAll').is(':checked')) {
                 $('.str_common').each(function() {
-                    $(this).children('.tick_mark').removeClass('_selected');
-                });
+                    $(this).children('.checkOrNot').prop('checked', false);
+                })
             } else {
                 $('.str_common').each(function() {
-                    $(this).children('.tick_mark').addClass('_selected');
-                });
+                    $(this).children('.checkOrNot').prop('checked', true);
+                })
             }
         } else {
-
-            $('.show_structre:hidden').children('.tick_mark').addClass('_selected');
-            $('.show_notes:hidden').children('.tick_mark').addClass('_selected');
-            $('.show_content:hidden').children('.tick_mark').addClass('_selected');
-            $('.show_all').children('.tick_mark').removeClass('_selected');
-            if ($(element).children('.tick_mark').hasClass('_selected')) {
-                $(element).children('.tick_mark').removeClass('_selected');
+            // Allow other structure to be (un)ticked
+            if ($(element).children('.checkOrNot').is(':checked')) {
+                $(element).children('.checkOrNot').prop('checked', false)
             } else {
-                $(element).children('.tick_mark').addClass('_selected');
+                $(element).children('.checkOrNot').prop('checked', true)
             }
 
-            if ($('.show_structre').children('.tick_mark').hasClass('_selected') && $('.show_notes').children('.tick_mark').hasClass('_selected') && $('.show_content').children('.tick_mark').hasClass('_selected')) {
-                $('.show_all').children('.tick_mark').addClass('_selected');
+            // Logic to tick "show all" when ticking one-by-one
+            if ($('.show_Content').is(':hidden') && $('.show_Notes').is(':hidden')) {
+                if ($('#showStructure').is(':checked')) {
+                    $('#showAll').prop('checked', true)
+                } else {
+                    $('#showAll').prop('checked', true)
+                }
+            } else if ($('.show_Notes').is(':hidden')) {
+                if ($('#showStructure').is(':checked') && $('#showContent').is(':checked')) {
+                    $('#showAll').prop('checked', true)
+                } else {
+                    $('#showAll').prop('checked', false)
+                }
+            } else {
+                if ($('#showStructure').is(':checked') && $('#showNotes').is(':checked') && $('#showContent').is(':checked')) {
+                    $('#showAll').prop('checked', true)
+                } else {
+                    $('#showAll').prop('checked', false)
+                }
             }
         }
 
         $('.cont_wrp_box').show();
         _this.set_wheader();
         $('.sturcture_content,.content_contents,.notes_content').hide();
-        if ($('.show_all').children('.tick_mark').hasClass('_selected')) {
-            $('.sturcture_content,.content_contents,.notes_content').show();
+        if ($('#showAll').is(':checked')) {
+            $('.sturcture_content,.content_contents,.notes_content').show()
         } else {
-            if ($('.show_structre').children('.tick_mark').hasClass('_selected')) {
+            if ($('#showStructure').is(':checked')) {
                 $('.sturcture_content').show();
             }
-            if ($('.show_content').children('.tick_mark').hasClass('_selected')) {
+            if ($('#showContent').is(':checked')) {
                 $('.content_contents').show();
             }
-            if ($('.show_notes').children('.tick_mark').hasClass('_selected')) {
+            if ($('#showNotes').is(':checked')) {
                 $('.notes_content').show();
             }
         }
@@ -2026,7 +2003,7 @@ function Controller() {
         }
         top_header_html += '</div>'
         $('.str_common:visible').each(function() {
-            if (!$(this).children('.tick_mark').hasClass('_selected')) {
+            if (!$(this).children('.checkOrNot').is(':checked')) {
                 top_header_html = $(_this.config_msg).find('commentary_help').text();
             }
         });
@@ -2035,7 +2012,7 @@ function Controller() {
         var show_top_head = true;
         //$('.str_common:visible').each(function() {
         $('.str_common').each(function() {
-            if ($(this).children('.tick_mark').hasClass('_selected')) {
+            if ($(this).children('.checkOrNot').is(':checked')) {
                 show_top_head = false;
             }
         });
