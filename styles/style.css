@@ -1,3 +1,15 @@
+:root {
+    --iwriter-thumb-bg: #858585;
+    --iwriter-thumb-bg-hover: #A7A7A7;
+    --iwriter-thumb-bg-active: #9A9A9A;
+}
+
+[data-bs-theme="dark"] {
+    --iwriter-thumb-bg: #7D7D7D;
+    --iwriter-thumb-bg-hover: #979797;
+    --iwriter-thumb-bg-active: #8A8A8A;
+}
+
 .overlay {
     position: fixed;
     left: 50%;
@@ -61,6 +73,13 @@ ul, li {
 
 .sp_left {
     cursor: pointer;
+}
+
+@media (min-width: 991.99px) {
+    .models_page_body_left {
+        max-height: 65vh;
+        overflow: auto;
+    }
 }
 
 .steps_title > p:first-child{
@@ -209,5 +228,13 @@ ul, li {
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background: #858585;
+    background: var(--iwriter-thumb-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--iwriter-thumb-bg-hover);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: var(--iwriter-thumb-bg-active);
 }
