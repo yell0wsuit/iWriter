@@ -447,7 +447,7 @@ function Controller() {
                     if ($(this).find('name').length != 0 && typeof ($(this).children('name').attr('eid')) != 'undefined') {
                         var name_node = $(this).children('name').attr('eid').split('_');
                         if (para_ids.indexOf(parseInt(name_node[name_node.length - 1])) != (-1)) {
-                            body_content += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
+                            body_content += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" data-align="' + $(this).attr('align') + '">';
                             body_content += '<p>' + $(this).children('name').text() + '</p>';
                             if ($(this).find('desc').length == 0 && typeof ($(this).children('desc').attr('eid')) == 'undefined') {
                                 body_content += '</div></div>';
@@ -469,11 +469,11 @@ function Controller() {
                         if (para_ids.indexOf(parseInt(desc_node[desc_node.length - 1])) != (-1)) {
 
                             if ($(this).find('name').length == 0 && typeof ($(this).children('name').attr('eid')) == 'undefined') {
-                                body_content += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
+                                body_content += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" data-align="' + $(this).attr('align') + '">';
                             } else {
                                 var _para_id = $(this).children('name').attr('eid').split('_');
                                 if (para_ids.indexOf(parseInt(_para_id[_para_id.length - 1])) == (-1)) {
-                                    body_content += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
+                                    body_content += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" data-align="' + $(this).attr('align') + '">';
                                 }
                             }
                             body_content += '<p>' + $(this).find('desc').text() + '</p>';
@@ -484,7 +484,7 @@ function Controller() {
                     if ($(this).find('notes').length != 0 && typeof ($(this).children('notes').attr('eid')) != 'undefined') {
                         var notes_node = $(this).children('notes').attr('eid').split('_');
                         if (para_ids.indexOf(parseInt(notes_node[notes_node.length - 1])) != (-1)) {
-                            body_content += '<div class="content_box"><div class="notes_content text-success-emphasis fst-italic" style="text-align:' + $(this).attr('align') + '">';
+                            body_content += '<div class="content_box"><div class="notes_content text-success-emphasis fst-italic" data-align="' + $(this).attr('align') + '">';
                             body_content += notes_html_temp;
                             body_content += '</div></div>';
                         }
@@ -494,7 +494,7 @@ function Controller() {
                         var content_node = $(this).children('content').attr('eid').split('_');
                         if (para_ids.indexOf(parseInt(content_node[content_node.length - 1])) != (-1)) {
                             body_content += xml_img;
-                            body_content += '<div class="content_box"><div class="content_contents text-primary-emphasis mb-4" style="text-align:' + $(this).attr('align') + '">';
+                            body_content += '<div class="content_box"><div class="content_contents text-primary-emphasis mb-4" data-align="' + $(this).attr('align') + '">';
                             body_content += content_html_temp;
                             body_content += '</div></div>';
                         }
@@ -656,11 +656,11 @@ function Controller() {
                 $('.models_content').removeClass('d-none');
                 if ($('.show_structre').children('.badge').hasClass('_selected') || $('.show_all').children('.badge').hasClass('_selected')) {
                     if ($(this).children('name').length != 0 && $(this).children('name').text() != "") {
-                        content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
+                        content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" data-align="' + $(this).attr('align') + '">';
                         content_data += '<p>' + $(this).find('name').text() + '</p>';
                     } else {
                         if ($(this).children('desc').length != 0 && $(this).children('desc').text() != "") {
-                            content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
+                            content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" data-align="' + $(this).attr('align') + '">';
                         }
                     }
                     if ($(this).children('desc').length != 0 && $(this).children('desc').text() != "") {
@@ -673,7 +673,7 @@ function Controller() {
                 if ($('.show_notes').is(':visible')) {
                     if ($('.show_notes').children('.badge').hasClass('_selected') || $('.show_all').children('.badge').hasClass('_selected')) {
                         if ($(this).children('notes').length != 0 && $(this).children('notes').text() != "" && typeof ($(this).children('notes').attr('dup')) == 'undefined') {
-                            content_data += '<div class="content_box"><div class="notes_content text-success-emphasis fst-italic" style="text-align:' + $(this).attr('align') + '">';
+                            content_data += '<div class="content_box"><div class="notes_content text-success-emphasis fst-italic" data-align="' + $(this).attr('align') + '">';
                             content_data += notes_html_temp;
                             content_data += '</div></div>';
                         }
@@ -683,7 +683,7 @@ function Controller() {
                     if ($('.show_content').children('.badge').hasClass('_selected') || $('.show_all').children('.badge').hasClass('_selected')) {
                         if ($(this).children('content').length != 0 && $(this).children('content').text() != "" && typeof ($(this).children('content').attr('dup')) == 'undefined') {
                             content_data += xml_img;
-                            content_data += '<div class="content_box"><div class="content_contents text-primary-emphasis mb-4" style="text-align:' + $(this).attr('align') + '">';
+                            content_data += '<div class="content_box"><div class="content_contents text-primary-emphasis mb-4" data-align="' + $(this).attr('align') + '">';
                             content_data += content_html_temp;
                             content_data += '</div></div>';
                         }
@@ -1206,7 +1206,7 @@ function Controller() {
 
             if ($('.show_structre').children('.badge').hasClass('_selected') || $('.show_all').children('.badge').hasClass('_selected')) {
                 if ($(this).children('name').length != 0 && $(this).children('name').text() != "") {
-                    content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
+                    content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" data-align="' + $(this).attr('align') + '">';
                     content_data += '<p>' + $(this).find('name').text() + '</p>';
                     if ($(this).children('tip').length != 0 && $(this).children('desc').length == 0) {
                         content_data += '<p>' + $(this).find('tip').text() + '</p>';
@@ -1214,7 +1214,7 @@ function Controller() {
 
                 } else {
                     if ($(this).children('desc').length != 0 && $(this).children('desc').text() != "") {
-                        content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
+                        content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" data-align="' + $(this).attr('align') + '">';
                     }
                 }
 
@@ -1237,7 +1237,7 @@ function Controller() {
                         temp_pl += "Type your notes here";
                     }
 
-                    content_data += '<div class="content_box"><div data-ph="Type your notes here" class="form-control notes_content text-success-emphasis fst-italic" contenteditable="true" style="text-align:' + $(this).attr('align') + '">';
+                    content_data += '<div class="content_box"><div data-ph="Type your notes here" class="form-control notes_content text-success-emphasis fst-italic" contenteditable="true" data-align="' + $(this).attr('align') + '">';
                     content_data += '';
                     content_data += '</div></div>';
                 }
@@ -1250,7 +1250,7 @@ function Controller() {
                     } else {
                         temp_pl += 'Type your paragraph here';
                     }
-                    content_data += '<div class="content_box"><div data-ph="' + temp_pl + '" class="form-control content_contents text-primary-emphasis mb-4" contenteditable="true" data-align="' + $(this).attr('align') + '" style="text-align:' + $(this).attr('align') + '">';
+                    content_data += '<div class="content_box"><div data-ph="' + temp_pl + '" class="form-control content_contents text-primary-emphasis mb-4" contenteditable="true" data-align="' + $(this).attr('align') + '">';
                     content_data += content_html_temp;
                     content_data += '</div></div>';
                 }

@@ -173,11 +173,11 @@ ul, li {
     text-align: left !important;
     padding-left: 60% !important;
 }
-.sturcture_content[style="text-align:right"]{
+.sturcture_content[data-align="right"]{
     text-align: left !important;
     padding-left: 60% !important;
 }
-.content_contents[style="text-align:right"]{
+.content_contents[data-align="right"]{
     text-align: left !important;
     padding-left: 60% !important;
 }
