@@ -653,7 +653,6 @@ function Controller() {
 
 
             $('.models_content').html(content_data);
-            //_this.db_clk();
             $('.cont_wrp_box').each(function() {
                 if ($(this).html() == '') {
                     $(this).remove();
@@ -696,110 +695,108 @@ function Controller() {
             $('#modelnavbar').text('Choose a model');
         }
 
-        //$(".info_ic").each(function(index, element) {
-            $('.sp_left').off('click').on('click', function(e1) {
-                var scroll_pos = $('.main_wrapper').position();
-                $(window).scrollTop(scroll_pos.top);
-                //for device
-                e1.preventDefault();
-                //var left_pos = $('.second_page_body_left').position();
-                $('.second_page_body').scrollTop(0);
-                $('.second_page_body_left').stop();
+        $('.sp_left').off('click').on('click', function(e1) {
+            var scroll_pos = $('.main_wrapper').position();
+            $(window).scrollTop(scroll_pos.top);
+            //for device
+            e1.preventDefault();
+            //var left_pos = $('.second_page_body_left').position();
+            $('.second_page_body').scrollTop(0);
+            $('.second_page_body_left').stop();
 
-                //end for device
+            //end for device
 
 
-                var head_html = '<div class="models_header w_models_header"><p>' + _this.project_xml_data[$(this).attr('data-key')]['framework_summery'] + '</p></div>';
-                head_html += '<div class="d-grid"><button class="btn btn-primary mb-4 p-3 create_project create_pro_btn" data-type="create" data-key="' + $(this).attr('data-key') + '" role="button">Create a new project</button></div>';
-                _this.current_key = $(this).attr('data-key');
-                var postData = {'data-key': _this.current_key};
-                
-                //IndexedDB
-                async function showProj() {
-                    if (/academic/.test(location.pathname) == !1) {
-                        var results = await connection.select({
-                            from: 'iw_projects',
-                            where: {data_id: _this.current_key},
-                            order: {
-                                by: 'date_time',
-                                type: 'desc'
-                            }
-                        })
-                    } else {
-                        var results = await connection.select({
-                            from: 'iw_aca_projects',
-                            where: {data_id: _this.current_key},
-                            order: {
-                                by: 'date_time',
-                                type: 'desc'
-                            }
-                        })
-                    }
-                    
-                    var temp_html = '<div class="d-grid">';
-                    for (var i in results) {
-                        var _name = results[i]['name'].replace(/\#\|\#/g, "'");
-                        _name = _name.replace(/\#\|\|\#/g, '"');
-                        temp_html += '<div class="btn-group mb-2" role="group" aria-label="Project lists"><button type="button" class="text-start btn btn-outline-secondary create_project" data-key="' + results[i]['data_id'] + '" data-project="' + results[i]['name'] + '" data-type="save">' + _name + '<br>' + results[i]['dtime'] + '</button>';
-                        temp_html += '<button type="button" class="btn btn-outline-danger delete_project" data-key="' + results[i]['id'] + '"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16"><path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/></svg></button></div>';
-                    }
-                    temp_html += '</div>';
-                    head_html += temp_html;
-
-                    $('#newProjectModal').modal('show').find('.modal-body').html(head_html);
-                    $('#newProjectModalLabel').text(_this.project_xml_data[_this.current_key]['project_name']);
-                    $('.delete_project').unbind(event_type).bind(event_type, function(e2) {
-                        e2.preventDefault();
-                        $('#newProjectModal').modal('hide');
-                        $('#deleteModal').modal('show');
-                        $('#deleteComplete').hide();
-                        $('#deleteProjName').text('Do you want to delete “' + $(this).parent().find('[data-project]').attr('data-project') + '”? This action cannot be undone.');
-                        var delete_id = $(this).attr('data-key');
-                        var temp_this = this;
-                        $('.ok_btn_delete').off(event_type).on(event_type, function() {
-
-                            async function removeProj() {
-                                if (/academic/.test(location.pathname) == !1) {
-                                    var deleteProj = await connection.remove({
-                                        from: 'iw_projects',
-                                        where: {
-                                            id: Number(delete_id)
-                                        }
-                                    });
-                                } else {
-                                    var deleteProj = await connection.remove({
-                                        from: 'iw_aca_projects',
-                                        where: {
-                                            id: Number(delete_id)
-                                        }
-                                    });
-                                }
-                                
-                            };
-                            removeProj();
-                            $('#deleteComplete').show();
-                            $('#confirmDelete').hide();
-                            $(temp_this).prev().remove();
-                            (temp_this).remove();
-                        });
-                        $('.can_btn_pop').off(event_type).on(event_type, function() {
-                            //$('.white_content').hide();
-                        });
-                        return false;
-                    });
-                    $('.create_project').off().on(event_type, function(e3) {
-                        if ($(this).attr('data-type') == 'create') {
-                            _this.current_pro_name = '';
-                        } else {
-                            _this.current_pro_name = $(this).attr('data-project');
+            var head_html = '<div class="models_header w_models_header"><p>' + _this.project_xml_data[$(this).attr('data-key')]['framework_summery'] + '</p></div>';
+            head_html += '<div class="d-grid"><button class="btn btn-primary mb-4 p-3 create_project create_pro_btn" data-type="create" data-key="' + $(this).attr('data-key') + '" role="button">Create a new project</button></div>';
+            _this.current_key = $(this).attr('data-key');
+            var postData = {'data-key': _this.current_key};
+            
+            //IndexedDB
+            async function showProj() {
+                if (/academic/.test(location.pathname) == !1) {
+                    var results = await connection.select({
+                        from: 'iw_projects',
+                        where: {data_id: _this.current_key},
+                        order: {
+                            by: 'date_time',
+                            type: 'desc'
                         }
-                        _this.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
-                        $('#newProjectModal').modal('hide')
-                    });
+                    })
+                } else {
+                    var results = await connection.select({
+                        from: 'iw_aca_projects',
+                        where: {data_id: _this.current_key},
+                        order: {
+                            by: 'date_time',
+                            type: 'desc'
+                        }
+                    })
                 }
-                showProj();
-            });
-        //});
+                
+                var temp_html = '<div class="d-grid">';
+                for (var i in results) {
+                    var _name = results[i]['name'].replace(/\#\|\#/g, "'");
+                    _name = _name.replace(/\#\|\|\#/g, '"');
+                    temp_html += '<div class="btn-group mb-2" role="group" aria-label="Project lists"><button type="button" class="text-start btn btn-outline-secondary create_project" data-key="' + results[i]['data_id'] + '" data-project="' + results[i]['name'] + '" data-type="save">' + _name + '<br>' + results[i]['dtime'] + '</button>';
+                    temp_html += '<button type="button" class="btn btn-outline-danger delete_project" data-key="' + results[i]['id'] + '"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16"><path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/></svg></button></div>';
+                }
+                temp_html += '</div>';
+                head_html += temp_html;
+
+                $('#newProjectModal').modal('show').find('.modal-body').html(head_html);
+                $('#newProjectModalLabel').text(_this.project_xml_data[_this.current_key]['project_name']);
+                $('.delete_project').unbind(event_type).bind(event_type, function(e2) {
+                    e2.preventDefault();
+                    $('#newProjectModal').modal('hide');
+                    $('#deleteModal').modal('show');
+                    $('#deleteComplete').hide();
+                    $('#deleteProjName').text('Do you want to delete “' + $(this).parent().find('[data-project]').attr('data-project') + '”? This action cannot be undone.');
+                    var delete_id = $(this).attr('data-key');
+                    var temp_this = this;
+                    $('.ok_btn_delete').off(event_type).on(event_type, function() {
+
+                        async function removeProj() {
+                            if (/academic/.test(location.pathname) == !1) {
+                                var deleteProj = await connection.remove({
+                                    from: 'iw_projects',
+                                    where: {
+                                        id: Number(delete_id)
+                                    }
+                                });
+                            } else {
+                                var deleteProj = await connection.remove({
+                                    from: 'iw_aca_projects',
+                                    where: {
+                                        id: Number(delete_id)
+                                    }
+                                });
+                            }
+                            
+                        };
+                        removeProj();
+                        $('#deleteComplete').show();
+                        $('#confirmDelete').hide();
+                        $(temp_this).prev().remove();
+                        (temp_this).remove();
+                    });
+                    $('.can_btn_pop').off(event_type).on(event_type, function() {
+                        //$('.white_content').hide();
+                    });
+                    return false;
+                });
+                $('.create_project').off().on(event_type, function(e3) {
+                    if ($(this).attr('data-type') == 'create') {
+                        _this.current_pro_name = '';
+                    } else {
+                        _this.current_pro_name = $(this).attr('data-project');
+                    }
+                    _this.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
+                    $('#newProjectModal').modal('hide')
+                });
+            }
+            showProj();
+        });
     };
     this.writerInit = function() {
         // writer init
@@ -1057,8 +1054,6 @@ function Controller() {
     this.load_save_project = function(xml_dom) {
         var content_data = '';
         $(xml_dom).find('paragraph').each(function() {
-
-
             var tag_status = false;
             var xml_img = '';
             if ($(this).find('content').length != 0 || $(this).find('notes').length != 0 || $(this).find('name').length != 0 || $(this).find('desc').length != 0) {
@@ -1068,7 +1063,6 @@ function Controller() {
             if (tag_status) {
                 content_data += '<div class="cont_wrp_box mt-4">';
             }
-
 
             var content_html_temp = '';
             var xmlText = new XMLSerializer();
@@ -1162,7 +1156,7 @@ function Controller() {
 
         $('.models_content').html(content_data);
         $('.models_content').removeClass('d-none');
-        //_this.db_clk();
+
         //placeholder functionality
 
         $('.content_contents').keyup(function() {
@@ -1208,7 +1202,6 @@ function Controller() {
         //left side content
         var checklist_cnt = 0;
         var top_html_ck = '<div class="check_content card"><div class="card-header check_top fw-semibold d-flex justify-content-between"><span class="text-truncate me-2">Use formal and impersonal language.</span><button type="button" class="btn-close close-check-top" aria-label="Close"></button></div><div class="card-body check_con"></div></div>';
-        //top_html_ck += '<div class="checklist_wrp" ><ul class="checklist_ul">';
         top_html_ck += '<div class="checklist_wrp accordion accordion-flush" id="checkListAccordion"><div class="steps_title"><p>Checklists</p></div>';
         var statis_menu = new Array();
         statis_menu[0] = 'Before you start';
@@ -1294,14 +1287,12 @@ function Controller() {
         //left side content
 
         //load btn
-        $('.prolist_load').empty();
-        $('.load_pop_d').hide();
+        $('.prolist_load').removeClass('show');
         var load_status = true;
         
-        $('.load_pro').bind("mouseover touchend", function(e) {
+        $('.load_pro').on("click", function(e) {
             if (e.type == event_type) {
                 load_pro(e);
-                //$('.load_pop_d').show().css('right', '0px').css('top', '0px');
             } else {
                 load_pro(e);
             }
@@ -1339,14 +1330,14 @@ function Controller() {
                     }
                     
                     if (lists.length != 0) {
-                        var temp_html = (_this.current_pro_name === '' ? '' : '<li><a class="dropdown-item disabled">Current project name: <span class="proj_curr_nam">'+ _this.current_pro_name +'</span></a></li><li><hr class="dropdown-divider"></li>');
+                        var temp_html = (_this.current_pro_name === '' ? '' : '<li><a class="dropdown-item disabled">Current project: <span class="proj_curr_nam">'+ _this.current_pro_name +'</span></a></li><li><hr class="dropdown-divider"></li>');
                         for (var i in lists) {
                             var _name = lists[i]['name'].replace(/\#\|\#/g, "'");
                             _name = _name.replace(/\#\|\|\#/g, '"');
                             temp_html += '<li class="dropdown-item" role="button" data-type="save" data-project="' + lists[i]['name'] + '" data-key="' + lists[i]['data_id'] + '">' + _name + '</li>';
                         }
                         //temp_html += '';
-                        $('.prolist_load').empty().html(temp_html);
+                        $('.prolist_load').html(temp_html);
                         $('.prolist_load li').off(event_type).on(event_type, function() {
                             if (_this.show_popup) {
                                 $('.white_content').remove();
@@ -1395,51 +1386,15 @@ function Controller() {
             //if (event.target.className.split(" ")[0] == 'saveas_pro') {
                 if (!$('.save_pop_2').is(':visible')) {
                     $('.save_pop_1').show();
-                    $('.save_pop_2,.save_pop_d').hide();
-                    $('.saveas_pop_d').show().css('right', '105%').css('top', '0px');
+                    $('.save_pop_2').hide();
                     $('.err').text('');
                 }
             //}
         })
 
         //end save as
-        
-        //$('.save_pro').mouseover(function(event) {
-        $('.save_pro').bind("mouseover touchend", function(event) {
-            var current_class = event.target.className.split(" ")[0];
-            if (event.target.className.split(" ")[0] == 'save_pro') {
-                if (_this.save_type == 'create') {
-                    $('.save_pop_1').show();
-                    $('.save_pop_2,.saveas_pop_d').hide();
-                    $('.save_pop_d').show().css('right', '105%').css('top', '0px');
-                    $('.err').text('');
-                }
-            }
-            if (current_class == 'save_pro' || current_class == 'save_pro_in') {
-                if (device_detect) {
-                    $(this).css('z-index', '11');
-                    if (_this.save_type == 'create') {
-                        $('.save_pop_1').show();
-                        $('.save_pop_2,.saveas_pop_d').hide();
-                        $('.err').text('');
-                        $('.save_pop_d').show().css('right', '0px').css('top', '0px');
-                        $('.save_pop_d').children('.arrowp_box').addClass('remove_arrow');
-                        $('.saveas_pop_d').hide();
-                    }
-                }
-            }
-        });
-        $('.tool_down_arrow_wrp li,.tool_wrapper li').mouseover(function() {
-            if (!$(this).hasClass('save_pro')) {
-                $('.save_pop_d').hide();
-            }
-            if (!$(this).hasClass('saveas_pro')) {
-                $('.saveas_pop_d').hide();
-            }
-        });
+
         $('.can_btn,.ok_btn_common').off(event_type).on(event_type, function() {
-            $('.saveas_pop_d').hide();
-            $('.save_pop_d').hide();
             if ('ontouchstart' in window == !1) {
                 $('.save_pop_1').show();
                 $('.save_pop_2').hide();
@@ -1599,24 +1554,18 @@ function Controller() {
                         
                     }
                     updateProj();
-                    $('.save_pop_d').show().css('right', '105%').css('top', '0px');
                     $('.save_pop_1').hide();
                     $('.save_pop_2').show();
                     $('.pop_msg_d').text('Project updated successfully.');
                     $('.err').text('');
                     _this.show_popup = false;
                     _this.current_pro_name = $('.save_pro').attr('data-project-name');
-                    if (device_detect) {
-                        $('.save_pop_d').show().css('right', '0px').css('top', '0px');
-                        $('.arrowp_box').addClass('remove_arrow');
-                    }
                 }
             }
             if ($('.err').hasClass('overWrite_flag')) {
                 var temp_p = $(this).parents('#saveAsModal');
                 var postData = {'data-key': _this.current_key, 'project_name': postData['project_name'], 'xml_data': _this.XMLToString(data_to_save[0]), 'jdate': new Date()};
                 console.log(postData['project_name']);
-                //var formURL = 'database.php?update_ex';
                 updateExistProj();
 
 
@@ -1654,7 +1603,6 @@ function Controller() {
                         }
                         
                     }
-                    //temp_p.find('.save_pop_d').show().css('right', '105%').css('top', '0px');
                     temp_p.find('.save_pop_1').hide();
                     temp_p.find('.save_pop_2').show();
                     temp_p.find('.pop_msg_d').text('Project overwritten.');
@@ -1663,10 +1611,6 @@ function Controller() {
                     $('.save_pro').attr('data-project-name', project_name);
                     _this.show_popup = false;
                     _this.current_pro_name = project_name;
-                    if (device_detect) {
-                        temp_p.$('.save_pop_d').css('right', '0px').css('top', '0px');
-                        temp_p.$('.arrowp_box').addClass('remove_arrow');
-                    }
                     $('.err').removeClass('overWrite_flag');
             }
             load_status = true;
@@ -1731,16 +1675,8 @@ function Controller() {
         return str;
     };
     this.StringToXML = function(oString) {
-        //code for IE
-        if (window.ActiveXObject) {
-            var oXML = new ActiveXObject("Microsoft.XMLDOM");
-            oXML.loadXML(oString);
-            return oXML;
-        }
-        // code for Chrome, Safari, Firefox, Opera, etc.
-        else {
-            return (new DOMParser()).parseFromString(oString, "text/xml");
-        }
+        return (new DOMParser()).parseFromString(oString, "text/xml");
+
     };
     this.xmlToJson = function(xml) {
 
@@ -1879,21 +1815,6 @@ function Controller() {
         }
         
         var awl_status = false;
-        
-        $(".awl_listing").mouseover(function() {
-            if ($(window).width() > 768) {
-                var pos = $(this).position();
-                $('.arrow_box').html($(this).parents('.li_inner').next().html());
-                $('.arrow_wrp').css('top', pos.top - ($('.arrow_wrp').height() / 2) - 2);
-                $('.arrow_wrp').css('left', pos.left + 75);
-                $('.arrow_wrp').show();
-            }
-        }).mouseout(function(e) {
-            if ($(window).width() > 768) {
-                $('.arrow_wrp').hide();
-            }
-        });
-        
         $(".awl_listing").on('click', function() {
             // var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
             var temp = "";
@@ -1933,7 +1854,7 @@ function Controller() {
 
 function call_pop() {
     var pops = $('.white_content');
-    pops.css('top', '40vh').css('left', '0').css('position', 'fixed'); //leave alert: center of the screen
+    pops.css('top', '50%').css('left', '50%').css('margin-top', '-80vh'); //leave alert: center of the screen
 }
 
 function create_xml_dom() {
