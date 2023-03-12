@@ -1933,7 +1933,7 @@ function Controller() {
 
 function call_pop() {
     var pops = $('.white_content');
-    pops.css('top', '50%').css('left', '50%').css('margin-top', '-80vh'); //leave alert: center of the screen
+    pops.css('top', '40vh').css('left', '0').css('position', 'fixed'); //leave alert: center of the screen
 }
 
 function create_xml_dom() {
