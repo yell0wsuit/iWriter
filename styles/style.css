@@ -1,3 +1,15 @@
+:root {
+    --iwriter-thumb-bg: #858585;
+    --iwriter-thumb-bg-hover: #A7A7A7;
+    --iwriter-thumb-bg-active: #9A9A9A;
+}
+
+[data-bs-theme="dark"] {
+    --iwriter-thumb-bg: #7D7D7D;
+    --iwriter-thumb-bg-hover: #979797;
+    --iwriter-thumb-bg-active: #8A8A8A;
+}
+
 .overlay {
     position: fixed;
     left: 50%;
@@ -52,592 +64,87 @@
 }
 
 ol, ul {
-  list-style: none; }
+    list-style: none;
+}
 
 ul, li {
     padding-left: 0;
 }
 
-.first_page{
-    width: 60%;
-    margin: 150px auto;
-}
-.first_page h2{
-    font-family: Inter, system-ui, sans-serif;
-}
-.middle_of_page{
-    width: 100%;
-    height: auto;
-    margin-top: 120px;
-    /*height: 150px;*/
-}
-
-.first_page h1{
-    font-weight: normal;
-    margin: 0 auto;
-    text-align: center;
-    vertical-align: top;
-    width: 100%;
-    display: table
-}
-.first_page h2{
-    font-size: 20px;
-    font-weight: normal;
-    text-align: center;
-    vertical-align: top;
-}
-.iwrite_ht_img{
-    display: inline-block;
-    margin-top: -10px;
-    background-image:url("../images/mitr/oxford/ipad/img_03.png");
-    background-repeat:no-repeat;
-    text-indent: 9999px;
-    height: 69px;
-    width:122px;
-}
-.fn_in_left{
-    margin: 0 auto;
-    width: 90px;
-    background-repeat:no-repeat;
-    cursor: pointer;
-}
-.fn_in_right{
-
-    margin: 0 auto;
-    width: 90px;
-    background-repeat:no-repeat;
-    cursor: pointer;
-}
-.home_btn{
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-}
-.fn_in_left_txt{
-    position: absolute;
-    bottom: 5px;
-    width: 100%;
-    text-align: center;
-    color: #137AB9;
-    padding: 7px;
-}
-.fn_in_right_txt{
-    position: absolute;
-    bottom: 5px;
-    width: 100%;
-    text-align: center;
-    color:#137AB9;
-    padding: 7px;
-}
-.header_h1{
-    text-align: center;
-}
-.f_h1{
-    font-weight: bold;
-}
-.f_h1 > span{
-    vertical-align: middle;
-
-}
-.save_p_btn{
-    clear: both;
-    height: 39px;
-    width: 212px;
-    margin: 120px auto;
-    text-align: center;
-    line-height: 39px;
-    font-weight:bold;
-    cursor: pointer;
-    position: relative;
-}
-.save_p_btn_txt{
-    /*position: absolute;*/
-}
-
-.saved_projects{
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    border-radius: 4px;
-    color:#14387f;
-    background: #FFFCE1;
-    left: 0;
-    background-color: #b7dd42;
-    max-height: 250px;
-}
-
-.saved_projects_div{
-    width:90%;
-    height:1px;
-    background: #D8D7C5;
-    margin: 0 auto;
-}
-
-.second_page_top{
-    height: 50px;
-    /*background-color: #013857;*/
-    background-color: #4577bf;
-}
-
-.second_page_top h1{
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: 18px;
-    padding: 12px;
-    float: left;
-}
-.model_right_panel{
-    float: right;
-}
-.model_right_panel *:not(input) {
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-.sp_left, .sp_left_dis{
+.sp_left {
     cursor: pointer;
 }
 
-.info_text{
-    padding: 8px;
-    background-color: var(--bs-primary);
-    color: #EFF3FC;
-    display:none;
-}
-.top_model_menu_text{
-    color: #FFFFFF;
-    display: block;
-    font-size: 20px;
-    margin: 10px 10px 0;
-    float: left;
-}
-.down_arrow{
-    margin: 16px 10px 0;
-    float: left;
-    font-size: 0px;
-    width: 0px;
-    border-top: 12px solid #EFF3FC;
-    border-left: 12px solid #4577bf;
-    border-right: 12px solid #4577bf;
-    cursor: pointer;
-    position: relative;
-    display: block;
-}
-.model_right_panel {
-    float: right;
-    height: 100%;
-    /*overflow: hidden;*/
-}
-.models_page{
-    height: 100%;
-    width: 100%;
+@media (min-width: 991.99px) {
+    .models_page_body_left {
+        max-height: 65vh;
+    }
 }
 
-.models_page_top{
-    /*height: 50px;*/
-    /*background-color: #013857;*/
-    background-color: #4577bf;
-}
-.models_page_body{
-    overflow: hidden;
-}
-.models_page_body_left{
-    /*min-height: 700px;*/
-    /*border-radius: 7px 0 0 0;*/
-    /*position: relative;*/
-}
-.models_page_body_right{
-    /*height: 100%;*/
-    min-height: 700px;
-}
-.models_page_top h1{
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: 18px;
-    padding: 12px;
-    float: left;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    width: 85%;
-    white-space: nowrap;
-}
-.models_page_menu_text{
-}
-.models_page_down_arrow{
-    margin: 16px 10px 0;
-    float: right;
-    font-size: 0px;
-    width: 0px;
-    border-top: 12px solid #EFF3FC;
-    border-left: 12px solid #4577bf;
-    border-right: 12px solid #4577bf;
-    cursor: pointer;
-    position: relative;
-    display: block;
-}
-.models_page_right_panel {
-    float: right;
-    height: 100%;
-
-}
-.models_page_right_panel *:not(input) {
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
-}
 .steps_title > p:first-child{
-    margin-bottom: 0;
-    /*font-size: 13px;*/
-    font-weight: bold;
     color: var(--bs-primary-text);
-}
-
-.medels_steps li{
-    padding: 10px;
-    cursor: pointer;
+    font-weight: bold;
 }
 
 .search_title > p:first-child{
-    margin-bottom: 0;
-    /*font-size: 13px;*/
-    font-weight: bold;
     color: var(--bs-primary-text);
+    font-weight: bold;
 }
 
-.str_common{
-    margin-top: 5px;
-    border-radius: 4px;
-    overflow: hidden;
-    cursor: pointer;
+.sturcture_content > p:first-child{
+    font-weight: 600;
 }
-.str_common > span{
-    display: block;
-    float: left;
-    font-weight: bold;
-    width: 80%;
-}
-.tick_mark{
-    background-color: #FFFFFF;
-    /*background-image: url("../images/mitr/oxford/closebtn.png");*/
-    /*background-position: 1px 1px;*/
-    background-repeat: no-repeat;
-    float: right;
-    height: 11px;
-    margin: 5px;
-    width: 11px;
-}
-.show_structre{
-    background-color: var(--bs-danger);
-}
-.show_notes{
-    background-color: var(--bs-success);
-}
-.show_content{
-    background-color: var(--bs-primary);
-}
-.show_all{
-    background-color: var(--bs-secondary);
-}
-.str_common{
-    padding: 7px;
-    color: white;
-}
-.models_header{
-    /*font-size: 12px;
-    font-weight: bold;*/
-    min-height: 100px;
-    padding: 10px;
-    width: 95%;
-}
+
 .models_content{
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 4px;
-    margin: 0 0 0 3px;
-    min-height: 520px;
-    max-height: 590px;
-    /*height: 100%;*/
+    min-height: 50vh;
+    max-height: 60vh;
     overflow-y: auto;
 }
+
 .content_box{
-    /*font-size: 12px;
-    font-weight: bold;*/
-    margin-top: 5px;
     padding-bottom: 5px;
 }
+
 .cont_wrp_box{
     border-bottom: 3px solid var(--bs-border-color);
 }
 
 .content_contents{
-    border-left: 2px solid #2981C1;
+    border-left: 2px solid var(--bs-primary-text);
     padding-left: 5px;
 }
 .sturcture_content{
-    border-left: 2px solid #FF0000;
+    border-left: 2px solid var(--bs-danger-text);
     padding-left: 5px;
 }
 .notes_content{
-    border-left: 2px solid #00965E;
+    border-left: 2px solid var(--bs-success-text);
     padding-left: 5px;
-    color: #00965E;
-}
-.show_me_btn{
-    /*width: 71px;
-    height: 17px;
-    background-image: url("../images/mitr/oxford/showme.png");
-    background-repeat: no-repeat;
-    cursor: pointer;*/
-}
-.highlight_txt{
-    background-color: #00965E;
-    
-}
-.models_page_left_panel{
-    float: left;
-}
-.up_arrow{
-    margin: 9px 10px 0;
-    float: right;
-    font-size: 0px;
-    line-height: 0%;
-    width: 0px;
-    font-size: 0px; line-height: 0%; width: 0px;
-    border-bottom: 12px solid var(--bs-dark-text);
-    border-left: 12px solid rgb(255 255 255 / 0%);
-    border-right: 12px solid rgb(255 255 255 / 0%);
-    cursor: pointer;
-    /*display: none;*/
 }
 
-.second_page h1{
-    /*font-family: Arial;*/
-}
-.models_page h1{
-    /*font-family: Arial;*/
+.up_arrow {
+    cursor: pointer;
 }
 
-.models_page_home{
-    height: 20px;
-    width: 20px;
-    background-image: url("../images/mitr/oxford/iphone/home_icon.png");
-    float: left;
-    display: block;
-    margin: 10px 10px 0;
-    display: none;
-}
-.models_page_tools{
-    height: 20px;
-    width: 20px;
-    background-image: url("../images/mitr/oxford/iphone/tool_icon.svg");
-    background-size: 20px;
-    float: left;
-    /*display: block;*/
-    margin: 8px 8px 0;
-    position: relative;
-    display: none;
-}
-.tool_wrapper{
-    position: absolute;
-    right: -7px;
-    /*top: 27px;*/
-    top: 33px;
-    min-width: 160px;
-    z-index: 2;
-    background-color: #4577bf;
-    border-radius: 0 5px;
-    display: none;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-}
-.tool_wrapper ul{
-    /*padding: 0 5px;*/
-}
-.tool_wrapper li{
-    border-bottom: 1px solid var(--bs-border-color);
-    color: #FFFFFF;
-    cursor: pointer;
-    padding: 5px;
-    font-size: 15px;
-}
-.tool_wrapper li:hover{
-    background-color: #FFFFFF;
-    color:#4577bf;
-}
-.tool_wrapper li:last-child{
-    border-bottom: none;
-}
-.down_arrow_wrapper{
-    position: absolute;
-    right: -14px;
-    top: 15px;
-    width: 100px;
-    z-index: 2;
-    background-color: #4577bf;
-    border-radius: 0 5px;
-    display: none;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-}
-.down_arrow_wrapper ul{
-    /*padding: 0 5px;*/
-}
-.down_arrow_wrapper li{
-    border-bottom: 1px solid var(--bs-border-color);
-    /*color: #0E76A1;*/
-    color: #FFFFFF;
-    cursor: pointer;
-    padding: 5px;
-    font-size: 13px;
-}
-.down_arrow_wrapper li:last-child{
-    border-bottom: none;
-}
-.down_arrow_wrapper li:hover{
-    background-color: #FFFFFF;
-    color: #4577bf;
-}
-.home_iwriter_txt{
-    background-color: #ebba17;
-    border-radius: 21px;
-    /*color: #0079b5;*/
-    display: inline-block;
-    padding: 5px 15px;
-    box-shadow: inset -5px -5px 5px rgba(170, 143, 0, 0.39), inset 5px 5px 5px rgba(255, 255, 255, 0.43)
-}
-.arrow_box {
-    background: none repeat scroll 0 0 var(--bs-primary-bg-subtle);
-    position: relative;
-    padding: 10px;
-}
-.arrow_box:after, .arrow_box:before {
-    border: medium solid rgba(0, 0, 0, 0);
-    content: " ";
-    height: 0;
-    pointer-events: none;
-    position: absolute;
-    right: 100%;
-    top: 50%;
-    width: 0;
-}
-
-.arrow_box:after {
-    /*border-color: rgba(136, 183, 213, 0);*/
-    border-right-color: var(--bs-primary-bg-subtle);
-    border-width: 7px;
-    margin-top: -6px;
-}
-.arrow_box:before {
-    /*border-color: rgba(194, 225, 245, 0);*/
-    border-right-color: var(--bs-primary-bg-subtle);
-    border-width: 7px;
-    margin-top: -6px;
-}
-.arrow_wrp {
-    position: absolute;
-    max-width: 300px;
-    display: none;
-}
-._selected{
-    background-image: url("../images/mitr/oxford/closebtn.svg");
-}
-.italic_style{
+.italic_style {
     font-variation-settings: 'slnt' -10;
 }
-.xml_img_wrp{
-    width: auto;
-	text-align: center;
-    display: table;
-}
-.xml_img_wrp > div {
-    display: table-cell;
-    padding: 5px;
-    vertical-align: middle;
-    width: 45%;
-}
-.xml_img_wrp img {
-    width: 100%;
-	display:block;
-    margin:auto;
-}
-.home_help{
-    float: right;
-    margin: 20px 20px 20px 6px;
-}
-.language_btn{
-    float: right;
-    margin: 20px 6px;
-    position: relative;
-}
-.lang_wrp{
-    position: absolute;
-    top: 100%;
-}
-._dictionarySelector{
-    margin: -1px 0 0;
-}
-#_dictionary-selector._dictionary-selector{
-    color: #4577bf;
-    padding: 0 7px 0 24px;
-}
-#_dictionary-selector._dictionary-selector:hover{
-    color: #FFFFFF;
-}
-#_dictionary-selector._dictionary-selector > option {
-    
-}
-#language_btn ._dictionarySelector:hover {
-    background-color: #4577bf;
-    color: #FFFFFF;
-}
-.middle_of_page h2{
-    color: #14387f;
-    font-size: 24px;
-    font-weight: normal;
-    line-height: 30px;
-    margin: 0 0 16px;
-    text-align: center;
-    padding:  0;
-}
-.w_models_header{
-    min-height: 100px;
-}
-.create_project {
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 5px;
-    padding: 20px;
-    box-shadow: rgb(0 0 0 / 13%) 0px 1.6px 3.6px, rgb(0 0 0 / 11%) 0px 0px 2.9px;
-}
+
 [contentEditable]{
     -moz-appearance: textfield-multiline;
     -webkit-appearance: textarea;
 }
-.checklist_ul > li{
-    background-image: url("../images/mitr/down_a.svg");
-    background-size: 12px;
-    background-position: 98% 15px;
-    background-repeat: no-repeat;
-    border-bottom: 1px solid var(--bs-border-color);
-    
-
-}
-.checkpoints_ul > li{
-    border-bottom: 1px solid var(--bs-border-color);
-    
-    padding: 10px;
-}
-.checkpoints_ul > li:last-child{
-    border-bottom: none;
-}
 
 .checklist_wrp {
-    max-height: 500px;
+    max-height: 45vh;
     overflow: auto;
 }
 
 .check_con{
     word-wrap: break-word;
-    max-height: 500px;
+    max-height: 45vh;
     overflow: auto;
 }
 .check_box_w{
@@ -645,191 +152,20 @@ ul, li {
     float: left;
     margin-right: 5px;
 }
-.checkpoints{
-    border-radius: 5px;
-}
-.tell_me_btn{
-}
 
 .check_content{
     width: 100%;
     display: none;
 }
 
-.menu_1{
-    cursor: pointer;
-    padding: 10px;
-}
-.common_ul{
-    margin-left: 10px;
-}
 .circle_li{
     list-style: square outside none;
 }
-.blueTxtCss{
-    color: #0070C0;
-    font-weight: bold;
-}
-.delete_project {
-    color: red;
-    cursor: pointer;
-    float: right;
-    height: 20px;
-    margin: -64px 15px 0;
-    width: 20px;
-    font-variation-settings: 'wght' 900;
-}
-.f_normal{
-    font-style: normal;
-}
-.remove_arrow:after, .arrowp_box:before {
-    border: none !important;
-}
-.arrowp_wrp{
-    position: absolute;
-    cursor: default;
-    display: none;
-}
-.arrowp_box {
-    position: relative;
-    background: #4577bf;
-    border: 1px solid #fcfeff;
-    border-radius: 8px;
-    color: #ffffff;
-    padding: 5px;
-    width: 280px;
-}
-.arrowp_box:after, .arrowp_box:before {
-    left: 100%;
-    top: 20px;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-}
 
-.arrowp_box:after {
-    border-color: rgba(69, 119, 191, 0);
-    border-left-color: #4577bf;
-    border-width: 5px;
-    margin-top: -5px;
-}
-.arrowp_box:before {
-    border-color: rgba(252, 254, 255, 0);
-    border-left-color: #fcfeff;
-    border-width: 6px;
-    margin-top: -6px;
-}
-.project_name{
-    width: 100%;
-}
-.btn_wrp{
-    height: 32px;
-    margin-top: 5px;
-}
-.ok_btn{
-
-}
-.can_btn{
-
-}
-
-.ok_btn_common{
-
-}
 .save_pop_2{
     display: none;
 }
-.save_pro{
-    position: relative;
-}
-.load_pro{
-    position: relative;
-}
 
-.load_pop_d .arrowp_box{
-    padding: 0;
-}
-
-.tool_down_arrow{
-    position: relative;
-    float: left;
-    height: 20px;
-    width: 20px;
-    margin-top: 9px;
-    cursor: pointer;
-    background-image: url("../images/mitr/tool_btn.svg");
-    background-repeat: no-repeat;
-    background-color: transparent;
-}
-.tool_down_arrow_wrp{
-    background-color: #4577bf;
-    border-radius: 0 5px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-    position: absolute;
-    right: -14px;
-    top: 31px;
-    width: 100px;
-    z-index: 2;
-    display: none;
-}
-.tool_down_arrow_wrp li{
-    border-bottom: 1px solid var(--bs-border-color);
-    color: #ffffff;
-    cursor: pointer;
-    font-size: 13px;
-    padding: 5px;
-}
-.tool_down_arrow_wrp li:hover {
-    background-color: #ffffff;
-    color: #4577bf;
-}
-.create_pro_btn{
-}
-.black_overlay{
-    display: none;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    z-index:1001;
-    -moz-opacity: 0.8;
-    opacity:.80;
-    filter: alpha(opacity=80);
-}
-
-.pop_wrap{
-    padding: 5px;
-}
-.show_structure_panel *:not(input) {
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
-}
-
-.word_count_text{
-    background-color: #EBBA17;
-    padding: 5px 10px;
-    display: inline-block;
-    
-    border-radius: 8px;
-}
-.up_home{
-    background-image: url("../images/mitr/up_a.svg");
-    background-repeat: no-repeat;
-    display: inline-block;
-    height: 8px;
-    margin-left: 10px;
-    width: 8px;
-    filter: invert(0);
-}
-.middle_wrap, .box:hover {
-    background-color: #f4ce50 !important;
-}
 .save_p_btn_txt:hover{
     background-color: #ffcd39 !important;
 }
@@ -837,530 +173,15 @@ ul, li {
     text-align: left !important;
     padding-left: 60% !important;
 }
-.sturcture_content[style="text-align:right"]{
+.sturcture_content[data-align="right"]{
     text-align: left !important;
     padding-left: 60% !important;
 }
-.content_contents[style="text-align:right"]{
+.content_contents[data-align="right"]{
     text-align: left !important;
     padding-left: 60% !important;
 }
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape) {
-    .main_wrapper{
-        margin: 0 0 14px 0;
-        height: auto;
-        /*max-height: 768%;*/
-    }
-    .first_page{
-        width: 80%;
-        margin: 10% auto;
-        width: 70%;
-    }
-    .inner_wrapper{
-        height: auto;
-        /*max-height: 768%;*/
-    }
-    .save_p_btn{
-        margin: 150px auto;
-    }
-    .middle_of_page{
-        margin-top: 80px;
-    }
-    .up_arrow{
-        /*display: none;*/
-    }
-    .down_arrow{
-        display: block;
-    }
-    .models_page_tools{
-        display: none;
-    }
-    .tool_down_arrow_wrp{
-        top:33px;
-    }
-}
 
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
-    .main_wrapper{
-        margin: 0 0 14px 0;
-        /*height: 768px;*/
-        min-height: 768px;
-    }
-    .inner_wrapper{
-        /*height: 748px;*/
-        min-height: 748px;
-    }
-    .first_page{
-        margin: 75px auto;
-        margin: 30% auto;
-        width: 70%;
-    }
-    .save_p_btn{
-        margin: 120px auto;
-    }
-
-
-    .models_content {
-        height: 100%;
-        position: relative;
-        width: 99%;
-        overflow-y:auto;
-        max-height: 100%;
-    }
-
-    .up_arrow{
-        display: block;
-    }
-    .models_page_home{
-        display: none;
-    }
-    .models_page_left_panel{
-        width: 45%;
-    }
-    ::-webkit-scrollbar {
-        width: 0px;
-    }
-    .middle_of_page h2{
-        font-size: 24px;
-    }
-    .down_arrow{
-        display: block;
-    }
-    .models_page_tools{
-        display: none;
-    }
-    .tool_down_arrow_wrp{
-        top:27px;
-    }
-}
-
-/* For mobile : like samsung grand(480 * 800): */
-@media screen and (max-width : 900px){
-
-
-    .main_wrapper{
-        /*margin: 0 0 14px 0;*/
-        margin: 0;
-        height: auto;
-        min-height: 0;
-    }
-
-    .first_page{
-        width: 100%;
-        margin: 20% auto 0 0;
-    }
-    .inner_wrapper{
-        height: auto;
-        /*margin: 5px;*/
-        min-height: 0;
-        border-radius: 0;
-    }
-    .save_p_btn{
-        margin: 30px auto;
-        height: 32px;
-        width: 174px;
-        text-align: center;
-        line-height: 32px;
-        /*background-image:url("../images/mitr/oxford/iphone/img_04.png");*/
-    }
-
-    .middle_of_page{
-        margin-top: 60px;
-    }
-    .iwrite_ht_img{
-        margin-top: 5px;
-
-    }
-    .first_page h1{
-        font-size: 35px;
-    }
-    .models_page_left_panel{
-        /*width: 66%;*/
-        width: 150px;
-    }
-    .second_page_top h1{
-        /*width: 60%;*/
-        padding: 12px 0 0 12px;
-        font-size: 16px;
-        line-height: 13px;
-    }
-
-    .top_model_menu_text{
-        margin: 9px 0 0;
-        font-size: 15px;
-        display: none;
-    }
-    .second_page h1{
-        /*font-family: Arial;*/
-    }
-    .models_page h1{
-        /*font-family: Arial;*/
-    }
-    h1{
-        font-size: 14px;
-    }
-    .left_menu{
-        background-image: url("../images/mitr/oxford/model_menu.svg");
-        background-size: 24px;
-        background-repeat: no-repeat;
-        display: block;
-        float: left;
-        height: 24px;
-        width: 25px;
-        cursor: pointer;
-    }
-    .up_arrow{
-        display: block;
-        margin: 9px 9px 0;
-    }
-    .models_page_top h1{
-        padding: 12px 0 0 2px;
-        font-size: 14px;
-        display: none;
-    }
-    .models_page_menu_text{
-        
-    }
-
-
-    .show_top {
-        background-color: #EFF3FC;
-        background-image: url("../images/mitr/oxford/btn_01.svg");
-        background-size: 20px;
-        background-position: 32px center;
-        background-repeat: no-repeat;
-        border-radius: 0 50% 50% 0;
-        height: 50px;
-        position: absolute;
-        right: 0;
-        width: 60px;
-    }
-    .show_bottom {
-        background-color: #EFF3FC;
-        background-image: url("../images/mitr/oxford/btn_02.svg");
-        background-size: 20px;
-        background-position: 32px center;
-        background-repeat: no-repeat;
-        border-radius: 0 50% 50% 0;
-        height: 50px;
-        margin-top: 2px;
-        position: absolute;
-        right: 0;
-        top: 50px;
-        width: 60px;
-    }
-
-    .models_page_top{
-        z-index: 2;
-    }
-    .models_page_home{
-        height: 20px;
-        width: 20px;
-        background-image: url("../images/mitr/oxford/iphone/home_icon.png");
-        float: left;
-        display: block;
-        margin: 10px 10px 0;
-    }
-    .models_page_down_arrow{
-        display: none;
-    }
-    .down_arrow{
-        display: none;
-    }
-    .models_page_tools{
-        height: 20px;
-        width: 20px;
-        background-image: url("../images/mitr/oxford/iphone/tool_icon.svg");
-        background-size: 20px;
-        float: left;
-        display: block;
-        margin: 9px 10px 0;
-        background-repeat: no-repeat;
-        padding-right: 30px;
-        margin-right: 0;
-    }
-    .down_arrow .down_arrow_wrapper{
-        right: -14px;
-        top: 12px;
-        width: 101px;
-    }
-    .models_content{
-        min-height: 300px;
-        max-height: 100%;
-    }
-    .models_header{
-        min-height: 0;
-    }
-    ::-webkit-scrollbar {
-        width: 0px;
-    }
-    
-
-    .fn_in_left{
-        width: 60px;
-    }
-    .fn_in_right{
-        width: 60px;
-    }
-    .fn_middle{
-        width: 10%;
-    }
-    .middle_of_page h2{
-        font-size: 24px;
-    }
-    .tool_wrapper{
-        top: 27px;
-    }
-
-}
-
-
-/* For iphone: */
-@media screen and (max-width : 320px){
-
-    .main_wrapper{
-        /*margin: 0 0 14px 0;*/
-        margin: 0;
-        height: auto;
-        min-height: 0;
-    }
-
-    .first_page{
-        width: 100%;
-        margin: 30% auto 0 0;
-    }
-    .inner_wrapper{
-        height: auto;
-        /*margin: 5px;*/
-        min-height: 0;
-        border-radius: 0;
-    }
-    .save_p_btn{
-        margin: 30px auto;
-        height: 32px;
-        width: 174px;
-        text-align: center;
-        line-height: 32px;
-        /*background-image:url("../images/mitr/oxford/iphone/img_04.png");*/
-        background-color: #ebba17;
-        border-radius: 22px;
-    }
-    .middle_of_page{
-        margin-top: 60px;
-    }
-    .iwrite_ht_img{
-        margin-top: 5px;
-
-    }
-    .first_page h1{
-        font-size: 35px;
-    }
-    .models_page_left_panel{
-        width: 80%;
-    }
-    .models_page_body{
-        position: relative;
-    }
-    .models_page_body_left {
-        position: absolute;
-        width: 100.5%;
-        z-index: 1;
-        padding: 0;
-        background-color: var(--bs-body-bg);
-        min-height: 100%;
-        overflow: hidden;
-    }
-    .models_page_body_right {
-        position: relative;
-        width: 100%;
-    }
-    .second_page_top h1{
-        /*width: 60%;*/
-        padding: 12px 0 0 12px;
-        font-size: 16px;
-        line-height: 13px;
-    }
-
-    .top_model_menu_text{
-        margin: 9px 0 0;
-        font-size: 15px;
-        display: none;
-    }
-    .second_page h1{
-        /*font-family: Arial;*/
-    }
-    .models_page h1{
-        /*font-family: Arial;*/
-    }
-    h1{
-        font-size: 14px;
-    }
-    .left_menu{
-        background-image: url("../images/mitr/oxford/model_menu.svg");
-        background-size: 24px;
-        background-repeat: no-repeat;
-        display: block;
-        float: left;
-        height: 24px;
-        margin: 7px 0 0 -3px;
-        width: 22px;
-        cursor: pointer;
-    }
-    .up_arrow{
-        display: block;
-        margin: -20px 0 0;
-    }
-    .models_page_top h1{
-        padding: 12px 0 0 2px;
-        font-size: 14px;
-    }
-    .models_page_menu_text{
-        display: none
-    }
-
-    .left_wrapper {
-        border-radius: 0 7px;
-        width: 89%;
-        position: absolute;
-        height: 100%;
-        max-height: 100%;
-        overflow-y: scroll;
-    }
-    .btn_phone {
-        display: block;
-        height: 111px;
-        overflow: hidden;
-        position: absolute;
-        left: 89%;
-        width: 30px;
-        z-index: 0;
-        margin-top: 150px;
-    }
-    .show_top {
-        background-color: #EFF3FC;
-        background-image: url("../images/mitr/oxford/btn_01.svg");
-        background-size: 20px;
-        background-position: 32px center;
-        background-repeat: no-repeat;
-        border-radius: 0 50% 50% 0;
-        height: 50px;
-        position: absolute;
-        right: 0;
-        width: 60px;
-    }
-    .show_bottom {
-        background-color: #EFF3FC;
-        background-image: url("../images/mitr/oxford/btn_02.svg");
-        background-size: 20px;
-        background-position: 32px center;
-        background-repeat: no-repeat;
-        border-radius: 0 50% 50% 0;
-        height: 50px;
-        margin-top: 2px;
-        position: absolute;
-        right: 0;
-        top: 50px;
-        width: 60px;
-    }
-
-    .models_page_top{
-        z-index: 2;
-    }
-    .models_page_home{
-        height: 20px;
-        width: 20px;
-        background-image: url("../images/mitr/oxford/iphone/home_icon.png");
-        float: left;
-        display: block;
-        margin: 10px 10px 0;
-    }
-    .models_page_down_arrow{
-        display: none;
-    }
-    .models_page_tools{
-        height: 20px;
-        width: 20px;
-        background-image: url("../images/mitr/oxford/iphone/tool_icon.svg");
-        background-size: 20px;
-        float: left;
-        display: block;
-        margin: 10px 10px 0;
-        background-repeat: no-repeat;
-        padding-right: 30px;
-        margin-right: 0;
-    }
-    .down_arrow{
-        display: none;
-    }
-    .down_arrow .down_arrow_wrapper{
-        right: -14px;
-        top: 12px;
-        width: 101px;
-    }
-    .models_content{
-        min-height: 300px;
-        max-height: 100%;
-    }
-    .models_header{
-        min-height: 0;
-    }
-    ::-webkit-scrollbar {
-        width: 0px;
-    }
-    
-    .fn_in_left{
-        width: 60px;
-    }
-    .fn_in_right{
-        width: 60px;
-    }
-    .fn_middle{
-        width: 10%;
-    }
-    .middle_of_page h2{
-        font-size: 16px;
-    }
-    .tool_wrapper{
-        top: 27px;
-    }
-    .tool_down_arrow_wrp{
-        top: 27px;
-    }
-
-}
-
-@media screen and (max-width : 500px){
-    .tool_wrapper{
-        top: 27px;
-    }
-}
-
-/*migrated CSS start*/
-
-
-
-.middle_of_page .responsive_row {
-    clear: both;
-    margin-bottom: 14px;
-    margin-left: 0px;
-    margin-right: 0px;
-}
-
-@media screen and (max-width: 900px) {
-
-}
-
-@media screen and (max-width: 900px){
-
-}
-
-/*migrated CSS end*/
 
 ::-webkit-scrollbar {
     width: 8px;
@@ -1368,7 +189,13 @@ and (orientation : portrait) {
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background: #858585;
+    background: var(--iwriter-thumb-bg);
 }
 
+::-webkit-scrollbar-thumb:hover {
+    background: var(--iwriter-thumb-bg-hover);
+}
 
+::-webkit-scrollbar-thumb:active {
+    background: var(--iwriter-thumb-bg-active);
+}

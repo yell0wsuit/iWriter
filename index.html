@@ -7,7 +7,6 @@
         <link href="styles/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="styles/style.css" />
         <link rel="icon" type="image/x-icon" href="images/mitr/ico/iWriter_128px.ico" />
-        <link href="styles/jquery.reject.css" rel="stylesheet" type="text/css" />
         <script src="scripts/jsstore.min.js"></script>
         <style>
             .bi-nav {
@@ -98,14 +97,13 @@
         <div class="main_wrapper container-fluid mb-4">
             <div class="inner_wrapper container-lg">
                 <div class="d-flex justify-content-end">
-                    <button type="button" class="btn btn-primary help_btn common_page">Help
-                    </button>
+                    <button type="button" class="btn btn-primary help_btn common_page mb-md-5">Help</button>
                 </div>
-                <div class="first_page common_page" id="first_page">
-                    <h1 class="fw-semibold text-primary-emphasis mb-4">
+                <div class="first_page common_page container-lg mt-5 p-lg-5" id="first_page">
+                    <h1 class="mb-4 fw-semibold text-primary-emphasis d-flex justify-content-center text-center">
                         <span>Oxford <span class="p-2 bg-warning rounded-5 text-dark">iWriter</span></span>
                     </h1>
-                    <h2><a href="./academic.html">Go to Oxford Academic iWriter</a></h2>
+                    <p class="lead mb-4 d-flex justify-content-center text-center"><a href="./academic.html">Go to Oxford Academic iWriter</a></p>
                     <div class="middle_of_page d-flex justify-content-center">
                         <div class="row">
                             <div class="col-md-6 mb-4">
@@ -151,7 +149,7 @@
                             <div class="navbar-collapse collapse" id="innerNavbar2">
                                 <ul class="navbar-nav float-start">
                                     <li class="nav-item dropdown">
-                                        <div class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <div class="nav-link dropdown-toggle fw-semibold" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Menu: <span class="models_page_menu_text">Model</span>
                                         </div>
                                         <ul class="dropdown-menu dropdown-menu-start">
@@ -171,9 +169,6 @@
                         </div>
                     </nav>
                     <div class="second_page_body container-lg mt-2">
-                        <div class="arrow_wrp">
-                            <div class="arrow_box"></div>
-                        </div>
                         <div class="second_page_body_left">
                             <p>Click/tap on the project name to get started, or click/tap on the information icon to learn more.</p>
                             <ul class="list-group list-group-flush">
@@ -191,15 +186,15 @@
                               </button>
                             </div>
                             <div class="navbar-brand text-truncate fw-semibold">
-                                <span class="models_page_left_panel text-truncate">Comparison 1</span>
-                                <span class="up_arrow" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Go back"></span>
+                                <span class="models_page_left_panel">Comparison 1</span>
                             </div>
+                            <span class="up_arrow d-flex" data-bs-toggle="popover" data-bs-content="Go back"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-90deg-up" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M4.854 1.146a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L4 2.707V12.5A2.5 2.5 0 0 0 6.5 15h8a.5.5 0 0 0 0-1h-8A1.5 1.5 0 0 1 5 12.5V2.707l3.146 3.147a.5.5 0 1 0 .708-.708l-4-4z"/> </svg></span>
                             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#innerNavbar" aria-controls="innerNavbar" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="navbar-collapse collapse" id="innerNavbar">
                                 <ul class="navbar-nav float-start">
-                                    <li class="nav-item dropdown">
+                                    <li class="nav-item dropdown fw-semibold">
                                         <div class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Menu: <span class="models_page_menu_text">Model</span>
                                         </div>
@@ -215,7 +210,7 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="nav-item dropdown iwriter_t">
+                                    <li class="nav-item dropdown iwriter_t fw-semibold">
                                         <div class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Settings
                                         </div>
@@ -268,23 +263,23 @@
                                                 <p>Choose what to show</p>
                                                 <p>Explore the model by showing and hiding different elements</p>
                                             </div>
-                                            <div class="structure_elements">
-                                                <div class="show_structre str_common">
-                                                    <span>Show structure</span>
-                                                    <div class="tick_mark"></div>
-                                                </div>
-                                                <div class="show_notes str_common">
-                                                    <span>Show notes</span>
-                                                    <div class="tick_mark"></div>
-                                                </div>
-                                                <div class="show_content str_common">
-                                                    <span>Show content</span>
-                                                    <div class="tick_mark"></div>
-                                                </div>
-                                                <div class="show_all str_common">
-                                                    <span>Show all</span>
-                                                    <div class="tick_mark"></div>
-                                                </div>
+                                            <div class="structure_elements list-group">
+                                                <button type="button" class="fw-semibold show_structre str_common list-group-item list-group-item-action list-group-item-danger d-flex justify-content-between" data-bs-dismiss="offcanvas">
+                                                    Show structure
+                                                    <div class="badge bg-primary p-1"></div>
+                                                </button>
+                                                <button type="button" class="fw-semibold show_notes str_common list-group-item list-group-item-action list-group-item-success d-flex justify-content-between" data-bs-dismiss="offcanvas">
+                                                    Show notes
+                                                    <div class="badge bg-primary p-1"></div>
+                                                </button>
+                                                <button type="button" class="fw-semibold show_content str_common list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between" data-bs-dismiss="offcanvas">
+                                                    Show content
+                                                    <div class="badge bg-primary p-1"></div>
+                                                </button>
+                                                <button type="button" class="fw-semibold show_all str_common list-group-item list-group-item-action list-group-item-warning d-flex justify-content-between" data-bs-dismiss="offcanvas">
+                                                    Show all
+                                                    <div class="badge bg-primary p-1"></div>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -293,7 +288,7 @@
                             </div>
                             <div class="col-md-8 col-sm-12">
                                 <div class="models_page_body_right">
-                                    <div class="models_header"></div>
+                                    <div class="models_header mb-4"></div>
                                     <div class="models_content bg-body-tertiary p-4"></div>
                                 </div>
                             </div>
@@ -316,10 +311,10 @@
                                 <input type="text" name="project_name" class="form-control mb-4 project_name">
                                 <p class="err text-danger"></p>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary ok_btn">OK</button>
-                                <button type="button" class="btn btn-secondary can_btn" data-bs-dismiss="modal">Close</button>
-                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary ok_btn">OK</button>
+                            <button type="button" class="btn btn-secondary can_btn" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
                     <div class="save_pop_2">
@@ -347,10 +342,10 @@
                                 <input type="text" name="project_name" class="form-control mb-4 project_name">
                                 <p class="err text-danger"></p>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary ok_btn create_mode">OK</button>
-                                <button type="button" class="btn btn-secondary ok_btn_common" data-bs-dismiss="modal">Close</button>
-                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary ok_btn create_mode">OK</button>
+                            <button type="button" class="btn btn-secondary ok_btn_common" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
                     <div class="save_pop_2">
@@ -371,13 +366,23 @@
                         <h1 class="modal-title fs-5" id="deleteModalLabel">Confirm delete project</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                        Do you want to delete this project?
+                    <div id="confirmDelete">
+                        <div class="modal-body" id="deleteProjName">
+                            Do you want to delete this project?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary ok_btn_delete">OK</button>
+                            <button type="button" class="btn btn-secondary can_btn" data-bs-dismiss="modal">Cancel</button>
+                        </div>
                     </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary ok_btn_delete" data-bs-dismiss="modal">OK</button>
-                    <button type="button" class="btn btn-secondary can_btn" data-bs-dismiss="modal">Cancel</button>
-                </div>
+                    <div id="deleteComplete">
+                        <div class="modal-body">
+                            Project has been deleted successfully.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary ok_btn_common" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -423,11 +428,7 @@
             }
         </script>
         <script src="scripts/jquery.min.js" type="text/javascript" language="JavaScript"></script>
-        <script src="scripts/jquery.reject.js" type="text/javascript" language="JavaScript"></script>
-        <script src="scripts/oldBrowser.js" type="text/javascript" language="JavaScript"></script>
         <script src="scripts/bootstrap.bundle.min.js"></script>
-        <script src="scripts/perfect-scrollbar.with-mousewheel.min.js" type="text/javascript" language="JavaScript"></script>
-        <script src="scripts/perfect-scrollbar.min.js" type="text/javascript" language="JavaScript"></script>
         <script src="scripts/custom.js" type="text/javascript" language="JavaScript"></script>
         <script src="scripts/controller.js" type="text/javascript" language="JavaScript"></script>
         <script>

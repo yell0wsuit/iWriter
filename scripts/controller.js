@@ -2,6 +2,7 @@ var event_type = 'click';
 var global_str = "";
 var awl_list = "";
 var overWrite_flag = false;
+const SVGCheckMark = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"> <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/> </svg>';
 
 var device_detect = false;
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -18,7 +19,7 @@ function Controller() {
     this.para_ids = new Array();
     this.event_type = 'click';
     this.config_msg;
-    this.xml_img_path = 'images/mitr/xml/';
+    this.xml_img_path = 'images/mitr/xml';
     this.project_short_name = "";
     this.current_tool = '';
     this.show_popup = false;
@@ -134,12 +135,11 @@ function Controller() {
         var project_html = '';
         for (var key in _this.project_xml_data) {
             if (_this.project_xml_data[key]['framework_model'] === 'y' && _this.project_xml_data[key]['framework_enabled'] === 'true') {
-                project_html = project_html + '<' + element + ' data-key="' + key + '" class="list-group-item list-group-item-action d-flex"><div class="li_inner me-2"><span class="sp_left" data-key="' + key + '">' + _this.project_xml_data[key]['project_name'] + '</span><span class="info_ic"></span></div><a href="javascript:void(0)" data-bs-toggle="popover" data-bs-content="'+ _this.project_xml_data[key]['framework_summery'] +'"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16"> <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/> </svg></a>' + '</' + element + '>';
+                project_html = project_html + '<' + element + ' data-key="' + key + '" class="list-group-item list-group-item-action d-flex"><div class="li_inner"><span class="sp_left" data-key="' + key + '">' + _this.project_xml_data[key]['project_name'] + '</span><span class="info_ic ms-2"></span></div><a href="javascript:void(0)" data-bs-toggle="popover" data-bs-content="'+ _this.project_xml_data[key]['framework_summery'] +'"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16"> <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/> </svg></a>' + '</' + element + '>';
             } else {
                 //project_html = project_html + '<' + element + ' data-key="' + key + '"><div style="opacity: 0.3; cursor: default;"class="li_inner_dis"><span class="sp_left_dis" data-key="' + key + '">' + _this.project_xml_data[key]['project_name'] + '</span><span class="info_ic_dis"></span></div><div class="info_text">' + _this.project_xml_data[key]['framework_summery'] + '</div>' + '</' + element + '>';
             }
         }
-        //$('.left_menu').hide();
         $('.second_page_body_left').css('left', '0');
         $('.second_page_body_right').empty();
         $(wrapper).empty().append(project_html);
@@ -148,42 +148,6 @@ function Controller() {
             $('#modelnavbar').text('Choose a model');
         }
         $('.top_model_menu_text,.models_page_menu_text').html('Models');
-        $(".info_ic").each(function(index, element) {
-
-            $(this).attr('data-show', 'hide');
-            $(this).bind(event_type, function(e) {
-                if ($(window).width() <= 768) {
-                    //$(".info_text").hide("blind");
-                    //$(this).parent().next().show("blind");
-                    $(".info_text").slideUp();
-                    //$(".info_ic").css('background-image', 'url("images/mitr/oxford/info_01.svg")');
-                    if ($(this).attr('data-show') == 'hide') {
-                        $(this).parent().next().slideDown();
-                        $(this).attr('data-show', 'show');
-                        $(this).css('filter', 'saturate(8)');
-                    } else {
-                        $(".info_text").slideUp();
-                        $(this).attr('data-show', 'hide');
-                        $(this).css('filter', 'saturate(1)');
-                    }
-                }
-            });
-            $(this).mouseover(function(e) {
-                if ($(window).width() > 768) {
-                    var pos = $(this).position();
-                    $('.arrow_box').html($(this).parents('.li_inner').next().html());
-                    $('.arrow_wrp').css('top', pos.top - ($('.arrow_wrp').height() / 2) + 16);
-                    $('.arrow_wrp').css('left', pos.left + 36);
-                    $('.arrow_wrp').show();
-                    $(this).css('filter', 'saturate(8)');
-                }
-            }).mouseout(function(e) {
-                if ($(window).width() > 768) {
-                    $('.arrow_wrp').hide();
-                    $(this).css('filter', 'saturate(1)');
-                }
-            });
-        });
         $(wrapper + ' .sp_left').off('click').on('click', function(e) {
             _this.current_pro_name = '';
             _this.createModel($(this).html(), $(this).attr('data-key'));
@@ -197,7 +161,6 @@ function Controller() {
         _this.current_tool = 'model';
         $('.inner_wrapper').css('overflow', 'hidden');
         $('.current_tool').text('My Writing');
-        $('.tool_down_arrow').hide();
         _this.reset_drop();
         $('.current_tool').on(event_type, function(e) {
 
@@ -225,22 +188,13 @@ function Controller() {
         //e.preventDefault();
         _this.project_short_name = '';
         $('.common_page').hide();
-        $('.info_text').hide();
         $('.models_page').show();
-        //$('.left_menu').show();
-        /*$('.models_page_body_left').css('left', 0);
-        if ($(window).width() <= 480) {
-            var left_pos = $('.models_page_body_left').position();
-            if (Number(left_pos.left) == 0) {
-                //$('.models_page_body').css('overflow', 'hidden');
-            }
-        }*/
 
         $('.str_common').each(function() {
-            $(this).children('.tick_mark').removeClass('_selected');
+            $(this).children('.badge').removeClass('_selected').empty();
         });
         $('.models_page_left_panel').html(m_name);
-        $('.models_page_body .left_wrapper').empty().html('<div class="steps_title"><p>Guided tour of the model</p><p>Take a step-by-step tour of how the model was written</p></div><ul class="medels_steps list-group list-group-flush"></ul>');
+        $('.models_page_body .left_wrapper').empty().html('<div class="steps_title"><p>Guided tour of the model</p><p>Take a step-by-step tour of how the model was written</p></div><div class="medels_steps list-group list-group-flush"></div>');
         $('.models_page_body_left .medels_steps').empty();
         $('.models_header').empty();
         $('.models_content').empty();
@@ -255,6 +209,8 @@ function Controller() {
         if ($(window).width() <= 768) {
             if (_this.project_short_name != '') {
                 $('.models_page_left_panel').html(_this.project_short_name);
+            } else {
+                $('.models_page_left_panel').parents('.navbar-brand').addClass('w-25');
             }
         }
 
@@ -271,46 +227,33 @@ function Controller() {
             });
         });
         if (!notes_status) {
-            $('.show_notes').hide();
+            $('.show_notes').addClass('d-none');
+        } else {
+            $('.show_notes').removeClass('d-none');
         }
         if (!content_status) {
-            $('.show_content').hide();
+            $('.show_content').addClass('d-none');
+        } else {
+            $('.show_content').removeClass('d-none');
         }
         //end check for filter
 
         $(_this.project_xml_data[_this.current_key]['xml_data']).find('step').each(function() {
-            guided_html = guided_html + '<li data-key="' + _this.current_key + '" data-para_ids="' + $(this).attr('para_ids') + '" class="list-group-item"><span data-key="' + _this.current_key + '" data-para_ids="' + $(this).attr('para_ids') + '" data-bs-dismiss="offcanvas">' + $(this).attr('label') + '</span></li>';
+            guided_html = guided_html + '<button data-bs-dismiss="offcanvas" data-key="' + _this.current_key + '" data-para_ids="' + $(this).attr('para_ids') + '" class="list-group-item list-group-item-action"><span data-key="' + _this.current_key + '" data-para_ids="' + $(this).attr('para_ids') + '">' + $(this).attr('label') + '</span></button>';
         });
         $('.models_page_body_left .medels_steps').append(guided_html);
-        $('.models_page_body_left .medels_steps li').on('click', function() {
+        $('.models_page_body_left .medels_steps button').on('click', function() {
 
             var scroll_pos = $('.main_wrapper').position();
             $(window).scrollTop(scroll_pos.top);
 
             _this.reset_drop();
             $('.str_common').each(function() {
-                $(this).children('.tick_mark').removeClass('_selected');
+                $(this).children('.badge').removeClass('_selected').empty();
             });
-            $('.medels_steps li').removeAttr('style');
-            $('.models_page_body_left .medels_steps li').css('background-color', 'rgba(0, 0, 0, 0)');
-            //if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-             //   $(this).css('background-color', '#3f51b5');
-            //} else {
-                $(this).css('background-color', 'var(--bs-primary)').css('color','white');
-            //}
-            /*var left_pos = $('.models_page_body_left').position();
-            if (Number(left_pos.left) == 0) {
-                if ($(window).width() <= 480) {
-                    $('.models_page_body_left').animate({'left': '-100%'});
-                    $('.left_menu').css('background-position', '0px 0px');
-                } else {
-                    $('.models_page_body_left').animate({'left': '-100%'});
-                    $('.left_menu').css('background-position', '0px 0px');
-                }
-            }*/
-            
-
-
+            //$('.medels_steps li').removeAttr('style');
+            $('.models_page_body_left .medels_steps button').removeClass('active');
+            $(this).addClass('active');
             var parent_0 = this;
             var top_para = new Array(); //It contains header info.
             var top_para_content = '';
@@ -350,13 +293,16 @@ function Controller() {
                     if ($(this).attr('label') == $(parent_0).children('span').text()) {
                         $(this).children().find('para').each(function(index) {
                             top_para[index] = $(this).text();
-                            top_para_content = top_para_content + '<p>' + $(this).text();
+                            top_para_content = top_para_content;
                             if ($(this).attr('showme')) {
                                 //top_para_content = top_para_content + '<div data-showme="' + $(this).attr('showme') + '"class="show_me_btn"></div>';
-                                top_para_content = top_para_content + ' ' + '<input class="show_me_btn form-check-input" data-color="' + bscolors[colors_cnt] + '" data-showme="' + $(this).attr('showme') + '" type="checkbox" name="showme">';
+                                top_para_content = top_para_content + '<div class="form-check"><input class="show_me_btn form-check-input" data-color="' + bscolors[colors_cnt] + '" data-showme="' + $(this).attr('showme') + '" type="checkbox" name="showme" id="'+ $(this).text().replace(/\s/g,'').substr(0,20) +'"><label class="form-check-label" for="'+ $(this).text().replace(/\s/g,'').substr(0,20) +'">' + $(this).text() + '</label></div>';
                                 colors_cnt++;
+                                
+                            } else {
+                                top_para_content = '<p>' + $(this).text() + '</p>';
                             }
-                            top_para_content = top_para_content + '</p>';
+                            //top_para_content = top_para_content + '</p>';
                         });
                         $('.models_header').html(top_para_content);
                     }
@@ -374,7 +320,7 @@ function Controller() {
                         if (typeof ($(this).children('content').attr('eid')) != 'undefined') {
                             temp_con_n = $(this).children('content').attr('eid').split('_');
                             if (typeof ($(this).children('content').attr('image')) != 'undefined') {
-                                xml_img = '<div class="xml_img_wrp"><img src="' + _this.xml_img_path + '/' + $(this).children('content').attr('image') + '"/></div>';
+                                xml_img = '<img class="img-fluid mb-2 mx-auto d-block" src="' + _this.xml_img_path + '/' + $(this).children('content').attr('image') + '"/>';
                             }
                         }
                         if (typeof ($(this).children('notes').attr('eid')) != 'undefined') {
@@ -441,7 +387,7 @@ function Controller() {
                     if ($(this).find('name').length != 0 && typeof ($(this).children('name').attr('eid')) != 'undefined') {
                         var name_node = $(this).children('name').attr('eid').split('_');
                         if (para_ids.indexOf(parseInt(name_node[name_node.length - 1])) != (-1)) {
-                            body_content += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
+                            body_content += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" data-align="' + $(this).attr('align') + '">';
                             body_content += '<p>' + $(this).children('name').text() + '</p>';
                             if ($(this).find('desc').length == 0 && typeof ($(this).children('desc').attr('eid')) == 'undefined') {
                                 body_content += '</div></div>';
@@ -463,11 +409,11 @@ function Controller() {
                         if (para_ids.indexOf(parseInt(desc_node[desc_node.length - 1])) != (-1)) {
 
                             if ($(this).find('name').length == 0 && typeof ($(this).children('name').attr('eid')) == 'undefined') {
-                                body_content += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
+                                body_content += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" data-align="' + $(this).attr('align') + '">';
                             } else {
                                 var _para_id = $(this).children('name').attr('eid').split('_');
                                 if (para_ids.indexOf(parseInt(_para_id[_para_id.length - 1])) == (-1)) {
-                                    body_content += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
+                                    body_content += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" data-align="' + $(this).attr('align') + '">';
                                 }
                             }
                             body_content += '<p>' + $(this).find('desc').text() + '</p>';
@@ -478,7 +424,7 @@ function Controller() {
                     if ($(this).find('notes').length != 0 && typeof ($(this).children('notes').attr('eid')) != 'undefined') {
                         var notes_node = $(this).children('notes').attr('eid').split('_');
                         if (para_ids.indexOf(parseInt(notes_node[notes_node.length - 1])) != (-1)) {
-                            body_content += '<div class="content_box"><div class="notes_content text-success-emphasis fst-italic" style="text-align:' + $(this).attr('align') + '">';
+                            body_content += '<div class="content_box"><div class="notes_content text-success-emphasis fst-italic" data-align="' + $(this).attr('align') + '">';
                             body_content += notes_html_temp;
                             body_content += '</div></div>';
                         }
@@ -488,7 +434,7 @@ function Controller() {
                         var content_node = $(this).children('content').attr('eid').split('_');
                         if (para_ids.indexOf(parseInt(content_node[content_node.length - 1])) != (-1)) {
                             body_content += xml_img;
-                            body_content += '<div class="content_box"><div class="content_contents text-primary-emphasis mb-4" style="text-align:' + $(this).attr('align') + '">';
+                            body_content += '<div class="content_box"><div class="content_contents text-primary-emphasis mb-4" data-align="' + $(this).attr('align') + '">';
                             body_content += content_html_temp;
                             body_content += '</div></div>';
                         }
@@ -512,26 +458,28 @@ function Controller() {
                 body_content = body_content.replace(/ <\/span> /g, "</span> ");
                 body_content = body_content.replace(/<\/span>\.\./g, "</span>.");
                 $('.models_content').html(body_content);
-                //_this.db_clk();
                 $('.show_me_btn').on('change', function(e) {
                     _this.reset_drop();
                     //$('.content_box span').removeAttr('class');
                     var show_ids = $(this).attr('data-showme').toString().split(',');
                     var color_code = $(this).attr('data-color');
                     if (this.checked) {
+                        $(this).parent().find('.form-check-label').addClass(color_code); //Highlight the text next to checkbox
+                        $(this).addClass(color_code); //Change the checkbox bg color
                         for (var i = 0; i < show_ids.length; i++) {
                             show_ids[i] = show_ids[i].split('_');
                             show_ids[i] = show_ids[i][show_ids[i].length - 1];
                             $('.content_box span').each(function() {
                                 var con_id = $(this).attr('eid').split('_');
                                 if (con_id[con_id.length - 1] == show_ids[i]) {
-                                    $(this).addClass('highlight_txt');
                                     //$(this).css({'background-color': color_code, 'color': 'black'});
                                     $(this).addClass(color_code);
                                 }
                             });
                         }
                     } else {
+                        $(this).parent().find('.form-check-label').removeClass(color_code); //Remove bg color
+                        $(this).removeClass(color_code);
                         for (var i = 0; i < show_ids.length; i++) {
                             show_ids[i] = show_ids[i].split('_');
                             show_ids[i] = show_ids[i][show_ids[i].length - 1];
@@ -562,35 +510,35 @@ function Controller() {
             _this.para_ids[i] = _this.para_ids[i][_this.para_ids[i].length - 1];
             _this.para_ids[i] = _this.para_ids[i].trim();
         }
-        //$('.show_all').children('.tick_mark').addClass('_selected');
+        //$('.show_all').children('.badge').addClass('_selected');
         $('.str_common').off(event_type).on(event_type, function() {
 
-            $('.medels_steps li').removeAttr('style');
+            $('.medels_steps button').removeClass('active');
             _this.reset_drop();
             if ($(this).hasClass('show_all')) {
-                if ($(this).children('.tick_mark').hasClass('_selected')) {
+                if ($(this).children('.badge').hasClass('_selected')) {
                     $('.str_common').each(function() {
-                        $(this).children('.tick_mark').removeClass('_selected');
+                        $(this).children('.badge').removeClass('_selected').empty()
                     });
                 } else {
                     $('.str_common').each(function() {
-                        $(this).children('.tick_mark').addClass('_selected');
+                        $(this).children('.badge').addClass('_selected').html(SVGCheckMark);
                     });
                 }
             } else {
 
-                $('.show_structre:hidden').children('.tick_mark').addClass('_selected');
-                $('.show_notes:hidden').children('.tick_mark').addClass('_selected');
-                $('.show_content:hidden').children('.tick_mark').addClass('_selected');
-                $('.show_all').children('.tick_mark').removeClass('_selected');
-                if ($(this).children('.tick_mark').hasClass('_selected')) {
-                    $(this).children('.tick_mark').removeClass('_selected');
+                $('.show_structre:hidden').children('.badge').addClass('_selected').html(SVGCheckMark);
+                $('.show_notes:hidden').children('.badge').addClass('_selected').html(SVGCheckMark);
+                $('.show_content:hidden').children('.badge').addClass('_selected').html(SVGCheckMark);
+                $('.show_all').children('.badge').removeClass('_selected').empty();
+                if ($(this).children('.badge').hasClass('_selected')) {
+                    $(this).children('.badge').removeClass('_selected').empty();
                 } else {
-                    $(this).children('.tick_mark').addClass('_selected');
+                    $(this).children('.badge').addClass('_selected').html(SVGCheckMark);
                 }
 
-                if ($('.show_structre').children('.tick_mark').hasClass('_selected') && $('.show_notes').children('.tick_mark').hasClass('_selected') && $('.show_content').children('.tick_mark').hasClass('_selected')) {
-                    $('.show_all').children('.tick_mark').addClass('_selected');
+                if ($('.show_structre').children('.badge').hasClass('_selected') && $('.show_notes').children('.badge').hasClass('_selected') && $('.show_content').children('.badge').hasClass('_selected')) {
+                    $('.show_all').children('.badge').addClass('_selected').html(SVGCheckMark);
                 }
             }
 
@@ -616,7 +564,7 @@ function Controller() {
                 if ($(this).find('content').length != 0) {
 
                     if (typeof ($(this).children('content').attr('image')) != 'undefined') {
-                        xml_img = '<div class="xml_img_wrp"><img src="' + _this.xml_img_path + '/' + $(this).children('content').attr('image') + '"/></div>';
+                        xml_img = '<img class="img-fluid mb-2 mx-auto d-block" src="' + _this.xml_img_path + '/' + $(this).children('content').attr('image') + '"/>';
                     }
 
 
@@ -646,13 +594,13 @@ function Controller() {
                     }
                 }
                 $('.models_content').removeClass('d-none');
-                if ($('.show_structre').children('.tick_mark').hasClass('_selected') || $('.show_all').children('.tick_mark').hasClass('_selected')) {
+                if ($('.show_structre').children('.badge').hasClass('_selected') || $('.show_all').children('.badge').hasClass('_selected')) {
                     if ($(this).children('name').length != 0 && $(this).children('name').text() != "") {
-                        content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
+                        content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" data-align="' + $(this).attr('align') + '">';
                         content_data += '<p>' + $(this).find('name').text() + '</p>';
                     } else {
                         if ($(this).children('desc').length != 0 && $(this).children('desc').text() != "") {
-                            content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
+                            content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" data-align="' + $(this).attr('align') + '">';
                         }
                     }
                     if ($(this).children('desc').length != 0 && $(this).children('desc').text() != "") {
@@ -663,19 +611,19 @@ function Controller() {
                     }
                 }
                 if ($('.show_notes').is(':visible')) {
-                    if ($('.show_notes').children('.tick_mark').hasClass('_selected') || $('.show_all').children('.tick_mark').hasClass('_selected')) {
+                    if ($('.show_notes').children('.badge').hasClass('_selected') || $('.show_all').children('.badge').hasClass('_selected')) {
                         if ($(this).children('notes').length != 0 && $(this).children('notes').text() != "" && typeof ($(this).children('notes').attr('dup')) == 'undefined') {
-                            content_data += '<div class="content_box"><div class="notes_content text-success-emphasis fst-italic" style="text-align:' + $(this).attr('align') + '">';
+                            content_data += '<div class="content_box"><div class="notes_content text-success-emphasis fst-italic" data-align="' + $(this).attr('align') + '">';
                             content_data += notes_html_temp;
                             content_data += '</div></div>';
                         }
                     }
                 }
                 if ($('.show_content').is(':visible')) {
-                    if ($('.show_content').children('.tick_mark').hasClass('_selected') || $('.show_all').children('.tick_mark').hasClass('_selected')) {
+                    if ($('.show_content').children('.badge').hasClass('_selected') || $('.show_all').children('.badge').hasClass('_selected')) {
                         if ($(this).children('content').length != 0 && $(this).children('content').text() != "" && typeof ($(this).children('content').attr('dup')) == 'undefined') {
                             content_data += xml_img;
-                            content_data += '<div class="content_box"><div class="content_contents text-primary-emphasis mb-4" style="text-align:' + $(this).attr('align') + '">';
+                            content_data += '<div class="content_box"><div class="content_contents text-primary-emphasis mb-4" data-align="' + $(this).attr('align') + '">';
                             content_data += content_html_temp;
                             content_data += '</div></div>';
                         }
@@ -705,7 +653,6 @@ function Controller() {
 
 
             $('.models_content').html(content_data);
-            //_this.db_clk();
             $('.cont_wrp_box').each(function() {
                 if ($(this).html() == '') {
                     $(this).remove();
@@ -716,7 +663,7 @@ function Controller() {
             $('.models_header').html('<p>' + $(_this.config_msg).find('commentary_help').text() + '</p>');
             var show_top_head = true;
             $('.str_common:visible').each(function() {
-                if ($(this).children('.tick_mark').hasClass('_selected')) {
+                if ($(this).children('.badge').hasClass('_selected')) {
                     show_top_head = false;
                 }
             });
@@ -738,252 +685,117 @@ function Controller() {
         var project_html = '';
         for (var key in _this.project_xml_data) {
             if (_this.project_xml_data[key]['framework_enabled'] === 'true') {
-                project_html = project_html + '<' + element + ' data-key="' + key + '" class="list-group-item list-group-item-action d-flex"><div class="li_inner me-2"><span class="sp_left" data-key="' + key + '">' + _this.project_xml_data[key]['project_name'] + '</span><span class="info_ic"></span></div><a href="javascript:void(0)" data-bs-toggle="popover" data-bs-content="'+ _this.project_xml_data[key]['framework_summery'] +'"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16"> <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/> </svg></a>' + '</' + element + '>';
+                project_html = project_html + '<' + element + ' data-key="' + key + '" class="list-group-item list-group-item-action d-flex"><div class="li_inner"><span class="sp_left" data-key="' + key + '">' + _this.project_xml_data[key]['project_name'] + '</span><span class="info_ic ms-2"></span></div><a href="javascript:void(0)" data-bs-toggle="popover" data-bs-content="'+ _this.project_xml_data[key]['framework_summery'] +'"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16"> <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/> </svg></a>' + '</' + element + '>';
             }
         }
-        //$('.left_menu').show();
         $('.second_page_body_left').css('left', '0');
         $(wrapper).empty().append(project_html);
-        $('.second_page_top h1').html('Choose the type of writing you want to do');
+        $('#modelnavbar').html('Choose the type of writing you want to do');
         if (Number($(window).width()) <= 480) {
-            $('.second_page_top h1').text('Choose a model');
+            $('#modelnavbar').text('Choose a model');
         }
 
-        $(".info_ic").each(function(index, element) {
+        $('.sp_left').off('click').on('click', function(e1) {
+            var scroll_pos = $('.main_wrapper').position();
+            $(window).scrollTop(scroll_pos.top);
+            //for device
+            e1.preventDefault();
+            //var left_pos = $('.second_page_body_left').position();
+            $('.second_page_body').scrollTop(0);
+            $('.second_page_body_left').stop();
 
-            $(this).attr('data-show', 'hide');
-            $(this).bind(event_type, function(e) {
-                if ($(window).width() <= 768) {
-                    //$(".info_text").hide("blind");
-                    ///$(this).parent().next().show("blind");
-
-                    $(".info_text").slideUp();
-                    //$(".info_ic").css('background-image', 'url("images/mitr/oxford/info_01.svg")');
-                    if ($(this).attr('data-show') == 'hide') {
-                        $(this).parent().next().slideDown();
-                        $(this).attr('data-show', 'show');
-                        $(this).css('filter', 'saturate(8)');
-                    } else {
-                        $(".info_text").slideUp();
-                        $(this).attr('data-show', 'hide');
-                        $(this).css('filter', 'saturate(1)');
-                    }
-                }
-            });
-            $(this).mouseover(function(e) {
-                if ($(window).width() > 768) {
-                    var pos = $(this).position();
-                    $('.arrow_box').html($(this).parents('.li_inner').next().html());
-                    $('.arrow_wrp').css('top', pos.top - ($('.arrow_wrp').height() / 2) + 16);
-                    $('.arrow_wrp').css('left', pos.left + 36);
-                    $('.arrow_wrp').show();
-                    $(this).css('filter', 'saturate(8)');
-                }
-            }).mouseout(function(e) {
-                if ($(window).width() > 768) {
-                    $('.arrow_wrp').hide();
-                    $(this).css('filter', 'saturate(1)');
-                }
-            });
-            $('.sp_left').off('click').on('click', function(e1) {
-                var scroll_pos = $('.main_wrapper').position();
-                $(window).scrollTop(scroll_pos.top);
-                //for device
-                e1.preventDefault();
-                $('.tool_wrapper,.down_arrow_wrapper').hide();
-                //var left_pos = $('.second_page_body_left').position();
-                $('.second_page_body').scrollTop(0);
-                $('.second_page_body_left').stop();
-                /*if (Number(left_pos.left) == 0) {
-                    if ($(window).width() <= 480) {
-                        $('.second_page_body_left').animate({'left': '-100%'});
-                        $('.left_menu').css('background-position', '0px 0px');
-                    } else {
-                        $('.second_page_body_left').animate({'left': '-100%'});
-                        $('.left_menu').css('background-position', '0px 0px');
-                    }
-                    //$('.models_page_body,.second_page_body,.second_page_body_left,.models_page_body_left').css('overflow-y', 'scroll');
-                } else {
-                    $('.second_page_body_left').animate({'left': '0'});
-                    //$('.second_page_body').css('overflow', 'hidden');
-                    //$('.left_menu').css('background-position', '-5px 0px');
-                } */
-                //end for device
+            //end for device
 
 
-                var head_html = '<div class="models_header w_models_header"><p>' + _this.project_xml_data[$(this).attr('data-key')]['framework_summery'] + '</p></div>';
-                head_html += '<div class="d-grid"><button class="btn btn-primary mb-4 p-3 create_project create_pro_btn" data-type="create" data-key="' + $(this).attr('data-key') + '" role="button">Create a new project</button></div>';
-                _this.current_key = $(this).attr('data-key');
-                var postData = {'data-key': _this.current_key};
-                
-                //IndexedDB
-                async function showProj() {
-                    if (/academic/.test(location.pathname) == !1) {
-                        var results = await connection.select({
-                            from: 'iw_projects',
-                            where: {data_id: _this.current_key},
-                            order: {
-                                by: 'date_time',
-                                type: 'desc'
-                            }
-                        })
-                    } else {
-                        var results = await connection.select({
-                            from: 'iw_aca_projects',
-                            where: {data_id: _this.current_key},
-                            order: {
-                                by: 'date_time',
-                                type: 'desc'
-                            }
-                        })
-                    }
-                    
-                    var temp_html = '';
-                    for (var i in results) {
-                        var _name = results[i]['name'].replace(/\#\|\#/g, "'");
-                        _name = _name.replace(/\#\|\|\#/g, '"');
-                        temp_html += '<div class="create_project mb-2 bg-body-tertiary" data-key="' + results[i]['data_id'] + '" data-project="' + results[i]['name'] + '" data-type="save">' + _name + '<br>' + results[i]['dtime'] + '</div>';
-                        temp_html += '<div class="delete_project" data-key="' + results[i]['id'] + '" data-bs-toggle="modal" data-bs-target="#deleteModal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16"><path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/></svg></div>';
-                    }
-                    head_html += temp_html;
-                    //$('.second_page_body_right').show().empty().html(head_html);
-                    $('#newProjectModal').modal('show').find('.modal-body').html(head_html);
-                    $('#newProjectModalLabel').text(_this.project_xml_data[_this.current_key]['project_name']);
-                    $('.delete_project').unbind(event_type).bind(event_type, function(e2) {
-                        e2.preventDefault();
-                        var delete_id = $(this).attr('data-key');
-                        var temp_this = this;
-                        //var r = confirm("Are you sure you want to delete this project?");
-                        //$('.white_content').remove();
-                        //var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Are you sure you want to delete this project?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
-                        //$('.main_wrapper').append(temp_pop);
-                        //$('.white_content').show();
-                        //call_pop();
-                        $('.ok_btn_delete').off(event_type).on(event_type, function() {
-                            //$('.white_content').hide();
-                            async function removeProj() {
-                                if (/academic/.test(location.pathname) == !1) {
-                                    var deleteProj = await connection.remove({
-                                        from: 'iw_projects',
-                                        where: {
-                                            id: Number(delete_id)
-                                        }
-                                    });
-                                } else {
-                                    var deleteProj = await connection.remove({
-                                        from: 'iw_aca_projects',
-                                        where: {
-                                            id: Number(delete_id)
-                                        }
-                                    });
-                                }
-                                
-                            };
-                            removeProj();
-                            $(temp_this).prev().remove();
-                            (temp_this).remove();
-                        });
-                        $('.can_btn_pop').off(event_type).on(event_type, function() {
-                            //$('.white_content').hide();
-                        });
-                        return false;
-                    });
-                    $('.create_project').off().on(event_type, function(e3) {
-                        if ($(this).attr('data-type') == 'create') {
-                            _this.current_pro_name = '';
-                        } else {
-                            _this.current_pro_name = $(this).attr('data-project');
+            var head_html = '<div class="models_header w_models_header"><p>' + _this.project_xml_data[$(this).attr('data-key')]['framework_summery'] + '</p></div>';
+            head_html += '<div class="d-grid"><button class="btn btn-primary mb-4 p-3 create_project create_pro_btn" data-type="create" data-key="' + $(this).attr('data-key') + '" role="button">Create a new project</button></div>';
+            _this.current_key = $(this).attr('data-key');
+            var postData = {'data-key': _this.current_key};
+            
+            //IndexedDB
+            async function showProj() {
+                if (/academic/.test(location.pathname) == !1) {
+                    var results = await connection.select({
+                        from: 'iw_projects',
+                        where: {data_id: _this.current_key},
+                        order: {
+                            by: 'date_time',
+                            type: 'desc'
                         }
-                        _this.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
-                        $('#newProjectModal').modal('hide')
-                    });
+                    })
+                } else {
+                    var results = await connection.select({
+                        from: 'iw_aca_projects',
+                        where: {data_id: _this.current_key},
+                        order: {
+                            by: 'date_time',
+                            type: 'desc'
+                        }
+                    })
                 }
-                showProj();
                 
-                /*
-                 var formURL = 'database.php?fetchmodel';
-                 $.ajax(
-                 {
-                 url: formURL,
-                 type: "POST",
-                 data: postData,
-                 success: function(data, textStatus, jqXHR)
-                 {
-                 if (data == '0') {
+                var temp_html = '<div class="d-grid">';
+                for (var i in results) {
+                    var _name = results[i]['name'].replace(/\#\|\#/g, "'");
+                    _name = _name.replace(/\#\|\|\#/g, '"');
+                    temp_html += '<div class="btn-group mb-2" role="group" aria-label="Project lists"><button type="button" class="text-start btn btn-outline-secondary create_project" data-key="' + results[i]['data_id'] + '" data-project="' + results[i]['name'] + '" data-type="save">' + _name + '<br>' + results[i]['dtime'] + '</button>';
+                    temp_html += '<button type="button" class="btn btn-outline-danger delete_project" data-key="' + results[i]['id'] + '"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16"><path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/></svg></button></div>';
+                }
+                temp_html += '</div>';
+                head_html += temp_html;
 
-                 } else {
-                 head_html += data;
-                 }
-                 $('.second_page_body_right').show().empty().html(head_html);
-                 $('.second_page_body_right .delete_project').unbind(event_type).bind(event_type, function(e2) {
-                 e2.preventDefault();
-                 //alert('delete pressed');
+                $('#newProjectModal').modal('show').find('.modal-body').html(head_html);
+                $('#newProjectModalLabel').text(_this.project_xml_data[_this.current_key]['project_name']);
+                $('.delete_project').unbind(event_type).bind(event_type, function(e2) {
+                    e2.preventDefault();
+                    $('#newProjectModal').modal('hide');
+                    $('#deleteModal').modal('show');
+                    $('#deleteComplete').hide();
+                    $('#deleteProjName').text('Do you want to delete “' + $(this).parent().find('[data-project]').attr('data-project') + '”? This action cannot be undone.');
+                    var delete_id = $(this).attr('data-key');
+                    var temp_this = this;
+                    $('.ok_btn_delete').off(event_type).on(event_type, function() {
 
-
-                 var delete_id = $(this).attr('data-key');
-                 var temp_this = this;
-
-
-                 //var r = confirm("Are you sure you want to delete this project?");
-
-                 $('.white_content').remove();
-                 var temp_pop = '<div class="white_content"><div class="pop_wrap"><div class="pop_msg">Are you sure you want to delete this project?</div><div class="btn_wrp"><div class="can_btn_pop">Cancel</div><div class="ok_btn_pop">OK</div></div></div></div>';
-                 $('.main_wrapper').append(temp_pop);
-                 $('.white_content').show();
-
-                 $('.ok_btn_pop').off(event_type).on(event_type, function() {
-                 $('.white_content').hide();
-
-                 var formURL = 'database.php?delete';
-                 var postData = {'id': delete_id};
-                 $.ajax(
-                 {
-                 url: formURL,
-                 type: "POST",
-                 data: postData,
-                 success: function(data, textStatus, jqXHR)
-                 {
-                 if (data == '0') {
-                 alert('Please  try again');
-                 } else {
-                 $(temp_this).prev().remove();
-                 $(temp_this).remove();
-                 }
-                 },
-                 error: function(jqXHR, textStatus, errorThrown)
-                 {
-                 //if fails
-                 alert('Please  try again');
-                 }
-                 }
-                 );
-
-                 });
-                 $('.can_btn_pop').off(event_type).on(event_type, function() {
-                 $('.white_content').hide();
-                 });
-
-
-
-                 return false;
-                 });
-                 $('.create_project').off().on(event_type, function(e3) {
-                 if ($(this).attr('data-type') == 'create') {
-                 _this.current_pro_name = '';
-                 } else {
-                 _this.current_pro_name = $(this).attr('data-project');
-                 }
-                 _this.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
-                 });
-                 },
-                 error: function(jqXHR, textStatus, errorThrown)
-                 {
-                 //if fails
-
-                 }
-                 }
-                 );*/
-            });
+                        async function removeProj() {
+                            if (/academic/.test(location.pathname) == !1) {
+                                var deleteProj = await connection.remove({
+                                    from: 'iw_projects',
+                                    where: {
+                                        id: Number(delete_id)
+                                    }
+                                });
+                            } else {
+                                var deleteProj = await connection.remove({
+                                    from: 'iw_aca_projects',
+                                    where: {
+                                        id: Number(delete_id)
+                                    }
+                                });
+                            }
+                            
+                        };
+                        removeProj();
+                        $('#deleteComplete').show();
+                        $('#confirmDelete').hide();
+                        $(temp_this).prev().remove();
+                        (temp_this).remove();
+                    });
+                    $('.can_btn_pop').off(event_type).on(event_type, function() {
+                        //$('.white_content').hide();
+                    });
+                    return false;
+                });
+                $('.create_project').off().on(event_type, function(e3) {
+                    if ($(this).attr('data-type') == 'create') {
+                        _this.current_pro_name = '';
+                    } else {
+                        _this.current_pro_name = $(this).attr('data-project');
+                    }
+                    _this.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
+                    $('#newProjectModal').modal('hide')
+                });
+            }
+            showProj();
         });
     };
     this.writerInit = function() {
@@ -1070,7 +882,6 @@ function Controller() {
         function hide_elem() {
             $('.common_page').hide();
             $('.second_page').show();
-            $('.tool_wrapper,.down_arrow_wrapper').hide();
             $('.second_page_body_right').hide();
             $('.second_page_body_left').css('left', '0');
         }
@@ -1126,23 +937,15 @@ function Controller() {
             }
         });
         $('.inner_wrapper').css('overflow', 'hidden');
-        $('.tool_down_arrow').show();
         $('.top_model_menu_text,.models_page_menu_text').html('My Writing');
         _this.reset_drop();
         //e.preventDefault();
         _this.project_short_name = '';
         $('.common_page').hide();
-        $('.info_text').hide();
         $('.models_page').show();
-        if ($(window).width() <= 480) {
-            //var left_pos = $('.models_page_body_left').position();
-            //if (Number(left_pos.left) == 0) {
-                //$('.models_page_body').css('overflow', 'hidden');
-            //}
-        }
 
         $('.str_common').each(function() {
-            $(this).children('.tick_mark').removeClass('_selected');
+            $(this).children('.badge').removeClass('_selected').empty();
         });
         $('.models_page_left_panel').html(_this.project_xml_data[data_key]['project_name']);
         console.log(_this.project_xml_data[data_key]['project_name']);
@@ -1163,6 +966,8 @@ function Controller() {
         if ($(window).width() <= 768) {
             if (_this.project_short_name != '') {
                 $('.models_page_left_panel').html(_this.project_short_name);
+            } else {
+                $('.models_page_left_panel').parents('.navbar-brand').addClass('w-25');
             }
         }
 
@@ -1177,10 +982,14 @@ function Controller() {
             }
         });
         if (!notes_status) {
-            $('.show_notes').hide();
+            $('.show_notes').addClass('d-none');
+        } else {
+            $('.show_notes').removeClass('d-none');
         }
         if (!content_status) {
-            $('.show_content').hide();
+            $('.show_content').addClass('d-none');
+        } else {
+            $('.show_notes').removeClass('d-none');
         }
         //end check for filter
 
@@ -1237,32 +1046,6 @@ function Controller() {
                 }
             }
             loadProj();
-            
-            /*var postData = {'data-key': _this.current_key, 'project_name': data_project};
-             var formURL = 'database.php?fetch';
-             $.ajax(
-             {
-             url: formURL,
-             type: "POST",
-             data: postData,
-             //dataType: "xml",
-             success: function(data, textStatus, jqXHR)
-             {
-             if (data == '0') {
-
-             } else {
-             //xml_dom = data;
-             $('.save_pro').attr('data-project-name', data_project);
-             _this.load_save_project(_this.StringToXML(data));
-             }
-             },
-             error: function(jqXHR, textStatus, errorThrown)
-             {
-             //if fails
-             alert('Please try again');
-             }
-             }
-             );*/
         }
 
 
@@ -1271,8 +1054,6 @@ function Controller() {
     this.load_save_project = function(xml_dom) {
         var content_data = '';
         $(xml_dom).find('paragraph').each(function() {
-
-
             var tag_status = false;
             var xml_img = '';
             if ($(this).find('content').length != 0 || $(this).find('notes').length != 0 || $(this).find('name').length != 0 || $(this).find('desc').length != 0) {
@@ -1282,7 +1063,6 @@ function Controller() {
             if (tag_status) {
                 content_data += '<div class="cont_wrp_box mt-4">';
             }
-
 
             var content_html_temp = '';
             var xmlText = new XMLSerializer();
@@ -1301,9 +1081,9 @@ function Controller() {
                 }
             }
 
-            if ($('.show_structre').children('.tick_mark').hasClass('_selected') || $('.show_all').children('.tick_mark').hasClass('_selected')) {
+            if ($('.show_structre').children('.badge').hasClass('_selected') || $('.show_all').children('.badge').hasClass('_selected')) {
                 if ($(this).children('name').length != 0 && $(this).children('name').text() != "") {
-                    content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
+                    content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" data-align="' + $(this).attr('align') + '">';
                     content_data += '<p>' + $(this).find('name').text() + '</p>';
                     if ($(this).children('tip').length != 0 && $(this).children('desc').length == 0) {
                         content_data += '<p>' + $(this).find('tip').text() + '</p>';
@@ -1311,7 +1091,7 @@ function Controller() {
 
                 } else {
                     if ($(this).children('desc').length != 0 && $(this).children('desc').text() != "") {
-                        content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
+                        content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" data-align="' + $(this).attr('align') + '">';
                     }
                 }
 
@@ -1325,7 +1105,7 @@ function Controller() {
                     content_data += '</div></div>';
                 }
             }
-            if ($('.show_notes').children('.tick_mark').hasClass('_selected') || $('.show_all').children('.tick_mark').hasClass('_selected')) {
+            if ($('.show_notes').children('.badge').hasClass('_selected') || $('.show_all').children('.badge').hasClass('_selected')) {
                 if ($(this).children('notes').length != 0 && typeof ($(this).children('notes').attr('dup')) == 'undefined') {
                     var temp_pl = '';
                     if (typeof ($(this).find('notes').attr('data-val')) != 'undefined') {
@@ -1334,12 +1114,12 @@ function Controller() {
                         temp_pl += "Type your notes here";
                     }
 
-                    content_data += '<div class="content_box"><div data-ph="Type your notes here" class="form-control notes_content text-success-emphasis fst-italic" contenteditable="true" style="text-align:' + $(this).attr('align') + '">';
+                    content_data += '<div class="content_box"><div data-ph="Type your notes here" class="form-control notes_content text-success-emphasis fst-italic" contenteditable="true" data-align="' + $(this).attr('align') + '">';
                     content_data += '';
                     content_data += '</div></div>';
                 }
             }
-            if ($('.show_content').children('.tick_mark').hasClass('_selected') || $('.show_all').children('.tick_mark').hasClass('_selected')) {
+            if ($('.show_content').children('.badge').hasClass('_selected') || $('.show_all').children('.badge').hasClass('_selected')) {
                 if ($(this).children('content').length != 0 && typeof ($(this).children('content').attr('dup')) == 'undefined') {
                     var temp_pl = '';
                     if (typeof ($(this).find('content').attr('prompt')) != 'undefined') {
@@ -1347,7 +1127,7 @@ function Controller() {
                     } else {
                         temp_pl += 'Type your paragraph here';
                     }
-                    content_data += '<div class="content_box"><div data-ph="' + temp_pl + '" class="form-control content_contents text-primary-emphasis mb-4" contenteditable="true" data-align="' + $(this).attr('align') + '" style="text-align:' + $(this).attr('align') + '">';
+                    content_data += '<div class="content_box"><div data-ph="' + temp_pl + '" class="form-control content_contents text-primary-emphasis mb-4" contenteditable="true" data-align="' + $(this).attr('align') + '">';
                     content_data += content_html_temp;
                     content_data += '</div></div>';
                 }
@@ -1376,7 +1156,7 @@ function Controller() {
 
         $('.models_content').html(content_data);
         $('.models_content').removeClass('d-none');
-        //_this.db_clk();
+
         //placeholder functionality
 
         $('.content_contents').keyup(function() {
@@ -1421,8 +1201,7 @@ function Controller() {
 
         //left side content
         var checklist_cnt = 0;
-        var top_html_ck = '<div class="mt-2 check_content card"><div class="card-header check_top fw-semibold d-flex justify-content-between"><span>Use formal and impersonal language.</span><button type="button" class="btn-close close-check-top" aria-label="Close"></button></div><div class="card-body check_con"></div></div>';
-        //top_html_ck += '<div class="checklist_wrp" ><ul class="checklist_ul">';
+        var top_html_ck = '<div class="check_content card"><div class="card-header check_top fw-semibold d-flex justify-content-between"><span class="text-truncate me-2">Use formal and impersonal language.</span><button type="button" class="btn-close close-check-top" aria-label="Close"></button></div><div class="card-body check_con"></div></div>';
         top_html_ck += '<div class="checklist_wrp accordion accordion-flush" id="checkListAccordion"><div class="steps_title"><p>Checklists</p></div>';
         var statis_menu = new Array();
         statis_menu[0] = 'Before you start';
@@ -1491,27 +1270,6 @@ function Controller() {
         });
         top_html_ck += '</div>'; //end accordion
         $('.left_wrapper').empty().html(top_html_ck);
-        $('.checkpoints').hide();
-        $('.menu_1').off('click').on('click', function(e_p) {
-
-            if (!$(this).hasClass('_select')) {
-                $(this).addClass('_select');
-                $(this).next('.checkpoints').show('blind');
-                $(this).parent('li').css('background-image', 'url("images/mitr/up_a.svg")');
-                var pr_thi = this;
-                $('.menu_1').each(function(e_c) {
-                    if (pr_thi != this) {
-                        $(this).next('.checkpoints').hide('blind');
-                        $(this).removeClass('_select');
-                        $(this).parent('li').css('background-image', 'url("images/mitr/down_a.svg")');
-                    }
-                });
-            } else {
-                $(this).next('.checkpoints').hide('blind');
-                $(this).removeClass('_select');
-                $(this).parent('li').css('background-image', 'url("images/mitr/down_a.svg")');
-            }
-        });
         $('.close-check-top').off(event_type).on(event_type, function() {
             $('.check_content').hide();
             $('.checklist_wrp').show();
@@ -1529,14 +1287,12 @@ function Controller() {
         //left side content
 
         //load btn
-        $('.prolist_load').empty();
-        $('.load_pop_d').hide();
+        $('.prolist_load').removeClass('show');
         var load_status = true;
         
-        $('.load_pro').bind("mouseover touchend", function(e) {
+        $('.load_pro').on("click", function(e) {
             if (e.type == event_type) {
                 load_pro(e);
-                //$('.load_pop_d').show().css('right', '0px').css('top', '0px');
             } else {
                 load_pro(e);
             }
@@ -1574,25 +1330,14 @@ function Controller() {
                     }
                     
                     if (lists.length != 0) {
-                        var temp_html = (_this.current_pro_name === '' ? '' : '<li><a class="dropdown-item disabled">Current project name: <span class="proj_curr_nam">'+ _this.current_pro_name +'</span></a></li><li><hr class="dropdown-divider"></li>');
+                        var temp_html = (_this.current_pro_name === '' ? '' : '<li><a class="dropdown-item disabled">Current project: <span class="proj_curr_nam">'+ _this.current_pro_name +'</span></a></li><li><hr class="dropdown-divider"></li>');
                         for (var i in lists) {
                             var _name = lists[i]['name'].replace(/\#\|\#/g, "'");
                             _name = _name.replace(/\#\|\|\#/g, '"');
                             temp_html += '<li class="dropdown-item" role="button" data-type="save" data-project="' + lists[i]['name'] + '" data-key="' + lists[i]['data_id'] + '">' + _name + '</li>';
                         }
                         //temp_html += '';
-                        $('.prolist_load').empty().html(temp_html);
-                        $('.load_pop_d').show().css('right', '105%').css('top', '0px');
-                        if (e.type == event_type || e.type == 'click') {
-                            // for device
-                            $('.load_pop_d').show().css('right', '0px').css('top', '0px').css('z-index', '10');
-                            $('.load_pop_d').children('.arrowp_box').addClass('remove_arrow');
-                        }
-                        $('.tool_down_arrow_wrp li,.tool_wrapper li').mouseout(function() {
-                            if (!$(this).hasClass('load_pro')) {
-                                $('.load_pop_d').hide();
-                            }
-                        });
+                        $('.prolist_load').html(temp_html);
                         $('.prolist_load li').off(event_type).on(event_type, function() {
                             if (_this.show_popup) {
                                 $('.white_content').remove();
@@ -1601,7 +1346,6 @@ function Controller() {
                                 $('.white_content').show();
                                 call_pop();
                                 $('.ok_btn_pop').off(event_type).on(event_type, function() {
-                                    $('.load_pop_d').hide();
                                     _this.show_popup = false;
                                     _this.current_pro_name = $(this).attr('data-project');
                                     iWriter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
@@ -1619,68 +1363,12 @@ function Controller() {
                         } else {
                             let HTML_empty = '<li><a class="dropdown-item disabled">(empty)</a></li>';
                             $('.prolist_load').html(HTML_empty);
-                            $('.load_pop_d').hide();
                         }
                 }
                 allProj();
-                
-                /*var formURL = 'database.php?fetch_project';
-                 $.ajax(
-                 {
-                 url: formURL,
-                 type: "POST",
-                 data: postData,
-                 success: function(data, textStatus, jqXHR)
-                 {
-                 if (data == '0') {
-                 //alert('no projects found');
-                 $('.prolist_load').empty();
-                 $('.load_pop_d').hide();
-                 } else {
-                 $('.prolist_load').empty().html(data);
-                 $('.load_pop_d').show().css('right', '105%').css('top', '0px');
-                 $('.tool_down_arrow_wrp li,.tool_wrapper li').mouseout(function() {
-                 if (!$(this).hasClass('load_pro')) {
-                 $('.load_pop_d').hide();
-                 }
-                 });
-
-                 $('.prolist_load li').off(event_type).on(event_type, function() {
-                 if (_this.show_popup) {
-                 $('.white_content').remove();
-                 var temp_pop = '<div class="white_content"><div class="h-100 d-flex justify-content-center align-items-center"><div class="modal-backdrop fade show" style="z-index: 0"></div><div class="alert alert-warning alert-dismissible fade show" role="alert"> <h4 class="alert-heading"><span class="alertMsg">Confirm leave?</span></h4> <button type="button" class="btn-close can_btn_pop" data-bs-dismiss="alert" aria-label="Close"></button><p>You have unsaved changes. Do you still want to leave?</p><button type="button" class="btn btn-outline-primary ok_btn_pop">Yes</button> <button type="button" class="btn btn-outline-primary can_btn_pop" data-bs-dismiss="alert">No</button> </div> </div></div>';
-                 $('.main_wrapper').append(temp_pop);
-                 $('.white_content').show();
-
-                 $('.ok_btn_pop').off(event_type).on(event_type, function() {
-                 $('.load_pop_d').hide();
-                 _this.show_popup = false;
-                 _this.current_pro_name = $(this).attr('data-project');
-                 iWriter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
-                 });
-                 $('.can_btn_pop').off(event_type).on(event_type, function() {
-                 $('.white_content').hide();
-                 });
-                 } else {
-                 $('.load_pop_d').hide();
-                 _this.show_popup = false;
-                 _this.current_pro_name = $(this).attr('data-project');
-                 iWriter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
-                 }
-                 });
-                 }
-                 },
-                 error: function(jqXHR, textStatus, errorThrown)
-                 {
-                 //if fails
-                 alert('Please try again');
-                 }
-                 }
-                 );*/
-                //end ajax
             } else {
                 if ($('.prolist_load').html() != '') {
-                    $('.load_pop_d').show();
+                    //$('.load_pop_d').show();
                 }
 
             }
@@ -1698,79 +1386,19 @@ function Controller() {
             //if (event.target.className.split(" ")[0] == 'saveas_pro') {
                 if (!$('.save_pop_2').is(':visible')) {
                     $('.save_pop_1').show();
-                    $('.save_pop_2,.save_pop_d').hide();
-                    $('.saveas_pop_d').show().css('right', '105%').css('top', '0px');
+                    $('.save_pop_2').hide();
                     $('.err').text('');
                 }
             //}
         })
-        $('.saveas_pro_in').bind("mouseover touchend", function(event) {
-            var current_class = event.target.className.split(" ")[0];
-            if (event.target.className.split(" ")[0] == 'saveas_pro') {
-                if (!$('.save_pop_2').is(':visible')) {
-                    $('.save_pop_1').show();
-                    $('.save_pop_2,.save_pop_d').hide();
-                    $('.saveas_pop_d').show().css('right', '105%').css('top', '0px');
-                    $('.err').text('');
-                }
-            }
-            //for device
-            if (current_class == 'saveas_pro' || current_class == 'saveas_pro_in') {
-                if (device_detect) {
-                    $(this).css('z-index', '10');
-                    if (!$('.save_pop_2').is(':visible')) {
-                        $('.save_pop_1').show();
-                        $('.save_pop_2').hide();
-                        $('.saveas_pop_d,.save_pop_d').show().css('right', '105%').css('top', '0px');
-                        $('.err').text('');
 
-                        $('.saveas_pop_d').show().css('right', '0px').css('top', '0px');
-                        $('.saveas_pop_d').children('.arrowp_box').addClass('remove_arrow');
-                        $('.save_pop_d').hide();
-                    }
-                }
-            }
-        });
         //end save as
-        
-        //$('.save_pro').mouseover(function(event) {
-        $('.save_pro').bind("mouseover touchend", function(event) {
-            var current_class = event.target.className.split(" ")[0];
-            if (event.target.className.split(" ")[0] == 'save_pro') {
-                if (_this.save_type == 'create') {
-                    $('.save_pop_1').show();
-                    $('.save_pop_2,.saveas_pop_d').hide();
-                    $('.save_pop_d').show().css('right', '105%').css('top', '0px');
-                    $('.err').text('');
-                }
-            }
-            if (current_class == 'save_pro' || current_class == 'save_pro_in') {
-                if (device_detect) {
-                    $(this).css('z-index', '11');
-                    if (_this.save_type == 'create') {
-                        $('.save_pop_1').show();
-                        $('.save_pop_2,.saveas_pop_d').hide();
-                        $('.err').text('');
-                        $('.save_pop_d').show().css('right', '0px').css('top', '0px');
-                        $('.save_pop_d').children('.arrowp_box').addClass('remove_arrow');
-                        $('.saveas_pop_d').hide();
-                    }
-                }
-            }
-        });
-        $('.tool_down_arrow_wrp li,.tool_wrapper li').mouseover(function() {
-            if (!$(this).hasClass('save_pro')) {
-                $('.save_pop_d').hide();
-            }
-            if (!$(this).hasClass('saveas_pro')) {
-                $('.saveas_pop_d').hide();
-            }
-        });
+
         $('.can_btn,.ok_btn_common').off(event_type).on(event_type, function() {
-            $('.saveas_pop_d').hide();
-            $('.save_pop_d').hide();
-            $('.save_pop_1').show();
-            $('.save_pop_2').hide();
+            if ('ontouchstart' in window == !1) {
+                $('.save_pop_1').show();
+                $('.save_pop_2').hide();
+            }
             $('.project_name').val('');
             $('.err').text('');
             $('.err').removeClass('overWrite_flag');
@@ -1885,40 +1513,6 @@ function Controller() {
                             }
                         }
                         saveProj();
-                        
-                        /*var formURL = 'database.php?add';
-                         $.ajax(
-                         {
-                         url: formURL,
-                         type: "POST",
-                         data: postData,
-                         success: function(data, textStatus, jqXHR)
-                         {
-                         if (data == '1') {
-                         _this.save_type = 'save';
-                         $('.save_pro').attr('data-project-name', project_name);
-                         //alert('Project created successfully');
-                         $('.save_pop_1').hide();
-                         $('.save_pop_2').show();
-                         $('.pop_msg_d').text('New project created!');
-                         $('.err').text('');
-                         _this.show_popup = false;
-                         _this.current_pro_name = project_name;
-                         } else {
-                         if (data == '00') {
-                         $('.err').text('This file already exists. Do you want to replace it?');
-                         } else {
-                         alert('Please try again');
-                         }
-                         }
-                         },
-                         error: function(jqXHR, textStatus, errorThrown)
-                         {
-                         //if fails
-                         alert('Please try again');
-                         }
-                         }
-                         );*/
                     } else {
                         $('.err').text('Project name cannot be blank. Please enter project name.');
                     }
@@ -1960,59 +1554,18 @@ function Controller() {
                         
                     }
                     updateProj();
-                    $('.save_pop_d').show().css('right', '105%').css('top', '0px');
                     $('.save_pop_1').hide();
                     $('.save_pop_2').show();
                     $('.pop_msg_d').text('Project updated successfully.');
                     $('.err').text('');
                     _this.show_popup = false;
                     _this.current_pro_name = $('.save_pro').attr('data-project-name');
-                    if (device_detect) {
-                        $('.save_pop_d').show().css('right', '0px').css('top', '0px');
-                        $('.arrowp_box').addClass('remove_arrow');
-                    }
-                    
-                    /*var formURL = 'database.php?update';
-                     $.ajax(
-                     {
-                     url: formURL,
-                     type: "POST",
-                     data: postData,
-                     success: function(data, textStatus, jqXHR)
-                     {
-                     if (data == '1') {
-                     //alert('Project updated successfully');
-                     $('.save_pop_d').show().css('right', '105%').css('top', '0px');
-                     $('.save_pop_1').hide();
-                     $('.save_pop_2').show();
-                     $('.pop_msg_d').text('Project updated successfully');
-                     $('.err').text('');
-
-                     _this.show_popup = false;
-                     _this.current_pro_name = $('.save_pro').attr('data-project-name');
-                     } else {
-                     //alert('Please try again');
-                     $('.save_pop_d').show().css('right', '105%').css('top', '0px');
-                     $('.save_pop_1').hide();
-                     $('.save_pop_2').show();
-                     $('.pop_msg_d').text('Please try again');
-                     $('.err').text('');
-                     }
-                     },
-                     error: function(jqXHR, textStatus, errorThrown)
-                     {
-                     //if fails
-                     alert('Please try again');
-                     }
-                     }
-                     );*/
                 }
             }
             if ($('.err').hasClass('overWrite_flag')) {
                 var temp_p = $(this).parents('#saveAsModal');
                 var postData = {'data-key': _this.current_key, 'project_name': postData['project_name'], 'xml_data': _this.XMLToString(data_to_save[0]), 'jdate': new Date()};
                 console.log(postData['project_name']);
-                //var formURL = 'database.php?update_ex';
                 updateExistProj();
 
 
@@ -2050,7 +1603,6 @@ function Controller() {
                         }
                         
                     }
-                    //temp_p.find('.save_pop_d').show().css('right', '105%').css('top', '0px');
                     temp_p.find('.save_pop_1').hide();
                     temp_p.find('.save_pop_2').show();
                     temp_p.find('.pop_msg_d').text('Project overwritten.');
@@ -2059,45 +1611,7 @@ function Controller() {
                     $('.save_pro').attr('data-project-name', project_name);
                     _this.show_popup = false;
                     _this.current_pro_name = project_name;
-                    if (device_detect) {
-                        temp_p.$('.save_pop_d').css('right', '0px').css('top', '0px');
-                        temp_p.$('.arrowp_box').addClass('remove_arrow');
-                    }
                     $('.err').removeClass('overWrite_flag');
-                    
-                /*$.ajax(
-                 {
-                 url: formURL,
-                 type: "POST",
-                 data: postData,
-                 success: function(data, textStatus, jqXHR)
-                 {
-                 if (data == '1') {
-                 temp_p.find('.save_pop_d').show().css('right', '105%').css('top', '0px');
-                 temp_p.find('.save_pop_1').hide();
-                 temp_p.find('.save_pop_2').show();
-                 temp_p.find('.pop_msg_d').text('Project updated successfully');
-                 temp_p.find('.err').text('');
-                 _this.save_type = 'save';
-                 $('.save_pro').attr('data-project-name', project_name);
-                 _this.show_popup = false;
-                 _this.current_pro_name = project_name;
-                 } else {
-                 //alert('Please try again');
-                 temp_p.find('.save_pop_d').show().css('right', '105%').css('top', '0px');
-                 temp_p.find('.save_pop_1').hide();
-                 temp_p.find('.save_pop_2').show();
-                 temp_p.find('.pop_msg_d').text('Please try again');
-                 temp_p.find('.err').text('');
-                 }
-                 },
-                 error: function(jqXHR, textStatus, errorThrown)
-                 {
-                 //if fails
-                 alert('Please try again');
-                 }
-                 }
-                 );*/
             }
             load_status = true;
         });
@@ -2161,16 +1675,8 @@ function Controller() {
         return str;
     };
     this.StringToXML = function(oString) {
-        //code for IE
-        if (window.ActiveXObject) {
-            var oXML = new ActiveXObject("Microsoft.XMLDOM");
-            oXML.loadXML(oString);
-            return oXML;
-        }
-        // code for Chrome, Safari, Firefox, Opera, etc.
-        else {
-            return (new DOMParser()).parseFromString(oString, "text/xml");
-        }
+        return (new DOMParser()).parseFromString(oString, "text/xml");
+
     };
     this.xmlToJson = function(xml) {
 
@@ -2211,52 +1717,51 @@ function Controller() {
     this.reset_drop = function() {
         setTimeout(function() {
             $('.white_content').hide();
-            $('.tool_down_arrow_wrp,.down_arrow_wrapper,.tool_wrapper').hide();
         });
     };
     this.writer_btns = function(element) {
         _this.reset_drop();
         if ($(element).hasClass('show_all')) {
 
-            if ($(element).children('.tick_mark').hasClass('_selected')) {
+            if ($(element).children('.badge').hasClass('_selected')) {
                 $('.str_common').each(function() {
-                    $(this).children('.tick_mark').removeClass('_selected');
+                    $(this).children('.badge').removeClass('_selected').empty();
                 });
             } else {
                 $('.str_common').each(function() {
-                    $(this).children('.tick_mark').addClass('_selected');
+                    $(this).children('.badge').addClass('_selected').html(SVGCheckMark);
                 });
             }
         } else {
 
-            $('.show_structre:hidden').children('.tick_mark').addClass('_selected');
-            $('.show_notes:hidden').children('.tick_mark').addClass('_selected');
-            $('.show_content:hidden').children('.tick_mark').addClass('_selected');
-            $('.show_all').children('.tick_mark').removeClass('_selected');
-            if ($(element).children('.tick_mark').hasClass('_selected')) {
-                $(element).children('.tick_mark').removeClass('_selected');
+            $('.show_structre:hidden').children('.badge').addClass('_selected').html(SVGCheckMark);
+            $('.show_notes:hidden').children('.badge').addClass('_selected').html(SVGCheckMark);
+            $('.show_content:hidden').children('.badge').addClass('_selected').html(SVGCheckMark);
+            $('.show_all').children('.badge').removeClass('_selected').empty();
+            if ($(element).children('.badge').hasClass('_selected')) {
+                $(element).children('.badge').removeClass('_selected').empty();
             } else {
-                $(element).children('.tick_mark').addClass('_selected');
+                $(element).children('.badge').addClass('_selected').html(SVGCheckMark);
             }
 
-            if ($('.show_structre').children('.tick_mark').hasClass('_selected') && $('.show_notes').children('.tick_mark').hasClass('_selected') && $('.show_content').children('.tick_mark').hasClass('_selected')) {
-                $('.show_all').children('.tick_mark').addClass('_selected');
+            if ($('.show_structre').children('.badge').hasClass('_selected') && $('.show_notes').children('.badge').hasClass('_selected') && $('.show_content').children('.badge').hasClass('_selected')) {
+                $('.show_all').children('.badge').addClass('_selected').html(SVGCheckMark);
             }
         }
 
         $('.cont_wrp_box').show();
         _this.set_wheader();
         $('.sturcture_content,.content_contents,.notes_content').hide();
-        if ($('.show_all').children('.tick_mark').hasClass('_selected')) {
+        if ($('.show_all').children('.badge').hasClass('_selected')) {
             $('.sturcture_content,.content_contents,.notes_content').show();
         } else {
-            if ($('.show_structre').children('.tick_mark').hasClass('_selected')) {
+            if ($('.show_structre').children('.badge').hasClass('_selected')) {
                 $('.sturcture_content').show();
             }
-            if ($('.show_content').children('.tick_mark').hasClass('_selected')) {
+            if ($('.show_content').children('.badge').hasClass('_selected')) {
                 $('.content_contents').show();
             }
-            if ($('.show_notes').children('.tick_mark').hasClass('_selected')) {
+            if ($('.show_notes').children('.badge').hasClass('_selected')) {
                 $('.notes_content').show();
             }
         }
@@ -2285,41 +1790,20 @@ function Controller() {
         top_header_html = top_header_html.replace(/<\/para/g, " </p");
         top_header_html += '<div class="row"><div class="col-auto"><div class="p-2 rounded-3 text-bg-success d-inline-flex">Word count: 0</div></div>';
         if (/academic/.test(location.pathname) == !0) {
-            top_header_html += '<div class="col"><div type="button" class="awl_listing p-2 rounded-3 text-bg-warning d-inline-flex">AWL</div><div class="arrow_wrp" style="display:none;"><div class="arrow_box">Highlight Academic Word List</div></div></div></div>';
+            top_header_html += '<div class="col"><button type="button" class="awl_listing p-2 rounded-3 btn btn-warning d-inline-flex" data-bs-toggle="popover" data-bs-content="Click/Tap to highlight academic words from the Academic Word List in your writing">AWL</button></div>';
         }
         top_header_html += '</div>'
         $('.str_common:visible').each(function() {
-            if (!$(this).children('.tick_mark').hasClass('_selected')) {
+            if (!$(this).children('.badge').hasClass('_selected')) {
                 top_header_html = $(_this.config_msg).find('commentary_help').text();
             }
         });
         $('.models_header').html(top_header_html);
-        setTimeout(function() {
-            var append_look_up = '';
-            $('.models_header').each(function() {
-                if ($(this).is(":visible")) {
-                    var len = $(this).children('p').length;
-                    $(this).children('p').each(function(index) {
-                        if (index >= (len - 3)) {
-                            $(this).addClass('look_up');
-                            if (index == (len - 3)) {
-                                $('.look_click').remove();
-                                $(this).before('<div class="look_click">Dictionary Look-up</div>')
-                            }
-                        }
-                    });
-                }
-            });
-            $('.look_up').show();
-            $('.look_click').unbind('click').bind('click', function() {
-                $('.look_up').toggle();
-            });
-        }, 1000);
 
         var show_top_head = true;
         //$('.str_common:visible').each(function() {
         $('.str_common').each(function() {
-            if ($(this).children('.tick_mark').hasClass('_selected')) {
+            if ($(this).children('.badge').hasClass('_selected')) {
                 show_top_head = false;
             }
         });
@@ -2331,21 +1815,6 @@ function Controller() {
         }
         
         var awl_status = false;
-        
-        $(".awl_listing").mouseover(function() {
-            if ($(window).width() > 768) {
-                var pos = $(this).position();
-                $('.arrow_box').html($(this).parents('.li_inner').next().html());
-                $('.arrow_wrp').css('top', pos.top - ($('.arrow_wrp').height() / 2) - 2);
-                $('.arrow_wrp').css('left', pos.left + 75);
-                $('.arrow_wrp').show();
-            }
-        }).mouseout(function(e) {
-            if ($(window).width() > 768) {
-                $('.arrow_wrp').hide();
-            }
-        });
-        
         $(".awl_listing").on('click', function() {
             // var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
             var temp = "";
@@ -2380,60 +1849,12 @@ function Controller() {
             awl_status = !(awl_status);
         });
         
-
-    };
-    this.sendToSocket = function(_msg) {
-        if (_msg != '') {
-            var net = require('net');
-
-            var HOST = '127.0.0.1';
-            var PORT = 8888;
-
-            var client = new net.Socket();
-
-            client.connect(PORT, HOST, function() {
-                //alert('CONNECTED TO: ' + HOST + ':' + PORT);
-                // Write a message to the socket as soon as the client is connected, the server will receive it as message from the client
-                client.write(_msg);
-                client.destroy();
-            });
-
-            /*var formURL = 'socket.php';
-             $.ajax(
-             {
-             url: formURL,
-             type: "POST",
-             data: {'msg': _msg},
-             success: function(data, textStatus, jqXHR)
-             {
-             console.log(data);
-             },
-             error: function(jqXHR, textStatus, errorThrown)
-             {
-             //if fails
-             alert('Please try again');
-             }
-             }
-             );*/
-        }
-    };
-    this.db_clk = function() {
-        $('.models_page_body_right').unbind('dblclick').bind('dblclick', function() {
-            var sel = (this.selection && this.selection.createRange().text) || (window.getSelection && window.getSelection().toString());
-            if (sel.trim() != '') {
-                _this.sendToSocket(sel);
-            }
-        });
-    };
+    }
 }
 
 function call_pop() {
     var pops = $('.white_content');
-    pops.css('top', '50%').css('left', '50%').css('position', 'fixed');
-    var w_h = pops.height() / 2;
-    var w_w = pops.width() / 2;
-    pops.css('margin-top', -w_h + 'px');
-    pops.css('margin-left', -w_w + 'px');
+    pops.css('top', '50%').css('left', '50%').css('margin-top', '-80vh'); //leave alert: center of the screen
 }
 
 function create_xml_dom() {
@@ -2498,7 +1919,7 @@ addEventListener("DOMContentLoaded", (event) => {
 
 $(function () {
     $('body').popover({
-        selector: '[data-bs-toggle=popover]',
-        trigger: 'focus'
+        selector: '[data-bs-toggle="popover"]',
+        trigger: 'hover focus'
     })
 })
