@@ -96,7 +96,20 @@ ul, li {
     font-weight: 600;
 }
 
-
+.str_common{
+    margin-top: 5px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 7px;
+    color: white;
+}
+.str_common > span{
+    display: block;
+    float: left;
+    font-weight: bold;
+    width: 80%;
+}
 .tick_mark{
     background-color: #FFFFFF;
     background-repeat: no-repeat;
