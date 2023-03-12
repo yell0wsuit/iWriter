@@ -2,6 +2,7 @@ var event_type = 'click';
 var global_str = "";
 var awl_list = "";
 var overWrite_flag = false;
+const SVGCheckMark = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"> <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/> </svg>';
 
 var device_detect = false;
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -237,7 +238,7 @@ function Controller() {
         }*/
 
         $('.str_common').each(function() {
-            $(this).children('.tick_mark').removeClass('_selected');
+            $(this).children('.badge').removeClass('_selected').empty();
         });
         $('.models_page_left_panel').html(m_name);
         $('.models_page_body .left_wrapper').empty().html('<div class="steps_title"><p>Guided tour of the model</p><p>Take a step-by-step tour of how the model was written</p></div><div class="medels_steps list-group list-group-flush"></div>');
@@ -273,10 +274,14 @@ function Controller() {
             });
         });
         if (!notes_status) {
-            $('.show_notes').hide();
+            $('.show_notes').addClass('d-none');
+        } else {
+            $('.show_notes').removeClass('d-none');
         }
         if (!content_status) {
-            $('.show_content').hide();
+            $('.show_content').addClass('d-none');
+        } else {
+            $('.show_content').removeClass('d-none');
         }
         //end check for filter
 
@@ -291,7 +296,7 @@ function Controller() {
 
             _this.reset_drop();
             $('.str_common').each(function() {
-                $(this).children('.tick_mark').removeClass('_selected');
+                $(this).children('.badge').removeClass('_selected').empty();
             });
             //$('.medels_steps li').removeAttr('style');
             $('.models_page_body_left .medels_steps button').removeClass('active');
@@ -565,35 +570,35 @@ function Controller() {
             _this.para_ids[i] = _this.para_ids[i][_this.para_ids[i].length - 1];
             _this.para_ids[i] = _this.para_ids[i].trim();
         }
-        //$('.show_all').children('.tick_mark').addClass('_selected');
+        //$('.show_all').children('.badge').addClass('_selected');
         $('.str_common').off(event_type).on(event_type, function() {
 
             $('.medels_steps button').removeClass('active');
             _this.reset_drop();
             if ($(this).hasClass('show_all')) {
-                if ($(this).children('.tick_mark').hasClass('_selected')) {
+                if ($(this).children('.badge').hasClass('_selected')) {
                     $('.str_common').each(function() {
-                        $(this).children('.tick_mark').removeClass('_selected');
+                        $(this).children('.badge').removeClass('_selected').empty()
                     });
                 } else {
                     $('.str_common').each(function() {
-                        $(this).children('.tick_mark').addClass('_selected');
+                        $(this).children('.badge').addClass('_selected').html(SVGCheckMark);
                     });
                 }
             } else {
 
-                $('.show_structre:hidden').children('.tick_mark').addClass('_selected');
-                $('.show_notes:hidden').children('.tick_mark').addClass('_selected');
-                $('.show_content:hidden').children('.tick_mark').addClass('_selected');
-                $('.show_all').children('.tick_mark').removeClass('_selected');
-                if ($(this).children('.tick_mark').hasClass('_selected')) {
-                    $(this).children('.tick_mark').removeClass('_selected');
+                $('.show_structre:hidden').children('.badge').addClass('_selected').html(SVGCheckMark);
+                $('.show_notes:hidden').children('.badge').addClass('_selected').html(SVGCheckMark);
+                $('.show_content:hidden').children('.badge').addClass('_selected').html(SVGCheckMark);
+                $('.show_all').children('.badge').removeClass('_selected').empty();
+                if ($(this).children('.badge').hasClass('_selected')) {
+                    $(this).children('.badge').removeClass('_selected').empty();
                 } else {
-                    $(this).children('.tick_mark').addClass('_selected');
+                    $(this).children('.badge').addClass('_selected').html(SVGCheckMark);
                 }
 
-                if ($('.show_structre').children('.tick_mark').hasClass('_selected') && $('.show_notes').children('.tick_mark').hasClass('_selected') && $('.show_content').children('.tick_mark').hasClass('_selected')) {
-                    $('.show_all').children('.tick_mark').addClass('_selected');
+                if ($('.show_structre').children('.badge').hasClass('_selected') && $('.show_notes').children('.badge').hasClass('_selected') && $('.show_content').children('.badge').hasClass('_selected')) {
+                    $('.show_all').children('.badge').addClass('_selected').html(SVGCheckMark);
                 }
             }
 
@@ -649,7 +654,7 @@ function Controller() {
                     }
                 }
                 $('.models_content').removeClass('d-none');
-                if ($('.show_structre').children('.tick_mark').hasClass('_selected') || $('.show_all').children('.tick_mark').hasClass('_selected')) {
+                if ($('.show_structre').children('.badge').hasClass('_selected') || $('.show_all').children('.badge').hasClass('_selected')) {
                     if ($(this).children('name').length != 0 && $(this).children('name').text() != "") {
                         content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
                         content_data += '<p>' + $(this).find('name').text() + '</p>';
@@ -666,7 +671,7 @@ function Controller() {
                     }
                 }
                 if ($('.show_notes').is(':visible')) {
-                    if ($('.show_notes').children('.tick_mark').hasClass('_selected') || $('.show_all').children('.tick_mark').hasClass('_selected')) {
+                    if ($('.show_notes').children('.badge').hasClass('_selected') || $('.show_all').children('.badge').hasClass('_selected')) {
                         if ($(this).children('notes').length != 0 && $(this).children('notes').text() != "" && typeof ($(this).children('notes').attr('dup')) == 'undefined') {
                             content_data += '<div class="content_box"><div class="notes_content text-success-emphasis fst-italic" style="text-align:' + $(this).attr('align') + '">';
                             content_data += notes_html_temp;
@@ -675,7 +680,7 @@ function Controller() {
                     }
                 }
                 if ($('.show_content').is(':visible')) {
-                    if ($('.show_content').children('.tick_mark').hasClass('_selected') || $('.show_all').children('.tick_mark').hasClass('_selected')) {
+                    if ($('.show_content').children('.badge').hasClass('_selected') || $('.show_all').children('.badge').hasClass('_selected')) {
                         if ($(this).children('content').length != 0 && $(this).children('content').text() != "" && typeof ($(this).children('content').attr('dup')) == 'undefined') {
                             content_data += xml_img;
                             content_data += '<div class="content_box"><div class="content_contents text-primary-emphasis mb-4" style="text-align:' + $(this).attr('align') + '">';
@@ -719,7 +724,7 @@ function Controller() {
             $('.models_header').html('<p>' + $(_this.config_msg).find('commentary_help').text() + '</p>');
             var show_top_head = true;
             $('.str_common:visible').each(function() {
-                if ($(this).children('.tick_mark').hasClass('_selected')) {
+                if ($(this).children('.badge').hasClass('_selected')) {
                     show_top_head = false;
                 }
             });
@@ -1060,7 +1065,7 @@ function Controller() {
         }
 
         $('.str_common').each(function() {
-            $(this).children('.tick_mark').removeClass('_selected');
+            $(this).children('.badge').removeClass('_selected').empty();
         });
         $('.models_page_left_panel').html(_this.project_xml_data[data_key]['project_name']);
         console.log(_this.project_xml_data[data_key]['project_name']);
@@ -1097,10 +1102,14 @@ function Controller() {
             }
         });
         if (!notes_status) {
-            $('.show_notes').hide();
+            $('.show_notes').addClass('d-none');
+        } else {
+            $('.show_notes').removeClass('d-none');
         }
         if (!content_status) {
-            $('.show_content').hide();
+            $('.show_content').addClass('d-none');
+        } else {
+            $('.show_notes').removeClass('d-none');
         }
         //end check for filter
 
@@ -1195,7 +1204,7 @@ function Controller() {
                 }
             }
 
-            if ($('.show_structre').children('.tick_mark').hasClass('_selected') || $('.show_all').children('.tick_mark').hasClass('_selected')) {
+            if ($('.show_structre').children('.badge').hasClass('_selected') || $('.show_all').children('.badge').hasClass('_selected')) {
                 if ($(this).children('name').length != 0 && $(this).children('name').text() != "") {
                     content_data += '<div class="content_box"><div class="sturcture_content text-danger-emphasis" style="text-align:' + $(this).attr('align') + '">';
                     content_data += '<p>' + $(this).find('name').text() + '</p>';
@@ -1219,7 +1228,7 @@ function Controller() {
                     content_data += '</div></div>';
                 }
             }
-            if ($('.show_notes').children('.tick_mark').hasClass('_selected') || $('.show_all').children('.tick_mark').hasClass('_selected')) {
+            if ($('.show_notes').children('.badge').hasClass('_selected') || $('.show_all').children('.badge').hasClass('_selected')) {
                 if ($(this).children('notes').length != 0 && typeof ($(this).children('notes').attr('dup')) == 'undefined') {
                     var temp_pl = '';
                     if (typeof ($(this).find('notes').attr('data-val')) != 'undefined') {
@@ -1233,7 +1242,7 @@ function Controller() {
                     content_data += '</div></div>';
                 }
             }
-            if ($('.show_content').children('.tick_mark').hasClass('_selected') || $('.show_all').children('.tick_mark').hasClass('_selected')) {
+            if ($('.show_content').children('.badge').hasClass('_selected') || $('.show_all').children('.badge').hasClass('_selected')) {
                 if ($(this).children('content').length != 0 && typeof ($(this).children('content').attr('dup')) == 'undefined') {
                     var temp_pl = '';
                     if (typeof ($(this).find('content').attr('prompt')) != 'undefined') {
@@ -1955,45 +1964,45 @@ function Controller() {
         _this.reset_drop();
         if ($(element).hasClass('show_all')) {
 
-            if ($(element).children('.tick_mark').hasClass('_selected')) {
+            if ($(element).children('.badge').hasClass('_selected')) {
                 $('.str_common').each(function() {
-                    $(this).children('.tick_mark').removeClass('_selected');
+                    $(this).children('.badge').removeClass('_selected').empty();
                 });
             } else {
                 $('.str_common').each(function() {
-                    $(this).children('.tick_mark').addClass('_selected');
+                    $(this).children('.badge').addClass('_selected').html(SVGCheckMark);
                 });
             }
         } else {
 
-            $('.show_structre:hidden').children('.tick_mark').addClass('_selected');
-            $('.show_notes:hidden').children('.tick_mark').addClass('_selected');
-            $('.show_content:hidden').children('.tick_mark').addClass('_selected');
-            $('.show_all').children('.tick_mark').removeClass('_selected');
-            if ($(element).children('.tick_mark').hasClass('_selected')) {
-                $(element).children('.tick_mark').removeClass('_selected');
+            $('.show_structre:hidden').children('.badge').addClass('_selected').html(SVGCheckMark);
+            $('.show_notes:hidden').children('.badge').addClass('_selected').html(SVGCheckMark);
+            $('.show_content:hidden').children('.badge').addClass('_selected').html(SVGCheckMark);
+            $('.show_all').children('.badge').removeClass('_selected').empty();
+            if ($(element).children('.badge').hasClass('_selected')) {
+                $(element).children('.badge').removeClass('_selected').empty();
             } else {
-                $(element).children('.tick_mark').addClass('_selected');
+                $(element).children('.badge').addClass('_selected').html(SVGCheckMark);
             }
 
-            if ($('.show_structre').children('.tick_mark').hasClass('_selected') && $('.show_notes').children('.tick_mark').hasClass('_selected') && $('.show_content').children('.tick_mark').hasClass('_selected')) {
-                $('.show_all').children('.tick_mark').addClass('_selected');
+            if ($('.show_structre').children('.badge').hasClass('_selected') && $('.show_notes').children('.badge').hasClass('_selected') && $('.show_content').children('.badge').hasClass('_selected')) {
+                $('.show_all').children('.badge').addClass('_selected').html(SVGCheckMark);
             }
         }
 
         $('.cont_wrp_box').show();
         _this.set_wheader();
         $('.sturcture_content,.content_contents,.notes_content').hide();
-        if ($('.show_all').children('.tick_mark').hasClass('_selected')) {
+        if ($('.show_all').children('.badge').hasClass('_selected')) {
             $('.sturcture_content,.content_contents,.notes_content').show();
         } else {
-            if ($('.show_structre').children('.tick_mark').hasClass('_selected')) {
+            if ($('.show_structre').children('.badge').hasClass('_selected')) {
                 $('.sturcture_content').show();
             }
-            if ($('.show_content').children('.tick_mark').hasClass('_selected')) {
+            if ($('.show_content').children('.badge').hasClass('_selected')) {
                 $('.content_contents').show();
             }
-            if ($('.show_notes').children('.tick_mark').hasClass('_selected')) {
+            if ($('.show_notes').children('.badge').hasClass('_selected')) {
                 $('.notes_content').show();
             }
         }
@@ -2022,11 +2031,11 @@ function Controller() {
         top_header_html = top_header_html.replace(/<\/para/g, " </p");
         top_header_html += '<div class="row"><div class="col-auto"><div class="p-2 rounded-3 text-bg-success d-inline-flex">Word count: 0</div></div>';
         if (/academic/.test(location.pathname) == !0) {
-            top_header_html += '<div class="col"><div type="button" class="awl_listing p-2 rounded-3 text-bg-warning d-inline-flex">AWL</div><div class="arrow_wrp" style="display:none;"><div class="arrow_box">Highlight Academic Word List</div></div></div></div>';
+            top_header_html += '<div class="col"><button type="button" class="awl_listing p-2 rounded-3 btn btn-warning d-inline-flex" data-bs-toggle="popover" data-bs-content="Click/Tap to highlight academic words from the Academic Word List in your writing">AWL</button></div>';
         }
         top_header_html += '</div>'
         $('.str_common:visible').each(function() {
-            if (!$(this).children('.tick_mark').hasClass('_selected')) {
+            if (!$(this).children('.badge').hasClass('_selected')) {
                 top_header_html = $(_this.config_msg).find('commentary_help').text();
             }
         });
@@ -2035,7 +2044,7 @@ function Controller() {
         var show_top_head = true;
         //$('.str_common:visible').each(function() {
         $('.str_common').each(function() {
-            if ($(this).children('.tick_mark').hasClass('_selected')) {
+            if ($(this).children('.badge').hasClass('_selected')) {
                 show_top_head = false;
             }
         });

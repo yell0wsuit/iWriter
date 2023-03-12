@@ -78,7 +78,6 @@ ul, li {
 @media (min-width: 991.99px) {
     .models_page_body_left {
         max-height: 65vh;
-        overflow: auto;
     }
 }
 
@@ -94,41 +93,6 @@ ul, li {
 
 .sturcture_content > p:first-child{
     font-weight: 600;
-}
-
-.str_common{
-    margin-top: 5px;
-    border-radius: 4px;
-    overflow: hidden;
-    cursor: pointer;
-    padding: 7px;
-    color: white;
-}
-.str_common > span{
-    display: block;
-    float: left;
-    font-weight: bold;
-    width: 80%;
-}
-.tick_mark{
-    background-color: #FFFFFF;
-    background-repeat: no-repeat;
-    float: right;
-    height: 11px;
-    margin: 5px;
-    width: 11px;
-}
-.show_structre{
-    background-color: var(--bs-danger);
-}
-.show_notes{
-    background-color: var(--bs-success);
-}
-.show_content{
-    background-color: var(--bs-primary);
-}
-.show_all{
-    background-color: var(--bs-secondary);
 }
 
 .models_content{
@@ -164,9 +128,6 @@ ul, li {
     cursor: pointer;
 }
 
-._selected {
-    background-image: url("../images/mitr/closebtn.svg");
-}
 .italic_style {
     font-variation-settings: 'slnt' -10;
 }

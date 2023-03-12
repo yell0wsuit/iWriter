@@ -149,8 +149,8 @@
                             </button>
                             <div class="navbar-collapse collapse" id="innerNavbar2">
                                 <ul class="navbar-nav float-start">
-                                    <li class="nav-item dropdown">
-                                        <div class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <li class="nav-item dropdown fw-semibold">
+                                        <div class="nav-link dropdown-toggle fw-semibold" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Menu: <span class="models_page_menu_text">Model</span>
                                         </div>
                                         <ul class="dropdown-menu dropdown-menu-start">
@@ -195,7 +195,7 @@
                             </button>
                             <div class="navbar-collapse collapse" id="innerNavbar">
                                 <ul class="navbar-nav float-start">
-                                    <li class="nav-item dropdown">
+                                    <li class="nav-item dropdown fw-semibold">
                                         <div class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Menu: <span class="models_page_menu_text">Model</span>
                                         </div>
@@ -211,7 +211,7 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="nav-item dropdown iwriter_t">
+                                    <li class="nav-item dropdown iwriter_t fw-semibold">
                                         <div class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Settings
                                         </div>
@@ -264,23 +264,23 @@
                                                 <p>Choose what to show</p>
                                                 <p>Explore the model by showing and hiding different elements</p>
                                             </div>
-                                            <div class="structure_elements">
-                                                <div class="show_structre str_common" data-bs-dismiss="offcanvas">
-                                                    <span>Show structure</span>
-                                                    <div class="tick_mark"></div>
-                                                </div>
-                                                <div class="show_notes str_common" data-bs-dismiss="offcanvas">
-                                                    <span>Show notes</span>
-                                                    <div class="tick_mark"></div>
-                                                </div>
-                                                <div class="show_content str_common" data-bs-dismiss="offcanvas">
-                                                    <span>Show content</span>
-                                                    <div class="tick_mark"></div>
-                                                </div>
-                                                <div class="show_all str_common" data-bs-dismiss="offcanvas">
-                                                    <span>Show all</span>
-                                                    <div class="tick_mark"></div>
-                                                </div>
+                                            <div class="structure_elements list-group">
+                                                <button type="button" class="fw-semibold show_structre str_common list-group-item list-group-item-action list-group-item-danger d-flex justify-content-between" data-bs-dismiss="offcanvas">
+                                                    Show structure
+                                                    <div class="badge bg-primary p-1"></div>
+                                                </button>
+                                                <button type="button" class="fw-semibold show_notes str_common list-group-item list-group-item-action list-group-item-success d-flex justify-content-between" data-bs-dismiss="offcanvas">
+                                                    Show notes
+                                                    <div class="badge bg-primary p-1"></div>
+                                                </button>
+                                                <button type="button" class="fw-semibold show_content str_common list-group-item list-group-item-action list-group-item-primary d-flex justify-content-between" data-bs-dismiss="offcanvas">
+                                                    Show content
+                                                    <div class="badge bg-primary p-1"></div>
+                                                </button>
+                                                <button type="button" class="fw-semibold show_all str_common list-group-item list-group-item-action list-group-item-warning d-flex justify-content-between" data-bs-dismiss="offcanvas">
+                                                    Show all
+                                                    <div class="badge bg-primary p-1"></div>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
