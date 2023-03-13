@@ -59,6 +59,7 @@ function Controller() {
         });
         $.ajax({// to get config
             type: "GET",
+            cache: true,
             url: (/academic/.test(location.pathname)) ? "xml/academic/config.xml" : "xml/config.xml",
             dataType: "xml",
             success: function(xml) {
@@ -70,6 +71,7 @@ function Controller() {
         });
         $.ajax({ // AWL list
             type: "GET",
+            cache: true,
             url: "xml/academic/awl_list.json",
             dataType: "json",
             success: function(json) {
@@ -111,6 +113,7 @@ function Controller() {
             $.ajax({
                 type: "GET",
                 async: false,
+                cache: true,
                 url: (/academic/.test(location.pathname)) ? "xml/academic/" + _this.project_xml_data[_this.load_count]['file_name'] : "xml/" + _this.project_xml_data[_this.load_count]['file_name'],
                 dataType: "xml",
                 success: function(xml) {
