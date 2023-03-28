@@ -1,62 +1,62 @@
-var connection = new JsStore.Connection(new Worker('scripts/jsstore.worker.min.js'));
+var connection = new JsStore.Connection(new Worker('scripts/jsstore.worker.min.js'))
 
 if (!window.indexedDB) {
     window.alert("Your browser doesn't support a stable version of IndexedDB.")
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    initDb();
+    initDb()
 
     async function initDb() {
         var isDbCreated = await connection.initDb(getiWriterDB());
         if (isDbCreated) {
-            console.log('Database created');
+            console.log('Database created')
         }
         else {
-            console.log('Database opened');
+            console.log('Database opened')
         }
     }
     
     function getiWriterDB() {
     //IndexedDB
-        var dbName ='iWriter';
-
-            var tblProject = {
-                name: 'iw_projects',
-                columns: {
-                    id: { primaryKey: true, autoIncrement: true },
-                    name: { notNull: true, dataType: "string" },
-                    data_id: { notNull: true, dataType: "string" },
-                    date_time: { notNull: true, dataType: "number" },
-                    data: { notNull: true, dataType: "string" },
-                    dtime: { notNull: true, dataType: "string" }
-                }
+        var dbName ='iWriter'
+        var tblProject = {
+            name: 'iw_projects',
+            columns: {
+                id: { primaryKey: true, autoIncrement: true },
+                name: { notNull: true, dataType: "string" },
+                data_id: { notNull: true, dataType: "string" },
+                date_time: { notNull: true, dataType: "number" },
+                data: { notNull: true, dataType: "string" },
+                dtime: { notNull: true, dataType: "string" }
             }
+        }
 
-            var tblAcaProject = {
-                name: 'iw_aca_projects',
-                columns: {
-                    id: { primaryKey: true, autoIncrement: true },
-                    name: { notNull: true, dataType: "string" },
-                    data_id: { notNull: true, dataType: "string" },
-                    date_time: { notNull: true, dataType: "number" },
-                    data: { notNull: true, dataType: "string" },
-                    dtime: { notNull: true, dataType: "string" }
-                }
+        var tblAcaProject = {
+            name: 'iw_aca_projects',
+            columns: {
+                id: { primaryKey: true, autoIncrement: true },
+                name: { notNull: true, dataType: "string" },
+                data_id: { notNull: true, dataType: "string" },
+                date_time: { notNull: true, dataType: "number" },
+                data: { notNull: true, dataType: "string" },
+                dtime: { notNull: true, dataType: "string" }
             }
+        }
 
         var database = {
             name: dbName,
             tables: [tblProject, tblAcaProject]
-        };
-        return database;
+        }
+
+        return database
     }
 
     Array.from(Array.from(document.getElementsByClassName('help_btn'))).forEach(e => e.addEventListener(event_type,  function() {
         if (/academic/.test(location.pathname) == !1) {
-            window.open("help.html", "Help Document", '');
+            window.open("help.html", "Help Document", '')
         } else {
-            window.open("help-academic.html", "Help Document", '');
+            window.open("help-academic.html", "Help Document", '')
         }
     }))
 
@@ -82,8 +82,8 @@ document.addEventListener("DOMContentLoaded", function() {
             })
         }
         if (results.length == 0) {
-            $('.save_p_btn_home').html('<a class="dropdown-item disabled">(empty)</a>');
-            $('.writing_list_results').text('0');
+            Array.from(document.getElementsByClassName('save_p_btn_home')).forEach(e => e.innerHTML = '<a class="dropdown-item disabled">(empty)</a>')
+            Array.from(document.getElementsByClassName('writing_list_results')).forEach(e => e.innerText = '0')
             console.log('iWriter: no project')
         } else {
             $('.writing_list_results').text(results.length);
