@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return database
     }
 
-    Array.from(Array.from(document.getElementsByClassName('help_btn'))).forEach(e => e.addEventListener(event_type,  function() {
+    Array.from(document.getElementsByClassName('help_btn')).forEach(e => e.addEventListener(event_type,  function() {
         if (/academic/.test(location.pathname) == !1) {
             window.open("help.html", "Help Document", '')
         } else {
@@ -86,25 +86,25 @@ document.addEventListener("DOMContentLoaded", function() {
             Array.from(document.getElementsByClassName('writing_list_results')).forEach(e => e.innerText = '0')
             console.log('iWriter: no project')
         } else {
-            $('.writing_list_results').text(results.length);
+            Array.from(document.getElementsByClassName('writing_list_results')).forEach(e => e.innerText = results.length)
             var temp_html = '';
             for (var i in results) {
                 var _name = results[i]['name'].replace(/\#\|\#/g, "'");
                 _name = _name.replace(/\#\|\|\#/g, '"');
                 temp_html += '<div class="dropdown-item saved_projects_list" role="button" data-key="' + results[i]['data_id'] + '" data-project="' + results[i]['name'] + '" data-type="save">' + _name + ' (project ' + results[i]['data_id'] + ')' + '</div>';
-                $('.save_p_btn_home').html(temp_html);
+                Array.from(document.getElementsByClassName('save_p_btn_home')).forEach(e => e.innerHTML = temp_html)
             }
 
-            $('.saved_projects').empty().html(temp_html);
+            Array.from(document.getElementsByClassName('saved_projects').innerHTML = "").forEach(e => e.innerHTML = temp_html)
 
-            $('.saved_projects_list').off('click').on('click', function() {
-                if ($(this).attr('data-type') == 'create') {
-                    iWriter_controller.current_pro_name = '';
+            Array.from(document.getElementsByClassName('saved_projects_list')).forEach(e => e.addEventListener('click',  function() {
+                if (e.getAttribute('data-type') == 'create') {
+                    iWriter_controller.current_pro_name = ''
                 } else {
-                    iWriter_controller.current_pro_name = $(this).attr('data-project');
+                    iWriter_controller.current_pro_name = e.getAttribute('data-project')
                 }
-                iWriter_controller.create_project($(this).attr('data-key'), $(this).attr('data-type'), $(this).attr('data-project'));
-            });
+                iWriter_controller.create_project(e.getAttribute('data-key'), e.getAttribute('data-type'), e.getAttribute('data-project'))
+            }))
 
         }
     }
