@@ -4,7 +4,7 @@ if (!window.indexedDB) {
     window.alert("Your browser doesn't support a stable version of IndexedDB.")
 }
 
-$(document).ready(function() {
+document.addEventListener("DOMContentLoaded", function() {
     initDb();
 
     async function initDb() {
@@ -52,13 +52,13 @@ $(document).ready(function() {
         return database;
     }
 
-    $('.help_btn').off(event_type).on(event_type, function() {
+    Array.from(Array.from(document.getElementsByClassName('help_btn'))).forEach(e => e.addEventListener(event_type,  function() {
         if (/academic/.test(location.pathname) == !1) {
             window.open("help.html", "Help Document", '');
         } else {
             window.open("help-academic.html", "Help Document", '');
         }
-    });
+    }))
 
     //fetch all
     
