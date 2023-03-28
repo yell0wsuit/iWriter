@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return database
     }
 
-    Array.from(document.getElementsByClassName('help_btn')).forEach(e => e.addEventListener(event_type,  function() {
+    document.querySelectorAll('.help_btn').forEach(e => e.addEventListener('click',  function() {
         if (/academic/.test(location.pathname) == !1) {
             window.open("help.html", "Help Document", '')
         } else {
@@ -115,13 +115,14 @@ document.addEventListener("DOMContentLoaded", function() {
         doc_data[0] = new Object();
         doc_data[1] = new Object();
         var cnt = 0;
-        $('.content_contents').each(function(e) {
-            if ($(this).text().trim() != $(this).attr('data-ph')) {
-                doc_data[0][cnt] = $(this).html();
-                doc_data[1][cnt] = $(this).attr('data-align');
+
+        document.querySelectorAll('.content_contents').forEach((e) => {
+            if (e.innerText.trim() != e.getAttribute('data-ph')) {
+                doc_data[0][cnt] = e.innerHTML;
+                doc_data[1][cnt] = e.getAttribute('data-align');
                 cnt++;
             }
-        });
+        })
 
         if (doc_data.length != 0) {
             var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
