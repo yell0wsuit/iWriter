@@ -82,22 +82,22 @@ document.addEventListener("DOMContentLoaded", function() {
             })
         }
         if (results.length == 0) {
-            Array.from(document.getElementsByClassName('save_p_btn_home')).forEach(e => e.innerHTML = '<a class="dropdown-item disabled">(empty)</a>')
-            Array.from(document.getElementsByClassName('writing_list_results')).forEach(e => e.innerText = '0')
+            document.querySelectorAll('.save_p_btn_home').forEach(e => e.innerHTML = '<a class="dropdown-item disabled">(empty)</a>')
+            document.querySelectorAll('.writing_list_results').forEach(e => e.innerText = '0')
             console.log('iWriter: no project')
         } else {
-            Array.from(document.getElementsByClassName('writing_list_results')).forEach(e => e.innerText = results.length)
+            document.querySelectorAll('.writing_list_results').forEach(e => e.innerText = results.length)
             var temp_html = '';
             for (var i in results) {
                 var _name = results[i]['name'].replace(/\#\|\#/g, "'");
                 _name = _name.replace(/\#\|\|\#/g, '"');
                 temp_html += '<div class="dropdown-item saved_projects_list" role="button" data-key="' + results[i]['data_id'] + '" data-project="' + results[i]['name'] + '" data-type="save">' + _name + ' (project ' + results[i]['data_id'] + ')' + '</div>';
-                Array.from(document.getElementsByClassName('save_p_btn_home')).forEach(e => e.innerHTML = temp_html)
+                document.querySelectorAll('.save_p_btn_home').forEach(e => e.innerHTML = temp_html)
             }
 
-            Array.from(document.getElementsByClassName('saved_projects').innerHTML = "").forEach(e => e.innerHTML = temp_html)
+            //Array.from(document.getElementsByClassName('saved_projects').innerHTML = "").forEach(e => e.innerHTML = temp_html)
 
-            Array.from(document.getElementsByClassName('saved_projects_list')).forEach(e => e.addEventListener('click',  function() {
+            document.querySelectorAll('.saved_projects_list').forEach(e => e.addEventListener('click',  function() {
                 if (e.getAttribute('data-type') == 'create') {
                     iWriter_controller.current_pro_name = ''
                 } else {
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     listProj();
 
-    $('.export_doc').off(event_type).on(event_type, function() {
+    document.querySelectorAll('.export_doc').forEach(e => e.addEventListener(event_type,  function() {
         var doc_data = new Object();
         doc_data[0] = new Object();
         doc_data[1] = new Object();
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 var downloadLink = document.createElement("a");
                 downloadLink.download = fileNameToSaveAs;
                 downloadLink.innerHTML = "Download File";
-                $(downloadLink).attr('target', '_blank');
+                downloadLink.setAttribute('target', '_blank')
                 if (window.webkitURL != null)
                 {
                     // Chrome allows the link to be clicked
@@ -200,48 +200,39 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
         }
-    });
+    }))
 
-    if ($(window).width() <= 768) {
-        if (iWriter_controller.project_short_name != '') {
-            $('.models_page_left_panel').html(iWriter_controller.project_short_name);
-        } else {
-            $('.models_page_left_panel').parents('.navbar-brand').addClass('w-25');
-        }
+    if (window.innerWidth < 768) {
+        document.querySelector('.models_page_left_panel').parentElement.classList.add('w-25')
     }
 
-    $('.models_page_home, .drp_home_clk').bind(event_type, function (e) {
-        e.preventDefault();
+    document.querySelectorAll('.models_page_home, .drp_home_clk').forEach(e => e.addEventListener(event_type,  function() {
         iWriter_controller.switchToHome();
-    });
+    }));
 
-    $('.up_arrow').bind('click', function (e) {
-        e.preventDefault();
+    document.querySelectorAll('.up_arrow').forEach(e => e.addEventListener('click',  function() {
         if (iWriter_controller.current_tool == 'writer') {
             iWriter_controller.switchFromWriter();
         } else {
-            $('.fn_left').trigger('click');
+            document.querySelector('.fn_left').click();
         }
-    });
+    }));
 
-    $('.fn_left').bind('click', function (e) {
-        e.preventDefault();
-        $('.common_page').hide();
-        $('.second_page').show();
+    document.querySelectorAll('.fn_left').forEach(e => e.addEventListener('click',  function() {
+        document.querySelectorAll('.common_page').forEach(e => e.style.display = 'none')
+        document.querySelectorAll('.second_page').forEach(e => e.style.display = 'block')
         iWriter_controller.leftPanelModel('li', '.second_page_body_left ul');
+    }));
 
-    });
-
-    $('.fn_rigth').bind('click', function (e) {
-        e.preventDefault();
-        $('.common_page').hide();
-        $('.second_page').show();
+    document.querySelectorAll('.fn_rigth').forEach(e => e.addEventListener('click',  function() {
+        document.querySelectorAll('.common_page').forEach(e => e.style.display = 'none')
+        document.querySelectorAll('.second_page').forEach(e => e.style.display = 'block')
         iWriter_controller.leftPanelWriter('li', '.second_page_body_left ul');
-    });
+    }));
 
-    $('.models_page_body_right').bind(event_type, function (e) {
+    document.querySelectorAll('.models_page_body_right').forEach(e => e.addEventListener(event_type,  function() {
         iWriter_controller.reset_drop();
-    });
+    }));
 
 });
 
