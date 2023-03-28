@@ -206,11 +206,11 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelector('.models_page_left_panel').parentElement.classList.add('w-25')
     }
 
-    document.querySelectorAll('.models_page_home, .drp_home_clk').forEach(e => e.addEventListener(event_type,  function() {
+    document.querySelectorAll('.models_page_home, .drp_home_clk').forEach(e => e.addEventListener(event_type, function() {
         iWriter_controller.switchToHome();
     }));
 
-    document.querySelectorAll('.up_arrow').forEach(e => e.addEventListener('click',  function() {
+    document.querySelectorAll('.up_arrow').forEach(e => e.addEventListener('click', function() {
         if (iWriter_controller.current_tool == 'writer') {
             iWriter_controller.switchFromWriter();
         } else {
@@ -218,19 +218,22 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }));
 
-    document.querySelectorAll('.fn_left').forEach(e => e.addEventListener('click',  function() {
+    function page_hide() {
         document.querySelectorAll('.common_page').forEach(e => e.style.display = 'none')
         document.querySelectorAll('.second_page').forEach(e => e.style.display = 'block')
+    }
+
+    document.querySelector('.fn_left').addEventListener('click', function() {
+        page_hide();
         iWriter_controller.leftPanelModel('li', '.second_page_body_left ul');
-    }));
+    });
 
-    document.querySelectorAll('.fn_rigth').forEach(e => e.addEventListener('click',  function() {
-        document.querySelectorAll('.common_page').forEach(e => e.style.display = 'none')
-        document.querySelectorAll('.second_page').forEach(e => e.style.display = 'block')
-        iWriter_controller.leftPanelWriter('li', '.second_page_body_left ul');
-    }));
+    document.querySelector('.fn_rigth').addEventListener('click', function() {
+        page_hide();
+        iWriter_controller.leftPanelWriter('li', '.second_page_body_left ul')
+    });
 
-    document.querySelectorAll('.models_page_body_right').forEach(e => e.addEventListener(event_type,  function() {
+    document.querySelectorAll('.models_page_body_right').forEach(e => e.addEventListener(event_type, function() {
         iWriter_controller.reset_drop();
     }));
 
