@@ -106,6 +106,8 @@ function Controller() {
                         }
                     }
                     _this.loadXML();
+                    let iLoader = document.getElementById('iLoader');
+                    iLoader.parentNode.removeChild(iLoader);
                 } else {
                     alert("An error occurred while processing XML file.");
                 }
@@ -128,8 +130,6 @@ function Controller() {
                         _this.project_xml_data[_this.load_count]['xml_data'] = xml;
                         _this.load_count++;
                         _this.loadXML();
-                        var iLoader = document.getElementById('iLoader');
-                        iLoader.parentNode.removeChild(iLoader);
                     } else {
                         alert("An error occurred while processing XML file.");
                     }
