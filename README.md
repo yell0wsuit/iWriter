@@ -20,6 +20,7 @@ More information can be found in the <a href="https://yell0wsuit.github.io/iWrit
 - More information is added in the Models/My Writing section.
 - Added new topics from the iWriter's new design (more coming soon if there's any).
 - De-bloated the tool by removing unnecessary images and scripts.
+- PWA and offline support. You can install this tool as an app to access it offline.
 
 Please note that due to interface changes, this tool is no longer compatible with old browsers (Internet Explorer 11 for example).
 
