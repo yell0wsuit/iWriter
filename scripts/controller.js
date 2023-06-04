@@ -33,100 +33,110 @@ function Controller() {
         //_this.xml_img_path = load_data_arg.imgPath + 'mitr/xml/';
         var project_count = 0;
         this.load_data = load_data_arg;
-        $.ajax({// to get project list
-            type: "GET",
-            url: (/academic/.test(location.pathname)) ? "xml/academic/frameworks.xml" : "xml/frameworks.xml",
-            dataType: "xml",
-            success: function(xml) {
-                $(xml).find('framework').each(function() {
-                    var project_name = $(this).attr('name');
-                    var short_name = $(this).attr('shortname');
-                    var file_name = $(this).attr('code') + '.xml';
-                    var object_name = $(this).attr('code');
-                    _this.project_xml_data[project_count] = {'project_name': project_name, 'file_name': file_name, 'object_name': object_name, 'short_name': short_name};
-                    project_count++;
-                    _this.project_count = project_count;
-                    if (Number($(xml).find('framework').length) === _this.project_count) {
-                        _this.loadFramework();
-                        var iLoader = document.getElementById('iLoader');
-                        $(iLoader).remove();
-                    }
-                });
-            },
-            error: function() {
-                alert("An error occurred while processing XML file.");
-            }
-        });
-        $.ajax({// to get config
-            type: "GET",
-            cache: true,
-            url: (/academic/.test(location.pathname)) ? "xml/academic/config.xml" : "xml/config.xml",
-            dataType: "xml",
-            success: function(xml) {
-                _this.config_msg = xml;
-            },
-            error: function() {
-                alert("An error occurred while processing XML file.");
-            }
-        });
-        $.ajax({ // AWL list
-            type: "GET",
-            cache: true,
-            url: "xml/academic/awl_list.json",
-            dataType: "json",
-            success: function(json) {
-                awl_list = json.awl;
-            },
-            error: function() {
-                alert("An error occurred while processing JSON file.");
-            }
-        });
-    };
-    this.loadFramework = function() {
         
-        $.ajax({
-            type: "GET",
-            async: false,
-            url: (/academic/.test(location.pathname)) ? "xml/academic/frameworks.xml" : "xml/frameworks.xml",
-            dataType: "xml",
-            success: function(xml) {
-                $(xml).find('framework').each(function() {
-                    for (var key in _this.project_xml_data) {
-                        if (_this.project_xml_data[key]['object_name'] == $(this).attr('code')) {
-                            _this.project_xml_data[key]['framework_model'] = $(this).attr('model');
-                            _this.project_xml_data[key]['framework_summery'] = $(this).attr('summary');
-                            _this.project_xml_data[key]['framework_enabled'] = $(this).attr('enabled');
+        // fetch project list
+        function get_frameworks_list() {
+            let xhr = new XMLHttpRequest();
+            let url = (/academic/.test(location.pathname)) ? "xml/academic/frameworks.xml" : "xml/frameworks.xml";
+            xhr.open("GET", url);
+            //xhr.responseType = "document";
+            xhr.onload = function() {
+                if (this.status === 200) {
+                    let xml = this.responseXML;
+                    let frameworks = xml.getElementsByTagName("framework");
+                    for (let i = 0; i < frameworks.length; i++) {
+                        let framework = frameworks[i];
+                        let project_name = framework.getAttribute("name");
+                        let short_name = framework.getAttribute("shortname");
+                        let file_name = framework.getAttribute("code") + ".xml";
+                        let object_name = framework.getAttribute("code");
+                        _this.project_xml_data[project_count] = { 'project_name': project_name, 'file_name': file_name, 'object_name': object_name, 'short_name': short_name };
+                        project_count++;
+                        _this.project_count = project_count;
+                        if (frameworks.length === _this.project_count) {
+                            _this.loadFramework();
                         }
                     }
-                });
-                _this.loadXML();
-                //var iLoader = document.getElementById('iLoader');
-                //$(iLoader).remove();
-            },
-            error: function() {
-                alert("An error occurred while processing XML file.");
-            }
-        });
+                } else {
+                    alert("An error occurred while processing XML file.");
+                }
+            };
+            xhr.send();
+        }
+        
+        get_frameworks_list();
+
+        // fetch config
+        let url_xml_config = (/academic/.test(location.pathname)) ? "xml/academic/config.xml" : "xml/config.xml";
+        fetch(url_xml_config)
+          .then(response => response.text())
+          .then(xml => {
+            _this.config_msg = xml;
+          })
+        .catch(err => console.log('An error occurred while processing the config.xml file.'))
+
+        // fetch academic word list
+        fetch('xml/academic/awl_list.json')  
+          .then(response => response.json())
+          .then(json => {
+            awl_list = json.awl;
+          })
+        .catch(err => console.log('An error occurred while processing the awl_list.json file.'))
+    };
+
+    this.loadFramework = function() {
+        function loadFramework_detail() {
+            let xhr = new XMLHttpRequest();
+            let url = (/academic/.test(location.pathname)) ? "xml/academic/frameworks.xml" : "xml/frameworks.xml";
+            xhr.open("GET", url, false);
+            //xhr.responseType = "document";
+            xhr.onload = function() {
+                if (this.status === 200) {
+                    let xml = this.responseXML;
+                    let frameworks = xml.getElementsByTagName("framework");
+                    for (let i = 0; i < frameworks.length; i++) {
+                        let framework = frameworks[i];
+                        let code = framework.getAttribute("code");
+                        for (let key in _this.project_xml_data) {
+                            if (_this.project_xml_data[key]['object_name'] == code) {
+                                _this.project_xml_data[key]['framework_model'] = framework.getAttribute("model");
+                                _this.project_xml_data[key]['framework_summery'] = framework.getAttribute("summary");
+                                _this.project_xml_data[key]['framework_enabled'] = framework.getAttribute("enabled");
+                            }
+                        }
+                    }
+                    _this.loadXML();
+                } else {
+                    alert("An error occurred while processing XML file.");
+                }
+            };
+            xhr.send();
+        }
+        
+        loadFramework_detail();
+
     };
     this.loadXML = function() {
         if (_this.load_count < _this.project_count) {
-            $.ajax({
-                type: "GET",
-                async: false,
-                cache: true,
-                url: (/academic/.test(location.pathname)) ? "xml/academic/" + _this.project_xml_data[_this.load_count]['file_name'] : "xml/" + _this.project_xml_data[_this.load_count]['file_name'],
-                dataType: "xml",
-                success: function(xml) {
-                    _this.project_xml_data[_this.load_count]['xml_data'] = xml;
-                    _this.load_count++;
-                    _this.loadXML();
-                    var iLoader = document.getElementById('iLoader');
-                    $(iLoader).remove();
-                },
-                error: function() {
-                    alert("An error occurred while processing XML file.");
-                }
-            });
+            function load_XML_proj() {
+                var xhr = new XMLHttpRequest();
+                var url = (/academic/.test(location.pathname)) ? "xml/academic/" + _this.project_xml_data[_this.load_count]['file_name'] : "xml/" + _this.project_xml_data[_this.load_count]['file_name'];
+                xhr.open("GET", url, false);
+                xhr.onload = function() {
+                    if (this.status === 200) {
+                        var xml = this.responseXML;
+                        _this.project_xml_data[_this.load_count]['xml_data'] = xml;
+                        _this.load_count++;
+                        _this.loadXML();
+                        var iLoader = document.getElementById('iLoader');
+                        iLoader.parentNode.removeChild(iLoader);
+                    } else {
+                        alert("An error occurred while processing XML file.");
+                    }
+                };
+                xhr.send();
+            }
+            load_XML_proj();
             //if ((_this.project_count - _this.load_count) === 1) {
             //this.leftPanelModel('li', '.second_page_body_left ul');
             //}
