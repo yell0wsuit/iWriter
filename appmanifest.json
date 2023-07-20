@@ -442,7 +442,8 @@
         },
         {
             "src": "images/icons/ios/192.png",
-            "sizes": "192x192"
+            "sizes": "192x192",
+            "purpose": "any"
         },
         {
             "src": "images/icons/ios/256.png",
@@ -461,5 +462,6 @@
     "dir": "ltr",
     "scope": "https://yell0wsuit.github.io/iWriter/",
     "lang": "en",
-    "categories": ["education"]
+    "categories": ["education"],
+    "prefer_related_applications": false
 }
