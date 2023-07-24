@@ -324,7 +324,7 @@ function Controller() {
                             top_para_content = top_para_content;
                             if ($(this).attr('showme')) {
                                 //top_para_content = top_para_content + '<div data-showme="' + $(this).attr('showme') + '"class="show_me_btn"></div>';
-                                top_para_content = top_para_content + '<div class="form-check"><input class="show_me_btn form-check-input" data-color="' + bscolors[colors_cnt] + '" data-showme="' + $(this).attr('showme') + '" type="checkbox" name="showme" id="'+ $(this).text().replace(/\s/g,'').substr(0,20) +'"><label class="form-check-label" for="'+ $(this).text().replace(/\s/g,'').substr(0,20) +'">' + $(this).text() + '</label></div>';
+                                top_para_content = top_para_content + '<div class="form-check"><input class="show_me_btn form-check-input" data-color="' + bscolors[colors_cnt] + '" data-showme="' + $(this).attr('showme') + '" type="checkbox" name="showme" id="'+ $(this).text().replace(/\s/g,'').substr(0,20) +'"><label class="form-check-label" for="'+ $(this).text().replace(/\s/g,'').substr(0,20) +'"><span class="formbg">' + $(this).text() + '</span></label></div>';
                                 colors_cnt++;
                                 
                             } else {
@@ -492,8 +492,8 @@ function Controller() {
                     var show_ids = $(this).attr('data-showme').toString().split(',');
                     var color_code = $(this).attr('data-color');
                     if (this.checked) {
-                        $(this).parent().find('.form-check-label').addClass(color_code); //Highlight the text next to checkbox
-                        $(this).addClass(color_code); //Change the checkbox bg color
+                        $(this).parent().find('.formbg').addClass(color_code); //Highlight the text next to checkbox
+                        //$(this).addClass(color_code); //Change the checkbox bg color
                         for (var i = 0; i < show_ids.length; i++) {
                             show_ids[i] = show_ids[i].split('_');
                             show_ids[i] = show_ids[i][show_ids[i].length - 1];
@@ -506,8 +506,8 @@ function Controller() {
                             });
                         }
                     } else {
-                        $(this).parent().find('.form-check-label').removeClass(color_code); //Remove bg color
-                        $(this).removeClass(color_code);
+                        $(this).parent().find('.formbg').removeClass(color_code); //Remove bg color
+                        //$(this).removeClass(color_code);
                         for (var i = 0; i < show_ids.length; i++) {
                             show_ids[i] = show_ids[i].split('_');
                             show_ids[i] = show_ids[i][show_ids[i].length - 1];
