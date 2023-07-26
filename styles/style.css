@@ -84,12 +84,6 @@ ul, li {
     cursor: pointer;
 }
 
-@media (min-width: 991.99px) {
-    .models_page_body_left {
-        max-height: 65vh;
-    }
-}
-
 .steps_title > p:first-child{
     color: var(--bs-primary-text);
     font-weight: bold;
