@@ -1,6 +1,11 @@
 # Oxford iWriter
 An interactive tool designed to help you write more effectively in English.
 
+## Now available as an app on Microsoft Store!
+<a href="https://apps.microsoft.com/store/detail/9NH4GDP39G3M?launch=true&mode=mini">
+<img width="300px" src="https://get.microsoft.com/images/en-us%20dark.svg"/>
+</a>
+
 **==Also check out [iSpeaker](http://github.com/yell0wsuit/ispeaker) that helps learners speak English more accurately and fluently in a variety of situations.==**
 
 Visit the website to use the tool: <a href="https://yell0wsuit.github.io/iWriter/" target="_blank">https://yell0wsuit.github.io/iWriter/</a>
