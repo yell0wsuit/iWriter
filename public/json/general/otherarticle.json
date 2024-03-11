@@ -1,0 +1,535 @@
+{
+    "title": "Article",
+    "paragraphs": [
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "54",
+                        "text": "Question"
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "55",
+                            "bold": true,
+                            "text": "<strong>Articles wanted for our new lifestyle magazine. Write your article in 140-190 words using the appropriate style.</strong>"
+                        }
+                    ],
+                    [
+                        {
+                            "id": "55",
+                            "bold": true,
+                            "text": "<strong>What smart or interesting ways can you think of that would help people improve their lifestyles? How can they be more organized? How can they improve their diet? How can they be more productive?</strong>"
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your question here",
+                "userInput": "",
+                "id": "55"
+            },
+            "align": "left"
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "1",
+                        "text": "Title"
+                    },
+                    {
+                        "id": "2",
+                        "text": "The title of your article"
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "46",
+                            "bold": true,
+                            "text": "<strong>Lifehacks</strong>"
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your title here",
+                "userInput": "",
+                "id": "3"
+            },
+            "align": "left"
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "4",
+                        "text": "Introduction"
+                    },
+                    {
+                        "id": "5",
+                        "text": "Introduce the main idea."
+                    },
+                    {
+                        "text": "TIP Catch the reader's attention with an interesting fact.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": [
+                    {
+                        "id": "6",
+                        "text": "Definition of 'hacks' and summary of how they can help"
+                    }
+                ],
+                "placeHolder": "Type your notes here",
+                "id": "6",
+                "userInput": ""
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "8",
+                            "text": "Have you ever felt"
+                        },
+                        {
+                            "id": "7",
+                            "text": " you could improve your lifestyle? Imagine you are an Olympic athlete analysing your training and performance, looking for ways to improve everything by a small amount—better shoes, more effective training, stronger muscles. The end result is a combination of lots of mini improvements or ‘hacks’ that help you stay ahead. "
+                        },
+                        {
+                            "id": "8",
+                            "text": "Would you like"
+                        },
+                        {
+                            "id": "7",
+                            "text": " to be a champion? Here’s how."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your introduction here",
+                "userInput": "",
+                "id": "7"
+            },
+            "align": "left"
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "15",
+                        "text": "Main section"
+                    },
+                    {
+                        "id": "16",
+                        "text": "Build on the main idea and provide examples."
+                    }
+                ]
+            },
+            "notes": {
+                "para": [
+                    {
+                        "id": "17",
+                        "text": "Get up early and plan your day."
+                    },
+                    {
+                        "id": "17",
+                        "text": "Take five minutes off during the day without any distractions."
+                    }
+                ],
+                "placeHolder": "Type your notes here",
+                "id": "17",
+                "userInput": ""
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "19",
+                            "text": "First things first."
+                        },
+                        {
+                            "id": "18",
+                            "text": " Don’t get up at the last minute and rush out of the house. Get up ten minutes earlier. Use the time to plan and decide on your main aim for the day. Feel relaxed and prepared when you open the front door."
+                        }
+                    ],
+                    [
+                        {
+                            "id": "18",
+                            "text": "During the day, "
+                        },
+                        {
+                            "id": "51",
+                            "text": "take five minutes off"
+                        },
+                        {
+                            "id": "18",
+                            "text": ". "
+                        },
+                        {
+                            "id": "19",
+                            "text": "No distractions."
+                        },
+                        {
+                            "id": "18",
+                            "text": " "
+                        },
+                        {
+                            "id": "51",
+                            "text": "Turn off your smartphone"
+                        },
+                        {
+                            "id": "18",
+                            "text": ". "
+                        },
+                        {
+                            "id": "51",
+                            "text": "Don’t talk to anyone"
+                        },
+                        {
+                            "id": "18",
+                            "text": " and don’t look at any texts or messages. Just let your mind relax. When you get back to your desk you’ll be ready for the next big challenge."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your paragraph here",
+                "userInput": "",
+                "id": "18"
+            },
+            "align": "left"
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "47",
+                        "text": "Conclusion"
+                    },
+                    {
+                        "id": "48",
+                        "text": "Link back to the original idea in the introduction."
+                    }
+                ]
+            },
+            "notes": {
+                "para": [
+                    {
+                        "id": "49",
+                        "text": "Do new things—cook, read, learn how to do something."
+                    },
+                    {
+                        "id": "49",
+                        "text": "Make the most of your day."
+                    },
+                    {
+                        "id": "49",
+                        "text": "Go to bed tired and happy."
+                    }
+                ],
+                "placeHolder": "Type your notes here",
+                "id": "49",
+                "userInput": ""
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "50",
+                            "text": "When you get home don’t just heat up a pizza and watch TV—cook something you’ve never cooked before. Read something rather than watch TV. Watch a YouTube video and "
+                        },
+                        {
+                            "id": "51",
+                            "text": "learn a language"
+                        },
+                        {
+                            "id": "50",
+                            "text": " or "
+                        },
+                        {
+                            "id": "51",
+                            "text": "find out how to fix your bike"
+                        },
+                        {
+                            "id": "50",
+                            "text": ". Go to bed tired and happy knowing "
+                        },
+                        {
+                            "id": "45",
+                            "text": "you’ve"
+                        },
+                        {
+                            "id": "50",
+                            "text": " made the most of your day and "
+                        },
+                        {
+                            "id": "45",
+                            "text": "improved your lifestyle"
+                        },
+                        {
+                            "id": "50",
+                            "text": "—just a little bit."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your conclusion here",
+                "userInput": "",
+                "id": "50"
+            },
+            "align": "left"
+        }
+    ],
+    "steps": [
+        {
+            "label": "What is special about writing an article?",
+            "desc": [
+                "In some exams you are asked to write an article for a fictional magazine or website. You are required to use your imagination and write in a particular style that engages the reader. It could mean writing about a hobby or something you are passionate about, making recommendations about something related to culture or lifestyle, or giving your opinion on a current issue. The language is usually informal and more similar to spoken English rather than formal academic English.\n                "
+            ],
+            "filters": []
+        },
+        {
+            "showParas": [
+                "1",
+                "2",
+                "4",
+                "5",
+                "15",
+                "16",
+                "47",
+                "48"
+            ],
+            "label": "How is it structured?",
+            "desc": [
+                "Below is the framework that was used to create this article."
+            ],
+            "filters": []
+        },
+        {
+            "showParas": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "15",
+                "16",
+                "17",
+                "47",
+                "48",
+                "49",
+                "54",
+                "55"
+            ],
+            "label": "How was it planned?",
+            "desc": [
+                "In order to plan the article, the writer decides what to cover in each paragraph and takes notes.",
+                "Around four paragraphs is best for a short article."
+            ],
+            "filters": []
+        },
+        {
+            "showParas": [
+                "3",
+                "4",
+                "5",
+                "7"
+            ],
+            "label": "Focus on the introduction",
+            "desc": [
+                "The purpose of an introduction is to introduce the main idea. Keep it short and simple."
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "The writer asks rhetorical questions (= questions asked for effect, not expecting an answer) to help the reader engage directly with the article.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "8"
+                    ]
+                }
+            ]
+        },
+        {
+            "showParas": [
+                "3",
+                "15",
+                "16",
+                "18"
+            ],
+            "label": "Look at the main section",
+            "desc": [],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "The writer uses short sentences for dramatic effect. You can include just one or two that don't even have a verb.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "19"
+                    ]
+                }
+            ]
+        },
+        {
+            "showParas": [
+                "3",
+                "7",
+                "18",
+                "50"
+            ],
+            "label": "Catching the reader's attention",
+            "desc": [],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "Think of an imaginative title using an unusual or surprising word.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "46"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "Use imperatives and 'you' and 'your' to address the reader directly.",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "51"
+                    ]
+                }
+            ]
+        },
+        {
+            "showParas": [
+                "3",
+                "47",
+                "48",
+                "50"
+            ],
+            "label": "Focus on the conclusion",
+            "desc": [],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "Use the conclusion to link back to the original idea in the introduction.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "45"
+                    ]
+                }
+            ]
+        }
+    ],
+    "practice_rubric": [
+        {
+            "header": "Before you start",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Brainstorm some ideas, keep the best four and delete the rest.",
+                    "tellMeMore": "<p><span>Brainstorm for ideas using whatever method suits you best:</span><br/><ul class=\"circle_li common_ul\"><li>Mind maps</li><li>Lists of interesting concepts, facts, questions, etc.</li><li>Conversations with colleagues</li></ul></p>"
+                },
+                {
+                    "checked": false,
+                    "text": "Provide examples from real life."
+                },
+                {
+                    "checked": false,
+                    "text": "Think about how to keep up the reader's interest from the beginning through to the end."
+                },
+                {
+                    "checked": false,
+                    "text": "Organize your notes into the framework."
+                }
+            ]
+        },
+        {
+            "header": "Choose your language",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Use relatively informal language. Avoid any formal or academic language."
+                },
+                {
+                    "checked": false,
+                    "text": "Use dramatic language to make your article engaging.",
+                    "tellMeMore": "<p><i><span>Let me tell you why I love skydiving.</span><br><span>Yes, it&apos;s terrifying, but it’s also exhilarating.</span><br><span>I was completely exhausted at the end of the day.</span><br><span>It is vital that you learn from a qualified instructor.</i></span></p>"
+                },
+                {
+                    "checked": false,
+                    "text": "Address your target audience directly and use terms and phrases that make your reader feel you understand them."
+                }
+            ]
+        },
+        {
+            "header": "While you are writing",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Ask rhetorical questions to help the reader engage directly with the article.",
+                    "tellMeMore": "<p><i><span>Have you ever felt...?</span><br><span>How would you feel if...?</span><br><span>Are you one of those people who...?</span><br><span>Do you ever think...?</span><br><span>Would you like...?</span></i></p>"
+                },
+                {
+                    "checked": false,
+                    "text": "Use phrases to organize your ideas.",
+                    "tellMeMore": "<p><span><i>I’d like to introduce the idea of...<br>Let’s start with...<br>Another advantage of...<br>On top of that,...</i></span></p>"
+                },
+                {
+                    "checked": false,
+                    "text": "Use short sentences that all add value to the article."
+                },
+                {
+                    "checked": false,
+                    "text": "Don't be afraid to express your opinion and give the reader something to think about.",
+                    "tellMeMore": "<p><span><i>I think that/In my opinion...<br>It seems to me that...<br>If you ask me,...<br>To my mind,...</i></span></p>"
+                }
+            ]
+        },
+        {
+            "header": "Checklist",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Have I answered the question?"
+                },
+                {
+                    "checked": false,
+                    "text": "Have I chosen an imaginative title?"
+                },
+                {
+                    "checked": false,
+                    "text": "Does the introduction introduce the main idea?"
+                },
+                {
+                    "checked": false,
+                    "text": "Do the next paragraphs build on the main idea and give examples?"
+                },
+                {
+                    "checked": false,
+                    "text": "Does my conclusion link back to the original idea?"
+                },
+                {
+                    "checked": false,
+                    "text": "Is it the right length?"
+                },
+                {
+                    "checked": false,
+                    "text": "Have I checked vocabulary, grammar, spelling and punctuation?"
+                }
+            ]
+        }
+    ]
+}

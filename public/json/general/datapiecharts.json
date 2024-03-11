@@ -1,0 +1,510 @@
+{
+    "title": "Describing pie charts",
+    "paragraphs": [
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "2",
+                        "text": "Question"
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "3",
+                            "text": "Summarize the information in the pie charts by selecting and reporting the main features and make comparisons."
+                        }
+                    ]
+                ],
+                "image": "piecharts.jpg",
+                "id": "3",
+                "placeHolder": "Type your question here",
+                "userInput": ""
+            },
+            "align": "left"
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "4",
+                        "text": "Introduction"
+                    },
+                    {
+                        "id": "5",
+                        "text": "Describe the subject of the data."
+                    }
+                ]
+            },
+            "notes": {
+                "para": [
+                    {
+                        "id": "6",
+                        "text": "Charts: average monthly expenditure of 2 families"
+                    }
+                ],
+                "placeHolder": "Type your notes here",
+                "id": "6",
+                "userInput": ""
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "7",
+                            "text": "The two pie charts illustrate the average monthly expenditure of two families."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your introduction here",
+                "userInput": "",
+                "id": "7"
+            },
+            "align": "left"
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "8",
+                        "text": "Comparison"
+                    },
+                    {
+                        "id": "9",
+                        "text": "Compare the most significant categories in the charts."
+                    }
+                ]
+            },
+            "notes": {
+                "para": [
+                    {
+                        "id": "10",
+                        "text": "Mortgage—big item for both families"
+                    },
+                    {
+                        "id": "10",
+                        "text": "Family A: biggest expenditure each month—twice what they spend on entertainment; spend much more on bills—about a quarter of their budget; spend less on entertainment; food slightly higher than entertainment; bills other large item—14%"
+                    },
+                    {
+                        "id": "10",
+                        "text": "Family B: mortgage is less—about quarter of their budget; spend much more on bills than Family A."
+                    }
+                ],
+                "placeHolder": "Type your notes here",
+                "id": "10",
+                "userInput": ""
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "11",
+                            "text": "The mortgage is a "
+                        },
+                        {
+                            "id": "12",
+                            "text": "significant"
+                        },
+                        {
+                            "id": "11",
+                            "text": " item of expenditure for both families, Family A spending "
+                        },
+                        {
+                            "id": "13",
+                            "text": "more"
+                        },
+                        {
+                            "id": "11",
+                            "text": " on their mortgage "
+                        },
+                        {
+                            "id": "14",
+                            "text": "than"
+                        },
+                        {
+                            "id": "11",
+                            "text": " they do on anything else (32% of their budget). This is "
+                        },
+                        {
+                            "id": "15",
+                            "text": "exactly twice"
+                        },
+                        {
+                            "id": "11",
+                            "text": " what they spend on entertainment each month. Their food budget is "
+                        },
+                        {
+                            "id": "16",
+                            "text": "slightly higher"
+                        },
+                        {
+                            "id": "11",
+                            "text": " at "
+                        },
+                        {
+                            "id": "17",
+                            "text": "just under"
+                        },
+                        {
+                            "id": "11",
+                            "text": " 20%. Bills form the other large item of expenditure at 14% of their monthly budget. Family B, on the other hand, spend "
+                        },
+                        {
+                            "id": "18",
+                            "text": "considerably more"
+                        },
+                        {
+                            "id": "11",
+                            "text": " on their bills, but this is compensated for by their mortgage, which is "
+                        },
+                        {
+                            "id": "19",
+                            "text": "approximately a quarter of"
+                        },
+                        {
+                            "id": "11",
+                            "text": " their budget and 8% less than Family A's."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your paragraph here",
+                "userInput": "",
+                "id": "11"
+            },
+            "align": "left"
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "20",
+                        "text": "Further comparison"
+                    },
+                    {
+                        "id": "21",
+                        "text": "Compare other categories."
+                    },
+                    {
+                        "text": "TIP Depending on the amount of data you are writing about, you may need more than two paragraphs to compare the charts.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": [
+                    {
+                        "id": "22",
+                        "text": "Car: Family B—spend 14%. Family A spend less."
+                    },
+                    {
+                        "id": "22",
+                        "text": "Clothes: similar, but Family A spend slightly more."
+                    },
+                    {
+                        "id": "22",
+                        "text": "Entertainment: Family B spend less than Family A."
+                    }
+                ],
+                "placeHolder": "Type your notes here",
+                "id": "22",
+                "userInput": ""
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "23",
+                            "text": "Both families spend "
+                        },
+                        {
+                            "id": "24",
+                            "text": "similar amounts"
+                        },
+                        {
+                            "id": "23",
+                            "text": " on their car and clothes combined, (19% for Family A and 17% for Family B), although Family B spends a larger amount on their car. Family B also spend "
+                        },
+                        {
+                            "id": "25",
+                            "text": "significantly less"
+                        },
+                        {
+                            "id": "23",
+                            "text": " on entertainment than Family A (9% as opposed to 16%)."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your paragraph here",
+                "userInput": "",
+                "id": "23"
+            },
+            "align": "left"
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "26",
+                        "text": "Conclusion"
+                    },
+                    {
+                        "id": "27",
+                        "text": "Summarize the information in the charts with a general conclusion."
+                    }
+                ]
+            },
+            "notes": {
+                "para": [
+                    {
+                        "id": "28",
+                        "text": "Family B spend more on necessities (bills, food and car)."
+                    },
+                    {
+                        "id": "28",
+                        "text": "Family A spend more on entertainment and clothes."
+                    }
+                ],
+                "placeHolder": "Type your notes here",
+                "id": "28",
+                "userInput": ""
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "29",
+                            "text": "While the mortgage is  the "
+                        },
+                        {
+                            "id": "31",
+                            "text": "most important"
+                        },
+                        {
+                            "id": "29",
+                            "text": " item of expenditure for both families, "
+                        },
+                        {
+                            "id": "30",
+                            "text": "in general"
+                        },
+                        {
+                            "id": "29",
+                            "text": " Family B spend more than A on necessary items, such as bills, food and their car, while Family A allow "
+                        },
+                        {
+                            "id": "32",
+                            "text": "slightly more"
+                        },
+                        {
+                            "id": "29",
+                            "text": " money for entertainment and clothes."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your conclusion here",
+                "userInput": "",
+                "id": "29"
+            },
+            "align": "left"
+        }
+    ],
+    "steps": [
+        {
+            "label": "What do pie charts show?",
+            "desc": [
+                "Pie charts are used to show percentages of parts of a whole piece of data."
+            ],
+            "filters": []
+        },
+        {
+            "showParas": [
+                "4",
+                "5",
+                "8",
+                "9",
+                "20",
+                "21",
+                "26",
+                "27"
+            ],
+            "label": "How is the report structured?",
+            "desc": [
+                "Below is the framework that was used to create this report."
+            ],
+            "filters": []
+        },
+        {
+            "showParas": [
+                "1",
+                "3",
+                "4",
+                "5",
+                "6",
+                "8",
+                "9",
+                "10",
+                "20",
+                "21",
+                "22",
+                "26",
+                "27",
+                "28"
+            ],
+            "label": "How was the report planned?",
+            "desc": [
+                "In order to plan the report, the writer decides what to cover in each paragraph and takes notes."
+            ],
+            "filters": []
+        },
+        {
+            "showParas": [
+                "1",
+                "3",
+                "8",
+                "9",
+                "11",
+                "20",
+                "21",
+                "23"
+            ],
+            "label": "Comparing data",
+            "desc": [
+                "Look at the two charts separately and report on the main categories in each.",
+                "Compare the two charts and report on the differences between them."
+            ],
+            "filters": []
+        },
+        {
+            "showParas": [
+                "3",
+                "11",
+                "23"
+            ],
+            "label": "Show me useful language",
+            "desc": [],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "The writer uses key words and phrases for reporting on data.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "12",
+                        "13",
+                        "14",
+                        "15",
+                        "16",
+                        "17",
+                        "18",
+                        "19",
+                        "24",
+                        "25",
+                        "30",
+                        "31",
+                        "32"
+                    ]
+                }
+            ]
+        }
+    ],
+    "practice_rubric": [
+        {
+            "header": "Before you start",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Examine the data you are reporting on and make notes."
+                },
+                {
+                    "checked": false,
+                    "text": "Ask yourself questions about what the charts show."
+                },
+                {
+                    "checked": false,
+                    "text": "Organize the information so that you highlight the most interesting differences in a logical way."
+                }
+            ]
+        },
+        {
+            "header": "Choose your language",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Use language that is plain and simple, but academic in style."
+                },
+                {
+                    "checked": false,
+                    "text": "Use language to describe general features.",
+                    "tellMeMore": "<p><span><i>The chart shows/represents/indicates...<br>The figures show/illustrate (that)...<br>From the chart, it can be seen that...<br>In conclusion,...<br>The following conclusions can be drawn from the data.</i></span></p>"
+                },
+                {
+                    "checked": false,
+                    "text": "Use language to describe proportions of a whole.",
+                    "tellMeMore": "<p><span><i>More/Less than half of the total...<br>Only a third/quarter...<br>Just/Well under/over 50%...<br> The biggest/smallest proportion/sector...<br>The vast majority of...</i></span></p>"
+                },
+                {
+                    "checked": false,
+                    "text": "Use language to describe differences between amounts.",
+                    "tellMeMore": "<p><span><i>There were almost twice/three times/half as many... as...<br/>Far/Slightly/20% fewer X... than Y...<br/>Many/Far/A few/20% more X... than Y...<br/>A greater proportion of... than of...<br/>20% of women..., while only 10% of men...<br/>80% of (adults send emails), compared to 34% (who prefer texts).</i></span></p>"
+                }
+            ]
+        },
+        {
+            "header": "While you are writing",
+            "checkList": [
+                {
+                    "checked": false,
+                    "bold": true,
+                    "text": "Summarize the information in the charts."
+                },
+                {
+                    "checked": false,
+                    "text": "Highlight the main similarities and differences."
+                },
+                {
+                    "checked": false,
+                    "text": "Point out other similarities and differences where relevant."
+                }
+            ]
+        },
+        {
+            "header": "Checklist",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Have I introduced the subject of the data?"
+                },
+                {
+                    "checked": false,
+                    "text": "Have I summarized the information from the charts?"
+                },
+                {
+                    "checked": false,
+                    "text": "Have I made some interesting comparisons and contrasts?"
+                },
+                {
+                    "checked": false,
+                    "text": "Have I reported the data accurately?"
+                },
+                {
+                    "checked": false,
+                    "text": "Does the conclusion summarize the data?"
+                },
+                {
+                    "checked": false,
+                    "text": "Have I answered the question?"
+                },
+                {
+                    "checked": false,
+                    "text": "Have I checked vocabulary, grammar and spelling?"
+                }
+            ]
+        }
+    ]
+}

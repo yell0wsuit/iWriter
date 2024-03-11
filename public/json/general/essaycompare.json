@@ -1,0 +1,750 @@
+{
+    "title": "Comparison essay",
+    "paragraphs": [
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "2",
+                        "text": "Title"
+                    },
+                    {
+                        "id": "3",
+                        "text": "The title of your essay"
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "4",
+                            "bold": true,
+                            "text": "Which is more effective, online or traditional classroom learning?"
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your title here",
+                "userInput": "",
+                "id": "4"
+            },
+            "align": "left"
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "6",
+                        "text": "Introduction"
+                    },
+                    {
+                        "id": "7",
+                        "text": "Introduce the topic and define the things you are comparing."
+                    }
+                ]
+            },
+            "notes": {
+                "para": [
+                    {
+                        "id": "8",
+                        "text": "Changes due to technology—large increase in online courses"
+                    },
+                    {
+                        "id": "8",
+                        "text": "380 000 learners for one English MOOC"
+                    },
+                    {
+                        "id": "8",
+                        "text": "Traditional courses still available."
+                    }
+                ],
+                "placeHolder": "Type your notes here",
+                "id": "8",
+                "userInput": ""
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "9",
+                            "text": "Technology has brought about significant changes in education and the number of students taking courses online has increased dramatically. "
+                        },
+                        {
+                            "id": "13",
+                            "text": "Recently 380 000 learners signed up for one online English course, the most ever for a MOOC (massive open online course)."
+                        },
+                        {
+                            "id": "9",
+                            "text": " At the same time, traditional universities continue to provide face-to-face tutorials, seminars and lectures for relatively small numbers of students. "
+                        },
+                        {
+                            "id": "14",
+                            "text": "Which of these forms of learning is more effective and how do we know?"
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your introduction here",
+                "userInput": "",
+                "id": "9"
+            },
+            "align": "left"
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "16",
+                        "text": "Development—similarities"
+                    },
+                    {
+                        "id": "17",
+                        "text": "Explain the aspects or features of X and Y that are similar."
+                    },
+                    {
+                        "text": "TIP You can use several paragraphs here.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": [
+                    {
+                        "id": "18",
+                        "text": "Both have same aim: to provide structured education"
+                    },
+                    {
+                        "id": "18",
+                        "text": "Both cover same content: syllabus, course notes"
+                    }
+                ],
+                "placeHolder": "Type your notes here",
+                "id": "18",
+                "userInput": ""
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "20",
+                            "text": "Both"
+                        },
+                        {
+                            "id": "19",
+                            "text": " online courses and face-to-face courses have the same aims—to provide a structured educational experience for students that allows them to learn a given subject effectively. Online courses "
+                        },
+                        {
+                            "id": "20",
+                            "text": "are similar to"
+                        },
+                        {
+                            "id": "19",
+                            "text": " traditional courses in that they have a syllabus and "
+                        },
+                        {
+                            "id": "20",
+                            "text": "also"
+                        },
+                        {
+                            "id": "19",
+                            "text": " provide learning materials such as course notes."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your paragraph here",
+                "userInput": "",
+                "id": "19"
+            },
+            "align": "left"
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "25",
+                        "text": "Development—differences"
+                    },
+                    {
+                        "id": "26",
+                        "text": "Move on to explain the aspects or features of X and Y that are different."
+                    },
+                    {
+                        "text": "TIP You can use several paragraphs here.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": [
+                    {
+                        "id": "27",
+                        "text": "Main differences:"
+                    },
+                    {
+                        "id": "27",
+                        "text": "—Online: continuous access, learn anywhere; traditional: fixed time and place"
+                    },
+                    {
+                        "id": "27",
+                        "text": "—Online: unlimited students, digital materials, cheaper or free; traditional: buildings, teachers, limited number of students"
+                    },
+                    {
+                        "id": "27",
+                        "text": "—Face-to-face contact: immediate answers to questions; social interaction good for motivation."
+                    },
+                    {
+                        "id": "27",
+                        "text": "—Completion rates for courses online: sometimes only 13%; traditional: 70-80%"
+                    }
+                ],
+                "placeHolder": "Type your notes here",
+                "id": "27",
+                "userInput": ""
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "29",
+                            "text": "Despite these similarities,"
+                        },
+                        {
+                            "id": "28",
+                            "text": " there are a number of significant "
+                        },
+                        {
+                            "id": "29",
+                            "text": "differences"
+                        },
+                        {
+                            "id": "28",
+                            "text": " between the two types of course. The main advantage of online courses is that students have continuous access to the learning material, and learning can be done anywhere at any time. "
+                        },
+                        {
+                            "id": "29",
+                            "text": "On the other hand,"
+                        },
+                        {
+                            "id": "28",
+                            "text": " face-to-face learning happens only in the classroom according to a fixed timetable. This is a disadvantage for students who also have to work and for students who live far away from the college or school."
+                        }
+                    ],
+                    [
+                        {
+                            "id": "29",
+                            "text": "Unlike"
+                        },
+                        {
+                            "id": "28",
+                            "text": " traditional courses, which require buildings and teachers, online courses only need a website and digital learning materials. Added to this, online courses can take an almost unlimited number of students, "
+                        },
+                        {
+                            "id": "29",
+                            "text": "while"
+                        },
+                        {
+                            "id": "28",
+                            "text": " traditional courses are limited to the number of people that can fit into a lecture hall. The end result is that online courses are "
+                        },
+                        {
+                            "id": "29",
+                            "text": "much cheaper"
+                        },
+                        {
+                            "id": "28",
+                            "text": ", and in some cases, free."
+                        }
+                    ],
+                    [
+                        {
+                            "id": "29",
+                            "text": "However,"
+                        },
+                        {
+                            "id": "28",
+                            "text": " the news is not all good for online courses. It seems that students "
+                        },
+                        {
+                            "id": "29",
+                            "text": "prefer"
+                        },
+                        {
+                            "id": "28",
+                            "text": " face-to-face contact with their lecturers and classmates. Students can get immediate answers to questions in a lecture or tutorial "
+                        },
+                        {
+                            "id": "29",
+                            "text": "rather than"
+                        },
+                        {
+                            "id": "28",
+                            "text": " wait for an email or chatroom message. Social interaction with their peers not only helps their motivation but also develops their social skills."
+                        }
+                    ],
+                    [
+                        {
+                            "id": "28",
+                            "text": "It appears that the personal or affective element of traditional courses is crucial. Some online courses have completion rates as low as 13%, "
+                        },
+                        {
+                            "id": "29",
+                            "text": "whereas"
+                        },
+                        {
+                            "id": "28",
+                            "text": " between 70–80% of students on traditional courses complete their degrees. Despite their low cost and convenience, online courses cannot yet compete with the timeless advantage of students being able to communicate face-to-face and to be part of a real, rather than virtual, community."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your paragraph here",
+                "userInput": "",
+                "id": "28"
+            },
+            "align": "left"
+        },
+        {
+            "structure": {
+                "para": []
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "49",
+                            "text": "Despite these similarities,"
+                        },
+                        {
+                            "id": "52",
+                            "text": " there are a number of significant differences between the two types of course. The main advantage of online courses is that students have continuous access to the learning material, and learning can be done anywhere at any time. On the other hand, face-to-face learning happens only in the classroom according to a fixed timetable. This is a disadvantage for students who also have to work and for students who live far away from the college or school."
+                        }
+                    ],
+                    [
+                        {
+                            "id": "52",
+                            "text": "Unlike traditional courses, which require buildings and teachers, online courses only need a website and digital learning materials. Added to this, online courses can take an almost unlimited number of students, while traditional courses are limited to the number of people that can fit into a lecture hall. The end result is that online courses are much cheaper, and in some cases, free."
+                        }
+                    ],
+                    [
+                        {
+                            "id": "50",
+                            "text": "However,"
+                        },
+                        {
+                            "id": "52",
+                            "text": " the news is not all good for online courses. It seems that students prefer face-to-face contact with their lecturers and classmates. Students can get immediate answers to questions in a lecture or tutorial rather than wait for an email or chatroom message. Social interaction with their peers not only helps their motivation but also develops their social skills."
+                        }
+                    ],
+                    [
+                        {
+                            "id": "52",
+                            "text": "It appears that the personal or affective element of traditional courses is crucial. "
+                        },
+                        {
+                            "id": "51",
+                            "text": "Some online courses have completion rates as low as 13%, whereas between 70–80% of students on traditional courses complete their degrees."
+                        },
+                        {
+                            "id": "52",
+                            "text": " Despite their low cost and convenience, online courses cannot yet compete with the timeless advantage of students being able to communicate face-to-face and to be part of a real, rather than virtual, community."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your paragraph here",
+                "userInput": "",
+                "id": "52",
+                "duplicate": true
+            },
+            "align": "left"
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "39",
+                        "text": "Conclusion"
+                    },
+                    {
+                        "id": "40",
+                        "text": "Draw your own conclusion based on the evidence from the development section of the essay."
+                    }
+                ]
+            },
+            "notes": {
+                "para": [
+                    {
+                        "id": "41",
+                        "text": "Both types aim to provide education. Effectiveness depends on circumstances of providers and students."
+                    },
+                    {
+                        "id": "41",
+                        "text": "If available, traditional seems most effective."
+                    }
+                ],
+                "placeHolder": "Type your notes here",
+                "id": "41",
+                "userInput": ""
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "42",
+                            "text": "There are clearly significant differences between the two types of course, despite the fact that they "
+                        },
+                        {
+                            "id": "20",
+                            "text": "share"
+                        },
+                        {
+                            "id": "42",
+                            "text": " the same primary aim of providing an educational service. Ultimately, the answer as to which is more effective lies in the priorities of the provider and the students. For some providers, the target is to maximize the number of students who can take their courses; for others, the aim is to provide a high-quality, personalized education. For students who are not able to attend courses in person for financial or geographical reasons, online courses can be an effective solution; but for students who are lucky enough to have the opportunity, traditional courses, at least for now, seem to be the most effective and popular option."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your conclusion here",
+                "userInput": "",
+                "id": "42"
+            },
+            "align": "left"
+        },
+        {
+            "structure": {
+                "para": []
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "47",
+                            "text": "There are clearly significant differences between the two types of course, despite the fact that they share the same primary aim of providing an educational service."
+                        },
+                        {
+                            "id": "46",
+                            "text": " Ultimately, the answer as to which is more effective lies in the priorities of the provider and the students. For some providers, the target is to maximize the number of students who can take their courses; for others, the aim is to provide a high-quality, personalized education. "
+                        },
+                        {
+                            "id": "48",
+                            "text": "For students who are not able to attend courses in person for financial or geographical reasons, online courses can be an effective solution; but for students who are lucky enough to have the opportunity, traditional courses, at least for now, seem to be the most effective and popular option."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your paragraph here",
+                "userInput": "",
+                "id": "46",
+                "duplicate": true
+            },
+            "align": "left"
+        }
+    ],
+    "steps": [
+        {
+            "label": "How do I organize a comparison essay?",
+            "desc": [
+                "There are several different ways you can organize your ideas and arguments in an essay that is comparing and contrasting two things, ideas, institutions, etc.",
+                "In this model the writer wants to emphasize the differences between the types of education. The similarities are discussed in one paragraph first, followed by a paragraph for each of the differences."
+            ],
+            "filters": []
+        },
+        {
+            "showParas": [
+                "2",
+                "3",
+                "6",
+                "7",
+                "16",
+                "17",
+                "25",
+                "26",
+                "39",
+                "40"
+            ],
+            "label": "How is this essay structured?",
+            "desc": [
+                "Below is the framework that was used to create this essay."
+            ],
+            "filters": []
+        },
+        {
+            "showParas": [
+                "2",
+                "3",
+                "6",
+                "7",
+                "16",
+                "17",
+                "25",
+                "26",
+                "39",
+                "40",
+                "4",
+                "8",
+                "18",
+                "27",
+                "41"
+            ],
+            "label": "How was it planned?",
+            "desc": [
+                "In order to plan the essay, the writer decides what to cover in each paragraph and takes notes."
+            ],
+            "filters": []
+        },
+        {
+            "showParas": [
+                "4",
+                "6",
+                "7",
+                "9"
+            ],
+            "label": "Focus on the introduction",
+            "desc": [
+                "The introduction gives a short summary of the current situation."
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "The second sentence catches the reader's interest.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "13"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "Sentence 4 indicates the scope of the essay and leads to the next paragraph.",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "14"
+                    ]
+                }
+            ]
+        },
+        {
+            "showParas": [
+                "4",
+                "16",
+                "17",
+                "19",
+                "25",
+                "26",
+                "52"
+            ],
+            "label": "Look at the development section",
+            "desc": [
+                "The writer notes similarities between X and Y in paragraph 2.",
+                "The writer concentrates on differences and discusses the advantages of X and Y in paragraphs 3-6."
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "'Despite these similarities' indicates that the writer is going to list the differences.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "49"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "'However' indicates that the writer is now going to change focus and discuss the advantages of traditional courses.",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "50"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "The writer provides data to support the argument that traditional courses are more effective to provide balance to the overall argument.",
+                    "checked": false,
+                    "highlightClass": "highlightColor3",
+                    "highlightPara": [
+                        "51"
+                    ]
+                }
+            ]
+        },
+        {
+            "showParas": [
+                "4",
+                "39",
+                "40",
+                "46"
+            ],
+            "label": "Focus on the conclusion",
+            "desc": [
+                "The writer provides a conclusion based on the main points introduced in the development stages."
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "The paragraph starts with a short summary.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "47"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "The final sentence gives the writer's personal opinion.",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "48"
+                    ]
+                }
+            ]
+        },
+        {
+            "showParas": [
+                "4",
+                "9",
+                "19",
+                "28",
+                "42"
+            ],
+            "label": "Show me useful language",
+            "desc": [
+                "The writer uses key words or phrases to:"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "introduce similarities",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "20"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "introduce contrasts",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "29"
+                    ]
+                }
+            ]
+        }
+    ],
+    "practice_rubric": [
+        {
+            "header": "Before you start",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "If possible, choose a question related to the topic you are most familiar with."
+                },
+                {
+                    "checked": false,
+                    "text": "Read the question carefully several times. Underline the key task words and topic words."
+                },
+                {
+                    "checked": false,
+                    "text": "Read and research the topic.",
+                    "tellMeMore": "<p><span>Research your topic and gather information from a variety of sources:</span><br><ul class=\"circle_li common_ul\"><li> Books and journals</li><li>The media</li><li> Websites</li><li>Interviews or questionnaires</li><li>Scientific studies</li></ul></p>"
+                },
+                {
+                    "checked": false,
+                    "text": "Brainstorm ideas about similarities and differences. For example, arrange points in a table.",
+                    "tellMeMore": "<p><span>Brainstorm for ideas using whatever method suits you best:</span><br/><ul class=\"circle_li common_ul\"><li>Mind maps</li><li>Lists of interesting concepts, facts, questions, etc.</li><li>Conversations with colleagues</li></ul></p>"
+                },
+                {
+                    "checked": false,
+                    "text": "Organize your ideas. Cut any ideas that don’t help you answer the question."
+                },
+                {
+                    "checked": false,
+                    "text": "Define the two things you are comparing so that the reader is clear what you are referring to."
+                },
+                {
+                    "checked": false,
+                    "text": "Highlight the similarities and the differences and decide on your conclusion."
+                },
+                {
+                    "checked": false,
+                    "text": "Organize your notes into the framework."
+                }
+            ]
+        },
+        {
+            "header": "Choose your language",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Use formal and impersonal language.",
+                    "tellMeMore": "<p><span>To make your writing more formal, consider these points:</span><br><span class=\"blueTxtCss\">Word choice</span><br><span>It is usually best to use standard English words and phrases, that is, those with no label in the dictionary.</span><br><span>Avoid anything marked <i>informal</i>, <i>slang</i>, <i>offensive</i>, etc.</span><br><span>Some words and phrases are marked formal. Only use these if you are sure they are appropriate and you know how to use them.</span><br/><span>You may need to use the technical or specialist vocabulary of your subject or profession (e.g. investment portfolio, liquid nitrogen bath). When you read, note when and how this language is used. </span><br><span class=\"blueTxtCss\">Short forms</span><br><span>Avoid contracted forms (e.g. haven&apos;t, he&apos;s, I&apos;m) and abbreviations (e.g. pls &mdash; please, ad &mdash; advertisement).</span><br><span class=\"blueTxtCss\">Sentence structure</span><br><span>In formal writing you are likely to be expressing complex ideas. To do this you will need to write sentences using relative pronouns (e.g. which, that), subordinating conjunctions (e.g. although, because, if) and coordinating conjunctions (e.g. and, but, or). Very long sentences with many clauses can be difficult to understand. Aim for clarity rather than complexity.</span><br></p>"
+                },
+                {
+                    "checked": false,
+                    "text": "Use words and phrases to describe differences.",
+                    "tellMeMore": "<p><span class=\"blueTxtCss\"><strong>despite X... Y</strong></span><br><span><i><strong>Despite these similarities</strong>, there are a number of significant <strong>differences</strong> between the two types of course.</i></span><br><span class=\"blueTxtCss\"><strong>on the other hand</strong></span><br><span><i><strong>On the other hand</strong>, face-to-face learning happens only in the classroom according to a fixed timetable.</i></span><br><span class=\"blueTxtCss\"><strong>however</strong></span><br><span><i><strong>However</strong>, the news is not all good for online courses.</i></span><br><span class=\"blueTxtCss\"><strong>unlike X, Y...</strong></span><br><span><strong><i>Unlike</strong> traditional courses, which require buildings and teachers, online courses only need digital learning materials.</i></span><br><span class=\"blueTxtCss\"><strong>X... whereas Y...</strong></span><br><span><i>Some online courses have completion rates as low as 13%, <strong>whereas</strong> between 70-80% of students on traditional courses complete their degrees.</i></span><br><span class=\"blueTxtCss\"><strong>difference/s between</strong></span><br><span><i>There are a number of <strong>differences between</strong>...</i></span><br><span><strong>while</strong></span><br><span><i>Online courses can take an almost unlimited number of students <strong>while</strong> traditional courses are limited to the number of people that can fit into a lecture hall.</i></span><br></p>"
+                },
+                {
+                    "checked": false,
+                    "text": "Use words and phrases to describe similarities.",
+                    "tellMeMore": "<p><span class=\"blueTxtCss\"><strong>both X and Y</strong></span><br><span><strong><i>Both</strong> online courses <strong>and</strong> face-to-face courses have the same aims.</i></span><br><span class=\"blueTxtCss\"><strong>X is similar to Y</strong></span><br><span><i>Online courses <strong>are similar to</strong> traditional courses in that they have a syllabus.</i></span><br><span class=\"blueTxtCss\"><strong>also</strong></span><br><span><i>They <strong>also</strong> provide learning materials such as course notes and videos.</i></span><br><span><strong>share</strong></span><br><span class=\"\"><i>... they <strong>share</strong> the same primary aim of providing an educational service.</i></span></p>"
+                }
+            ]
+        },
+        {
+            "header": "While you are writing",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Think of a fact or comment that captures the reader’s interest in the introduction."
+                },
+                {
+                    "checked": false,
+                    "text": "Use connecting words and phrases to make the structure of your essay clear to your readers.",
+                    "tellMeMore": "<p><strong>Firstly</strong> (= I have several points to make)<br/><strong>Furthermore...; In addition,...; Moreover,...</strong> (= I have another important point)<br/><strong>However,...</strong> (to introduce a counterargument)</br><strong>Thus,...; Therefore,...</strong> (to introduce a conclusion)</p>"
+                },
+                {
+                    "checked": false,
+                    "text": "Identify opportunities to develop your ideas and show your range of language."
+                }
+            ]
+        },
+        {
+            "header": "Checklist",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Have I answered the question?"
+                },
+                {
+                    "checked": false,
+                    "text": "Have I introduced the subject, developed it logically and come to a conclusion?"
+                },
+                {
+                    "checked": false,
+                    "text": "Does the conclusion follow logically from the rest of the essay?"
+                },
+                {
+                    "checked": false,
+                    "text": "Have I used  paragraphs appropriately?"
+                },
+                {
+                    "checked": false,
+                    "text": "Is it the right length?"
+                },
+                {
+                    "checked": false,
+                    "text": "Have I checked vocabulary, grammar, spelling and punctuation?"
+                }
+            ]
+        }
+    ]
+}

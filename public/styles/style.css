@@ -1,0 +1,58 @@
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/InterVariable.woff2);
+    font-style: normal;
+    font-weight: 300 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/InterVariable-Italic.woff2);
+    font-style: italic;
+    font-weight: 300 900;
+    font-display: swap;
+}
+
+.bi {
+    vertical-align: -0.125em;
+    fill: currentColor;
+}
+
+*, html {
+    font-family: Inter, system-ui;
+    font-variation-settings: "opsz" 15;
+}
+
+.iwriter-align-right {
+    padding-left: 60%;
+}
+
+[placeholder]:empty::before {
+    content: attr(placeholder);
+}
+
+.highlightColor1 {
+    color: #fff !important;
+    background-color: RGBA(var(--bs-primary-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.highlightColor2 {
+    color: #fff !important;
+    background-color: RGBA(var(--bs-secondary-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.highlightColor3 {
+    color: #fff !important;
+    background-color: RGBA(var(--bs-success-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.highlightColor4 {
+    color: #fff !important;
+    background-color: RGBA(var(--bs-danger-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.highlightColor5 {
+    color: #000 !important;
+    background-color: RGBA(var(--bs-warning-rgb), var(--bs-bg-opacity, 1)) !important;
+}
