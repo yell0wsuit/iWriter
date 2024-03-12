@@ -244,7 +244,19 @@
                     [
                         {
                             "id": "29",
-                            "text": "When Catherine's father <extra_info eid=\"65\">adopts</extra_info> the starving orphan boy Heathcliff, Catherine's brother Hindley feels "
+                            "text": "When Catherine's father "
+                        },
+                        {
+                            "id": "65",
+                            "text": "adopts"
+                        },
+                        {
+                            "id": "29",
+                            "text": "the starving orphan boy Heathcliff, Catherine's brother Hindley "
+                        },
+                        {
+                            "id": "65",
+                            "text": "feels"
                         },
                         {
                             "id": "30",
@@ -252,15 +264,51 @@
                         },
                         {
                             "id": "29",
-                            "text": " and resentful. She, on the other hand, develops an "
+                            "text": " and resentful. She, on the other hand, "
+                        },
+                        {
+                            "id": "65",
+                            "text": "develops"
                         },
                         {
                             "id": "32",
-                            "text": "immensely strong bond"
+                            "text": "an immensely strong bond"
                         },
                         {
                             "id": "29",
-                            "text": " with Heathcliff, which becomes an all-consuming love. Upon her father's death, Hindley becomes the head of the family and forces Heathcliff to assume the position of a servant. Despite loving Heathcliff, Catherine chooses to marry Edgar Linton, who is closer to her class and position in society. It is this decision which leads to heartbreak and tragedy, not only for them but for many others."
+                            "text": " with Heathcliff, which "
+                        },
+                        {
+                            "id": "65",
+                            "text": "becomes"
+                        },
+                        {
+                            "id": "29",
+                            "text": " an all-consuming love. Upon her father's death, Hindley "
+                        },
+                        {
+                            "id": "65",
+                            "text": "becomes"
+                        },
+                        {
+                            "id": "29",
+                            "text": " the head of the family and "
+                        },
+                        {
+                            "id": "65",
+                            "text": "forces"
+                        },
+                        {
+                            "id": "29",
+                            "text": " Heathcliff to assume the position of a servant. Despite loving Heathcliff, Catherine "
+                        },
+                        {
+                            "id": "65",
+                            "text": "chooses"
+                        },
+                        {
+                            "id": "29",
+                            "text": " to marry Edgar Linton, who is closer to her class and position in society. It is this decision which leads to heartbreak and tragedy, not only for them but for many others."
                         }
                     ]
                 ],
