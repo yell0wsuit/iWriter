@@ -3,6 +3,7 @@ import { Tabs, Tab, Card, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
+import { db } from "./databaseOperations";
 
 function HomePage() {
     const [data, setData] = useState({ general: [], academic: [] });

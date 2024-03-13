@@ -1,52 +1,41 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { Button, Tabs, Tab, Row, Col, Accordion, Form, Collapse, Card } from "react-bootstrap";
-import NProgress from "nprogress";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
+import { Button, ButtonGroup, Tabs, Tab, Row, Col, Accordion, Form, Collapse, Card, Toast, ToastContainer, Modal, ListGroup } from "react-bootstrap";
 import DOMPurify from "dompurify";
+import useFetchJSONData from "./useFetchJSONData";
+import { generateInitialCheckedStates } from "./utils";
+import { db, saveProject, fetchProjectsForLocation } from "./databaseOperations";
 
 function DetailedWriting() {
-    const [data, setData] = useState(null);
-    const { folder, file } = useParams();
     const navigate = useNavigate();
+    const { folder, file } = useParams();
+    const data = useFetchJSONData(folder, file, navigate);
+
+    const [projectName, setProjectName] = useState("");
+    const [projectLocation, setProjectLocation] = useState(`${folder}_${file}` || "");
+    const [showOverwriteConfirm, setShowOverwriteConfirm] = useState(false);
     const [activeContents, setActiveContents] = useState({
         structure: true,
         notes: true,
         content: true,
     });
+    const [show, setShow] = useState(false);
+    const [showToast, setShowToast] = useState(false);
+    const [isProjectNameValid, setIsProjectNameValid] = useState(true);
+    const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
+    const [showNavigationWarningModal, setShowNavigationWarningModal] = useState(false);
+    const [targetLocation, setTargetLocation] = useState(null); // To store the target location when trying to navigate away
+    const [projectsForLocation, setProjectsForLocation] = useState([]);
+    const [showLoadModal, setShowLoadModal] = useState(false);
+    const [paragraphsData, setParagraphsData] = useState([]);
+    const [toastMessage, setToastMessage] = useState("");
+    const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+    const [projectToDelete, setProjectToDelete] = useState(null);
 
-    const generateInitialCheckedStates = (steps) => {
-        const initialState = {};
-        steps.forEach((step, stepIndex) => {
-            step.filters.forEach((filter) => {
-                const key = `step${stepIndex}_${filter.highlightClass}`;
-                initialState[key] = false;
-            });
-        });
-        return initialState;
-    };
+    const handleClose = () => setShow(false);
+    const handleShowWriting = () => setShow(true);
 
     const [checkedStates, setCheckedStates] = useState({});
-
-    useEffect(() => {
-        NProgress.start();
-        const filePath = `/json/${folder}/${file}.json`; // Adjust if your structure differs
-        fetch(filePath)
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error("Network response was not ok");
-                }
-                return response.json();
-            })
-            .then((data) => {
-                setData(data);
-                NProgress.done();
-            })
-            .catch((error) => {
-                console.error("Fetch error: ", error.message);
-                NProgress.done();
-                navigate("/"); // Redirect to homepage on error
-            });
-    }, [folder, file, navigate]);
 
     useEffect(() => {
         if (data && data.paragraphs) {
@@ -66,12 +55,40 @@ function DetailedWriting() {
         }
     }, [data]);
 
+    useEffect(() => {
+        const handleBeforeUnload = (event) => {
+            if (hasUnsavedChanges) {
+                // Most modern browsers ignore custom messages and show their default message for beforeunload events
+                event.preventDefault();
+                event.returnValue = "";
+            }
+        };
+
+        window.addEventListener("beforeunload", handleBeforeUnload);
+
+        return () => {
+            window.removeEventListener("beforeunload", handleBeforeUnload);
+        };
+    }, [hasUnsavedChanges]);
+
+    useEffect(() => {
+        if (data && data.paragraphs) {
+            const initialParagraphsData = data.paragraphs.map((paragraph) => ({
+                notes: paragraph.notes?.content || "",
+                content: paragraph.content?.content || "",
+            }));
+            setParagraphsData(initialParagraphsData);
+        }
+    }, [data]);
+
     if (!data) return <div>Loading...</div>;
 
     const handleCheckboxChange = (stepIndex, highlightClass, isChecked) => {
         const key = `step${stepIndex}_${highlightClass}`;
         setCheckedStates((prev) => ({ ...prev, [key]: isChecked }));
     };
+
+    /* Step-by-step tab */
 
     const createMarkup = (htmlContent) => ({ __html: DOMPurify.sanitize(htmlContent) });
 
@@ -154,6 +171,8 @@ function DetailedWriting() {
         return paragraphs;
     };
 
+    /* Model tab */
+
     const buttonVariant = (contentType) => {
         const isActive = activeContents[contentType];
         const isEmpty = !data.paragraphs.some((p) => p[contentType].para.length);
@@ -173,96 +192,141 @@ function DetailedWriting() {
         }));
     };
 
+    /* Tell me more */
+
     const TellMeMore = ({ text }) => {
         const [open, setOpen] = useState(false);
-
         return (
             <>
                 <Button variant="link" onClick={() => setOpen(!open)} aria-controls="collapse-text" aria-expanded={open}>
                     Tell me more
                 </Button>
                 <Collapse in={open}>
-                    <Card className="mt-3">
-                        <Card.Body>
-                            <div dangerouslySetInnerHTML={createMarkup(text)} />
-                        </Card.Body>
-                    </Card>
+                    <div>
+                        <Card className="mt-3">
+                            <Card.Body>
+                                <div dangerouslySetInnerHTML={createMarkup(text)} />
+                            </Card.Body>
+                        </Card>
+                    </div>
                 </Collapse>
             </>
         );
     };
 
-    const setupIndexedDB = () => {
-        const request = indexedDB.open("iWriter", 1);
+    /* "Unsaved changes" dialog */
 
-        request.onerror = (event) => {
-            console.error("IndexedDB error:", event.target.errorCode);
-        };
-
-        request.onupgradeneeded = (event) => {
-            const db = event.target.result;
-            // Create an object store with a generic name, such as 'projects'
-            // Use a keyPath that combines folder and file for uniqueness
-            if (!db.objectStoreNames.contains("projects")) {
-                db.createObjectStore("projects", { keyPath: "id" });
-            }
-        };
+    const handleNavigationAttempt = (navCallback) => () => {
+        if (hasUnsavedChanges) {
+            setShowNavigationWarningModal(true);
+            // Store the navigation callback to use if the user confirms they want to leave
+            setTargetLocation(() => navCallback);
+        } else {
+            navCallback(); // No unsaved changes, execute the navigation callback directly
+        }
     };
 
-    setupIndexedDB();
-
-    const saveData = (folder, file, content) => {
-        const id = `${folder}/${file}`;
-        const data = { id, content };
-
-        const request = indexedDB.open("iWriter", 1);
-        request.onsuccess = (event) => {
-            const db = event.target.result;
-            const transaction = db.transaction(["projects"], "readwrite");
-            const store = transaction.objectStore("projects");
-            store.put(data);
-        };
+    const confirmNavigation = () => {
+        setShowNavigationWarningModal(false);
+        setHasUnsavedChanges(false); // Assume changes are saved or discarded
+        if (typeof targetLocation === "function") {
+            targetLocation(); // Execute the stored navigation callback
+        }
     };
 
-    // Function to load data
-    const loadData = (folder, file, setDataCallback) => {
-        const id = `${folder}/${file}`;
+    /* Save functionality */
 
-        const request = indexedDB.open("iWriter", 1);
-        request.onsuccess = (event) => {
-            const db = event.target.result;
-            const transaction = db.transaction(["projects"], "readonly");
-            const store = transaction.objectStore("projects");
-            const getRequest = store.get(id);
+    const handleSaveClick = async () => {
+        if (!projectName.trim()) {
+            setIsProjectNameValid(false);
+            return;
+        }
 
-            getRequest.onsuccess = () => {
-                if (getRequest.result) {
-                    setDataCallback(getRequest.result.content);
-                } else {
-                    console.log("No data found for:", id);
-                }
-            };
-        };
+        // Check if a project with the same name exists
+        const existingProject = await db.projects.where("[projectName+projectLocation]").equals([projectName, projectLocation]).first();
+        if (existingProject) {
+            // Show overwrite confirmation modal
+            setShowOverwriteConfirm(true);
+        } else {
+            // No existing project found, proceed with saving
+            saveProject({
+                projectName,
+                projectLocation,
+                paragraphsData,
+                setToastMessage,
+                setShowToast,
+                handleClose,
+            });
+        }
     };
 
-    const handleNotesChange = (value, paragraphIndex) => {
-        // Update notes content for a specific paragraph
-        const newData = { ...data };
-        newData.paragraphs[paragraphIndex].notes.content = value;
-        setData(newData);
+    const handleOverwriteConfirm = () => {
+        saveProject({
+            projectName,
+            projectLocation,
+            paragraphsData,
+            setToastMessage,
+            setShowToast,
+            handleClose,
+        });
+        setShowOverwriteConfirm(false);
     };
 
-    const handleContentChange = (value, paragraphIndex) => {
-        // Update notes content for a specific paragraph
-        const newData = { ...data };
-        newData.paragraphs[paragraphIndex].content.content = value;
-        setData(newData);
+    /* Load functionality */
+
+    const handleParagraphChange = (index, field, value) => {
+        setParagraphsData((currentData) => currentData.map((paragraph, i) => (i === index ? { ...paragraph, [field]: value } : paragraph)));
+    };
+
+    const applyLoadedContentToTextboxes = (loadedContent) => {
+        const loadedParagraphsData = loadedContent.map((paragraph) => ({
+            notes: paragraph.notes || "",
+            content: paragraph.content || "",
+        }));
+        setParagraphsData(loadedParagraphsData);
+    };
+
+    const loadProject = async (projectId) => {
+        const project = await db.projects.get(projectId);
+        if (project) {
+            applyLoadedContentToTextboxes(project.content);
+            setToastMessage(`Project "${project.projectName}" loaded successfully.`);
+            setShowToast(true);
+        } else {
+            console.log("No project found with ID:", projectId);
+        }
+        setShowLoadModal(false);
+    };
+
+    /* Delete */
+    const deleteProject = async () => {
+        if (projectToDelete) {
+            await db.projects.delete(projectToDelete.id);
+            setShowDeleteConfirm(false);
+            setProjectToDelete(null);
+            setToastMessage(`Project "${projectToDelete.name}" has been deleted.`);
+            setShowToast(true);
+            // Refresh the list
+            fetchProjectsForLocation(projectLocation, setProjectsForLocation, setShowLoadModal);
+        }
     };
 
     return (
         <>
-            <Button className="my-4" onClick={() => navigate(-1)}>
-                Go Back
+            <Button className="my-4" onClick={handleNavigationAttempt(() => navigate(-1))}>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    className="bi bi-chevron-left me-1"
+                    viewBox="0 0 16 16">
+                    <path
+                        fillRule="evenodd"
+                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+                    />
+                </svg>
+                Go back
             </Button>
             <h3 className="mb-3">{data.title}</h3>
             <Tabs fill defaultActiveKey="modelText" variant="underline" className="mb-3 d-flex justify-content-center">
@@ -448,6 +512,31 @@ function DetailedWriting() {
                 <Tab eventKey="practice" title="Practice writing">
                     <Row className="g-4">
                         <Col xs={{ order: 2 }} md={{ order: 1 }}>
+                            <Button className="mb-4 me-2" onClick={handleShowWriting}>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    className="bi bi-floppy me-1"
+                                    viewBox="0 0 16 16">
+                                    <path d="M11 2H9v3h2z" />
+                                    <path d="M1.5 0h11.586a1.5 1.5 0 0 1 1.06.44l1.415 1.414A1.5 1.5 0 0 1 16 2.914V14.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13A1.5 1.5 0 0 1 1.5 0M1 1.5v13a.5.5 0 0 0 .5.5H2v-4.5A1.5 1.5 0 0 1 3.5 9h9a1.5 1.5 0 0 1 1.5 1.5V15h.5a.5.5 0 0 0 .5-.5V2.914a.5.5 0 0 0-.146-.353l-1.415-1.415A.5.5 0 0 0 13.086 1H13v4.5A1.5 1.5 0 0 1 11.5 7h-7A1.5 1.5 0 0 1 3 5.5V1H1.5a.5.5 0 0 0-.5.5m3 4a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5V1H4zM3 15h10v-4.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5z" />
+                                </svg>
+                                Save writing
+                            </Button>
+                            <Button className="mb-4 me-2" onClick={() => fetchProjectsForLocation(projectLocation, setProjectsForLocation, setShowLoadModal)}>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    className="bi bi-folder2-open me-1"
+                                    viewBox="0 0 16 16">
+                                    <path d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v.64c.57.265.94.876.856 1.546l-.64 5.124A2.5 2.5 0 0 1 12.733 15H3.266a2.5 2.5 0 0 1-2.481-2.19l-.64-5.124A1.5 1.5 0 0 1 1 6.14zM2 6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5a.5.5 0 0 0-.5.5zm-.367 1a.5.5 0 0 0-.496.562l.64 5.124A1.5 1.5 0 0 0 3.266 14h9.468a1.5 1.5 0 0 0 1.489-1.314l.64-5.124A.5.5 0 0 0 14.367 7z" />
+                                </svg>
+                                Load saved writing
+                            </Button>
                             <Card className="mb-3">
                                 <Card.Body>
                                     {data.paragraphs.map((paragraph, index) => (
@@ -458,25 +547,31 @@ function DetailedWriting() {
                                                 ))}
                                             </div>
                                             {paragraph.notes.placeHolder && (
-                                                <div className="border-3 border-start px-2 border-success">
-                                                    <div
-                                                        contenteditable="true"
-                                                        rows={1}
-                                                        className="form-control text-success fst-italic mb-2"
-                                                        type="text"
-                                                        placeholder={paragraph.notes.placeHolder}
-                                                    />
+                                                <div className="border-3 border-start px-2 border-success mb-3">
+                                                    <Form>
+                                                        <Form.Control
+                                                            className="text-success fst-italic"
+                                                            as="textarea"
+                                                            rows={1}
+                                                            placeholder={paragraph.notes.placeHolder}
+                                                            value={paragraphsData[index]?.notes || ""} // Bind value to state
+                                                            onChange={(e) => handleParagraphChange(index, "notes", e.target.value)}
+                                                        />
+                                                    </Form>
                                                 </div>
                                             )}
                                             {paragraph.content.placeHolder && !paragraph.content.duplicate && (
                                                 <div className="border-3 border-start px-2">
-                                                    <div
-                                                        contenteditable="true"
-                                                        rows={1}
-                                                        className="form-control text-primary-emphasis"
-                                                        type="text"
-                                                        placeholder={paragraph.content.placeHolder}
-                                                    />
+                                                    <Form>
+                                                        <Form.Control
+                                                            className="text-primary-emphasis"
+                                                            as="textarea"
+                                                            rows={3}
+                                                            placeholder={paragraph.content.placeHolder}
+                                                            value={paragraphsData[index]?.content || ""} // Bind value to state
+                                                            onChange={(e) => handleParagraphChange(index, "content", e.target.value)}
+                                                        />
+                                                    </Form>
                                                 </div>
                                             )}
                                         </div>
@@ -525,7 +620,7 @@ function DetailedWriting() {
                                                         <Form.Check.Input type="checkbox" />
                                                         <Form.Check.Label>
                                                             <span>{item.text}</span>
-                                                            <p>{item.tellMeMore && <TellMeMore text={item.tellMeMore} />}</p>
+                                                            <>{item.tellMeMore && <TellMeMore text={item.tellMeMore} />}</>
                                                         </Form.Check.Label>
                                                     </Form.Check>
                                                 ))}
@@ -538,6 +633,133 @@ function DetailedWriting() {
                     </Row>
                 </Tab>
             </Tabs>
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Save your writing</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form.Group>
+                        <Form.Label>Enter project name:</Form.Label>
+                        <Form.Control
+                            isInvalid={!isProjectNameValid}
+                            value={projectName}
+                            onChange={(e) => {
+                                setProjectName(e.target.value);
+                                if (!isProjectNameValid) setIsProjectNameValid(true); // Reset validation on user input
+                            }}
+                            placeholder="Project name..."
+                        />
+                        {!isProjectNameValid && <Form.Control.Feedback type="invalid">Project name cannot be empty.</Form.Control.Feedback>}
+                    </Form.Group>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="primary" onClick={handleSaveClick}>
+                        Save
+                    </Button>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+            <Modal show={showOverwriteConfirm} onHide={() => setShowOverwriteConfirm(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Confirm overwrite?</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>A project with this name already exists. Do you want to overwrite it?</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={() => setShowOverwriteConfirm(false)}>
+                        Cancel
+                    </Button>
+                    <Button variant="primary" onClick={handleOverwriteConfirm}>
+                        Overwrite
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+            <Modal show={showNavigationWarningModal} onHide={() => setShowNavigationWarningModal(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Unsaved Changes</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>You have unsaved changes, are you sure you want to leave?</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={() => setShowNavigationWarningModal(false)}>
+                        Stay on page
+                    </Button>
+                    <Button variant="primary" onClick={confirmNavigation}>
+                        Leave page
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+            <Modal show={showLoadModal} onHide={() => setShowLoadModal(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Load project</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    {projectsForLocation.length > 0 ? (
+                        projectsForLocation.map((project) => (
+                            <div className="d-grid" key={project.id}>
+                                <ButtonGroup className="mb-3">
+                                    <Button
+                                        variant="outline-secondary"
+                                        className="d-flex justify-content-between align-items-start text-start"
+                                        key={project.id}
+                                        onClick={() => loadProject(project.id)}>
+                                        <div className="me-auto">
+                                            <div>{project.projectName}</div>
+                                            <div className="">
+                                                {new Date(project.date).toLocaleString("en-US", {
+                                                    month: "long",
+                                                    day: "numeric",
+                                                    year: "numeric",
+                                                    hour: "2-digit",
+                                                    minute: "2-digit",
+                                                    second: "2-digit",
+                                                })}
+                                            </div>
+                                        </div>
+                                    </Button>
+                                    <Button
+                                        variant="outline-danger"
+                                        size="sm"
+                                        onClick={() => {
+                                            setShowDeleteConfirm(true);
+                                            setProjectToDelete({ id: project.id, name: project.projectName });
+                                        }}>
+                                        Delete
+                                    </Button>
+                                </ButtonGroup>
+                            </div>
+                        ))
+                    ) : (
+                        <ListGroup>
+                            <ListGroup.Item disabled>No project saved</ListGroup.Item>
+                        </ListGroup>
+                    )}
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={() => setShowLoadModal(false)}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+            <Modal show={showDeleteConfirm} onHide={() => setShowDeleteConfirm(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Confirm deletion</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>Are you sure you want to delete this project? This action is irreversible.</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={() => setShowDeleteConfirm(false)}>
+                        Cancel
+                    </Button>
+                    <Button variant="danger" onClick={() => deleteProject()}>
+                        Delete
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+            <ToastContainer className="p-3 position-fixed bottom-0 start-50 translate-middle-x" style={{ zIndex: 1 }}>
+                <Toast className="text-bg-secondary" onClose={() => setShowToast(false)} show={showToast} delay={3000} autohide>
+                    <Toast.Body>{toastMessage}</Toast.Body>
+                </Toast>
+            </ToastContainer>
         </>
     );
 }

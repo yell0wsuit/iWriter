@@ -7,7 +7,6 @@ import Homepage from "./Homepage";
 import { ThemeProvider } from "./ThemeContext";
 import ThemeSwitcher from "./ThemeSwitcher";
 import DetailedWriting from "./DetailedWriting";
-import StepAccordionTest from "./StepAccordionTest";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -18,7 +17,6 @@ root.render(
                     <Route path="/" element={<Homepage />} />
                     <Route path="/writing/:folder/:file" element={<DetailedWriting />} />
                     <Route path="/writing/*" element={<Navigate replace to="/" />} />
-                    <Route path="/test" element={<StepAccordionTest />} />
                 </Routes>
             </Router>
         </React.StrictMode>
