@@ -313,7 +313,7 @@ function DetailedWriting() {
 
     return (
         <>
-            <Button className="my-4" onClick={handleNavigationAttempt(() => navigate(-1))}>
+            <Button className="my-4" onClick={handleNavigationAttempt(() => navigate("/"))}>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -525,7 +525,9 @@ function DetailedWriting() {
                                 </svg>
                                 Save writing
                             </Button>
-                            <Button className="mb-4 me-2" onClick={() => fetchProjectsForLocation(projectLocation, setProjectsForLocation, setShowLoadModal)}>
+                            <Button
+                                className="mb-4 me-2"
+                                onClick={() => fetchProjectsForLocation(projectLocation, setProjectsForLocation, setShowLoadModal)}>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="16"
@@ -649,7 +651,7 @@ function DetailedWriting() {
                             }}
                             placeholder="Project name..."
                         />
-                        {!isProjectNameValid && <Form.Control.Feedback type="invalid">Project name cannot be empty.</Form.Control.Feedback>}
+                        {!isProjectNameValid && <Form.Control.Feedback type="invalid">Project name cannot be empty or blank.</Form.Control.Feedback>}
                     </Form.Group>
                 </Modal.Body>
                 <Modal.Footer>
@@ -695,28 +697,26 @@ function DetailedWriting() {
                 </Modal.Header>
                 <Modal.Body>
                     {projectsForLocation.length > 0 ? (
-                        projectsForLocation.map((project) => (
-                            <div className="d-grid" key={project.id}>
-                                <ButtonGroup className="mb-3">
-                                    <Button
-                                        variant="outline-secondary"
-                                        className="d-flex justify-content-between align-items-start text-start"
-                                        key={project.id}
-                                        onClick={() => loadProject(project.id)}>
-                                        <div className="me-auto">
-                                            <div>{project.projectName}</div>
-                                            <div className="">
-                                                {new Date(project.date).toLocaleString("en-US", {
-                                                    month: "long",
-                                                    day: "numeric",
-                                                    year: "numeric",
-                                                    hour: "2-digit",
-                                                    minute: "2-digit",
-                                                    second: "2-digit",
-                                                })}
-                                            </div>
+                        <ListGroup className="mb-3">
+                            {projectsForLocation.map((project) => (
+                                <ListGroup.Item className="d-flex justify-content-between align-items-center" key={project.id}>
+                                    <div className="me-auto">
+                                        <div>
+                                            <a href="#" onClick={() => loadProject(project.id)}>
+                                                {project.projectName}
+                                            </a>
                                         </div>
-                                    </Button>
+                                        <div className="">
+                                            {new Date(project.date).toLocaleString("en-US", {
+                                                month: "long",
+                                                day: "numeric",
+                                                year: "numeric",
+                                                hour: "2-digit",
+                                                minute: "2-digit",
+                                                second: "2-digit",
+                                            })}
+                                        </div>
+                                    </div>
                                     <Button
                                         variant="outline-danger"
                                         size="sm"
@@ -726,9 +726,9 @@ function DetailedWriting() {
                                         }}>
                                         Delete
                                     </Button>
-                                </ButtonGroup>
-                            </div>
-                        ))
+                                </ListGroup.Item>
+                            ))}
+                        </ListGroup>
                     ) : (
                         <ListGroup>
                             <ListGroup.Item disabled>No project saved</ListGroup.Item>
