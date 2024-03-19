@@ -276,6 +276,7 @@ function DetailedWriting() {
 
     const handleParagraphChange = (index, field, value) => {
         setParagraphsData((currentData) => currentData.map((paragraph, i) => (i === index ? { ...paragraph, [field]: value } : paragraph)));
+        setHasUnsavedChanges(true);
     };
 
     const applyLoadedContentToTextboxes = (loadedContent) => {
