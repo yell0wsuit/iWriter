@@ -56,3 +56,8 @@
     color: #000 !important;
     background-color: RGBA(var(--bs-warning-rgb), var(--bs-bg-opacity, 1)) !important;
 }
+
+.highlightColor6 {
+    color: #000 !important;
+    background-color: RGBA(var(--bs-info-rgb), var(--bs-bg-opacity, 1)) !important;
+}
