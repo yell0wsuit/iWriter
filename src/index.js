@@ -10,7 +10,7 @@ import DetailedWriting from "./DetailedWriting";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <Container className="p-lg-5 mb-5">
+    <Container className="p-4 mb-5">
         <React.StrictMode>
             <Router>
                 <Routes>
