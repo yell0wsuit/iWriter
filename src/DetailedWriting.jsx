@@ -133,16 +133,21 @@ function DetailedWriting() {
     };
 
     const renderParagraphsInSection = (paras, className, alignClass, sectionIndex) => {
-        return paras.map((p, index) => {
-            // Determine if it's a tip or not to conditionally set the class
-            const paragraphClass = p.tip ? "" : `text${className} ${alignClass}`;
-
-            return (
-                <div key={`section${sectionIndex}-p${index}-${p.id}`} className={`border-3 border-start px-2 border${className}`}>
-                    <p className={paragraphClass}>{p.text}</p>
-                </div>
-            );
-        });
+        const key = uuidv4();
+        return (
+            <div key={key} className={`border-3 border-start px-2 border${className}`}>
+                {paras.map((p, index) =>
+                    // Check if paragraph has tip property to conditionally render without className
+                    p.tip ? (
+                        <p key={`section${sectionIndex}-p${index}-${p.id}`}>{p.text}</p>
+                    ) : (
+                        <p key={`section${sectionIndex}-p${index}-${p.id}`} className={`text${className} ${alignClass}`}>
+                            {p.text}
+                        </p>
+                    )
+                )}
+            </div>
+        );
     };
 
     const findParagraphs = (ids, data, stepFilters, index) => {
@@ -271,7 +276,6 @@ function DetailedWriting() {
 
     const handleParagraphChange = (index, field, value) => {
         setParagraphsData((currentData) => currentData.map((paragraph, i) => (i === index ? { ...paragraph, [field]: value } : paragraph)));
-        setHasUnsavedChanges(true);
     };
 
     const applyLoadedContentToTextboxes = (loadedContent) => {

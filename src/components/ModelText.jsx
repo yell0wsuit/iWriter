@@ -48,7 +48,7 @@ function ModelText({ data, activeContents, toggleContent, createMarkup }) {
                                                 .map((para, paraIndex) => (
                                                     <p
                                                         key={`structure-${index}-${paraIndex}`}
-                                                        className={`mb-2 text-danger ${paragraph.align === "right" ? "iwriter-align-right" : ""}`}>
+                                                        className={`text-danger ${paragraph.align === "right" ? "iwriter-align-right" : ""}`}>
                                                         {para.text}
                                                     </p>
                                                 ))}
@@ -70,19 +70,20 @@ function ModelText({ data, activeContents, toggleContent, createMarkup }) {
                                         </div>
                                     )}
                                     {activeContents.content && paragraph.content.para.length > 0 && !paragraph.content.duplicate && (
-                                        <div className="border-start border-3 px-2">
+                                        <>
                                             {paragraph.content.image && (
                                                 <img src={`/images/model/${paragraph.content.image}`} alt="" className="img-fluid mb-2" />
                                             )}
                                             {paragraph.content.para.map((subParaArray, index) => (
-                                                // Join subParaArray texts with a space and sanitize the HTML content
+                                                <div key={index} className="border-start border-3 px-2">
                                                 <p
                                                     key={index}
                                                     className={`text-primary-emphasis iwriter-align-${paragraph.align === "right" ? "right" : ""}`}
                                                     dangerouslySetInnerHTML={createMarkup(subParaArray.map((para) => para.text).join(" "))}
                                                 />
+                                                </div>
                                             ))}
-                                        </div>
+                                        </>
                                     )}
                                 </React.Fragment>
                             ))}
