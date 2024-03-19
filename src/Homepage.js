@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
 import { db } from "./databaseOperations";
+import TopNavBar from "./TopNavBar";
 
 function HomePage() {
     const [data, setData] = useState({ general: [], academic: [] });
@@ -23,6 +24,7 @@ function HomePage() {
 
     return (
         <>
+            <TopNavBar />
             <Row className="mb-4 justify-content-center text-center">
                 <Col md="auto">
                     <h1 className="fw-bold">Oxford iWriter</h1>

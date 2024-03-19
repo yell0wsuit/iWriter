@@ -113,7 +113,7 @@
             "list": [
                 {
                     "name": "Writing from sources",
-                    "file": "academic/writingsources"
+                    "file": "academic/writingfromsources"
                 },
                 {
                     "name": "Essay 1: Explanation",
@@ -163,15 +163,15 @@
             "list": [
                 {
                     "name": "Abstract 1: Physical and life sciences",
-                    "file": "academic/abstract1"
+                    "file": "academic/abstractphysical"
                 },
                 {
                     "name": "Abstract 2: Social sciences",
-                    "file": "academic/abstract2"
+                    "file": "academic/abstractsocial"
                 },
                 {
                     "name": "Abstract 3: Medicine",
-                    "file": "academic/abstract3"
+                    "file": "academic/abstractmedicine"
                 },
                 {
                     "name": "Introduction 1: Physical and life sciences",
