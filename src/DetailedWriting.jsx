@@ -2,9 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { Button, ButtonGroup, Tabs, Tab, Row, Col, Accordion, Form, Collapse, Card, Toast, ToastContainer, Modal, ListGroup } from "react-bootstrap";
 import DOMPurify from "dompurify";
+import { v4 as uuidv4 } from "uuid";
 import useFetchJSONData from "./useFetchJSONData";
 import { generateInitialCheckedStates } from "./utils";
 import { db, saveProject, fetchProjectsForLocation } from "./databaseOperations";
+import TopNavBar from "./TopNavBar";
+import ModelText from "./components/ModelText";
+import StepByStep from "./components/StepByStep";
 
 function DetailedWriting() {
     const navigate = useNavigate();
@@ -24,7 +28,7 @@ function DetailedWriting() {
     const [isProjectNameValid, setIsProjectNameValid] = useState(true);
     const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
     const [showNavigationWarningModal, setShowNavigationWarningModal] = useState(false);
-    const [targetLocation, setTargetLocation] = useState(null); // To store the target location when trying to navigate away
+    const [targetLocation, setTargetLocation] = useState(null);
     const [projectsForLocation, setProjectsForLocation] = useState([]);
     const [showLoadModal, setShowLoadModal] = useState(false);
     const [paragraphsData, setParagraphsData] = useState([]);
@@ -88,54 +92,57 @@ function DetailedWriting() {
         setCheckedStates((prev) => ({ ...prev, [key]: isChecked }));
     };
 
-    /* Step-by-step tab */
+    /* Step-by-step tab functions */
 
     const createMarkup = (htmlContent) => ({ __html: DOMPurify.sanitize(htmlContent) });
 
-    const renderParagraphText = (para, className, alignClass, stepFilters, stepIndex) => {
+    const renderParagraphText = (para, className, alignClass, stepFilters, stepIndex, callId) => {
         return (
-            <div className={`border-3 border-start px-2 ${className}`}>
+            <div key={`${stepIndex}-${callId}`}>
                 {para.map((paraGroup, index) => (
-                    <p key={index} className={`${className} ${alignClass}`}>
-                        {paraGroup.map((item, itemIndex) => {
-                            const highlightClassKeys = stepFilters.map((filter) => `step${stepIndex}_${filter.highlightClass}`);
-                            const isHighlighted = highlightClassKeys.some(
-                                (key) =>
-                                    checkedStates[key] &&
-                                    stepFilters
-                                        .find((filter) => `step${stepIndex}_${filter.highlightClass}` === key)
-                                        .highlightPara.includes(item.id.toString())
-                            );
-                            const highlightClass = isHighlighted
-                                ? stepFilters.find(
-                                      (filter) =>
-                                          checkedStates[`step${stepIndex}_${filter.highlightClass}`] &&
-                                          filter.highlightPara.includes(item.id.toString())
-                                  ).highlightClass
-                                : "";
-                            return <span key={itemIndex} className={highlightClass} dangerouslySetInnerHTML={createMarkup(item.text)}></span>;
-                        })}
-                    </p>
+                    <div key={`step${stepIndex}-paraGroup${index}-${callId}`} className={`border-3 border-start px-2 ${className}`}>
+                        <p key={`step${stepIndex}-paraGroup${index}-${callId}`} className={`${className} ${alignClass}`}>
+                            {paraGroup.map((item, itemIndex) => {
+                                const highlightClassKeys = stepFilters.map((filter) => `step${stepIndex}_${filter.highlightClass}`);
+                                const isHighlighted = highlightClassKeys.some(
+                                    (key) =>
+                                        checkedStates[key] &&
+                                        stepFilters
+                                            .find((filter) => `step${stepIndex}_${filter.highlightClass}` === key)
+                                            .highlightPara.includes(item.id.toString())
+                                );
+                                const highlightClass = isHighlighted
+                                    ? stepFilters.find(
+                                          (filter) =>
+                                              checkedStates[`step${stepIndex}_${filter.highlightClass}`] &&
+                                              filter.highlightPara.includes(item.id.toString())
+                                      ).highlightClass
+                                    : "";
+                                return (
+                                    <span
+                                        key={`step${stepIndex}-paraGroup${index}-item${itemIndex}`}
+                                        className={highlightClass}
+                                        dangerouslySetInnerHTML={createMarkup(item.text)}></span>
+                                );
+                            })}
+                        </p>
+                    </div>
                 ))}
             </div>
         );
     };
 
-    const renderParagraphsInSection = (paras, className, alignClass) => {
-        return (
-            <div className={`border-3 border-start px-2 border${className}`}>
-                {paras.map((p, index) =>
-                    // Check if paragraph has tip property to conditionally render without className
-                    p.tip ? (
-                        <p key={index}>{p.text}</p>
-                    ) : (
-                        <p key={index} className={`text${className} ${alignClass}`}>
-                            {p.text}
-                        </p>
-                    )
-                )}
-            </div>
-        );
+    const renderParagraphsInSection = (paras, className, alignClass, sectionIndex) => {
+        return paras.map((p, index) => {
+            // Determine if it's a tip or not to conditionally set the class
+            const paragraphClass = p.tip ? "" : `text${className} ${alignClass}`;
+
+            return (
+                <div key={`section${sectionIndex}-p${index}-${p.id}`} className={`border-3 border-start px-2 border${className}`}>
+                    <p className={paragraphClass}>{p.text}</p>
+                </div>
+            );
+        });
     };
 
     const findParagraphs = (ids, data, stepFilters, index) => {
@@ -151,7 +158,7 @@ function DetailedWriting() {
                         const className = section === "structure" ? "-danger" : "-success fst-italic";
                         // Exclude tips from being rendered
                         const filteredParas = para[section].para.filter((p) => !p.tip);
-                        paragraphs.push(renderParagraphsInSection(filteredParas, className, alignClass));
+                        paragraphs.push(renderParagraphsInSection(filteredParas, className, alignClass, index));
                     }
                 }
             });
@@ -164,7 +171,7 @@ function DetailedWriting() {
                         <img key={para.content.id} src={`/images/model/${para.content.image}`} alt={para.content.imgAlt} className="img-fluid mb-3" />
                     );
                 }
-                paragraphs.push(renderParagraphText(para.content.para, "text-primary-emphasis", alignClass, stepFilters, index));
+                paragraphs.push(renderParagraphText(para.content.para, "text-primary-emphasis", alignClass, stepFilters, index, para.content.id));
             }
         });
 
@@ -172,18 +179,6 @@ function DetailedWriting() {
     };
 
     /* Model tab */
-
-    const buttonVariant = (contentType) => {
-        const isActive = activeContents[contentType];
-        const isEmpty = !data.paragraphs.some((p) => p[contentType].para.length);
-        if (isEmpty) {
-            return "outline-secondary"; // Indicates no content available
-        } else if (isActive) {
-            return contentType === "structure" ? "danger" : contentType === "notes" ? "success" : "primary";
-        } else {
-            return "outline-" + (contentType === "structure" ? "danger" : contentType === "notes" ? "success" : "primary");
-        }
-    };
 
     const toggleContent = (contentType) => {
         setActiveContents((prevState) => ({
@@ -313,7 +308,8 @@ function DetailedWriting() {
 
     return (
         <>
-            <Button className="my-4" onClick={handleNavigationAttempt(() => navigate("/"))}>
+            <TopNavBar />
+            <Button className="mb-3" onClick={handleNavigationAttempt(() => navigate("/"))}>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -332,181 +328,17 @@ function DetailedWriting() {
             <Tabs fill defaultActiveKey="modelText" variant="underline" className="mb-3 d-flex justify-content-center">
                 <Tab eventKey="modelText" title="Model text">
                     <Row className="g-4">
-                        <Col xs={{ order: 2 }} md={{ order: 1 }}>
-                            Showing:{" "}
-                            <Button
-                                variant={buttonVariant("structure")}
-                                onClick={() => toggleContent("structure")}
-                                disabled={!activeContents.structure && !data.paragraphs.some((p) => p.structure.para.length)}>
-                                Structure
-                            </Button>{" "}
-                            <Button
-                                variant={buttonVariant("notes")}
-                                onClick={() => toggleContent("notes")}
-                                disabled={!activeContents.notes && !data.paragraphs.some((p) => p.notes.para.length)}>
-                                Notes
-                            </Button>{" "}
-                            <Button
-                                variant={buttonVariant("content")}
-                                onClick={() => toggleContent("content")}
-                                disabled={!activeContents.content && !data.paragraphs.some((p) => p.content.para.length)}>
-                                Content
-                            </Button>
-                            <Card className="mt-4">
-                                <Card.Body>
-                                    {data &&
-                                        data.paragraphs.map((paragraph, index) => (
-                                            <React.Fragment key={index}>
-                                                {activeContents.structure && paragraph.structure.para.length > 0 && (
-                                                    <div className="border-start border-danger border-3 px-2">
-                                                        {paragraph.structure.para
-                                                            .filter((para) => !para.tip)
-                                                            .map((para, paraIndex) => (
-                                                                <p
-                                                                    key={`structure-${index}-${paraIndex}`}
-                                                                    className={`mb-2 text-danger ${
-                                                                        paragraph.align === "right" ? "iwriter-align-right" : ""
-                                                                    }`}>
-                                                                    {para.text}
-                                                                </p>
-                                                            ))}
-                                                    </div>
-                                                )}
-                                                {activeContents.notes && paragraph.notes.para.length > 0 && (
-                                                    <div className="border-start border-success border-3 px-2">
-                                                        {paragraph.notes.para
-                                                            .filter((para) => !para.tip)
-                                                            .map((para, paraIndex) => (
-                                                                <p
-                                                                    key={`notes-${index}-${paraIndex}`}
-                                                                    className={`text-success fst-italic iwriter-align-${
-                                                                        paragraph.align === "right" ? "right" : ""
-                                                                    }`}>
-                                                                    {para.text}
-                                                                </p>
-                                                            ))}
-                                                    </div>
-                                                )}
-                                                {activeContents.content && paragraph.content.para.length > 0 && !paragraph.content.duplicate && (
-                                                    <div className="border-start border-3 px-2">
-                                                        {paragraph.content.image && (
-                                                            <img src={`/images/model/${paragraph.content.image}`} alt="" className="img-fluid mb-2" />
-                                                        )}
-                                                        {paragraph.content.para.map((subParaArray, index) => (
-                                                            // Join subParaArray texts with a space and sanitize the HTML content
-                                                            <p
-                                                                key={index}
-                                                                className={`text-primary-emphasis iwriter-align-${
-                                                                    paragraph.align === "right" ? "right" : ""
-                                                                }`}
-                                                                dangerouslySetInnerHTML={createMarkup(
-                                                                    subParaArray.map((para) => para.text).join(" ")
-                                                                )}
-                                                            />
-                                                        ))}
-                                                    </div>
-                                                )}
-                                            </React.Fragment>
-                                        ))}
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col xs={{ order: 1 }} md={{ span: 4, order: 2 }}>
-                            <Accordion defaultActiveKey="0">
-                                <Accordion.Item eventKey="0">
-                                    <Accordion.Header>
-                                        <div className="fw-bold">Next steps</div>
-                                    </Accordion.Header>
-                                    <Accordion.Body>
-                                        <ul>
-                                            <li>
-                                                <p>Read the model text.</p>
-                                            </li>
-                                            <li>
-                                                <p>Use the buttons to show/hide the structure, notes, etc. for this model text.</p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    Open the <strong>Step-by-step</strong> tab to look at the model text in more detail.
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    Open the <strong>Practice Writing</strong> tab to start writing your own text.
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </Accordion.Body>
-                                </Accordion.Item>
-                            </Accordion>
-                        </Col>
+                        <ModelText data={data} activeContents={activeContents} toggleContent={toggleContent} createMarkup={createMarkup} />
                     </Row>
                 </Tab>
                 <Tab eventKey="step" title="Step by step">
                     <Row className="g-4">
-                        <Col xs={{ order: 2 }} md={{ order: 1 }}>
-                            <p>Step-by-step tour of the model</p>
-                            <Accordion alwaysOpen>
-                                {data.steps.map((step, index) => (
-                                    <Accordion.Item eventKey={index.toString()} key={index}>
-                                        <Accordion.Header>
-                                            <div className="fw-semibold">{step.label}</div>
-                                        </Accordion.Header>
-                                        <Accordion.Body>
-                                            {step.desc.map((desc, descIndex) => (
-                                                <p key={descIndex} dangerouslySetInnerHTML={createMarkup(desc)}></p>
-                                            ))}
-                                            {step.filters.map((filter, filterIndex) => {
-                                                const highlightKey = `step${index}_${filter.highlightClass}`;
-                                                const isChecked = checkedStates[highlightKey];
-                                                const labelClassName = isChecked ? filter.highlightClass : "";
-
-                                                return (
-                                                    <Form.Check className="mb-2" key={filterIndex} id={`check-${index}-${filterIndex}`}>
-                                                        <Form.Check.Input
-                                                            type="checkbox"
-                                                            checked={isChecked}
-                                                            onChange={(e) => handleCheckboxChange(index, filter.highlightClass, e.target.checked)}
-                                                        />
-                                                        <Form.Check.Label>
-                                                            <span className={labelClassName}>{filter.label}</span>
-                                                        </Form.Check.Label>
-                                                    </Form.Check>
-                                                );
-                                            })}
-
-                                            {step.showParas && findParagraphs(step.showParas, data, step.filters, index)}
-                                        </Accordion.Body>
-                                    </Accordion.Item>
-                                ))}
-                            </Accordion>
-                        </Col>
-                        <Col xs={{ order: 1 }} md={{ span: 4, order: 2 }}>
-                            <Accordion defaultActiveKey="0">
-                                <Accordion.Item eventKey="0">
-                                    <Accordion.Header>
-                                        <div className="fw-bold">Next steps</div>
-                                    </Accordion.Header>
-                                    <Accordion.Body>
-                                        <ul>
-                                            <li>
-                                                <p>Expand the sections on this tab to look at the model text in more detail.</p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    Go back to the <strong>Model text</strong> tab, or...
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    Open the <strong>Practice Writing</strong> tab to start writing your own text.
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </Accordion.Body>
-                                </Accordion.Item>
-                            </Accordion>
-                        </Col>
+                        <StepByStep
+                            data={data}
+                            checkedStates={checkedStates}
+                            handleCheckboxChange={handleCheckboxChange}
+                            findParagraphs={findParagraphs}
+                        />
                     </Row>
                 </Tab>
                 <Tab eventKey="practice" title="Practice writing">
