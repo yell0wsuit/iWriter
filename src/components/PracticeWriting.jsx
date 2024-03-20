@@ -207,6 +207,8 @@ function PracticeWriting({ folder, file, data, handleParagraphChange, paragraphs
                         </Accordion.Body>
                     </Accordion.Item>
                 </Accordion>
+                <hr />
+                <h4>Tips</h4>
                 <Accordion>
                     {data.practice_rubric.map((section, index) => (
                         <Accordion.Item eventKey={`${index}`} key={index}>
