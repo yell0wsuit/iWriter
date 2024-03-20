@@ -218,7 +218,7 @@ function PracticeWriting({ folder, file, data, handleParagraphChange, paragraphs
                             <Accordion.Body>
                                 <Form>
                                     {section.checkList.map((item, itemIndex) => (
-                                        <Form.Check id={`check-${index}-${itemIndex}`} key={itemIndex} className="mb-2">
+                                        <Form.Check id={`checkPractice-${index}-${itemIndex}`} key={itemIndex} className="mb-2">
                                             <Form.Check.Input type="checkbox" />
                                             <Form.Check.Label className="mb-2">{item.text}</Form.Check.Label>
                                             <div>{item.tellMeMore && <TellMeMore text={item.tellMeMore} />}</div>
@@ -230,7 +230,6 @@ function PracticeWriting({ folder, file, data, handleParagraphChange, paragraphs
                     ))}
                 </Accordion>
             </Col>
-
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Save your writing</Modal.Title>
