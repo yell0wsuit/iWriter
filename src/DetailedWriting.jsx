@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useNavigate, useLocation } from "react-router-dom";
-import { Button, ButtonGroup, Tabs, Tab, Row, Col, Accordion, Form, Collapse, Card, Toast, ToastContainer, Modal, ListGroup } from "react-bootstrap";
+import { useParams, useNavigate } from "react-router-dom";
+import { Button, Tabs, Tab, Row, Col, Accordion, Form, Collapse, Card, Toast, ToastContainer, Modal, ListGroup } from "react-bootstrap";
 import DOMPurify from "dompurify";
 import { v4 as uuidv4 } from "uuid";
 import useFetchJSONData from "./useFetchJSONData";
@@ -16,7 +16,7 @@ function DetailedWriting() {
     const data = useFetchJSONData(folder, file, navigate);
 
     const [projectName, setProjectName] = useState("");
-    const [projectLocation, setProjectLocation] = useState(`${folder}_${file}` || "");
+    const [projectLocation] = useState(`${folder}_${file}` || "");
     const [showOverwriteConfirm, setShowOverwriteConfirm] = useState(false);
     const [activeContents, setActiveContents] = useState({
         structure: true,
@@ -49,13 +49,15 @@ function DetailedWriting() {
                 content: data.paragraphs.some((p) => p.content && p.content.para.length > 0),
             };
             setActiveContents(contentAvailability);
-        }
-    }, [data]);
 
-    useEffect(() => {
-        if (data) {
             const initialState = generateInitialCheckedStates(data.steps);
             setCheckedStates(initialState);
+
+            const initialParagraphsData = data.paragraphs.map((paragraph) => ({
+                notes: paragraph.notes?.content || "",
+                content: paragraph.content?.content || "",
+            }));
+            setParagraphsData(initialParagraphsData);
         }
     }, [data]);
 
@@ -74,16 +76,6 @@ function DetailedWriting() {
             window.removeEventListener("beforeunload", handleBeforeUnload);
         };
     }, [hasUnsavedChanges]);
-
-    useEffect(() => {
-        if (data && data.paragraphs) {
-            const initialParagraphsData = data.paragraphs.map((paragraph) => ({
-                notes: paragraph.notes?.content || "",
-                content: paragraph.content?.content || "",
-            }));
-            setParagraphsData(initialParagraphsData);
-        }
-    }, [data]);
 
     if (!data) return <div>Loading...</div>;
 
@@ -198,7 +190,7 @@ function DetailedWriting() {
         const [open, setOpen] = useState(false);
         return (
             <>
-                <Button variant="link" onClick={() => setOpen(!open)} aria-controls="collapse-text" aria-expanded={open}>
+                <Button variant="warning" onClick={() => setOpen(!open)} aria-controls="collapse-text" aria-expanded={open}>
                     Tell me more
                 </Button>
                 <Collapse in={open}>
@@ -276,6 +268,7 @@ function DetailedWriting() {
 
     const handleParagraphChange = (index, field, value) => {
         setParagraphsData((currentData) => currentData.map((paragraph, i) => (i === index ? { ...paragraph, [field]: value } : paragraph)));
+        setHasUnsavedChanges(true);
     };
 
     const applyLoadedContentToTextboxes = (loadedContent) => {
@@ -455,12 +448,10 @@ function DetailedWriting() {
                                         <Accordion.Body>
                                             <Form>
                                                 {section.checkList.map((item, itemIndex) => (
-                                                    <Form.Check id={`check-${index}-${itemIndex}`} key={itemIndex}>
+                                                    <Form.Check id={`check-${index}-${itemIndex}`} key={itemIndex} className="mb-2">
                                                         <Form.Check.Input type="checkbox" />
-                                                        <Form.Check.Label>
-                                                            <span>{item.text}</span>
-                                                            <>{item.tellMeMore && <TellMeMore text={item.tellMeMore} />}</>
-                                                        </Form.Check.Label>
+                                                        <Form.Check.Label className="mb-2">{item.text}</Form.Check.Label>
+                                                        <div>{item.tellMeMore && <TellMeMore text={item.tellMeMore} />}</div>
                                                     </Form.Check>
                                                 ))}
                                             </Form>
@@ -539,9 +530,9 @@ function DetailedWriting() {
                                 <ListGroup.Item className="d-flex justify-content-between align-items-center" key={project.id}>
                                     <div className="me-auto">
                                         <div>
-                                            <a href="#" onClick={() => loadProject(project.id)}>
+                                            <Button variant="link" className="p-0" onClick={() => loadProject(project.id)}>
                                                 {project.projectName}
-                                            </a>
+                                            </Button>
                                         </div>
                                         <div className="">
                                             {new Date(project.date).toLocaleString("en-US", {
