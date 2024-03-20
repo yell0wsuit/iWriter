@@ -22,8 +22,7 @@
                     [
                         {
                             "id": "3",
-                            "bold": true,
-                            "text": "Changing shopping habits"
+                            "text": "<strong>Changing shopping habits</strong>"
                         }
                     ]
                 ],
@@ -377,56 +376,19 @@
             "filters": []
         },
         {
-            "showParas": [
-                "1",
-                "2",
-                "4",
-                "5",
-                "11",
-                "12",
-                "17",
-                "18",
-                "28",
-                "29"
-            ],
+            "showParas": ["1", "2", "4", "5", "11", "12", "17", "18", "28", "29"],
             "label": "How is the report structured?",
-            "desc": [
-                "Below is the framework that was used to create this report."
-            ],
+            "desc": ["Below is the framework that was used to create this report."],
             "filters": []
         },
         {
-            "showParas": [
-                "1",
-                "2",
-                "3",
-                "4",
-                "5",
-                "6",
-                "11",
-                "12",
-                "13",
-                "17",
-                "18",
-                "19",
-                "28",
-                "29",
-                "30"
-            ],
+            "showParas": ["1", "2", "3", "4", "5", "6", "11", "12", "13", "17", "18", "19", "28", "29", "30"],
             "label": "How was the report planned?",
-            "desc": [
-                "In order to plan the report, the writer decides what to cover in each paragraph and takes notes."
-            ],
+            "desc": ["In order to plan the report, the writer decides what to cover in each paragraph and takes notes."],
             "filters": []
         },
         {
-            "showParas": [
-                "3",
-                "7",
-                "14",
-                "20",
-                "31"
-            ],
+            "showParas": ["3", "7", "14", "20", "31"],
             "label": "Show me useful language",
             "desc": [],
             "filters": [
@@ -435,24 +397,7 @@
                     "label": "The writer uses key words or phrases for a report.",
                     "checked": false,
                     "highlightClass": "highlightColor1",
-                    "highlightPara": [
-                        "8",
-                        "9",
-                        "10",
-                        "15",
-                        "16",
-                        "21",
-                        "22",
-                        "23",
-                        "24",
-                        "25",
-                        "26",
-                        "27",
-                        "32",
-                        "33",
-                        "34",
-                        "35"
-                    ]
+                    "highlightPara": ["8", "9", "10", "15", "16", "21", "22", "23", "24", "25", "26", "27", "32", "33", "34", "35"]
                 }
             ]
         }
