@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Button, Col, Card, Accordion, Modal, Form, ListGroup, Collapse, Toast, ToastContainer } from "react-bootstrap";
 import { db, saveProject, fetchProjectsForLocation } from "../databaseOperations";
-import DOMPurify from "dompurify";
 
-function PracticeWriting({ folder, file, data, handleParagraphChange, paragraphsData, setParagraphsData }) {
+function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsData, setParagraphsData, createMarkup }) {
     const [show, setShow] = useState(false);
     const [showLoadModal, setShowLoadModal] = useState(false);
     const [projectsForLocation, setProjectsForLocation] = useState([]);
@@ -18,8 +17,6 @@ function PracticeWriting({ folder, file, data, handleParagraphChange, paragraphs
     const handleClose = () => setShow(false);
     const projectLocation = `${folder}_${file}`;
     const handleShowWriting = () => setShow(true);
-
-    const createMarkup = (htmlContent) => ({ __html: DOMPurify.sanitize(htmlContent) });
 
     const TellMeMore = ({ text }) => {
         const [open, setOpen] = useState(false);
@@ -39,6 +36,11 @@ function PracticeWriting({ folder, file, data, handleParagraphChange, paragraphs
                 </Collapse>
             </>
         );
+    };
+
+    const handleParagraphChange = (index, field, value) => {
+        setParagraphsData((currentData) => currentData.map((paragraph, i) => (i === index ? { ...paragraph, [field]: value } : paragraph)));
+        setHasUnsavedChanges(true);
     };
 
     const handleSaveClick = async () => {
@@ -143,7 +145,7 @@ function PracticeWriting({ folder, file, data, handleParagraphChange, paragraphs
                             <div key={index} className="mb-3">
                                 <div className="text-danger border-3 border-start px-2 border-danger">
                                     {paragraph.structure.para.map((p, idx) => (
-                                        <p key={idx}>{p.text}</p>
+                                        <p key={idx} dangerouslySetInnerHTML={createMarkup(p.text)}></p>
                                     ))}
                                 </div>
                                 {paragraph.notes.placeHolder && (

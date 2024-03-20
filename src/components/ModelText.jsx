@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Col, Accordion, Card } from "react-bootstrap";
 
-function ModelText({ data, activeContents, toggleContent, createMarkup }) {
+function ModelText({ data, activeContents, setActiveContents, createMarkup }) {
     const buttonVariant = (contentType) => {
         const isActive = activeContents[contentType];
         const isEmpty = !data.paragraphs.some((p) => p[contentType].para.length);
@@ -12,6 +12,13 @@ function ModelText({ data, activeContents, toggleContent, createMarkup }) {
         } else {
             return "outline-" + (contentType === "structure" ? "danger" : contentType === "notes" ? "success" : "primary");
         }
+    };
+
+    const toggleContent = (contentType) => {
+        setActiveContents((prevState) => ({
+            ...prevState,
+            [contentType]: !prevState[contentType],
+        }));
     };
 
     return (
