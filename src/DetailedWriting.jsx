@@ -77,35 +77,33 @@ function DetailedWriting() {
 
     const renderParagraphText = (para, className, alignClass, stepFilters, stepIndex, callId) => {
         return (
-            <div key={`${stepIndex}-${callId}`}>
+            <div key={`${stepIndex}-${callId}`} className={`border-3 border-start px-2 ${className}`}>
                 {para.map((paraGroup, index) => (
-                    <div key={`step${stepIndex}-paraGroup${index}-${callId}`} className={`border-3 border-start px-2 ${className}`}>
-                        <p key={`step${stepIndex}-paraGroup${index}-${callId}`} className={`${className} ${alignClass}`}>
-                            {paraGroup.map((item, itemIndex) => {
-                                const highlightClassKeys = stepFilters.map((filter) => `step${stepIndex}_${filter.highlightClass}`);
-                                const isHighlighted = highlightClassKeys.some(
-                                    (key) =>
-                                        checkedStates[key] &&
-                                        stepFilters
-                                            .find((filter) => `step${stepIndex}_${filter.highlightClass}` === key)
-                                            .highlightPara.includes(item.id.toString())
-                                );
-                                const highlightClass = isHighlighted
-                                    ? stepFilters.find(
-                                          (filter) =>
-                                              checkedStates[`step${stepIndex}_${filter.highlightClass}`] &&
-                                              filter.highlightPara.includes(item.id.toString())
-                                      ).highlightClass
-                                    : "";
-                                return (
-                                    <span
-                                        key={`step${stepIndex}-paraGroup${index}-item${itemIndex}`}
-                                        className={highlightClass}
-                                        dangerouslySetInnerHTML={createMarkup(item.text)}></span>
-                                );
-                            })}
-                        </p>
-                    </div>
+                    <p key={`step${stepIndex}-paraGroup${index}-${callId}`} className={`${className} ${alignClass}`}>
+                        {paraGroup.map((item, itemIndex) => {
+                            const highlightClassKeys = stepFilters.map((filter) => `step${stepIndex}_${filter.highlightClass}`);
+                            const isHighlighted = highlightClassKeys.some(
+                                (key) =>
+                                    checkedStates[key] &&
+                                    stepFilters
+                                        .find((filter) => `step${stepIndex}_${filter.highlightClass}` === key)
+                                        .highlightPara.includes(item.id.toString())
+                            );
+                            const highlightClass = isHighlighted
+                                ? stepFilters.find(
+                                      (filter) =>
+                                          checkedStates[`step${stepIndex}_${filter.highlightClass}`] &&
+                                          filter.highlightPara.includes(item.id.toString())
+                                  ).highlightClass
+                                : "";
+                            return (
+                                <span
+                                    key={`step${stepIndex}-paraGroup${index}-item${itemIndex}`}
+                                    className={highlightClass}
+                                    dangerouslySetInnerHTML={createMarkup(item.text)}></span>
+                            );
+                        })}
+                    </p>
                 ))}
             </div>
         );

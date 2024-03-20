@@ -70,20 +70,18 @@ function ModelText({ data, activeContents, toggleContent, createMarkup }) {
                                         </div>
                                     )}
                                     {activeContents.content && paragraph.content.para.length > 0 && !paragraph.content.duplicate && (
-                                        <>
+                                        <div key={index} className="border-start border-3 px-2">
                                             {paragraph.content.image && (
                                                 <img src={`/images/model/${paragraph.content.image}`} alt="" className="img-fluid mb-2" />
                                             )}
                                             {paragraph.content.para.map((subParaArray, index) => (
-                                                <div key={index} className="border-start border-3 px-2">
                                                 <p
                                                     key={index}
                                                     className={`text-primary-emphasis iwriter-align-${paragraph.align === "right" ? "right" : ""}`}
                                                     dangerouslySetInnerHTML={createMarkup(subParaArray.map((para) => para.text).join(" "))}
                                                 />
-                                                </div>
                                             ))}
-                                        </>
+                                        </div>
                                     )}
                                 </React.Fragment>
                             ))}
