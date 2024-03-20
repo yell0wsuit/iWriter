@@ -605,7 +605,7 @@
                 {
                     "checked": false,
                     "text": "Ask yourself questions about what the graph shows.",
-                    "tellMeMore": "<p><span>What is the information about?<br>What do the numbers on each axis represent?<br>What changes do the lines show?<br>How do the lines stand in relation to each other?<br>Which feature of the lines stands out most?<br>What conclusions can be drawn from the graph?</span><br></p>"
+                    "tellMeMore": "<p>What is the information about?</p> <p>What do the numbers on each axis represent?</p> <p>What changes do the lines show?</p> <p>How do the lines stand in relation to each other?</p> <p>Which feature of the lines stands out most?</p> <p>What conclusions can be drawn from the graph?</p>"
                 },
                 {
                     "checked": false,
@@ -623,12 +623,12 @@
                 {
                     "checked": false,
                     "text": "Use language to describe general trends.",
-                    "tellMeMore": "<p><span><i>The graph shows/represents/indicates...<br>The figures show/illustrate (that)...<br>From the graph, it can be seen that...<br>In conclusion,...<br>The following conclusions can be drawn from the data.<br>The main trend seen in the data is that...<br>The main trend is upwards/downwards.</i></span><br></p>"
+                    "tellMeMore": "<p><i>The graph shows/represents/indicates...</i></p> <p><i>The figures show/illustrate (that)...</i></p> <p><i>From the graph, it can be seen that...</i></p> <p><i>In conclusion,...</i></p> <p><i>The following conclusions can be drawn from the data.</i></p> <p><i>The main trend seen in the data is that...</i></p> <p><i>The main trend is upwards/downwards.</i></p>"
                 },
                 {
                     "checked": false,
                     "text": "Use language to describe developments over time.",
-                    "tellMeMore": "<p><span><i>a <span class=\"f_normal\">small/slight</span>/<span class=\"f_normal\">gradual</span> increase/decrease<br>a <span class=\"f_normal\">significant/marked/dramatic</span> increase/decrease<br>a <span class=\"f_normal\">small/slight</span> rise/fall/dip<br>steady growth<br>to rise/increase/fall/decrease/decline/drop<br>to rise/fall <span class=\"f_normal\">steadily/dramatically/sharply/rapidly</span><br>Customer numbers have fluctuated.<br>(Online sales) reached an all-time high/low.<br>The graph shows a marked change in...</span></p>"
+                    "tellMeMore": "<p><i>a</i> <u>small / slight / gradual</u> <i>increase / decrease</i></p> <p><i>a</i> <u>significant / marked / dramatic</u> <i>increase / decrease</i></p> <p><i>a</i> <u>small / slight</u> <i>rise / fall / dip</i></p> <p><i>steady growth</i></p> <p><i>to rise / increase / fall / decrease / decline / drop</i></p> <p><i>to rise / fall</i> <u>steadily / dramatically / sharply / rapidly</u></p> <p><i>Customer numbers have fluctuated.</i></p> <p><i>(Online sales) reached an all-time high/low.</i></p> <p><i>The graph shows a marked change in...</i></p>"
                 }
             ]
         },
