@@ -14,6 +14,7 @@ const TopNavBar = () => {
                     <Navbar.Collapse id="top-NavBar">
                         <Nav className="me-auto" variant="underline">
                             <NavLink to="/" className="nav-link">Home</NavLink>
+                            <NavLink to="/references" className="nav-link">References</NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

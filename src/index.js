@@ -7,6 +7,7 @@ import Homepage from "./Homepage";
 import { ThemeProvider } from "./ThemeContext";
 import ThemeSwitcher from "./ThemeSwitcher";
 import DetailedWriting from "./DetailedWriting";
+import ReferencesPage from "./ReferencesPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,6 +18,7 @@ root.render(
                     <Route path="/" element={<Homepage />} />
                     <Route path="/writing/:folder/:file" element={<DetailedWriting />} />
                     <Route path="/writing/*" element={<Navigate replace to="/" />} />
+                    <Route path="/references" element={<ReferencesPage />} />
                 </Routes>
             </Router>
         </React.StrictMode>
