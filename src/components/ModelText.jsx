@@ -85,7 +85,7 @@ function ModelText({ data, activeContents, setActiveContents, createMarkup }) {
                                                 <p
                                                     key={index}
                                                     className={`text-primary-emphasis iwriter-align-${paragraph.align === "right" ? "right" : ""}`}
-                                                    dangerouslySetInnerHTML={createMarkup(subParaArray.map((para) => para.text).join(" "))}
+                                                    dangerouslySetInnerHTML={createMarkup(subParaArray.map((para) => para.text).join(""))}
                                                 />
                                             ))}
                                         </div>
