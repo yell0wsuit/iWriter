@@ -1,0 +1,233 @@
+{
+    "general": [
+        {
+            "heading": "Applying for a job",
+            "list": [
+                {
+                    "name": "Covering/Cover Letter",
+                    "file": "general/cvletter"
+                },
+                {
+                    "name": "New graduate CV",
+                    "file": "general/cvgraduate"
+                },
+                {
+                    "name": "American-style résumé",
+                    "file": "general/cvamerican"
+                },
+                {
+                    "name": "Experienced candidate CV",
+                    "file": "general/cvexperienced"
+                }
+            ]
+        },
+        {
+            "heading": "Essays",
+            "list": [
+                {
+                    "name": "Comparison essays",
+                    "file": "general/essaycompare"
+                },
+                {
+                    "name": "Discussion essays",
+                    "file": "general/essaydiscussion"
+                }
+            ]
+        },
+        {
+            "heading": "Letters & emails",
+            "list": [
+                {
+                    "name": "Email/Letter of complaint",
+                    "file": "general/emailcomplaint"
+                },
+                {
+                    "name": "Email/Letter of enquiry",
+                    "file": "general/emailenquiry"
+                },
+                {
+                    "name": "Academic email",
+                    "file": "general/emailacademic"
+                },
+                {
+                    "name": "Formal business letter",
+                    "file": "general/letterbusiness"
+                },
+                {
+                    "name": "Informal email",
+                    "file": "general/emailinformal"
+                }
+            ]
+        },
+        {
+            "heading": "Data reporting",
+            "list": [
+                {
+                    "name": "Graphs",
+                    "file": "general/datagraphs"
+                },
+                {
+                    "name": "Pie charts",
+                    "file": "general/datapiecharts"
+                }
+            ]
+        },
+        {
+            "heading": "Reports",
+            "list": [
+                {
+                    "name": "Long report",
+                    "file": "general/reportlong"
+                },
+                {
+                    "name": "Short report",
+                    "file": "general/reportshort"
+                }
+            ]
+        },
+        {
+            "heading": "Others",
+            "list": [
+                {
+                    "name": "Article",
+                    "file": "general/otherarticle"
+                },
+                {
+                    "name": "Book / Film review",
+                    "file": "general/otherreview"
+                },
+                {
+                    "name": "Discussing pictures and cartoons",
+                    "file": "general/otherpictures"
+                },
+                {
+                    "name": "Presentation",
+                    "file": "general/otherpresentation"
+                }
+            ]
+        }
+    ],
+    "academic": [
+        {
+            "heading": "Essays and reflective writing",
+            "list": [
+                {
+                    "name": "Writing from sources",
+                    "file": "academic/writingfromsources"
+                },
+                {
+                    "name": "Essay 1: Explanation",
+                    "file": "academic/essay1explanation"
+                },
+                {
+                    "name": "Essay 2: Argument",
+                    "file": "academic/essay2argument"
+                },
+                {
+                    "name": "Essay 3: Compare and contrast",
+                    "file": "academic/essay3compare"
+                },
+                {
+                    "name": "Reflective writing",
+                    "file": "academic/reflectivewriting"
+                }
+            ]
+        },
+        {
+            "heading": "Research and analysis",
+            "list": [
+                {
+                    "name": "Research Proposal",
+                    "file": "academic/researchproposal"
+                },
+                {
+                    "name": "Writing a dissertation / research report / long essay",
+                    "file": "academic/writingdissertation"
+                },
+                {
+                    "name": "Critical evaluation",
+                    "file": "academic/criticalevaluation"
+                },
+                {
+                    "name": "Case study: Business",
+                    "file": "academic/casebusiness"
+                },
+                {
+                    "name": "Case study: Health sciences",
+                    "file": "academic/casehealth"
+                }
+            ]
+        },
+        {
+            "heading": "Components of research papers",
+            "list": [
+                {
+                    "name": "Abstract 1: Physical and life sciences",
+                    "file": "academic/abstractphysical"
+                },
+                {
+                    "name": "Abstract 2: Social sciences",
+                    "file": "academic/abstractsocial"
+                },
+                {
+                    "name": "Abstract 3: Medicine",
+                    "file": "academic/abstractmedicine"
+                },
+                {
+                    "name": "Introduction 1: Physical and life sciences",
+                    "file": "academic/introduction1"
+                },
+                {
+                    "name": "Introduction 2: Social sciences and humanities",
+                    "file": "academic/introduction2"
+                },
+                {
+                    "name": "Literature review 1: Physical and life sciences",
+                    "file": "academic/literaturereview1"
+                },
+                {
+                    "name": "Literature review 2: Social sciences",
+                    "file": "academic/literaturereview2"
+                },
+                {
+                    "name": "Method 1: Experimental",
+                    "file": "academic/method1"
+                },
+                {
+                    "name": "Method 2: Survey",
+                    "file": "academic/method2"
+                }
+            ]
+        },
+        {
+            "heading": "Data presentation",
+            "list": [
+                {
+                    "name": "Presenting data 1: Tables",
+                    "file": "academic/data1tables"
+                },
+                {
+                    "name": "Presenting data 2: Bar charts",
+                    "file": "academic/data2bar"
+                },
+                {
+                    "name": "Presenting data 3: Line graphs",
+                    "file": "academic/data3line"
+                }
+            ]
+        },
+        {
+            "heading": "Discussion and conclusion",
+            "list": [
+                {
+                    "name": "Discussion",
+                    "file": "academic/discussion"
+                },
+                {
+                    "name": "Conclusion",
+                    "file": "academic/conclusion"
+                }
+            ]
+        }
+    ]
+}

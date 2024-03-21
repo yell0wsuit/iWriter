@@ -1,0 +1,326 @@
+{
+    "heading": "Discussion essay",
+    "paragraphs": [
+        {
+            "structure": {
+                "para": [
+                    {
+                        "text": "Title"
+                    },
+                    {
+                        "text": "The title of your essay"
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [],
+                "placeHolder": "Type your title here"
+            },
+            "align": "left"
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "text": "Introduction"
+                    },
+                    {
+                        "text": "Introduce the topic and state the focus of the essay."
+                    },
+                    {
+                        "text": "TIP Go from broad to narrow focus.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": [],
+                "placeHolder": "Type your notes here"
+            },
+            "content": {
+                "para": [],
+                "placeHolder": "Type your introduction here"
+            },
+            "align": "left"
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "text": "Argument 1"
+                    },
+                    {
+                        "text": "Give the first argument with supporting evidence, examples or reasons."
+                    },
+                    {
+                        "text": "You can use one or more paragraphs for each argument.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": [],
+                "placeHolder": "Type your notes here"
+            },
+            "content": {
+                "para": [],
+                "placeHolder": "Type your paragraph here"
+            },
+            "align": "left"
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "text": "Counterarguments"
+                    },
+                    {
+                        "text": "Give any arguments against point 1, with  evidence, examples or reasons."
+                    },
+                    {
+                        "text": "TIP You can use one or more paragraphs for each counterargument.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": [],
+                "placeHolder": "Type your notes here"
+            },
+            "content": {
+                "para": [],
+                "placeHolder": "Type your paragraph here"
+            },
+            "align": "left"
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "text": "Argument 2"
+                    },
+                    {
+                        "text": "Give the second argument with supporting evidence, examples or reasons."
+                    }
+                ]
+            },
+            "notes": {
+                "para": [],
+                "placeHolder": "Type your notes here"
+            },
+            "content": {
+                "para": [],
+                "placeHolder": "Type your paragraph here"
+            },
+            "align": "left"
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "text": "Counterarguments"
+                    },
+                    {
+                        "text": "Give any arguments against point 2, with  evidence, examples or reasons."
+                    }
+                ]
+            },
+            "notes": {
+                "para": [],
+                "placeHolder": "Type your notes here"
+            },
+            "content": {
+                "para": [],
+                "placeHolder": "Type your paragraph here"
+            },
+            "align": "left"
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "text": "Further arguments and counterarguments"
+                    },
+                    {
+                        "text": "Alternate further arguments and counterarguments."
+                    },
+                    {
+                        "text": "TIP Start a new paragraph for each argument and counterargument.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": [],
+                "placeHolder": "Type your notes here"
+            },
+            "content": {
+                "para": [],
+                "placeHolder": "Type your paragraph here"
+            },
+            "align": "left"
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "text": "Evaluation of arguments"
+                    },
+                    {
+                        "text": "Explain which you feel are the stronger arguments, with reasons."
+                    }
+                ]
+            },
+            "notes": {
+                "para": [],
+                "placeHolder": "Type your notes here"
+            },
+            "content": {
+                "para": [],
+                "placeHolder": "Type your paragraph here"
+            },
+            "align": "left"
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "text": "Summary and conclusion"
+                    },
+                    {
+                        "text": "Summarize the points you have made and state the conclusion you have come to on the question or title of the essay."
+                    },
+                    {
+                        "text": "TIP The conclusion may go from narrow to broad focus.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": [],
+                "placeHolder": "Type your notes here"
+            },
+            "content": {
+                "para": [],
+                "placeHolder": "Type your conclusion here"
+            },
+            "align": "left"
+        }
+    ],
+    "steps": [],
+    "practice_rubric": [
+        {
+            "header": "Before you start",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Brainstorm your ideas on the question.",
+                    "tellMeMore": "<p><span>Brainstorm for ideas using whatever method suits you best:</span><br/><ul class=\"circle_li common_ul\"><li>Mind maps</li><li>Lists of interesting concepts, facts, questions, etc.</li><li>Conversations with colleagues</li></ul></p>"
+                },
+                {
+                    "checked": false,
+                    "text": "Read and research the topic.",
+                    "tellMeMore": "<p><span>Research your topic and gather information from a variety of sources:</span><br><ul class=\"circle_li common_ul\"><li> Books and journals</li><li>The media</li><li> Websites</li><li>Interviews or questionnaires</li><li>Scientific studies</li></ul></p>"
+                },
+                {
+                    "checked": false,
+                    "text": "When researching, take detailed notes and keep an accurate record of each source."
+                },
+                {
+                    "checked": false,
+                    "text": "Which do you think are the strongest arguments? Decide what your viewpoint will be."
+                },
+                {
+                    "checked": false,
+                    "text": "Select 2 or 3 strong ideas on each side, with supporting examples, ideas or evidence. For some questions you can use evidence from your personal experience."
+                },
+                {
+                    "checked": false,
+                    "text": "Decide how to organize your essay to persuade readers of your case. See Discussion 1 for an alternative structure."
+                },
+                {
+                    "checked": false,
+                    "text": "Note down some useful vocabulary on the topic."
+                },
+                {
+                    "checked": false,
+                    "text": "Organize your notes into the framework."
+                }
+            ]
+        },
+        {
+            "header": "Choose your language",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Use formal and impersonal language.",
+                    "tellMeMore": "<p><span>To make your writing more formal, consider these points:</span><br><span class=\"blueTxtCss\">Word choice</span><br><span>It is usually best to use standard English words and phrases, that is, those with no label in the dictionary.</span><br><span>Avoid anything marked <i>informal</i>, <i>slang</i>, <i>offensive</i>, etc.</span><br><span>Some words and phrases are marked formal. Only use these if you are sure they are appropriate and you know how to use them.</span><br/><span>You may need to use the technical or specialist vocabulary of your subject or profession (e.g. investment portfolio, liquid nitrogen bath). When you read, note when and how this language is used. </span><br><span class=\"blueTxtCss\">Short forms</span><br><span>Avoid contracted forms (e.g. haven&apos;t, he&apos;s, I&apos;m) and abbreviations (e.g. pls&mdash;please, ad&mdash;advertisement).</span><br><span class=\"blueTxtCss\">Sentence structure</span><br><span>In formal writing you are likely to be expressing complex ideas. To do this you will need to write sentences using relative pronouns (e.g. which, that), subordinating conjunctions (e.g. although, because, if) and coordinating conjunctions (e.g. and, but, or). Very long sentences with many clauses can be difficult to understand. Aim for clarity rather than complexity.</span><br></p>"
+                },
+                {
+                    "checked": false,
+                    "text": "Use words and phrases to signal your  position.",
+                    "tellMeMore": "<p><span class=\"blueTxtCss\">Adjectives</span><br><span><strong>important, major, serious, significant</strong></span><br><span><i>An <strong>important</strong> point to consider is...</br>This was a <strong>highly significant</strong> discovery.</i></span><br><span class=\"blueTxtCss\">Patterns with It + adjective</span><br><span><strong>clear, likely, possible, surprising, evident</strong></span><br><span><i><strong>It is clear that</strong> the study of space is expensive.</i></span><br><span><strong>important, difficult, necessary, possible, interesting</strong></span><br><span><i><strong>It is important to</strong> consider the practical effects of these measures.</i></span><br><span class=\"blueTxtCss\">Adverbs</span><br><span><strong>clearly, indeed, in fact, of course, generally, usually, mainly, widely, perhaps, probably, certainly, possibly; rarely, sometimes, often</strong></span><br><span><i><strong>Clearly</strong>, this is a serious issue that deserves further study.<br/>This book is <strong>generally</strong> held to be her greatest novel.</i></span><br><span class=\"blueTxtCss\">Verbs</span><br><span>These help show how certain you are about a point or an argument.</span><br><span><strong>Modal verbs: can, could; may, might; will, would</strong> (the first of each pair is most certain)</span><br><span>Compare: <i>I <strong>argue</strong> that... </i>(very certain) /<i> I <strong>would argue</strong> that... </i>(not so certain)</span><br><span><strong>it + verb:</strong> <i>It appears that, It seems that...</i></span><br><span><strong>it + passive verb:</strong> <i>It can be seen that...; It should/must be noted/emphasized that...</i></span><br><span><strong>Showing verbs: show, indicate, demonstrate, suggest, imply</strong></span><br><span><i>The results/findings show/indicate...</i></span></span><br><span><strong>Arguing verbs: argue, suggest, consider, conclude</strong></span><br><span><i>I would argue/suggest that...</i></span></p>"
+                }
+            ]
+        },
+        {
+            "header": "While you are writing",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Look carefully at the title or question and make sure you really answer it."
+                },
+                {
+                    "checked": false,
+                    "text": "Use paragraph divisions and connecting words and phrases to make the structure of your essay clear to your readers.",
+                    "tellMeMore": "<p><strong>Firstly,...</strong> (= I have several points to make)<br/><strong>Furthermore,...; In addition,...; Moreover,...</strong> (= I have another important point)<br/><strong>However,...</strong> (to introduce a counterargument)</br><strong>Thus,...; Therefore,...</strong> (to introduce a conclusion)</p>"
+                },
+                {
+                    "checked": false,
+                    "text": "Give quotes or mention sources to support your points."
+                },
+                {
+                    "checked": false,
+                    "text": "Make it clear which words/ideas are yours and whose words/ideas you have quoted.",
+                    "tellMeMore": "<p><span>If you use the words or ideas of another person in your academic writing, you must always say where these have come from.  If you do not, you might be accused of </span><span><strong>plagiarism</strong>  (= copying another person's ideas or words and pretending that they are yours).</span><br><br><span>It is usual to mention the author briefly in the essay and then at the end write a full reference in your </span><span><strong>bibliography</strong> (= an alphabetical list of all the books, magazines, websites and other sources you have consulted) or in your list of <strong>references. </strong> </span><br><br><span>Different institutions have different styles for this, so you should check with your tutor, college or university to see the method and punctuation you should use and be consistent. </span><br> </p>"
+                }
+            ]
+        },
+        {
+            "header": "Checklist",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Have I answered the question?"
+                },
+                {
+                    "checked": false,
+                    "text": "Have I introduced the subject, developed it logically and come to a conclusion?"
+                },
+                {
+                    "checked": false,
+                    "text": "Have I given evidence, examples, details and reasons for each point I make?"
+                },
+                {
+                    "checked": false,
+                    "text": "Does my conclusion follow from my arguments?"
+                },
+                {
+                    "checked": false,
+                    "text": "Have I used paragraphs appropriately?"
+                },
+                {
+                    "checked": false,
+                    "text": "Is it the right length?"
+                },
+                {
+                    "checked": false,
+                    "text": "Have I checked vocabulary, grammar, spelling and punctuation?"
+                }
+            ]
+        }
+    ]
+}
