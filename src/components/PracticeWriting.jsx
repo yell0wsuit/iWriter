@@ -38,9 +38,13 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
         );
     };
 
-    const handleParagraphChange = (index, field, value) => {
+    const handleParagraphChange = (index, field, value, event) => {
         setParagraphsData((currentData) => currentData.map((paragraph, i) => (i === index ? { ...paragraph, [field]: value } : paragraph)));
         setHasUnsavedChanges(true);
+
+        const eventTarget = event.target;
+        eventTarget.style.height = "inherit";
+        eventTarget.style.height = `${eventTarget.scrollHeight}px`;
     };
 
     const handleSaveClick = async () => {
@@ -157,7 +161,7 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
                                                 rows={1}
                                                 placeholder={paragraph.notes.placeHolder}
                                                 value={paragraphsData[index]?.notes || ""} // Bind value to state
-                                                onChange={(e) => handleParagraphChange(index, "notes", e.target.value)}
+                                                onChange={(e) => handleParagraphChange(index, "notes", e.target.value, e)}
                                             />
                                         </Form>
                                     </div>
@@ -171,7 +175,7 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
                                                 rows={3}
                                                 placeholder={paragraph.content.placeHolder}
                                                 value={paragraphsData[index]?.content || ""} // Bind value to state
-                                                onChange={(e) => handleParagraphChange(index, "content", e.target.value)}
+                                                onChange={(e) => handleParagraphChange(index, "content", e.target.value, e)}
                                             />
                                         </Form>
                                     </div>
