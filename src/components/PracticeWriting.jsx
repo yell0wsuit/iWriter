@@ -42,6 +42,7 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
         setParagraphsData((currentData) => currentData.map((paragraph, i) => (i === index ? { ...paragraph, [field]: value } : paragraph)));
         setHasUnsavedChanges(true);
 
+        // Auto expand textboxes
         const eventTarget = event.target;
         eventTarget.style.height = "inherit";
         eventTarget.style.height = `${eventTarget.scrollHeight}px`;
