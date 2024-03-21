@@ -79,7 +79,7 @@ function ModelText({ data, activeContents, setActiveContents, createMarkup }) {
                                     {activeContents.content && paragraph.content.para.length > 0 && !paragraph.content.duplicate && (
                                         <div key={index} className="border-start border-3 px-2">
                                             {paragraph.content.image && (
-                                                <img src={`/images/model/${paragraph.content.image}`} alt="" className="img-fluid mb-2" />
+                                                <img src={`/images/model/${paragraph.content.image}`} alt={paragraph.content.imgAlt} className="img-fluid mb-2" />
                                             )}
                                             {paragraph.content.para.map((subParaArray, index) => (
                                                 <p
