@@ -132,7 +132,7 @@ const ReferencesPage = () => {
                         </p>
                         <p>
                             ESRC: Writing your abstract, downloaded 4 August 2011 at:{" "}
-                            <a href="http://www.esrc.ac.uk/funding-and-guidance/guidance/grant-holders/submitting-abstract.aspx">
+                            <a className="text-break" href="http://www.esrc.ac.uk/funding-and-guidance/guidance/grant-holders/submitting-abstract.aspx">
                                 http://www.esrc.ac.uk/funding-and-guidance/guidance/grant-holders/submitting-abstract.aspx
                             </a>
                         </p>
@@ -143,7 +143,7 @@ const ReferencesPage = () => {
                         </p>
                         <p>
                             Gillett A., Using English for Academic Purposes: A Guide for Students in Higher Education: Academic Writing, accessed on
-                            23 June 2011 at: <a href="http://www.uefap.com/writing/writfram.htm">http://www.uefap.com/writing/writfram.htm</a>
+                            23 June 2011 at: <a className="text-break" href="http://www.uefap.com/writing/writfram.htm">http://www.uefap.com/writing/writfram.htm</a>
                         </p>
                         <p>
                             Harwood N., 2005, ‘‘I hoped to counteract the memory problem, but I made no impact whatsoever’: Discussing methods in
@@ -177,7 +177,7 @@ const ReferencesPage = () => {
                         <p>
                             Robbins J., 2011, <i>What works in academic email: A genre analysis with teacher and student perspectives</i>. Masters
                             dissertation, Department of Language and Linguistics, University of Essex. Available at{" "}
-                            <a href="http://essex.academia.edu/JoyRobbins/Papers">http://essex.academia.edu/JoyRobbins/Papers</a>
+                            <a className="text-break" href="http://essex.academia.edu/JoyRobbins/Papers">http://essex.academia.edu/JoyRobbins/Papers</a>
                         </p>
                         <p>
                             Ruiying Y. and Allison D., 2003, ‘Research articles in linguistics: moving from results to conclusions’,{" "}
@@ -196,13 +196,13 @@ const ReferencesPage = () => {
                         <p>
                             University of Oxford, <u>School of Geography and the Environment</u>, <i>Guidelines to writing a research proposal</i>,
                             accessed 19 October 2012 at:{" "}
-                            <a href="http://www.geog.ox.ac.uk/graduate/apply/research_proposal.html">
+                            <a className="text-break" href="http://www.geog.ox.ac.uk/graduate/apply/research_proposal.html">
                                 http://www.geog.ox.ac.uk/graduate/apply/research_proposal.html
                             </a>
                         </p>
                         <p>
                             University of Reading: <i>Answering exam questions</i>, accessed 24 October 2012 at:{" "}
-                            <a href="http://www.reading.ac.uk/studyadvice/StudyResources/exams/sta-answering.aspx">
+                            <a className="text-break" href="http://www.reading.ac.uk/studyadvice/StudyResources/exams/sta-answering.aspx">
                                 http://www.reading.ac.uk/studyadvice/StudyResources/exams/sta-answering.aspx
                             </a>
                         </p>
