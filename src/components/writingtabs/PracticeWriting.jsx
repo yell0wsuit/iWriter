@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Col, Card, Accordion, Modal, Form, ListGroup, Collapse, Toast, ToastContainer, Alert } from "react-bootstrap";
-import { db, saveProject, fetchProjectsForLocation } from "../databaseOperations";
+import { db, saveProject, fetchProjectsForLocation } from "../../utils/databaseOperations";
 
 function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsData, setParagraphsData, createMarkup }) {
     const [show, setShow] = useState(false);

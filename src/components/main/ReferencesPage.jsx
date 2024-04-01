@@ -1,5 +1,5 @@
 import React from "react";
-import TopNavBar from "./TopNavBar";
+import TopNavBar from "../miscellaneous/TopNavBar";
 
 const ReferencesPage = () => {
     return (

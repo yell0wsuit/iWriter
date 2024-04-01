@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Button, Tabs, Tab, Row, Modal } from "react-bootstrap";
 import DOMPurify from "dompurify";
-import useFetchJSONData from "./useFetchJSONData";
-import { generateInitialCheckedStates } from "./utils";
-import TopNavBar from "./TopNavBar";
-import ModelText from "./components/ModelText";
-import StepByStep from "./components/StepByStep";
-import PracticeWriting from "./components/PracticeWriting";
+import useFetchJSONData from "../../utils/useFetchJSONData";
+import { generateInitialCheckedStates } from "../../utils/generateInitialCheckedStates";
+import TopNavBar from "../miscellaneous/TopNavBar";
+import ModelText from "../writingtabs/ModelText";
+import StepByStep from "../writingtabs/StepByStep";
+import PracticeWriting from "../writingtabs/PracticeWriting";
 
 function DetailedWriting() {
     const navigate = useNavigate();

@@ -3,11 +3,11 @@ import { Container } from "react-bootstrap";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Homepage from "./Homepage";
-import { ThemeProvider } from "./ThemeContext";
-import ThemeSwitcher from "./ThemeSwitcher";
-import DetailedWriting from "./DetailedWriting";
-import ReferencesPage from "./ReferencesPage";
+import Homepage from "./components/main/Homepage";
+import DetailedWriting from "./components/main/DetailedWriting";
+import ReferencesPage from "./components/main/ReferencesPage";
+import { ThemeProvider } from "./utils/ThemeContext";
+import ThemeSwitcher from "./components/miscellaneous/ThemeSwitcher";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

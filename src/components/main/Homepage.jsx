@@ -3,8 +3,8 @@ import { Tabs, Tab, Card, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
-import { db } from "./databaseOperations";
-import TopNavBar from "./TopNavBar";
+//import { db } from "./databaseOperations";
+import TopNavBar from "../miscellaneous/TopNavBar";
 
 function HomePage() {
     const [data, setData] = useState({ general: [], academic: [] });
@@ -30,7 +30,7 @@ function HomePage() {
                     <h1 className="fw-bold">Oxford iWriter</h1>
                 </Col>
             </Row>
-            <Tabs defaultActiveKey="general" variant="underline" className="mb-3 d-flex justify-content-center">
+            <Tabs variant="underline" className="mb-3 d-flex justify-content-center">
                 <Tab eventKey="general" title="General Writing">
                     <p className="fw-bold">Select a model essay to get started.</p>
                     <Row xs={1} md={3} className="g-4 mt-1 d-flex justify-content-center">
@@ -50,7 +50,7 @@ function HomePage() {
                         ))}
                     </Row>
                 </Tab>
-                <Tab eventKey="academic" title="Academic Writing (coming soon)">
+                <Tab eventKey="academic" title="Academic Writing (beta)">
                     <p className="fw-bold">Select a model essay to get started.</p>
                     <Row xs={1} md={3} className="g-4 mt-1 d-flex justify-content-center">
                         {data.academic.map((item, index) => (
@@ -59,7 +59,9 @@ function HomePage() {
                                     <Card.Header className="fw-semibold">{item.heading}</Card.Header>
                                     <Card.Body>
                                         {item.list.map((listItem, listIndex) => (
-                                            <Card.Text key={listIndex}>{listItem.name}</Card.Text>
+                                            <Card.Text key={listIndex}>
+                                            <Link to={`/writing/${(item.list[listIndex].file)}`}>{listItem.name}</Link>
+                                        </Card.Text>
                                         ))}
                                     </Card.Body>
                                 </Card>
