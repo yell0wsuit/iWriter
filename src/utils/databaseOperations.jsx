@@ -3,7 +3,7 @@ import Dexie from "dexie";
 export const db = new Dexie("iWriter");
 
 db.version(1).stores({
-    projects: "id, projectName, projectLocation, content, [projectName+projectLocation]",
+    projects: "id, frameworkName, frameworkLocation, projectName, projectLocation, content, [projectName+projectLocation]",
 });
 
 db.open().catch((err) => {
@@ -11,6 +11,8 @@ db.open().catch((err) => {
 });
 
 export const saveProject = async ({
+    frameworkName,
+    frameworkLocation,
     projectName,
     projectLocation,
     paragraphsData,
@@ -21,6 +23,8 @@ export const saveProject = async ({
     const id = `${projectLocation}-${projectName}`;
     const projectData = {
         id,
+        frameworkName,
+        frameworkLocation,
         projectName,
         projectLocation,
         content: paragraphsData,
@@ -45,3 +49,8 @@ export const fetchProjectsForLocation = async (projectLocation, setProjectsForLo
     setShowLoadModal(true);
 };
 
+export const fetchAllProjects = async (setProjectsForLocation, setShowLoadModal) => {
+    const projects = await db.projects.toArray(); // Fetch all projects
+    setProjectsForLocation(projects);
+    setShowLoadModal(true);
+};

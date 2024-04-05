@@ -3,7 +3,6 @@ import { Col, Accordion, Form } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid";
 
 function StepByStep({ data, checkedStates, handleCheckboxChange, createMarkup }) {
-
     const renderParagraphText = (para, className, alignClass, stepFilters, stepIndex, callId) => {
         return (
             <div key={`${stepIndex}-${callId}`} className={`border-3 border-start px-2 ${className}`}>
@@ -47,9 +46,10 @@ function StepByStep({ data, checkedStates, handleCheckboxChange, createMarkup })
                     p.tip ? (
                         <p key={`section${sectionIndex}-p${index}-${p.id}`}>{p.text}</p>
                     ) : (
-                        <p key={`section${sectionIndex}-p${index}-${p.id}`} className={`text${className} ${alignClass}`}>
-                            {p.text}
-                        </p>
+                        <p
+                            key={`section${sectionIndex}-p${index}-${p.id}`}
+                            className={`text${className} ${alignClass}`}
+                            dangerouslySetInnerHTML={createMarkup(p.text)}></p>
                     )
                 )}
             </div>
@@ -97,7 +97,9 @@ function StepByStep({ data, checkedStates, handleCheckboxChange, createMarkup })
                     {data.steps.map((step, index) => (
                         <Accordion.Item eventKey={index.toString()} key={index}>
                             <Accordion.Header key={index}>
-                                <div key={index} className="fw-semibold">{step.label}</div>
+                                <div key={index} className="fw-semibold">
+                                    {step.label}
+                                </div>
                             </Accordion.Header>
                             <Accordion.Body>
                                 {step.desc.map((desc, descIndex) => (

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { Button, Tabs, Tab, Row, Modal } from "react-bootstrap";
 import DOMPurify from "dompurify";
 import useFetchJSONData from "../../utils/useFetchJSONData";
@@ -11,8 +11,15 @@ import PracticeWriting from "../writingtabs/PracticeWriting";
 
 function DetailedWriting() {
     const navigate = useNavigate();
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+    const activeTab = searchParams.get("tab") || "modelText";
     const { folder, file } = useParams();
     const data = useFetchJSONData(folder, file, navigate);
+
+    const handleSelectTab = (key) => {
+        navigate(`?tab=${key}`);
+    };
 
     const [activeContents, setActiveContents] = useState({
         structure: true,
@@ -38,12 +45,6 @@ function DetailedWriting() {
 
             const initialState = generateInitialCheckedStates(data.steps);
             setCheckedStates(initialState);
-
-            const initialParagraphsData = data.paragraphs.map((paragraph) => ({
-                notes: paragraph.notes?.content || "",
-                content: paragraph.content?.content || "",
-            }));
-            setParagraphsData(initialParagraphsData);
         }
     }, [data]);
 
@@ -111,7 +112,13 @@ function DetailedWriting() {
                 Go back
             </Button>
             <h3 className="mb-3">{data.title}</h3>
-            <Tabs fill defaultActiveKey="modelText" variant="underline" className="mb-3 d-flex justify-content-center">
+            <Tabs
+                fill
+                defaultActiveKey="modelText"
+                activeKey={activeTab}
+                onSelect={handleSelectTab}
+                variant="underline"
+                className="mb-3 d-flex justify-content-center">
                 <Tab eventKey="modelText" title="Model text">
                     <Row className="g-4">
                         <ModelText data={data} activeContents={activeContents} setActiveContents={setActiveContents} createMarkup={createMarkup} />

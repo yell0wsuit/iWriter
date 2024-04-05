@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
+import { useLocation } from "react-router-dom";
 import { Button, Col, Card, Accordion, Modal, Form, ListGroup, Collapse, Toast, ToastContainer, Alert } from "react-bootstrap";
 import { db, saveProject, fetchProjectsForLocation } from "../../utils/databaseOperations";
 
@@ -7,12 +8,16 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
     const [showLoadModal, setShowLoadModal] = useState(false);
     const [projectsForLocation, setProjectsForLocation] = useState([]);
     const [projectName, setProjectName] = useState("");
+    const [frameworkName, setFrameworkName] = useState("");
+    const [frameworkLocation, setFrameworkLocation] = useState("");
     const [isProjectNameValid, setIsProjectNameValid] = useState(true);
     const [showOverwriteConfirm, setShowOverwriteConfirm] = useState(false);
     const [toastMessage, setToastMessage] = useState("");
     const [showToast, setShowToast] = useState(false);
     const [projectToDelete, setProjectToDelete] = useState(null);
     const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+
+    const location = useLocation();
 
     const handleClose = () => setShow(false);
     const projectLocation = `${folder}_${file}`;
@@ -62,6 +67,8 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
         } else {
             // No existing project found, proceed with saving
             saveProject({
+                frameworkName,
+                frameworkLocation,
                 projectName,
                 projectLocation,
                 paragraphsData,
@@ -72,13 +79,13 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
         }
     };
 
-    const applyLoadedContentToTextboxes = (loadedContent) => {
+    const applyLoadedContentToTextboxes = useCallback((loadedContent) => {
         const loadedParagraphsData = loadedContent.map((paragraph) => ({
             notes: paragraph.notes || "",
             content: paragraph.content || "",
         }));
         setParagraphsData(loadedParagraphsData);
-    };
+    }, [setParagraphsData]);
 
     const loadProject = async (projectId) => {
         const project = await db.projects.get(projectId);
@@ -94,6 +101,8 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
 
     const handleOverwriteConfirm = () => {
         saveProject({
+            frameworkName,
+            frameworkLocation,
             projectName,
             projectLocation,
             paragraphsData,
@@ -115,6 +124,16 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
             fetchProjectsForLocation(projectLocation, setProjectsForLocation, setShowLoadModal);
         }
     };
+
+    // Load project from homepage
+
+    const projectContent = location.state?.projectContent;
+
+    useEffect(() => {
+        if (projectContent) {
+            applyLoadedContentToTextboxes(projectContent);
+        }
+    }, [projectContent, applyLoadedContentToTextboxes]);
 
     return (
         <>
@@ -142,7 +161,7 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
                         viewBox="0 0 16 16">
                         <path d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v.64c.57.265.94.876.856 1.546l-.64 5.124A2.5 2.5 0 0 1 12.733 15H3.266a2.5 2.5 0 0 1-2.481-2.19l-.64-5.124A1.5 1.5 0 0 1 1 6.14zM2 6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5a.5.5 0 0 0-.5.5zm-.367 1a.5.5 0 0 0-.496.562l.64 5.124A1.5 1.5 0 0 0 3.266 14h9.468a1.5 1.5 0 0 0 1.489-1.314l.64-5.124A.5.5 0 0 0 14.367 7z" />
                     </svg>
-                    Load saved writing
+                    Load writings
                 </Button>
                 <Card className="mb-3">
                     <Card.Body>
@@ -249,6 +268,8 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
                             value={projectName}
                             onChange={(e) => {
                                 setProjectName(e.target.value);
+                                setFrameworkName(data.title);
+                                setFrameworkLocation(`${folder}/${file}`);
                                 if (!isProjectNameValid) setIsProjectNameValid(true); // Reset validation on user input
                             }}
                             placeholder="Project name..."
@@ -283,7 +304,7 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
 
             <Modal show={showLoadModal} onHide={() => setShowLoadModal(false)}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Load project</Modal.Title>
+                    <Modal.Title>Load a project</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     {projectsForLocation.length > 0 ? (

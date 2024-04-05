@@ -55,9 +55,8 @@ function ModelText({ data, activeContents, setActiveContents, createMarkup }) {
                                                 .map((para, paraIndex) => (
                                                     <p
                                                         key={`structure-${index}-${paraIndex}`}
-                                                        className={`text-danger ${paragraph.align === "right" ? "iwriter-align-right" : ""}`}>
-                                                        {para.text}
-                                                    </p>
+                                                        className={`text-danger ${paragraph.align === "right" ? "iwriter-align-right" : ""}`}
+                                                        dangerouslySetInnerHTML={createMarkup(para.text)}></p>
                                                 ))}
                                         </div>
                                     )}
@@ -79,7 +78,11 @@ function ModelText({ data, activeContents, setActiveContents, createMarkup }) {
                                     {activeContents.content && paragraph.content.para.length > 0 && !paragraph.content.duplicate && (
                                         <div key={index} className="border-start border-3 px-2">
                                             {paragraph.content.image && (
-                                                <img src={`/images/model/${paragraph.content.image}`} alt={paragraph.content.imgAlt} className="img-fluid mb-2" />
+                                                <img
+                                                    src={`/images/model/${paragraph.content.image}`}
+                                                    alt={paragraph.content.imgAlt}
+                                                    className="img-fluid mb-2"
+                                                />
                                             )}
                                             {paragraph.content.para.map((subParaArray, index) => (
                                                 <p
