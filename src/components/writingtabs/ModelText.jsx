@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Col, Accordion, Card } from "react-bootstrap";
+import { Accordion, Button, Card, Col } from "react-bootstrap";
 
 function ModelText({ data, activeContents, setActiveContents, createMarkup }) {
     const buttonVariant = (contentType) => {
