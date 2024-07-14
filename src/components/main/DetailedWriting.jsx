@@ -70,6 +70,8 @@ function DetailedWriting() {
                             content: paragraph.content?.content || "",
                         }));
                         setParagraphsData(initialParagraphsData);
+                        searchParams.delete("projectId");
+                        navigate({ search: searchParams.toString() });
                     }
                 } else {
                     const initialParagraphsData = data.paragraphs.map((paragraph) => ({
