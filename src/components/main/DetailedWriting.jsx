@@ -8,12 +8,14 @@ import TopNavBar from "../miscellaneous/TopNavBar";
 import ModelText from "../writingtabs/ModelText";
 import StepByStep from "../writingtabs/StepByStep";
 import PracticeWriting from "../writingtabs/PracticeWriting";
+import { db } from "../../utils/databaseOperations";
 
 function DetailedWriting() {
     const navigate = useNavigate();
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
     const activeTab = searchParams.get("tab") || "modelText";
+    const projectId = searchParams.get("projectId");
     const { folder, file } = useParams();
     const data = useFetchJSONData(folder, file, navigate);
 
@@ -34,19 +36,53 @@ function DetailedWriting() {
 
     const [checkedStates, setCheckedStates] = useState({});
 
-    useEffect(() => {
-        if (data && data.paragraphs) {
-            const contentAvailability = {
-                structure: data.paragraphs.some((p) => p.structure && p.structure.para.length > 0),
-                notes: data.paragraphs.some((p) => p.notes && p.notes.para.length > 0),
-                content: data.paragraphs.some((p) => p.content && p.content.para.length > 0),
-            };
-            setActiveContents(contentAvailability);
-
-            const initialState = generateInitialCheckedStates(data.steps);
-            setCheckedStates(initialState);
+    const getSavedDataFromIndexedDB = async (projectId) => {
+        try {
+            const project = await db.projects.get(projectId);
+            return project ? project.content : null;
+        } catch (error) {
+            console.error("Error retrieving data from IndexedDB", error);
+            return null;
         }
-    }, [data]);
+    };
+
+    useEffect(() => {
+        const loadData = async () => {
+            if (data && data.paragraphs) {
+                const contentAvailability = {
+                    structure: data.paragraphs.some((p) => p.structure && p.structure.para.length > 0),
+                    notes: data.paragraphs.some((p) => p.notes && p.notes.para.length > 0),
+                    content: data.paragraphs.some((p) => p.content && p.content.para.length > 0),
+                };
+                setActiveContents(contentAvailability);
+
+                const initialState = generateInitialCheckedStates(data.steps);
+                setCheckedStates(initialState);
+
+                // Check IndexedDB for saved data if projectId is present
+                if (projectId) {
+                    const savedData = await getSavedDataFromIndexedDB(projectId);
+                    if (savedData) {
+                        setParagraphsData(savedData);
+                    } else {
+                        const initialParagraphsData = data.paragraphs.map((paragraph) => ({
+                            notes: paragraph.notes?.content || "",
+                            content: paragraph.content?.content || "",
+                        }));
+                        setParagraphsData(initialParagraphsData);
+                    }
+                } else {
+                    const initialParagraphsData = data.paragraphs.map((paragraph) => ({
+                        notes: paragraph.notes?.content || "",
+                        content: paragraph.content?.content || "",
+                    }));
+                    setParagraphsData(initialParagraphsData);
+                }
+            }
+        };
+
+        loadData();
+    }, [data, projectId]);
 
     useEffect(() => {
         const handleBeforeUnload = (event) => {
@@ -121,7 +157,12 @@ function DetailedWriting() {
                 className="mb-3 d-flex justify-content-center">
                 <Tab eventKey="modelText" title="Model text">
                     <Row className="g-4">
-                        <ModelText data={data} activeContents={activeContents} setActiveContents={setActiveContents} createMarkup={createMarkup} />
+                        <ModelText
+                            data={data}
+                            activeContents={activeContents}
+                            setActiveContents={setActiveContents}
+                            createMarkup={createMarkup}
+                        />
                     </Row>
                 </Tab>
                 <Tab eventKey="step" title="Step by step">
