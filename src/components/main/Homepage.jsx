@@ -16,7 +16,7 @@ function HomePage() {
     const loadProject = async (projectId) => {
         const project = await db.projects.get(projectId);
         if (project) {
-            navigate(`/writing/${project.frameworkLocation}?tab=practice`, { state: { projectContent: project.content } });
+            navigate(`/writing/${project.frameworkLocation}?tab=practice&projectId=${projectId}`);
         } else {
             console.log("No project found with ID:", projectId);
         }
