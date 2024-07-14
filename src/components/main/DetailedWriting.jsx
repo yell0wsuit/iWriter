@@ -109,7 +109,10 @@ function DetailedWriting() {
         setCheckedStates((prev) => ({ ...prev, [key]: isChecked }));
     };
 
-    const createMarkup = (htmlContent) => ({ __html: DOMPurify.sanitize(htmlContent) });
+    const createMarkup = (htmlContent) => {
+        const sanitizedContent = DOMPurify.sanitize(htmlContent).replace(/\n/g, "<br />");
+        return { __html: DOMPurify.sanitize(sanitizedContent) };
+    };
 
     /* "Unsaved changes" dialog */
 
