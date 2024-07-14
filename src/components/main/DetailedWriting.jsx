@@ -66,8 +66,8 @@ function DetailedWriting() {
                         setParagraphsData(savedData);
                     } else {
                         const initialParagraphsData = data.paragraphs.map((paragraph) => ({
-                            notes: paragraph.notes?.content || "",
-                            content: paragraph.content?.content || "",
+                            notes: "",
+                            content: "",
                         }));
                         setParagraphsData(initialParagraphsData);
                         searchParams.delete("projectId");
@@ -75,8 +75,8 @@ function DetailedWriting() {
                     }
                 } else {
                     const initialParagraphsData = data.paragraphs.map((paragraph) => ({
-                        notes: paragraph.notes?.content || "",
-                        content: paragraph.content?.content || "",
+                        notes: "",
+                        content: "",
                     }));
                     setParagraphsData(initialParagraphsData);
                 }
