@@ -203,7 +203,7 @@ function PracticeWriting({
                             <div key={index} className="mb-3">
                                 <div className="text-danger border-3 border-start px-2 border-danger">
                                     {paragraph.structure.para.map((p, idx) => (
-                                        <p key={idx} dangerouslySetInnerHTML={createMarkup(p.text)}></p>
+                                        <p key={idx} dangerouslySetInnerHTML={createMarkup(p.text)} className="font-style-serif"></p>
                                     ))}
                                 </div>
                                 {paragraph.notes.placeHolder && (

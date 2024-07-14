@@ -55,7 +55,7 @@ function ModelText({ data, activeContents, setActiveContents, createMarkup }) {
                                                 .map((para, paraIndex) => (
                                                     <p
                                                         key={`structure-${index}-${paraIndex}`}
-                                                        className={`text-danger ${paragraph.align === "right" ? "iwriter-align-right" : ""}`}
+                                                        className={`font-style-serif text-danger ${paragraph.align === "right" ? "iwriter-align-right" : ""}`}
                                                         dangerouslySetInnerHTML={createMarkup(para.text)}></p>
                                                 ))}
                                         </div>
@@ -67,7 +67,7 @@ function ModelText({ data, activeContents, setActiveContents, createMarkup }) {
                                                 .map((para, paraIndex) => (
                                                     <p
                                                         key={`notes-${index}-${paraIndex}`}
-                                                        className={`text-success fst-italic iwriter-align-${
+                                                        className={`font-style-serif text-success fst-italic iwriter-align-${
                                                             paragraph.align === "right" ? "right" : ""
                                                         }`}>
                                                         {para.text}
@@ -87,7 +87,7 @@ function ModelText({ data, activeContents, setActiveContents, createMarkup }) {
                                             {paragraph.content.para.map((subParaArray, index) => (
                                                 <p
                                                     key={index}
-                                                    className={`text-primary-emphasis iwriter-align-${paragraph.align === "right" ? "right" : ""}`}
+                                                    className={`font-style-serif text-primary-emphasis iwriter-align-${paragraph.align === "right" ? "right" : ""}`}
                                                     dangerouslySetInnerHTML={createMarkup(subParaArray.map((para) => para.text).join(""))}
                                                 />
                                             ))}

@@ -6,33 +6,44 @@ function StepByStep({ data, checkedStates, handleCheckboxChange, createMarkup })
     const renderParagraphText = (para, className, alignClass, stepFilters, stepIndex, callId) => {
         return (
             <div key={`${stepIndex}-${callId}`} className={`border-3 border-start px-2 ${className}`}>
-                {para.map((paraGroup, index) => (
-                    <p key={`step${stepIndex}-paraGroup${index}-${callId}`} className={`${className} ${alignClass}`}>
-                        {paraGroup.map((item, itemIndex) => {
-                            const highlightClassKeys = stepFilters.map((filter) => `step${stepIndex}_${filter.highlightClass}`);
-                            const isHighlighted = highlightClassKeys.some(
-                                (key) =>
-                                    checkedStates[key] &&
-                                    stepFilters
-                                        .find((filter) => `step${stepIndex}_${filter.highlightClass}` === key)
-                                        .highlightPara.includes(item.id.toString())
-                            );
-                            const highlightClass = isHighlighted
-                                ? stepFilters.find(
-                                      (filter) =>
-                                          checkedStates[`step${stepIndex}_${filter.highlightClass}`] &&
-                                          filter.highlightPara.includes(item.id.toString())
-                                  ).highlightClass
-                                : "";
-                            return (
-                                <span
-                                    key={`step${stepIndex}-paraGroup${index}-item${itemIndex}`}
-                                    className={highlightClass}
-                                    dangerouslySetInnerHTML={createMarkup(item.text)}></span>
-                            );
-                        })}
-                    </p>
-                ))}
+                {para.map((paraGroup, index) => {
+                    const combinedText = paraGroup.map((item, itemIndex) => {
+                        const highlightClassKeys = stepFilters.map((filter) => `step${stepIndex}_${filter.highlightClass}`);
+                        const isHighlighted = highlightClassKeys.some(
+                            (key) =>
+                                checkedStates[key] &&
+                                stepFilters
+                                    .find((filter) => `step${stepIndex}_${filter.highlightClass}` === key)
+                                    .highlightPara.includes(item.id.toString())
+                        );
+                        const highlightClass = isHighlighted
+                            ? stepFilters.find(
+                                  (filter) =>
+                                      checkedStates[`step${stepIndex}_${filter.highlightClass}`] &&
+                                      filter.highlightPara.includes(item.id.toString())
+                              ).highlightClass
+                            : "";
+
+                        const styles = {
+                            fontWeight: item.bold ? "bold" : "",
+                            fontStyle: item.italic ? "italic" : ""
+                        };
+
+                        return (
+                            <span
+                                key={`step${stepIndex}-paraGroup${index}-item${itemIndex}`}
+                                className={`${highlightClass} font-style-serif `}
+                                style={styles}
+                                dangerouslySetInnerHTML={createMarkup(item.text)}></span>
+                        );
+                    });
+
+                    return (
+                        <p key={`step${stepIndex}-paraGroup${index}-${callId}`} className={`${className} ${alignClass} font-style-serif`}>
+                            {combinedText.reduce((prev, curr) => [prev, ' ', curr], [])}
+                        </p>
+                    );
+                })}
             </div>
         );
     };
@@ -44,11 +55,13 @@ function StepByStep({ data, checkedStates, handleCheckboxChange, createMarkup })
                 {paras.map((p, index) =>
                     // Check if paragraph has tip property to conditionally render without className
                     p.tip ? (
-                        <p key={`section${sectionIndex}-p${index}-${p.id}`}>{p.text}</p>
+                        <p key={`section${sectionIndex}-p${index}-${p.id}`} className="font-style-serif">
+                            {p.text}
+                        </p>
                     ) : (
                         <p
                             key={`section${sectionIndex}-p${index}-${p.id}`}
-                            className={`text${className} ${alignClass}`}
+                            className={`text${className} ${alignClass} font-style-serif`}
                             dangerouslySetInnerHTML={createMarkup(p.text)}></p>
                     )
                 )}
@@ -79,10 +92,24 @@ function StepByStep({ data, checkedStates, handleCheckboxChange, createMarkup })
                 // Add image to paragraphs array if exists
                 if (para.content.image) {
                     paragraphs.push(
-                        <img key={para.content.id} src={`/images/model/${para.content.image}`} alt={para.content.imgAlt} className="img-fluid mb-3" />
+                        <img
+                            key={para.content.id}
+                            src={`/images/model/${para.content.image}`}
+                            alt={para.content.imgAlt}
+                            className="img-fluid mb-3"
+                        />
                     );
                 }
-                paragraphs.push(renderParagraphText(para.content.para, "text-primary-emphasis", alignClass, stepFilters, index, para.content.id));
+                paragraphs.push(
+                    renderParagraphText(
+                        para.content.para,
+                        "text-primary-emphasis",
+                        alignClass,
+                        stepFilters,
+                        index,
+                        para.content.id
+                    )
+                );
             }
         });
 
@@ -110,10 +137,15 @@ function StepByStep({ data, checkedStates, handleCheckboxChange, createMarkup })
                                     const isChecked = checkedStates[highlightKey];
                                     const labelClassName = isChecked ? filter.highlightClass : "";
                                     return (
-                                        <Form.Check className="mb-2" key={filterIndex} id={`check-${index}-${filterIndex}`}>
+                                        <Form.Check
+                                            className="mb-2"
+                                            key={filterIndex}
+                                            id={`check-${index}-${filterIndex}`}>
                                             <Form.Check.Input
                                                 type="checkbox"
-                                                onChange={(e) => handleCheckboxChange(index, filter.highlightClass, e.target.checked)}
+                                                onChange={(e) =>
+                                                    handleCheckboxChange(index, filter.highlightClass, e.target.checked)
+                                                }
                                             />
                                             <Form.Check.Label>
                                                 <span className={labelClassName}>{filter.label}</span>
