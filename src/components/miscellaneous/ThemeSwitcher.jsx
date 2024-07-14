@@ -1,6 +1,6 @@
 import React from "react";
-import { useTheme } from "../../utils/ThemeContext";
 import { Dropdown } from "react-bootstrap";
+import { useTheme } from "../../utils/ThemeContext";
 
 const ThemeSwitcher = () => {
     const { theme, setTheme } = useTheme();

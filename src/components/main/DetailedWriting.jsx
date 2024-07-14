@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from "react";
-import { useParams, useNavigate, useLocation } from "react-router-dom";
-import { Button, Tabs, Tab, Row, Modal } from "react-bootstrap";
 import DOMPurify from "dompurify";
-import useFetchJSONData from "../../utils/useFetchJSONData";
+import React, { useEffect, useState, useMemo } from "react";
+import { Button, Modal, Row, Tab, Tabs } from "react-bootstrap";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { db } from "../../utils/databaseOperations";
 import { generateInitialCheckedStates } from "../../utils/generateInitialCheckedStates";
+import useFetchJSONData from "../../utils/useFetchJSONData";
 import TopNavBar from "../miscellaneous/TopNavBar";
 import ModelText from "../writingtabs/ModelText";
-import StepByStep from "../writingtabs/StepByStep";
 import PracticeWriting from "../writingtabs/PracticeWriting";
-import { db } from "../../utils/databaseOperations";
+import StepByStep from "../writingtabs/StepByStep";
 
 function DetailedWriting() {
     const navigate = useNavigate();
     const location = useLocation();
-    const searchParams = new URLSearchParams(location.search);
+    const searchParams = useMemo(() => new URLSearchParams(location.search), [location.search]);
     const activeTab = searchParams.get("tab") || "modelText";
     const projectId = searchParams.get("projectId");
     const { folder, file } = useParams();
@@ -84,7 +84,7 @@ function DetailedWriting() {
         };
 
         loadData();
-    }, [data, projectId]);
+    }, [data, projectId, navigate, searchParams]);
 
     useEffect(() => {
         const handleBeforeUnload = (event) => {

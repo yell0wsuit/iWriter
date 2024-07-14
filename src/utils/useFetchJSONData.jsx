@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import NProgress from "nprogress";
+import { useEffect, useState } from "react";
 
 function useFetchJSONData(folder, file, navigate) {
     const [data, setData] = useState(null);
