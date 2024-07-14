@@ -1,9 +1,29 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useLocation } from "react-router-dom";
-import { Button, Col, Card, Accordion, Modal, Form, ListGroup, Collapse, Toast, ToastContainer, Alert } from "react-bootstrap";
+import {
+    Button,
+    Col,
+    Card,
+    Accordion,
+    Modal,
+    Form,
+    ListGroup,
+    Collapse,
+    Toast,
+    ToastContainer,
+    Alert,
+} from "react-bootstrap";
 import { db, saveProject, fetchProjectsForLocation } from "../../utils/databaseOperations";
 
-function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsData, setParagraphsData, createMarkup }) {
+function PracticeWriting({
+    folder,
+    file,
+    data,
+    setHasUnsavedChanges,
+    paragraphsData,
+    setParagraphsData,
+    createMarkup,
+}) {
     const [show, setShow] = useState(false);
     const [showLoadModal, setShowLoadModal] = useState(false);
     const [projectsForLocation, setProjectsForLocation] = useState([]);
@@ -27,7 +47,11 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
         const [open, setOpen] = useState(false);
         return (
             <>
-                <Button variant="warning" onClick={() => setOpen(!open)} aria-controls="collapse-text" aria-expanded={open}>
+                <Button
+                    variant="warning"
+                    onClick={() => setOpen(!open)}
+                    aria-controls="collapse-text"
+                    aria-expanded={open}>
                     Tell me more
                 </Button>
                 <Collapse in={open}>
@@ -44,7 +68,9 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
     };
 
     const handleParagraphChange = (index, field, value, event) => {
-        setParagraphsData((currentData) => currentData.map((paragraph, i) => (i === index ? { ...paragraph, [field]: value } : paragraph)));
+        setParagraphsData((currentData) =>
+            currentData.map((paragraph, i) => (i === index ? { ...paragraph, [field]: value } : paragraph))
+        );
         setHasUnsavedChanges(true);
 
         // Auto expand textboxes
@@ -60,7 +86,10 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
         }
 
         // Check if a project with the same name exists
-        const existingProject = await db.projects.where("[projectName+projectLocation]").equals([projectName, projectLocation]).first();
+        const existingProject = await db.projects
+            .where("[projectName+projectLocation]")
+            .equals([projectName, projectLocation])
+            .first();
         if (existingProject) {
             // Show overwrite confirmation modal
             setShowOverwriteConfirm(true);
@@ -79,13 +108,16 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
         }
     };
 
-    const applyLoadedContentToTextboxes = useCallback((loadedContent) => {
-        const loadedParagraphsData = loadedContent.map((paragraph) => ({
-            notes: paragraph.notes || "",
-            content: paragraph.content || "",
-        }));
-        setParagraphsData(loadedParagraphsData);
-    }, [setParagraphsData]);
+    const applyLoadedContentToTextboxes = useCallback(
+        (loadedContent) => {
+            const loadedParagraphsData = loadedContent.map((paragraph) => ({
+                notes: paragraph.notes || "",
+                content: paragraph.content || "",
+            }));
+            setParagraphsData(loadedParagraphsData);
+        },
+        [setParagraphsData]
+    );
 
     const loadProject = async (projectId) => {
         const project = await db.projects.get(projectId);
@@ -151,7 +183,9 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
                     </svg>
                     Save writing
                 </Button>
-                <Button className="mb-4 me-2" onClick={() => fetchProjectsForLocation(projectLocation, setProjectsForLocation, setShowLoadModal)}>
+                <Button
+                    className="mb-4 me-2"
+                    onClick={() => fetchProjectsForLocation(projectLocation, setProjectsForLocation, setShowLoadModal)}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -181,7 +215,9 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
                                                 rows={1}
                                                 placeholder={paragraph.notes.placeHolder}
                                                 value={paragraphsData[index]?.notes || ""} // Bind value to state
-                                                onChange={(e) => handleParagraphChange(index, "notes", e.target.value, e)}
+                                                onChange={(e) =>
+                                                    handleParagraphChange(index, "notes", e.target.value, e)
+                                                }
                                             />
                                         </Form>
                                     </div>
@@ -195,7 +231,9 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
                                                 rows={3}
                                                 placeholder={paragraph.content.placeHolder}
                                                 value={paragraphsData[index]?.content || ""} // Bind value to state
-                                                onChange={(e) => handleParagraphChange(index, "content", e.target.value, e)}
+                                                onChange={(e) =>
+                                                    handleParagraphChange(index, "content", e.target.value, e)
+                                                }
                                             />
                                         </Form>
                                     </div>
@@ -221,12 +259,14 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
                                 </li>
                                 <li>
                                     <p>
-                                        Expand the <strong>Tips</strong> sections for more help on writing this type of text.
+                                        Expand the <strong>Tips</strong> sections for more help on writing this type of
+                                        text.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Go back to the <strong>Model text</strong> or the <strong>Step-by-step</strong> tab.
+                                        Go back to the <strong>Model text</strong> or the <strong>Step-by-step</strong>{" "}
+                                        tab.
                                     </p>
                                 </li>
                             </ul>
@@ -244,7 +284,10 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
                             <Accordion.Body>
                                 <Form>
                                     {section.checkList.map((item, itemIndex) => (
-                                        <Form.Check id={`checkPractice-${index}-${itemIndex}`} key={itemIndex} className="mb-2">
+                                        <Form.Check
+                                            id={`checkPractice-${index}-${itemIndex}`}
+                                            key={itemIndex}
+                                            className="mb-2">
                                             <Form.Check.Input type="checkbox" />
                                             <Form.Check.Label className="mb-2">{item.text}</Form.Check.Label>
                                             <div>{item.tellMeMore && <TellMeMore text={item.tellMeMore} />}</div>
@@ -274,7 +317,11 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
                             }}
                             placeholder="Project name..."
                         />
-                        {!isProjectNameValid && <Form.Control.Feedback type="invalid">Project name cannot be empty or blank.</Form.Control.Feedback>}
+                        {!isProjectNameValid && (
+                            <Form.Control.Feedback type="invalid">
+                                Project name cannot be empty or blank.
+                            </Form.Control.Feedback>
+                        )}
                     </Form.Group>
                 </Modal.Body>
                 <Modal.Footer>
@@ -311,10 +358,15 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
                         <>
                             <ListGroup className="mb-3">
                                 {projectsForLocation.map((project) => (
-                                    <ListGroup.Item className="d-flex justify-content-between align-items-center" key={project.id}>
+                                    <ListGroup.Item
+                                        className="d-flex justify-content-between align-items-center"
+                                        key={project.id}>
                                         <div className="me-auto">
                                             <div>
-                                                <Button variant="link" className="p-0" onClick={() => loadProject(project.id)}>
+                                                <Button
+                                                    variant="link"
+                                                    className="p-0"
+                                                    onClick={() => loadProject(project.id)}>
                                                     {project.projectName}
                                                 </Button>
                                             </div>
@@ -385,7 +437,12 @@ function PracticeWriting({ folder, file, data, setHasUnsavedChanges, paragraphsD
                 </Modal.Footer>
             </Modal>
             <ToastContainer className="p-3 position-fixed bottom-0 start-50 translate-middle-x">
-                <Toast className="text-bg-secondary" onClose={() => setShowToast(false)} show={showToast} delay={5000} autohide>
+                <Toast
+                    className="text-bg-secondary"
+                    onClose={() => setShowToast(false)}
+                    show={showToast}
+                    delay={5000}
+                    autohide>
                     <Toast.Body>{toastMessage}</Toast.Body>
                 </Toast>
             </ToastContainer>
