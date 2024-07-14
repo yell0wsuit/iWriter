@@ -289,7 +289,7 @@ function PracticeWriting({
                                             key={itemIndex}
                                             className="mb-2">
                                             <Form.Check.Input type="checkbox" />
-                                            <Form.Check.Label className="mb-2">{item.text}</Form.Check.Label>
+                                            <Form.Check.Label className="mb-2" dangerouslySetInnerHTML={createMarkup(item.text)}></Form.Check.Label>
                                             <div>{item.tellMeMore && <TellMeMore text={item.tellMeMore} />}</div>
                                         </Form.Check>
                                     ))}

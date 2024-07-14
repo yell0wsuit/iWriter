@@ -3,7 +3,6 @@ import React, { useEffect, useState, useMemo } from "react";
 import { Button, Modal, Row, Tab, Tabs } from "react-bootstrap";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { db } from "../../utils/databaseOperations";
-import { generateInitialCheckedStates } from "../../utils/generateInitialCheckedStates";
 import useFetchJSONData from "../../utils/useFetchJSONData";
 import TopNavBar from "../miscellaneous/TopNavBar";
 import ModelText from "../writingtabs/ModelText";
@@ -55,9 +54,6 @@ function DetailedWriting() {
                     content: data.paragraphs.some((p) => p.content && p.content.para.length > 0),
                 };
                 setActiveContents(contentAvailability);
-
-                const initialState = generateInitialCheckedStates(data.steps);
-                setCheckedStates(initialState);
 
                 // Check IndexedDB for saved data if projectId is present
                 if (projectId) {
