@@ -1,19 +1,19 @@
-import React, { useState, useEffect, useCallback } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useCallback, useEffect, useState } from "react";
 import {
-    Button,
-    Col,
-    Card,
     Accordion,
-    Modal,
+    Alert,
+    Button,
+    Card,
+    Col,
+    Collapse,
     Form,
     ListGroup,
-    Collapse,
+    Modal,
     Toast,
     ToastContainer,
-    Alert,
 } from "react-bootstrap";
-import { db, saveProject, fetchProjectsForLocation } from "../../utils/databaseOperations";
+import { useLocation } from "react-router-dom";
+import { db, fetchProjectsForLocation, saveProject } from "../../utils/databaseOperations";
 
 function PracticeWriting({
     folder,
