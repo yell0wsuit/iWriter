@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Accordion, Form } from "react-bootstrap";
+import { Accordion, Col, Form } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid";
 
 function StepByStep({ data, checkedStates, handleCheckboxChange, createMarkup }) {
