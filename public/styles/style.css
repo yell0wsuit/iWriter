@@ -35,8 +35,7 @@
     fill: currentColor;
 }
 
-*,
-html {
+#root {
     font-family: Inter, system-ui;
     font-variation-settings: "opsz" 15;
 }
