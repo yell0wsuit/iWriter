@@ -1,0 +1,293 @@
+{
+    "title": "Writing a Dissertation, Research Report or Long Essay",
+    "paragraphs": [
+        {
+            "structure": {
+                "para": [
+                    { "id": "2", "text": "Writing a Dissertation, Research Report or Long Essay" },
+                    {
+                        "id": "3",
+                        "text": "An overview of the parts and structure of a long assignment, such as a dissertation, long essay, project, research report, etc."
+                    },
+                    {
+                        "id": "4",
+                        "text": "TIP Long texts consist of several shorter sections which you may also have to write as separate assignments, e.g. Introduction, Literature Review.",
+                        "tip": true
+                    },
+                    {
+                        "id": "4",
+                        "text": "TIP Refer to the other sections of the iWriter for templates giving detailed information, tips and language suggestions for each part of a typical dissertation.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": { "para": [] },
+            "content": { "para": [], "placeHolder": "", "id": "" }
+        },
+        {
+            "structure": {
+                "para": [
+                    { "id": "6", "text": "Title page" },
+                    {
+                        "id": "7",
+                        "text": "Contains the dissertation title, your name, department, degree and date of submission. There may be a specific form of words required, e.g. ‘A dissertation submitted for the degree of …’."
+                    }
+                ]
+            },
+            "notes": { "para": [] },
+            "content": {
+                "para": [[{ "id": "8", "text": " xm-replace_text " }]],
+                "placeHolder": "Draft your Title page here.",
+                "id": "8"
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    { "id": "10", "text": "Abstract" },
+                    { "id": "11", "text": "A short summary of the whole text, usually 100–200 words" },
+                    {
+                        "id": "12",
+                        "text": "TIP Look at the templates: Writing an Abstract 1: Physical and Life Sciences OR Writing an Abstract 2: Social Sciences OR Writing an Abstract 3: Medicine.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": { "para": [] },
+            "content": {
+                "para": [[{ "id": "13", "text": " xm-replace_text " }]],
+                "placeHolder": "Type your Abstract here.",
+                "id": "13"
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    { "id": "15", "text": "Acknowledgements" },
+                    {
+                        "id": "16",
+                        "text": "Thanks are often given in the following order:\n1. your tutor/supervisor\n2. other academic help\n3. technical and financial support; participants in your study\n4. friends and relations"
+                    },
+                    { "id": "17", "text": "TIP This is an optional section.", "tip": true }
+                ]
+            },
+            "notes": { "para": [] },
+            "content": {
+                "para": [[{ "id": "18", "text": " xm-replace_text " }]],
+                "placeHolder": "Type your Acknowledgements here.",
+                "id": "18"
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    { "id": "20", "text": "Table of Contents" },
+                    { "id": "21", "text": "A list of all the parts of your dissertation with page numbers" },
+                    {
+                        "id": "22",
+                        "text": "TIP Include chapter titles, headings and sub-headings, if used.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": { "para": [] },
+            "content": {
+                "para": [[{ "id": "23", "text": " xm-replace_text " }]],
+                "placeHolder": "Draft your Table of Contents here.",
+                "id": "23"
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    { "id": "25", "text": "List of figures, tables or other graphic matter" },
+                    {
+                        "id": "26",
+                        "text": "TIP Each graphic element should have a title and a number, e.g. Table 2.4 is the fourth table in Chapter 2.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": { "para": [] },
+            "content": { "para": [], "placeHolder": "Type your list of figures and tables here.", "id": "27" }
+        },
+        {
+            "structure": {
+                "para": [
+                    { "id": "29", "text": "Chapters 1, 2, etc." },
+                    { "id": "30", "text": "The body of your dissertation" },
+                    {
+                        "id": "31",
+                        "text": "TIP See 'Preparing to Write' for the typical structure for your own field.",
+                        "tip": true
+                    },
+                    {
+                        "id": "31",
+                        "text": "TIP Refer to individual templates in the iWriter for detailed information, tips and language suggestions for each section that you are using.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": { "para": [] },
+            "content": {
+                "para": [[{ "id": "32", "text": " xm-replace_text " }]],
+                "placeHolder": "Draft or outline the body of your dissertation here.",
+                "id": "32"
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    { "id": "34", "text": "References/bibliography" },
+                    { "id": "35", "text": "A list of all the works mentioned in your dissertation" },
+                    {
+                        "id": "36",
+                        "text": "TIP Do not include references to works that you do not mention.",
+                        "tip": true
+                    },
+                    {
+                        "id": "36",
+                        "text": "TIP Check the accepted format for a bibliography with your supervisor. Also look at the template: Writing from Sources.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": { "para": [] },
+            "content": {
+                "para": [[{ "id": "37", "text": " xm-replace_text " }]],
+                "placeHolder": "Type your bibliography here.",
+                "id": "37"
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    { "id": "39", "text": "Appendix 1, 2, etc." },
+                    {
+                        "id": "40",
+                        "text": "Appendices are extra matter which supports your dissertation, but is not part of it, e.g. a survey questionnaire in social science."
+                    }
+                ]
+            },
+            "notes": { "para": [] },
+            "content": {
+                "para": [[{ "id": "41", "text": " xm-replace_text " }]],
+                "placeHolder": "Draft your appendices here.",
+                "id": "41"
+            }
+        }
+    ],
+    "steps": [
+        {
+            "label": "What is a long assignment?",
+            "desc": [
+                "You may have to write a long assignment as part of your course assessment. This may be a dissertation, long essay, project, research report, etc."
+            ],
+            "showParas": [],
+            "filters": []
+        },
+        {
+            "label": "What is its purpose?",
+            "desc": [
+                "The purpose of these assignments is to show the examiner that you:",
+                "- have gained research skills, knowledge and understanding from your course;",
+                "- can apply the methods of your field to a topic of your own choice;",
+                "- can complete an extended, in-depth piece of work."
+            ],
+            "showParas": [],
+            "filters": []
+        },
+        {
+            "label": "How long is it?",
+            "desc": [
+                "Dissertations can range from about 10 000 words at undergraduate level to about 30 000 words for some Master's degrees.",
+                "Long essays may be slightly shorter, ranging from 2 000 to 10 000 words.",
+                "References, appendices, the abstract, and front matter (title page, table of contents, etc.) are not usually included in the word count."
+            ],
+            "showParas": [],
+            "filters": []
+        },
+        {
+            "label": "What are the main parts?",
+            "desc": [
+                "A dissertation may have all or only some of the following parts, usually presented in this order.",
+                "Note: requirements and conventions vary in different fields, departments and institutions. Always consult your tutor/supervisor and departmental guidelines for specific details."
+            ],
+            "showParas": ["6", "7", "10", "11", "15", "16", "20", "21", "25", "29", "30", "34", "35", "39", "40"],
+            "filters": []
+        },
+        {
+            "label": "How is the main part structured?",
+            "desc": [
+                "Requirements and conventions vary in different fields, departments and institutions. Always consult your tutor/supervisor and departmental guidelines for specific details.",
+                "You can see two typical structures at Preparing to Write, by clicking the Writing tab (above).",
+                "For more details on individual sections, look at the relevant templates in the iWriter."
+            ],
+            "showParas": [],
+            "filters": []
+        }
+    ],
+    "practice_rubric": [
+        {
+            "header": "Before you start",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Carrying out a research study.\nTIP\nBack up your files as you collect data and write up your work.",
+                    "tellMeMore": "dissertation1.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Decide on a structure for your writing.\n Check requirements with your tutor/supervisor.\nLong texts consist of several shorter sections which you may also have to write as separate assignments, e.g. Introduction, Literature Review.\nLook at the individual templates in the iWriter for more detailed information on each section.\nTIP\nChoose titles and headings that are short but informative. The examiner needs to know the content of each chapter and section clearly.",
+                    "tellMeMore": "dissertation2.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Planning the sections.\nTIP\n1. Chapters do not have to be the same length. Each chapter should be as long as necessary to cover the material.\n2. Do not be worried by the total number of words. Individual sections are often the same length as assignments you have written already.\n3. Divide the assignment into manageable sections and build up your writing section by section.",
+                    "tellMeMore": "dissertation3.xml"
+                },
+                { "checked": false, "text": "Writing up", "tellMeMore": "dissertation4.xml" },
+                {
+                    "checked": false,
+                    "text": "Revising\nTIP\nGet someone else to proofread your text. They often notice problems more easily.",
+                    "tellMeMore": "dissertation5.xml"
+                },
+                { "checked": false, "text": "Final checks", "tellMeMore": "dissertation6.xml" }
+            ]
+        },
+        {
+            "header": "Choose your language",
+            "checkList": [{ "checked": false, "text": "Use academic language.", "tellMeMore": "academic_language.xml" }]
+        },
+        {
+            "header": "While you are writing",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Look at the Language Banks, Grammar Focus notes and more in the iWriter template for the section you wish to write.",
+                    "tellMeMore": ""
+                }
+            ]
+        },
+        {
+            "header": "Check",
+            "checkList": [
+                { "checked": false, "text": "Have I proofread for completeness?", "tellMeMore": "" },
+                { "checked": false, "text": "Have I checked the accuracy of my material?", "tellMeMore": "" },
+                { "checked": false, "text": "Have I checked that there is no repetition?", "tellMeMore": "" },
+                { "checked": false, "text": "Have I used appropriate academic language?", "tellMeMore": "" },
+                {
+                    "checked": false,
+                    "text": "Have I checked vocabulary, grammar, spelling and punctuation?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I formatted references consistently, using a suitable convention?",
+                    "tellMeMore": ""
+                },
+                { "checked": false, "text": "Have I followed all the requirements for submission?", "tellMeMore": "" }
+            ]
+        }
+    ]
+}
