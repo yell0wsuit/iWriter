@@ -10,7 +10,9 @@ function ModelText({ data, activeContents, setActiveContents, createMarkup }) {
         } else if (isActive) {
             return contentType === "structure" ? "danger" : contentType === "notes" ? "success" : "primary";
         } else {
-            return "outline-" + (contentType === "structure" ? "danger" : contentType === "notes" ? "success" : "primary");
+            return (
+                "outline-" + (contentType === "structure" ? "danger" : contentType === "notes" ? "success" : "primary")
+            );
         }
     };
 
@@ -55,7 +57,9 @@ function ModelText({ data, activeContents, setActiveContents, createMarkup }) {
                                                 .map((para, paraIndex) => (
                                                     <p
                                                         key={`structure-${index}-${paraIndex}`}
-                                                        className={`font-style-serif text-danger ${paragraph.align === "right" ? "iwriter-align-right" : ""}`}
+                                                        className={`font-style-serif text-danger ${
+                                                            paragraph.align === "right" ? "iwriter-align-right" : ""
+                                                        } ${para.bold ? "fw-semibold" : ""}`}
                                                         dangerouslySetInnerHTML={createMarkup(para.text)}></p>
                                                 ))}
                                         </div>
@@ -75,24 +79,30 @@ function ModelText({ data, activeContents, setActiveContents, createMarkup }) {
                                                 ))}
                                         </div>
                                     )}
-                                    {activeContents.content && paragraph.content.para.length > 0 && !paragraph.content.duplicate && (
-                                        <div key={index} className="border-start border-3 px-2">
-                                            {paragraph.content.image && (
-                                                <img
-                                                    src={`/images/model/${paragraph.content.image}`}
-                                                    alt={paragraph.content.imgAlt}
-                                                    className="img-fluid mb-2"
-                                                />
-                                            )}
-                                            {paragraph.content.para.map((subParaArray, index) => (
-                                                <p
-                                                    key={index}
-                                                    className={`font-style-serif text-primary-emphasis iwriter-align-${paragraph.align === "right" ? "right" : ""}`}
-                                                    dangerouslySetInnerHTML={createMarkup(subParaArray.map((para) => para.text).join(""))}
-                                                />
-                                            ))}
-                                        </div>
-                                    )}
+                                    {activeContents.content &&
+                                        paragraph.content.para.length > 0 &&
+                                        !paragraph.content.duplicate && (
+                                            <div key={index} className="border-start border-3 px-2">
+                                                {paragraph.content.image && (
+                                                    <img
+                                                        src={`/images/model/${paragraph.content.image}`}
+                                                        alt={paragraph.content.imgAlt}
+                                                        className="img-fluid mb-2"
+                                                    />
+                                                )}
+                                                {paragraph.content.para.map((subParaArray, index) => (
+                                                    <p
+                                                        key={index}
+                                                        className={`font-style-serif text-primary-emphasis iwriter-align-${
+                                                            paragraph.align === "right" ? "right" : ""
+                                                        }`}
+                                                        dangerouslySetInnerHTML={createMarkup(
+                                                            subParaArray.map((para) => para.text).join("")
+                                                        )}
+                                                    />
+                                                ))}
+                                            </div>
+                                        )}
                                 </React.Fragment>
                             ))}
                     </Card.Body>
@@ -114,7 +124,8 @@ function ModelText({ data, activeContents, setActiveContents, createMarkup }) {
                                 </li>
                                 <li>
                                     <p>
-                                        Open the <strong>Step-by-step</strong> tab to look at the model text in more detail.
+                                        Open the <strong>Step-by-step</strong> tab to look at the model text in more
+                                        detail.
                                     </p>
                                 </li>
                                 <li>
