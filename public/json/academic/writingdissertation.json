@@ -36,7 +36,7 @@
             },
             "notes": { "para": [] },
             "content": {
-                "para": [[{ "id": "8", "text": " xm-replace_text " }]],
+                "para": [[{ "id": "8", "text": "" }]],
                 "placeHolder": "Draft your Title page here.",
                 "id": "8"
             }
@@ -55,7 +55,7 @@
             },
             "notes": { "para": [] },
             "content": {
-                "para": [[{ "id": "13", "text": " xm-replace_text " }]],
+                "para": [[{ "id": "13", "text": "" }]],
                 "placeHolder": "Type your Abstract here.",
                 "id": "13"
             }
@@ -73,7 +73,7 @@
             },
             "notes": { "para": [] },
             "content": {
-                "para": [[{ "id": "18", "text": " xm-replace_text " }]],
+                "para": [[{ "id": "18", "text": "" }]],
                 "placeHolder": "Type your Acknowledgements here.",
                 "id": "18"
             }
@@ -92,7 +92,7 @@
             },
             "notes": { "para": [] },
             "content": {
-                "para": [[{ "id": "23", "text": " xm-replace_text " }]],
+                "para": [[{ "id": "23", "text": "" }]],
                 "placeHolder": "Draft your Table of Contents here.",
                 "id": "23"
             }
@@ -130,7 +130,7 @@
             },
             "notes": { "para": [] },
             "content": {
-                "para": [[{ "id": "32", "text": " xm-replace_text " }]],
+                "para": [[{ "id": "32", "text": "" }]],
                 "placeHolder": "Draft or outline the body of your dissertation here.",
                 "id": "32"
             }
@@ -154,7 +154,7 @@
             },
             "notes": { "para": [] },
             "content": {
-                "para": [[{ "id": "37", "text": " xm-replace_text " }]],
+                "para": [[{ "id": "37", "text": "" }]],
                 "placeHolder": "Type your bibliography here.",
                 "id": "37"
             }
@@ -171,7 +171,7 @@
             },
             "notes": { "para": [] },
             "content": {
-                "para": [[{ "id": "41", "text": " xm-replace_text " }]],
+                "para": [[{ "id": "41", "text": "" }]],
                 "placeHolder": "Draft your appendices here.",
                 "id": "41"
             }
@@ -220,7 +220,7 @@
             "label": "How is the main part structured?",
             "desc": [
                 "Requirements and conventions vary in different fields, departments and institutions. Always consult your tutor/supervisor and departmental guidelines for specific details.",
-                "You can see two typical structures at Preparing to Write, by clicking the Writing tab (above).",
+                "You can see two typical structures at Preparing to Write, by switching to the \"Practice writing\" tab.",
                 "For more details on individual sections, look at the relevant templates in the iWriter."
             ],
             "showParas": [],

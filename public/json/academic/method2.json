@@ -1,0 +1,851 @@
+{
+    "title": "Writing up Methods 2: a survey method",
+    "paragraphs": [
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "",
+                        "text": "Writing up Methods 2: a survey method"
+                    },
+                    {
+                        "id": "",
+                        "text": "How to report on the method used in undertaking your research"
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [],
+                "placeHolder": "",
+                "id": ""
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "2",
+                        "text": "Section 1: Description and explanation of the method"
+                    },
+                    {
+                        "id": "3",
+                        "text": "Explains the data collection method, describes the method used and explains how the method was used."
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "4",
+                            "text": " 2. Analytical Framework "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "4",
+                            "text": " 2.1. Target Profiling "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "4",
+                            "text": " Our study differs significantly from previous research in its approach to categorizing parents. The typical approach is to group parents by a single characteristic, such as age or employment status, and then cross-tabulate with other variables. "
+                        },
+                        {
+                            "id": "5",
+                            "text": " We forgo this method in order to create multidimensional profiles of parents that more closely approximate reality by taking several factors into account to develop a comprehensive and more true-to-life view of parents. For example, we do not lump all young parents into one group based on the single characteristic of age. Instead, we simultaneously consider several other factors such as parents' degree of cooperativeness, the strength of their sense of responsibility and whether their children attend cram schools. "
+                        },
+                        {
+                            "id": "4",
+                            "text": " In short, we present a comprehensive narrative of parenting in Japan. … "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "6",
+                            "text": " When considering which methodology to apply, we were drawn to target profiling, a method used primarily in fields such as marketing science and psychology. In target profiling,[7] members of a sample are classified into several groups based on shared characteristics. The degree of divergence between groups is revealed by comparing their responses to a set of questions.[8] "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "51",
+                            "text": " We conducted our target profiling in two main stages. First, using cluster analysis and attribute data compiled from parents, we categorized parents into several groups and uncovered the distinct characteristics of each group. Second, we assessed how much these groups differed from one another in their responses to questions on school education. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Section 1 here.",
+                "id": "4"
+            }
+        },
+        {
+            "structure": {
+                "para": []
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "8",
+                            "text": " 2. Analytical Framework "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "8",
+                            "text": " 2.1. Target Profiling "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "9",
+                            "text": " Our study differs significantly from previous research "
+                        },
+                        {
+                            "id": "8",
+                            "text": " in its approach to categorizing parents. The typical approach is to group parents by a single characteristic, such as age or employment status, and then cross-tabulate with other variables. We forgo this method in order to create multidimensional profiles of parents that more closely approximate reality "
+                        },
+                        {
+                            "id": "10",
+                            "text": " by taking "
+                        },
+                        {
+                            "id": "8",
+                            "text": " several factors into account to develop a comprehensive and more true-to-life view of parents. For example, we do not lump all young parents into one group based on the single characteristic of age. Instead, we simultaneously consider several other factors such as parents' degree of cooperativeness, the strength of their sense of responsibility and whether their children attend cram schools. In short, we present a comprehensive narrative of parenting in Japan. … "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "8",
+                            "text": " When considering which methodology to apply, we were drawn to target profiling, "
+                        },
+                        {
+                            "id": "11",
+                            "text": " a method used primarily in fields such as marketing science and psychology "
+                        },
+                        {
+                            "id": "8",
+                            "text": " . In target profiling,[7] members of a sample are classified into several groups based on shared characteristics. The degree of divergence between groups is revealed "
+                        },
+                        {
+                            "id": "12",
+                            "text": " by comparing "
+                        },
+                        {
+                            "id": "8",
+                            "text": " their responses to a set of questions.[8] "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "8",
+                            "text": " We "
+                        },
+                        {
+                            "id": "13",
+                            "text": " conducted "
+                        },
+                        {
+                            "id": "8",
+                            "text": " our target profiling in two main stages. "
+                        },
+                        {
+                            "id": "14",
+                            "text": " First "
+                        },
+                        {
+                            "id": "8",
+                            "text": " , using cluster analysis and attribute data "
+                        },
+                        {
+                            "id": "15",
+                            "text": " compiled "
+                        },
+                        {
+                            "id": "8",
+                            "text": " from parents, we "
+                        },
+                        {
+                            "id": "16",
+                            "text": " categorized "
+                        },
+                        {
+                            "id": "8",
+                            "text": " parents into several groups and uncovered the distinct characteristics of each group. "
+                        },
+                        {
+                            "id": "17",
+                            "text": " Second "
+                        },
+                        {
+                            "id": "8",
+                            "text": " , we "
+                        },
+                        {
+                            "id": "18",
+                            "text": " assessed "
+                        },
+                        {
+                            "id": "8",
+                            "text": " how much these groups differed from one another in their responses to questions on school education. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Section 1 here.",
+                "id": "8",
+                "duplicate": true
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "20",
+                        "text": "Section 2: Description and justification of the data"
+                    },
+                    {
+                        "id": "21",
+                        "text": "Describes the data (who they are, where they are located and how many there are) and justifies the data."
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "",
+                            "text": " 2.2. Subjects of Analysis "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "23",
+                            "text": " For our sample, we selected mothers of second grade students attending public elementary schools in Tokyo, who had participated in the 2003 Benesse/Asahi Shinbun survey mentioned above. "
+                        },
+                        {
+                            "id": "24",
+                            "text": " Although fathers and other legal guardians also sent in responses, roughly 90% of survey participants were mothers, so we focus solely on them. Given that younger mothers have been blamed for the burgeoning number of complaints filed against schools and teachers, we chose mothers of second graders in the expectation that they would be younger on average than the other mothers in the survey. Under the assumption that parents' concerns about middle school admission tests may further heighten their concerns regarding elementary school performance,[9] we further narrowed our focus to residents of Tokyo proper, where such admission tests are more prevalent, to control for this variation. "
+                        },
+                        {
+                            "id": "25",
+                            "text": " After filtering out participants by these criteria and eliminating missing values, 116 mothers remained in our study. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Section 2 here.",
+                "id": "22"
+            }
+        },
+        {
+            "structure": {
+                "para": []
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "27",
+                            "text": " 2.2. Subjects of Analysis "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "27",
+                            "text": " For our sample, we "
+                        },
+                        {
+                            "id": "28",
+                            "text": " selected "
+                        },
+                        {
+                            "id": "27",
+                            "text": " mothers of second grade students attending public elementary schools in Tokyo, who had participated in "
+                        },
+                        {
+                            "id": "29",
+                            "text": " the 2003 Benesse/Asahi Shinbun survey "
+                        },
+                        {
+                            "id": "27",
+                            "text": " mentioned above. Although fathers and other legal guardians also sent in responses, roughly 90% of survey participants were mothers, so we focus solely on them. Given that younger mothers have been blamed for the burgeoning number of complaints filed against schools and teachers, we "
+                        },
+                        {
+                            "id": "30",
+                            "text": " chose "
+                        },
+                        {
+                            "id": "27",
+                            "text": " mothers of second graders in the expectation that they would be younger on average than the other mothers in the survey. Under the assumption that parents' concerns about middle school admission tests may further heighten their concerns regarding elementary school performance,[9] we further "
+                        },
+                        {
+                            "id": "31",
+                            "text": " narrowed "
+                        },
+                        {
+                            "id": "27",
+                            "text": " our focus to residents of Tokyo proper, where such admission tests are more prevalent, to control for this variation. After filtering out participants by these criteria and eliminating missing values, 116 mothers remained in our study. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Section 2 here.",
+                "id": "27",
+                "duplicate": true
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "33",
+                        "text": "Section 3: Explanation and justification of the method"
+                    },
+                    {
+                        "id": "34",
+                        "text": "Explains each variable and provides reasons for its inclusion.\n</br>Explains how the results were calculated."
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "36",
+                            "text": " 2.3. Variables "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "37",
+                            "text": " We used eleven variables in our cluster analysis: age, employment ... access to information, tendency to worry, and cultural capital, for the following reasons[10]: "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "38",
+                            "text": " 1. Age. Included to test whether younger mothers are more likely to file complaints against schools. "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "39",
+                            "text": " 2. Employment. The amount of time a mother can spend with her child depends on her working status, and dual income (full-time) families presumably have higher incomes than those with mothers working part-time or not at all. "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "35",
+                            "text": " [Nine further variables are presented with reasons for their inclusion (omitted here).] "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "40",
+                            "text": " To test the extent to which different types of parents have different attitudes toward schools, we selected responses to survey questions that focused on parents' expectations and level of satisfaction with their children's elementary schools. "
+                        },
+                        {
+                            "id": "35",
+                            "text": " These questions generally fall into five categories (see Table 4 below for a detailed list of survey questions): (a) general expectations of schooling (e.g. what type of education and guidance should all schools provide?); (b) expectations of one's own child's school; … [Three further categories are listed (omitted here).] "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "35",
+                            "text": " (Yamashita and Okada, 2011) For the full reference, see "
+                        },
+                        {
+                            "id": "35",
+                            "text": "<a href=\"/references\">References</a>"
+                        },
+                        {
+                            "id": "35",
+                            "text": "."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Section 3 here.",
+                "id": "35"
+            }
+        },
+        {
+            "structure": {
+                "para": []
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "42",
+                            "text": " 2.3. Variables "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "42",
+                            "text": " We "
+                        },
+                        {
+                            "id": "43",
+                            "text": " used "
+                        },
+                        {
+                            "id": "44",
+                            "text": " eleven "
+                        },
+                        {
+                            "id": "42",
+                            "text": " variables in our cluster analysis: age, employment ... access to information, tendency to worry, and cultural capital, for the following reasons[10]: "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "45",
+                            "text": " 1. "
+                        },
+                        {
+                            "id": "42",
+                            "text": " Age. Included to test whether younger mothers are more likely to file complaints against schools. "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "46",
+                            "text": " 2. "
+                        },
+                        {
+                            "id": "42",
+                            "text": " Employment. The amount of time a mother can spend with her child depends on her working status, and dual income (full-time) families presumably have higher incomes than those with mothers working part-time or not at all. [Nine further variables are presented with reasons for their inclusion (omitted here).] "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "42",
+                            "text": " To test the extent to which different types of parents have different attitudes toward schools, we "
+                        },
+                        {
+                            "id": "47",
+                            "text": " selected "
+                        },
+                        {
+                            "id": "42",
+                            "text": " responses to survey questions that focused on parents' expectations and level of satisfaction with their children's elementary schools. These questions generally fall into "
+                        },
+                        {
+                            "id": "48",
+                            "text": " five "
+                        },
+                        {
+                            "id": "42",
+                            "text": " categories (see Table 4 below for a detailed list of survey questions): "
+                        },
+                        {
+                            "id": "49",
+                            "text": " (a) "
+                        },
+                        {
+                            "id": "42",
+                            "text": " general expectations of schooling (e.g. what type of education and guidance should all schools provide?); "
+                        },
+                        {
+                            "id": "50",
+                            "text": " (b) "
+                        },
+                        {
+                            "id": "42",
+                            "text": " expectations of one's own child's school; … [Three further categories are listed (omitted here).] "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "42",
+                            "text": " (Yamashita and Okada, 2011) For the full reference, see "
+                        },
+                        {
+                            "id": "42",
+                            "text": "<a href=\"/references\">References</a>"
+                        },
+                        {
+                            "id": "42",
+                            "text": "."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Section 3 here.",
+                "id": "42",
+                "duplicate": true
+            }
+        }
+    ],
+    "steps": [
+        {
+            "label": "What is a method section?",
+            "desc": [
+                "Reporting on the method used in undertaking your research is a crucial part of the research writing process. The method section is likely to be a detailed account of the steps undertaken in the research."
+            ],
+            "showParas": [],
+            "filters": []
+        },
+        {
+            "label": "What is its purpose?",
+            "desc": [
+                "Method sections in dissertations in any discipline will usually have a combination of three purposes. A method section aims to:",
+                "1. describe the data and method used;",
+                "2. explain how the data were collected and how the method(s) were employed in the research; and",
+                "3. justify why the data were selected and why particular method(s) were chosen.",
+                "Method sections in different disciplines differ in terms of the emphasis they place on the different purposes. Humanities and social science disciplines tend to favour a more extended discussion of the explanations and justifications of how and why things were done. Whatever the discipline, the primary goal of the method section is to convey to the readers the validity of the research you have undertaken."
+            ],
+            "showParas": [],
+            "filters": []
+        },
+        {
+            "label": "What are its main features?",
+            "desc": [
+                "In social sciences, readers are likely to be as interested in your method as in your findings. This is particularly true of methods that involve a survey as there are a number of issues which need to be taken into account—for example, the sampling technique, the representativeness of the sample, the variables involved, and the questions posed in the survey.",
+                "Almost all method sections using a non-experimental approach are likely to have the three main components of description, explanation, and justification of data and method."
+            ],
+            "showParas": [],
+            "filters": []
+        },
+        {
+            "label": "How is it structured?",
+            "desc": [
+                "(After Lim, 2006)",
+                "This is an extract from a method section in a research article published in ‘Social Science Japan Journal’, describing a survey of parental attitudes towards public school education in Tokyo."
+            ],
+            "showParas": [
+                "2",
+                "3",
+                "20",
+                "21",
+                "33",
+                "34"
+            ],
+            "filters": []
+        },
+        {
+            "label": "Look at section 1",
+            "desc": [],
+            "showParas": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "51"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "The writer explains the data collection method.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "5"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "The writer describes the method used (target profiling) by relating it to an existing method in the field.",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "6"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "The writer explains how the method was used (target profiling in two stages).",
+                    "checked": false,
+                    "highlightClass": "highlightColor3",
+                    "highlightPara": [
+                        "51"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Look at section 2",
+            "desc": [],
+            "showParas": [
+                "20",
+                "21",
+                "22",
+                "23",
+                "25",
+                "24"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "The writer describes the data (who they are, where they are located and how many there are).",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "23",
+                        "25"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "The author justifies the data (providing reasons for the exclusion of fathers and restriction to the Tokyo area).",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "24"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Look at section 3",
+            "desc": [],
+            "showParas": [
+                "33",
+                "34",
+                "35",
+                "36",
+                "37",
+                "38",
+                "39",
+                "40"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "The author explains each variable and provides reasons for its inclusion.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "36",
+                        "37",
+                        "38",
+                        "39"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "Then the writer explains how the results were calculated (the selection of responses to particular questions).",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "40"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Show me useful language",
+            "desc": [],
+            "showParas": [
+                "8",
+                "27",
+                "42",
+                "14",
+                "17",
+                "44",
+                "45",
+                "46",
+                "48",
+                "49",
+                "50",
+                "13",
+                "15",
+                "16",
+                "18",
+                "28",
+                "30",
+                "31",
+                "43",
+                "47",
+                "10",
+                "12",
+                "9",
+                "11",
+                "29"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "Listing steps, variables or categories using numbers or letters is a useful way of presenting information.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "14",
+                        "17",
+                        "44",
+                        "45",
+                        "46",
+                        "48",
+                        "49",
+                        "50"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "Verbs used to describe the research process",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "13",
+                        "15",
+                        "16",
+                        "18",
+                        "28",
+                        "30",
+                        "31",
+                        "43",
+                        "47"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "Use ‘by + verb-ing’ to show how a particular result was achieved.",
+                    "checked": false,
+                    "highlightClass": "highlightColor3",
+                    "highlightPara": [
+                        "10",
+                        "12"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "Different ways of connecting your research to other research in the field",
+                    "checked": false,
+                    "highlightClass": "highlightColor4",
+                    "highlightPara": [
+                        "9",
+                        "11",
+                        "29"
+                    ]
+                }
+            ]
+        }
+    ],
+    "practice_rubric": [
+        {
+            "header": "Before you start",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Consider who is going to read your dissertation and what they will need to know about your research.",
+                    "tellMeMore": "method_sur1.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Think about the data and data collection and what you need to say.",
+                    "tellMeMore": "method_sur2.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Think about the method and what you need to say.",
+                    "tellMeMore": "method_sur3.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Make some notes and organize them into the plan.",
+                    "tellMeMore": "method_sur4.xml"
+                }
+            ]
+        },
+        {
+            "header": "Choose your language",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Use academic language that is concise.",
+                    "tellMeMore": "method_exp5.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Use academic language that is formal and precise.",
+                    "tellMeMore": "method_exp6.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Use academic language that is carefully structured.",
+                    "tellMeMore": "method_sur5.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Language Bank: research verbs",
+                    "tellMeMore": "method_sur6.xml"
+                }
+            ]
+        },
+        {
+            "header": "While you are writing",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Grammar Focus: first person pronoun",
+                    "tellMeMore": "method_sur7.xml"
+                }
+            ]
+        },
+        {
+            "header": "Check",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Have I described the size, location and characteristics of my data?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I explained and justified the data collection procedures?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I described my chosen method in detail?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I explained and justified my method?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I used a selection of verbs to describe the research process?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I used the first person and past or present tenses appropriately?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I used ‘by + verb-ing’ to show how a particular result was achieved?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I checked vocabulary, grammar, spelling and punctuation?",
+                    "tellMeMore": ""
+                }
+            ]
+        }
+    ]
+}
