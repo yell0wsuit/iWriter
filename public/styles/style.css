@@ -35,13 +35,13 @@
     fill: currentColor;
 }
 
-#root {
+*, #root {
     font-family: Inter, system-ui;
     font-variation-settings: "opsz" 15;
 }
 
 .font-style-serif {
-    font-family: "Roboto Serif", serif;
+    font-family: "Roboto Serif", Georgia, serif !important;
     font-variation-settings: "opsz" 19;
 }
 
