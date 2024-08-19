@@ -2,7 +2,7 @@
   "name": "Oxford iWriter",
   "short_name": "Oxford iWriter",
   "description": "An interactive tool designed to help learners write more effectively in English.",
-  "version": "3.0",
+  "version": "4.0",
   "start_url": "index.html",
   "display": "fullscreen",
   "orientation": "any",
