@@ -23,6 +23,8 @@ function ModelText({ data, activeContents, setActiveContents, createMarkup }) {
         }));
     };
 
+    const isAnyContentActive = activeContents.structure || activeContents.notes || activeContents.content;
+
     return (
         <>
             <Col xs={{ order: 2 }} md={{ order: 1 }}>
@@ -47,7 +49,7 @@ function ModelText({ data, activeContents, setActiveContents, createMarkup }) {
                 </Button>
                 <Card className="mt-4">
                     <Card.Body>
-                        {data &&
+                        {isAnyContentActive ? (
                             data.paragraphs.map((paragraph, index) => (
                                 <React.Fragment key={index}>
                                     {activeContents.structure && paragraph.structure.para.length > 0 && (
@@ -111,7 +113,12 @@ function ModelText({ data, activeContents, setActiveContents, createMarkup }) {
                                             </div>
                                         )}
                                 </React.Fragment>
-                            ))}
+                            ))
+                        ) : (
+                            <p className="mb-0 text-secondary fw-semibold fst-italic">
+                                Please select at least one option to show the model text.
+                            </p>
+                        )}
                     </Card.Body>
                 </Card>
             </Col>
