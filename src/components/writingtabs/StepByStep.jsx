@@ -1,4 +1,3 @@
-import React from "react";
 import { Accordion, Col, Form } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid";
 
@@ -8,7 +7,9 @@ function StepByStep({ data, checkedStates, handleCheckboxChange, createMarkup })
             <div key={`${stepIndex}-${callId}`} className={`border-3 border-start px-2 ${className}`}>
                 {para.map((paraGroup, index) => {
                     const combinedText = paraGroup.map((item, itemIndex) => {
-                        const highlightClassKeys = stepFilters.map((filter) => `step${stepIndex}_${filter.highlightClass}`);
+                        const highlightClassKeys = stepFilters.map(
+                            (filter) => `step${stepIndex}_${filter.highlightClass}`
+                        );
                         const isHighlighted = highlightClassKeys.some(
                             (key) =>
                                 checkedStates[key] &&
@@ -26,7 +27,7 @@ function StepByStep({ data, checkedStates, handleCheckboxChange, createMarkup })
 
                         const styles = {
                             fontWeight: item.bold ? "bold" : "",
-                            fontStyle: item.italic ? "italic" : ""
+                            fontStyle: item.italic ? "italic" : "",
                         };
 
                         return (
@@ -39,32 +40,13 @@ function StepByStep({ data, checkedStates, handleCheckboxChange, createMarkup })
                     });
 
                     return (
-                        <p key={`step${stepIndex}-paraGroup${index}-${callId}`} className={`${className} ${alignClass} font-style-serif`}>
-                            {combinedText.reduce((prev, curr) => [prev, ' ', curr], [])}
+                        <p
+                            key={`step${stepIndex}-paraGroup${index}-${callId}`}
+                            className={`${className} ${alignClass} font-style-serif`}>
+                            {combinedText.reduce((prev, curr) => [prev, " ", curr], [])}
                         </p>
                     );
                 })}
-            </div>
-        );
-    };
-
-    const renderParagraphsInSection = (paras, className, alignClass, sectionIndex) => {
-        const key = uuidv4();
-        return (
-            <div key={key} className={`border-3 border-start px-2 border${className}`}>
-                {paras.map((p, index) =>
-                    // Check if paragraph has tip property to conditionally render without className
-                    p.tip ? (
-                        <p key={`section${sectionIndex}-p${index}-${p.id}`} className="font-style-serif">
-                            {p.text}
-                        </p>
-                    ) : (
-                        <p
-                            key={`section${sectionIndex}-p${index}-${p.id}`}
-                            className={`text${className} ${alignClass} font-style-serif`}
-                            dangerouslySetInnerHTML={createMarkup(p.text)}></p>
-                    )
-                )}
             </div>
         );
     };
@@ -82,7 +64,19 @@ function StepByStep({ data, checkedStates, handleCheckboxChange, createMarkup })
                         const className = section === "structure" ? "-danger" : "-success fst-italic";
                         // Exclude tips from being rendered
                         const filteredParas = para[section].para.filter((p) => !p.tip);
-                        paragraphs.push(renderParagraphsInSection(filteredParas, className, alignClass, index));
+                        const key = uuidv4();
+                        paragraphs.push(
+                            <div key={key} className={`border-3 border-start px-2 border${className}`}>
+                                {filteredParas.map((p, pIndex) => (
+                                    <p
+                                        key={`section${index}-p${pIndex}-${p.id}`}
+                                        className={`text${className} font-style-serif ${alignClass} ${
+                                            p.bold ? "fw-semibold" : ""
+                                        }`}
+                                        dangerouslySetInnerHTML={createMarkup(p.text)}></p>
+                                ))}
+                            </div>
+                        );
                     }
                 }
             });
