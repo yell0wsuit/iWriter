@@ -71,7 +71,9 @@ function ModelText({ data, activeContents, setActiveContents, createMarkup }) {
                                                 .map((para, paraIndex) => (
                                                     <p
                                                         key={`notes-${index}-${paraIndex}`}
-                                                        className={`font-style-serif text-success fst-italic iwriter-align-${
+                                                        className={`${
+                                                            para.bold ? "fw-semibold" : ""
+                                                        } font-style-serif text-success fst-italic iwriter-align-${
                                                             paragraph.align === "right" ? "right" : ""
                                                         }`}>
                                                         {para.text}
@@ -91,15 +93,20 @@ function ModelText({ data, activeContents, setActiveContents, createMarkup }) {
                                                     />
                                                 )}
                                                 {paragraph.content.para.map((subParaArray, index) => (
-                                                    <p
-                                                        key={index}
-                                                        className={`font-style-serif text-primary-emphasis iwriter-align-${
-                                                            paragraph.align === "right" ? "right" : ""
-                                                        }`}
-                                                        dangerouslySetInnerHTML={createMarkup(
-                                                            subParaArray.map((para) => para.text).join("")
-                                                        )}
-                                                    />
+                                                    <p key={index}>
+                                                        {subParaArray.map((para, paraIndex) => (
+                                                            <span
+                                                                key={paraIndex}
+                                                                className={`${
+                                                                    para.bold ? "fw-semibold" : ""
+                                                                } font-style-serif text-primary-emphasis iwriter-align-${
+                                                                    paragraph.align === "right" ? "right" : ""
+                                                                }`}
+                                                                dangerouslySetInnerHTML={createMarkup(
+                                                                    para.text
+                                                                )}></span>
+                                                        ))}
+                                                    </p>
                                                 ))}
                                             </div>
                                         )}

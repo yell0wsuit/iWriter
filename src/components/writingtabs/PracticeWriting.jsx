@@ -203,7 +203,10 @@ function PracticeWriting({
                             <div key={index} className="mb-3">
                                 <div className="text-danger border-3 border-start px-2 border-danger">
                                     {paragraph.structure.para.map((p, idx) => (
-                                        <p key={idx} dangerouslySetInnerHTML={createMarkup(p.text)} className="font-style-serif"></p>
+                                        <p
+                                            key={idx}
+                                            dangerouslySetInnerHTML={createMarkup(p.text)}
+                                            className="font-style-serif"></p>
                                     ))}
                                 </div>
                                 {paragraph.notes.placeHolder && (
@@ -289,7 +292,9 @@ function PracticeWriting({
                                             key={itemIndex}
                                             className="mb-2">
                                             <Form.Check.Input type="checkbox" />
-                                            <Form.Check.Label className="mb-2" dangerouslySetInnerHTML={createMarkup(item.text)}></Form.Check.Label>
+                                            <Form.Check.Label
+                                                className="mb-2"
+                                                dangerouslySetInnerHTML={createMarkup(item.text)}></Form.Check.Label>
                                             <div>{item.tellMeMore && <TellMeMore text={item.tellMeMore} />}</div>
                                         </Form.Check>
                                     ))}
