@@ -1,0 +1,657 @@
+{
+    "title": "Writing up Methods 1: an experimental method",
+    "paragraphs": [
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "2",
+                        "text": "Writing up Methods 1: an experimental method"
+                    },
+                    {
+                        "id": "3",
+                        "text": "How to report on the method used in undertaking your research"
+                    },
+                    {
+                        "id": "4",
+                        "text": "TIP A detailed step-by-step explanation is crucial as it allows other researchers to replicate your experiment.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [],
+                "placeHolder": "",
+                "id": ""
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "6",
+                        "text": "Paragraph 1: Description of the data"
+                    },
+                    {
+                        "id": "7",
+                        "text": "Describes the data in terms of size and location."
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "9",
+                            "text": " Twelve male rufous hummingbirds (6 in 2007 and 6 in 2008) "
+                        },
+                        {
+                            "id": "8",
+                            "text": " , which had been defending territories containing a 250-ml inverted bottle feeder (filled with 14% sucrose) for at least a week, were trapped, color-marked, banded for individual identification, and released. "
+                        },
+                        {
+                            "id": "10",
+                            "text": " The field site was the Westcastle river valley in the Rocky Mountains, Alberta, Canada (lat: 49.349024, long: -114.410902). "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Paragraph 1 here.",
+                "id": "8"
+            }
+        },
+        {
+            "structure": {
+                "para": []
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "13",
+                            "text": " Twelve male rufous hummingbirds "
+                        },
+                        {
+                            "id": "14",
+                            "text": " (6 in 2007 and 6 in 2008) "
+                        },
+                        {
+                            "id": "12",
+                            "text": " , which had been defending territories containing "
+                        },
+                        {
+                            "id": "15",
+                            "text": " a 250-ml inverted bottle feeder "
+                        },
+                        {
+                            "id": "16",
+                            "text": " (filled with 14% sucrose) "
+                        },
+                        {
+                            "id": "12",
+                            "text": " for at least a week, "
+                        },
+                        {
+                            "id": "17",
+                            "text": " were trapped, color-marked, banded "
+                        },
+                        {
+                            "id": "12",
+                            "text": " for individual identification, "
+                        },
+                        {
+                            "id": "18",
+                            "text": " and released "
+                        },
+                        {
+                            "id": "12",
+                            "text": " . The field site was the Westcastle river valley in the Rocky Mountains, Alberta, Canada "
+                        },
+                        {
+                            "id": "19",
+                            "text": " (lat: 49.349024, long: -114.410902) "
+                        },
+                        {
+                            "id": "12",
+                            "text": "."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type  Paragraph 1 here.",
+                "id": "12",
+                "duplicate": true
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "21",
+                        "text": "Paragraph 2: Explanation of the design of the experiment"
+                    },
+                    {
+                        "id": "22",
+                        "text": "Explains the set-up of the experiment. Information on the materials used, how they were prepared for the study, and the duration of the experiment is included here."
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "23",
+                            "text": " Not less than 3 days after trapping, birds were trained to feed from "
+                        },
+                        {
+                            "id": "24",
+                            "text": " an artificial flower containing 14% sucrose "
+                        },
+                        {
+                            "id": "25",
+                            "text": " during the course of a day (6–9 h) "
+                        },
+                        {
+                            "id": "23",
+                            "text": "."
+                        },
+                        {
+                            "id": "26",
+                            "text": " The “flower” was a red cardboard disk (diameter 4.5 cm) with a syringe cap inserted through its center to act as a well. The flower was taped with red tape to the top of a cane (1 m), which was pushed into the ground within 5 m of the usual position of the feeder. "
+                        },
+                        {
+                            "id": "23",
+                            "text": " Observers sat at least 10 m from the flower. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Paragraph 2 here.",
+                "id": "23"
+            }
+        },
+        {
+            "structure": {
+                "para": []
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "28",
+                            "text": " Not less than 3 days after trapping, birds were trained to feed from an artificial flower containing 14% sucrose during the course of a day "
+                        },
+                        {
+                            "id": "29",
+                            "text": " (6–9 h) "
+                        },
+                        {
+                            "id": "28",
+                            "text": " . The \"flower\" was "
+                        },
+                        {
+                            "id": "30",
+                            "text": " a red cardboard disk "
+                        },
+                        {
+                            "id": "31",
+                            "text": " (diameter 4.5 cm) "
+                        },
+                        {
+                            "id": "28",
+                            "text": " with a syringe cap inserted through its center to act as a well. The flower was taped with red tape to the top of a cane "
+                        },
+                        {
+                            "id": "32",
+                            "text": " (1 m) "
+                        },
+                        {
+                            "id": "28",
+                            "text": " , which was pushed into the ground within 5 m of the usual position of the feeder. Observers sat at least 10 m from the flower. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Paragraph 2 here.",
+                "id": "28",
+                "duplicate": true
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "34",
+                        "text": "Paragraph 3: Description of the experiment"
+                    },
+                    {
+                        "id": "35",
+                        "text": "Describes the list of procedures followed in carrying out the experiment."
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "36",
+                            "text": " Following training, there were 2 experimental days: Treatment 1 and Treatment 2, which weather permitting immediately followed the training day. As on the training day, the feeder "
+                        },
+                        {
+                            "id": "37",
+                            "text": " was removed and replaced "
+                        },
+                        {
+                            "id": "36",
+                            "text": " with the artificial flower. In Treatment 1 "
+                        },
+                        {
+                            "id": "38",
+                            "text": " (low, high, and low) "
+                        },
+                        {
+                            "id": "36",
+                            "text": " , the flower contained 14% sucrose for the first 3 h, 25% sucrose for the next 3 h, and 14% sucrose for the final 3 h. In Treatment 2 "
+                        },
+                        {
+                            "id": "39",
+                            "text": " (high, low, and high) "
+                        },
+                        {
+                            "id": "36",
+                            "text": " , the flower contained 25% sucrose for the first 3 h, 14% sucrose for the next 3 h, and 25% sucrose for the final 3 h. Half the birds received Treatment 1 first and the other half Treatment 2 first. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Paragraph 3 here.",
+                "id": "36"
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "41",
+                        "text": "Paragraph 4: Explanation of the method"
+                    },
+                    {
+                        "id": "42",
+                        "text": "Explains how the results were calculated. This includes information on how the calculations were obtained."
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "43",
+                            "text": " The volume drunk and the timing and duration of each of a bird's visit[s] to the flower were recorded during both training and treatment days. "
+                        },
+                        {
+                            "id": "44",
+                            "text": " Volumes were measured by refilling the syringe cap using a repeating pipette accurate to 10 μl. Duration of a feeding bout was the interval between the first insertion of the bird's bill into the flower and the last withdrawal from the flower before flying away. "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "43",
+                            "text": " (Bacon et al., 2011) For the full reference, see "
+                        },
+                        {
+                            "id": "43",
+                            "text": "<a href=\"/references\">References</a>"
+                        },
+                        {
+                            "id": "43",
+                            "text": "."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Paragraph 4 here.",
+                "id": "43"
+            }
+        }
+    ],
+    "steps": [
+        {
+            "label": "What is a method section?",
+            "desc": [
+                "Reporting on the method used in undertaking your research is a crucial part of the research writing process. A detailed step-by-step explanation allows other researchers to replicate your experiment."
+            ],
+            "showParas": [],
+            "filters": []
+        },
+        {
+            "label": "What is its purpose?",
+            "desc": [
+                "Method sections in dissertations in any discipline will usually have a combination of three purposes. A method section aims to:",
+                "1. describe the data and method used;",
+                "2. explain how the data were collected and how the method(s) were employed in the research; and",
+                "3. justify why the data were selected and why particular method(s) were chosen.",
+                "Method sections in different disciplines differ in terms of the emphasis they place on the different purposes. Science disciplines tend to favour a more concise description and explanation of the data and method used. Whatever the discipline, the primary goal of the method section is to convey to the readers the validity of the research you have undertaken."
+            ],
+            "showParas": [],
+            "filters": []
+        },
+        {
+            "label": "What are its main features?",
+            "desc": [
+                "A key feature of the method section in the sciences is the need for a description of the experiment which typically details the procedures followed in the experiment and the ways in which the results were calculated."
+            ],
+            "showParas": [],
+            "filters": []
+        },
+        {
+            "label": "How is it structured?",
+            "desc": [
+                "(After Lim, 2006)",
+                "This is a method section from a research article published in the journal ‘Behavioral Ecology’, investigating the feeding preferences of hummingbirds."
+            ],
+            "showParas": [
+                "6",
+                "7",
+                "21",
+                "22",
+                "34",
+                "35",
+                "41",
+                "42"
+            ],
+            "filters": []
+        },
+        {
+            "label": "Look at Paragraph 1: the data",
+            "desc": [
+                "Here the writer describes the data:"
+            ],
+            "showParas": [
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "size",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "9"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "location",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "10"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Look at Paragraph 2: the experiment",
+            "desc": [
+                "The writer explains how the experiment was set up:"
+            ],
+            "showParas": [
+                "21",
+                "22",
+                "23",
+                "24",
+                "26",
+                "25"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "the materials used",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "24"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "how the materials were prepared",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "26"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "the duration of the experiment",
+                    "checked": false,
+                    "highlightClass": "highlightColor3",
+                    "highlightPara": [
+                        "25"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Look at Paragraph 3: the procedure",
+            "desc": [
+                "This describes the procedures followed in carrying out the experiment step by step and in chronological order."
+            ],
+            "showParas": [
+                "34",
+                "35",
+                "36"
+            ],
+            "filters": []
+        },
+        {
+            "label": "Look at Paragraph 4: the method",
+            "desc": [
+                "This explains how the results were calculated."
+            ],
+            "showParas": [
+                "41",
+                "42",
+                "43",
+                "44"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "It includes information on how the calculations were obtained.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "44"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Show me useful language",
+            "desc": [],
+            "showParas": [
+                "12",
+                "28",
+                "36",
+                "43",
+                "13",
+                "15",
+                "30",
+                "17",
+                "18",
+                "37",
+                "14",
+                "16",
+                "19",
+                "29",
+                "31",
+                "32",
+                "38",
+                "39"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "Complex noun phrases are used for concise description.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "13",
+                        "15",
+                        "30"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "A series of verbs describes actions that follow one after the other.",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "17",
+                        "18",
+                        "37"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "Additional information, such as measurements or timing, is provided in parentheses.",
+                    "checked": false,
+                    "highlightClass": "highlightColor3",
+                    "highlightPara": [
+                        "14",
+                        "16",
+                        "19",
+                        "29",
+                        "31",
+                        "32",
+                        "38",
+                        "39"
+                    ]
+                }
+            ]
+        }
+    ],
+    "practice_rubric": [
+        {
+            "header": "Before you start",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Consider who is going to read your dissertation and what they will need to know about your research.",
+                    "tellMeMore": "method_exp1.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Think about the data and data collection and what you need to say.",
+                    "tellMeMore": "method_exp2.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Think about the method and what you need to say.",
+                    "tellMeMore": "method_exp3.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Make some notes and organize them into the plan.",
+                    "tellMeMore": "method_exp4.xml"
+                }
+            ]
+        },
+        {
+            "header": "Choose your language",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Use academic language that is concise.",
+                    "tellMeMore": "method_exp5.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Use academic language that is formal and precise.",
+                    "tellMeMore": "method_exp6.xml"
+                }
+            ]
+        },
+        {
+            "header": "While you are writing",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Language Bank: methods",
+                    "tellMeMore": "method_exp7.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Grammar Focus: methods",
+                    "tellMeMore": "method_exp8.xml"
+                }
+            ]
+        },
+        {
+            "header": "Check",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Have I described the size, location and characteristics of my data?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I explained the technique used to collect the data?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I described the design of the experiment?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I explained how I arrived at the results?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I justified the experimental design and method?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I used the passive voice to describe what was done and how it was done?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I used parentheses appropriately?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I checked vocabulary, grammar, spelling and punctuation?",
+                    "tellMeMore": ""
+                }
+            ]
+        }
+    ]
+}

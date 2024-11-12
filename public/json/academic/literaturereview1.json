@@ -1,0 +1,999 @@
+{
+    "title": "Writing a Literature Review 1: physical and life sciences",
+    "paragraphs": [
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "2",
+                        "text": "Writing a Literature Review 1: physical and life sciences"
+                    },
+                    {
+                        "id": "3",
+                        "text": "How to write an effective review of literature describing the existing work that has been done on a research topic"
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [],
+                "placeHolder": "",
+                "id": ""
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "5",
+                        "text": "Paragraph 1"
+                    },
+                    {
+                        "id": "6",
+                        "text": "A general statement about the broad topic to establish that the research is important"
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "8",
+                            "text": " The Atlantic cod, ‘Gadus morhua’, is both ecologically and economically important, and it has sustained commercial fisheries on both the east and west sides of the North Atlantic. "
+                        },
+                        {
+                            "id": "7",
+                            "text": " However, overexploitation has led to declines and stock collapses "
+                        },
+                        {
+                            "id": "9",
+                            "text": " (Myers et al., 1996) "
+                        },
+                        {
+                            "id": "7",
+                            "text": " , and in many regions, cod are regarded as threatened "
+                        },
+                        {
+                            "id": "10",
+                            "text": " (Jonzen et al., 2002; Svedang and Bardon, 2003; Trzcinski et al., 2006; Arnason et al., 2009) "
+                        },
+                        {
+                            "id": "7",
+                            "text": " . Declines in abundance, along with an established consumer market, have provided a catalyst stimulating widespread interest in the production of this species by aquaculture. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Paragraph 1 here.",
+                "id": "7"
+            }
+        },
+        {
+            "structure": {
+                "para": []
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "12",
+                            "text": " The Atlantic cod, ‘Gadus morhua’, is both ecologically and economically important, and it has sustained commercial fisheries on both the east and west sides of the North Atlantic. However, overexploitation "
+                        },
+                        {
+                            "id": "13",
+                            "text": " has led "
+                        },
+                        {
+                            "id": "12",
+                            "text": " to declines and stock collapses "
+                        },
+                        {
+                            "id": "14",
+                            "text": " (Myers et al., 1996) "
+                        },
+                        {
+                            "id": "12",
+                            "text": " , and in many regions, cod "
+                        },
+                        {
+                            "id": "15",
+                            "text": " are regarded as "
+                        },
+                        {
+                            "id": "12",
+                            "text": " threatened (Jonzen et al., 2002; Svedang and Bardon, 2003; Trzcinski et al., 2006; Arnason et al., 2009). Declines in abundance, along with an established consumer market, "
+                        },
+                        {
+                            "id": "16",
+                            "text": " have provided "
+                        },
+                        {
+                            "id": "12",
+                            "text": " a catalyst stimulating widespread interest in the production of this species by aquaculture. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Paragraph 1 here.",
+                "id": "12",
+                "duplicate": true
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "18",
+                        "text": "Paragraph 2"
+                    },
+                    {
+                        "id": "19",
+                        "text": "More specific aspects of the research topic"
+                    },
+                    {
+                        "id": "20",
+                        "text": "TIP As it develops, your review should cover more specific aspects.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "21",
+                            "text": " Important advances in cod aquaculture have been made "
+                        },
+                        {
+                            "id": "70",
+                            "text": " in recent years "
+                        },
+                        {
+                            "id": "22",
+                            "text": " (Rosenlund and Halldorsson, 2007) "
+                        },
+                        {
+                            "id": "21",
+                            "text": " . For example, heritability estimates of production-related traits "
+                        },
+                        {
+                            "id": "23",
+                            "text": " have been published "
+                        },
+                        {
+                            "id": "24",
+                            "text": " (Gjerde et al., 2004; Kolstad et al., 2006; Odegard et al., 2009) "
+                        },
+                        {
+                            "id": "21",
+                            "text": " , and commercial broodstocks "
+                        },
+                        {
+                            "id": "25",
+                            "text": " have been established "
+                        },
+                        {
+                            "id": "21",
+                            "text": " from wild captured fish. … [Two sentences omitted.] Genetic gains through selective breeding programmes will generate fish capable of enhanced productivity in the aquaculture environment "
+                        },
+                        {
+                            "id": "26",
+                            "text": " (Glover et al., 2009a) "
+                        },
+                        {
+                            "id": "21",
+                            "text": " , but it is very likely that domestication will be at the expense of fitness in the natural environment, as has been observed in the Atlantic salmon "
+                        },
+                        {
+                            "id": "27",
+                            "text": " (‘Salmo salar’; McGinnity et al., 1997, 2003; Fleming et al., 2000) "
+                        },
+                        {
+                            "id": "21",
+                            "text": "."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Paragraph 2 here.",
+                "id": "21"
+            }
+        },
+        {
+            "structure": {
+                "para": []
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "29",
+                            "text": " Important advances in cod aquaculture have been made in recent years "
+                        },
+                        {
+                            "id": "30",
+                            "text": " (Rosenlund and Halldorsson, 2007) "
+                        },
+                        {
+                            "id": "29",
+                            "text": " . For example, heritability estimates of production-related traits "
+                        },
+                        {
+                            "id": "31",
+                            "text": " have been published "
+                        },
+                        {
+                            "id": "29",
+                            "text": " (Gjerde et al., 2004; Kolstad et al., 2006; Odegard et al., 2009), and commercial broodstocks have been established from wild captured fish. … [Two sentences omitted.] Genetic gains through selective breeding programmes will generate fish capable of enhanced productivity in the aquaculture environment "
+                        },
+                        {
+                            "id": "32",
+                            "text": " (Glover et al., 2009a) "
+                        },
+                        {
+                            "id": "29",
+                            "text": " , but "
+                        },
+                        {
+                            "id": "33",
+                            "text": " it is very likely "
+                        },
+                        {
+                            "id": "29",
+                            "text": " that domestication will be at the expense of fitness in the natural environment, as "
+                        },
+                        {
+                            "id": "34",
+                            "text": " has been observed "
+                        },
+                        {
+                            "id": "29",
+                            "text": " in the Atlantic salmon (‘Salmo salar’; McGinnity et al., 1997, 2003; Fleming et al., 2000). "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Paragraph 2 here.",
+                "id": "29",
+                "duplicate": true
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "36",
+                        "text": "Paragraph 3"
+                    },
+                    {
+                        "id": "37",
+                        "text": "Further specific aspects of the topic"
+                    },
+                    {
+                        "id": "38",
+                        "text": "TIP The review becomes more specific still.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "39",
+                            "text": " A big challenge with most forms of aquaculture is containment. … [Two sentences omitted.] Cod have a greater frequency of escaping from fish farms than salmonids "
+                        },
+                        {
+                            "id": "67",
+                            "text": " (Moe et al., 2007) "
+                        },
+                        {
+                            "id": "39",
+                            "text": " , and behavioural studies "
+                        },
+                        {
+                            "id": "68",
+                            "text": " have indicated "
+                        },
+                        {
+                            "id": "39",
+                            "text": " that escapees may mix with wild cod (Uglem et al., 2008), providing opportunity for a range of ecological and genetic interactions (Bekkevold et al., 2006). Moreover, farmed cod may be able to interact with wild populations without physically escaping, when spawning in their cages "
+                        },
+                        {
+                            "id": "69",
+                            "text": " (Jørstad et al., 2008) "
+                        },
+                        {
+                            "id": "39",
+                            "text": " . Consequently, potential ecological and genetic interactions between wild and farmed cod are of concern. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Paragraph 3 here.",
+                "id": "39"
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "41",
+                        "text": "Paragraph 4"
+                    },
+                    {
+                        "id": "42",
+                        "text": "A gap in the existing research is shown."
+                    },
+                    {
+                        "id": "43",
+                        "text": "TIP This shows the need for your study.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "45",
+                            "text": " Knowledge of "
+                        },
+                        {
+                            "id": "44",
+                            "text": " the genetic interactions between wild and farmed marine fish "
+                        },
+                        {
+                            "id": "65",
+                            "text": " is sparse "
+                        },
+                        {
+                            "id": "44",
+                            "text": " , but "
+                        },
+                        {
+                            "id": "46",
+                            "text": " several attempts at "
+                        },
+                        {
+                            "id": "44",
+                            "text": " quantifying interactions between farmed and wild Atlantic salmon "
+                        },
+                        {
+                            "id": "47",
+                            "text": " have been published (Crozier, 1993, 2000; Clifford et al., 1998a, b; Skaala et al., 2006) "
+                        },
+                        {
+                            "id": "44",
+                            "text": " . These studies range from the quantification of gene flow from single escapement events affecting specific wild populations, to more ambitious investigations quantifying genetic changes in historical and contemporary samples of wild populations that have been subject to differing numbers of farmed escapees over time. "
+                        },
+                        {
+                            "id": "48",
+                            "text": " Both approaches have demonstrated "
+                        },
+                        {
+                            "id": "44",
+                            "text": " genetic changes in wild populations, "
+                        },
+                        {
+                            "id": "49",
+                            "text": " although "
+                        },
+                        {
+                            "id": "44",
+                            "text": " the full extent of introgression and the long-term implications for conservation "
+                        },
+                        {
+                            "id": "50",
+                            "text": " remain open to debate "
+                        },
+                        {
+                            "id": "44",
+                            "text": "."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Paragraph 4 here.",
+                "id": "44"
+            }
+        },
+        {
+            "structure": {
+                "para": []
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "52",
+                            "text": " Knowledge of the genetic interactions between wild and farmed marine fish is sparse, but several attempts at quantifying interactions between farmed and wild Atlantic salmon "
+                        },
+                        {
+                            "id": "53",
+                            "text": " have been published "
+                        },
+                        {
+                            "id": "52",
+                            "text": " (Crozier, 1993, 2000; Clifford et al., 1998a, b; Skaala et al., 2006). These studies range from the quantification of gene flow from single escapement events affecting specific wild populations, to more ambitious investigations quantifying genetic changes in historical and contemporary samples of wild populations that have been subject to differing numbers of farmed escapees over time. Both approaches "
+                        },
+                        {
+                            "id": "54",
+                            "text": " have demonstrated "
+                        },
+                        {
+                            "id": "52",
+                            "text": " genetic changes in wild populations, although the full extent of introgression and the long-term implications for conservation "
+                        },
+                        {
+                            "id": "80",
+                            "text": " remain "
+                        },
+                        {
+                            "id": "52",
+                            "text": " open to debate. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Paragraph 4 here.",
+                "id": "52",
+                "duplicate": true
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "56",
+                        "text": "Paragraph 5"
+                    },
+                    {
+                        "id": "57",
+                        "text": "A further gap in the research is shown and the aim of the current study is stated."
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "58",
+                            "text": " Genetic studies of wild cod have revealed considerable differentiation among populations over varying geographic ranges "
+                        },
+                        {
+                            "id": "59",
+                            "text": " (Frydenberg et al., 1965; Dahle and Jørstad, 1993; Knutsen et al., 2003; Pampoulie et al., 2006; Jorde et al., 2007; O'Leary et al., 2007; Westgaard and Fevolden, 2007; Nielsen et al., 2009) "
+                        },
+                        {
+                            "id": "58",
+                            "text": "."
+                        },
+                        {
+                            "id": "66",
+                            "text": " However, except for a study of genetic diversity within and among farmed cod reared in sea cages (Glover et al., 2010a), and a study of spawning in sea cages (Jørstad et al., 2008), no genetic studies have addressed the identification of farmed-escaped cod in the wild. "
+                        },
+                        {
+                            "id": "60",
+                            "text": " Consequently, the aim here was to evaluate the potential for identifying farmed-escaped cod in the wild … "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "58",
+                            "text": " (Glover, Dahle and Jørstad, 2011) For the full reference, see "
+                        },
+                        {
+                            "id": "58",
+                            "text": "<a href=\"/references\">References</a>"
+                        },
+                        {
+                            "id": "58",
+                            "text": "."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Paragraph 5 here.",
+                "id": "58"
+            }
+        },
+        {
+            "structure": {
+                "para": []
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "62",
+                            "text": " Genetic studies of wild cod "
+                        },
+                        {
+                            "id": "63",
+                            "text": " have revealed "
+                        },
+                        {
+                            "id": "62",
+                            "text": " considerable differentiation among populations over varying geographic ranges (Frydenberg et al., 1965; Dahle and Jørstad, 1993; Knutsen et al., 2003; Pampoulie et al., 2006; Jorde et al., 2007; O'Leary et al., 2007; Westgaard and Fevolden, 2007; Nielsen et al., 2009). However, except for a study of genetic diversity within and among farmed cod reared in sea cages (Glover et al., 2010a), and a study of spawning in sea cages (Jørstad et al., 2008), no genetic studies "
+                        },
+                        {
+                            "id": "64",
+                            "text": " have addressed "
+                        },
+                        {
+                            "id": "62",
+                            "text": " the identification of farmed-escaped cod in the wild. Consequently, the aim here was to evaluate the potential for identifying farmed-escaped cod in the wild … "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "62",
+                            "text": " (Glover, Dahle and Jørstad, 2011) For the full reference, see "
+                        },
+                        {
+                            "id": "62",
+                            "text": "<a href=\"/references\">References</a>"
+                        },
+                        {
+                            "id": "62",
+                            "text": "."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Paragraph 5 here.",
+                "id": "62",
+                "duplicate": true
+            }
+        }
+    ],
+    "steps": [
+        {
+            "label": "What is a literature review?",
+            "desc": [
+                "A literature review is a section in a piece of research writing which describes the existing work that has been done on the writer's research topic and related areas."
+            ],
+            "showParas": [],
+            "filters": []
+        },
+        {
+            "label": "What is its purpose?",
+            "desc": [
+                "The purpose of the literature review is to show the reader how the new research fits into the field and how it builds on and extends what is already known about the topic. By describing the research already done, the writer can point out what has not been done, and demonstrate the need for the new research. In this sense, the review helps accomplish the objectives (‘moves’ and ‘steps’) in the introduction. In fact, the literature review may be part of the introduction, although in some research texts—particularly dissertations—it may occupy a separate section."
+            ],
+            "showParas": [],
+            "filters": []
+        },
+        {
+            "label": "How is it organized?",
+            "desc": [
+                "Literature reviews are often organized according to a general-to-specific pattern, starting with claims about the research area in broad terms and moving on to specific areas, problems or unanswered questions within it."
+            ],
+            "showParas": [],
+            "filters": []
+        },
+        {
+            "label": "How is it structured?",
+            "desc": [
+                "The Literature Review is often written in paragraphs which move from a general statement about the broad research topic, through gradually more specific aspects of the research. A gap in the existing research is then shown, leading to a statement of the aim of the current study.",
+                "The following extract from a research article published in the ‘ICES Journal of Marine Science’ uses a review of the literature to establish the need for a genetic study of farmed and wild Atlantic cod."
+            ],
+            "showParas": [
+                "5",
+                "6",
+                "18",
+                "19",
+                "36",
+                "37",
+                "41",
+                "42",
+                "56",
+                "57"
+            ],
+            "filters": []
+        },
+        {
+            "label": "Look at Paragraph 1: general",
+            "desc": [],
+            "showParas": [
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "The literature review begins with a general statement about the broad topic in the first sentence.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "8"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "The reference to Myers helps establish that the research topic is important and has real-life implications.",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "9"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "Notice how the text makes great use of non-integral references. This is common in the sciences.",
+                    "checked": false,
+                    "highlightClass": "highlightColor3",
+                    "highlightPara": [
+                        "10"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Look at Paragraph 2: specific",
+            "desc": [
+                "As it develops, the review covers more specific aspects of the research topic, i.e. the advances in cod aquaculture (first sentence).",
+                "Language showing time relationships and changing trends in a research area is common:"
+            ],
+            "showParas": [
+                "18",
+                "19",
+                "21",
+                "70",
+                "23",
+                "25",
+                "22",
+                "24",
+                "26",
+                "27"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "time relationships",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "70"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "changing trends in a research area",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "23",
+                        "25"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "Notice how the text makes great use of non-integral references. This is common in the sciences.",
+                    "checked": false,
+                    "highlightClass": "highlightColor3",
+                    "highlightPara": [
+                        "22",
+                        "24",
+                        "26",
+                        "27"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Look at Paragraph 3: more specific",
+            "desc": [
+                "By moving to problems with aquaculture, the review becomes more specific still."
+            ],
+            "showParas": [
+                "36",
+                "37",
+                "39"
+            ],
+            "filters": []
+        },
+        {
+            "label": "Look at Paragraph 4: research gap",
+            "desc": [
+                "By showing a gap in the existing research, i.e. a question which little or no research has addressed, the authors can demonstrate the need for their study."
+            ],
+            "showParas": [
+                "41",
+                "42",
+                "44",
+                "45",
+                "65",
+                "46",
+                "47",
+                "48",
+                "49",
+                "50"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "The writer first draws attention to a lack of knowledge.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "45",
+                        "65"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "Then, the studies that do exist are reviewed.",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "46",
+                        "47",
+                        "48",
+                        "49",
+                        "50"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Look at Paragraph 5: research aim",
+            "desc": [
+                "This paragraph leads to the statement of the aim of the current study."
+            ],
+            "showParas": [
+                "56",
+                "57",
+                "58",
+                "66",
+                "60",
+                "59"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "A further gap in the research is identified here.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "66"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "The aim of the current study is stated.",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "60"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "To show that an idea is widely accepted or clearly demonstrated, it can be useful to cite several sources.",
+                    "checked": false,
+                    "highlightClass": "highlightColor3",
+                    "highlightPara": [
+                        "59"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Show me useful language",
+            "desc": [],
+            "showParas": [
+                "12",
+                "29",
+                "39",
+                "52",
+                "62",
+                "31",
+                "34",
+                "15",
+                "33",
+                "80",
+                "13",
+                "16",
+                "68",
+                "53",
+                "54",
+                "63",
+                "64",
+                "14",
+                "30",
+                "32",
+                "67",
+                "69"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "Non-integral references make passive verb forms especially likely.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "31",
+                        "34"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "The present tense emphasizes sources cited as currently available and currently relevant.",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "15",
+                        "33",
+                        "80"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "The present perfect tense shows that studies have taken place over a period of time, and may suggest that they are still relevant today.",
+                    "checked": false,
+                    "highlightClass": "highlightColor3",
+                    "highlightPara": [
+                        "13",
+                        "16",
+                        "68",
+                        "53",
+                        "54",
+                        "63",
+                        "64"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "Sometimes, no verb is used to introduce a reference; an idea is simply stated, together with a reference to the work which shows that the idea is correct.",
+                    "checked": false,
+                    "highlightClass": "highlightColor4",
+                    "highlightPara": [
+                        "14",
+                        "30",
+                        "32",
+                        "67",
+                        "69"
+                    ]
+                }
+            ]
+        }
+    ],
+    "practice_rubric": [
+        {
+            "header": "Before you start",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Read widely, so that you are familiar with the existing research related to your topic.",
+                    "tellMeMore": "lit_rev1.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Think about the purpose of your citations.",
+                    "tellMeMore": "lit_rev2.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Have a clear idea of how each area you raise in your literature review is connected to your own research.",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Show the relationships between works, e.g., that one builds upon another, or identifies problems with an earlier work, etc.",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Use the review to show your reader the gap in the existing literature which your work will fill.",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Check the appropriate method of citation for your discipline. The model text uses the author-date system.",
+                    "tellMeMore": "writing_from_sources8.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Make some notes and organize them into the plan.",
+                    "tellMeMore": "lit_rev3.xml"
+                }
+            ]
+        },
+        {
+            "header": "Choose your language",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Use academic language.",
+                    "tellMeMore": "academic_language.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Language Bank: research verbs",
+                    "tellMeMore": "lit_rev_ps1.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Language Bank: reporting verbs",
+                    "tellMeMore": "lit_rev_ps2.xml"
+                }
+            ]
+        },
+        {
+            "header": "While you are writing",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Non-integral citations",
+                    "tellMeMore": "lit_rev_ps10.xml"
+                }
+            ]
+        },
+        {
+            "header": "Check",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Have I read widely enough on the existing research related to my topic?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I shown how each area I raise in my literature review is connected to my own research?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I shown the relationships between works?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I shown the gap in the existing literature which my work will fill?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I organized my review according to a general-to-specific pattern?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I used research verbs and reporting verbs appropriately?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I quoted sources in the appropriate way for my field?",
+                    "tellMeMore": ""
+                }
+            ]
+        }
+    ]
+}

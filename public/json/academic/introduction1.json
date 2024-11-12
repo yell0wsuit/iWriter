@@ -1,0 +1,1110 @@
+{
+    "title": "Introduction to a dissertation or research report: physical or life sciences",
+    "paragraphs": [
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "2",
+                        "text": "Writing an Introduction: physical and life sciences"
+                    },
+                    {
+                        "id": "3",
+                        "text": "How to write an effective introduction to your work"
+                    },
+                    {
+                        "id": "4",
+                        "text": "TIP The three-move structure will help you write your introduction. Choose only the steps that are appropriate for your study. Moves and steps can be any length from a few words to a whole section of the introduction.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [],
+                "placeHolder": "",
+                "id": ""
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "93",
+                        "text": "Move 1: Establishing a territory"
+                    },
+                    {
+                        "id": "94",
+                        "text": "Move 1 gives the general background to your study."
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [],
+                "placeHolder": "",
+                "id": ""
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "6",
+                        "text": "Step 1"
+                    },
+                    {
+                        "id": "7",
+                        "text": "1. Describe why your general study area is relevant or important in the field and/or the world."
+                    },
+                    {
+                        "id": "8",
+                        "text": "TIP Use references to support your claims.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "10",
+                            "text": " More than one billion people currently lack access to low-cost drinking water and more than 2.3 billion people live in water-stressed areas. "
+                        },
+                        {
+                            "id": "11",
+                            "text": " Thus, it is of paramount importance to develop efficient and cost-effective water purification methods especially for the removal of bacteria and viruses "
+                        },
+                        {
+                            "id": "12",
+                            "text": " [1–10] "
+                        },
+                        {
+                            "id": "9",
+                            "text": "."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Step 1 here.",
+                "id": "9"
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "14",
+                        "text": "Steps 2 and 3"
+                    },
+                    {
+                        "id": "15",
+                        "text": "2. Make generalizations about your area; give background information or examples. Each generalization becomes narrower until you focus on your own specific topic.\n</br>3. Review previous research."
+                    },
+                    {
+                        "id": "16",
+                        "text": "TIP Use references to support your claims.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "18",
+                            "text": " There are many water purification methods, including filtration (size separation), adsorption, chemical coagulation, photodegradation, biodegradation, distillation and active sludge "
+                        },
+                        {
+                            "id": "17",
+                            "text": " , "
+                        },
+                        {
+                            "id": "19",
+                            "text": " but filtration is the most versatile chemical-free method, and it is extremely cost-effective, time- and energy-saving "
+                        },
+                        {
+                            "id": "20",
+                            "text": " [11,12] "
+                        },
+                        {
+                            "id": "17",
+                            "text": "."
+                        },
+                        {
+                            "id": "21",
+                            "text": " Filtration systems have considerably improved in the past decade and many of them possess complex structures, mechanisms and materials such as porous media, polymer membranes … "
+                        },
+                        {
+                            "id": "22",
+                            "text": " The filtration processes are categorized mainly by the average size of the pores in the membranes, which include microfiltration (MF), ultrafiltration (UF), nanofiltration and reverse osmosis. "
+                        },
+                        {
+                            "id": "23",
+                            "text": " MF filters have relatively large pores and thus yield a high flux rate compared with UF filters with smaller pores (10–100 nm) "
+                        },
+                        {
+                            "id": "24",
+                            "text": " [13,14] "
+                        },
+                        {
+                            "id": "17",
+                            "text": "."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Steps 2 and 3 here.",
+                "id": "17"
+            }
+        },
+        {
+            "structure": {
+                "para": []
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "26",
+                            "text": " More than one billion people currently "
+                        },
+                        {
+                            "id": "27",
+                            "text": " lack "
+                        },
+                        {
+                            "id": "26",
+                            "text": " access to low-cost drinking water and more than 2.3 billion people "
+                        },
+                        {
+                            "id": "28",
+                            "text": " live "
+                        },
+                        {
+                            "id": "26",
+                            "text": " in water-stressed areas. Thus, it is of paramount importance to develop efficient and cost-effective water purification methods especially for the removal of bacteria and viruses [1–10]. There are many water purification methods, including filtration (size separation), adsorption, chemical coagulation, photodegradation, biodegradation, distillation and active sludge, but filtration "
+                        },
+                        {
+                            "id": "29",
+                            "text": " is "
+                        },
+                        {
+                            "id": "26",
+                            "text": " the most versatile chemical-free method, and it "
+                        },
+                        {
+                            "id": "30",
+                            "text": " is "
+                        },
+                        {
+                            "id": "26",
+                            "text": " extremely cost-effective, time- and energy-saving [11,12]. Filtration systems have considerably improved in the past decade and many of them "
+                        },
+                        {
+                            "id": "31",
+                            "text": " possess "
+                        },
+                        {
+                            "id": "26",
+                            "text": " complex structures, mechanisms and materials such as porous media, polymer membranes … The filtration processes "
+                        },
+                        {
+                            "id": "32",
+                            "text": " are categorized "
+                        },
+                        {
+                            "id": "26",
+                            "text": " mainly by the average size of the pores in the membranes, which "
+                        },
+                        {
+                            "id": "33",
+                            "text": " include "
+                        },
+                        {
+                            "id": "26",
+                            "text": " microfiltration (MF), ultrafiltration (UF), nanofiltration and reverse osmosis. MF filters have relatively large pores and thus yield a high flux rate compared with UF filters with smaller pores (10–100nm) [13,14]. An MF membrane with a pore size ranging from 0.1 to 10 μm nominally "
+                        },
+                        {
+                            "id": "46",
+                            "text": " is "
+                        },
+                        {
+                            "id": "26",
+                            "text": " capable of retaining microbe-like bacteria larger than 0.2 μm in diameter, but this "
+                        },
+                        {
+                            "id": "47",
+                            "text": " is "
+                        },
+                        {
+                            "id": "26",
+                            "text": " not suitable for removing viruses, which "
+                        },
+                        {
+                            "id": "48",
+                            "text": " are "
+                        },
+                        {
+                            "id": "26",
+                            "text": " often smaller in size by a factor of 10 [15]. "
+                        }
+                    ]
+                ],
+                "placeHolder": "",
+                "id": "26",
+                "duplicate": true
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "35",
+                        "text": "Move 2: Establishing a Niche"
+                    },
+                    {
+                        "id": "36",
+                        "text": "Move 2 shows that there is a need for your study, often by establishing that there is a gap or problem in previous research."
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [],
+                "placeHolder": "",
+                "id": ""
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "38",
+                        "text": "Steps 1, 2 and 3"
+                    },
+                    {
+                        "id": "39",
+                        "text": "1. Indicate a gap, problem or need in previous research.\n</br>2. Indicate a problem or need in the world.\n</br>3. Continue or extend the work of other researchers."
+                    },
+                    {
+                        "id": "40",
+                        "text": "TIP Use Step 1 and/or Step 2. Step 3 is optional. Use references to support your claims.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "41",
+                            "text": " An MF membrane with a pore size ranging from 0.1 to 10 μm nominally is capable of retaining microbe-like bacteria larger than 0.2 μm in diameter, "
+                        },
+                        {
+                            "id": "42",
+                            "text": " but this is not suitable for removing viruses, which are often smaller in size by a factor of 10 "
+                        },
+                        {
+                            "id": "43",
+                            "text": " [15] "
+                        },
+                        {
+                            "id": "41",
+                            "text": "."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Move 2 here.",
+                "id": "41"
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "50",
+                        "text": "Move 3: Occupying the niche"
+                    },
+                    {
+                        "id": "51",
+                        "text": "Move 3 gives details of your study, showing how it fills the gap or deals with the problem."
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [],
+                "placeHolder": "",
+                "id": ""
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "53",
+                        "text": "Steps 1 and 2"
+                    },
+                    {
+                        "id": "54",
+                        "text": "1. Present your research and state its purposes, aims or objectives.\n</br>2. State your research questions or hypotheses."
+                    },
+                    {
+                        "id": "55",
+                        "text": "Step 2 is optional.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "57",
+                            "text": " In this study, we report a promising method for producing porous membranes that are based on MF but have capabilities for retaining viruses. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Steps 1 and 2 here.",
+                "id": "56"
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "59",
+                        "text": "Steps 3 and 4"
+                    },
+                    {
+                        "id": "60",
+                        "text": "3. Describe briefly the work you carried out.\n</br>4. Describe briefly the methods, materials or subjects you used."
+                    },
+                    {
+                        "id": "61",
+                        "text": "TIP Steps 3 and 4 can come in either order.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "63",
+                            "text": " The membranes are composed of ultra-fine cellulose nanofibers (UFCNs) (5–10 nm in diameter) derived from safe, inexpensive and sustainable nanomaterials such as wood pulp. The cellulose nanofibers were infused into the submicron-sized fibrous scaffolds (100–300 nm in diameter) fabricated by electrospinning. "
+                        },
+                        {
+                            "id": "64",
+                            "text": " By controlling the processing parameters and material ingredients, we were able to create a composite fibrous membrane structure that has an appropriate pore size to sieve bacteria and a suitable static charge to adsorb viruses. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Steps 3 and 4 here.",
+                "id": "62"
+            }
+        },
+        {
+            "structure": {
+                "para": []
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "67",
+                            "text": " In this study, we report a promising method "
+                        },
+                        {
+                            "id": "66",
+                            "text": " for producing porous membranes that "
+                        },
+                        {
+                            "id": "68",
+                            "text": " are based "
+                        },
+                        {
+                            "id": "66",
+                            "text": " on MF but have capabilities for retaining viruses. The membranes "
+                        },
+                        {
+                            "id": "70",
+                            "text": " are composed "
+                        },
+                        {
+                            "id": "66",
+                            "text": " of ultra-fine cellulose nanofibers (UFCNs) (5–10 nm in diameter) derived from safe, inexpensive and sustainable nanomaterials such as wood pulp. The cellulose nanofibers "
+                        },
+                        {
+                            "id": "71",
+                            "text": " were "
+                        },
+                        {
+                            "id": "66",
+                            "text": " infused into the submicron-sized fibrous scaffolds (100–300 nm in diameter) fabricated by electrospinning. By controlling the processing parameters and material ingredients, we "
+                        },
+                        {
+                            "id": "72",
+                            "text": " were "
+                        },
+                        {
+                            "id": "66",
+                            "text": " able to create a composite fibrous membrane structure that "
+                        },
+                        {
+                            "id": "73",
+                            "text": " has "
+                        },
+                        {
+                            "id": "66",
+                            "text": " an appropriate pore size to sieve bacteria and a suitable static charge to adsorb viruses. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Steps 3 and 4 here.",
+                "id": "66",
+                "duplicate": true
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "75",
+                        "text": "Step 5"
+                    },
+                    {
+                        "id": "76",
+                        "text": "5. Give brief details of your findings or results."
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "78",
+                            "text": " Measurements of the filtration properties indicate that these membranes have a high retention rate in removing bacteria (‘Escherichia coli’, hereafter referred to as ‘E. coli’) and viruses (MS2 bacteriophage) in water, while maintaining high flux permeation. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Step 5 here.",
+                "id": "77"
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "80",
+                        "text": "Steps 6 and 7"
+                    },
+                    {
+                        "id": "81",
+                        "text": "6. Justify your research by showing the significance or contribution of your study.\n</br>7. Describe briefly the organization of your dissertation."
+                    },
+                    {
+                        "id": "82",
+                        "text": "TIP Step 7 is optional, but likely to be included in a full dissertation, where the Introduction is a complete chapter.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "84",
+                            "text": " High-resolution electron microscopy investigations revealed, for the first time, the detailed nanoscale fibrous networks in membranes that are responsible for these superior filtration properties. "
+                        },
+                        {
+                            "id": "85",
+                            "text": " The demonstrated membrane system opens a door to the further development of other nanostructured biomaterials to adsorb water pathogens and contaminants and increases the realization of the much needed inexpensive MF membranes. "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "83",
+                            "text": " (Sato et al., 2011) For the full reference, see "
+                        },
+                        {
+                            "id": "83",
+                            "text": "<a href=\"/references\">References</a>"
+                        },
+                        {
+                            "id": "83",
+                            "text": "."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Steps 6 and 7 here.",
+                "id": "83"
+            }
+        },
+        {
+            "structure": {
+                "para": []
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "88",
+                            "text": " Measurements of the filtration properties indicate that "
+                        },
+                        {
+                            "id": "87",
+                            "text": " these membranes "
+                        },
+                        {
+                            "id": "89",
+                            "text": " have "
+                        },
+                        {
+                            "id": "87",
+                            "text": " a high retention rate in removing bacteria (‘Escherichia coli’, hereafter referred to as ‘E. coli’) and viruses (MS2 bacteriophage) in water, while maintaining high flux permeation. High-resolution electron microscopy investigations revealed, for the first time, the detailed nanoscale fibrous networks in membranes that are responsible for these superior filtration properties. The demonstrated membrane system "
+                        },
+                        {
+                            "id": "90",
+                            "text": " opens "
+                        },
+                        {
+                            "id": "87",
+                            "text": " a door to the further development of other nanostructured biomaterials to adsorb water pathogens and contaminants and "
+                        },
+                        {
+                            "id": "91",
+                            "text": " increases "
+                        },
+                        {
+                            "id": "87",
+                            "text": " the realization of the much needed inexpensive MF membranes. "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "87",
+                            "text": " (Sato et al., 2011) For the full reference, see "
+                        },
+                        {
+                            "id": "87",
+                            "text": "<a href=\"/references\">References</a>"
+                        },
+                        {
+                            "id": "87",
+                            "text": "."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Steps 6 and 7 here.",
+                "id": "87",
+                "duplicate": true
+            }
+        }
+    ],
+    "steps": [
+        {
+            "label": "What is the purpose of the introduction?",
+            "desc": [
+                "The main purpose of an introduction is to situate research within its context, showing how it relates to other research in the field and/or to circumstances in the world."
+            ],
+            "showParas": [],
+            "filters": []
+        },
+        {
+            "label": "Why is it important?",
+            "desc": [
+                "It gives the examiners their first impression of your study and shows your knowledge of the research area. This helps them know what to expect and makes it easier for them to follow the rest of your work."
+            ],
+            "showParas": [],
+            "filters": []
+        },
+        {
+            "label": "How is it structured?",
+            "desc": [
+                "Introductions in all disciplines often consist of a sequence of three moves (Swales and Feak, 2004): (1) Establishing a Territory gives the general background to your study; (2) Establishing a Niche shows that there is a need for your study, often by establishing that there is a gap or problem in previous research; (3) Occupying the Niche gives details of your study, showing how it fills the gap or deals with the problem.",
+                "There are differences between disciplines in the way the moves are typically carried out, so look at dissertations in your field to see exactly how it is done."
+            ],
+            "showParas": [
+                "93",
+                "94",
+                "6",
+                "7",
+                "14",
+                "15",
+                "35",
+                "36",
+                "38",
+                "39",
+                "50",
+                "51",
+                "53",
+                "54",
+                "59",
+                "60",
+                "75",
+                "76",
+                "80",
+                "81"
+            ],
+            "filters": []
+        },
+        {
+            "label": "Look at Paragraph 1, Move 1",
+            "desc": [
+                "The model text is an extract from an introduction to a research article published in the ‘Journal of Electron Microscopy’. It describes a new form of water purification.",
+                "Step 1. The writer:",
+                "Step 2. The writer narrows down the focus, until he/she reaches the specific focus of this study.",
+                "The writer:"
+            ],
+            "showParas": [
+                "93",
+                "94",
+                "6",
+                "7",
+                "9",
+                "14",
+                "15",
+                "17",
+                "10",
+                "11",
+                "18",
+                "19",
+                "22",
+                "21",
+                "23",
+                "12",
+                "20",
+                "24"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "gives background and describes an important world problem",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "10"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "claims that the general study area (water purification methods) is important and relevant to the problem",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "11"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "makes a generalization about the study area and gives examples",
+                    "checked": false,
+                    "highlightClass": "highlightColor3",
+                    "highlightPara": [
+                        "18"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "narrows down the general area to a specific topic (filtration). It claims that filtration is the best method (implies that it is worth studying)",
+                    "checked": false,
+                    "highlightClass": "highlightColor4",
+                    "highlightPara": [
+                        "19",
+                        "22"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "makes generalizations about this topic and gives examples and details",
+                    "checked": false,
+                    "highlightClass": "highlightColor5",
+                    "highlightPara": [
+                        "21"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "narrows down the topic to a specific subtopic (MF membranes) and claims that these membranes are effective in some cases",
+                    "checked": false,
+                    "highlightClass": "highlightColor6",
+                    "highlightPara": [
+                        "23"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "supports all the claims by referring to the literature",
+                    "checked": false,
+                    "highlightClass": "highlightColor7",
+                    "highlightPara": [
+                        "12",
+                        "20",
+                        "24"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Look at Paragraph 1, Move 2",
+            "desc": [
+                "The final sentence of the first paragraph establishes the need for this study. Notice that the writer uses only Step 2."
+            ],
+            "showParas": [
+                "35",
+                "36",
+                "38",
+                "39",
+                "41",
+                "42",
+                "43"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "The writer indicates a problem related to the subtopic.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "42"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "The writer supports the claim by referring to the literature.",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "43"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Look at Paragraph 2, Move 3",
+            "desc": [
+                "This paragraph demonstrates how this study addresses the problem identified in the first paragraph."
+            ],
+            "showParas": [
+                "50",
+                "51",
+                "53",
+                "54",
+                "56",
+                "59",
+                "60",
+                "62",
+                "57",
+                "63",
+                "64"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "The writer presents the research and claims that it addresses the problem.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "57"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "The work carried out is described.",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "63"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "The method is explained.",
+                    "checked": false,
+                    "highlightClass": "highlightColor3",
+                    "highlightPara": [
+                        "64"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Look at Paragraph 3, Move 3 cont'd.",
+            "desc": [],
+            "showParas": [
+                "50",
+                "75",
+                "76",
+                "77",
+                "80",
+                "81",
+                "83",
+                "78",
+                "84",
+                "85"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "The writer describes the results and product of the research.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "78"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "The writer explains the significance of the research.",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "84"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "Possibilities for further development are suggested.",
+                    "checked": false,
+                    "highlightClass": "highlightColor3",
+                    "highlightPara": [
+                        "85"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Show me useful language",
+            "desc": [],
+            "showParas": [
+                "26",
+                "45",
+                "66",
+                "87",
+                "27",
+                "28",
+                "29",
+                "30",
+                "31",
+                "32",
+                "33",
+                "46",
+                "47",
+                "48",
+                "68",
+                "70",
+                "73",
+                "89",
+                "90",
+                "91",
+                "69",
+                "71",
+                "72",
+                "67",
+                "88"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "The present tense is often used in all three moves of the introduction.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "27",
+                        "28",
+                        "29",
+                        "30",
+                        "31",
+                        "32",
+                        "33",
+                        "46",
+                        "47",
+                        "48",
+                        "68",
+                        "70",
+                        "73",
+                        "89",
+                        "90",
+                        "91"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "The past tense is used for describing the work carried out.",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "69",
+                        "71",
+                        "72"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "You can present your research using reporting verbs.",
+                    "checked": false,
+                    "highlightClass": "highlightColor3",
+                    "highlightPara": [
+                        "67",
+                        "88"
+                    ]
+                }
+            ]
+        }
+    ],
+    "practice_rubric": [
+        {
+            "header": "Before you start",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Think about the needs of your readers. You have to show that you know the research context and that your study is a valid and useful piece of research. Consider what information you need to give them.\nWhy is your study area important?\nWhat is the background to your research question?\nWhat previous research is relevant to your study?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Use the three-move structure to help write your introduction.",
+                    "tellMeMore": "intro_ps1.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Specific disciplines use the three moves in different ways. Look at dissertations in your field to see exactly how it is done.",
+                    "tellMeMore": "intro_ps2.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "The Introduction is often the last chapter or section to be written.",
+                    "tellMeMore": "intro_ps3.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Check that you refer to your sources in the correct way for your discipline.",
+                    "tellMeMore": ""
+                }
+            ]
+        },
+        {
+            "header": "Choose your language",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Use academic language.",
+                    "tellMeMore": "academic_language.xml"
+                }
+            ]
+        },
+        {
+            "header": "While you are writing",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Claiming that the research area is important or relevant",
+                    "tellMeMore": "intro_ps5.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Indicating a gap, problem or need",
+                    "tellMeMore": "intro_ps6.xml"
+                }
+            ]
+        },
+        {
+            "header": "Check",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Have I placed my research within the relevant context?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I related it to other research in the field and/or to circumstances in the world?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I demonstrated my knowledge of the research area?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I shown a gap in the existing research or indicated a problem or need in the world?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I presented the aims of my research clearly, showing how it addresses the gap or problem?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I adequately described the methods and materials of my research?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I given details of the findings and results?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I shown the significance or contribution of my study?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I referenced other sources clearly and correctly?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I used clear, appropriate academic language?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I checked vocabulary, grammar, spelling and punctuation?",
+                    "tellMeMore": ""
+                }
+            ]
+        }
+    ]
+}

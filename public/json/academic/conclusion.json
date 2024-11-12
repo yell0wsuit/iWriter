@@ -1,0 +1,905 @@
+{
+    "title": "Writing a conclusion",
+    "paragraphs": [
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "2",
+                        "text": "Writing a Conclusion",
+                        "bold": true
+                    },
+                    {
+                        "id": "3",
+                        "text": "How to write an effective conclusion to your work"
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [],
+                "placeHolder": "",
+                "id": ""
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "6",
+                        "text": "Move 1: Summary of the findings",
+                        "bold": true
+                    },
+                    {
+                        "id": "7",
+                        "text": "Restate briefly the work carried out, the aims, hypotheses or research questions.\nHighlight the most important findings or results."
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "9",
+                            "text": " This study has explored the manner in which academic blog participants define group relationships and create social meaning through interaction. "
+                        },
+                        {
+                            "id": "10",
+                            "text": " The findings reveal that the academic weblogs in this study are social forums for self-presentation, networking, discussion, and idea testing, in many ways more similar to face-to-face academic discussions … than to written academic genres. The affective indicators … help to compensate for face-to-face affordances such as body language, facial expression or intonation. However, the specific features of weblogs (e.g. written medium, potential anonymity) also allow for the use of anti-social features more typical of some written genres in various disciplines. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your summary here.",
+                "id": "8"
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "13",
+                        "text": "Move 2: Evaluation of the study",
+                        "bold": true
+                    },
+                    {
+                        "id": "13",
+                        "text": "<li>State what you consider to be the achievements and limitations of your work.</li><li>Assess how far the aims of your study have been satisfied.</li><li>Include a personal assessment of what you have learned from doing the dissertation, if you are asked to provide this.</li>"
+                    },
+                    {
+                        "id": "13",
+                        "text": "Move 3: Suggestions for future research",
+                        "bold": true
+                    },
+                    {
+                        "id": "13",
+                        "text": "Suggest how the work reported in the dissertation can lead to new research possibilities."
+                    },
+                    {
+                        "id": "14",
+                        "text": "TIP Suggestions for future research often follow from the limitations of the study.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "15",
+                            "text": " This study was intended to analyse some aspects of relational communication in academic blogs, but I am aware that "
+                        },
+                        {
+                            "id": "16",
+                            "text": " it is limited in several key respects. First, although academic bloggers are quite a heterogeneous group "
+                        },
+                        {
+                            "id": "15",
+                            "text": " , this study has treated them as a homogeneous group. "
+                        },
+                        {
+                            "id": "17",
+                            "text": " Categorizing weblogs along several dimensions (e.g. participants' status, gender, motivation or discipline) could reveal significant results about relational communication ... "
+                        },
+                        {
+                            "id": "15",
+                            "text": " Additionally, since previous research on academic discourse has revealed disciplinary differences in the use of some discourse strategies, a cross-disciplinary study of markers of relational behaviour in academic blogs could yield interesting results. "
+                        },
+                        {
+                            "id": "18",
+                            "text": " Another limitation stems from the fact that data sampling procedures (restricting the number of comments taken from each posting) interfered with the collection of whole message threads. "
+                        },
+                        {
+                            "id": "15",
+                            "text": " Since there are online discussions where disagreement escalates and exchanges get more heated, "
+                        },
+                        {
+                            "id": "19",
+                            "text": " the analysis of whole discussions could yield a higher frequency of anti-social indicators. Future research could examine whole message threads in order to provide a more accurate picture of interaction patterns. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Moves 2 and 3 here.",
+                "id": "15"
+            }
+        },
+        {
+            "structure": {
+                "para": []
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "21",
+                            "text": " This study was intended to analyse some aspects of relational communication in academic blogs, but I am aware that "
+                        },
+                        {
+                            "id": "22",
+                            "text": " it is limited in several key respects "
+                        },
+                        {
+                            "id": "21",
+                            "text": " . First, although academic bloggers are quite a heterogeneous group, this study has treated them as a homogeneous group. Categorizing weblogs along several dimensions (e.g. participants' status, gender, motivation or discipline) "
+                        },
+                        {
+                            "id": "23",
+                            "text": " could "
+                        },
+                        {
+                            "id": "24",
+                            "text": " reveal significant results "
+                        },
+                        {
+                            "id": "21",
+                            "text": " about relational communication ... Additionally, since previous research on academic discourse has revealed disciplinary differences in the use of some discourse strategies, a cross-disciplinary study of markers of relational behaviour in academic blogs "
+                        },
+                        {
+                            "id": "25",
+                            "text": " could "
+                        },
+                        {
+                            "id": "26",
+                            "text": " yield interesting results "
+                        },
+                        {
+                            "id": "21",
+                            "text": "."
+                        },
+                        {
+                            "id": "27",
+                            "text": " Another limitation stems from the fact that "
+                        },
+                        {
+                            "id": "21",
+                            "text": " data sampling procedures (restricting the number of comments taken from each posting) "
+                        },
+                        {
+                            "id": "28",
+                            "text": " interfered with "
+                        },
+                        {
+                            "id": "21",
+                            "text": " the collection of whole message threads. Since there are online discussions where disagreement escalates and exchanges get more heated, the analysis of whole discussions "
+                        },
+                        {
+                            "id": "29",
+                            "text": " could "
+                        },
+                        {
+                            "id": "30",
+                            "text": " yield a higher frequency of "
+                        },
+                        {
+                            "id": "21",
+                            "text": " anti-social indicators. Future research "
+                        },
+                        {
+                            "id": "31",
+                            "text": " could "
+                        },
+                        {
+                            "id": "21",
+                            "text": " examine whole message threads in order to "
+                        },
+                        {
+                            "id": "32",
+                            "text": " provide a more accurate picture of "
+                        },
+                        {
+                            "id": "21",
+                            "text": " interaction patterns. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Moves 2 and 3 here",
+                "id": "21",
+                "duplicate": true
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "34",
+                        "text": "Move 4: Implications of the study",
+                        "bold": true
+                    },
+                    {
+                        "id": "35",
+                        "text": "Place the study in the wider context of research in the discipline and/or a situation in the real world, e.g. ‘Theoretical implications’ or ‘Pedagogical implications’."
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "38",
+                            "text": " Despite the limitations "
+                        },
+                        {
+                            "id": "36",
+                            "text": " , "
+                        },
+                        {
+                            "id": "38",
+                            "text": " findings from the present study can help in understanding online academic literacy practices and developing research-informed pedagogical approaches to "
+                        },
+                        {
+                            "id": "36",
+                            "text": " teaching such emerging practices. "
+                        },
+                        {
+                            "id": "39",
+                            "text": " The results of this study may be useful in "
+                        },
+                        {
+                            "id": "36",
+                            "text": " the preparation of materials intended to help postgraduate students and scholars participate effectively in online academic settings and make them aware of strategies to construct their authorial identity in such settings. "
+                        },
+                        {
+                            "id": "40",
+                            "text": " The potential of academic blogs "
+                        },
+                        {
+                            "id": "36",
+                            "text": " to engender solidarity and interaction revealed by this study "
+                        },
+                        {
+                            "id": "41",
+                            "text": " could also be tapped "
+                        },
+                        {
+                            "id": "36",
+                            "text": " in academic writing courses to help students discuss and revise a paper and foster in them a sense of community. In addition, … the results can help EAP students become familiar with the discursive features of informal scholarly genres, both digital (e.g. informal e-mails) and face-to-face. "
+                        },
+                        {
+                            "id": "42",
+                            "text": " Finally, academic blogs can be used together with other genres … to help students acquire "
+                        },
+                        {
+                            "id": "36",
+                            "text": " a repertoire of linguistic practices and associate these practices with specific genres. "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "36",
+                            "text": " (Adapted from Luzón, 2011.) For the full reference, see "
+                        },
+                        {
+                            "id": "36",
+                            "text": " <a href=\"/references\">References</a>"
+                        },
+                        {
+                            "id": "36",
+                            "text": "."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Move 4 here.",
+                "id": "36"
+            }
+        },
+        {
+            "structure": {
+                "para": []
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "44",
+                            "text": " Despite the limitations, findings from the present study can help in understanding online academic literacy practices and "
+                        },
+                        {
+                            "id": "45",
+                            "text": " developing "
+                        },
+                        {
+                            "id": "44",
+                            "text": " research-informed pedagogical approaches to teaching such emerging practices. The results of this study "
+                        },
+                        {
+                            "id": "46",
+                            "text": " may "
+                        },
+                        {
+                            "id": "44",
+                            "text": " be "
+                        },
+                        {
+                            "id": "47",
+                            "text": " useful in "
+                        },
+                        {
+                            "id": "44",
+                            "text": " the preparation of materials intended "
+                        },
+                        {
+                            "id": "48",
+                            "text": " to help "
+                        },
+                        {
+                            "id": "44",
+                            "text": " postgraduate students and scholars "
+                        },
+                        {
+                            "id": "49",
+                            "text": " participate effectively "
+                        },
+                        {
+                            "id": "44",
+                            "text": " in online academic settings and "
+                        },
+                        {
+                            "id": "50",
+                            "text": " make them aware of "
+                        },
+                        {
+                            "id": "44",
+                            "text": " strategies to construct their authorial identity in such settings. The potential of academic blogs to engender solidarity and interaction "
+                        },
+                        {
+                            "id": "51",
+                            "text": " revealed by this study "
+                        },
+                        {
+                            "id": "52",
+                            "text": " could "
+                        },
+                        {
+                            "id": "44",
+                            "text": " also be tapped in academic writing courses to "
+                        },
+                        {
+                            "id": "53",
+                            "text": " help "
+                        },
+                        {
+                            "id": "44",
+                            "text": " students discuss and revise a paper and "
+                        },
+                        {
+                            "id": "54",
+                            "text": " foster in them a sense of community "
+                        },
+                        {
+                            "id": "44",
+                            "text": " . In addition, … the results "
+                        },
+                        {
+                            "id": "55",
+                            "text": " can "
+                        },
+                        {
+                            "id": "56",
+                            "text": " help "
+                        },
+                        {
+                            "id": "44",
+                            "text": " EAP students "
+                        },
+                        {
+                            "id": "57",
+                            "text": " become familiar with "
+                        },
+                        {
+                            "id": "44",
+                            "text": " the discursive features of informal scholarly genres, both digital (e.g. informal e-mails) and face-to-face. Finally, academic blogs "
+                        },
+                        {
+                            "id": "58",
+                            "text": " can "
+                        },
+                        {
+                            "id": "59",
+                            "text": " be used "
+                        },
+                        {
+                            "id": "44",
+                            "text": " together with other genres … "
+                        },
+                        {
+                            "id": "60",
+                            "text": " to help "
+                        },
+                        {
+                            "id": "44",
+                            "text": " students "
+                        },
+                        {
+                            "id": "61",
+                            "text": " acquire "
+                        },
+                        {
+                            "id": "44",
+                            "text": " a repertoire of linguistic practices and associate these practices with specific genres. "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "44",
+                            "text": " (Adapted from Luzón, 2011.) For the full reference, see "
+                        },
+                        {
+                            "id": "44",
+                            "text": " <a href=\"iWriter_References.pdf\" target=\"_blank\">References</a>."
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Move 4 here",
+                "id": "44",
+                "duplicate": true
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "63",
+                        "text": "Move 5: Applications of the research (used in applied fields)",
+                        "bold": true
+                    },
+                    {
+                        "id": "64",
+                        "text": "Indicate how the research may be practically useful in real-world situations."
+                    },
+                    {
+                        "id": "65",
+                        "text": "TIP This move may alternatively appear within Moves 1 or 3.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "66",
+                            "text": " ‘Move 5: Applications of the research’ is not illustrated in the model text. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Move 5 here.",
+                "id": "66"
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    {
+                        "id": "68",
+                        "text": "Move 6: Recommendations (used in applied fields)",
+                        "bold": true
+                    },
+                    {
+                        "id": "69",
+                        "text": "Give specific suggestions for real-world actions to be taken on the basis of the research."
+                    },
+                    {
+                        "id": "70",
+                        "text": "TIP Where present, this move usually follows Move 5.",
+                        "tip": true
+                    }
+                ]
+            },
+            "notes": {
+                "para": []
+            },
+            "content": {
+                "para": [
+                    [
+                        {
+                            "id": "71",
+                            "text": " ‘Move 6: Recommendations’ is not illustrated in the model text. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type Move 6 here.",
+                "id": "71"
+            }
+        }
+    ],
+    "steps": [
+        {
+            "label": "What is the purpose of a conclusion?",
+            "desc": [
+                "In the conclusion, writers stand back from their work in order to view it in the wider context of the discipline as a whole or the real-world situation. Thus, the purpose of the conclusion is in direct contrast to that of the introduction: it leads out from the narrow topic of the dissertation to more general issues. This framework shows you how to write an effective conclusion."
+            ],
+            "showParas": [],
+            "filters": []
+        },
+        {
+            "label": "Why is it important?",
+            "desc": [
+                "In some disciplines, there may be some overlap between the Conclusion and the Discussion. For example, the final chapter may be called ‘Discussion and Conclusions’ or ‘General Discussion’. In this case, the conclusion may be a section of the final chapter. It is still important to include a conclusion, however, because it gives you the opportunity to highlight the most important points in your dissertation. The conclusion is the final impression that the examiners take away from your work, so it should finish on a positive note."
+            ],
+            "showParas": [],
+            "filters": []
+        },
+        {
+            "label": "How is it structured?",
+            "desc": [
+                "The model text is an extract from a conclusion to a research article published in ‘Applied Linguistics’. The study analysed the language of academic weblogs (blogs).",
+                "Here is the framework that was used to present this conclusion.",
+                "Moves 5 and 6 are optional and are used in applied fields. They are not used in this model."
+            ],
+            "showParas": [
+                "6",
+                "7",
+                "13",
+                "34",
+                "35",
+                "63",
+                "64",
+                "68",
+                "69"
+            ],
+            "filters": []
+        },
+        {
+            "label": "Look at the first paragraph",
+            "desc": [
+                "The purpose of Move 1 is to summarize the findings of the work carried out."
+            ],
+            "showParas": [
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "Sentence 1 summarizes the work carried out.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "9"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "The rest of the paragraph highlights the most important findings.",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "10"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Look at the second paragraph",
+            "desc": [
+                "Move 2: Evaluation of the study",
+                "In this model, the writer has mentioned two limitations of the study and has suggested new research possibilities that can follow from this.",
+                "Move 3: Suggestions for future research"
+            ],
+            "showParas": [
+                "13",
+                "15",
+                "16",
+                "18",
+                "17",
+                "19"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "All studies have limitations, so the writer mentions what the dissertation has not been able to cover.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "16",
+                        "18"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "The writer suggests some ways in which the study can lead to new research possibilities.",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "17",
+                        "19"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Look at the third paragraph",
+            "desc": [],
+            "showParas": [
+                "34",
+                "35",
+                "36",
+                "37",
+                "38",
+                "39",
+                "40",
+                "41",
+                "42"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "Note that in this model, the writer combines the implications of the study with evaluation of the study.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "37",
+                        "38",
+                        "39",
+                        "40",
+                        "41",
+                        "42"
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Show me useful language",
+            "desc": [],
+            "showParas": [
+                "8",
+                "21",
+                "44",
+                "22",
+                "27",
+                "28",
+                "24",
+                "26",
+                "30",
+                "32",
+                "45",
+                "47",
+                "48",
+                "49",
+                "50",
+                "51",
+                "53",
+                "54",
+                "56",
+                "57",
+                "59",
+                "60",
+                "61",
+                "23",
+                "25",
+                "29",
+                "31",
+                "46",
+                "52",
+                "55",
+                "58"
+            ],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "Negative evaluation signalling the limitations of the writer's research",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": [
+                        "22",
+                        "27",
+                        "28"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "Positive evaluation of the future research",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": [
+                        "24",
+                        "26",
+                        "30",
+                        "32"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "Positive evaluation of the applications of the writer's research",
+                    "checked": false,
+                    "highlightClass": "highlightColor3",
+                    "highlightPara": [
+                        "45",
+                        "47",
+                        "48",
+                        "49",
+                        "50",
+                        "51",
+                        "53",
+                        "54",
+                        "56",
+                        "57",
+                        "59",
+                        "60",
+                        "61"
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "Modal verbs used to signal the future research and potential applications of the writer's research",
+                    "checked": false,
+                    "highlightClass": "highlightColor4",
+                    "highlightPara": [
+                        "23",
+                        "25",
+                        "29",
+                        "31",
+                        "46",
+                        "52",
+                        "55",
+                        "58"
+                    ]
+                }
+            ]
+        }
+    ],
+    "practice_rubric": [
+        {
+            "header": "Before you start",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "In the conclusion, writers stand back from their work in order to view it in the wider context of the discipline as a whole or of the real-world situation. Thus, the purpose of the conclusion is in direct contrast to that of the introduction: it leads out from the narrow topic of the dissertation to more general issues.",
+                    "tellMeMore": "conclusion1.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Think about what your dissertation has achieved: the most important ideas or findings that you want to the examiners to know.",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "All studies have limitations, so think also about what your dissertation has not been able to cover.",
+                    "tellMeMore": "conclusion2.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Use the four-move structure to help you write your conclusion.",
+                    "tellMeMore": "conclusion3.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Applied fields have the option of adding Moves 5 and 6.",
+                    "tellMeMore": "conclusion4.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Organize the points you want to make into the framework.",
+                    "tellMeMore": ""
+                }
+            ]
+        },
+        {
+            "header": "Choose your language",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Use academic language.",
+                    "tellMeMore": "academic_language5.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Language Bank: achievements and limitations",
+                    "tellMeMore": "conclusion5.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Language Bank: future research",
+                    "tellMeMore": "conclusion7.xml"
+                }
+            ]
+        },
+        {
+            "header": "While you are writing",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Grammar focus: use of tenses",
+                    "tellMeMore": "conclusion6.xml"
+                }
+            ]
+        },
+        {
+            "header": "Check",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Have I summarized my work and highlighted the most important findings or results?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I stated both the achievements and limitations of my work?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I included a personal assessment of what I have learned in doing the dissertation, if asked to provide one?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I assessed how far the aims of the study have been met?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I made suggestions for future research?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I placed the study in the wider context of research in the discipline?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I used modal verbs to signal future research and possible applications?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I used tenses appropriately?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I quoted and referenced my sources accurately?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I checked vocabulary, grammar, spelling and punctuation?",
+                    "tellMeMore": ""
+                }
+            ]
+        }
+    ]
+}

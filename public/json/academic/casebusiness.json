@@ -1,0 +1,596 @@
+{
+    "title": "Case Studies 1: business",
+    "paragraphs": [
+        {
+            "structure": {
+                "para": [
+                    { "id": "2", "text": "Case Studies 1: business" },
+                    { "id": "3", "text": "How to write an effective business case study" }
+                ]
+            },
+            "notes": { "para": [] },
+            "content": { "para": [], "placeHolder": "", "id": "1" }
+        },
+        {
+            "structure": {
+                "para": [
+                    { "id": "5", "text": "Introduction" },
+                    {
+                        "id": "6",
+                        "text": "Give background information about the company or situation and state the focus of your case."
+                    }
+                ]
+            },
+            "notes": { "para": [] },
+            "content": {
+                "para": [
+                    [{ "id": "7", "text": " Introduction " }],
+                    [
+                        {
+                            "id": "7",
+                            "text": " Since the late 1990s, Marks and Spencer plc has been through some turbulent times. The giant of the British high street has seen its share price fluctuate from a worrying low of less than 200 pence per share in 2000 to a comfortable high of around 750 pence in 2007 (Johnson, Scholes and Whittington, 2008: 839). This aside, M&S has long been regarded as one of the most spectacular corporate successes in the UK (Tse, 1985). "
+                        }
+                    ],
+                    [
+                        { "id": "7", "text": " Using a 2011 report by Johnson and Collier, " },
+                        { "id": "8", "text": " this paper will look at some of the strategic decisions " },
+                        { "id": "7", "text": " which might have led M&S to the problems of 2008. " },
+                        { "id": "9", "text": " I will also offer some recommendations " },
+                        {
+                            "id": "7",
+                            "text": " for the long-term strategic development of the organization using corporate strategy frameworks. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your Introduction here.",
+                "id": "7"
+            }
+        },
+        {
+            "structure": { "para": [] },
+            "notes": { "para": [] },
+            "content": {
+                "para": [
+                    [{ "id": "11", "text": " Introduction " }],
+                    [
+                        {
+                            "id": "11",
+                            "text": " Since the late 1990s, Marks and Spencer plc has been through some turbulent times. The giant of the British high street has seen its share price fluctuate from a worrying low of less than 200 pence per share in 2000 to a comfortable high of around 750 pence in 2007 (Johnson, Scholes and Whittington, 2008: 839). "
+                        },
+                        { "id": "59", "text": " This aside " },
+                        {
+                            "id": "11",
+                            "text": " , M&S has long been regarded as one of the most spectacular corporate successes in the UK (Tse, 1985). "
+                        }
+                    ],
+                    [
+                        { "id": "11", "text": " Using a 2011 report by Johnson and Collier, " },
+                        { "id": "12", "text": " this paper will look at " },
+                        {
+                            "id": "11",
+                            "text": " some of the strategic decisions which might have led M&S to the problems of 2008. "
+                        },
+                        { "id": "13", "text": " I will also " },
+                        {
+                            "id": "11",
+                            "text": " offer some recommendations for the long-term strategic development of the organization using corporate strategy frameworks. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your Introduction here",
+                "id": "11",
+                "duplicate": true
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    { "id": "15", "text": "Context" },
+                    { "id": "16", "text": "Explain how this case fits within the greater business environment." },
+                    { "id": "17", "text": "TIP You can use analytical techniques here.", "tip": true}
+                ]
+            },
+            "notes": { "para": [] },
+            "content": {
+                "para": [
+                    [{ "id": "18", "text": " Strategic Position " }],
+                    [
+                        {
+                            "id": "19",
+                            "text": " Firstly, let us look at the strategic position and analyse the macro environment … using the PESTEL framework "
+                        },
+                        {
+                            "id": "18",
+                            "text": " (Johnson, Scholes and Whittington, 2008: 55). Johnson and Collier (2011) point to several social and technological factors that may have had an effect on the business. For instance, M&S always sold clothing under their own ‘St Michael’ label; this line offered good value for money but failed to keep up with current fashions. Meanwhile, consumer requirements were changing, and other high street retail outlets were popping up and offering alternatives to the basics at M&S. [Two paragraphs follow (omitted) stating the company's reluctance to enter the online marketplace and to set out an effective long-term strategy.] … "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your Context section here.",
+                "id": "18"
+            }
+        },
+        {
+            "structure": { "para": [] },
+            "notes": { "para": [] },
+            "content": {
+                "para": [
+                    [{ "id": "21", "text": " Strategic Position " }],
+                    [
+                        { "id": "22", "text": " Firstly, let us look at " },
+                        {
+                            "id": "21",
+                            "text": " the strategic position and analyse the macro environment … using the PESTEL framework (Johnson, Scholes and Whittington, 2008: 55). Johnson and Collier (2011) point to several social and technological factors that may have had an effect on the business. "
+                        },
+                        { "id": "23", "text": " For instance " },
+                        {
+                            "id": "21",
+                            "text": " , M&S always sold clothing under their own ‘St Michael’ label; this line offered good value for money but failed to keep up with current fashions. "
+                        },
+                        { "id": "24", "text": " Meanwhile " },
+                        {
+                            "id": "21",
+                            "text": " , consumer requirements were changing, and other high street retail outlets were popping up and offering alternatives to the basics at M&S. [Two paragraphs follow (omitted) stating the company's reluctance to enter the online marketplace and to set out an effective long-term strategy.] … "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your Context section here.",
+                "id": "21",
+                "duplicate": true
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    { "id": "26", "text": "Description and analysis of the case" },
+                    { "id": "27", "text": "Give details of the case, including how theory applies to it." },
+                    { "id": "28", "text": "TIP You can use analytical techniques here.", "tip": true}
+                ]
+            },
+            "notes": { "para": [] },
+            "content": {
+                "para": [
+                    [{ "id": "29", "text": " Future Development " }],
+                    [
+                        {
+                            "id": "29",
+                            "text": " It would appear that the company was slow to react to the changing social and technological environment. … "
+                        },
+                        {
+                            "id": "30",
+                            "text": " Let us now use a SWOT analysis to examine M&S's strengths, weaknesses, opportunities and threats "
+                        },
+                        {
+                            "id": "29",
+                            "text": " (as described in Kew and Stredwick, 2008: 11), focusing on what is most important for the future success of the company. "
+                        }
+                    ],
+                    [{ "id": "29", "text": " Strengths: " }],
+                    [{ "id": "29", "text": " • Largest UK retailer " }],
+                    [{ "id": "29", "text": " • Strong balance sheet/Stakeholder investment " }],
+                    [
+                        {
+                            "id": "29",
+                            "text": " • Product diversity (clothes, food, home furnishings, financial products, flowers, wine) "
+                        }
+                    ],
+                    [{ "id": "29", "text": " Weaknesses: " }],
+                    [{ "id": "29", "text": " • Premium retailer with premium prices " }],
+                    [{ "id": "29", "text": " • Unsure of target market " }],
+                    [
+                        {
+                            "id": "29",
+                            "text": " • Internal politics with board members, CEO and Chairman engaged in power struggles "
+                        }
+                    ],
+                    [{ "id": "29", "text": " Opportunities: " }],
+                    [{ "id": "29", "text": " • Diversify into other markets " }],
+                    [{ "id": "29", "text": " • Inviting more brand names into store " }],
+                    [
+                        {
+                            "id": "29",
+                            "text": " • Acquisitions of smaller retail organizations to increase market share "
+                        }
+                    ],
+                    [{ "id": "29", "text": " Threats: " }],
+                    [{ "id": "29", "text": " • Economic recession " }],
+                    [{ "id": "29", "text": " • Lower-cost retailers/market competition " }],
+                    [{ "id": "29", "text": " • Takeover bids (e.g. Philip Green—Arcadia group) " }]
+                ],
+                "placeHolder": "Type your Description and analysis here.",
+                "id": "29"
+            }
+        },
+        {
+            "structure": { "para": [] },
+            "notes": { "para": [] },
+            "content": {
+                "para": [
+                    [{ "id": "32", "text": " Future Development " }],
+                    [
+                        {
+                            "id": "32",
+                            "text": " It would appear that the company was slow to react to the changing social and technological environment. … "
+                        },
+                        { "id": "33", "text": " Let us now " },
+                        {
+                            "id": "32",
+                            "text": " use a SWOT analysis to examine M&S's strengths, weaknesses, opportunities and threats (as described in Kew and Stredwick, 2008: 11), focusing on what is most important for the future success of the company. "
+                        }
+                    ],
+                    [{ "id": "32", "text": " Strengths: " }],
+                    [{ "id": "32", "text": " • Largest UK retailer " }],
+                    [{ "id": "32", "text": " • Strong balance sheet/Stakeholder investment " }],
+                    [
+                        {
+                            "id": "32",
+                            "text": " • Product diversity (clothes, food, home furnishings, financial products, flowers, wine) "
+                        }
+                    ],
+                    [{ "id": "32", "text": " Weaknesses: " }],
+                    [{ "id": "32", "text": " • Premium retailer with premium prices " }],
+                    [{ "id": "32", "text": " • Unsure of target market " }],
+                    [
+                        {
+                            "id": "32",
+                            "text": " • Internal politics with board members, CEO and Chairman engaged in power struggles "
+                        }
+                    ],
+                    [{ "id": "32", "text": " Opportunities: " }],
+                    [{ "id": "32", "text": " • Diversify into other markets " }],
+                    [{ "id": "32", "text": " • Inviting more brand names into store " }],
+                    [
+                        {
+                            "id": "32",
+                            "text": " • Acquisitions of smaller retail organizations to increase market share "
+                        }
+                    ],
+                    [{ "id": "32", "text": " Threats: " }],
+                    [{ "id": "32", "text": " • Economic recession " }],
+                    [{ "id": "32", "text": " • Lower-cost retailers/market competition " }],
+                    [{ "id": "32", "text": " • Takeover bids (e.g. Philip Green—Arcadia group) " }]
+                ],
+                "placeHolder": "Type your Description and analysis here.",
+                "id": "32",
+                "duplicate": true
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    { "id": "35", "text": "Recommendations" },
+                    { "id": "36", "text": "Suggest actions to be taken or give possible solutions." }
+                ]
+            },
+            "notes": { "para": [] },
+            "content": {
+                "para": [
+                    [{ "id": "37", "text": " Recommendations " }],
+                    [
+                        { "id": "37", "text": " For long-term success, " },
+                        {
+                            "id": "38",
+                            "text": " M&S will need to rebuild its reputation and its brand. The company must also make some important strategic choices "
+                        },
+                        { "id": "37", "text": " which take into account both internal and external factors. " },
+                        { "id": "39", "text": " The organization " },
+                        { "id": "37", "text": " has diversified into finance and " },
+                        { "id": "40", "text": " possibly should consider other ways to break into emerging markets " },
+                        {
+                            "id": "37",
+                            "text": " , particularly those with strong e-commerce potential. [Further recommendations and discussion follow (three paragraphs omitted).] … "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your Recommendations here.",
+                "id": "37"
+            }
+        },
+        {
+            "structure": { "para": [] },
+            "notes": { "para": [] },
+            "content": {
+                "para": [
+                    [{ "id": "42", "text": " Recommendations " }],
+                    [
+                        { "id": "42", "text": " For long-term success, M&S " },
+                        { "id": "43", "text": " will need to " },
+                        { "id": "42", "text": " rebuild its reputation and its brand. The company " },
+                        { "id": "44", "text": " must " },
+                        { "id": "45", "text": " also " },
+                        {
+                            "id": "42",
+                            "text": " make some important strategic choices which take into account both internal and external factors. The organization has diversified into finance and "
+                        },
+                        { "id": "46", "text": " possibly should consider " },
+                        { "id": "42", "text": " other ways to break into emerging markets, " },
+                        { "id": "47", "text": " particularly " },
+                        {
+                            "id": "42",
+                            "text": " those with strong e-commerce potential. [Further recommendations and discussion follow (three paragraphs omitted).] … "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your Recommendations here.",
+                "id": "42",
+                "duplicate": true
+            }
+        },
+        {
+            "structure": {
+                "para": [
+                    { "id": "49", "text": "Conclusion" },
+                    { "id": "50", "text": "Generalize out to the wider context." }
+                ]
+            },
+            "notes": { "para": [] },
+            "content": {
+                "para": [
+                    [{ "id": "51", "text": " Conclusion " }],
+                    [
+                        {
+                            "id": "52",
+                            "text": " Going forward, perhaps the company would be better served with a more diverse and transparent management structure "
+                        },
+                        {
+                            "id": "51",
+                            "text": " , such as one based on the approach of a ‘learning organization’, defined by Johnson, Scholes and Whittington as one which is ‘capable of continual regeneration from the variety of knowledge, experience and skills of individuals within a culture which encourages mutual questioning and challenge around a shared purpose or vision’ (Johnson, Scholes and Whittington, 2008: 421). "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "51",
+                            "text": " In 2008, CEO Sir Stuart Rose introduced the necessary changes and implemented the short-term strategies that helped M&S recover. However, for the long-term success of M&S, current and future CEOs must continue on this path, or else they will risk destroying this icon of British retailing. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your Conclusion here.",
+                "id": "51"
+            }
+        },
+        {
+            "structure": { "para": [] },
+            "notes": { "para": [] },
+            "content": {
+                "para": [
+                    [{ "id": "54", "text": " Conclusion " }],
+                    [
+                        { "id": "55", "text": " Going forward " },
+                        { "id": "54", "text": " , " },
+                        { "id": "56", "text": " perhaps the company would be better served with " },
+                        { "id": "54", "text": " a more diverse and transparent management structure, " },
+                        { "id": "57", "text": " such as " },
+                        {
+                            "id": "54",
+                            "text": " one based on the approach of a ‘learning organization’, defined by Johnson, Scholes and Whittington as one which is ‘capable of continual regeneration from the variety of knowledge, experience and skills of individuals within a culture which encourages mutual questioning and challenge around a shared purpose or vision’ (Johnson, Scholes and Whittington, 2008: 421). "
+                        }
+                    ],
+                    [
+                        {
+                            "id": "54",
+                            "text": " In 2008, CEO Sir Stuart Rose introduced the necessary changes and implemented the short-term strategies that helped M&S recover. "
+                        },
+                        { "id": "58", "text": " However " },
+                        {
+                            "id": "54",
+                            "text": " , for the long-term success of M&S, current and future CEOs must continue on this path, or else they will risk destroying this icon of British retailing. "
+                        }
+                    ]
+                ],
+                "placeHolder": "Type your Conclusion here.",
+                "id": "54",
+                "duplicate": true
+            }
+        }
+    ],
+    "steps": [
+        {
+            "label": "What is a business case study?",
+            "desc": ["A business case study explores, in detail, a specific company or business situation."],
+            "showParas": [],
+            "filters": []
+        },
+        {
+            "label": "What is its purpose?",
+            "desc": [
+                "The main purpose of writing a case study is to demonstrate your ability to apply the analytical techniques learned on your course to a specific business case."
+            ],
+            "showParas": [],
+            "filters": []
+        },
+        {
+            "label": "How is the text organized?",
+            "desc": [
+                "The model is an extract from a business case report about the retailer Marks and Spencer plc.",
+                "Here is the framework that was used to present this case study."
+            ],
+            "showParas": ["5", "6", "15", "16", "26", "27", "35", "36", "49", "50"],
+            "filters": []
+        },
+        {
+            "label": "Look at the Introduction",
+            "desc": ["The Introduction introduces the company."],
+            "showParas": ["5", "6", "7"],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "It then states the focus and aims of the text.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": ["8", "9"]
+                }
+            ]
+        },
+        {
+            "label": "Look at the Context",
+            "desc": [],
+            "showParas": ["15", "16", "18"],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "Here, an analytical technique, PESTEL, is used to evaluate the company's position within the business environment.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": ["19"]
+                }
+            ]
+        },
+        {
+            "label": "Look at Description and analysis",
+            "desc": ["Application of current theory has been omitted in this extract."],
+            "showParas": ["26", "27", "29"],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "The writer applies another analytical tool—SWOT analysis—to the business case.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": ["30"]
+                }
+            ]
+        },
+        {
+            "label": "Look at Recommendations",
+            "desc": [],
+            "showParas": ["35", "36", "37"],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "The writer suggests action to be taken.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": ["38", "39", "40"]
+                }
+            ]
+        },
+        {
+            "label": "Look at the Conclusion",
+            "desc": [],
+            "showParas": ["49", "50", "51"],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "The writer generalizes out from the recommendations to the wider context.",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": ["52"]
+                }
+            ]
+        },
+        {
+            "label": "Show me useful language",
+            "desc": [],
+            "showParas": ["11", "21", "32", "42", "54"],
+            "filters": [
+                {
+                    "type": "checkbox",
+                    "label": "Words and phrases to guide the reader through the document",
+                    "checked": false,
+                    "highlightClass": "highlightColor1",
+                    "highlightPara": ["12", "13", "22", "33"]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "Transitions and connecting words and phrases",
+                    "checked": false,
+                    "highlightClass": "highlightColor2",
+                    "highlightPara": ["24", "45", "55", "58", "59"]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "Words and phrases to introduce examples",
+                    "checked": false,
+                    "highlightClass": "highlightColor3",
+                    "highlightPara": ["23", "47", "57"]
+                },
+                {
+                    "type": "checkbox",
+                    "label": "Words and phrases to give recommendations",
+                    "checked": false,
+                    "highlightClass": "highlightColor4",
+                    "highlightPara": ["43", "46", "56", "44"]
+                }
+            ]
+        }
+    ],
+    "practice_rubric": [
+        {
+            "header": "Before you start",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "When you plan your case study, think about the problem you want to look at and the possible solutions you might suggest.",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Make notes for your case study and keep a record of the sources you want to use to support your points.",
+                    "tellMeMore": ""
+                },
+                { "checked": false, "text": "Organize your notes into the framework.", "tellMeMore": "" },
+                {
+                    "checked": false,
+                    "text": "Draft your case study. Focus on ensuring that your ideas are clear and your arguments are logically structured.",
+                    "tellMeMore": ""
+                },
+                { "checked": false, "text": "Review and revise your draft as necessary.", "tellMeMore": "" }
+            ]
+        },
+        {
+            "header": "Choose your language",
+            "checkList": [
+                { "checked": false, "text": "Use academic language.", "tellMeMore": "academic_language3.xml" },
+                { "checked": false, "text": "Language Bank: making recommendations", "tellMeMore": "case_busin1.xml" },
+                {
+                    "checked": false,
+                    "text": "Language Bank: hedging your recommendations",
+                    "tellMeMore": "case_busin4.xml"
+                },
+                {
+                    "checked": false,
+                    "text": "Language Bank: making your recommendations stronger",
+                    "tellMeMore": "case_busin5.xml"
+                }
+            ]
+        },
+        {
+            "header": "While you are writing",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Remember to use sources to support your points.",
+                    "tellMeMore": "case_busin6.xml"
+                },
+                { "checked": false, "text": "Think about the writing process.", "tellMeMore": "reflective11.xml" }
+            ]
+        },
+        {
+            "header": "Check",
+            "checkList": [
+                {
+                    "checked": false,
+                    "text": "Have I given sufficient background information on the company or situation?",
+                    "tellMeMore": ""
+                },
+                { "checked": false, "text": "Have I made my focus and aims clear?", "tellMeMore": "" },
+                { "checked": false, "text": "Have I used analytical techniques?", "tellMeMore": "" },
+                { "checked": false, "text": "Have I suggested solutions or made recommendations?", "tellMeMore": "" },
+                {
+                    "checked": false,
+                    "text": "Have I generalized from the recommendations to the wider business context?",
+                    "tellMeMore": ""
+                },
+                {
+                    "checked": false,
+                    "text": "Have I used appropriate language to make my recommendations?",
+                    "tellMeMore": ""
+                },
+                { "checked": false, "text": "Have I quoted and referenced my sources accurately?", "tellMeMore": "" },
+                {
+                    "checked": false,
+                    "text": "Have I checked vocabulary, grammar, spelling and punctuation?",
+                    "tellMeMore": ""
+                }
+            ]
+        }
+    ]
+}
